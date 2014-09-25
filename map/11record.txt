@@ -308,8 +308,19 @@
 		前缀=|cffff1111火雾战士|r
 		说明=这里是皮肤说明
 		价格=1-20 5-90 25-400
-		变身特效=war3mapImported\C8_blackwave.mdl
+		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
 		名字=
+
+		//夜夜
+		皮肤=A0TZ
+		前缀=|cffff1111机巧少女|r
+		说明=这里是皮肤说明
+		价格=1-200 5-900 25-4000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=worldedit
