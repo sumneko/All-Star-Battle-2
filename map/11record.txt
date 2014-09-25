@@ -147,7 +147,7 @@
 			说明=好有威严，不如买一只送给大小姐
 			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\cauterize.mdl
-			特效点=origin
+			特效点=
 			特效时间=0.5
 			变身动画=morph
 
@@ -320,7 +320,7 @@
 		说明=这里是皮肤说明
 		价格=1-200 5-900 25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
-		特效点=origin
+		特效点=
 		特效时间=0.5
 		变身动画=morph
 		名字=worldedit

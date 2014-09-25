@@ -309,7 +309,12 @@
 
 					if data['变身特效'] then
 						local t = tonumber(data['特效时间'])
-						local e = jass.AddSpecialEffectTarget(data['变身特效'], u, data['特效点'])
+						local e
+						if data['特效点'] then
+							e = jass.AddSpecialEffectTarget(data['变身特效'], hero, data['特效点'])
+						else
+							e = jass.AddSpecialEffect(data['变身特效'], x, y)
+						end
 						if t < 0 then
 							jass.DestroyEffect(e)
 						else
@@ -556,6 +561,7 @@
 							local data	= hero_model[id][i]
 							local count	= p:getRecord(data['皮肤'])
 
+							this.player = player.j_player(jass.GetOwningPlayer(hero))
 							event('点击皮肤技能', this)
 
 							--使用皮肤
@@ -564,7 +570,7 @@
 								jass.UnitRemoveAbility(hero, data.skill_id)
 
 								if game.debug then
-									local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend'}
+									local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound'}
 									table.back(ignore)
 									for name, value in pairs(slk.unit[data.hero_id_base]) do
 										if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then
@@ -575,7 +581,13 @@
 
 								if data['变身特效'] then
 									local t = tonumber(data['特效时间'])
-									local e = jass.AddSpecialEffectTarget(data['变身特效'], hero, data['特效点'])
+									local e
+									if data['特效点'] then
+										e = jass.AddSpecialEffectTarget(data['变身特效'], hero, data['特效点'])
+									else
+										e = jass.AddSpecialEffect(data['变身特效'], jass.GetUnitX(hero), jass.GetUnitY(hero))
+									end
+									
 									if t < 0 then
 										jass.DestroyEffect(e)
 									else
