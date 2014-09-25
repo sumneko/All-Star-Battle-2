@@ -1,0 +1,315 @@
+﻿
+	==特殊称号==
+
+		WorldEdit=|cffffcc00[测试中]|r
+		最萌小汐=|cffffcc00[超高校级の]|r
+		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
+		裂魂SAMA=|cFF66FFFF[请叫我]|r
+                Mythmakers=|cff505050[起始者]|r
+		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
+		Any_遗失=|cffffcc00[|cffaa10bb泯灭虚空之刃★|cffffcc00]|r
+		姬神小桃=|cffffcc00[|cffffff00誓约胜利之剑★|cffffcc00]|r
+		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
+		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
+		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
+		
+                
+
+        //天道受1
+        我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
+        艾斯特=|cffffcc00[|cFF38efff魔王剑-Terminus Est Zwei|cffffcc00]|r
+        CLANNAD_殇=|cffffcc00[|cFFCC9900Lost time Memory|cffffcc00]|r
+        户川汐音=|cffffcc00[|cFFFF66FF最萌眼镜娘|cffffcc00]|r
+        空心de木偶=|cffffcc00[|cFF00FFFF完美潇洒の从者|cffffcc00]|r
+        樱逝夕颜=|cffffcc00[|cFFFFCC66远离尘世の理想乡|cffffcc00]|r
+
+        
+	==特殊信使==
+
+		//皮卡丘	n01J
+		//⑨ 	n01D
+		//Saber	n01I
+		//裂魂	n01F
+		//呆唯 	n01L
+		//律队 	n01M
+		//梓喵 	n01N
+		//凛凛蝶	n01S
+
+		//幸运	button\BTNXS_S_XY.blp
+		//YY	button\BTNXS_S_YY.blp
+
+		//凛凛蝶 n01S 注意,现在不允许多次注册信使了,只能注册一次信使,但是可以多次注册名字
+
+			信使=n01S
+			前缀=|cffffcc00这里是前缀|r
+			说明=这里是皮肤说明
+			价格=1-99998 5-499998 25-2499998
+			变身特效=war3mapImported\A5_zisekuosan.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+			//皮肤无限使用权
+			名字=WorldEdit
+			图标=war3mapImported\btntemp.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r,测试辛苦了!
+			内容=无聊的时候就逗逗裂魂人玩吧~
+
+			名字=裂魂SAMA;小爱不是处;Mythmakers
+			图标=button\BTNBTNXS_U_Riricho.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r的女儿
+			内容=么么哒
+
+		//皮卡丘	n01J
+
+			信使=n01J
+			前缀=|cffffcc00这里是前缀|r
+			说明=这里是皮肤说明
+			价格=不填价格表示非卖品
+			变身特效=war3mapImported\A2_leidian.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+			//皮肤无限使用权
+			名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶;WorldEdit
+			图标=button\BTNXS_S_PKQ.blp
+			技能=主动
+			标题=专属信使
+			内容=这个信使是战队|cffffdd00黑店1队|r的专属信使。荣耀与你同在,|cffffcc00%player_name%|r!|n|n|cffffcc00点击翻滚~皮卡皮卡~
+
+        //孙悟空        n01U
+
+            信使=n01U
+			前缀=|cffffcc00这里是前缀|r
+			说明=这里是皮肤说明
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\enchant.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=
+			图标=WuKong.blp
+			技能=被动
+			标题=特殊信使
+			内容=0_0
+
+		//⑨ 	n01D
+
+            信使=n01D
+			前缀=|cffffcc00笨蛋|r
+			说明=据说越用越笨
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\A8_bing.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=
+			图标=button\BTNXS_U_9.blp
+			技能=被动
+			标题=特殊信使
+			内容=⑨、⑨
+
+		//Saber	n01I
+
+            信使=n01I
+			前缀=|cffffcc00嗷~|r
+			说明=好有威严，不如买一只送给大小姐
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\cauterize.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=最萌小汐
+			图标=button\BTNXS_U_saber.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r的专属信使
+			内容=筒隐月子俺嫁,萝莉后宫万岁!
+
+			名字=
+			图标=button\BTNXS_U_saber.blp
+			技能=被动
+			标题=特殊信使
+			内容=汪！
+
+		//裂魂	n01F
+
+            信使=n01F
+			前缀=|cffffcc00白牛~|r
+			说明=据说这是跑得最快的信使【错觉
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\C4_fensekuosan.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=
+			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
+			技能=被动
+			标题=特殊信使
+			内容=wwwwwww
+
+		//呆唯 	n01L
+
+            信使=n01L
+			前缀=|cffffcc00YUI~|r
+			说明=YUUUUUUUUUUUUUUUUI！！
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=
+			图标=button\BTNXS_U_YUI.blp
+			技能=被动
+			标题=特殊信使
+			内容=YUUUUUUUUUUUUUUUUI！！
+
+		//律队 	n01M
+
+            信使=n01M
+			前缀=|cffffcc00光额头|r
+			说明=律队
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=
+			图标=button\BTNXS_U_LD.blp
+			技能=被动
+			标题=特殊信使
+			内容=律队
+
+		//梓喵 	n01N
+
+            信使=n01N
+			前缀=|cffffcc00喵~|r
+			说明=梓喵
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=
+			图标=button\BTNXS_U_ZM.blp
+			技能=被动
+			标题=特殊信使
+			内容=梓喵
+
+	==英雄皮肤==
+
+		//saber alter
+		皮肤=A0S9
+		前缀=|cffcc00cc黑色圣光|r
+		说明=我就不卖你咬我啊
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		//图标路径不能包含空格
+		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp A0E4-BTNSkill_Saber_Alter_Q.blp A0OD-BTNSkill_Saber_Alter_W.blp A0GX-BTNSkill_Saber_Alter_E.blp A03D-BTNSkill_Saber_Alter_R.blp A0I0-BTNSkill_Saber_Alter_R.blp AOw2-BTNSkill_Saber_Alter_D.blp
+		名字=裂魂SAMA;小爱不是处;Mythmakers
+
+		//saber extra
+		皮肤=A0TT
+		前缀=|cFFFFFF00黄金剧场|r
+		说明=这里是皮肤说明
+		价格=1-200 5-900 25-4000
+		变身特效=war3mapImported\Fire Aura.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=
+
+		//黑崎一护 白
+		皮肤=A0TU
+		前缀=|cffcc00cc死神代理|r 白
+		说明=这里是皮肤说明
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶我妻桃子;艾斯特;CLANNAD_殇;户川汐音;空心de木偶;樱逝夕颜
+
+		//夏娜 火雾战士
+		皮肤=A0TV
+		前缀=|cffff1111火雾战士|r
+		说明=这里是皮肤说明
+		价格=1-20 5-90 25-400
+		变身特效=war3mapImported\C8_blackwave.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=

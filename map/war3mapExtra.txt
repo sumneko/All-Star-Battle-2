@@ -1,0 +1,4 @@
+[MapExtraInfo]
+SkyModel=4
+TimeOfDay=3
+
