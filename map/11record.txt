@@ -34,6 +34,7 @@
 		//律队 	n01M
 		//梓喵 	n01N
 		//凛凛蝶	n01S
+		//优    n01X
 
 		//幸运	button\BTNXS_S_XY.blp
 		//YY	button\BTNXS_S_YY.blp
@@ -266,6 +267,30 @@
 			标题=特殊信使
 			内容=梓喵
 
+		//优	n01X
+
+		    信使=n01X
+			前缀=|cffffcc00···|r
+			说明=优·克里伍德
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=WorldEdit
+			图标=button\BTNXS_U_ZM.blp
+			技能=被动
+			标题=特殊信使
+			内容=优·克里伍德
+
 	==英雄皮肤==
 
 		//saber alter
@@ -351,8 +376,68 @@
 
 
 		//阎魔爱 学生装
-		皮肤=A0U5
-		前缀=|cffff1111学生|r
+		皮肤=A0U6
+		前缀=|cffff1111学生装|r
+		说明=这里是皮肤说明
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=WorldEdit
+
+
+		//真·爱德华
+		皮肤=A0U7
+		前缀=|cffff1111真·|r
+		说明=这里是皮肤说明
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=WorldEdit
+
+
+		//真·克劳德
+		皮肤=A0U8
+		前缀=|cffff1111真·|r
+		说明=这里是皮肤说明
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=WorldEdit
+
+
+		//天罚者
+		皮肤=A0U9
+		前缀=|cffff1111天罚者|r
+		说明=这里是皮肤说明
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=WorldEdit
+
+
+		//女剑客
+		皮肤=A0UA
+		前缀=|cffff1111女·|r
+		说明=这里是皮肤说明
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=WorldEdit
+
+
+		//Saber Loli
+		皮肤=A0UB
+		前缀=|cffff1111Loli|r
 		说明=这里是皮肤说明
 		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
