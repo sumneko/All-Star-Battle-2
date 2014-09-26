@@ -33,6 +33,7 @@ AgiDefenseBonus=0.2
 IntRegenBonus=0.02
 DefenseArmor=0.05
 SummonedKillFactor=0.0
+ReactionDelay=0.0
 
 [InfoPanel]
 SpeedAverage=340.0
