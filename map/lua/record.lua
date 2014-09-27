@@ -106,7 +106,7 @@
 		if not data[name] then
 			table.insert(data, name)
 		end
-		data[name] = math.max(data[name] or 0, player.self:getRecord '胜利')
+		data[name] = math.max(data[name] or 0, player.self:getRecord '胜利' + math.floor(player.self:getRecord '时间' / 30))
 		
 		--生成新的本地记录
 		local texts = {}
