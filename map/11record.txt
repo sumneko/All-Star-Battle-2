@@ -1,11 +1,10 @@
 ﻿
 	==特殊称号==
-
+                小爱不是处=|cFFFF99FF[笨蛋你妹啊，你才是笨蛋啊 bakabaka]|r
 		WorldEdit=|cffffcc00[测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
 		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
 		裂魂SAMA=|cFF66FFFF[请叫我]|r
-                Mythmakers=|cff505050[起始者]|r
 		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
 		Any_遗失=|cffffcc00[|cffaa10bb泯灭虚空之刃★|cffffcc00]|r
 		姬神小桃=|cffffcc00[|cffffff00誓约胜利之剑★|cffffcc00]|r
@@ -315,7 +314,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=
+		名字=;小爱不是处
 
 		//黑崎一护 白
 		皮肤=A0TU
@@ -326,18 +325,18 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶我妻桃子;艾斯特;CLANNAD_殇;户川汐音;空心de木偶;樱逝夕颜
+		名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶我妻桃子;艾斯特;CLANNAD_殇;户川汐音;空心de木偶;樱逝夕颜;小爱不是处
 
 		//夏娜 火雾战士
 		皮肤=A0TV
 		前缀=|cffff1111火雾战士|r
 		说明=这里是皮肤说明
-		价格=1-20 5-90 25-400
+		价格=
 		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=
+		名字=小爱不是处
 
 		//夜夜
 		皮肤=A0TZ
@@ -348,43 +347,43 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
 		//夜夜 Special
 		皮肤=A0U1
 		前缀=|cffff1111机巧少女 Special|r
 		说明=这里是皮肤说明
-		价格=1-200 5-900 25-4000
+		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph alternate
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
 		//超电磁炮
 		皮肤=A0U5
 		前缀=|cffff1111超电磁炮|r
 		说明=这里是皮肤说明
-		价格=1-200 5-900 25-4000
+		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
 		//阎魔爱 学生装
 		皮肤=A0U6
 		前缀=|cffff1111学生装|r
 		说明=这里是皮肤说明
-		价格=1-200 5-900 25-4000
+		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处;姬神小桃
 
 
 		//真·爱德华
@@ -393,10 +392,10 @@
 		说明=这里是皮肤说明
 		价格=1-200 5-900 25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
-		特效点=
+		特效点=1-200 5-900 25-4000
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
 		//真·克劳德
@@ -408,19 +407,19 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
 		//天罚者
 		皮肤=A0U9
 		前缀=|cffff1111天罚者|r
 		说明=这里是皮肤说明
-		价格=1-200 5-900 25-4000
+		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
 		//女剑客
@@ -432,16 +431,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=WorldEdit
+		名字=WorldEdit;小爱不是处
 
 
-		//Saber Loli
-		皮肤=A0UB
-		前缀=|cffff1111Loli|r
-		说明=这里是皮肤说明
-		价格=1-200 5-900 25-4000
-		变身特效=war3mapImported\A2_leidian.mdl
-		特效点=
-		特效时间=0.5
-		变身动画=morph
-		名字=WorldEdit
+		
