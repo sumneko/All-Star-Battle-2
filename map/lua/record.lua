@@ -268,6 +268,50 @@
 		end
 	)
 
+	function cmd.new_version(p)
+		print(p:get())
+		p.new_version	= true
+	end
+
+	function record.buff()
+		print('check buff')
+		if player.self.new_version then
+			print('new_version')
+			--清掉所有的特殊积分数据
+			player.self:setRecord('节操', 0)
+			
+			--清空信使次数
+			for _, data in ipairs(messenger) do
+				player.self:setRecord(data['信使'], 0)
+			end
+
+			--清空皮肤次数
+			for _, data in ipairs(hero_model) do
+				player.self:setRecord(data['皮肤'], 0)
+			end
+			
+			if player.self:getRecord 'db' == 0 and player.self:getRecord '局数' > 1 then
+			--老玩家,计算BUFF
+				local n	= player.self:getRecord '局数' * 20 + player.self:getRecord '胜利' * 10 + player.self:getRecord '时间'
+				--折算为25%
+				n	= math.floor(n * 0.25)
+				player.self:setRecord('db', n)
+				cmd.maid_chat(player.self, ('主人您是该地图的老玩家,获得了 %d 点节操奖励哦~'):format(n))
+				cmd.maid_chat(player.self, '您将在游戏结束时获得双倍的节操,直到领完这些奖励为止!')
+			else
+				player.self:setRecord('db', -1)
+			end
+
+			player.self:saveRecord()
+		end
+	end
+
+	timer.wait(20,
+		function()
+			record.buff()
+		end
+	)
+
 	function cmd.game_over(p, tid)
 		local n = timer.time() --每分钟+1节操
 		local jc = record.jc[p:get()]
@@ -284,6 +328,25 @@
 			print(n)
 			cmd.maid_chat(p, ('主人,您本局收获了 %d 点节操哦~'):format(n))
 		end
+
+		--检查节操奖励
+		local buff	= p:getRecord 'db'
+		local dn	= 0
+		if buff > 0 then
+			if buff > n then
+				dn		= n
+				buff	= buff - n
+				cmd.maid_chat(p, ('主人,您额外获得了 %d 点节操奖励,剩余奖励 %d 点~'):format(dn, buff))
+			else
+				dn		= buff
+				buff	= -1
+				cmd.maid_chat(p, ('主人,您额外获得了 %d 点节操奖励,已经将奖励领完了哦'):format(dn))
+			end
+			p:setRecord('db', buff)
+		end
+		
 		jc['节操'] = jc['节操'] + n
 		p:setRecord('节操', jc['节操'])
 	end
+
+	
