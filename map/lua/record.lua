@@ -270,18 +270,20 @@
 
 	function cmd.game_over(p, tid)
 		local n = timer.time() --每分钟+1节操
-		local jc = record.jc[player.self:get()]
-		print 'game_over'
+		local jc = record.jc[p:get()]
 		tid = tonumber(tid)
+		print ('game_over', tid, p:getTeam(), tid == p:getTeam())
 		if tid == p:getTeam() then
 			n = n + 30 --胜利+30节操
 			n = math.floor(n * jc['收益'])
-			cmd.maid_chat(player.self, ('恭喜获胜,您本局收获了 %d 点节操哦~'):format(n))
+			print(n)
+			cmd.maid_chat(p, ('恭喜获胜,您本局收获了 %d 点节操哦~'):format(n))
 		else
 			n = n + 20 --失败+20节操
 			n = math.floor(n * jc['收益'])
-			cmd.maid_chat(player.self, ('主人,您本局收获了 %d 点节操哦~'):format(n))
+			print(n)
+			cmd.maid_chat(p, ('主人,您本局收获了 %d 点节操哦~'):format(n))
 		end
 		jc['节操'] = jc['节操'] + n
-		player.self:setRecord('节操', jc['节操'])
+		p:setRecord('节操', jc['节操'])
 	end
