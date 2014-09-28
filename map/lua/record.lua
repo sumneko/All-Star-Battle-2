@@ -275,7 +275,7 @@
 
 	function record.buff()
 		print('check buff')
-		if player.self.new_version then
+		if player.self.new_version and cmd.ver_name == '2.7a' then
 			print('new_version')
 			--清掉所有的特殊积分数据
 			player.self:setRecord('节操', 0)
