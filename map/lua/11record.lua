@@ -478,7 +478,7 @@
 		--解析技能图标
 		data.skill_icons	= {}
 		if data['技能图标'] then
-			for id, art in data['技能图标']:gmatch '(%S+)%-(%S+)' do
+			for id, art in data['技能图标']:gmatch '([^%;]+)%-([^%;]+)' do
 				data.skill_icons[string2id(id)] = art
 			end
 		end
@@ -571,7 +571,7 @@
 								jass.UnitRemoveAbility(hero, data.skill_id)
 
 								if game.debug or true then
-									local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound'}
+									local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip'}
 									table.back(ignore)
 									for name, value in pairs(slk.unit[data.hero_id_base]) do
 										if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then

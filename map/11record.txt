@@ -301,8 +301,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		//图标路径不能包含空格
-		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp A0E4-BTNSkill_Saber_Alter_Q.blp A0OD-BTNSkill_Saber_Alter_W.blp A0GX-BTNSkill_Saber_Alter_E.blp A03D-BTNSkill_Saber_Alter_R.blp A0I0-BTNSkill_Saber_Alter_R.blp AOw2-BTNSkill_Saber_Alter_D.blp
+		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
 		名字=裂魂SAMA;小爱不是处;Mythmakers
 
 		//saber extra
@@ -325,7 +324,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶我妻桃子;艾斯特;CLANNAD_殇;户川汐音;空心de木偶;樱逝夕颜;小爱不是处
+		名字=沙门丶;Any_遗失;藤林杏;噩梦睡篮丶我妻桃子;艾斯特;CLANNAD_殇;户川汐音;空心de木偶;樱逝夕颜;小爱不是处
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -442,5 +441,5 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=
+		名字=S灭杀_____;小爱不是处
 		
