@@ -226,13 +226,14 @@
 				
 				--使用皮肤
 				local function change()
-					if game.debug then
+					if game.debug or true then
 						local ignore = {'file', 'ScoreScreenIcon', 'Art', 'modelScale', 'scale', 'unitSound', 'EditorSuffix', 'name', 'abilList', 'shadowH', 'death', 'unitShadow', 'shadowW', 'shadowX', 'shadowY', 'Tip'}
 						table.back(ignore)
 						local old_id = id2string(jass.GetUnitTypeId(u))
 						for name, value in pairs(slk.unit[data.id]) do
 							if not ignore[name] and slk.unit[old_id][name] ~= value then
-								cmd.maid_chat(player.self, ('皮肤数据不匹配[%s]:[%s] - [%s]'):format(name, value, slk.unit[old_id][name]))
+								cmd.maid_chat(player.self, ('皮肤数据不匹配[%s:%s]:[%s] - [%s]'):format(data.id, name, value, slk.unit[old_id][name]))
+								cmd.maid_chat(player.self, '请截图汇报')
 							end
 						end
 					end
@@ -569,12 +570,13 @@
 								jass.UnitAddAbility(hero, data.skill_id)
 								jass.UnitRemoveAbility(hero, data.skill_id)
 
-								if game.debug then
+								if game.debug or true then
 									local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound'}
 									table.back(ignore)
 									for name, value in pairs(slk.unit[data.hero_id_base]) do
 										if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then
-											cmd.maid_chat(player.self, ('皮肤数据不匹配[%s]:[%s] - [%s]'):format(name, value, slk.unit[data.hero_id_new][name]))
+											cmd.maid_chat(player.self, ('皮肤数据不匹配[%s:%s]:[%s] - [%s]'):format(data.hero_id_new, name, value, slk.unit[data.hero_id_new][name]))
+											cmd.maid_chat(player.self, '请截图汇报')
 										end
 									end
 								end
