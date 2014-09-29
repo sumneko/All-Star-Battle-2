@@ -313,7 +313,7 @@
 	)
 
 	function cmd.game_over(p, tid)
-		local n = timer.time() --每分钟+1节操
+		local n = timer.time() / 60 --每分钟+1节操
 		local jc = record.jc[p:get()]
 		tid = tonumber(tid)
 		print ('game_over', tid, p:getTeam(), tostring(tid == p:getTeam()))
