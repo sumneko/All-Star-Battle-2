@@ -292,7 +292,7 @@
 						player[i]:setRecord(data['皮肤'], 0)
 					end
 					
-					if player[i]:getRecord 'db' == 0 and player[i]:getRecord '局数' > 1 then
+					if player[i]:getRecord 'db' == 0 and player[i]:getRecord '局数' > 5 then
 					--老玩家,计算BUFF
 						local n	= player[i]:getRecord '局数' * 20 + player[i]:getRecord '胜利' * 10 + player[i]:getRecord '时间'
 						--折算为25%
