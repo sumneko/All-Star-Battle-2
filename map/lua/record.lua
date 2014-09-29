@@ -275,34 +275,38 @@
 
 	function record.buff()
 		print('check buff')
-		if player.self.new_version and cmd.ver_name == '2.7a' then
-			print('new_version')
-			--清掉所有的特殊积分数据
-			player.self:setRecord('节操', 0)
-			
-			--清空信使次数
-			for _, data in ipairs(messenger) do
-				player.self:setRecord(data['信使'], 0)
-			end
+		if cmd.ver_name == '2.7b' then
+			for i = 1, 10 do
+				if player[i].new_version then
+					print('new_version')
+					--清掉所有的特殊积分数据
+					player[i]:setRecord('节操', 0)
+					
+					--清空信使次数
+					for _, data in ipairs(messenger) do
+						player[i]:setRecord(data['信使'], 0)
+					end
 
-			--清空皮肤次数
-			for _, data in ipairs(hero_model) do
-				player.self:setRecord(data['皮肤'], 0)
-			end
-			
-			if player.self:getRecord 'db' == 0 and player.self:getRecord '局数' > 1 then
-			--老玩家,计算BUFF
-				local n	= player.self:getRecord '局数' * 20 + player.self:getRecord '胜利' * 10 + player.self:getRecord '时间'
-				--折算为25%
-				n	= math.floor(n * 0.25)
-				player.self:setRecord('db', n)
-				cmd.maid_chat(player.self, ('主人您是该地图的老玩家,获得了 %d 点节操奖励哦~'):format(n))
-				cmd.maid_chat(player.self, '您将在游戏结束时获得双倍的节操,直到领完这些奖励为止!')
-			else
-				player.self:setRecord('db', -1)
-			end
+					--清空皮肤次数
+					for _, data in ipairs(hero_model) do
+						player[i]:setRecord(data['皮肤'], 0)
+					end
+					
+					if player[i]:getRecord 'db' == 0 and player[i]:getRecord '局数' > 1 then
+					--老玩家,计算BUFF
+						local n	= player[i]:getRecord '局数' * 20 + player[i]:getRecord '胜利' * 10 + player[i]:getRecord '时间'
+						--折算为25%
+						n	= math.floor(n * 0.25)
+						player[i]:setRecord('db', n)
+						cmd.maid_chat(player[i], ('主人您是该地图的老玩家,获得了 %d 点节操奖励哦~'):format(n))
+						cmd.maid_chat(player[i], '您将在游戏结束时获得双倍的节操,直到领完这些奖励为止!')
+					else
+						player[i]:setRecord('db', -1)
+					end
 
-			player.self:saveRecord()
+					player[i]:saveRecord()
+				end
+			end
 		end
 	end
 
