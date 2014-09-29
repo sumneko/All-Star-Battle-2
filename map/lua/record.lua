@@ -316,7 +316,7 @@
 		local n = timer.time() --每分钟+1节操
 		local jc = record.jc[p:get()]
 		tid = tonumber(tid)
-		print ('game_over', tid, p:getTeam(), tid == p:getTeam())
+		print ('game_over', tid, p:getTeam(), tostring(tid == p:getTeam()))
 		if tid == p:getTeam() then
 			n = n + 30 --胜利+30节操
 			n = math.floor(n * jc['收益'])
