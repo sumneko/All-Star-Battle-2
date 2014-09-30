@@ -331,7 +331,7 @@
 		皮肤=A0TV
 		前缀=|cffff1111火雾战士|r
 		说明=这里是皮肤说明
-		价格=
+		价格=1-200 5-900 25-4000
 		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
