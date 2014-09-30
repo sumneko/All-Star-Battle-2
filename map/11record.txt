@@ -1,17 +1,17 @@
 ﻿
 	==特殊称号==
-                小爱不是处=|cFFFF99FF[笨蛋你妹啊，你才是笨蛋啊 bakabaka]|r
+        小爱不是处=|cFFFF99FF[笨蛋你妹啊，你才是笨蛋啊 bakabaka]|r
 		WorldEdit=|cffffcc00[测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
 		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
-		裂魂SAMA=|cFF66FFFF[请叫我]|r
+		裂魂SAMA=|cFF66FFFF[说别人笨蛋的人才是真正的笨蛋呢！笨蛋]|r
 		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
 		Any_遗失=|cffffcc00[|cffaa10bb泯灭虚空之刃★|cffffcc00]|r
 		姬神小桃=|cffffcc00[|cffffff00誓约胜利之剑★|cffffcc00]|r
 		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
-		Mythmakers=|cFF66FFFF[起始者]|r
+		Mythmakers=|cFF66FFFF[说别人笨蛋的人才是真正的笨蛋呢！笨蛋]|r
                 
 
         //天道受1
@@ -56,11 +56,6 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
 			//皮肤无限使用权
-			名字=WorldEdit
-			图标=war3mapImported\btntemp.blp
-			技能=被动
-			标题=|cffffcc00%player_name%|r,测试辛苦了!
-			内容=无聊的时候就逗逗裂魂人玩吧~
 
 			名字=裂魂SAMA;小爱不是处;Mythmakers
 			图标=button\BTNBTNXS_U_Riricho.blp
@@ -188,6 +183,12 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
+			名字=WorldEdit
+			图标=war3mapImported\btntemp.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r,测试辛苦了!
+			内容=无聊的时候就逗逗裂魂人玩吧~
+
 			名字=
 			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
 			技能=被动
@@ -284,7 +285,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处
+			名字=我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;Mythmakers;裂魂SAMA
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -313,7 +314,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 		//黑崎一护 白
 		皮肤=A0TU
@@ -324,7 +325,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=沙门丶;藤林杏;空心de木偶;小爱不是处;艾斯特;CLANNAD_殇
+		名字=沙门丶;藤林杏;空心de木偶;小爱不是处;艾斯特;CLANNAD_殇;Mythmakers;裂魂SAMA
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -335,7 +336,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 		//夜夜
 		皮肤=A0TZ
@@ -346,7 +347,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 
 		//夜夜 Special
@@ -358,7 +359,8 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph alternate
-		名字=小爱不是处
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A06C-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 
 		//超电磁炮
@@ -370,7 +372,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;Any_遗失;噩梦睡篮丶;户川汐音;樱逝夕颜
+		名字=小爱不是处;Any_遗失;噩梦睡篮丶;户川汐音;樱逝夕颜;Mythmakers;裂魂SAMA
 
 
 
@@ -383,7 +385,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;姬神小桃
+		名字=小爱不是处;姬神小桃;Mythmakers;裂魂SAMA
 
 
 		//真·爱德华
@@ -395,7 +397,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;Mythmakers
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 
 		//真·克劳德
@@ -407,7 +409,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;Mythmakers
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 
 		//天罚者
@@ -419,7 +421,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;Mythmakers;我妻桃子
+		名字=小爱不是处;Mythmakers;我妻桃子;裂魂SAMA
 
 
 		//女剑客
@@ -431,7 +433,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;Mythmakers
+		名字=小爱不是处;Mythmakers;裂魂SAMA
 
 		//装甲屠夫
 		皮肤=A0UI
@@ -442,5 +444,5 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=S灭杀_____;小爱不是处
+		名字=S灭杀_____;小爱不是处;Mythmakers;裂魂SAMA
 		
