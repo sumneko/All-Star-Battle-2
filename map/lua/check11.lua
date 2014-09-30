@@ -12,7 +12,7 @@
             japi.EXDisplayChat(jass.Player(12), 0, '                                               全明星战役' .. cmd.ver_name)
             
             jass.SetPlayerName(jass.Player(12), '|cffffff11幻雷|r')
-            japi.EXDisplayChat(jass.Player(12), 0, '                                               作者：小神 幻雷 最萌小汐 裂魂')
+            japi.EXDisplayChat(jass.Player(12), 0, '                                               作者：小神 幻雷 最萌小汐 裂魂 TJ')
             
             jass.SetPlayerName(jass.Player(12), '|cffff11cc小汐|r')
             japi.EXDisplayChat(jass.Player(12), 0, '                                               感谢玩家s芙兰朵露z和东风谷早面对本地图的支持！')
