@@ -186,21 +186,21 @@
 			local n = lv2 - lv1
 			local x = 0
 			if n <= 200 then
-				x = x + n * 0.01
+				x = x + n * 0.005
 			else
-				x = x + 200 * 0.01
+				x = x + 200 * 0.005
 				n = n - 200
 				if n <= 500 then
-					x = x + n * 0.005
+					x = x + n * 0.002
 				else
-					x = x + 500 * 0.005
+					x = x + 500 * 0.0002
 					n = n - 500
 					if n <= 1000 then
-						x = x + n * 0.002
-					else
-						x = x + 1000 * 0.002
-						n = n - 1000
 						x = x + n * 0.001
+					else
+						x = x + 1000 * 0.001
+						--n = n - 1000
+						--x = x + n * 0.001
 					end
 				end
 			end
@@ -213,23 +213,15 @@
 				local n = lv1 - lv2
 				local x = 1
 				if n > 5000 then
-					x = 0.1
+					x = 0.75
 				elseif n > 2000 then
-					x = 0.2
+					x = 0.80
 				elseif n > 1000 then
-					x = 0.3
-				elseif n > 800 then
-					x = 0.4
-				elseif n > 600 then
-					x = 0.5
+					x = 0.85
 				elseif n > 500 then
-					x = 0.6
-				elseif n > 400 then
-					x = 0.7
-				elseif n > 300 then
-					x = 0.8
+					x = 0.90
 				elseif n > 200 then
-					x = 0.9
+					x = 0.95
 				end
 				if x ~= 1 then
 					cmd.maid_chat(player.self, '主人呀,对面差你们太多了吧')
@@ -241,12 +233,12 @@
 			--检查是不是小号
 			if not is_main then
 				if player.self:getRecord '胜利' == 0 then
-					cmd.maid_chat(player.self, '主人您居然开小号虐菜!从下局开始节操收益会降低25%')
+					cmd.maid_chat(player.self, '主人您居然开小号虐菜!')
 					cmd.maid_chat(player.self, '主人您的大号是 [' .. name .. '] 没错吧~')
 				else
-					cmd.maid_chat(player.self, '主人您又在开小号虐菜了,您本局的节操收益降低25%')
+					cmd.maid_chat(player.self, '主人您又在开小号虐菜了')
 					cmd.maid_chat(player.self, '主人您的大号是 [' .. name .. '] 没错吧~')
-					jc['收益'] = jc['收益'] * 0.75
+					--jc['收益'] = jc['收益'] * 0.75
 				end
 			end
 		end
