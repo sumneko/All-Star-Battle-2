@@ -5,8 +5,6 @@
 
 	setmetatable(record, record)
 
-	record.GC = jass.InitGameCache 'M'
-
 	if not japi.InitGameCache then
 		local names	= {
 			'InitGameCache',
@@ -37,12 +35,12 @@
 	timer.wait(1, record.init)
 
 	function player.__index.getRecord(this, name)
-		--print(('load record: %s = %s'):format(name, japi.GetStoredInteger(this.record, '', name)))
+		--print(('player[%d] load record: %s = %s'):format(this:get(), name, japi.GetStoredInteger(this.record, '', name)))
 		return japi.GetStoredInteger(this.record, '', name) or 0
 	end
 
 	function player.__index.setRecord(this, name, value)
-		--print(('save record: %s = %s'):format(name, value))
+		--print(('player[%d] save record: %s = %s'):format(this:get(), name, value))
 		return japi.StoreInteger(this.record, '', name, value)
 	end
 
@@ -131,8 +129,36 @@
 		player.self:saveRecord()
 
 		--将胜利信息发送给其他玩家
-		jass.StoreInteger(record.GC, 'mt0', player.self:get(), data[name])
-		jass.SyncStoredInteger(record.GC, 'mt0', player.self:get())
+		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db'
+		local t	= {}
+		for name in sync_names:gmatch '(%S+)' do
+			t[name]	= player.self:getRecord(name)
+		end
+		
+		--保存信使皮肤数据
+		for _, data in ipairs(messenger) do
+			local name	= data['信使']
+			t[name] 	= player.self:getRecord(name)
+		end
+		
+		--保存英雄皮肤数据
+		for _, data in ipairs(hero_model) do
+			local name	= data['皮肤']
+			t[name]		= player.self:getRecord(name)
+		end
+
+		--同步数据
+		for i = 1, 10 do
+			local p = player[i]
+			p:sync(
+				t,
+				function(data)
+					for name, value in pairs(data) do
+						p:setRecord(name, value)
+					end
+				end
+			)
+		end
 		
 	end
 
@@ -155,10 +181,10 @@
 			if player[i]:isPlayer() then
 				if player[i]:getTeam() == team then
 					my_team 	= my_team + 1
-					lv1			= lv1 + math.max(player[i]:getRecord 'mt0', jass.GetStoredInteger(record.GC, 'mt0', i))
+					lv1			= lv1 + player[i]:getRecord 'mt0'
 				else
 					enemy_team 	= enemy_team + 1
-					lv2			= lv2 + math.max(player[i]:getRecord 'mt0', jass.GetStoredInteger(record.GC, 'mt0', i))
+					lv2			= lv2 + player[i]:getRecord 'mt0'
 				end
 				player_num = player_num + 1
 			end
@@ -177,7 +203,8 @@
 		local is_main	= true
 		local data	= player.self.record_data
 		local name, value	= record.loadName('mt')
-		if data[name] ~= data[player.self:getBaseName()] then
+		print('main', name, value)
+		if data[name] ~= data[player.self:getBaseName()] and value ~= 0 then
 			is_main	= false
 		end
 		
@@ -232,7 +259,7 @@
 			
 			--检查是不是小号
 			if not is_main then
-				if player.self:getRecord '胜利' == 0 then
+				if player.self:getRecord '局数' == 0 then
 					cmd.maid_chat(player.self, '主人您居然开小号虐菜!')
 					cmd.maid_chat(player.self, '主人您的大号是 [' .. name .. '] 没错吧~')
 				else
@@ -261,13 +288,13 @@
 	)
 
 	function cmd.new_version(p)
-		print(p:get())
+		--print(p:get())
 		p.new_version	= true
 	end
 
 	function record.buff()
 		print('check buff')
-		if cmd.ver_name == '2.7c' then
+		if cmd.ver_name == '2.7C' then
 			for i = 1, 10 do
 				if player[i].new_version then
 					print('new_version')

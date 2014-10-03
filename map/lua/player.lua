@@ -32,7 +32,7 @@
 
 		--获取名字
 		getName = function(this)
-			return jass.GetPlayerName(this.handle, name)
+			return jass.GetPlayerName(this.handle)
 		end,
 
 		--获取基础名字

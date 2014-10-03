@@ -38,6 +38,21 @@
     
     unpack = unpack or table.unpack
     load = load or loadstring
+
+    --全局环境
+    setmetatable(_G,
+		{
+			__index	= function(_, name)
+				error(('load global var is nil: %s'):format(name), 2)
+			end,
+			__newindex	= function(_, name, value)
+				if type(value) ~= 'table' and type(value) ~= 'function' then
+					print(('save global var is not table: %s = %s'):format(name, value))
+				end
+				rawset(_G, name, value)
+			end,
+		}
+    )
     
 	require 'lua\\util.lua'
 	require 'lua\\event.lua'
@@ -48,5 +63,6 @@
 	require 'lua\\game.lua'
 	require 'lua\\text.lua'
 	require 'lua\\check11.lua'
+	require 'lua\\sync.lua'
 
 	require 'lua\\record.lua'
