@@ -427,6 +427,7 @@
 		function(this)
 			local i	= messenger.model_skill[this.skill]
 			if i then
+				print(id2string(this.skill))
 				event('点击信使皮肤', this)
 			end
 		end
