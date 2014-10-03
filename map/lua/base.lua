@@ -66,3 +66,4 @@
 	require 'lua\\sync.lua'
 
 	require 'lua\\record.lua'
+	require 'lua\\hot_fix.lua'

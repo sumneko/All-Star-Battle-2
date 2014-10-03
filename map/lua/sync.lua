@@ -9,10 +9,26 @@
 	function sync.init()
 		sync.gc		= jass.InitGameCache 'U'
 		sync.using	= {} --记录正在使用的
-		sync.str	= 'abcdefghijklmnopqrstuvwxyz0123456789'
+		sync.str	= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890/*-+=,.<>\\|[]{};:!@#$%^&()'
+		sync.len	= #sync.str
+		sync.strs	= {}
+		for i = 1, sync.len do
+			sync.strs[i] = sync.str:sub(i, i)
+		end
 	end
 
 	sync.init()
+
+	--获取路径
+	function sync.getKey(i)
+		local r = ''
+		while i > 0 do
+			local n	= (i - 1) % sync.len + 1
+			i = math.floor(i / sync.len)
+			r = sync.strs[n] .. r
+		end
+		return r
+	end
 
 	--同步某数据
 	---玩家, 数据(k, string)
@@ -39,14 +55,15 @@
 		for name, value in pairs(data) do
 			i	= i + 1
 			keys[i]	= name
+			local key = sync.getKey(i)
 			if p == player.self then
 				--将数据保存到缓存中
-				jass.StoreInteger(sync.gc, sync.first, sync.str:sub(i, i), value)
+				jass.StoreInteger(sync.gc, sync.first, key, value)
 				--发起同步
-				jass.SyncStoredInteger(sync.gc, sync.first, sync.str:sub(i, i))
+				jass.SyncStoredInteger(sync.gc, sync.first, key)
 			end
 			--清空本地数据
-			jass.StoreInteger(sync.gc, sync.first, sync.str:sub(i, i), 0)
+			jass.StoreInteger(sync.gc, sync.first, key, 0)
 		end
 		--发送一个结束标记
 		if p == player.self then
@@ -70,7 +87,7 @@
 				t:destroy()
 				--同步完成,开始写回数据
 				for i, name in ipairs(keys) do
-					data[name]	= jass.GetStoredInteger(sync.gc, sync.first, sync.str:sub(i, i))
+					data[name]	= jass.GetStoredInteger(sync.gc, sync.first, sync.getKey(i))
 					print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
 				end
 				--回调数据
