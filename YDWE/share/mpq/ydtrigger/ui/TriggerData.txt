@@ -4017,8 +4017,8 @@ Unit.SetHard=0,unit,real
 _Unit.SetHard_Defaults=GetTriggerUnit,1
 _Unit.SetHard_Category=TC_MU_UNIT
 
-Unit.SkillBar=0,unit,real,playercolor,boolean,boolean,boolean
-_Unit.SkillBar_Defaults=GetTriggerUnit,1,Color00,true,true,true
+Unit.SkillBar=0,unit,real,playercolor,boolean,boolean,boolean,boolean
+_Unit.SkillBar_Defaults=GetTriggerUnit,1,Color00,true,true,true,true
 _Unit.SkillBar_Category=TC_MU_UNIT
 
 //物品库
