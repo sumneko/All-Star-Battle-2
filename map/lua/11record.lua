@@ -175,11 +175,13 @@
 				end
 			end
 
+			local show	= 1
 			local count	= p:getRecord(data['信使'])
 			if data.names[p:getBaseName()] then
 				table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
 			elseif #data.gold == 0 then
 				table.insert(texts, ('\n|cffffcc00非卖品|r'))
+				show = 0
 			elseif count == 0 then
 				table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 			else
@@ -197,7 +199,7 @@
 
 			--设置技能
 			if p == player.self then
-				japi.EXSetAbilityDataReal(ab, 1, 110, 1)
+				japi.EXSetAbilityDataReal(ab, 1, 110, show)
 				japi.EXSetAbilityDataString(ab, 1, 215, title)
 				japi.EXSetAbilityDataString(ab, 1, 218, direct)
 				japi.EXSetAbilityDataString(ab, 1, 204, slk.unit[data.id].Art)
@@ -506,11 +508,13 @@
 						end
 					end
 
-					local count	= p:getRecord(data['皮肤'])	
+					local count	= p:getRecord(data['皮肤'])
+					local show	= 1
 					if data.names[p:getBaseName()] then
 						table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
 					elseif #data.gold == 0 then
 						table.insert(texts, ('\n|cffffcc00非卖品|r'))
+						show = 0
 					elseif count == 0 then
 						table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 					else
@@ -529,6 +533,7 @@
 					jass.UnitAddAbility(hero, hero_model.skills[i])
 					local ab	= japi.EXGetUnitAbility(hero, hero_model.skills[i])
 					if p == player.self then
+						japi.EXSetAbilityDataReal(ab, 1, 110, show)
 						japi.EXSetAbilityDataString(ab, 1, 215, title)
 						japi.EXSetAbilityDataString(ab, 1, 218, direct)
 						japi.EXSetAbilityDataString(ab, 1, 204, slk.unit[data.hero_id_new].Art)
