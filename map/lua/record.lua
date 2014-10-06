@@ -300,18 +300,21 @@
 					print('new_version')
 					--清掉所有的特殊积分数据
 					player[i]:setRecord('节操', 0)
+
+					--判断老玩家
+					local n	= player[i]:getRecord '局数' > 5 and 1 or 0
 					
 					--清空信使次数
 					for _, data in ipairs(messenger) do
-						player[i]:setRecord(data['信使'], 1)
+						player[i]:setRecord(data['信使'], n)
 					end
 
 					--清空皮肤次数
 					for _, data in ipairs(hero_model) do
-						player[i]:setRecord(data['皮肤'], 1)
+						player[i]:setRecord(data['皮肤'], n)
 					end
 					
-					if player[i]:getRecord '局数' > 5 then
+					if n == 1 then
 					--老玩家,计算BUFF
 						local n	= player[i]:getRecord '局数' * 20 + player[i]:getRecord '胜利' * 10 + player[i]:getRecord '时间'
 						--折算为25%
