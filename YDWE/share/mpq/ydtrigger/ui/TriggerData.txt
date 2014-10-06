@@ -5321,6 +5321,10 @@ SetUnitMoveSpeed=0,unit,real
 _SetUnitMoveSpeed_Defaults=_,GetUnitDefaultMoveSpeed
 _SetUnitMoveSpeed_Category=TC_UNIT
 
+Unit.AddMoveSpeed=0,unit,real
+_Unit.AddMoveSpeed_Defaults=GetTriggerUnit,100
+_Unit.AddMoveSpeed_Category=TC_UNIT
+
 SetUnitPathing=0,unit,pathingoption
 _SetUnitPathing_Defaults=_,PathingOff
 _SetUnitPathing_Category=TC_UNIT

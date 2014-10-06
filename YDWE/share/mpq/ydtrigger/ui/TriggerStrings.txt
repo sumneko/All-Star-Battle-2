@@ -1021,6 +1021,9 @@ SetUnitMoveSpeed="设置移动速度"
 SetUnitMoveSpeed="设置 ",~单位," 的移动速度为 ",~Speed
 SetUnitMoveSpeedHint=
 
+Unit.AddMoveSpeed="增加移动速度 <单位库>"
+Unit.AddMoveSpeed="增加 ",~单位," 的移动速度 ",~Speed
+
 SetUnitPathing="设置碰撞开关"
 SetUnitPathing="设置 ",~单位," ",~On/Off," 碰撞"
 SetUnitPathingHint="关闭碰撞的单位无视障碍物,但其他单位仍视其为障碍物."
