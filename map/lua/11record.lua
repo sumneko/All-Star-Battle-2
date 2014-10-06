@@ -336,6 +336,10 @@
 
 					event('玩家离开',
 						function(this, name, f)
+							if this.player:isObserver() then
+								return
+							end
+							
 							event('-玩家离开', f)
 
 							--有玩家在20分钟内退出
@@ -631,6 +635,10 @@
 
 								event('玩家离开',
 									function(this, name, f)
+										if this.player:isObserver() then
+											return
+										end
+										
 										event('-玩家离开', f)
 
 										--有玩家在20分钟内退出
