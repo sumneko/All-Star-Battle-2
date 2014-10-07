@@ -7168,6 +7168,10 @@ MoveLightningEx=1,lightning,allowdontoption,real,real,real,real,real,real
 _MoveLightningEx_Defaults=bj_lastCreatedLightning,AllowDontDont,0,0,0,0,0,0
 _MoveLightningEx_Category=TC_LIGHTNING
 
+baka.MoveLightningEx2=1,lightning,allowdontoption,real,real,real,real,real,real
+_baka.MoveLightningEx2_Defaults=bj_lastCreatedLightning,AllowDontDont,0,0,0,0,0,0
+_baka.MoveLightningEx2_Category=TC_LIGHTNING
+
 MoveLightningLoc=1,lightning,location,location
 _MoveLightningLoc_Defaults=GetLastCreatedLightningBJ,_,_
 _MoveLightningLoc_Category=TC_LIGHTNING
@@ -11511,6 +11515,10 @@ _AddLightning_Category=TC_LIGHTNING
 AddLightningEx=0,1,lightning,lightningtype,allowdontoption,real,real,real,real,real,real
 _AddLightningEx_Defaults=LightningTypeCLPB,AllowDontDont,0,0,0,0,0,0
 _AddLightningEx_Category=TC_LIGHTNING
+
+baka.AddLightningEx2=0,1,lightning,string,allowdontoption,real,real,real,real,real,real
+_baka.AddLightningEx2_Defaults=LightningTypeCLPB,AllowDontDont,0,0,0,0,0,0
+_baka.AddLightningEx2_Category=TC_LIGHTNING
 
 YDWEGetLightningByInteger=0,1,lightning,integer,integer
 _YDWEGetLightningByInteger_Limits=0,_,0,_
