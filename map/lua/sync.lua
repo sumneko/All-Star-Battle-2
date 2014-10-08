@@ -86,6 +86,7 @@
 				sync.using[index]	= nil
 				t:destroy()
 				--同步完成,开始写回数据
+				local data	= {}
 				for i, name in ipairs(keys) do
 					data[name]	= jass.GetStoredInteger(sync.gc, sync.first, sync.getKey(i))
 					print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
