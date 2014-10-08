@@ -316,7 +316,7 @@
 						local t = tonumber(data['特效时间'])
 						local e
 						if data['特效点'] then
-							e = jass.AddSpecialEffectTarget(data['变身特效'], hero, data['特效点'])
+							e = jass.AddSpecialEffectTarget(data['变身特效'], u, data['特效点'])
 						else
 							e = jass.AddSpecialEffect(data['变身特效'], x, y)
 						end
