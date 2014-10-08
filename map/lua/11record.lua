@@ -489,6 +489,18 @@
 				data.skill_icons[string2id(id)] = art
 			end
 		end
+
+		--检查数据
+		if game.debug then
+			local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip'}
+			table.back(ignore)
+			for name, value in pairs(slk.unit[data.hero_id_base]) do
+				if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then
+					cmd.maid_chat(player.self, ('皮肤数据不匹配[%s:%s]:[%s] - [%s]'):format(data.hero_id_new, name, value, slk.unit[data.hero_id_new][name]))
+					cmd.maid_chat(player.self, '请截图汇报')
+				end
+			end
+		end
 	end
 
 	--注册英雄时添加皮肤技能
@@ -579,17 +591,6 @@
 							local function change()
 								jass.UnitAddAbility(hero, data.skill_id)
 								jass.UnitRemoveAbility(hero, data.skill_id)
-
-								if game.debug or true then
-									local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip'}
-									table.back(ignore)
-									for name, value in pairs(slk.unit[data.hero_id_base]) do
-										if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then
-											cmd.maid_chat(player.self, ('皮肤数据不匹配[%s:%s]:[%s] - [%s]'):format(data.hero_id_new, name, value, slk.unit[data.hero_id_new][name]))
-											cmd.maid_chat(player.self, '请截图汇报')
-										end
-									end
-								end
 
 								if data['变身特效'] then
 									local t = tonumber(data['特效时间'])
