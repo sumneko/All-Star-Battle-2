@@ -324,7 +324,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=沙门丶;藤林杏;空心de木偶;艾斯特;CLANNAD_殇;lianhuohuo2333;qilunuobaka9999
+		名字=沙门丶;藤林杏;空心de木偶;艾斯特;CLANNAD_殇;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -335,7 +335,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//夜夜
 		皮肤=A0TZ
@@ -346,7 +346,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//夜夜 Special
@@ -359,7 +359,7 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A06C-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//超电磁炮
@@ -371,7 +371,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999;Any_遗失
+		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999;Any_遗失;WorldEdit
 
 
 
@@ -384,7 +384,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=姬神小桃;lianhuohuo2333;qilunuobaka9999
+		名字=姬神小桃;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//真·爱德华
@@ -396,7 +396,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//真·克劳德
@@ -408,7 +408,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//天罚者
@@ -420,7 +420,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=我妻桃子;lianhuohuo2333;qilunuobaka9999
+		名字=我妻桃子;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//女剑客
@@ -432,7 +432,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//装甲屠夫
 		皮肤=A0UI
@@ -443,29 +443,29 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;S灭杀_____
+		名字=lianhuohuo2333;qilunuobaka9999;S灭杀_____;WorldEdit
 
 		//祸灵梦
 		皮肤=A0UU
 		前缀=|cffff1111祸·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-300;5-1300;25-6000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//黑剑客
 		皮肤=A0UY
 		前缀=|cffff1111黑化·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-300;5-1300;25-6000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//新约·一方
 		皮肤=A0V2
@@ -482,12 +482,12 @@
 		皮肤=A0V0
 		前缀=|cffff1111和服·|r
 		说明=这里是皮肤说明
-		价格=1-500;5-2250;25-9999
+		价格=1-200;5-900;25-4000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//黑暗游侠
 		皮肤=A0UV
@@ -498,7 +498,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//桔梗
 		皮肤=A0UW
@@ -509,18 +509,18 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//初音
 		皮肤=A0UX
 		前缀=|cffff1111世界第一公主殿下·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//诗乃
 		皮肤=A0UZ
@@ -531,7 +531,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//狗剪
 		皮肤=A0V3
@@ -542,7 +542,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//十香
 		皮肤=A0V4
@@ -553,7 +553,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//十香灵装
 		皮肤=A0V5
@@ -564,7 +564,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//黑脸
 		皮肤=A0V1
@@ -575,4 +575,4 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
