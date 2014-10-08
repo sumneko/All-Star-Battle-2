@@ -59,6 +59,7 @@ RESOURCE_UBERTIP_GOLD=TRIGSTR_4861
 
 
 [CustomSkin]
+LOADING_WAITING_FOR_PLAYERS=等待其他小霸王
 ToolTipSupplyIcon=naozhong.blp
 ToolTipLumberIcon=naozhong.blp
 InfoPanelIconFood=naozhong.blp
