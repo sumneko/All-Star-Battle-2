@@ -302,7 +302,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;Any_遗失;沙门丶
 
 		//saber extra
 		皮肤=A0TT
@@ -353,7 +353,7 @@
 		皮肤=A0U1
 		前缀=|cffff1111机巧少女 Special|r
 		说明=这里是皮肤说明
-		价格=1-500;5-2250;25-9999
+		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -371,7 +371,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=Any_遗失;噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999
+		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999
 
 
 
@@ -415,7 +415,7 @@
 		皮肤=A0U9
 		前缀=|cffff1111天罚者|r
 		说明=这里是皮肤说明
-		价格=
+		价格=1-200;5-900;25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -438,12 +438,12 @@
 		皮肤=A0UI
 		前缀=|cffff1111装甲|r
 		说明=这里是皮肤说明
-		价格=
+		价格=1-200;5-900;25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=S灭杀_____;lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;S灭杀_____
 
 		//祸灵梦
 		皮肤=A0UU
@@ -524,7 +524,7 @@
 
 		//诗乃
 		皮肤=A0UZ
-		前缀=|cffff1111世界第一公主殿下·|r
+		前缀=|cffff1111冰之狙击手·|r
 		说明=这里是皮肤说明
 		价格=1-200;5-900;25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
@@ -537,7 +537,7 @@
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -566,4 +566,13 @@
 		变身动画=morph
 		名字=lianhuohuo2333;qilunuobaka9999
 
-		
+		//黑脸
+		皮肤=A0V1
+		前缀=|cffff1111死神·|r
+		说明=这里是皮肤说明
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=lianhuohuo2333;qilunuobaka9999
