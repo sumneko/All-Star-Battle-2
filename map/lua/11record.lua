@@ -483,11 +483,11 @@
 		--检查非卖品数量
 		if #data.gold == 0 then
 			hero_model.not_for_sale	= hero_model.not_for_sale + 1
-			if hero_model.not_for_sale > 6 then
+			if hero_model.not_for_sale > 7 then
 				data.gold[1]	= {1, 500}
 				data.gold[2]	= {5, 2250}
 				data.gold[3]	= {25, 10000}
-				cmd.maid_chat(player.self, ('非卖品皮肤超过6个,当前第[%d]个皮肤[%s]已添加默认售价,请截图汇报'):format(hero_model.not_for_sale, id))
+				cmd.maid_chat(player.self, ('非卖品皮肤超过7个,当前第[%d]个皮肤[%s]已添加默认售价,请截图汇报'):format(hero_model.not_for_sale, id))
 			end
 		end
 
