@@ -381,7 +381,7 @@
 		else
 			x, y = jass.udg_FSDL, jass.udg_FS
 		end
-		if x / y > 2 and y > 10 then
+		if x and y and y > 10 and x / y > 2 then
 			--判定为碾压
 			if jc['收益'] > 1 then
 				local debuff	= math.ceil((jc['收益'] - 1) * 2 * n)
