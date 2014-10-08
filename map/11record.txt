@@ -302,7 +302,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999;Any_遗失;沙门丶
+		名字=lianhuohuo2333;qilunuobaka9999;沙门丶
 
 		//saber extra
 		皮肤=A0TT
@@ -371,7 +371,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999
+		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999;Any_遗失
 
 
 
