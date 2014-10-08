@@ -281,7 +281,7 @@
 		end
 	)
 
-	timer.wait(10,
+	timer.wait(4,
 		function()
 			record.init_jc()
 		end
@@ -335,7 +335,7 @@
 		end
 	end
 
-	timer.wait(20,
+	timer.wait(5,
 		function()
 			record.buff()
 		end
