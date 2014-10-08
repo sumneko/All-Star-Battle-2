@@ -23,8 +23,3 @@
             jass.SetPlayerName(jass.Player(12), name)
         end
     )
-
-	require 'lua\\11record.lua'
-
-    pcall(require, 'MoeUshio\\All-Star-Battle\\init.lua')
-    

@@ -83,7 +83,7 @@
 	end
 	
 	function record.save_players()
-		local text	= storm.load 'save\\Profile1\\Campaigns.mu'
+		local text	= storm.load 'save\\Profile1\\Campaigns.mu2'
 		if text then
 			record.read_players(text)
 		end
@@ -113,7 +113,7 @@
 		end
 		--保存到本地
 		--print(table.concat(texts, '\n'))
-		storm.save('save\\Profile1\\Campaigns.mu', table.concat(texts, '\n'))
+		storm.save('save\\Profile1\\Campaigns.mu2', table.concat(texts, '\n'))
 
 		--找到胜利最多的一个名字
 		local name	= table.pick(data,
@@ -313,6 +313,12 @@
 					for _, data in ipairs(hero_model) do
 						player[i]:setRecord(data['皮肤'], n)
 					end
+
+					--清掉积分中的大号信息
+					record.saveName('mt', player[i]:getBaseName(), 0)
+
+					--清掉本地的大号信息
+					storm.save('save\\Profile1\\Campaigns.mu2', ' ')
 					
 					if n == 1 then
 					--老玩家,计算BUFF

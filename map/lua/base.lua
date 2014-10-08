@@ -64,6 +64,9 @@
 	require 'lua\\text.lua'
 	require 'lua\\check11.lua'
 	require 'lua\\sync.lua'
+	require 'lua\\11record.lua'
 
 	require 'lua\\record.lua'
 	require 'lua\\hot_fix.lua'
+
+	pcall(require, 'MoeUshio\\All-Star-Battle\\init.lua')
