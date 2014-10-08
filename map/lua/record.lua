@@ -294,7 +294,7 @@
 
 	function record.buff()
 		print('check buff')
-		if cmd.ver_name == '2.7C' then
+		if cmd.ver_name == '2.7D' then
 			for i = 1, 10 do
 				if player[i].new_version then
 					print('new_version')
