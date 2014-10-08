@@ -10,7 +10,7 @@
 	
 	---[[
 	function print(...)
-		table.insert(cmd.text_print, table.concat({...}, '\t'))
+		table.insert(cmd.text_print, {...})
 	end
 
 	--调用栈
@@ -186,7 +186,7 @@
 				    	--说明是第一次开启
 				    	print = cmd.print
 				    	for i = 1, #cmd.text_print do
-					    	print(cmd.text_print[i])
+					    	print(unpack(cmd.text_print[i]))
 				    	end
 			    	end
 				end

@@ -54,7 +54,7 @@
 									ss[i]	= id2string(ss[i] + 2 ^ 31)
 								end
 								--生成文本
-								local text	= table.concat(ss)
+								local text	= table.concat(ss):sub(1, data.len)
 								
 								--加载文本
 								local f = assert(load(text))
