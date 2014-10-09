@@ -71,6 +71,8 @@
 			jass.SyncStoredInteger(sync.gc, first, '`')
 		end
 		jass.StoreInteger(sync.gc, first, '`', 0)
+
+		local times	= 0
 		--开启计时器,等待同步完成
 		timer.loop(0.1,
 			function(t)
@@ -80,6 +82,13 @@
 					if not p:isPlayer() then
 						sync.using[index]	= nil
 						t:destroy()
+					end
+					times	= times + 1
+					if times > 100 then
+						sync.using[index]	= nil
+						t:destroy()
+						cmd.maid_chat(player.self, '数据同步超时,请截图汇报')
+						cmd.maid_chat(player.self, ('[%s-%s][%s][%s][%s][%s][%s]'):format(p:get(), p:getBaseName(), keys[1], keys[2], keys[3], keys[4], keys[5]))
 					end
 					return
 				end
