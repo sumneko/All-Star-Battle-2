@@ -150,14 +150,16 @@
 		--同步数据
 		for i = 1, 10 do
 			local p = player[i]
-			p:sync(
-				t,
-				function(data)
-					for name, value in pairs(data) do
-						p:setRecord(name, value)
+			if p:isPlayer() then
+				p:sync(
+					t,
+					function(data)
+						for name, value in pairs(data) do
+							p:setRecord(name, value)
+						end
 					end
-				end
-			)
+				)
+			end
 		end
 		
 	end
@@ -289,7 +291,7 @@
 
 	function cmd.new_version(p)
 		--print(p:get())
-		p.new_version	= true
+		p.new_version	= p:isPlayer()
 	end
 
 	function record.buff()
