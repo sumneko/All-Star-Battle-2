@@ -355,12 +355,12 @@
 		tid = tonumber(tid)
 		print ('game_over', tid, p:getTeam(), tostring(tid == p:getTeam()))
 		if tid == p:getTeam() then
-			n = n + 30 --胜利+30节操
+			n = n + 50 --胜利+50节操
 			n = math.floor(n * jc['收益'])
 			print(n)
 			cmd.maid_chat(p, ('恭喜获胜,您本局收获了 %d 点节操哦~'):format(n))
 		else
-			n = n + 20 --失败+20节操
+			n = n + 25 --失败+25节操
 			n = math.floor(n * jc['收益'])
 			print(n)
 			cmd.maid_chat(p, ('主人,您本局收获了 %d 点节操哦~'):format(n))
