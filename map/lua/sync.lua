@@ -67,15 +67,15 @@
 		end
 		--发送一个结束标记
 		if p == player.self then
-			jass.StoreInteger(sync.gc, first, '-', 1)
-			jass.SyncStoredInteger(sync.gc, first, '-')
+			jass.StoreInteger(sync.gc, first, '`', 1)
+			jass.SyncStoredInteger(sync.gc, first, '`')
 		end
-		jass.StoreInteger(sync.gc, first, '-', 0)
+		jass.StoreInteger(sync.gc, first, '`', 0)
 		--开启计时器,等待同步完成
 		timer.loop(0.1,
 			function(t)
 				--检查是否同步完成
-				if jass.GetStoredInteger(sync.gc, first, '-') == 0 then
+				if jass.GetStoredInteger(sync.gc, first, '`') == 0 then
 					--检查是否还在游戏中
 					if not p:isPlayer() then
 						sync.using[index]	= nil
