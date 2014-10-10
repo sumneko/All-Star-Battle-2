@@ -384,7 +384,7 @@
 
 		--检查特殊奖惩
 		local x, y
-		if tid == 0 then
+		if player.self:getTeam() == 0 then
 			x, y = jass.udg_FS, jass.udg_FSDL
 		else
 			x, y = jass.udg_FSDL, jass.udg_FS
