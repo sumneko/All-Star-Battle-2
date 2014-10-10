@@ -243,7 +243,7 @@
 					end
 
 					--删除原来的信使
-					local x, y, face, life	= jass.GetUnitX(u), jass.GetUnitY(u), jass.GetUnitFacing(u), jass.GetWidgetLife(u)
+					local x, y, face, life, userdata	= jass.GetUnitX(u), jass.GetUnitY(u), jass.GetUnitFacing(u), jass.GetWidgetLife(u), jass.GetUnitUserData(u)
 					local items	= {}
 					for i = 0, 5 do
 						items[i] = jass.UnitItemInSlot(u, i)
@@ -262,7 +262,7 @@
 						end
 					end
 					jass.SetWidgetLife(u, life)
-					jass.SetUnitUserData(u, p:get())
+					jass.SetUnitUserData(u, userdata)
 					--本地玩家选中信使
 					if p == player.self then
 						jass.SelectUnit(u, true)
