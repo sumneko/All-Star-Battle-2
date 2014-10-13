@@ -527,7 +527,7 @@
 			local p 	= this.player
 			local uid	= jass.GetUnitTypeId(hero)
 			local id	= id2string(uid)
-			if hero_model[id] then
+			if hero_model[id] and p:isPlayer() then
 				local jc	= p:getRecord '节操'
 				
 				for i, data in ipairs(hero_model[id]) do
@@ -593,6 +593,9 @@
 
 						if name == '玩家离开' then
 							if this.player == p then
+								for i = 1, #hero_model[id] do
+									jass.UnitRemoveAbility(hero, hero_model.skills[i])
+								end
 								event('-英雄发动技能', '-注册英雄', '-玩家离开', f)
 							end
 							return
