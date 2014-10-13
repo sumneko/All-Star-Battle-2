@@ -84,7 +84,7 @@
 						t:destroy()
 					end
 					times	= times + 1
-					if times > 100 then
+					if times > 1000 then
 						sync.using[index]	= nil
 						t:destroy()
 						cmd.maid_chat(player.self, '数据同步超时,请截图汇报')
