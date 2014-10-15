@@ -399,6 +399,7 @@ showTo=0,0,0,漂浮文字可见性,integer
 isLuck=0,0,0,神符效果,boolean
 mover_state_real=0,0,0,弹幕属性(实数),integer
 SkillBarEndReason=0,0,0,技能进度条事件原因,integer
+itemPickDrop=0,0,0,获得还是丢弃,integer
 
 
 //***************************************************************************
@@ -454,6 +455,9 @@ damageTypeB4=0,damageTypeB,3,致命伤害
 
 mover_state_real1=0,mover_state_real,1,在原力场中降低的移动速度(%)
 mover_state_real2=0,mover_state_real,2,在原力场中受到的额外斥力(%)
+
+itemPickDrop1=0,itemPickDrop,0,获得
+itemPickDrop2=0,itemPickDrop,1,失去
 
 //YDWE 修改属性
 bonusTypeC=0,bonusType,3,攻击
@@ -3394,6 +3398,10 @@ _Event.ItemPick_Category=TC_MU_EVENT
 
 Event.ItemDrop=0,itemcode
 _Event.ItemDrop_Category=TC_MU_EVENT
+
+Event.ItemPickDrop=0,itemPickDrop,itemcode
+_Event.itemPickDrop_Defaults=itemPickDrop1,_
+_Event.ItemPickDrop_Category=TC_MU_EVENT
 
 Event.HeroRevive=0,abilcode
 _Event.HeroRevive_Defaults=GetSpellAbilityId

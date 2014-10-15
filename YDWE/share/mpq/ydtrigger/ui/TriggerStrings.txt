@@ -40,12 +40,16 @@ Event.SkillCoolReset="英雄的 ",~技能," 冷却重置"
 Event.SkillCoolResetHint="通过 事件来源 事件目标 获取英雄"
 
 Event.ItemPick="获得物品"
-Event.ItemPick="任意英雄 获得 "~物品
+Event.ItemPick="任意英雄 获得 ",~物品
 Event.ItemPickHint="只能存放一个触发器"
 
 Event.ItemDrop="失去物品"
-Event.ItemDrop="任意英雄 失去 "~物品
+Event.ItemDrop="任意英雄 失去 ",~物品
 Event.ItemDropHint="只能存放一个触发器"
+
+Event.ItemPickDrop="获得失去物品"
+Event.ItemPickDrop="任意英雄 ",~选项," ",~物品
+Event.ItemPickDropHint="只能存放一个触发器"
 
 Event.HeroRevive="英雄复活"
 Event.HeroRevive="带有 ",~技能," 的英雄复活"
