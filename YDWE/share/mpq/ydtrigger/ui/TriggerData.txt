@@ -457,9 +457,13 @@ mover_state_real2=0,mover_state_real,2,在原力场中受到的额外斥力(%)
 
 //YDWE 修改属性
 bonusTypeC=0,bonusType,3,攻击
-bonusTypeD=0,bonusType,2,防御
+bonusTypeD=0,bonusType,2,防御(%)
 bonusTypeA=0,bonusType,0,生命上限
 bonusTypeB=0,bonusType,1,魔法上限
+bonusTypeE=0,bonusType,4,攻击速度
+bonusTypeF=0,bonusType,5,绿字敏捷
+bonusTypeG=0,bonusType,6,绿字智力
+bonusTypeH=0,bonusType,7,绿字力量
 
 //YDWE 修改单位
 //targetattachA=0,targetattach,"overhead",头顶
