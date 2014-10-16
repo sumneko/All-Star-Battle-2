@@ -57,7 +57,7 @@ Event.HeroReviveHint="通过 事件来源 事件目标 获取英雄"
 
 Event.ProcessCovered="过程被剔除"
 Event.ProcessCovered="# ",~过程," # 被剔除"
-Event.ProcessCoveredHint="同一个过程下只能注册一个触发器"
+Event.ProcessCoveredHint="同一个过程下只能注册一个触发器.触发器运行后会被自动销毁"
 
 Event.SkillBarEnd="技能进度条结束"
 Event.SkillBarEnd=~进度条," ",~结束
