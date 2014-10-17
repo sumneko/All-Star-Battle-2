@@ -61,6 +61,11 @@
 		getHero = function(this)
 			return this.hero
 		end,
+
+		--敌对检查
+		isEnemy = function(this, p)
+			return jass.IsPlayerEnemy(this.handle, p.handle)
+		end,
 	}
 	
 	function player.__call(_, i)

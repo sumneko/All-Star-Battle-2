@@ -4,6 +4,7 @@
 	--注册专属信使
 	messenger = {}
 	hero_model = {}
+	hero_lines = {}
 	
 	local funcs = {
 		['特殊称号'] = function(line)
@@ -45,6 +46,17 @@
 					table.insert(hero_model, hero_model[value])
 				end
 				hero_model[hero_model.now][name] = value
+			end
+		end,
+		['英雄台词'] = function(line)
+			local name, value = line:match '(.+)=(.+)'
+			if name then
+				if name == '英雄' then
+					hero_lines.now	= value
+					hero_lines[value]	= {}
+					table.insert(hero_lines, hero_lines[value])
+				end
+				hero_lines[hero_lines.now][name]	= value
 			end
 		end,
 	}
@@ -654,6 +666,8 @@
 								jass.SetUnitAnimation(hero, data['变身动画'] or 'stand')
 								jass.QueueUnitAnimation(hero, 'stand')
 
+								hero_lines.speek(p, hero)
+
 								local time = timer.time()
 
 								event('玩家离开',
@@ -765,9 +779,34 @@
 							jass.UnitRemoveAbility(hero, hero_model.skills[i])
 						end
 
+						hero_lines.speek(p, hero)
+
 						event('-英雄发动技能', '-注册英雄', '-玩家离开', func1)
+					end
+				)
+			else
+				--90秒后发布台词
+				timer.wait(90,
+					function()
+						hero_lines.speek(p, hero)
 					end
 				)
 			end
 		end
 	)
+
+	function hero_lines.speek(p, hero)
+		if not hero_lines[p] then
+			hero_lines[p] = true
+			
+			local uid	= id2string(jass.GetUnitTypeId(hero))
+			local data	= hero_lines[uid]
+			if data then
+				if data['台词'] then
+					if p:isEnemy(player.self) then
+						p:chat(3, data['台词'])
+					end
+				end
+			end
+		end
+	end
