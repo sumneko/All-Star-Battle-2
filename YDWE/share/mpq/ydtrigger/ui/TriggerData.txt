@@ -5150,6 +5150,10 @@ SetUnitY=0,unit,real
 _SetUnitY_Defaults=GetTriggerUnit,0
 _SetUnitY_Category=TC_UNIT
 
+Unit.SetUnitZ=0,unit,real
+_Unit.SetUnitZ_Defaults=GetTriggerUnit,0
+_Unit.SetUnitZ_Category=TC_UNIT
+
 SetUnitRallyPoint=1,unit,location
 _SetUnitRallyPoint_Defaults=GetTriggerUnit,_
 _SetUnitRallyPoint_Category=TC_UNIT
@@ -9473,6 +9477,10 @@ GetUnitAbilityLevelSwapped=1,1,integer,abilcode,unit
 _GetUnitAbilityLevelSwapped_Defaults=GetSpellAbilityId,GetTriggerUnit
 _GetUnitAbilityLevelSwapped_Category=TC_UNIT
 
+Item.GetUnitItemCountByType=1,1,integer,unit,itemcode
+_Item.GetUnitItemCountByType_Defaults=GetTriggerUnit,ches
+_Item.GetUnitItemCountByType_Category=TC_UNIT
+
 UnitInventoryCount=1,1,integer,unit
 _UnitInventoryCount_Defaults=GetTriggerUnit
 _UnitInventoryCount_Category=TC_UNIT
@@ -9838,6 +9846,10 @@ _GetUnitX_Category=TC_UNIT
 GetUnitY=0,1,real,unit
 _GetUnitY_Defaults=GetTriggerUnit
 _GetUnitY_Category=TC_UNIT
+
+Unit.GetUnitZ=0,1,real,unit
+_Unit.GetUnitZ_Defaults=GetTriggerUnit
+_Unit.GetUnitZ_Category=TC_UNIT
 
 GetUnitFacing=0,1,real,unit
 _GetUnitFacing_Defaults=GetTriggerUnit

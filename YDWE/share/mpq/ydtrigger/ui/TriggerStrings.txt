@@ -857,6 +857,9 @@ SetUnitY="设置Y坐标 [R]"
 SetUnitY="设置 ",~单位," 的Y坐标为 ",~Y
 SetUnitYHint="注意如果坐标超出地图边界是会出错的."
 
+Unit.SetUnitZ="设置Z坐标 <单位库>"
+Unit.SetUnitZ="设置 ",~单位," 的Z坐标为 ",~Z
+
 SetUnitRallyPoint="设置集结点(指定点)"
 SetUnitRallyPoint="设置 ",~单位," 的集结点到 ",~指定点
 SetUnitRallyPointHint="建议用发布'setrally'命令来实现该功能."
@@ -5940,6 +5943,10 @@ GetUnitAbilityLevelSwapped="单位技能等级"
 GetUnitAbilityLevelSwapped=~技能," 的等级对 ",~单位
 GetUnitAbilityLevelSwappedHint="如果单位没有该技能,则返回0."
 
+Item.GetUnitItemCountByType="持有物品数量(指定类型) <物品库>"
+Item.GetUnitItemCountByType=~单位," 所持有的 ",~类型," 数量"
+Item.GetUnitItemCountByTypeHint=
+
 UnitInventoryCount="持有物品数量"
 UnitInventoryCount=~单位," 所持有的物品数量"
 UnitInventoryCountHint=
@@ -6424,6 +6431,10 @@ GetUnitXHint=
 GetUnitY="单位所在Y轴坐标 [R]"
 GetUnitY=~单位," 所在Y轴坐标"
 GetUnitYHint=
+
+Unit.GetUnitZ="单位所在Z轴坐标 <单位库>"
+Unit.GetUnitZ=~单位," 所在Z轴坐标"
+Unit.GetUnitZHint=
 
 GetUnitFacing="面向角度"
 GetUnitFacing=~单位," 的面向角度"
