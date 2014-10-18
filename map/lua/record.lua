@@ -384,18 +384,18 @@
 
 		--检查特殊奖惩
 		local x, y
-		if player.self:getTeam() == 0 then
+		if tid == 0 then
 			x, y = jass.udg_FS, jass.udg_FSDL
 		else
 			x, y = jass.udg_FSDL, jass.udg_FS
 		end
 		if x and y and y > 10 and x / y > 2 then
 			--判定为碾压
-			if jc['收益'] > 1 then
+			if jc['收益'] > 1 and player.self:getTeam() == tid then
 				local debuff	= math.ceil((jc['收益'] - 1) * 2 * n)
 				local n 		= n - debuff
 				cmd.maid_chat(p, ('主人,您受到了 %d 点节操的特殊惩罚,实际获得的节操为 %d 点'):format(debuff, n))
-			elseif jc['收益'] < 1 then
+			elseif jc['收益'] < 1 and player.self:getTeam() ~= tid then
 				local buff	= math.ceil((1 - jc['收益']) * 5 * n)
 				local n		= n + buff
 				cmd.maid_chat(p, ('主人,您获得了 %d 点节操的特殊奖励,实际获得的节操为 %d 点'):format(buff, n))
