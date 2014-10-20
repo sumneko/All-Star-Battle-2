@@ -807,6 +807,27 @@
 						p:chat(3, data['台词'])
 					end
 				end
+				if data['音效'] then
+					local sound = jass.CreateSound(data['音效'], false, false, false, 10, 10, "DefaultEAXON")
+					print(sound)
+					jass.SetSoundDuration(sound, 10000)
+					jass.SetSoundChannel(sound, 0)
+					jass.SetSoundVolume(sound, 127)
+					jass.SetSoundPitch(sound, 1)
+					--jass.SetSoundDistances(sound, 1250., 1800.)
+					--jass.SetSoundDistanceCutoff(sound, 3000.)
+					--jass.SetSoundConeAngles(sound, .0, .0, 127)
+					--jass.SetSoundConeOrientation(sound, .0, .0, .0)
+					--jass.StartSound(sound)
+					--jass.StopSound(sound, false, false)
+					jass.StartSound(sound)
+					timer.wait(10,
+						function()
+							jass.KillSoundWhenDone(sound)
+						end
+					)
+					
+				end
 			end
 		end
 	end
