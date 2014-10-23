@@ -3389,6 +3389,9 @@ Event.AnyUnitDamage=0,damageTypeA,damageTypeB
 _Event.AnyUnitDamage_Defaults=damageTypeA1,damageTypeB1
 _Event.AnyUnitDamage_Category=TC_MU_EVENT
 
+Event.UserEventInit=0,scriptcode
+_Event.UserEventInit_Category=TC_MU_EVENT
+
 Event.SkillCoolReset=0,abilcode
 _Event.SkillCoolReset_Defaults=GetSpellAbilityId
 _Event.SkillCoolReset_Category=TC_MU_EVENT
@@ -4059,6 +4062,9 @@ _process.SetUper_Category=TC_MU_PROCESS
 Event.ReduceDamage=0,real
 _Event.ReduceDamage_Defaults=100
 _Event.ReduceDamage_Category=TC_MU_EVENT
+
+Event.UserEventStart=0,scriptcode
+_Event.UserEventStart_Category=TC_MU_EVENT
 
 Event.SkipTriggers=0
 _Event.SkipTriggers_Category=TC_MU_EVENT

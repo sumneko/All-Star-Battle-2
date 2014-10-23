@@ -35,6 +35,10 @@ Event.AnyUnitDamage="任意单位受到伤害"
 Event.AnyUnitDamage=~单位选项," 受到 ",~伤害选项
 Event.AnyUnitDamageHint="该事件不会被0伤害驱动"
 
+Event.UserEventInit="自定义事件"
+Event.UserEventInit=~自定义事件名称," 触发"
+Event.UserEventInitHint=""
+
 Event.SkillCoolReset="技能冷却重置"
 Event.SkillCoolReset="英雄的 ",~技能," 冷却重置"
 Event.SkillCoolResetHint="通过 事件来源 事件目标 获取英雄"
@@ -666,6 +670,10 @@ process.SetUper="设置过程 # ",~key," # 的优先级为 ",~优先级
 Event.ReduceDamage="减免伤害"
 Event.ReduceDamage="为 触发单位 减免 ",~实数," 点伤害"
 Event.ReduceDamageHint="只能用在专用的伤害事件中!!!"
+
+Event.UserEventStart="发起自定义事件"
+Event.UserEventStart="发起 ",~自定义事件名称
+Event.UserEventStartHint=""
 
 Event.SkipTriggers="跳过自定义事件的剩余触发器"
 Event.SkipTriggers="跳过自定义事件的剩余触发器"
