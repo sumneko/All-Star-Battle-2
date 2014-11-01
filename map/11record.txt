@@ -350,7 +350,7 @@
 		皮肤=A0TZ
 		前缀=|cffff1111机巧少女|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-300;5-1300;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -400,7 +400,7 @@
 		皮肤=A0U7
 		前缀=|cffff1111真·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-300;5-1300;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -447,7 +447,7 @@
 		皮肤=A0UI
 		前缀=|cffff1111装甲|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-300;5-1300;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -458,7 +458,7 @@
 		皮肤=A0UU
 		前缀=|cffff1111祸·|r
 		说明=这里是皮肤说明
-		价格=1-300;5-1300;25-6000
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
@@ -491,7 +491,7 @@
 		皮肤=A0V0
 		前缀=|cffff1111和服·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
@@ -502,7 +502,7 @@
 		皮肤=A0UV
 		前缀=|cffff1111黑暗·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-300;5-1300;25-6000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
@@ -535,7 +535,7 @@
 		皮肤=A0UZ
 		前缀=|cffff1111冰之狙击手·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-350;5-1800;25-8000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -557,7 +557,7 @@
 		皮肤=A0V4
 		前缀=|cffff1111第十精灵·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -594,8 +594,8 @@
 		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
-		变身动画=spell
-		技能图标=A0wk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0OY-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;AO92-BTNAkame_D.blp
+		变身动画=spell W
+		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
 		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 	==英雄台词==
