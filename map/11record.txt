@@ -1,22 +1,31 @@
 ﻿
 	==特殊称号==
-        lianhuohuo2333=|cFFFF99FF[笨蛋你妹啊，你才是笨蛋啊 bakabaka]|r
+        lianhuohuo2333=|cFFFF99FF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
 		WorldEdit=|cffffcc00[测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
 		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
-		qilunuobaka9999=|cFF66FFFF[说别人笨蛋的人才是真正的笨蛋呢！笨蛋]|r
+		qilunuobaka9999=|cFF66FFFF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
 		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
 		Any_遗失=|cffffcc00[|cffaa10bb泯灭虚空之刃★|cffffcc00]|r
 		姬神小桃=|cffffcc00[|cffffff00誓约胜利之剑★|cffffcc00]|r
 		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
-                
-
+                我才不是x=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                肉包和卡卡=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                艾莉卡丶=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                克丽丝=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                萌虎之怒=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                洒言=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                绯色菠萝=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                一方通行=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                归海枫音=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                梦轮回丶=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
+                A丶rtoria=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
         //天道受1
         我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
         艾斯特=|cffffcc00[|cFF38efff魔王剑-Terminus Est Zwei|cffffcc00]|r
-        CLANNAD_殇=|cffffcc00[|cFFCC9900Lost time Memory|cffffcc00]|r
+        CLANNAD_殇=|cffffcc00[|cFF38efffLost time Memory|cffffcc00]|r
         户川汐音=|cffffcc00[|cFFFF66FF最萌眼镜娘|cffffcc00]|r
         空心de木偶=|cffffcc00[|cFF00FFFF完美潇洒の从者|cffffcc00]|r
         樱逝夕颜=|cffffcc00[|cFFFFCC66远离尘世の理想乡|cffffcc00]|r
@@ -575,6 +584,18 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
+		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+		//赤瞳
+		皮肤=A0VC
+		前缀=|cffff1111夜袭|r
+		说明=我就不卖你咬我啊
+		价格=
+		变身特效=war3mapImported\Fire Aura.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=spell
+		技能图标=A0wk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0OY-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;AO92-BTNAkame_D.blp
 		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 	==英雄台词==
