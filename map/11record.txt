@@ -1,28 +1,39 @@
 ﻿
 	==特殊称号==
-        lianhuohuo2333=|cFFFF99FF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
 		WorldEdit=|cffffcc00[测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
 		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
-		qilunuobaka9999=|cFF66FFFF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
 		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
 		Any_遗失=|cffffcc00[|cffaa10bb泯灭虚空之刃★|cffffcc00]|r
 		姬神小桃=|cffffcc00[|cffffff00誓约胜利之剑★|cffffcc00]|r
 		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
-                我才不是x=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                肉包和卡卡=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                艾莉卡丶=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                克丽丝=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                萌虎之怒=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                洒言=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                绯色菠萝=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                一方通行=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                归海枫音=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                梦轮回丶=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-                A丶rtoria=|cffffcc00[天若无能制裁邪恶，我等将会于黑暗之中给予消逝— 夜袭·Night Raid ]|r
-        //天道受1
+
+	//夜袭职业杀手团
+        lianhuohuo2333=|cFFFF99FF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝 -夜袭·Night Raid ]|r
+        qilunuobaka9999=|cFF66FFFF[没有做好被杀的觉悟的人没有资格杀人 -夜袭·Night Raid]|r   
+        我才不是x=|cffffcc00[我等前方绝无敌手 -夜袭·Night Raid]|r
+        肉包和卡卡=|cffffcc00[无限杀戮の紫瞳 -夜袭·Night Raid]|r
+        艾莉卡丶=|cffffcc00[一切只是刹那间 最后都要归入死的永眠中 -夜袭·Night Raid]|r
+        克丽丝=|cffffcc00[我早就闭上了双眼，我的目的只在于黑暗之中 -夜袭·Night Raid]|r  
+        萌虎之怒=|cffffcc00[一斩必杀· 送葬 -夜袭·Night Raid]|r
+        洒言=|cffffcc00[弱者就要准备好被杀的觉悟 -夜袭·Night Raid]|r
+        绯色菠萝=|cffffcc00[纯血の吸血姬 -夜袭·Night Raid]|r
+        一方通行=|cffffcc00[贯穿真实の剑 -夜袭·Night Raid]|r
+        归海枫音=|cffffcc00[只要是活着的东西，即使是神也要杀给你看 -夜袭·Night Raid]|r
+        梦轮回丶=|cffffcc00[“开局一血以示友好,我的血皮连我自己都害怕” -夜袭·Night Raid]|r
+        D丶冰娘=|cffffcc00[寂雪·冰霜の女皇 -夜袭·Night Raid]|r
+        如流萤乱舞=|cffffcc00[人心编织而成的罪恶王冠 -夜袭·Night Raid]|r
+        菊花是菜=|cffffcc00[你原本是想杀掉我 就算被我杀掉也没怨言吧 -夜袭·Night Raid]|r
+        蔓珠沙华彡=|cffffcc00[我根本就不需要绝望 -夜袭·Night Raid]|r
+        吾铭新手君=|cffffcc00[枉思停泊苦作乐 -夜袭·Night Raid]|r
+        天之绯月=|cffffcc00[在此起誓 吾做世之恶者 除尽世之善者 -夜袭·Night Raid]|r
+        草雉护堂=|cffffcc00[在此起誓 吾做世之善者 除尽世之恶者 -夜袭·Night Raid]|r
+        世界第一的歌姬=|cffffcc00[艾斯黛丝女王殿下 -夜袭·Night Raid]|r  
+        小篮妹丶=|cffffcc00[现在的我就是死亡污秽 杀了我 杀了我啊 -夜袭·Night Raid]|r
+        
+    //天道受1
         我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
         艾斯特=|cffffcc00[|cFF38efff魔王剑-Terminus Est Zwei|cffffcc00]|r
         CLANNAD_殇=|cffffcc00[|cFF38efffLost time Memory|cffffcc00]|r
@@ -594,7 +605,7 @@
 		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
-		变身动画=spell W
+		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
 		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
 
@@ -608,3 +619,9 @@
 		//西尔瓦娜斯 黑
 		英雄=H012
 		台词=测试2
+
+		//赤瞳
+		英雄=E0AI
+		台词=|cFFFF0000正因为是最爱的人 ，所以才想给她个痛快。|r
+		音效=Show_Akame.mp3
+		
