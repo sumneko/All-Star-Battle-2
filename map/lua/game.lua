@@ -198,3 +198,15 @@
         end
     end
     
+	--技能japi
+	function cmd.japi_ability(p, sync, u, sid, func_name, ...)
+		if sync == 'true' or player.self == p then
+			local args	= {...}
+			for i = 1, #args do
+				args[i]	= tonumber(args[i]) or args[i]
+			end
+
+			local ability	= japi.EXGetUnitAbility(tonumber(u), string2id(sid))
+			japi[func_name](ability, table.unpack(args))
+		end
+	end
