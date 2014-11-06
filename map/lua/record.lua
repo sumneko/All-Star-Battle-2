@@ -154,8 +154,50 @@
 				p:sync(
 					t,
 					function(data)
-						for name, value in pairs(data) do
-							p:setRecord(name, value)
+						--只有在录像模式中才会重载积分哦
+						function in_replay()
+							for name, value in pairs(data) do
+								p:setRecord(name, value)
+							end
+						end
+
+						--游戏模式则对积分进行校验
+						function in_game()
+							local texts	= {}
+							for name, value in pairs(data) do
+								local true_value	= p:getRecord(name)
+								if true_value ~= value then
+									table.insert(texts, ('[%s]\t%d : %d'):format(name, true_value, value))
+								end
+							end
+							
+							if #texts ~= 0 then
+								local text	= table.concat(texts, '\n')
+								cmd.maid_chat(player.self, text)
+								cmd.maid_chat(player.self, '积分同步异常,请截图汇报')
+								local file_name	= ('Errors\\ASB_BugReport_SyncError_%08s.txt'):format(jass.GetRandomInt(0, 99999999))
+								print(file_name)
+								storm.save(file_name, text)
+							end
+						end
+
+						if game.is_replay == 'unknow' then
+							event('录像检测完毕',
+								function(data, name, f)
+									event('-录像检测完毕', f)
+									if game.is_replay == 'true' then
+										in_replay()
+									else
+										in_game()
+									end
+								end
+							)
+						else
+							if game.is_replay == 'true' then
+								in_replay()
+							else
+								in_game()
+							end
 						end
 					end
 				)

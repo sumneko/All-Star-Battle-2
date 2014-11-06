@@ -210,3 +210,11 @@
 			japi[func_name](ability, table.unpack(args))
 		end
 	end
+
+	--是否是录像
+	game.is_replay	= 'unknow'
+
+	function cmd.set_replay(p, result)
+		game.is_replay	= result
+		event('录像检测完毕', {result	= result})
+	end
