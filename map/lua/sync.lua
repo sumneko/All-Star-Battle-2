@@ -51,6 +51,7 @@
 			return
 		end
 		local first	= sync.str:sub(index, index)
+		print(('sync[%d]: first = %s'):format(p:get(), first))
 		local keys	= {}
 		for name, value in pairs(data) do
 			i	= i + 1
@@ -98,7 +99,7 @@
 				local data	= {}
 				for i, name in ipairs(keys) do
 					data[name]	= jass.GetStoredInteger(sync.gc, first, sync.getKey(i))
-					print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
+					--print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
 				end
 				--回调数据
 				if func then

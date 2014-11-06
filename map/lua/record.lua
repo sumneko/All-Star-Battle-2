@@ -35,7 +35,7 @@
 	timer.wait(1, record.init)
 
 	function player.__index.getRecord(this, name)
-		--print(('player[%d] load record: %s = %s'):format(this:get(), name, japi.GetStoredInteger(this.record, '', name)))
+		--print(('player[%d] load record: %s = %s from %d'):format(this:get(), name, japi.GetStoredInteger(this.record, '', name), this.record))
 		return japi.GetStoredInteger(this.record, '', name) or 0
 	end
 
@@ -134,6 +134,8 @@
 		for name in sync_names:gmatch '(%S+)' do
 			t[name]	= player.self:getRecord(name)
 		end
+
+		t['id']	= player.self:get()
 		
 		--保存信使皮肤数据
 		for _, data in ipairs(messenger) do
@@ -150,7 +152,7 @@
 		--同步数据
 		for i = 1, 10 do
 			local p = player[i]
-			if false and p:isPlayer() then
+			if p:isPlayer() then
 				p:sync(
 					t,
 					function(data)
@@ -170,7 +172,7 @@
 									table.insert(texts, ('[%s]\t%d : %d'):format(name, true_value, value))
 								end
 							end
-							
+							print('#texts = ' .. #texts)
 							if #texts ~= 0 then
 								local text	= table.concat(texts, '\n')
 								cmd.maid_chat(player.self, text)
