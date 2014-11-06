@@ -150,7 +150,7 @@
 		--同步数据
 		for i = 1, 10 do
 			local p = player[i]
-			if p:isPlayer() then
+			if false and p:isPlayer() then
 				p:sync(
 					t,
 					function(data)
