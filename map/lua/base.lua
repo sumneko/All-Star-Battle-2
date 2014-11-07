@@ -43,11 +43,11 @@
     setmetatable(_G,
 		{
 			__index	= function(_, name)
-				error(('load global var is nil: %s'):format(name), 2)
+				error(('Warning:load global var is nil: "%s"'):format(name), 2)
 			end,
 			__newindex	= function(_, name, value)
-				if type(value) ~= 'table' and type(value) ~= 'function' then
-					print(('save global var is not table: %s = %s'):format(name, value))
+				if type(value) ~= 'table' then
+					print(('Warning:save global var is not table: "%s" = %s'):format(name, value))
 				end
 				rawset(_G, name, value)
 			end,

@@ -8,6 +8,8 @@
 	--初始化同步系统
 	function sync.init()
 		sync.gc		= jass.InitGameCache 'U'
+		--将缓存文件保存给jass
+		jass.s__sys_GC	= sync.gc
 		sync.using	= {} --记录正在使用的
 		sync.str	= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 		sync.len	= #sync.str
@@ -33,6 +35,7 @@
 	--同步某数据
 	---玩家, 数据(k, string)
 	function player.__index.sync(p, data, func)
+		--print(('Start Sync: %s\t%s'):format(p:get(), func))
 		if p:isObserver() or not p:isPlayer() then
 			print(('sync.lua warning:player %d is not an alive player'):format(p:get()))
 			return
@@ -99,9 +102,10 @@
 				local data	= {}
 				for i, name in ipairs(keys) do
 					data[name]	= jass.GetStoredInteger(sync.gc, first, sync.getKey(i))
-					--print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
+					print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
 				end
 				--回调数据
+				--print(('Ready Sync: %s\t%s'):format(p:get(), func))
 				if func then
 					func(data)
 				end

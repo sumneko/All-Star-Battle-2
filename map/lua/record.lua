@@ -135,7 +135,7 @@
 			t[name]	= player.self:getRecord(name)
 		end
 
-		t['id']	= player.self:get()
+		--t['id'] = player.self:get()
 		
 		--保存信使皮肤数据
 		for _, data in ipairs(messenger) do
@@ -156,15 +156,23 @@
 				p:sync(
 					t,
 					function(data)
+						local random	= jass.GetRandomInt(0, 99999999)
 						--只有在录像模式中才会重载积分哦
-						function in_replay()
+						local function in_replay()
 							for name, value in pairs(data) do
 								p:setRecord(name, value)
 							end
 						end
 
 						--游戏模式则对积分进行校验
-						function in_game()
+						local function in_game()
+							--如果是别人的积分,直接进行重载
+							if player.self ~= p then
+								in_replay()
+								return
+							end
+
+							--自己的积分则仔细验证,不重载
 							local texts	= {}
 							for name, value in pairs(data) do
 								local true_value	= p:getRecord(name)
@@ -177,7 +185,7 @@
 								local text	= table.concat(texts, '\n')
 								cmd.maid_chat(player.self, text)
 								cmd.maid_chat(player.self, '积分同步异常,请截图汇报')
-								local file_name	= ('Errors\\ASB_BugReport_SyncError_%08s.txt'):format(jass.GetRandomInt(0, 99999999))
+								local file_name	= ('Errors\\ASB_SyncError_%02d_%02d_%08s.txt'):format(player.self:get(), p:get(), random)
 								print(file_name)
 								storm.save(file_name, text)
 							end
