@@ -243,24 +243,24 @@ private function InitializeAbilitys takes nothing returns nothing
     local integer m=0
     local integer x=0
 
+    set ABILITY_NUM[0]=16	//life max
+    set ABILITY_NUM[1]=16	//mana max
+    set ABILITY_NUM[2]=16	//armor
+    set ABILITY_NUM[3]=24	//attack
+    set ABILITY_NUM[4]=13	//attack speed
+    set ABILITY_NUM[5]=10	//agi
+    set ABILITY_NUM[6]=10	//int
+    set ABILITY_NUM[7]=10	//str
+
     set ABILITY_COUNT[0]=0  //life max
     set ABILITY_COUNT[1]=16 //mana max
     set ABILITY_COUNT[2]=32 //armor
     set ABILITY_COUNT[3]=48 //attack
     set ABILITY_COUNT[4]=72 //attack speed
-    set ABILITY_COUNT[5]=82 //agi
-    set ABILITY_COUNT[6]=92 //int
-    set ABILITY_COUNT[7]=102 //str
-    set ABILITY_COUNT[8]=112
-
-    set ABILITY_NUM[0]=16
-    set ABILITY_NUM[1]=16
-    set ABILITY_NUM[2]=16
-    set ABILITY_NUM[3]=24
-    set ABILITY_NUM[4]=10
-    set ABILITY_NUM[5]=10
-    set ABILITY_NUM[6]=10
-    set ABILITY_NUM[7]=10
+    set ABILITY_COUNT[5]=85 //agi
+    set ABILITY_COUNT[6]=95 //int
+    set ABILITY_COUNT[7]=105 //str
+    set ABILITY_COUNT[8]=115
 
     // Bonus Mod - armor abilitys
     loop
@@ -328,7 +328,7 @@ private function InitializeAbilitys takes nothing returns nothing
     set m=0
     loop
         exitwhen m>(ABILITY_NUM[5]-1)
-        set BonusAbilitys[i] = 'YDA0' -'0'+YDWEBONUS_MyChar[m]// +1
+        set BonusAbilitys[i] = 'YDa0' -'0'+YDWEBONUS_MyChar[m]// +1
         set i=i+1
         set m=m+1
     endloop
@@ -336,7 +336,7 @@ private function InitializeAbilitys takes nothing returns nothing
     set m=0
     loop
         exitwhen m>(ABILITY_NUM[6]-1)
-        set BonusAbilitys[i] = 'YDI0' -'0'+YDWEBONUS_MyChar[m]// +1
+        set BonusAbilitys[i] = 'YDi0' -'0'+YDWEBONUS_MyChar[m]// +1
         set i=i+1
         set m=m+1
     endloop
@@ -344,7 +344,7 @@ private function InitializeAbilitys takes nothing returns nothing
     set m=0
     loop
         exitwhen m>(ABILITY_NUM[7]-1)
-        set BonusAbilitys[i] = 'YDS0' -'0'+YDWEBONUS_MyChar[m]// +1
+        set BonusAbilitys[i] = 'YDt0' -'0'+YDWEBONUS_MyChar[m]// +1
         set i=i+1
         set m=m+1
     endloop
