@@ -626,6 +626,9 @@
 								jass.UnitAddAbility(hero, data.skill_id)
 								jass.UnitRemoveAbility(hero, data.skill_id)
 
+								jass.UnitAddAbility(hero, |Arav|)
+								jass.UnitRemoveAbility(hero, |Arav|)
+
 								if data['变身特效'] then
 									local t = tonumber(data['特效时间'])
 									local e
