@@ -80,7 +80,7 @@
 
 			//皮肤无限使用权
 
-			名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999
+			名字=lianhuohuo2333;qilunuobaka9999
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的女儿
