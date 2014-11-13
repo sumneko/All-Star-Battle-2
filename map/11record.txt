@@ -407,7 +407,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=姬神小桃;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=姬神小桃;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//真·爱德华
@@ -431,7 +431,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//天罚者
@@ -466,7 +466,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;S灭杀_____;WorldEdit
+		名字=lianhuohuo2333;qilunuobaka9999;S灭杀_____;s芙兰朵露z;WorldEdit
 
 		//祸灵梦
 		皮肤=A0UU
@@ -477,7 +477,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//黑剑客
 		皮肤=A0UY
