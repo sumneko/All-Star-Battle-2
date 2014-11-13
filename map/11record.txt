@@ -9,6 +9,7 @@
 		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
+                s芙兰朵露z=|cffffcc00[永远の二妹]|r
 
 	//夜袭职业杀手团
 
@@ -306,7 +307,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;lianhuohuo2333;qilunuobaka9999
+			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;lianhuohuo2333;qilunuobaka9999
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -324,7 +325,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999;沙门丶
+		名字=lianhuohuo2333;qilunuobaka9999;沙门丶;s芙兰朵露z
 
 		//saber extra
 		皮肤=A0TT
@@ -335,7 +336,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999
+		名字=lianhuohuo2333;qilunuobaka9999;s芙兰朵露z
 
 		//黑崎一护 白
 		皮肤=A0TU
@@ -346,7 +347,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=沙门丶;藤林杏;空心de木偶;艾斯特;CLANNAD_殇;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=沙门丶;藤林杏;空心de木偶;艾斯特;CLANNAD_殇;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -381,7 +382,7 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A06C-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//超电磁炮
@@ -393,7 +394,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;lianhuohuo2333;qilunuobaka9999;Any_遗失;WorldEdit
+		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;Any_遗失;WorldEdit
 
 
 
@@ -442,7 +443,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=我妻桃子;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=我妻桃子;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//女剑客
@@ -454,7 +455,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//装甲屠夫
 		皮肤=A0UI
@@ -509,7 +510,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//黑暗游侠
 		皮肤=A0UV
@@ -520,7 +521,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//桔梗
 		皮肤=A0UW
@@ -542,7 +543,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//诗乃
 		皮肤=A0UZ
@@ -553,7 +554,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//狗剪
 		皮肤=A0V3
@@ -564,7 +565,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//十香
 		皮肤=A0V4
@@ -575,7 +576,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//十香灵装
 		皮肤=A0V5
@@ -586,7 +587,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//黑脸
 		皮肤=A0V1
@@ -597,7 +598,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//赤瞳
 		皮肤=A0VC
@@ -609,7 +610,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 
@@ -622,7 +623,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 	==英雄台词==
 
