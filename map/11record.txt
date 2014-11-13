@@ -9,7 +9,8 @@
 		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
-                s芙兰朵露z=|cffffcc00[永远の二妹]|r
+                s芙兰朵露z=|Cffff00ff[永远の二妹]|r
+                藤原_妹红_=|cffffcc00[飞上月球☆不死之烟]|r
 
 	//夜袭职业杀手团
 
@@ -79,7 +80,7 @@
 
 			//皮肤无限使用权
 
-			名字=lianhuohuo2333;qilunuobaka9999
+			名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的女儿
@@ -394,7 +395,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;Any_遗失;WorldEdit
+		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;藤原_妹红_;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;Any_遗失;WorldEdit
 
 
 
