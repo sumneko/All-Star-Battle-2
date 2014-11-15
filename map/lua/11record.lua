@@ -501,6 +501,7 @@
 		end
 
 		--检查非卖品数量
+		--[[
 		if #data.gold == 0 and #data.names ~= 0 then
 			hero_model.not_for_sale	= hero_model.not_for_sale + 1
 			if hero_model.not_for_sale > 6 then
@@ -510,6 +511,7 @@
 				cmd.maid_chat(player.self, ('非卖品皮肤超过6个,当前第[%d]个皮肤[%s]已添加默认售价,请截图汇报'):format(hero_model.not_for_sale, id))
 			end
 		end
+		--]]
 
 		--解析技能图标
 		data.skill_icons	= {}
