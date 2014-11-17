@@ -815,7 +815,6 @@
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
-
 		//圆神
 		皮肤=A0VF
 		前缀=|cffff1111神|r
@@ -825,6 +824,78 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//神圣天使兽
+		皮肤=A0VY
+		前缀=|cffcc00cc究极体|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//兵长
+		皮肤=A0VZ
+		前缀=|cffcc00cc兵长|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//咲夜Diam
+		皮肤=A0VX
+		前缀=|cffcc00cc七色的剑灵使用者|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//阿尔冯斯
+		皮肤=A0VU
+		前缀=|cffcc00cc锁住的灵魂|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//阿露蒂娜
+		皮肤=A0VV
+		前缀=|cffcc00cc银之森的妖精公主|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//萝泽琳蒂
+		皮肤=A0VW
+		前缀=|cffcc00cc红之战巫女|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 	==英雄台词==
