@@ -64,7 +64,6 @@
 		//此方  n025
 		//火柴人 n023
 		//提莫  n029
-		//小法师 n02D
 		//老提莫 n027
 
 		//幸运	button\BTNXS_S_XY.blp
@@ -469,27 +468,27 @@
 
 		//小法师 n02D
 
-		    信使=n02D
-			前缀=|cffffcc00￥6300|r
-			说明=小法师
-			价格=
-			变身特效=war3mapImported\gate keeper.mdl
-			特效点=origin
-			特效时间=0.5
-			变身动画=morph
+//		    信使=n02D
+//			前缀=|cffffcc00￥6300|r
+//			说明=小法师
+//			价格=
+//			变身特效=war3mapImported\gate keeper.mdl
+//			特效点=origin
+//			特效时间=0.5
+//			变身动画=morph
 
 			//从商店中购买时的额外技能
-			图标=button\BTNXS_S_XY.blp
-			技能=被动
-			标题=|cffffcc00%player_name%|r 从商城中购买的信使
-			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+//			图标=button\BTNXS_S_XY.blp
+//			技能=被动
+//			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+//			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999
-			图标=button\BTN_XS_Xiaofashi.blp
-			技能=被动
-			标题=特殊信使
-			内容=小法师
+//			名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999
+//			图标=button\BTN_XS_Xiaofashi.blp
+//			技能=被动
+//			标题=特殊信使
+//			内容=小法师
 
 		//老提莫
 
@@ -864,15 +863,15 @@
 
 
 		//阿尔冯斯
-		皮肤=A0VU
-		前缀=|cffcc00cc锁住的灵魂|r 
-		说明=
-		价格=
-		变身特效=war3mapImported\firaga4.mdl
-		特效点=origin
-		特效时间=0.5
-		变身动画=morph
-		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+//		皮肤=A0VU
+//		前缀=|cffcc00cc锁住的灵魂|r 
+//		说明=
+//		价格=
+//		变身特效=war3mapImported\firaga4.mdl
+//		特效点=origin
+//		特效时间=0.5
+//		变身动画=morph
+//		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//阿露蒂娜
