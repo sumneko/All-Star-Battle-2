@@ -1,6 +1,6 @@
 ﻿
 	==特殊称号==
-		WorldEdit=|cffffcc00[测试中]|r
+		WorldEdit=|cffffcc00[正在测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
 		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
 		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
