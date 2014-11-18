@@ -62,27 +62,29 @@
 	}
 	
 	local now_type
-	for line in content:gmatch('([^\n\r\t]+)') do
+	for line in content:gmatch('([^\n\r]+)') do
 
 		for i = 1, #line do
-			if line:sub(i, i) ~= ' ' then
+			if line:sub(i, i) ~= ' ' and line:sub(i, i) ~= '\t' then
 				line = line:sub(i)
 				break
 			end
 		end
 
 		for i = #line, 1, -1 do
-			if line:sub(i, i) ~= ' ' then
+			if line:sub(i, i) ~= ' ' and line:sub(i, i) ~= '\t' then
 				line = line:sub(1, i)
 				break
 			end
 		end
-		
-		local new_type = line:match('==(%C+)==')
-		if new_type then
-			now_type = new_type
-		elseif now_type then
-			funcs[now_type](line)
+
+		if line:sub(1, 2) ~= '//' then
+			local new_type = line:match('==(%C+)==')
+			if new_type then
+				now_type = new_type
+			elseif now_type then
+				funcs[now_type](line)
+			end
 		end
 	end
 
