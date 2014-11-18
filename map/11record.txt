@@ -825,7 +825,7 @@
 		变身动画=Spell Three
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
-
+	/*
 		//神圣天使兽
 		皮肤=A0VY
 		前缀=|cffcc00cc究极体|r 
@@ -836,7 +836,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
-
+	*/
 
 		//兵长
 		皮肤=A0VZ
