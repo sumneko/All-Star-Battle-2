@@ -62,6 +62,10 @@
 	}
 	
 	local now_type
+
+	--多行注释
+	content	= content:gsub('%/%*.-%*%/', '')
+	
 	for line in content:gmatch('([^\n\r]+)') do
 
 		for i = 1, #line do
