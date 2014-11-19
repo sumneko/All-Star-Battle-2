@@ -36,6 +36,7 @@
               纸色茉莉=|cffffcc00[艾斯黛丝女王殿下 -夜袭·Night Raid]|r  
               小篮妹丶=|cffffcc00[现在的我就是死亡污秽 杀了我 杀了我啊 -夜袭·Night Raid]|r
               樱江樱桃=|cffffcc00[ 謎の少女 —夜袭·Night Raid ]|r
+              baka缇娜=|cffffcc00[斩杀罪恶之刃 —夜袭·Night Raid ]|r
         
     //天道受1
         我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
