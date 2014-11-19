@@ -65,6 +65,7 @@
 		//火柴人 n023
 		//提莫  n029
 		//老提莫 n027
+		//丹羽长秀 n02D
 
 		//幸运	button\BTNXS_S_XY.blp
 		//YY	button\BTNXS_S_YY.blp
@@ -466,31 +467,7 @@
 			标题=特殊信使
 			内容=提莫
 
-		//小法师 n02D
-
-//		    信使=n02D
-//			前缀=|cffffcc00￥6300|r
-//			说明=小法师
-//			价格=
-//			变身特效=war3mapImported\gate keeper.mdl
-//			特效点=origin
-//			特效时间=0.5
-//			变身动画=morph
-
-			//从商店中购买时的额外技能
-//			图标=button\BTNXS_S_XY.blp
-//			技能=被动
-//			标题=|cffffcc00%player_name%|r 从商城中购买的信使
-//			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
-
-            //皮肤无限使用权
-//			名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999
-//			图标=button\BTN_XS_Xiaofashi.blp
-//			技能=被动
-//			标题=特殊信使
-//			内容=小法师
-
-		//老提莫
+		//老提莫 n027
 
 		    信使=n027
 			前缀=|cffffcc00黑商|r
@@ -513,6 +490,30 @@
 			技能=被动
 			标题=特殊信使
 			内容=约德尔商人
+
+		//丹羽长秀 n02D
+
+		    信使=n02D
+			前缀=|cffffcc00姬武将|r
+			说明=姬武将
+			价格=
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999
+			图标=button\BTN_XS_OldTeemo.blp
+			技能=被动
+			标题=特殊信使
+			内容=姬武将
 
 	==英雄皮肤==
 
@@ -825,7 +826,7 @@
 		变身动画=Spell Three
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
-	/*
+	
 		//神圣天使兽
 		皮肤=A0VY
 		前缀=|cffcc00cc究极体|r 
@@ -836,7 +837,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
-	*/
+	
 
 		//兵长
 		皮肤=A0VZ
