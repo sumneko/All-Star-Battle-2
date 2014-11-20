@@ -133,11 +133,11 @@
 		|A0TD|,
 		|A0TE|,
 		|A0TF|,
-		|A0TG|,
+		['up']	= |A0TG|,
 		|A0TH|,
 		|A0TI|,
 		|A0TJ|,
-		|A0TK|,
+		['down']	=|A0TK|,
 		|A0TL|,
 		|A0TM|,
 		|A0TN|,
@@ -173,58 +173,123 @@
 			return
 		end
 
+		p.messenger_page	= 0
+
 		p.second_messenger	= true
 		--给信使添加魔法书
 		jass.UnitAddAbility(u, |A0TO|)
-		local jc	= p:getRecord '节操'
-		
-		for i, data in ipairs(messenger) do
-			--遍历当前的皮肤
-			local sid	= messenger.model_skill[i]
-			local ab	= japi.EXGetUnitAbility(u, sid)
 
-			local texts	= {}
+		function p.fresh_messenger_text()
+			local jc	= p:getRecord '节操'
+			
+			for i = 1, #messenger.model_skill do
+				local data	= messenger[i + p.messenger_page]
+				if not data then
+					break
+				end
+				--遍历当前的皮肤
+				local sid	= messenger.model_skill[i]
+				local ab	= japi.EXGetUnitAbility(u, sid)
 
-			for i, t in ipairs(data.gold) do
-				if t[2] > jc then
-					texts[i]	= ('#%d 套餐: |cffff1111%02d 次使用权 - %04d 节操|r'):format(i, t[1], t[2])
+				local texts	= {}
+
+				for i, t in ipairs(data.gold) do
+					if t[2] > jc then
+						texts[i]	= ('#%d 套餐: |cffff1111%02d 次使用权 - %04d 节操|r'):format(i, t[1], t[2])
+					else
+						texts[i]	= ('#%d 套餐: |cff11ff11%02d 次使用权 - %04d 节操|r'):format(i, t[1], t[2])
+					end
+				end
+
+				local show	= 1
+				local count	= p:getRecord(data['信使'])
+				if data.names[p:getBaseName()] then
+					table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
+				elseif game.debug then
+					table.insert(texts, ('\n|cffffcc00测试模式,全皮肤开放!\n\n点击使用该皮肤|r'))
+				elseif #data.gold == 0 then
+					table.insert(texts, ('\n|cffffcc00非卖品|r'))
+					show = 0
+				elseif count == 0 then
+					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 				else
-					texts[i]	= ('#%d 套餐: |cff11ff11%02d 次使用权 - %04d 节操|r'):format(i, t[1], t[2])
+					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
+				end
+
+				data.name = slk.unit[data.id].Name
+
+				--生成技能标题
+				local title		= ('%s %s'):format(data['前缀'], data.name)
+
+				--生成技能说明
+				local direct	= ('%s\n\n%s'):format(data['说明'], table.concat(texts, '\n'))
+				
+
+				--设置技能
+				if p == player.self then
+					japi.EXSetAbilityDataReal(ab, 1, 110, show)
+					japi.EXSetAbilityDataString(ab, 1, 215, title)
+					japi.EXSetAbilityDataString(ab, 1, 218, direct)
+					japi.EXSetAbilityDataString(ab, 1, 204, slk.unit[data.id].Art)
 				end
 			end
 
-			local show	= 1
-			local count	= p:getRecord(data['信使'])
-			if data.names[p:getBaseName()] then
-				table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
-			elseif game.debug then
-				table.insert(texts, ('\n|cffffcc00测试模式,全皮肤开放!\n\n点击使用该皮肤|r'))
-			elseif #data.gold == 0 then
-				table.insert(texts, ('\n|cffffcc00非卖品|r'))
-				show = 0
-			elseif count == 0 then
-				table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
-			else
-				table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
+			--往上翻按钮
+			do
+				local sid	= messenger.model_skill['up']
+				local ab	= japi.EXGetUnitAbility(u, sid)
+
+				local title, direct, art
+
+				--判断一下上面还有没有皮肤
+				if p.messenger_page <= 0 then
+					title	= '|cff888888向上翻|r'
+					direct	= '|cff888888别看了,上面没有皮肤了|r'
+					art		= 'ReplaceableTextures\\CommandButtonsDisabled\\DISBTNReplay-SpeedUp.blp'
+				else
+					title	= '|cffffff00向上翻|r'
+					direct	= ('上面还有 |cffffff00%d|r 个皮肤'):format(p.messenger_page)
+					art		= 'ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp'
+				end
+
+				--设置技能
+				if p == player.self then
+					japi.EXSetAbilityDataReal(ab, 1, 110, 1)
+					japi.EXSetAbilityDataString(ab, 1, 215, title)
+					japi.EXSetAbilityDataString(ab, 1, 218, direct)
+					japi.EXSetAbilityDataString(ab, 1, 204, art)
+				end
 			end
 
-			data.name = slk.unit[data.id].Name
+			--往下翻按钮
+			do
+				local sid	= messenger.model_skill['down']
+				local ab	= japi.EXGetUnitAbility(u, sid)
 
-			--生成技能标题
-			local title		= ('%s %s'):format(data['前缀'], data.name)
+				local title, direct, art
 
-			--生成技能说明
-			local direct	= ('%s\n\n%s'):format(data['说明'], table.concat(texts, '\n'))
-			
+				--判断一下上面还有没有皮肤
+				if p.messenger_page >= #messenger - 9 then
+					title	= '|cff888888向下翻|r'
+					direct	= '|cff888888别看了,下面没有皮肤了|r'
+					art		= 'ReplaceableTextures\\CommandButtonsDisabled\\DISBTNReplay-SpeedDown.blp'
+				else
+					title	= '|cffffff00向下翻|r'
+					direct	= ('下面还有 |cffffff00%d|r 个皮肤'):format(#messenger - 9 - p.messenger_page)
+					art		= 'ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp'
+				end
 
-			--设置技能
-			if p == player.self then
-				japi.EXSetAbilityDataReal(ab, 1, 110, show)
-				japi.EXSetAbilityDataString(ab, 1, 215, title)
-				japi.EXSetAbilityDataString(ab, 1, 218, direct)
-				japi.EXSetAbilityDataString(ab, 1, 204, slk.unit[data.id].Art)
+				--设置技能
+				if p == player.self then
+					japi.EXSetAbilityDataReal(ab, 1, 110, 1)
+					japi.EXSetAbilityDataString(ab, 1, 215, title)
+					japi.EXSetAbilityDataString(ab, 1, 218, direct)
+					japi.EXSetAbilityDataString(ab, 1, 204, art)
+				end
 			end
 		end
+
+		p.fresh_messenger_text()
 
 		--使用皮肤
 		event('点击信使皮肤', '玩家离开',
@@ -241,7 +306,20 @@
 				end
 				
 				local i 	= messenger.model_skill[this.skill]
-				local data	= messenger[i]
+				if type(i)	== 'string' then
+					--翻页
+					if i == 'up' and p.messenger_page > 0 then
+						p.messenger_page = p.messenger_page - 3
+					elseif i == 'down' and p.messenger_page + 9 < #messenger then
+						p.messenger_page = p.messenger_page + 3
+					else
+						return
+					end
+					p.fresh_messenger_text()
+					return
+				end
+				
+				local data	= messenger[i + p.messenger_page]
 				local count	= p:getRecord(data['信使'])
 				
 				event('点击皮肤技能', this)
@@ -455,7 +533,7 @@
 		function(this)
 			local i	= messenger.model_skill[this.skill]
 			if i then
-				print(id2string(this.skill))
+				--print(id2string(this.skill))
 				event('点击信使皮肤', this)
 			end
 		end
