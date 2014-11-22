@@ -50,6 +50,7 @@
 
 	--保存名字
 	function record.saveName(first, name, value)
+		do return end
 		player.self:setRecord(first .. 0, value)
 		
 		--将名字拆成4个整数
@@ -90,6 +91,7 @@
 		local data = player.self.record_data
 
 		--取出胜利最多的一个名字
+		--[[
 		local name, value	= record.loadName('mt')
 		if value > 0 then
 			if not data[name] then
@@ -97,6 +99,7 @@
 			end
 			data[name] = math.max(data[name] or 0, value)
 		end
+		--]]
 
 		--保存当前名字
 		local name = player.self:getBaseName()
@@ -129,7 +132,7 @@
 		player.self:saveRecord()
 
 		--将胜利信息发送给其他玩家
-		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db'
+		local sync_names	= '局数 胜利 时间 节操 V db'
 		local t	= {}
 		for name in sync_names:gmatch '(%S+)' do
 			t[name]	= player.self:getRecord(name)
@@ -256,11 +259,13 @@
 		--判定是不是在开小号
 		local is_main	= true
 		local data	= player.self.record_data
+		--[[
 		local name, value	= record.loadName('mt')
 		print('main', name, value)
 		if data[name] ~= data[player.self:getBaseName()] and value ~= 0 then
 			is_main	= false
 		end
+		--]]
 		
 		--对比双方战绩
 		if lv1 < lv2 then
