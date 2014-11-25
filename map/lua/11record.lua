@@ -678,13 +678,13 @@
 				end
 
 				--使用皮肤
-				local func1 = event('英雄发动技能', '注册英雄', '玩家离开',
+				local func1 = event('英雄发动技能', '注册英雄', '玩家离开', '英雄学习技能',
 					function(this, name, f)
 
 						--如果该英雄被交换,移除注册
 						if name == '注册英雄' then
 							if this.hero == hero then
-								event('-英雄发动技能', '-注册英雄', '-玩家离开', f)
+								event('-英雄发动技能', '-注册英雄', '-玩家离开', '-英雄学习技能', f)
 							end
 							return
 						end
@@ -694,7 +694,17 @@
 								for i = 1, #hero_model[id] do
 									jass.UnitRemoveAbility(hero, hero_model.skills[i])
 								end
-								event('-英雄发动技能', '-注册英雄', '-玩家离开', f)
+								event('-英雄发动技能', '-注册英雄', '-玩家离开', '-英雄学习技能', f)
+							end
+							return
+						end
+
+						if name == '英雄学习技能' then
+							if this.from == hero then
+								for i = 1, #hero_model[id] do
+									jass.UnitRemoveAbility(hero, hero_model.skills[i])
+								end
+								event('-英雄发动技能', '-注册英雄', '-玩家离开', '-英雄学习技能', f)
 							end
 							return
 						end
@@ -870,7 +880,7 @@
 
 						hero_lines.speek(p, hero)
 
-						event('-英雄发动技能', '-注册英雄', '-玩家离开', func1)
+						event('-英雄发动技能', '-注册英雄', '-玩家离开', '-英雄学习技能', func1)
 					end
 				)
 			else
