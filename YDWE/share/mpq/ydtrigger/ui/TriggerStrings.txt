@@ -6460,6 +6460,10 @@ GetUnitAcquireRange="当前主动攻击范围"
 GetUnitAcquireRange=~单位," 的当前主动攻击范围"
 GetUnitAcquireRangeHint=
 
+Unit.GetUnitDefence="获取单位护甲值 <单位库>"
+Unit.GetUnitDefence=~单位," 的护甲值"
+Unit.GetUnitDefenceHint="在11平台则直接使用JAPI获取;否则使用伤害测试法获取,不准"
+
 GetUnitDefaultAcquireRange="默认主动攻击范围"
 GetUnitDefaultAcquireRange=~单位," 的默认主动攻击范围"
 GetUnitDefaultAcquireRangeHint=

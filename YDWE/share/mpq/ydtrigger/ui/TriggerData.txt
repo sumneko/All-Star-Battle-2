@@ -9885,6 +9885,10 @@ GetUnitDefaultTurnSpeed=0,1,real,unit
 _GetUnitDefaultTurnSpeed_Defaults=GetTriggerUnit
 _GetUnitDefaultTurnSpeed_Category=TC_UNIT
 
+Unit.GetUnitDefence=0,1,real,unit
+_Unit.GetUnitDefence_Defaults=GetTriggerUnit
+_Unit.GetUnitDefence_Category=TC_UNIT
+
 GetUnitPropWindow=0,1,real,unit
 _GetUnitPropWindow_Defaults=GetTriggerUnit
 _GetUnitPropWindow_Category=TC_UNIT
