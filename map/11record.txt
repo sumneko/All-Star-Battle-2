@@ -16,7 +16,7 @@
 
               lianhuohuo2333=|cFFFF99FF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝 -夜袭·Night Raid ]|r
               qilunuobaka9999=|cFF66FFFF[没有做好被杀的觉悟的人没有资格杀人 -夜袭·Night Raid]|r   
-              我才不是x=|cffffcc00[我等前方绝无敌手 -夜袭·Night Raid]|r
+              我才不是x=|cffffcc00[为什么世人不能纯洁如我 -夜袭·Night Raid]|r
               Atm_未闻=|cffffcc00[无限杀戮の紫瞳 -夜袭·Night Raid]|r
               艾莉卡丶=|cffffcc00[瞬闪即逝  一切终景无痕无迹 -夜袭·Night Raid]|r
               克丽丝=|cffffcc00[我早就闭上了双眼，我的目的只在于黑暗之中 -夜袭·Night Raid]|r  
@@ -762,7 +762,7 @@
 		//狗剪
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
-		说明=想拥有吗？多关注全明星战役贴吧活动吧
+		说明=
 		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
