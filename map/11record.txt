@@ -34,7 +34,7 @@
               天之绯月=|cffffcc00[在此起誓 吾做世之恶者 除尽世之善者 -夜袭·Night Raid]|r
               草雉护堂=|cffffcc00[吾乃世之善者 除尽世之恶者 -夜袭·Night Raid]|r
               纸色茉莉=|cffffcc00[艾斯黛丝女王殿下 -夜袭·Night Raid]|r  
-              小篮妹丶=|cffffcc00[现在的我就是死亡污秽 杀了我 杀了我啊 -夜袭·Night Raid]|r
+              小蓝妹丶=|cffffcc00[现在的我就是死亡污秽 杀了我 杀了我啊 -夜袭·Night Raid]|r
               樱江樱桃=|cffffcc00[ 謎の少女 —夜袭·Night Raid ]|r
               baka缇娜=|cffffcc00[斩杀罪恶之刃 —夜袭·Night Raid ]|r
         
@@ -114,7 +114,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
 			//皮肤无限使用权
-			名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶、艾莉卡丶
+			名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶;艾莉卡丶
 			图标=button\BTNXS_S_PKQ.blp
 			技能=主动
 			标题=专属信使
@@ -528,7 +528,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999;沙门丶;s芙兰朵露z
+		名字=lianhuohuo2333;qilunuobaka9999;沙门丶;s芙兰朵露z;S灭杀_____
 
 		//saber extra
 		皮肤=A0TT
