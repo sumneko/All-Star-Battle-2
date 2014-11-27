@@ -329,7 +329,7 @@
 		    信使=n01Z
 			前缀=|cffffcc00口_口|r
 			说明=高达
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -353,7 +353,7 @@
 		    信使=n02B
 			前缀=|cffffcc00V·|r
 			说明=V仔兽
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -377,7 +377,7 @@
 		    信使=n02F
 			前缀=|cffffcc00普通的|r
 			说明=僵尸
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -401,7 +401,7 @@
 		    信使=n025
 			前缀=|cffffcc00幸运星|r
 			说明=泉此方
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -425,7 +425,7 @@
 		    信使=n023
 			前缀=|cffffcc00·|r
 			说明=火柴人
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -449,7 +449,7 @@
 		    信使=n029
 			前缀=|cffffcc00迅捷斥候|r
 			说明=提莫
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -473,7 +473,7 @@
 		    信使=n027
 			前缀=|cffffcc00黑商|r
 			说明=约德尔商人
-			价格=
+			价格=1-50 5-200 25-900
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -497,7 +497,7 @@
 		    信使=n02D
 			前缀=|cffffcc00姬武将|r
 			说明=姬武将
-			价格=
+			价格=1-100 5-400 25-1800
 			变身特效=war3mapImported\gate keeper.mdl
 			特效点=origin
 			特效时间=0.5
@@ -763,7 +763,7 @@
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
 		说明=这里是皮肤说明
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -820,7 +820,7 @@
 		皮肤=A0VF
 		前缀=|cffff1111神|r
 		说明=这里是皮肤说明
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=
 		特效点=
 		特效时间=0.5
@@ -832,7 +832,7 @@
 		皮肤=A0VY
 		前缀=|cffcc00cc究极体|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -844,7 +844,7 @@
 		皮肤=A0VZ
 		前缀=|cffcc00cc兵长|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -856,7 +856,7 @@
 		皮肤=A0VX
 		前缀=|cffcc00cc七色的剑灵使用者|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -880,7 +880,7 @@
 		皮肤=A0VV
 		前缀=|cffcc00cc银之森的妖精公主|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -892,7 +892,7 @@
 		皮肤=A0VW
 		前缀=|cffcc00cc红之战巫女|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
