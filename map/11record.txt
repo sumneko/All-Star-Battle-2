@@ -692,7 +692,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=lianhuohuo2333;qilunuobaka9999;WorldEdit
-
+	/*
 		//新约·一方
 		皮肤=A0V2
 		前缀=|cffff1111新约·|r
@@ -703,7 +703,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=
-
+	*/
 		//和服 小爱
 		皮肤=A0V0
 		前缀=|cffff1111和服·|r
