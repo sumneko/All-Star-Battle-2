@@ -97,6 +97,7 @@ TC_ITEM=WESTRING_TRIGCAT_ITEM,ReplaceableTextures\WorldEditUI\Actions-Item
 TC_ITEMPOOL=物品池,ReplaceableTextures\WorldEditUI\Actions-Item
 TC_UNITSEL=WESTRING_TRIGCAT_UNITSEL,ReplaceableTextures\WorldEditUI\Actions-UnitSelection
 TC_HERO=WESTRING_TRIGCAT_HERO,ReplaceableTextures\WorldEditUI\Actions-Hero
+TC_WIDGET=物体,ReplaceableTextures\CommandButtons\BTNBox.blp
 TC_GAME=WESTRING_TRIGCAT_GAME,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_GAMECACHE=WESTRING_TRIGCAT_GAMECACHE,ReplaceableTextures\WorldEditUI\Actions-SetVariables
 TC_NEUTRALBUILDING=WESTRING_TRIGCAT_NEUTRALBUILDING,ReplaceableTextures\WorldEditUI\Actions-Goldmine
@@ -165,6 +166,7 @@ image=1,1,1,WESTRING_TRIGTYPE_image
 sound=0,1,0,WESTRING_TRIGTYPE_sound
 effect=0,1,0,WESTRING_TRIGTYPE_effect
 lightning=1,1,1,WESTRING_TRIGTYPE_lightning
+widget=0,1,1,物体
 gamecache=0,1,0,WESTRING_TRIGTYPE_gamecache
 abilcode=0,1,1,WESTRING_TRIGTYPE_abilcode,integer
 buffcode=1,1,1,WESTRING_TRIGTYPE_buffcode,integer
@@ -552,6 +554,7 @@ typename35_fogstate=0,typename,35,迷雾
 typename36_fogmodifier=0,typename,36,可见度修正器
 typename37_radian=0,typename,37,弧度
 typename38_degree=0,typename,38,角度
+//typename39_widget=0,typename,39,物体
 
 objecttype00_abilcode=0,objecttype,YDWE_OBJECT_TYPE_ABILITY,WESTRING_OBJTAB_ABILITIES
 objecttype01_buffcode=0,objecttype,YDWE_OBJECT_TYPE_BUFF,WESTRING_OBJTAB_BUFFS
@@ -2669,6 +2672,16 @@ OrderCodeColdArrows=0,ordercodenotarg,852244,WESTRING_UNITORDERNOTARG_COLDARROWS
 OrderCodeUnColdArrows=0,ordercodenotarg,852245,WESTRING_UNITORDERNOTARG_UNCOLDARROWS
 OrderCodeDustOfAppearance=1,ordercodenotarg,852621,物品技能 - 月亮石
 OrderCodeDustOfAppearance=1,ordercodenotarg,852625,物品技能 - 显影之尘
+
+// Order
+OrderCode_Smart=0,ordercode,851971,右键点击
+OrderCode_Stop=0,ordercode,851972,停止
+OrderCode_Attack=0,ordercode,851983,攻击
+OrderCode_Hold=0,ordercode,851993,保持原位
+OrderCode_Move=0,ordercode,851986,移动/跟随
+OrderCode_Stun=0,ordercode,851973,昏迷
+OrderCode_Cancel=0,ordercode,851976,取消
+OrderCode_SkillPage=0,ordercode,852000,技能菜单
 
 // Hero Skills
 // Human Archmage
@@ -8296,13 +8309,13 @@ SavePlayerHandle=0,hashtable,integer,integer,player
 _SavePlayerHandle_Defaults=GetLastCreatedHashtableBJ,_,_,_
 _SavePlayerHandle_Category=TC_HASHTABLE
 
-// SaveWidgetHandleBJ=0,widget,integer,integer,hashtable
-// _SaveWidgetHandleBJ_Defaults=_,_,_,GetLastCreatedHashtableBJ
-// _SaveWidgetHandleBJ_Category=TC_HASHTABLE
-//
-// SaveWidgetHandle=0,hashtable,integer,integer,wigdet
-// _SaveWidgetHandle_Defaults=GetLastCreatedHashtableBJ,_,_,_
-// _SaveWidgetHandle_Category=TC_HASHTABLE
+SaveWidgetHandleBJ=0,widget,integer,integer,hashtable
+_SaveWidgetHandleBJ_Defaults=_,_,_,GetLastCreatedHashtableBJ
+_SaveWidgetHandleBJ_Category=TC_HASHTABLE
+
+SaveWidgetHandle=0,hashtable,integer,integer,wigdet
+_SaveWidgetHandle_Defaults=GetLastCreatedHashtableBJ,_,_,_
+_SaveWidgetHandle_Category=TC_HASHTABLE
 
 SaveDestructableHandleBJ=0,destructable,integer,integer,hashtable
 _SaveDestructableHandleBJ_Defaults=_,_,_,GetLastCreatedHashtableBJ
@@ -10017,6 +10030,18 @@ GetDestructableY=1,1,real,destructable
 _GetDestructableY_Defaults=GetLastCreatedDestructable
 _GetDestructableY_Category=TC_DESTRUCT
 
+GetWidgetLife=0,1,real,widget
+_GetWidgetLife_Defaults=GetTriggerWidget
+_GetWidgetLife_Category=TC_WIDGET
+
+GetWidgetX=0,1,real,widget
+_GetWidgetX_Defaults=GetTriggerWidget
+_GetWidgetX_Category=TC_WIDGET
+
+GetWidgetY=0,1,real,widget
+_GetWidgetY_Defaults=GetTriggerWidget
+_GetWidgetY_Category=TC_WIDGET
+
 GetRectCenterX=0,1,real,rect
 _GetRectCenterX_Defaults=GetPlayableMapRect
 _GetRectCenterX_Category=TC_RECT
@@ -11140,6 +11165,12 @@ _ChooseRandomItemBJ_Limits=-1,_
 _ChooseRandomItemBJ_Category=TC_NOTHING
 _ChooseRandomItemBJ_ScriptName=ChooseRandomItem
 
+// returns widget
+GetTriggerWidget=0,1,widget
+_GetTriggerWidget_Category=TC_WIDGET
+
+GetOrderTarget=0,1,widget
+_GetOrderTarget_Category=TC_WIDGET
 
 // returns techcode
 GetResearched=0,1,techcode
@@ -11883,13 +11914,13 @@ LoadPlayerHandle=0,1,player,hashtable,integer,integer
 _LoadPlayerHandle_Defaults=GetLastCreatedHashtableBJ,_,_
 _LoadPlayerHandle_Category=TC_HASHTABLE
 
-// LoadWidgetHandleBJ=0,1,widget,integer,integer,hashtable
-// _LoadWidgetHandleBJ_Defaults=_,_,GetLastCreatedHashtableBJ
-// _LoadWidgetHandleBJ_Category=TC_HASHTABLE
-//
-// LoadWidgetHandle=0,1,wigdet,hashtable,integer,integer
-// _LoadWidgetHandle_Defaults=GetLastCreatedHashtableBJ,_,_
-// _LoadWidgetHandle_Category=TC_HASHTABLE
+LoadWidgetHandleBJ=0,1,widget,integer,integer,hashtable
+_LoadWidgetHandleBJ_Defaults=_,_,GetLastCreatedHashtableBJ
+_LoadWidgetHandleBJ_Category=TC_HASHTABLE
+
+LoadWidgetHandle=0,1,widget,hashtable,integer,integer
+_LoadWidgetHandle_Defaults=GetLastCreatedHashtableBJ,_,_
+_LoadWidgetHandle_Category=TC_HASHTABLE
 
 LoadDestructableHandleBJ=0,1,destructable,integer,integer,hashtable
 _LoadDestructableHandleBJ_Defaults=_,_,GetLastCreatedHashtableBJ

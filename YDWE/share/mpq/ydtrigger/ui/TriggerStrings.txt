@@ -6156,6 +6156,15 @@ GetDestructableY="可破坏物所在Y轴坐标 [R]"
 GetDestructableY=~可破坏物," 所在Y轴坐标"
 GetDestructableYHint
 
+GetWidgetLife="物体生命值"
+GetWidgetLife=~物体," 的生命值"
+
+GetWidgetX="物体的X坐标"
+GetWidgetX=~物体," 的X坐标"
+
+GetWidgetY="物体的Y坐标"
+GetWidgetY=~物体," 的Y坐标"
+
 YDWEIsEventPhysicalDamage="是物理伤害 [JAPI]"
 YDWEIsEventPhysicalDamage="单位所受伤害是物理伤害"
 YDWEIsEventPhysicalDamageHint="响应'受到伤害'单位事件,不能用在等待之后"
@@ -7383,11 +7392,11 @@ GetSummoningUnit="召唤者"
 GetSummoningUnitHint="响应'召唤单位'单位事件."
 
 GetOrderTargetUnit="命令发布目标"
-GetOrderTargetUnit="命令发布目标"
+GetOrderTargetUnit="命令发布目标(单位)"
 GetOrderTargetUnitHint="响应'发布指定物体目标命令'单位事件并以单位为目标时."
 
 GetSpellTargetUnit="技能施放目标"
-GetSpellTargetUnit="技能施放目标"
+GetSpellTargetUnit="技能施放目标(单位)"
 GetSpellTargetUnitHint="响应'施放技能'单位事件并以单位为目标时. 注意: 技能施放结束将无法捕获施放目标."
 
 GetEventTargetUnit="事件目标单位"
@@ -7526,12 +7535,12 @@ GetDyingDestructable="死亡的可破坏物"
 GetDyingDestructable="死亡的可破坏物"
 GetDyingDestructableHint="响应'可破坏物死亡'事件."
 
-GetOrderTargetDestructable="命令发布目标(可破坏物)"
 GetOrderTargetDestructable="命令发布目标"
+GetOrderTargetDestructable="命令发布目标(可破坏物)"
 GetOrderTargetDestructableHint="响应'发布指定物体目标命令'单位事件并以可破坏物为目标时."
 
-GetSpellTargetDestructable="技能施放目标(可破坏物)"
 GetSpellTargetDestructable="技能施放目标"
+GetSpellTargetDestructable="技能施放目标(可破坏物)"
 GetSpellTargetDestructableHint="响应'施放技能'单位事件并以可破坏物为目标时. 注意: 技能施放结束将无法捕获施放目标."
 
 GetUnitRallyDestructable="单位集结点目标"
@@ -7631,11 +7640,11 @@ GetSoldItem="被售出物品"
 GetSoldItemHint="响应'出售物品'或'抵押物品'单位事件."
 
 GetOrderTargetItem="命令发布目标"
-GetOrderTargetItem="命令发布目标"
+GetOrderTargetItem="命令发布目标(物品)"
 GetOrderTargetItemHint="响应'发布指定物体目标命令'单位事件并以物品为目标时."
 
 GetSpellTargetItem="技能施放目标"
-GetSpellTargetItem="技能施放目标"
+GetSpellTargetItem="技能施放目标(物品)"
 GetSpellTargetItemHint="响应施放技能单位事件并以物品为目标时. 注意: 技能施放结束将无法捕获施放目标."
 
 PlaceRandomItem="选择放置物品 [R]"
@@ -7694,6 +7703,13 @@ CreateItemPoolHint=会创建物品池.
 YDWEGetLastItemPool="最后创建的物品池 [YDWE]"
 YDWEGetLastItemPool="最后创建的物品池"
 YDWEGetLastItemPoolHint="该物品池必须是由YDWE提供的<创建物品池>动作生成，不然无法获取。"
+
+// returns wigdet
+GetTriggerWidget="触发物体"
+GetTriggerWidget="触发物体"
+
+GetOrderTarget="命令发布目标"
+GetOrderTarget="命令发布目标(物体)"
 
 // returns techcode
 GetResearched="被研究科技"
