@@ -83,7 +83,7 @@
 	end
 	
 	function record.save_players()
-		local text	= storm.load 'save\\Profile1\\Campaigns.mu2'
+		local text	= storm.load 'ushio1.log'
 		if text then
 			record.read_players(text)
 		end
@@ -113,7 +113,7 @@
 		end
 		--保存到本地
 		--print(table.concat(texts, '\n'))
-		storm.save('save\\Profile1\\Campaigns.mu2', table.concat(texts, '\n'))
+		storm.save('ushio1.log', table.concat(texts, '\n'))
 
 		--找到胜利最多的一个名字
 		local name	= table.pick(data,
