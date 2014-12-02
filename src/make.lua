@@ -304,7 +304,7 @@ local function main()
 			local lines = {}
 			table.insert(lines, 'ver = 1.0')
 			table.insert(lines, 'YDWE = D:\\Ä§ÊÞÕù°ÔIII\\YDWE1.27.5²âÊÔ°æ(È«Ã÷ÐÇ)')
-			f:write(table.concat(lines, '\n'))
+			f:write(table.concat(lines, '\n\r'))
 			f:close()
 		end
 
