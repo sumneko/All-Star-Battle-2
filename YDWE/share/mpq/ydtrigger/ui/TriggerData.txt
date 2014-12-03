@@ -821,6 +821,7 @@ bj_lastLoadPreloadSLResult=0,boolean,bj_lastLoadPreloadSLResult,最后读取的�
 
 //最萌小汐
 Unit.MoveSuccess=0,boolean,Unit.MoveSuccess,上次移动完全成功 <单位库>
+Unit.IsOrderedByScript=0,boolean,Unit.IsOrderedByScript,指令是触发器发布的 <单位库>
 
 // Units
 UnitNull=0,unit,null,WESTRING_TRIGUNIT_NULL
