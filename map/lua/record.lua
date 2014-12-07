@@ -229,7 +229,7 @@
 		--读取节操
 		for i = 1, 10 do
 			record.jc[i] = table.new(0){
-				['节操'] = player[i]:getRecord '节操',
+				['节操'] = 0,
 				['收益'] = 1,
 			}
 			if player[i]:isPlayer() then
@@ -454,8 +454,74 @@
 			end
 		end
 		
-		jc['节操'] = jc['节操'] + n
+		jc['节操'] = jc['节操'] + n + p:getRecord '节操'
 		p:setRecord('节操', jc['节操'])
 	end
 
+	--检测其他玩家的大号
+	record.check_main_cost = 1000
+
+	function player.__index.loadName(p, first)
+		local value = p:getRecord(first .. 0)
+		
+		--将4个整数组装成名字
+		local name	= _id(p:getRecord(first .. 1) + 2 ^ 31) .. _id(p:getRecord(first .. 2) + 2 ^ 31) .. _id(p:getRecord(first .. 3) + 2 ^ 31) .. _id(p:getRecord(first .. 4) + 2 ^ 31)
+		--print(name)
+		return name:match '(%Z+)', value
+	end
 	
+	function cmd.check_main(p, id)
+		if p ~= player.self then
+			return
+		end
+		
+		id	= tonumber(id)
+		local op	= player[id]
+		if not p.has_checked then
+			p.has_checked = {}
+		end
+		
+		if id < 1 or id > 10 then
+			cmd.maid_chat '主人,这家伙又不是玩家,怎么查得出大号呀'
+			return
+		end
+
+		if id == p:get() then
+			cmd.maid_chat '主人,您没事查您自己干啥...'
+			return
+		end
+
+		if p.has_checked[id] then
+			local name, count = table.unpack(p.has_checked[id])
+			if name == op:getBaseName() then
+				cmd.maid_chat(('主人, [%s] 并没有检测到大号哦'):format(op:getBaseName()))
+			else
+				cmd.maid_chat(('主人, [%s] 的大号是 [%s] 哦,玩了 [%s] 局游戏'):format(op:getBaseName(), name, count))
+			end
+			return
+		end
+
+		if p:getRecord '节操' < record.check_main_cost then
+			cmd.maid_chat(('主人,您的节操不够哦,使用该功能需要 %s 节操,而您只有 %s 点!'):format(record.check_main_cost, p.getRecord '节操'))
+			return
+		end
+
+		--开始检测
+		local name, count = op:loadName 'mt'
+		p.has_checked[id] = {name, count}
+		
+		if count == 0 or name == op:getBaseName() then
+			p:setRecord('节操', p:getRecord '节操' - record.check_main_cost * 0.5)
+			p:saveRecord()
+			
+			cmd.maid_chat(('主人, [%s] 并没有检测到大号哦'):format(op.getBaseName()))
+			cmd.maid_chat(('扣了您 %d 点节操,剩余 %d 点!'):format(record.check_main_cost * 0.5, p:getRecord '节操'))
+			return
+		end
+
+		p:setRecord('节操', p:getRecord '节操' - record.check_main_cost)
+		p:saveRecord()
+
+		cmd.maid_chat(('主人, [%s] 的大号是 [%s] 哦,玩了 [%s] 局游戏'):format(op.getBaseName(), name, count))
+		cmd.maid_chat(('扣了您 %d 点节操,剩余 %d 点!'):format(record.check_main_cost, p:getRecord '节操'))
+	end
