@@ -4050,6 +4050,10 @@ Unit.SkillBar=0,unit,real,playercolor,boolean,boolean,boolean,boolean
 _Unit.SkillBar_Defaults=GetTriggerUnit,1,Color00,true,true,true,true
 _Unit.SkillBar_Category=TC_MU_UNIT
 
+Unit.SaveSlkData=0,unitcode,scriptcode
+_Unit.SaveSlkData_Defaults=hfoo,_
+_Unit.SaveSlkData_Category=TC_MU_UNIT
+
 //物品库
 Item.Formula=0,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,integer
 _Item.Formula_Defaults=_,_,_,_,ches,ches,ches,ches,0
@@ -6080,6 +6084,10 @@ SetUnitVertexColorBJ=0,unit,real,real,real,real
 _SetUnitVertexColorBJ_Defaults=_,100,100,100,0
 _SetUnitVertexColorBJ_Limits=_,_,0,100,0,100,0,100,0,100
 _SetUnitVertexColorBJ_Category=TC_ANIMATION
+
+Unit.ResetVertexColor=0,unit
+_Unit.ResetVertexColor_Defaults=GetEnumUnit
+_Unit.ResetVertexColor_Category=TC_ANIMATION
 
 SetUnitTimeScale=0,unit,real
 _SetUnitTimeScale_Defaults=_,1

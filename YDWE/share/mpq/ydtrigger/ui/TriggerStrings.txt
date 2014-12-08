@@ -643,6 +643,10 @@ Unit.SkillBar="施法进度条"
 Unit.SkillBar="在 ",~单位," 头上创建持续时间 ",~实数," 秒的进度条,队伍颜色为 ",~队伍颜色," .英雄暂停时暂停 ",~布尔," .英雄死亡时停止 ",~布尔," .英雄停止施法时停止 ",~布尔," .进度条结束时淡出 ",~布尔
 Unit.SkillBarHint="通过 最后创建的施法进度条 获取进度条.杀死进度条可以立即结束进度条(技能失败)"
 
+Unit.SaveSlkData="注册单位的物编数据"
+Unit.SaveSlkData="为 ",~单位类型," 注册 ",~数据名称
+Unit.SaveSlkDataHint="用空格分割多个数据名称,保存时自动从物编中读取保存到哈希表中.可以用逆天自定义值读出数据"
+
 //物品库
 //最萌小汐
 Item.Formula="注册物品合成"
@@ -1677,6 +1681,10 @@ SetUnitVertexColorHint="颜色格式为(红,绿,蓝). 大多数单位使用(255,
 SetUnitVertexColorBJ="改变单位颜色(RGB:0-100%)"
 SetUnitVertexColorBJ="改变 ",~单位,"  的颜色比例: (",~Red,"%, ",~Green,"%, ",~Blue,"%),透明度: ",~Transparency,"%"
 SetUnitVertexColorBJHint="颜色格式为(红,绿,蓝). 大多数单位使用100%的颜色值和0%透明度. 100%透明度是完全透明的."
+
+Unit.ResetVertexColor="重置单位颜色为默认值 <单位库>"
+Unit.ResetVertexColor="重置 ",~单位," 的颜色为默认值"
+Unit.ResetVertexColorHint="如果单位类型的自定义值中有red green blue则设置为对应值,否则设置为255"
 
 SetUnitTimeScale="改变单位动画播放速度(按倍数) [R]"
 SetUnitTimeScale="改变 ",~单位," 的动画播放速度为正常速度的 ",~Percent," 倍"
