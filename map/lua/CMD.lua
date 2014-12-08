@@ -89,6 +89,7 @@
 		'Å®ÆÍ2ÃÃ',
 		'Å®ÆÍboom',
 		'×÷ËÀµÄÁÑÃÃ¶¶',
+		'»á±¬Õ¨µÄbiajiÀ×',
 	}
 
 	cmd.maidNames_utf8 = {
@@ -126,6 +127,7 @@
 		'å¥³ä»†2å¦¹',
 		'å¥³ä»†boom',
 		'ä½œæ­»çš„è£‚å¦¹æŠ–',
+		'ä¼šçˆ†ç‚¸çš„biajié›·',
 	}
 		
 	function cmd.maid_name()
@@ -161,11 +163,17 @@
     end
 
     function cmd.maid_chat(p, s)
+	    if not p then
+		    s = p
+		    p = player.self
+	    end
 	    if p == player.self then
 		    jass.SetPlayerName(jass.Player(12), '|cffff88cc' .. cmd.getMaidName(true) .. '|r')
 	        japi.EXDisplayChat(jass.Player(12), 3, '|cffff88cc' .. s .. '|r')
 	    end
     end
+
+    player.__index.maid_chat = cmd.maid_chat
 
     function cmd.cmd(p)
 	    local open
