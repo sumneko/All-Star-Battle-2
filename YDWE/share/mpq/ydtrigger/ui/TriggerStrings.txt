@@ -585,6 +585,10 @@ baka.SPHint="你之后用整数转化玩家/获取玩家的索引均为洗牌后
 baka.hookImage="截取下一个新建单位的阴影图像"
 baka.hookImage="截取下一个新建单位的阴影图像"
 
+FlushUnit_Add="将马甲单位加入单位主键清理系统"
+FlushUnit_Add="将 ",~单位," 加入单位主键清理系统"
+FlushUnit_AddHint="如果要给蝗虫单位绑定自定义值而又不进行自主清理,可以用这个功能将该马甲加入监视,但该马甲被彻底删除后自动进行清理"
+
 maphack.InitHero="加入反全图"
 maphack.InitHero="将 ",~单位," 加入反全图系统"
 maphack.InitHeroHint="注册英雄会自动加入"
