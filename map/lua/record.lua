@@ -515,11 +515,11 @@
 		p.has_checked[id] = {name, count}
 		
 		if count == 0 or name == op:getBaseName() then
-			p:setRecord('节操', p:getRecord '节操' - record.check_main_cost * 0.5)
+			p:setRecord('节操', p:getRecord '节操' - record.check_main_cost * 0.2)
 			p:saveRecord()
 			
 			cmd.maid_chat(p, ('主人, [%s] 并没有检测到大号哦'):format(op:getBaseName()))
-			cmd.maid_chat(p, ('扣了您 %d 点节操,剩余 %d 点!'):format(record.check_main_cost * 0.5, p:getRecord '节操'))
+			cmd.maid_chat(p, ('扣了您 %d 点节操,剩余 %d 点!'):format(record.check_main_cost * 0.2, p:getRecord '节操'))
 			return
 		end
 
