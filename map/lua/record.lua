@@ -470,13 +470,17 @@
 		return name:match '(%Z+)', value
 	end
 	
-	function cmd.check_main(p, id)
+	function cmd.check_main(p, u)
 		if p ~= player.self then
 			return
 		end
+
+		local op, id
+		u	= tonumber(u)
+		op	= jass.GetOwningPlayer(u)
+		op	= player.j_player(op)
+		id	= op:get()
 		
-		id	= tonumber(id)
-		local op	= player[id]
 		if not p.has_checked then
 			p.has_checked = {}
 		end
