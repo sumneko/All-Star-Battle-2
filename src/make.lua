@@ -5,14 +5,14 @@ local zip_files = {
 	['war3map.j'] = true,
 	['war3map.wtg'] = true,
 	['war3map.wts'] = true,
-	['war3map.w3a'] = true,
 	['war3map.wpm'] = true,
 	['war3map.shd'] = true,
-	['war3map.w3u'] = true,
 	['war3map.doo'] = true,
 	['War3MapPreview.tga'] = true,
 	['war3map.wct'] = true,
-	['war3map.w3e'] = true
+	['war3map.w3e'] = true,
+	['war3map.w3a'] = true,
+	['war3map.w3u'] = true,
 }
 
 local imp_ignore = {
@@ -47,6 +47,16 @@ local imp_ignore = {
 
 local ext_ignore = {
 	['11record.txt'] = true,
+}
+
+local obj_txt	= {
+	['war3map.w3u'] = false,
+	['war3map.w3t'] = false,
+	['war3map.w3b'] = false,
+	['war3map.w3d'] = true,
+	['war3map.w3a'] = true,
+	['war3map.w3h'] = false,
+	['war3map.w3q'] = true,
 }
 
 local function git_fresh(fname)
@@ -104,17 +114,33 @@ local function main()
 	require 'luabind'
 	require 'filesystem'
 	require 'utility'
+	--require 'w3x2txt'
+	obj_txt = {}
+	w3x2txt = {}
 
 	--保存路径
-	git_path = root_dir
-	input_map    = fs.path(input_map)
-	root_dir     = fs.path(root_dir)
-	file_dir           = root_dir / 'map'
+	git_path	= root_dir
+	input_map	= fs.path(input_map)
+	root_dir	= fs.path(root_dir)
+	file_dir	= root_dir / 'map'
+	meta_path	= root_dir / 'meta'
 	
 	fs.create_directories(root_dir / 'test')
 
-	test_dir           = root_dir / 'test'
-	output_map   = test_dir / input_map:filename():string()
+	test_dir	= root_dir / 'test'
+	output_map	= test_dir / input_map:filename():string()
+
+	--读取meta表
+	--[[
+	w3x2txt.readMeta(meta_path / 'abilitybuffmetadata.slk')
+	w3x2txt.readMeta(meta_path / 'abilitymetadata.slk')
+	w3x2txt.readMeta(meta_path / 'destructablemetadata.slk')
+	w3x2txt.readMeta(meta_path / 'doodadmetadata.slk')
+	w3x2txt.readMeta(meta_path / 'miscmetadata.slk')
+	w3x2txt.readMeta(meta_path / 'unitmetadata.slk')
+	w3x2txt.readMeta(meta_path / 'upgradeeffectmetadata.slk')
+	w3x2txt.readMeta(meta_path / 'upgrademetadata.slk')
+	--]]
 	
 	local fname
 
@@ -173,6 +199,10 @@ local function main()
 			fs.create_directories(map_dir_par)
 			if inmap:extract(line, dir) then
 				--print('[成功]: 导出 ' .. line)
+				--检查是否要转换成txt
+				if obj_txt[line] ~= nil then
+					w3x2txt.obj2txt(dir, dir, obj_txt[line])
+				end
 				git_fresh(line)
 			else
 				print('[失败]: 导出 ' .. line)
@@ -279,12 +309,24 @@ local function main()
 				end
 				fs.remove(file_dir / name)
 			else
-				if inmap:import(name, file_dir / name) then
-					--print('[成功]: 导入 ' .. name)
-					count = count + 1
+				--检查是否要转换成obj
+				if obj_txt[name] ~= nil then
+					w3x2txt.txt2obj(file_dir / name, test_dir / name, obj_txt[name])
+					if inmap:import(name, test_dir / name) then
+						--print('[成功]: 导入 ' .. name)
+						count = count + 1
+					else
+						print('[失败]: 导入 ' .. name)
+						table.insert(fail_files, name)
+					end
 				else
-					print('[失败]: 导入 ' .. name)
-					table.insert(fail_files, name)
+					if inmap:import(name, file_dir / name) then
+						--print('[成功]: 导入 ' .. name)
+						count = count + 1
+					else
+						print('[失败]: 导入 ' .. name)
+						table.insert(fail_files, name)
+					end
 				end
 			end
 			
