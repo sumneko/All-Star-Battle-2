@@ -351,6 +351,9 @@
 					table.insert(hexs, ('c4c4l'):pack(obj.origin_id, obj.id, #obj.datas))
 					for _, data in ipairs(obj.datas) do
 						--data的id与类型
+						if #data.id ~= 4 then
+							print(data.id)
+						end
 						table.insert(hexs, ('c4l'):pack(data.id, data.type))
 						--data的等级与分类
 						if has_level then
