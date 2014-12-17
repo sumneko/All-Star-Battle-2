@@ -11,32 +11,8 @@
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
                 s芙兰朵露z=|Cffff00ff[永远の二妹]|r
                 藤原_妹红_=|cffffcc00[飞上月球☆不死之烟]|r
-
-	//夜袭职业杀手团  2.9全部删除.
-
-              lianhuohuo2333=|cFFFF99FF[天若无能制裁邪恶，我等将会于黑暗之中给予消逝 -夜袭·Night Raid ]|r
               qilunuobaka9999=|cFF66FFFF[没有做好被杀的觉悟的人没有资格杀人 -夜袭·Night Raid]|r   
-              我才不是x=|cffffcc00[为什么世人不能纯洁如我 -夜袭·Night Raid]|r
-              Atm_未闻=|cffffcc00[无限杀戮の紫瞳 -夜袭·Night Raid]|r
-              艾莉卡丶=|cffffcc00[漠观世间  只愿沉入永恒之眠 -夜袭·Night Raid]|r
-              克丽丝=|cffffcc00[我早就闭上了双眼，我的目的只在于黑暗之中 -夜袭·Night Raid]|r  
-              萌虎之怒=|cffffcc00[一斩必杀· 送葬 -夜袭·Night Raid]|r
-              洒言=|cffffcc00[弱者就要准备好被杀的觉悟 -夜袭·Night Raid]|r
-              绯色菠萝=|cffffcc00[纯血の吸血姬 -夜袭·Night Raid]|r
-              一方通行=|cffffcc00[贯穿真实の剑 -夜袭·Night Raid]|r
-              归海枫音=|cffffcc00[只要是活着的东西，即使是神也要杀给你看 -夜袭·Night Raid]|r
-              梦轮回丶=|cffffcc00[“开局一血以示友好,我的血皮连我自己都害怕” -夜袭·Night Raid]|r
-              D丶冰娘=|cffffcc00[寂雪·冰霜の女皇 -夜袭·Night Raid]|r
-              如流萤乱舞=|cffffcc00[人心编织而成的罪恶王冠 -夜袭·Night Raid]|r
-              菊花是菜=|cffffcc00[你原本是想杀掉我 就算被我杀掉也没怨言吧 -夜袭·Night Raid]|r
-              蔓珠沙华彡=|cffffcc00[我根本就不需要绝望 -夜袭·Night Raid]|r
-              吾铭新手君=|cffffcc00[枉思停泊苦作乐 -夜袭·Night Raid]|r
-              天之绯月=|cffffcc00[在此起誓 吾做世之恶者 除尽世之善者 -夜袭·Night Raid]|r
-              草雉护堂=|cffffcc00[吾乃世之善者 除尽世之恶者 -夜袭·Night Raid]|r
-              小蓝妹丶=|cffffcc00[现在的我就是死亡污秽 杀了我 杀了我啊 -夜袭·Night Raid]|r
-              樱江樱桃=|cffffcc00[ 謎の少女 —夜袭·Night Raid ]|r
-              baka缇娜=|cffffcc00[斩杀罪恶之刃 —夜袭·Night Raid ]|r
-              绫羽梓月=|cffffcc00[第三精灵·梦魇（Nightmare）—夜袭·Night Raid ]|r
+              
     //天道受1
         我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
         艾斯特=|cffffcc00[|cFF38efff魔王剑-Terminus Est Zwei|cffffcc00]|r
