@@ -3,7 +3,7 @@ local test_dir
 
 local zip_files = {
 	['war3map.j'] = true,
-	['war3map.wtg'] = true,
+	--['war3map.wtg'] = true,
 	--['war3map.wts'] = true,
 	['war3map.wpm'] = true,
 	['war3map.shd'] = true,
@@ -57,6 +57,10 @@ local obj_txt	= {
 	['war3map.w3a'] = true,
 	['war3map.w3h'] = false,
 	['war3map.w3q'] = true,
+}
+
+local wtg_txt	= {
+	['war3map.wtg']	= true,
 }
 
 local function git_fresh(fname)
@@ -137,6 +141,9 @@ local function main()
 	w3x2txt.readMeta(meta_path / 'unitmetadata.slk')
 	w3x2txt.readMeta(meta_path / 'upgradeeffectmetadata.slk')
 	w3x2txt.readMeta(meta_path / 'upgrademetadata.slk')
+
+	--读取函数
+	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'ydtrigger' / 'ui' / 'TriggerData.txt')
 	
 	local fname
 
@@ -198,6 +205,9 @@ local function main()
 				--检查是否要转换成txt
 				if obj_txt[line] ~= nil then
 					w3x2txt.obj2txt(dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
+					git_fresh(line .. '.txt')
+				elseif wtg_txt[line] then
+					w3x2txt.wtg2txt(dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
 					git_fresh(line .. '.txt')
 				else
 					git_fresh(line)
@@ -311,6 +321,16 @@ local function main()
 				if obj_txt[name:sub(1, -5)] ~= nil then
 					name	= name:sub(1, -5)
 					w3x2txt.txt2obj(file_dir / (name .. '.txt'), test_dir / name, obj_txt[name])
+					if inmap:import(name, test_dir / name) then
+						--print('[成功]: 导入 ' .. name)
+						count = count + 1
+					else
+						print('[失败]: 导入 ' .. name)
+						table.insert(fail_files, name)
+					end
+				elseif wtg_txt[name:sub(1, -5)] then
+					name	= name:sub(1, -5)
+					w3x2txt.txt2wtg(file_dir / (name .. '.txt'), test_dir / name, obj_txt[name])
 					if inmap:import(name, test_dir / name) then
 						--print('[成功]: 导入 ' .. name)
 						count = count + 1
