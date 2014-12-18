@@ -60,8 +60,9 @@ local obj_txt	= {
 	['war3map.w3q'] = true,
 }
 
-local wtg_txt	= {
-	['war3map.wtg']	= true,
+local w3x_txt	= {
+	['war3map.wtg']	= 'wtg',
+	['war3map.wct']	= 'wct',
 }
 
 local function git_fresh(fname)
@@ -207,8 +208,8 @@ local function main()
 				if obj_txt[line] ~= nil then
 					w3x2txt.obj2txt(dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
 					git_fresh(line .. '.txt')
-				elseif wtg_txt[line] then
-					w3x2txt.wtg2txt(dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
+				elseif w3x_txt[line] then
+					w3x2txt[w3x_txt[line] .. '2txt'](dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
 					git_fresh(line .. '.txt')
 				else
 					git_fresh(line)
@@ -329,9 +330,9 @@ local function main()
 						print('[失败]: 导入 ' .. name)
 						table.insert(fail_files, name)
 					end
-				elseif wtg_txt[name:sub(1, -5)] then
+				elseif w3x_txt[name:sub(1, -5)] then
 					name	= name:sub(1, -5)
-					w3x2txt.txt2wtg(file_dir / (name .. '.txt'), test_dir / name, obj_txt[name])
+					w3x2txt['txt2' .. w3x_txt[name]](file_dir / (name .. '.txt'), test_dir / name, obj_txt[name])
 					if inmap:import(name, test_dir / name) then
 						--print('[成功]: 导入 ' .. name)
 						count = count + 1
