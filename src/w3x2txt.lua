@@ -243,7 +243,7 @@
 				end
 			end
 
-			io.save(file_name_out, table.concat(lines, '\n'))
+			io.save(file_name_out, table.concat(lines, '\r\n'))
 
 		end
 
@@ -768,7 +768,7 @@
 				
 			end
 
-			io.save(file_name_out, table.concat(lines, '\n'))
+			io.save(file_name_out, table.concat(lines, '\r\n'))
 		end
 
 		function w3x2txt.txt2wtg(file_name_in, file_name_out)
