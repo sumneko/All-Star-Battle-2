@@ -2485,6 +2485,12 @@ STRING 417
 直接2.0秒
 }
 
+STRING 418
+// 技能: A0W8 (查看大号), Name (名字)
+{
+查看大号
+}
+
 STRING 419
 // 单位: e08X (灵梦), Name (名字)
 {
@@ -4983,7 +4989,7 @@ ratt
 }
 
 STRING 836
-// 科技: Robs (Berserker Strength), class (升级类型)
+// 科技: Robs (狂暴力量), class (升级类型)
 {
 melee
 }
@@ -5049,79 +5055,79 @@ STRING 846
 }
 
 STRING 847
-// 科技: Robs (Berserker Strength), effect3 (效果 3)
+// 科技: Robs (狂暴力量), effect3 (效果 3)
 {
 rarm
 }
 
 STRING 848
-// 科技: Robs (Berserker Strength), effect2 (效果 2)
+// 科技: Robs (狂暴力量), effect2 (效果 2)
 {
 ratt
 }
 
 STRING 849
-// 科技: Robs (Berserker Strength), effect1 (效果 1)
+// 科技: Robs (狂暴力量), effect1 (效果 1)
 {
 rhpo
 }
 
 STRING 850
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(1级)
 }
 
 STRING 851
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(2级)
 }
 
 STRING 852
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(3级)
 }
 
 STRING 853
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(4级)
 }
 
 STRING 854
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(5级)
 }
 
 STRING 855
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(6级)
 }
 
 STRING 856
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(7级)
 }
 
 STRING 857
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(8级)
 }
 
 STRING 858
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(9级)
 }
 
 STRING 859
-// 科技: R000 (Berserker Strength), Name (名字)
+// 科技: R000 (狂暴力量), Name (名字)
 {
 关卡威力(10级)
 }
@@ -10599,6 +10605,12 @@ STRING 1780
 E
 }
 
+STRING 1781
+// 技能: A0W8 (查看大号), Ubertip (提示工具 - 普通 - 扩展)
+{
+查看目标玩家的大号|n|n|cffffcc00消耗1000节操,重复查看一个玩家不收费|n|n若未检测出大号则返还800节操
+}
+
 STRING 1782
 // 技能: A09W (眩晕), Researchhotkey (热键 - 学习)
 {
@@ -11358,6 +11370,12 @@ STRING 1908
 // 物品: rma2 (|cFF0066FF魔力源泉合成书|r), Name (名字)
 {
 |cFF0066FF魔力源泉合成书|r
+}
+
+STRING 1909
+// 技能: A0W8 (查看大号), Tip (提示工具 - 普通)
+{
+查看大号(|cffffcc00Q|r)
 }
 
 STRING 1910
@@ -18637,7 +18655,7 @@ STRING 3131
 }
 
 STRING 3132
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 近战升级
 }
@@ -18674,7 +18692,7 @@ STRING 3138
 }
 
 STRING 3139
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 近战升级
 }
@@ -18716,7 +18734,7 @@ STRING 3145
 }
 
 STRING 3146
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 近战升级
 }
@@ -18728,7 +18746,7 @@ STRING 3147
 }
 
 STRING 3148
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 近战升级
 }
@@ -18744,7 +18762,7 @@ STRING 3150
 }
 
 STRING 3151
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 近战升级
 }
@@ -18884,7 +18902,7 @@ STRING 3174
 }
 
 STRING 3175
-// 科技: Robs (Berserker Strength), effect4 (效果 4)
+// 科技: Robs (狂暴力量), effect4 (效果 4)
 {
 rmvx
 }
@@ -20534,7 +20552,7 @@ STRING 3456
 }
 
 STRING 3457
-// 科技: R000 (Berserker Strength), class (升级类型)
+// 科技: R000 (狂暴力量), class (升级类型)
 {
 melee
 }
@@ -42504,12 +42522,6 @@ STRING 7153
 该单位在紫能量范围下，无法攻击。
 }
 
-STRING 7154
-// 技能: A0W8 (baji), Name (名字)
-{
-baji
-}
-
 STRING 7155
 // 技能: A033 (|cFFcc7515恶魔鬼手|r), Tip (提示工具 - 普通)
 {
@@ -43239,12 +43251,6 @@ STRING 7278
 梦魇虚空
 }
 
-STRING 7279
-// 技能: A0W8 (baji), Ubertip (提示工具 - 普通 - 扩展)
-{
-嘟嘟噜~
-}
-
 STRING 7280
 // 物品: I01B (梦魇虚空), Tip (提示工具 - 基础)
 {
@@ -43779,12 +43785,6 @@ STRING 7368
 合成[雄鹰之戒](|cffffcc00X|r)
 }
 
-STRING 7369
-// 技能: A0W8 (baji), Tip (提示工具 - 普通)
-{
-biaji(|cffffcc00Q|r)
-}
-
 STRING 7370
 // 物品: I020 (圣天使的守护合成书), Description (说明)
 {
@@ -43846,7 +43846,7 @@ Q
 }
 
 STRING 7380
-// 技能: A0W8 (baji), EditorSuffix (编辑器后缀)
+// 技能: A0W8 (查看大号), EditorSuffix (编辑器后缀)
 {
 11平台
 }
@@ -47957,7 +47957,7 @@ STRING 8072
 }
 
 STRING 8073
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -47969,7 +47969,7 @@ STRING 8074
 }
 
 STRING 8075
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -47981,7 +47981,7 @@ STRING 8076
 }
 
 STRING 8077
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -50523,13 +50523,13 @@ STRING 8511
 }
 
 STRING 8512
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
 
 STRING 8513
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -52261,7 +52261,7 @@ E
 }
 
 STRING 8802
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -52279,7 +52279,7 @@ STRING 8804
 }
 
 STRING 8805
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -52662,7 +52662,7 @@ STRING 8868
 }
 
 STRING 8869
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -55010,7 +55010,7 @@ STRING 9261
 }
 
 STRING 9262
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -55746,7 +55746,7 @@ STRING 9387
 }
 
 STRING 9388
-// 科技: Robs (Berserker Strength), Name (名字)
+// 科技: Robs (狂暴力量), Name (名字)
 {
 兵力升级
 }
@@ -60839,7 +60839,7 @@ STRING 10258
 }
 
 STRING 10259
-// 技能: A0W8 (baji), Hotkey (热键 - 普通)
+// 技能: A0W8 (查看大号), Hotkey (热键 - 普通)
 {
 Q
 }
@@ -61976,13 +61976,13 @@ STRING 10448
 }
 
 STRING 10449
-// 科技: R000 (Berserker Strength), effect3 (效果 3)
+// 科技: R000 (狂暴力量), effect3 (效果 3)
 {
 rarm
 }
 
 STRING 10450
-// 科技: R000 (Berserker Strength), effect2 (效果 2)
+// 科技: R000 (狂暴力量), effect2 (效果 2)
 {
 ratt
 }
@@ -61994,7 +61994,7 @@ STRING 10451
 }
 
 STRING 10452
-// 科技: R000 (Berserker Strength), effect1 (效果 1)
+// 科技: R000 (狂暴力量), effect1 (效果 1)
 {
 rhpo
 }
