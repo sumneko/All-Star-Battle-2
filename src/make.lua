@@ -46,7 +46,8 @@ local imp_ignore = {
 }
 
 local ext_ignore = {
-	['11record.txt'] = true,
+	['11record.txt']	= true,
+	['war3map.j']		= true,
 }
 
 local obj_txt	= {
