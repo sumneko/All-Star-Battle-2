@@ -4423,7 +4423,6 @@ atp1[4]=TRIGSTR_4585
 atp1[5]=TRIGSTR_4586
 aub1[1]=TRIGSTR_10208
 arar=ReplaceableTextures\CommandButtons\BTNHolyBolt.blp
-aani= 
 arut=TRIGSTR_10209
 aub1[2]=TRIGSTR_10210
 aub1[3]=TRIGSTR_10211
@@ -4444,6 +4443,7 @@ abpx=3
 arpx=3
 arlv=6
 alsk=6
+aani=stand
 [A03M:AIms]
 anam=TRIGSTR_3578
 ansf=TRIGSTR_5510
