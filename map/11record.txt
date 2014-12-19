@@ -11,7 +11,7 @@
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
                 s芙兰朵露z=|Cffff00ff[永远の二妹]|r
                 藤原_妹红_=|cffffcc00[飞上月球☆不死之烟]|r
-              qilunuobaka9999=|cFF66FFFF[没有做好被杀的觉悟的人没有资格杀人 -夜袭·Night Raid]|r   
+             
               
     //天道受1
         我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
@@ -572,7 +572,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=噩梦睡篮丶藤原_妹红_;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=藤原_妹红_;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 
