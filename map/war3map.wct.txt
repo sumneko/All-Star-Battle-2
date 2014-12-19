@@ -3953,9 +3953,6 @@ library unitLibrary initializer Init needs bakaLibrary
             UnitAddAbility(dummy, 'Aloc')
             ShowUnit(dummy, false)
             
-            //设置生命周期
-            UnitApplyTimedLife(dummy, 0, 30)
-            
             //限定攻击目标并计数
                 trigger attack_trg = CreateTrigger()
                 
@@ -3967,6 +3964,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 
                 TriggerRegisterUnitEvent(attack_trg, dummy, EVENT_UNIT_TARGET_IN_RANGE)
                 TriggerRegisterUnitEvent(attack_trg, dummy, EVENT_UNIT_DEATH)
+                TriggerRegisterTimerEvent(attack_trg, 10, false)
                 
                 //英雄下达其他指令时是否停止
                 if hero_stop then
