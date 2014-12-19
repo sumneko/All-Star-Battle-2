@@ -503,7 +503,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=lianhuohuo2333;qilunuobaka9999;沙门丶;s芙兰朵露z;S灭杀_____
+		名字=lianhuohuo2333;qilunuobaka9999;s芙兰朵露z;
 
 		//saber extra
 		皮肤=A0TT
@@ -525,7 +525,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=沙门丶;藤林杏;空心de木偶;艾斯特;CLANNAD_殇;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -572,7 +572,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=噩梦睡篮丶;户川汐音;樱逝夕颜;藤原_妹红_;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;Any_遗失;WorldEdit
+		名字=噩梦睡篮丶藤原_妹红_;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 
@@ -585,7 +585,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=姬神小桃;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//真·爱德华
@@ -621,7 +621,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=我妻桃子;s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//女剑客
@@ -644,7 +644,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=lianhuohuo2333;qilunuobaka9999;S灭杀_____;s芙兰朵露z;WorldEdit
+		名字=lianhuohuo2333;qilunuobaka9999;s芙兰朵露z;WorldEdit
 
 		//祸灵梦
 		皮肤=A0UU
@@ -860,7 +860,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit;Any_遗失
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
 		//萝泽琳蒂
