@@ -545,11 +545,11 @@
 				trigger	= {}
 				trigger.name,		--触发器名字
 				trigger.des,		--触发器描述
-				trigger.int_unknow_1,
+				trigger.type,		--类型(0普通, 1注释)
 				trigger.enable,		--是否允许(0禁用, 1允许)
 				trigger.wct,		--是否是自定义代码(0不是, 1是)
 				trigger.init,		--是否初始化(0是, 1不是)
-				trigger.int_unknow_2,	--未知
+				trigger.run_init,	--地图初始化时运行
 				trigger.category,	--在哪个文件夹下
 				index	= ('zzllllll'):unpack(content, index)
 
@@ -747,11 +747,11 @@
 				for _, trigger in ipairs(chunk.triggers) do
 					table.insert(lines, ('<%s>'):format(trigger.name))
 					table.insert(lines, ('描述=%s'):format(trigger.des:gsub('\r\n', '@@n'):gsub('\t', '@@t')))
-					table.insert(lines, ('未知1=%s'):format(trigger.int_unknow_1))
+					table.insert(lines, ('类型=%s'):format(trigger.type))
 					table.insert(lines, ('允许=%s'):format(trigger.enable))
 					table.insert(lines, ('自定义代码=%s'):format(trigger.wct))
 					table.insert(lines, ('初始化=%s'):format(trigger.init))
-					table.insert(lines, ('未知2=%s'):format(trigger.int_unknow_2))
+					table.insert(lines, ('初始化运行=%s'):format(trigger.run_init))
 					table.insert(lines, ('类别=%s'):format(trigger.category))
 
 					ecas	= trigger.ecas
@@ -1030,11 +1030,11 @@
 						table.insert(pack, ('zzllllll'):pack(
 							trigger.name,
 							trigger['描述'],
-							trigger['未知1'],
+							trigger['类型'],
 							trigger['允许'],
 							trigger['自定义代码'],
 							trigger['初始化'],
-							trigger['未知2'],
+							trigger['初始化运行'],
 							trigger['类别']
 						))
 
