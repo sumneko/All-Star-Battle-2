@@ -2486,9 +2486,9 @@ STRING 417
 }
 
 STRING 418
-// 技能: A0W8 (查看大号), Name (名字)
+// 魔法效果: BIpv (), Buffubertip (工具提示 - 扩展)
 {
-查看大号
+该单位的攻击力提升了。
 }
 
 STRING 419
@@ -4989,7 +4989,7 @@ ratt
 }
 
 STRING 836
-// 科技: Robs (狂暴力量), class (升级类型)
+// 科技: Robs (Berserker Strength), class (升级类型)
 {
 melee
 }
@@ -5055,79 +5055,79 @@ STRING 846
 }
 
 STRING 847
-// 科技: Robs (狂暴力量), effect3 (效果 3)
+// 科技: Robs (Berserker Strength), effect3 (效果 3)
 {
 rarm
 }
 
 STRING 848
-// 科技: Robs (狂暴力量), effect2 (效果 2)
+// 科技: Robs (Berserker Strength), effect2 (效果 2)
 {
 ratt
 }
 
 STRING 849
-// 科技: Robs (狂暴力量), effect1 (效果 1)
+// 科技: Robs (Berserker Strength), effect1 (效果 1)
 {
 rhpo
 }
 
 STRING 850
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(1级)
 }
 
 STRING 851
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(2级)
 }
 
 STRING 852
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(3级)
 }
 
 STRING 853
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(4级)
 }
 
 STRING 854
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(5级)
 }
 
 STRING 855
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(6级)
 }
 
 STRING 856
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(7级)
 }
 
 STRING 857
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(8级)
 }
 
 STRING 858
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(9级)
 }
 
 STRING 859
-// 科技: R000 (狂暴力量), Name (名字)
+// 科技: R000 (Berserker Strength), Name (名字)
 {
 关卡威力(10级)
 }
@@ -10606,9 +10606,9 @@ E
 }
 
 STRING 1781
-// 技能: A0W8 (查看大号), Ubertip (提示工具 - 普通 - 扩展)
+// 技能: A0NY (血咒符文), Name (名字)
 {
-查看目标玩家的大号|n|n|cffffcc00消耗1000节操,重复查看一个玩家不收费|n|n若未检测出大号则返还800节操
+血咒符文
 }
 
 STRING 1782
@@ -11373,9 +11373,9 @@ STRING 1908
 }
 
 STRING 1909
-// 技能: A0W8 (查看大号), Tip (提示工具 - 普通)
+// 技能: A0NZ (血咒符文), Name (名字)
 {
-查看大号(|cffffcc00Q|r)
+血咒符文
 }
 
 STRING 1910
@@ -11388,6 +11388,24 @@ STRING 1911
 // 技能: A06I (|cFFff7500野性狂奔|r), Unhotkey (热键 -关闭)
 {
 R
+}
+
+STRING 1912
+// 物品: modt (吸血面罩), Ubertip (提示工具 - 扩展)
+{
+提高5点全属性|n|n|cffffaa00吸血：|r提高20%(近战)/15%(远程)攻击吸血|n|n|cff757575这么有威严（好丑）的面具大小姐不来一个吗0v0
+}
+
+STRING 1913
+// 物品: modt (吸血面罩), Description (说明)
+{
+提高5点全属性|n|n|cffffaa00吸血：|r提高20%(近战)/15%(远程)攻击吸血|n|n|cff757575这么有威严（好丑）的面具大小姐不来一个吗0v0
+}
+
+STRING 1914
+// 物品: I002 (血红战斧), Ubertip (提示工具 - 扩展)
+{
+提高75点攻击力|n提高30点力量|n提高5点敏捷|n提高5点智力|n提高10.0/s的生命恢复|n|n|cffffaa00吸血：|r提高20%(近战)/15%(远程)攻击吸血|n|n|cffaa2525鲜血飞斧：|r|n失去75点攻击力并每秒损失50生命值将血红战斧在身边旋转，每次切割造成100点伤害并吸血15点|n|n|cff757575能看到折射出诡异的血色光芒
 }
 
 STRING 1915
@@ -18278,12 +18296,12 @@ STRING 3065
 
 STRING 3066
 {
-已更换为|cffffcc00 2 |r级|cffff1500疯狂|r符文
+已更换为|cffffcc00 2 |r级|cffff1500血咒|r符文
 }
 
 STRING 3067
 {
-|cffff1500疯狂|r符文已升级到|cffffcc00 2 |r级
+|cffff1500血咒|r符文已升级到|cffffcc00 2 |r级
 }
 
 STRING 3068
@@ -18655,7 +18673,7 @@ STRING 3131
 }
 
 STRING 3132
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 近战升级
 }
@@ -18692,7 +18710,7 @@ STRING 3138
 }
 
 STRING 3139
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 近战升级
 }
@@ -18734,7 +18752,7 @@ STRING 3145
 }
 
 STRING 3146
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 近战升级
 }
@@ -18746,7 +18764,7 @@ STRING 3147
 }
 
 STRING 3148
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 近战升级
 }
@@ -18762,7 +18780,7 @@ STRING 3150
 }
 
 STRING 3151
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 近战升级
 }
@@ -18902,7 +18920,7 @@ STRING 3174
 }
 
 STRING 3175
-// 科技: Robs (狂暴力量), effect4 (效果 4)
+// 科技: Robs (Berserker Strength), effect4 (效果 4)
 {
 rmvx
 }
@@ -20552,7 +20570,7 @@ STRING 3456
 }
 
 STRING 3457
-// 科技: R000 (狂暴力量), class (升级类型)
+// 科技: R000 (Berserker Strength), class (升级类型)
 {
 melee
 }
@@ -21527,17 +21545,17 @@ STRING 3620
 
 STRING 3621
 {
-已购买|cffffcc00 1 |r级|cffff1500疯狂|r符文
+已购买|cffffcc00 1 |r级|cffff1500血咒|r符文
 }
 
 STRING 3622
 {
-已更换为|cffffcc00 1 |r级|cffff1500疯狂|r符文
+已更换为|cffffcc00 1 |r级|cffff1500血咒|r符文
 }
 
 STRING 3623
 {
-你已拥有|cffffff00顶级|r的|cffff1500疯狂|r符文
+你已拥有|cffffff00顶级|r的|cffff1500血咒|r符文
 }
 
 STRING 3624
@@ -23252,30 +23270,6 @@ STRING 3909
 // 物品: I02Z (战神铠甲合成书), Description (说明)
 {
 提高15点力量|n提高10点敏捷|n提高5点智力|n提高400点生命值|n提高12.0/s的生命恢复|n提高10点护甲|n|n|cffaa5000霸体抗击|r|n|cff509925守护护盾|r|n|n|cff99aabb该装备由坚韧护甲改造|r|n坚韧护甲(10000)|n卷轴(5000)|n总价：15000|n|n|cffff0000装备唯一|n战神铠甲与坚韧护甲只能同时携带2件
-}
-
-STRING 3910
-// 物品: I04Z (|cFFFFCC00魔剑|r), Ubertip (提示工具 - 扩展)
-{
-提高175点攻击力|n提高25点全属性|n提高25%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血25%|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
-}
-
-STRING 3911
-// 物品: I04Z (|cFFFFCC00魔剑|r), Description (说明)
-{
-提高175点攻击力|n提高25点全属性|n提高25%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血25%|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
-}
-
-STRING 3912
-// 物品: I050 (|cFFFFCC00魔剑|r(远程)), Ubertip (提示工具 - 扩展)
-{
-提高180点攻击力|n提高20点全属性|n提高20%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血20%|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
-}
-
-STRING 3913
-// 物品: I050 (|cFFFFCC00魔剑|r(远程)), Description (说明)
-{
-提高180点攻击力|n提高20点全属性|n提高20%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血20%|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
 }
 
 STRING 3914
@@ -27468,6 +27462,12 @@ STRING 4614
 投出一道跳跃的闪电每次跳跃都会减少10%的伤害，500范围内有目标情况下跳跃10次|cFF00CCFF伤害：第一个目标50×技能等级+敏捷×3（混乱）\初始技能CD：17秒 每升一级+1秒\施法距离700|r|n|cFF00FF33施法距离：700|r|n|cFF3366FF初始技能CD：14秒，每级增加1秒|r
 }
 
+STRING 4615
+// 物品: I002 (血红战斧), Description (说明)
+{
+提高75点攻击力|n提高30点力量|n提高5点敏捷|n提高5点智力|n提高10.0/s的生命恢复|n|n|cffffaa00吸血：|r提高20%(近战)/15%(远程)攻击吸血|n|n|cffaa2525鲜血飞斧：|r|n失去75点攻击力并每秒损失50生命值将血红战斧在身边旋转，每次切割造成100点伤害并吸血15点|n|n|cff757575能看到折射出诡异的血色光芒
+}
+
 STRING 4616
 // 技能: A07A (天罚闪电), Ubertip (提示工具 - 普通 - 扩展)
 {
@@ -30457,12 +30457,6 @@ STRING 5113
 |cFFFF0033火雾瞬斩|r等级3（R）
 }
 
-STRING 5114
-// 物品: modt (吸血面罩), Ubertip (提示工具 - 扩展)
-{
-提高5点全属性|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|n|cff757575这么有威严（好丑）的面具大小姐不来一个吗0v0
-}
-
 STRING 5115
 // 技能: A0HD (二进制护甲（负）), EditorSuffix (编辑器后缀)
 {
@@ -31508,12 +31502,6 @@ STRING 5289
 亚空穴特效
 }
 
-STRING 5290
-// 物品: modt (吸血面罩), Description (说明)
-{
-提高5点全属性|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|n|cff757575这么有威严（好丑）的面具大小姐不来一个吗0v0
-}
-
 STRING 5291
 // 技能: A0U7 (皮肤), EditorSuffix (编辑器后缀)
 {
@@ -31868,18 +31856,6 @@ STRING 5349
 提高75点攻击力|n提高5点力量|n提高25点敏捷|n提高5点智力|n提高10%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|cffff2550恶魔屠戮：|r|n在10秒内提高75点攻击力|n|cffaabbff间隔时间：|r45秒|n|n|cffaa50ff透甲魔刃：|r|n攻击使英雄/非英雄3秒降低40%/10点护甲(只能由普通攻击触发)|n|n|cff757575嗜血的魔刃，将盔甲破坏，将血液吮吸|r|n|n鱼叉(1700)|n亡灵之刃(2500)|n吸血面罩(3000)|n卷轴(2800)|n总价：10000
 }
 
-STRING 5350
-// 物品: I01F (夜魔血刃), Ubertip (提示工具 - 扩展)
-{
-提高75点攻击力|n提高5点力量|n提高25点敏捷|n提高5点智力|n提高10%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|cffff2550恶魔屠戮：|r|n在10秒内提高75点攻击力|n|cffaabbff间隔时间：|r45秒|n|n|cffaa50ff透甲魔刃：|r|n攻击使英雄/非英雄3秒降低40%/10点护甲(只能由普通攻击触发)|n|n|cff757575嗜血的魔刃，将盔甲破坏，将血液吮吸
-}
-
-STRING 5351
-// 物品: I01F (夜魔血刃), Description (说明)
-{
-提高75点攻击力|n提高5点力量|n提高25点敏捷|n提高5点智力|n提高10%闪避率|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|cffff2550恶魔屠戮：|r|n在10秒内提高75点攻击力|n|cffaabbff间隔时间：|r45秒|n|n|cffaa50ff透甲魔刃：|r|n攻击使英雄/非英雄3秒降低40%/10点护甲(只能由普通攻击触发)|n|n|cff757575嗜血的魔刃，将盔甲破坏，将血液吮吸
-}
-
 STRING 5352
 // 技能: A04O (|cFFFF0033瞬步斩|r), Tip (提示工具 - 普通)
 {
@@ -32178,6 +32154,12 @@ STRING 5401
 未蓄满
 }
 
+STRING 5402
+// 物品: I01F (夜魔血刃), Ubertip (提示工具 - 扩展)
+{
+提高75点攻击力|n提高5点力量|n提高25点敏捷|n提高5点智力|n提高10%闪避率|n|n|cffffaa00吸血：|r提高20%(近战)/15%(远程)攻击吸血|n|cffff2550恶魔屠戮：|r|n在10秒内提高75点攻击力|n|cffaabbff间隔时间：|r45秒|n|n|cffaa50ff透甲魔刃：|r|n攻击使英雄/非英雄3秒降低40%/10点护甲(只能由普通攻击触发)|n|n|cff757575嗜血的魔刃，将盔甲破坏，将血液吮吸
+}
+
 STRING 5403
 // 技能: A0SC (|cffff6600阴阳玉|r), Researchubertip (提示工具 - 学习 - 扩展)
 {
@@ -32201,6 +32183,12 @@ STRING 5406
 // 技能: A058 (真实视野), Tip (提示工具 - 普通)
 {
 真实视野
+}
+
+STRING 5407
+// 物品: I01F (夜魔血刃), Description (说明)
+{
+提高75点攻击力|n提高5点力量|n提高25点敏捷|n提高5点智力|n提高10%闪避率|n|n|cffffaa00吸血：|r提高20%(近战)/15%(远程)攻击吸血|n|cffff2550恶魔屠戮：|r|n在10秒内提高75点攻击力|n|cffaabbff间隔时间：|r45秒|n|n|cffaa50ff透甲魔刃：|r|n攻击使英雄/非英雄3秒降低40%/10点护甲(只能由普通攻击触发)|n|n|cff757575嗜血的魔刃，将盔甲破坏，将血液吮吸
 }
 
 STRING 5408
@@ -33009,12 +32997,6 @@ STRING 5542
 基地塔
 }
 
-STRING 5543
-// 技能: A0NY (疯狂符文), Name (名字)
-{
-疯狂符文
-}
-
 STRING 5544
 // 技能: A0ME (|cff00ff00奇迹|r), Ubertip (提示工具 - 普通 - 扩展)
 {
@@ -33517,12 +33499,6 @@ STRING 5628
 |cFF0075ff水|r|cffff2525火|r配置（Q）
 }
 
-STRING 5629
-// 物品: I002 (血红战斧), Ubertip (提示工具 - 扩展)
-{
-提高75点攻击力|n提高30点力量|n提高5点敏捷|n提高5点智力|n提高10.0/s的生命恢复|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|n|cffaa2525鲜血飞斧：|r|n失去75点攻击力并每秒损失50生命值将血红战斧在身边旋转，每次切割造成100点伤害并吸血15点|n|n|cff757575能看到折射出诡异的血色光芒
-}
-
 STRING 5630
 // 物品: I00A (万里靴合成书), Tip (提示工具 - 基础)
 {
@@ -33809,12 +33785,6 @@ STRING 5677
 // 技能: A04Z (铁矢), EditorSuffix (编辑器后缀)
 {
 多次释放
-}
-
-STRING 5678
-// 物品: I002 (血红战斧), Description (说明)
-{
-提高75点攻击力|n提高30点力量|n提高5点敏捷|n提高5点智力|n提高10.0/s的生命恢复|n|n|cffffaa00吸血：|r物理攻击吸血20%(近战)/15%(远程)|n|n|cffaa2525鲜血飞斧：|r|n失去75点攻击力并每秒损失50生命值将血红战斧在身边旋转，每次切割造成100点伤害并吸血15点|n|n|cff757575能看到折射出诡异的血色光芒
 }
 
 STRING 5679
@@ -35071,12 +35041,6 @@ STRING 5887
  (火焰法球)
 }
 
-STRING 5888
-// 技能: A0NZ (疯狂符文), Name (名字)
-{
-疯狂符文
-}
-
 STRING 5889
 // 技能: A0MT (BUFF), Name (名字)
 {
@@ -35180,7 +35144,7 @@ STRING 5905
 }
 
 STRING 5906
-// 技能: A0NY (疯狂符文), EditorSuffix (编辑器后缀)
+// 技能: A0NY (血咒符文), EditorSuffix (编辑器后缀)
 {
 1级
 }
@@ -36537,7 +36501,7 @@ STRING 6131
 }
 
 STRING 6132
-// 技能: A0NZ (疯狂符文), EditorSuffix (编辑器后缀)
+// 技能: A0NZ (血咒符文), EditorSuffix (编辑器后缀)
 {
 2级
 }
@@ -41098,6 +41062,12 @@ STRING 6894
 诅咒一个指向的单位，使其|cffffaa00降低20%攻击速度和移动速度|r并每秒受到伤害，这个伤害每持续|cffffff001|r秒就会提高|cffff505010%|r，诅咒持续|cffffff005|r秒，但目标每|cffffff00使用技能或者物品|r就会将持续时间|cffffff00刷新为5秒|r，若诅咒持续累计达到|cffffff0015|r秒会立即停止并爆发一股能量，对|cffffff00500|r范围内敌人造成伤害并使目标|cff00ffff眩晕2秒|r|n|n|cffaa50ff初始伤害：8/11/14/17/20+智力×0.1（每秒）|n爆发伤害：30/60/90/120/150+智力×1|n|n|cff757575施法距离：600|n间隔时间：16秒
 }
 
+STRING 6895
+// 物品: I04Z (|cFFFFCC00魔剑|r), Ubertip (提示工具 - 扩展)
+{
+提高175点攻击力|n提高25点全属性|n提高25%闪避率|n|n|cffffaa00吸血：|r提高25%攻击吸血|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
+}
+
 STRING 6896
 // 魔法效果: B00W (), Bufftip (工具提示)
 {
@@ -41171,6 +41141,24 @@ STRING 6909
 // 物品: I047 (查询获得的符文), Tip (提示工具 - 基础)
 {
 查询获得的符文(|cffffcc00Z|r)
+}
+
+STRING 6910
+// 物品: I04Z (|cFFFFCC00魔剑|r), Description (说明)
+{
+提高175点攻击力|n提高25点全属性|n提高25%闪避率|n|n|cffffaa00吸血：|r提高25%攻击吸血|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
+}
+
+STRING 6911
+// 物品: I050 (|cFFFFCC00魔剑|r(远程)), Ubertip (提示工具 - 扩展)
+{
+提高180点攻击力|n提高20点全属性|n提高20%闪避率|n|n|cffffaa00吸血：|r提高20%攻击吸血|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
+}
+
+STRING 6912
+// 物品: I050 (|cFFFFCC00魔剑|r(远程)), Description (说明)
+{
+提高180点攻击力|n提高20点全属性|n提高20%闪避率|n|n|cffffaa00吸血：|r提高20%攻击吸血|n|n|cffaa50ff荒刃：|r|n攻击使英雄/非英雄3秒降低50%/10点护甲(只能由普通攻击触发)|n|cffaa50ff虚灵：|r|n攻击英雄额外造成目标全属性10%的物理伤害|n|n|cff757575所罗门之剑，注入魔力的挥动下亦可唤来漆黑的闪电，真实和黑暗都可贯穿
 }
 
 STRING 6917
@@ -42522,6 +42510,12 @@ STRING 7153
 该单位在紫能量范围下，无法攻击。
 }
 
+STRING 7154
+// 技能: A0W8 (baji), Name (名字)
+{
+baji
+}
+
 STRING 7155
 // 技能: A033 (|cFFcc7515恶魔鬼手|r), Tip (提示工具 - 普通)
 {
@@ -43251,6 +43245,12 @@ STRING 7278
 梦魇虚空
 }
 
+STRING 7279
+// 技能: A0W8 (baji), Ubertip (提示工具 - 普通 - 扩展)
+{
+嘟嘟噜~
+}
+
 STRING 7280
 // 物品: I01B (梦魇虚空), Tip (提示工具 - 基础)
 {
@@ -43785,6 +43785,12 @@ STRING 7368
 合成[雄鹰之戒](|cffffcc00X|r)
 }
 
+STRING 7369
+// 技能: A0W8 (baji), Tip (提示工具 - 普通)
+{
+biaji(|cffffcc00Q|r)
+}
+
 STRING 7370
 // 物品: I020 (圣天使的守护合成书), Description (说明)
 {
@@ -43846,7 +43852,7 @@ Q
 }
 
 STRING 7380
-// 技能: A0W8 (查看大号), EditorSuffix (编辑器后缀)
+// 技能: A0W8 (baji), EditorSuffix (编辑器后缀)
 {
 11平台
 }
@@ -43933,12 +43939,6 @@ STRING 7394
 // 魔法效果: BIpv (), Bufftip (工具提示)
 {
 血魇之渠
-}
-
-STRING 7395
-// 魔法效果: BIpv (), Buffubertip (工具提示 - 扩展)
-{
-该英雄使用了血刃·血魇之渠，因此其攻击力得到了增加，而且攻击的同时也能增加自己的生命值。
 }
 
 STRING 7396
@@ -47957,7 +47957,7 @@ STRING 8072
 }
 
 STRING 8073
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -47969,7 +47969,7 @@ STRING 8074
 }
 
 STRING 8075
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -47981,7 +47981,7 @@ STRING 8076
 }
 
 STRING 8077
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -50523,13 +50523,13 @@ STRING 8511
 }
 
 STRING 8512
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
 
 STRING 8513
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -52261,7 +52261,7 @@ E
 }
 
 STRING 8802
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -52279,7 +52279,7 @@ STRING 8804
 }
 
 STRING 8805
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -52662,7 +52662,7 @@ STRING 8868
 }
 
 STRING 8869
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -55010,7 +55010,7 @@ STRING 9261
 }
 
 STRING 9262
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -55746,7 +55746,7 @@ STRING 9387
 }
 
 STRING 9388
-// 科技: Robs (狂暴力量), Name (名字)
+// 科技: Robs (Berserker Strength), Name (名字)
 {
 兵力升级
 }
@@ -60839,7 +60839,7 @@ STRING 10258
 }
 
 STRING 10259
-// 技能: A0W8 (查看大号), Hotkey (热键 - 普通)
+// 技能: A0W8 (baji), Hotkey (热键 - 普通)
 {
 Q
 }
@@ -61976,13 +61976,13 @@ STRING 10448
 }
 
 STRING 10449
-// 科技: R000 (狂暴力量), effect3 (效果 3)
+// 科技: R000 (Berserker Strength), effect3 (效果 3)
 {
 rarm
 }
 
 STRING 10450
-// 科技: R000 (狂暴力量), effect2 (效果 2)
+// 科技: R000 (Berserker Strength), effect2 (效果 2)
 {
 ratt
 }
@@ -61994,7 +61994,7 @@ STRING 10451
 }
 
 STRING 10452
-// 科技: R000 (狂暴力量), effect1 (效果 1)
+// 科技: R000 (Berserker Strength), effect1 (效果 1)
 {
 rhpo
 }

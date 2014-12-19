@@ -42,10 +42,13 @@ ftip=TRIGSTR_2827
 fube=TRIGSTR_4851
 [BIpv]
 ftip=TRIGSTR_7394
-fube=TRIGSTR_7395
+fube=TRIGSTR_418
 fart=BTNxueren.blp
-ftat=Abilities\Spells\Items\VampiricPotion\VampPotionCaster.mdl
+ftat=SharedModels\Glow1_red.mdl
 ftac=3
+fta0=weapon
+fta2=weapon
+fta1=weapon
 [XHfs]
 feat=
 [BEim]

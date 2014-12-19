@@ -8426,7 +8426,7 @@ uani=third
 ulos=1
 [n011:ngme]
 unam=TRIGSTR_5886
-usei=I044,I046,I047,I00Y
+usei=I044,I046,I04D,I047,I00Y
 upat=
 ushb=
 uubs=OSMA
