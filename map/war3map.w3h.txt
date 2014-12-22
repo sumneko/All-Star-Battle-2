@@ -78,9 +78,9 @@ fart=ReplaceableTextures\CommandButtons\BTNTornado.blp
 ftip=冲锋号
 ftat=Abilities\Spells\Orc\WarDrums\DrumsCasterHeal.mdl
 [BPSE]
-fnsf= (一律使用该BUFF)
+fnsf=(一律使用该BUFF)
 [BSTN]
-fnsf= (不要使用该BUFF)
+fnsf=(不要使用该BUFF)
 [BNms]
 ftip=月耀环盾
 [CHUNK]
@@ -631,7 +631,7 @@ ftip=移动不能
 frac=nightelf
 fta0=chest
 ftac=1
-fnsf= (水弹)
+fnsf=(水弹)
 [B015:Bssd]
 ftip=烈火
 fube=火焰法球的烈火效果附带火焰伤害
@@ -658,7 +658,7 @@ ftat=Abilities\Spells\Undead\Possession\PossessionCaster.mdl
 fart=ReplaceableTextures\CommandButtons\BTNUnsummonBuilding.blp
 ftip=黑暗诅咒
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftac=3
 fta0=origin
 fta1=origin
@@ -669,7 +669,7 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNTheBlackArrow.blp
 ftip=水银剧毒
 frac=nightelf
-fnsf= (光环)
+fnsf=(光环)
 [B029:Bspo]
 ftip=中毒
 fube=毒液法球的作用下该单位中毒了。
@@ -712,7 +712,7 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNSlow.blp
 ftip=审判枷锁
 frac=nightelf
-fnsf= (光轮)
+fnsf=(光轮)
 [B02F:BNdo]
 ftip=无法使用物品和技能
 fube=该单位不能使用任何技能和物品。
@@ -730,7 +730,7 @@ fube=该单位降低了攻击速度和移动速度。
 fart=gppx.blp
 ftip=减速
 frac=nightelf
-fnsf= (高抛咆哮)
+fnsf=(高抛咆哮)
 ftat=
 [B00C:Basl]
 fube=该单位受到夜魔血刃效果，护甲值降低了。
@@ -738,7 +738,7 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNImprovedUnholyArmor.blp
 ftip=透甲
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B02H:BNht]
 frac=orc
 ftip=狼神吼叫
@@ -750,7 +750,7 @@ fube=该单位受到赫萝的伤害会被吸血
 fart=xuesezhaohen.blp
 ftip=裂伤
 frac=nightelf
-fnsf= (血色爪痕)
+fnsf=(血色爪痕)
 ftat=
 [B02J:BIcb]
 ftip=攻城坦克
@@ -761,20 +761,20 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNCyclone.blp
 ftip=|cff00ff00风之力|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B02L:Basl]
 fube=该单位受到攻击会闪避。
 ftat=
 fart=TSQ3.blp
 ftip=|cff00ff00羽化|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B02M:Basl]
 fube=该单位移动速度降低了并持续受到伤害，如果使用技能这个效果会被延长。
 fart=NECQ.blp
 ftip=幽冥诅咒
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
 [B02O:BPSE]
 ftip=硬直
@@ -808,7 +808,7 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNMagicImmunity.blp
 ftip=黑暗束缚
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B02T:Bslo]
 ftip=审判枷锁
 fube=该单位受到了审判枷锁的束缚
@@ -819,7 +819,7 @@ fube=该单位处于流血状态，持续受到伤害并且攻击速度和移动
 fart=gsynE.blp
 ftip=流血
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
 [B02V:Basl]
 fube=由乃现在可是杀人不眨眼的哦！
@@ -827,7 +827,7 @@ ftat=
 fart=gsynKH.blp
 ftip=|cFFff00aa狂化|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B02W:Basl]
 fube=该单位被减速了。
 ftat=
@@ -841,7 +841,7 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
 ftip=无法移动
 frac=nightelf
-fnsf= (空翻）
+fnsf=(空翻）
 [B02Y:BEer]
 ftip=虹之矢
 fube=正在蓄力中
@@ -882,14 +882,14 @@ ftat=
 fart=xiaoyuanR.blp
 ftip=|cffff0000净化之雨|r
 frac=nightelf
-fnsf= (BUFF)敌方
+fnsf=(BUFF)敌方
 [B034:Basl]
 fube=该单位不会受到致死伤害
 ftat=
 fart=xiaoyuanR.blp
 ftip=|cff00ff00净化之雨|r
 frac=nightelf
-fnsf= (BUFF)己方
+fnsf=(BUFF)己方
 [B035:Broa]
 ftat=Abilities\Spells\Human\InnerFire\InnerFireTarget.mdl,Abilities\Spells\Items\AIda\AIdaTarget.mdl
 ftac=2
@@ -904,14 +904,14 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNInnerFire.blp
 ftip=|cff00ff00羽化颂歌|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B009:Basl]
 fube=该单位的移动速度提高了。
 ftat=
 fart=shengshitou.blp
 ftip=|cff00ff00轻盈|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B00E:Bcri]
 ftip=光之封印
 fart=shengshizigong.blp
@@ -926,20 +926,20 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNHeartOfAszune.blp
 ftip=|cff00ff00紫月|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B037:Basl]
 fube=该单位无法移动。
 ftat=
 fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
 ftip=无法移动
 frac=nightelf
-fnsf= (血哮）
+fnsf=(血哮）
 [B038:Basl]
 fube=该单位移动速度降低了并持续受到伤害。
 fart=NECW.blp
 ftip=污染
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
 [B039:BIcb]
 ftip=万用法球
@@ -949,28 +949,28 @@ fube=该单位受到了火焰伤害。
 fart=ReplaceableTextures\CommandButtons\BTNOrbOfFire.blp
 ftip=火焰法球
 frac=nightelf
-fnsf= (新的)
+fnsf=(新的)
 ftat=
 [B03B:Basl]
 fube=该单位中毒了，降低了移动速度并持续受到伤害。
 fart=ReplaceableTextures\CommandButtons\BTNOrbOfVenom.blp
 ftip=毒液法球
 frac=nightelf
-fnsf= (新的)
+fnsf=(新的)
 ftat=
 [B03C:Basl]
 fube=该单位被冻伤了，降低了攻击速度和移动速度。
 fart=ReplaceableTextures\CommandButtons\BTNOrbOfFrost.blp
 ftip=霜冻法球
 frac=nightelf
-fnsf= (新的)
+fnsf=(新的)
 ftat=
 [B03D:Basl]
 fube=该单位受到光芒的伤害和减速。
 fart=ReplaceableTextures\CommandButtons\BTNSearingArrows.blp
 ftip=光芒法球
 frac=nightelf
-fnsf= (新的)
+fnsf=(新的)
 ftat=
 [B03E:Basl]
 fube=该单位无法移动。
@@ -1000,7 +1000,7 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNRingLionHead.blp
 ftip=|cff00ff00鹰眼|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B03I:Basl]
 fube=|cffffaa50主动技能|r|n|cff00ff00[奇迹]|r立即恢复损失生命值的25%，间隔时间180秒|n|cff50aaff被动效果|r|n提高10%生命恢复效果|n每600点生命上限提高1.0/s魔法恢复|n每250点魔法上限提高1.0/s生命恢复
 ftat=
@@ -1020,7 +1020,7 @@ fube=该单位中毒了，降低了移动速度并持续受到伤害。
 fart=ReplaceableTextures\CommandButtons\BTNCripple.blp
 ftip=狂犬病
 frac=orc
-fnsf= (新的)
+fnsf=(新的)
 ftat=Abilities\Weapons\PoisonSting\PoisonStingTarget.mdl,Abilities\Spells\Other\AcidBomb\BottleImpact.mdl,Abilities\Spells\NightElf\CorrosiveBreath\CorrosiveBreathMissile.mdl
 ftac=3
 fta2=chest
@@ -1040,7 +1040,7 @@ fube=该单位的攻击速度和移动速度被降低了。
 fart=kuangsanD.blp
 ftip=食时之城
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
 [B03O:Basl]
 fube=该单位的攻击速度和移动速度提高了。
@@ -1048,7 +1048,7 @@ ftat=
 fart=cikew.blp
 ftip=|cff00ff00暗影步|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B03P:Bslo]
 fart=ReplaceableTextures\CommandButtons\BTNMonsoon.blp
 ftat=war3mapImported\A2_leidian.mdx
@@ -1062,27 +1062,27 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNManaFlare.blp
 ftip=|cff00ff00电磁力牵引|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B03R:Basl]
 fube=如果连续使用电磁力牵引，会消耗额外的魔法值。
 ftat=
 fart=ReplaceableTextures\CommandButtons\BTNManaFlareOff.blp
 ftip=电磁力牵引（过载中）
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B03S:Basl]
 fube=
 ftat=
 fart=ReplaceableTextures\CommandButtons\BTNTalisman.blp
 ftip=|cff00ff00重力移动|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 [B03T:Basl]
 fube=该单位移动速度降低了，如果此时受到飞焰炎弹的攻击还会受到眩晕
 fart=gouzhua.blp
 ftip=真红
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
 [B02N:Basl]
 fube=该单位无法移动。
@@ -1090,20 +1090,20 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
 ftip=无法移动
 frac=nightelf
-fnsf= (立体机动）
+fnsf=(立体机动）
 [B03U:Basl]
 fube=该单位的攻击速度和移动速度降低了。
 ftat=
 fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
 ftip=减速
 frac=nightelf
-fnsf= (立体机动）
+fnsf=(立体机动）
 [B03V:Basl]
 fube=失去冷静的三笠所有技能伤害增加了，但也受到额外伤害。
 fart=gsynE.blp
 ftip=失去冷静
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
 [B03W:BHad]
 ftip=绫叁紫月
@@ -1164,5 +1164,5 @@ fube=该单位提高了护甲、生命恢复速度和魔法恢复速度
 fart=ej.blp
 ftip=|cff00ff00战神祝福|r
 frac=nightelf
-fnsf= (BUFF)
+fnsf=(BUFF)
 ftat=
