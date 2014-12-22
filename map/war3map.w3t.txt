@@ -2908,3 +2908,14 @@ igol=13000
 iico=button\XSD.blp
 icid=A0UE
 iusa=1
+[I053:modt]
+istr=1
+igol=10000
+iabi=A0WD,A0WC,A0WB
+utip=TRIGSTR_4805
+utub=TRIGSTR_5074
+ides=TRIGSTR_5114
+unam=TRIGSTR_5296
+iico=juguchijian.blp
+icid=A0WD
+iusa=1
