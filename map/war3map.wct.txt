@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=414
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -11005,11 +11005,7 @@ endlibrary
             --处理游戏界面
             update('war3map.wts',
                 function(txt)
-                    if ver_name_id then
-                        ver_name = txt:match(([[STRING %d.-{.-(%%d%%.%%d.).-}]]):format(ver_name_id))
-                    else
-                        ver_name = content:match([[SetMapName%( ".-(%d%.%d.).-" %)]])
-                    end
+                    ver_name = txt:match(([[STRING %d.-{.-(%%d%%.%%d.).-}]]):format(ver_name_id))
                     
                     txt = txt:gsub(([[(STRING %d%%D-{%%c+)(.-)(%%c+})]]):format(name_id), ([[%%1%s%%3]]):format("|cff00ff00全明星战役|cffffff00" .. ver_name))
                     
