@@ -387,13 +387,7 @@ local function main()
 							else
 								local path = full_path:string():sub(path_len)
 								local yd_path = ydwe_dir / path
-								local f1 = io.open(full_path:string(), 'rb')
-								local con1 = f1:read('*a')
-								local f2 = io.open(yd_path:string(), 'rb')
-								local con2 = f2:read('*a')
-								f1:close()
-								f2:close()
-								if con1 ~= con2 then
+								if io.load(full_path) ~= io.load(yd_path) then
 									fs.copy_file(full_path, yd_path, true)
 									print('[¸üÐÂ]: ' .. yd_path:string())
 								end
