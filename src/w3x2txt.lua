@@ -188,7 +188,7 @@
 				data.value, index	= data_type_format[data.type]:unpack(content, index)
 				data.value	= value2txt(data.value, data.id)
 				if data.type == 3 then
-					data.value	= data.value:gsub('\r\n', '@@n'):gsub('\t', '@@t')
+					data.value	= data.value:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t')
 				end
 				index	= index + 4	--忽略掉后面4位的标识符
 
@@ -723,7 +723,7 @@
 							table.insert(lines, ('%s[%d]%s%s'):format(
 								('\t'):rep(tab),
 								arg.type,
-								arg.value:gsub('\r\n', '@@n'):gsub('\t', '@@t'),
+								arg.value:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'),
 								(arg.insert_index == 1 or arg.insert_call == 1) and '*' or ''
 							))
 						end
@@ -746,7 +746,7 @@
 				table.insert(lines, '【Trigger】')
 				for _, trigger in ipairs(chunk.triggers) do
 					table.insert(lines, ('<%s>'):format(trigger.name))
-					table.insert(lines, ('描述=%s'):format(trigger.des:gsub('\r\n', '@@n'):gsub('\t', '@@t')))
+					table.insert(lines, ('描述=%s'):format(trigger.des:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t')))
 					table.insert(lines, ('类型=%s'):format(trigger.type))
 					table.insert(lines, ('允许=%s'):format(trigger.enable))
 					table.insert(lines, ('自定义代码=%s'):format(trigger.wct))
@@ -1436,8 +1436,8 @@
 			push '编辑器版本=%s'	(chunk.editor_ver)
 			push '地图名称=%s'	(chunk.map_name)
 			push '作者名字=%s'	(chunk.author)
-			push '地图描述=%s'	(chunk.des:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
-			push '推荐玩家=%s'	(chunk.player_rec:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
+			push '地图描述=%s'	(chunk.des:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
+			push '推荐玩家=%s'	(chunk.player_rec:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
 			push '镜头范围=%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f'	(
 				chunk.camera_bound_1,
 				chunk.camera_bound_2,
@@ -1484,16 +1484,16 @@
 			
 			push '载入图序号=%d'		(chunk.loading_screen_id)
 			push '自定义载入图=%s'	(chunk.loading_screen_path)
-			push '载入界面文本=%s'	(chunk.loading_screen_text:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
-			push '载入界面标题=%s'	(chunk.loading_screen_title:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
-			push '载入界面子标题=%s'	(chunk.loading_screen_subtitle:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
+			push '载入界面文本=%s'	(chunk.loading_screen_text:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
+			push '载入界面标题=%s'	(chunk.loading_screen_title:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
+			push '载入界面子标题=%s'	(chunk.loading_screen_subtitle:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
 
 			push '使用游戏数据设置=%d'	(chunk.game_data_set)
 
 			push '自定义序幕图=%s'	(chunk.prologue_screen_path)
-			push '序幕界面文本=%s'	(chunk.prologue_screen_text:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
-			push '序幕界面标题=%s'	(chunk.prologue_screen_title:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
-			push '序幕界面子标题=%s'	(chunk.prologue_screen_subtitle:gsub('\r\n', '@@n'):gsub('\t', '@@t'))
+			push '序幕界面文本=%s'	(chunk.prologue_screen_text:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
+			push '序幕界面标题=%s'	(chunk.prologue_screen_title:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
+			push '序幕界面子标题=%s'	(chunk.prologue_screen_subtitle:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'))
 
 			push '地形迷雾=%d'		(chunk.terrain_fog)
 			push '迷雾z轴起点=%.4f'	(chunk.fog_start_z)
@@ -1805,7 +1805,7 @@
 			return s:gsub('TRIGSTR_(%d+)',
 				function(i)
 					i	= tonumber(i)
-					local s	= wts_strings[i].text:gsub('\r\n', '@@n'):gsub('\t', '@@t')
+					local s	= wts_strings[i].text:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t')
 					wts_strings[i]	= false
 					return s
 				end
