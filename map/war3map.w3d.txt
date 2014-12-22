@@ -2,7 +2,7 @@ VERSION=2
 [CHUNK]
 [LPwh]
 dfil=Doodads\Terrain\LOSBlocker\LOSBlocker.mdl
-dnam=TRIGSTR_3747
+dnam=动态绿草
 dvr1[1]=100
 dvb1[1]=0
 dtil=F,L,W,V,Q,*
@@ -10,13 +10,13 @@ dwlk=1
 [ARrk]
 dfil=war3mapImported\[Barrens Stone]_Wall1e.mdl
 dvar=1
-dnam=TRIGSTR_3744
+dnam=橘黄色岩石
 dmas=1.7500
 dtil=*
 dmis=0.3000
 dptx=PathTextures\12x12Simple.tga
 [NRrk]
-dnam=TRIGSTR_3746
+dnam=大青石头 
 dfil=war3mapImported\[Underground Stone]_Wall_mini2e.mdl
 dvar=1
 dmas=2.0000
@@ -33,7 +33,7 @@ dmas=3.0000
 dmis=3.0000
 [LRrk]
 dfil=war3mapImported\[Underground Stone]_Wall_mini2e.mdl
-dnam=TRIGSTR_3748
+dnam=超大青石头
 dvar=1
 dmas=2.2500
 dmis=1.7500
@@ -134,17 +134,17 @@ dvg1[1]=125
 dvb1[1]=150
 dtil=F,L,W,V,Q,*
 dwlk=1
-dnam=TRIGSTR_8300
+dnam=草2
 [D001:XOcl]
-dnam=TRIGSTR_2857
+dnam=能量灯(蓝)
 dfil=Doodads\Cityscape\Props\CrystalShield\CrystalShield.mdl
 dtil=*
 [D002:XOcl]
-dnam=TRIGSTR_2858
+dnam=能量灯(红)
 dfil=buildings\other\PowerGenerator\PowerGenerator.mdl
 dtil=*
 [D003:YZef]
-dnam=TRIGSTR_3004
+dnam=光凌结界
 dfil=Abilities\Spells\Undead\Unsummon\UnsummonTarget.mdl
 dtil=*
 duch=0
@@ -153,7 +153,7 @@ ddes=0.1000
 dsel=128.0000
 dshf=1
 [D004:YZef]
-dnam=TRIGSTR_3005
+dnam=星辰冰晶
 dfil=Abilities\Spells\Undead\FrostArmor\FrostArmorTarget.mdl
 dtil=*
 duch=0
@@ -162,7 +162,7 @@ dsel=128.0000
 ddes=1.5000
 dshf=1
 [D005:YZef]
-dnam=TRIGSTR_8057
+dnam=风暴之角
 dfil=Abilities\Spells\Undead\UnholyFrenzy\UnholyFrenzyTarget.mdl
 dtil=*
 duch=0
@@ -171,7 +171,7 @@ ddes=2.0000
 dsel=128.0000
 dshf=1
 [D006:YZef]
-dnam=TRIGSTR_3007
+dnam=神圣秘法
 dfil=Abilities\Spells\NightElf\Starfall\StarfallCaster.mdl
 dtil=*
 duch=0
@@ -183,7 +183,7 @@ dvb1[1]=0
 ddes=0.7000
 dshf=1
 [D007:YZef]
-dnam=TRIGSTR_5891
+dnam=力量符文
 dfil=Objects\InventoryItems\Glyph\Glyph.mdl
 dtil=*
 duch=0
@@ -192,7 +192,7 @@ dsel=128.0000
 ddes=0.5000
 dshf=1
 [D008:YZef]
-dnam=TRIGSTR_3071
+dnam=魔导科技(万物复苏)
 dfil=Abilities\Spells\Undead\VampiricAura\VampiricAura.mdl
 dtil=*
 duch=0
@@ -202,7 +202,7 @@ dvr1[1]=50
 ddes=0.7000
 dshf=1
 [D009:YZef]
-dnam=TRIGSTR_3072
+dnam=魔导科技(极冬酷寒)
 dfil=Abilities\Spells\Orc\CommandAura\CommandAura.mdl
 dtil=*
 dfxr=-1.0000
@@ -211,7 +211,7 @@ ddes=1.2000
 duch=0
 dshf=1
 [D00A:YZef]
-dnam=TRIGSTR_1989
+dnam=小发条
 dfil=Units\Creeps\HeroTinkerRobot\HeroTinkerRobot.mdl
 dtil=*
 duch=0
@@ -220,7 +220,7 @@ dsel=32.0000
 ddes=0.4000
 dshf=1
 [D00B:YZef]
-dnam=TRIGSTR_2149
+dnam=光环
 dfil=Abilities\Spells\Undead\UndeadMine\UndeadMineCircle.mdl
 dtil=*
 duch=0
@@ -230,7 +230,7 @@ ddes=2.0000
 dvr1[1]=180
 dshf=1
 [D00C:YZef]
-dnam=TRIGSTR_2926
+dnam=星空光环
 dfil=Abilities\Spells\NightElf\Starfall\StarfallCaster.mdl
 dtil=*
 duch=0
@@ -240,7 +240,7 @@ dsel=128.0000
 danf=1
 dshf=1
 [D00D:YZef]
-dnam=TRIGSTR_3494
+dnam=森之符(极冬酷寒)
 dfil=Abilities\Spells\NightElf\EntangleMine\Roots.mdl
 dtil=*
 duch=0
@@ -251,7 +251,7 @@ dvb1[1]=100
 dvg1[1]=200
 dshf=1
 [D00E:YZef]
-dnam=TRIGSTR_3495
+dnam=森之符(万物复苏)
 dfil=Abilities\Spells\NightElf\EntanglingRoots\EntanglingRootsTarget.mdl
 dtil=*
 duch=0
@@ -260,7 +260,7 @@ dsel=128.0000
 ddes=2.0000
 dshf=1
 [D00F:YZef]
-dnam=TRIGSTR_3917
+dnam=闪电效果
 dfil=Abilities\Spells\Orc\LightningBolt\LightningBoltMissile.mdl
 dtil=*
 duch=0
@@ -269,7 +269,7 @@ dsel=128.0000
 ddes=2.0000
 dshf=1
 [D00G:YZef]
-dnam=TRIGSTR_5892
+dnam=火焰风暴
 dfil=Doodads\Cinematic\FireTrapUp\FireTrapUp.mdl
 dtil=*
 duch=0
@@ -278,7 +278,7 @@ dsel=128.0000
 ddes=0.5000
 dshf=1
 [D00H:YZef]
-dnam=TRIGSTR_5893
+dnam=符文标志
 dfil=Doodads\Outland\Props\Standard\Standard0.mdl
 dtil=*
 duch=0
@@ -310,7 +310,7 @@ dmis=0.0100
 dtil=*
 dptx=
 ddes=0.4000
-dnam=TRIGSTR_8301
+dnam=水1
 [D00L:LPwh]
 dfil=Doodads\Terrain\LOSBlocker\LOSBlocker.mdl
 dvg1[1]=125
@@ -318,7 +318,7 @@ dvb1[1]=150
 dtil=F,L,W,V,Q,*
 ddes=0.5500
 dwlk=1
-dnam=TRIGSTR_10179
+dnam=草1
 [D00M:ARrk]
 dfil=war3mapImported\[Barrens Stone]_Wall1e.mdl
 dvar=1
@@ -334,7 +334,7 @@ dmis=0.3000
 dmas=5.0000
 dptx=
 dwlk=1
-dnam=TRIGSTR_10180
+dnam=柱子3
 [D00O:LPwh]
 dfil=war3mapImported\Stone_Column_Portrait.mdl
 dtil=F,L,W,V,Q,*
@@ -342,7 +342,7 @@ dmis=0.3000
 dmas=3.0000
 dptx=
 dwlk=1
-dnam=TRIGSTR_10189
+dnam=柱子4
 [D00P:LPwh]
 dfil=war3mapImported\Stone_Fence.mdl
 dtil=F,L,W,V,Q,*
@@ -350,7 +350,7 @@ dmis=0.3000
 dmas=3.0000
 dptx=
 dwlk=1
-dnam=TRIGSTR_10190
+dnam=栅栏1
 [D00Q:LPwh]
 dfil=war3mapImported\Stone_Fence_Portrait.mdl
 dtil=F,L,W,V,Q,*
@@ -358,7 +358,7 @@ dmis=0.3000
 dmas=3.0000
 dptx=
 dwlk=1
-dnam=TRIGSTR_10301
+dnam=栅栏2
 [D00R:LPwh]
 dfil=war3mapImported\Stone_Wall.mdl
 dtil=F,L,W,V,Q,*
@@ -366,7 +366,7 @@ dmis=0.3000
 dmas=3.0000
 dptx=
 dwlk=1
-dnam=TRIGSTR_10302
+dnam=石墙
 [D00S:LPwh]
 dfil=war3mapImported\Stone_Wall.mdl
 dtil=F,L,W,V,Q,*
@@ -375,7 +375,7 @@ dmas=3.0000
 dptx=
 dvb1[1]=125
 dwlk=1
-dnam=TRIGSTR_10303
+dnam=石墙
 [D00T:LPwh]
 dfil=war3mapImported\Stone_Column.mdl
 dtil=F,L,W,V,Q,*
@@ -384,7 +384,7 @@ dmas=3.0000
 dptx=
 dvb1[1]=125
 dwlk=1
-dnam=TRIGSTR_10304
+dnam=柱子5
 [D00U:LPwh]
 dfil=war3mapImported\Stone_Column_Portrait.mdl
 dtil=F,L,W,V,Q,*
@@ -393,7 +393,7 @@ dmas=3.0000
 dptx=
 dvb1[1]=125
 dwlk=1
-dnam=TRIGSTR_10305
+dnam=柱子6
 [D00V:LPwh]
 dfil=war3mapImported\Stone_Column_Portrait.mdl
 dtil=F,L,W,V,Q,*
@@ -402,7 +402,7 @@ dmas=3.0000
 dptx=
 dmap=-1.5500
 dwlk=1
-dnam=TRIGSTR_10306
+dnam=柱子7
 [D00W:LPwh]
 dfil=war3mapImported\Stone_Column.mdl
 dtil=F,L,W,V,Q,*
@@ -411,7 +411,7 @@ dmas=3.0000
 dptx=
 dmap=-1.5500
 dwlk=1
-dnam=TRIGSTR_10307
+dnam=柱子2
 [D00X:NRrk]
 dfil=war3mapImported\[Underground Stone]_Wall_mini2e.mdl
 dvar=1
@@ -427,7 +427,7 @@ dmas=3.0000
 dptx=
 dmap=-0.9500
 dwlk=1
-dnam=TRIGSTR_10308
+dnam=柱子1
 [D00Z:ZOss]
 dmas=5.0000
 dmis=0.5000
@@ -441,7 +441,7 @@ dtil=*
 dptx=
 ddes=0.4000
 dvb1[1]=145
-dnam=TRIGSTR_10309
+dnam=水2
 [D011:LPrs]
 dtil=F,L,W,V,Q,*
 ddes=1.6000
@@ -470,7 +470,7 @@ dptx=
 ddes=0.4000
 [D016:LPwh]
 dfil=Doodads\Ruins\Structures\SRuinArch\SRuinArch.mdl
-dnam=TRIGSTR_10061
+dnam=桥 装饰物
 dtil=F,L,W,V,Q,*
 dvb1[1]=200
 dvg1[1]=200

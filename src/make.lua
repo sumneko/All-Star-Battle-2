@@ -194,7 +194,7 @@ local function main()
 			return
 		end
 
-		--打开listfile	
+		--打开listfile
 		for line in io.lines((test_dir / fname):string()) do
 			--导出并更新listfile中列举的每一个文件
 			local dir = fs.path(test_dir:string() .. '\\' .. line)
@@ -205,19 +205,33 @@ local function main()
 			fs.create_directories(map_dir_par)
 			if inmap:extract(line, dir) then
 				--print('[成功]: 导出 ' .. line)
-				--检查是否要转换成txt
-				if obj_txt[line] ~= nil then
-					w3x2txt.obj2txt(dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
-					git_fresh(line .. '.txt')
-				elseif w3x_txt[line] then
-					w3x2txt[w3x_txt[line] .. '2txt'](dir, fs.path(dir:string() .. '.txt'), obj_txt[line])
-					git_fresh(line .. '.txt')
-				else
-					git_fresh(line)
-				end
 			else
 				print('[失败]: 导出 ' .. line)
 				return
+			end
+		end
+
+		--读取wts
+		w3x2txt.read_wts(test_dir / 'war3map.wts')
+
+		--转换txt
+		for file_name, has_level in pairs(obj_txt) do
+			w3x2txt.obj2txt(test_dir / file_name, test_dir / (file_name .. '.txt'), has_level)
+		end
+
+		for file_name, func_name in pairs(w3x_txt) do
+			w3x2txt[func_name .. '2txt'](test_dir / file_name, test_dir / (file_name .. '.txt'))
+		end
+
+		--更新wts
+		w3x2txt.fresh_wts(test_dir / 'war3map.wts')
+
+		--更新git
+		for line in io.lines((test_dir / fname):string()) do
+			if obj_txt[line] == nil and not w3x_txt[line] then
+				git_fresh(line)
+			else
+				git_fresh(line .. '.txt')
 			end
 		end
 		

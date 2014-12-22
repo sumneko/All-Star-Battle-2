@@ -13,7 +13,7 @@ bgse=0
 [CHUNK]
 [B001:NTtw]
 bfil=war3mapImported\Ashenvale_Tree.mdl
-bnam=TRIGSTR_3573
+bnam=大树
 blit=0
 bvar=1
 btxf=
@@ -22,7 +22,7 @@ bonc=1
 bmas=1.0000
 bmis=1.0000
 [B002:NTtw]
-bnam=TRIGSTR_3745
+bnam=大松树
 bfil=war3mapImported\Elveswood4b.mdl
 blit=0
 bvar=1
@@ -32,7 +32,7 @@ bonc=1
 bmas=1.0000
 bmis=0.7000
 [B003:NTtw]
-bnam=TRIGSTR_3749
+bnam=秋树
 bvar=1
 blit=0
 btxi=0
@@ -43,7 +43,7 @@ btxf=
 bonc=1
 bsel=128.0000
 [B004:NTtw]
-bnam=TRIGSTR_8054
+bnam=竹子树
 bfil=war3mapImported\Bamboo02.mdl
 bvar=1
 blit=0
@@ -52,7 +52,7 @@ bsel=128.0000
 bonc=1
 bmas=0.2000
 bmis=0.1500
-bsuf=TRIGSTR_8136
+bsuf=带“树”字才会被判定为树木
 [B000:ATtr]
 bfil=
 bvar=1
@@ -60,4 +60,4 @@ bmis=0.2000
 bmas=0.3000
 boch=0.0000
 bshd=
-bnam=TRIGSTR_8181
+bnam=这是什么

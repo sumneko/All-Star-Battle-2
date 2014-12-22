@@ -243,7 +243,7 @@
 				end
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'))
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
 
 		end
 
@@ -768,7 +768,9 @@
 				
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'))
+			--io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
+
+			io.save(file_name_out, table.concat(lines, '\r\n'))	--貌似wtg文件写入文本会出错
 		end
 
 		function w3x2txt.txt2wtg(file_name_in, file_name_out)
@@ -1167,7 +1169,7 @@
 				table.insert(lines, ('########\r\n%s\r\n########'):format(trigger.content))
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'))
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
 			
 		end
 
@@ -1599,7 +1601,7 @@
 				end
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'))
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
 
 		end
 
@@ -1783,6 +1785,47 @@
 			end
 			
 			io.save(file_name_out, table.concat(pack))		
+		end
+
+		local wts_strings	= {}
+
+		function w3x2txt.read_wts(file_name_in)
+			local content	= io.load(file_name_in)
+			if not content then
+				print('文件无效:' .. file_name_in)
+				return
+			end
+
+			for string in content:gmatch 'STRING.-%\r\n%}' do
+				local i, s	= string:match 'STRING (%d+).-%{\r\n(.+)\r\n%}'
+				i	= tonumber(i)
+				wts_strings[i] = {
+					string	= string,
+					text	= s,
+				}
+			end
+		end
+
+		function string.convert_wts(s)
+			return s:gsub('TRIGSTR_(%d+)',
+				function(i)
+					i	= tonumber(i)
+					local s	= wts_strings[i].text:gsub('\r\n', '@@n'):gsub('\t', '@@t')
+					wts_strings[i]	= false
+					return s
+				end
+			)
+		end
+
+		function w3x2txt.fresh_wts(file_name_out)
+			local lines	= {}
+			for i, string in ipairs(wts_strings) do
+				if string then
+					table.insert(lines, string.string)
+				end
+			end
+
+			io.save(file_name_out, table.concat(lines, '\r\n\r\n'))
 		end
 	end
 
