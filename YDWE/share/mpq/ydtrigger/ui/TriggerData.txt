@@ -10794,6 +10794,10 @@ GetEventDamageSource=1,0,unit
 _GetEventDamageSource_Defaults=
 _GetEventDamageSource_Category=TC_EVENTRESPONSE
 
+Event.GetOriginDamageFrom=1,0,unit
+_Event.GetOriginDamageFrom_Defaults=
+_Event.GetOriginDamageFrom_Category=TC_EVENTRESPONSE
+
 GetDecayingUnit=0,1,unit
 _GetDecayingUnit_Defaults=
 _GetDecayingUnit_Category=TC_EVENTRESPONSE

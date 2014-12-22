@@ -7331,6 +7331,10 @@ GetEventDamageSource="伤害来源"
 GetEventDamageSource="伤害来源"
 GetEventDamageSourceHint="响应'受到伤害'单位事件."
 
+Event.GetOriginDamageFrom="原始伤害来源 <事件库>"
+Event.GetOriginDamageFrom="原始伤害来源"
+Event.GetOriginDamageFromHint="伤害被 '真实伤害来源' 转移前的伤害来源"
+
 GetDecayingUnit="腐化的单位"
 GetDecayingUnit="腐化的单位"
 GetDecayingUnitHint="响应'开始腐化'单位事件."

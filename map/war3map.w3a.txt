@@ -33839,7 +33839,7 @@ abpx=2
 ahky=E
 aub1[1]=这里包含了仅在11平台使用的特殊功能或者设置
 [A0W8:ANcl]
-anam=baji
+anam=查看大号
 alev=1
 arac=other
 aher=0

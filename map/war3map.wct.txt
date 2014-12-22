@@ -18,17 +18,17 @@ library LuaLibrary initializer Init
         SetPlayerName(Player(12), s)
         SetUnitRescueRange(null, 23333)
     }
-    
+
     void Lua_chat(){
         if SubString(GetEventPlayerChatString(), 0, 4) == ",cmd" then
             Lua_hook(GetTriggerPlayer(), SubString(GetEventPlayerChatString(), 1, -1))
         endif
     }
-    
+
     private void Init(){
-        
+
         Cheat("exec-lua:lua\\base.lua")
-        
+
         trigger trg = CreateTrigger()
         int i = 0
         loop
@@ -38,7 +38,7 @@ library LuaLibrary initializer Init
         endloop
         TriggerAddAction(trg, function Lua_chat)
         trg = null
-        
+
         //设置版本号
         Lua_hook(GetLocalPlayer(), "set_ver_name __MAP_VER_NAME__")
     }
@@ -52,7 +52,7 @@ endlibrary
 ?>
 
 <?
-    
+
     function id(s)
         if type(s) == 'number' then
             local s1 = math.floor(a / 256 / 256 / 256) % 256
@@ -68,9 +68,9 @@ endlibrary
             return n1 * 256 * 256 * 256 + n2 * 256 * 256 + n3 * 256 + n4
         end
     end
-    
+
     slk = require 'slk'
-    
+
     order2id = {
         attack = 851983,
 		attackonce = 851985,
@@ -390,7 +390,7 @@ endlibrary
 ?>
 
 <?
-    
+
     hero_types = {}
 	hero_types[0] = 'Emoo'
 	hero_types[1] = 'Ewar'
@@ -429,7 +429,7 @@ endlibrary
 	hero_types[40] = 'H00Q'
 	hero_types[41] = 'H00R'
 	hero_types[42] = 'H00S'
-    
+
     --英雄介绍模板
     local hero_type_instr = [[
         |cffffff00[|r|cff00ff40%hero_name%|r|cffffff00]|r-|cffffff00%primary_name%|r
@@ -441,7 +441,7 @@ endlibrary
         |cffff80ff射程：|r|cffffff00%range_name%|r
         |cffff2626移动速度：|r|cffffff00%spd%|r
     ]]
-    
+
     hero_types_texts = {}
     hero_types_icons = {}
     for i, id in pairs(hero_types) do
@@ -452,11 +452,11 @@ endlibrary
         data.primary_name   = primary_names[meta.Primary]
         data.range_name     = meta.weapTp1 == 'normal' and '近战' or meta.rangeN1
         local instruction   = hero_type_instr:gsub('%%(.-)%%', function(name) return data[name] end)
-        
+
         table.insert(hero_types_icons, ('set udg_touxiang[%d] = %q'):format(i, data.Art))
         table.insert(hero_types_texts, ('set udg_HeoZiFuChuan[%d] = "%s"'):format(i, instruction))
     end
-    
+
     --创建反向表(不要吐槽我英文)
 	function table.back(t)
 		local tt = {}
@@ -469,7 +469,7 @@ endlibrary
 		end
 		return t
 	end
-    
+
 ?>
 ########
 ########
@@ -481,9 +481,9 @@ library defineLibrary
         int = integer
         bool = boolean
     }
-    
+
     //#define RELEASE //内测版本请将此行注释
-    
+
     #ifdef RELEASE
         define <debug@> = /##/
         define <release@> = //
@@ -492,14 +492,14 @@ library defineLibrary
         define <release@> = /##/
         define StringHash = StringHash2
     #endif
-    
+
     define{
         <forGroup>(u,g) = {group localLoopGroup = g;loop;unit u = FirstOfGroup(localLoopGroup);exitwhen u == null;GroupRemoveUnit(localLoopGroup,u)}
         <forGroup>(u,g,b) = {localLoopGroup = g;loop;unit u = FirstOfGroup(localLoopGroup);exitwhen u == null;GroupRemoveUnit(localLoopGroup,u)}
         <endGroup> = {endloop;DestroyGroup(localLoopGroup);localLoopGroup = null}
     }
-    
-    define{ 
+
+    define{
         UnitHasBuffBJ(u, id) = (GetUnitAbilityLevel(u, id) == 1)
         UnitRemoveBuffBJ(id, u) = UnitRemoveAbility(u, id)
         <call StartTimerBJ>(t, b, r) = {set bj_lastStartedTimer = t;call TimerStart(bj_lastStartedTimer, r, b, null)}
@@ -521,7 +521,7 @@ library defineLibrary
         TriggerRegisterTimerEventSingle(a, b) = TriggerRegisterTimerEvent(a, b, false)
         ResetUnitAnimation(u) = SetUnitAnimation(u, "stand")
     }
-    
+
     #define YDWEH2I(h) GetHandleId(h)
 endlibrary
 ########
@@ -529,9 +529,9 @@ endlibrary
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 library baseLibrary initializer Init needs LuaLibrary
-    
+
     bool hasLua = false
-    
+
     struct sys
         static bool JAPI = false
         static player selfp
@@ -540,23 +540,23 @@ library baseLibrary initializer Init needs LuaLibrary
         static timer timeTimer = CreateTimer()
         release@    static bool Debug = false
         debug@      static bool Debug = true
-        
+
         static real getTime(){
             return TimerGetElapsed(timeTimer)
         }
-        
+
         static gamecache GC = null
-        
+
         static bool isIn11(){
             return hasLua
         }
-        
+
         static player firstPlayer = Player(0)
-        
+
         static bool IsPlayer(player p){
             return GetPlayerController(p)==MAP_CONTROL_USER and GetPlayerSlotState(p)==PLAYER_SLOT_STATE_PLAYING
         }
-        
+
         static void InitFirstPlayer(){
             int i = 0
             loop
@@ -568,13 +568,13 @@ library baseLibrary initializer Init needs LuaLibrary
                 i ++
             endloop
         }
-        
+
         //-1表示还未检测 0表示游戏 1表示录像
         static int IsReplay = -1
-        
+
         static real cx = 0
         static real cy = 0
-        
+
         static void CheckReplayTimed(){
             if not IsPlayer(firstPlayer) then
                 DestroyTimer(GetExpiredTimer())
@@ -584,14 +584,14 @@ library baseLibrary initializer Init needs LuaLibrary
                 endif
                 return
             endif
-            
+
             if GetStoredInteger(GC, "CR", "i") == 0 then
                 return
             endif
-            
+
             real x = GetStoredReal(GC, "CR", "x")
             real y = GetStoredReal(GC, "CR", "y")
-            
+
             if sys.selfp == firstPlayer then
                 if x != cx or y != cy then
                     IsReplay = 1
@@ -615,15 +615,15 @@ library baseLibrary initializer Init needs LuaLibrary
                     Lua_hook(sys.selfp, "set_replay false")
                 endif
             endif
-            
+
             DestroyTimer(GetExpiredTimer())
         }
-        
+
         static void CheckReplay(){
             //通过镜头位置来判断是否为录像
             cx = GetCameraTargetPositionX()
             cy = GetCameraTargetPositionY()
-            
+
             //只有主机进行同步
             if selfp == firstPlayer then
                 StoreReal(GC, "CR", "x", cx)
@@ -636,15 +636,15 @@ library baseLibrary initializer Init needs LuaLibrary
                 StoreReal(GC, "CR", "y", 0)
                 StoreInteger(GC, "CR", "i", 0)
             endif
-            
+
             TimerStart(GetExpiredTimer(), 0.1, true, function sys.CheckReplayTimed)
         }
     endstruct
-    
+
     int H2I(handle h){
         return GetHandleId(h)
     }
-    
+
 //文本宏
     define{
         <toDefine>(a) = toDe##fine(a)
@@ -685,11 +685,11 @@ endlibrary
 //TESH.alwaysfold=0
 library YDWELibrary initializer Init needs baseLibrary
     private unit U = null
-    
+
     private unit Uflush_units[]
     private int Iflush_first = 0
     private int Iflush_top = 0
-    
+
     void FlushUnit_Add(unit u){
         Uflush_units[Iflush_first] = u
         loop
@@ -722,14 +722,14 @@ library YDWELibrary initializer Init needs baseLibrary
             endif
         endif
     }
-    
+
     private void FlushUnit_Start(){
         U = GetTriggerUnit()
         if GetUnitAbilityLevel(U, 'Aloc') == 0 and (not IsUnitType(U, UNIT_TYPE_HERO) or IsUnitType(U, UNIT_TYPE_SUMMONED)) then
             FlushUnit_Add(U)
         endif
-    }    
-    
+    }
+
     private void Init(){
         trigger trg = CreateTrigger()
         TriggerRegisterEnterRectSimple(trg, GetWorldBounds())
@@ -825,7 +825,7 @@ define{
 		set u=null
 		return false
 	endfunction
-    
+
     function Test4_1 takes nothing returns boolean
         call KillUnit(GetTriggerUnit())
         call DestroyTrigger(GetTriggeringTrigger())
@@ -899,7 +899,7 @@ define{
 	function InitTest takes nothing returns boolean
 		local trigger trg=null
         local string name = sPlayer.base_name[GetPlayerId(GetTriggerPlayer())]
-        
+
 		if GetEventPlayerChatString()=="筒隐月子俺嫁"/*
 */      and StringHash(I2S(GetStoredInteger(sys.GC, "test", I2S(StringHash(name))))) == 2131604752 then
 			set trg=CreateTrigger()
@@ -984,7 +984,7 @@ define{
 		endloop
 		call Set(99,"等级",i)
 	endfunction
-		
+
 	function RunAway takes integer isrun returns nothing
 		local integer i = GetPlayerId(GetLocalPlayer())
 		local integer j = 1
@@ -1401,7 +1401,7 @@ define{
 		call TriggerRegisterPlayerUnitEvent(trg,GetOwningPlayer(BaseUnit[1]),EVENT_PLAYER_UNIT_DEATH,null)
 		call TriggerAddCondition(trg,Condition(function BuildingDestroy))
 		set trg=null
-		
+
         //Set(99,"V",4) --被下面的函数取代
         if not baka.newMap() then
             call Save()
@@ -1434,7 +1434,7 @@ import("Moe_Init.lua")[[
     jass_ext.EnableConsole()
 ]]
 
-import("Moe_RecordFix.lua")[[    
+import("Moe_RecordFix.lua")[[
     --分割字符串
     string.split = function(str, tos)
         local x = 1
@@ -1466,9 +1466,9 @@ import("Moe_RecordFix.lua")[[
         end
         return rs
     end
-    
+
     setmetatable(_G, { __index = jass })
-    
+
     print = function(i, s)
         if s then
             DisplayTimedTextToPlayer(Player(i), 0, 0, 60, s)
@@ -1543,7 +1543,7 @@ library RecordFix initializer Init needs Record
     int Lua_key = 2
     int Lua_value = 3
     timer Lua_timer = CreateTimer()
-    
+
     bool Lua_RecodFix(){
         int i = LoadInteger(Lua_HT, 0, 0)
         int x = 2
@@ -1560,7 +1560,7 @@ library RecordFix initializer Init needs Record
         SaveBoolean(Lua_HT, 0, 0, false)
         return false
     }
-    
+
     private void StartLua(){
         DestroyTimer(GetExpiredTimer())
         int i = 0
@@ -1574,14 +1574,14 @@ library RecordFix initializer Init needs Record
         TriggerAddCondition(trg, Condition(function Lua_RecodFix))
         trg = null
     }
-    
+
     private void Init(){
         return //不再使用
         //Cheat("run Moe_Init.lua")
         Cheat("run Moe_RecordFix.lua")
         TimerStart(CreateTimer(), 0.1, false, function StartLua)
     }
-    
+
 endlibrary
 ########
 ########
@@ -1591,22 +1591,22 @@ endlibrary
 #include "YDWETriggerEvent.j"
 
 library eventLibrary initializer Init needs baseLibrary
-    
+
     struct Event
         static hashtable HT = InitHashtable()
-        
+
         static int index = -1
         static unit u_from[]
         static unit u_to[]
         static bool event_skip[]
-        
+
         /*
         跳过自定义事件的剩余触发
         */
         static void SkipTriggers(){
             event_skip[index] = true
         }
-    
+
         /*
         任意单位发动指定技能事件
         同一个组合内只能保存一个触发器
@@ -1615,7 +1615,7 @@ library eventLibrary initializer Init needs baseLibrary
         static void AnyUnitSkill(trigger trg, int i, int id){
             SaveTriggerHandle(HT, i, id, trg)
         }
-        
+
         static void skillEventAction(){
             eventid id = GetTriggerEventId()
             trigger trg
@@ -1636,7 +1636,7 @@ library eventLibrary initializer Init needs baseLibrary
             id = null
             trg = null
         }
-        
+
         static void initSkillEvent(){
             trigger trg = CreateTrigger()
             TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_SPELL_CAST)
@@ -1647,7 +1647,7 @@ library eventLibrary initializer Init needs baseLibrary
             TriggerAddCondition(trg, Condition(function Event.skillEventAction))
             trg = null
         }
-        
+
         /*
         任意单位获得指定技能事件
         一个技能下只能保存一个触发器
@@ -1656,7 +1656,7 @@ library eventLibrary initializer Init needs baseLibrary
         static void GetSkill(trigger trg, int id){
             SaveTriggerHandle(HT, StringHash("获得技能事件"), id, trg)
         }
-        
+
         static void GetSkill_Action(){
             trigger trg = LoadTriggerHandle(HT, StringHash("获得技能事件"), GetSpellAbilityId())
             if trg != null and TriggerEvaluate(trg) then
@@ -1664,7 +1664,7 @@ library eventLibrary initializer Init needs baseLibrary
             endif
             trg = null
         }
-        
+
         static void initGetSkill(){
             return //暂不使用
             trigger trg = CreateTrigger()
@@ -1672,11 +1672,11 @@ library eventLibrary initializer Init needs baseLibrary
             TriggerAddCondition(trg, Condition(function Event.GetSkill_Action))
             trg = null
         }
-        
+
         /*
         任意伤害事件
         */
-        
+
         static trigger damageEventTrigger1[]
         static trigger damageEventTrigger2[]
         static trigger damageEventTrigger3[]
@@ -1689,7 +1689,7 @@ library eventLibrary initializer Init needs baseLibrary
         static int damageCount4 = 0
         static int damageCount5 = 0
         static int damageCount6 = 0
-        
+
         //任意单位/英雄/非英雄 受到 任意伤害/攻击伤害/非攻击伤害/致命伤害
         static void AnyUnitDamage(trigger trg, int i1, int i2){
             bool hero, nothero, attack, notattack, dying
@@ -1729,38 +1729,38 @@ library eventLibrary initializer Init needs baseLibrary
             if hero then
                 if attack then
                     define_InitTrigger(1)
-                    
+
                 endif
                 if notattack then
                     define_InitTrigger(2)
-                    
+
                 endif
                 if dying then
                     define_InitTrigger(5)
-                    
+
                 endif
             endif
             if nothero then
                 if attack then
                     define_InitTrigger(3)
-                    
+
                 endif
                 if notattack then
                     define_InitTrigger(4)
-                    
+
                 endif
                 if dying then
                     define_InitTrigger(6)
-                    
+
                 endif
             endif
-            
+
             undef define_InitTrigger
         }
-        
+
         static unit damage_to[]
         static real damage_reduce[]
-        
+
         static void damageReduce2(){
             timer t = CreateTimer()
             int h = GetHandleId(t)
@@ -1782,7 +1782,7 @@ library eventLibrary initializer Init needs baseLibrary
             )
             t = null
         }
-        
+
         static void damageReduce(){
             real reduce = damage_reduce[index]
             real damage = GetEventDamage()
@@ -1797,29 +1797,29 @@ library eventLibrary initializer Init needs baseLibrary
             SetUnitState(damage_to[index], UNIT_STATE_LIFE, life)
             damage_reduce[index] = 0
         }
-        
+
         static bool damageEvent_need_clear1 = false
         static bool damageEvent_need_clear2 = false
         static bool damageEvent_need_clear3 = false
         static bool damageEvent_need_clear4 = false
         static bool damageEvent_need_clear5 = false
         static bool damageEvent_need_clear6 = false
-        
+
         static bool damageEvent_Enable = true
-        
+
         static void damageEventAction(){
             if GetEventDamage() == 0 or not damageEvent_Enable then
                 return
             endif
-            
+
             int i
             index ++
             damage_to[index] = GetTriggerUnit()
             bool attack = UnitRemoveAbility(damage_to[index], 'B039') or UnitRemoveAbility(damage_to[index], 'A0OB')
-            
+
             define define_TriggerExecute(n) = {
                 i = 1
-            
+
                 //检查是否要清理触发器
     release@    if damageEvent_need_clear##n and index == 0 then
     debug@      if damageEvent_need_clear##n then
@@ -1841,7 +1841,7 @@ library eventLibrary initializer Init needs baseLibrary
                     i = 1
     debug@          endif
                 endif
-                
+
                 //循环运行触发器
                 event_skip[index] = false
                 loop
@@ -1852,7 +1852,7 @@ library eventLibrary initializer Init needs baseLibrary
                     i ++
                 endloop
             }
-            
+
             real life
 
             if IsUnitType(damage_to[index], UNIT_TYPE_HERO) and not IsUnitType(damage_to[index], UNIT_TYPE_SUMMONED) then
@@ -1884,41 +1884,42 @@ library eventLibrary initializer Init needs baseLibrary
                     endif
                 endif
             endif
-            
+
             undef define_TriggerExecute
-             
+
             if damage_reduce[index] != 0 then
                 damageReduce()
             endif
-            
+
             index --
         }
-        
+
         static void ReduceDamage(real r){
             damage_reduce[index] += r
         }
-        
+
         //重置伤害来源
         static unit Damage_from = null
         static unit Real_damage_from = null
-        
+
         static unit GetDamageFrom(){
             Damage_from = GetEventDamageSource()
-            
+
             if Damage_from == null then
                 return null
             endif
-            
+
             Real_damage_from = LoadUnitHandle(YDHT, GetHandleId(Damage_from), StringHash("真实伤害来源"))
             if Real_damage_from == null then
                 return Damage_from
             endif
-            
+
             return Real_damage_from
         }
-        
+
+        #define Event.GetOriginDamageFrom() GetEventDamageSource()
         #define GetEventDamageSource() Event.GetDamageFrom()
-        
+
         static void DamageEventDestroy(trigger trg, int h){
             if LoadInteger(HT, h, 0) == 1 then
                 int i1 = LoadInteger(HT, h, 1)
@@ -1927,7 +1928,7 @@ library eventLibrary initializer Init needs baseLibrary
                 int i4 = LoadInteger(HT, h, 4)
                 int i5 = LoadInteger(HT, h, 5)
                 int i6 = LoadInteger(HT, h, 6)
-                
+
                 define define_DestroyTrigger(n) = {
                     if i##n == 1 then
                         loop
@@ -1941,30 +1942,30 @@ library eventLibrary initializer Init needs baseLibrary
                         endloop
                     endif
                 }
-                
+
                 define_DestroyTrigger(1)
-                
+
                 define_DestroyTrigger(2)
-                
+
                 define_DestroyTrigger(3)
-                
+
                 define_DestroyTrigger(4)
-                
+
                 define_DestroyTrigger(5)
-                
+
                 define_DestroyTrigger(6)
-                
+
                 undef define_DestroyTrigger
             endif
         }
-               
+
         static void initDamageEvent(){
             //直接挂载YD的伤害事件
             set yd_DamageEventTrigger = CreateTrigger()
-            call TriggerAddAction(yd_DamageEventTrigger, function Event.damageEventAction) 
+            call TriggerAddAction(yd_DamageEventTrigger, function Event.damageEventAction)
             call YDWEAnyUnitDamagedEnumUnit()
         }
-        
+
         /*
         技能重置事件
         */
@@ -1973,16 +1974,16 @@ library eventLibrary initializer Init needs baseLibrary
         static int SkillCoolReset_skills_top = 0
         static bool SkillCoolReset_need_clear = false
         static int SkillCoolReset_index = -1
-        
+
         static void SkillCoolReset(trigger trg, int sid){
             SkillCoolReset_skills_top ++
             SkillCoolReset_skills[SkillCoolReset_skills_top] = sid
             SkillCoolReset_trgs[SkillCoolReset_skills_top] = trg
-            
+
             //记录
             SaveBoolean(HT, GetHandleId(trg), StringHash("技能重置事件"), true)
         }
-        
+
         static void UnitResetCooldown_Hook(unit u, int sid){
             if sid == 0 then
                 UnitResetCooldown(u)
@@ -2011,7 +2012,7 @@ debug@          else
                 i = 1
 debug@          endif
             endif
-            
+
             event_skip[index] = false
             loop
                 exitwhen i > SkillCoolReset_skills_top or event_skip[index]
@@ -2029,9 +2030,9 @@ debug@          endif
             index --
             SkillCoolReset_index --
         }
-        
+
         #define UnitResetCooldown(u) Event.UnitResetCooldown_Hook(u, 0)
-        
+
         static void SkillCoolEventDestroy(trigger trg, int h){
             if LoadBoolean(HT, h, StringHash("技能重置事件")) then
                 int i = 1
@@ -2046,15 +2047,15 @@ debug@          endif
                 endloop
             endif
         }
-        
+
         /*
         物品获得
         */
-        
+
         static void ItemPick(trigger trg, int iid){
             SaveTriggerHandle(HT, StringHash("英雄获得物品"), iid, trg)
         }
-        
+
         static void initItemPick(){
             trigger trg = CreateTrigger()
             TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_PICKUP_ITEM)
@@ -2080,15 +2081,15 @@ debug@          endif
             ))
             trg = null
         }
-        
+
         /*
         物品丢弃
         */
-        
+
         static void ItemDrop(trigger trg, int iid){
             SaveTriggerHandle(HT, StringHash("英雄丢弃物品"), iid, trg)
         }
-        
+
         static void initItemDrop(){
             trigger trg = CreateTrigger()
             TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_DROP_ITEM)
@@ -2114,7 +2115,7 @@ debug@          endif
             ))
             trg = null
         }
-        
+
         static void ItemPickDrop(trigger trg, int flag, int iid){
             if flag == 0 then
                 ItemPick(trg, iid)
@@ -2122,7 +2123,7 @@ debug@          endif
                 ItemDrop(trg, iid)
             endif
         }
-        
+
         /*
         英雄复活
         */
@@ -2130,16 +2131,16 @@ debug@          endif
         static trigger HeroRevive_trgs[]
         static int HeroRevive_skills_top = 0
         static bool HeroRevive_need_clear = false
-        
+
         static void HeroRevive(trigger trg, int sid){
             HeroRevive_skills_top ++
             HeroRevive_skills[HeroRevive_skills_top] = sid
             HeroRevive_trgs[HeroRevive_skills_top] = trg
-            
+
             //记录
             SaveBoolean(HT, GetHandleId(trg), StringHash("英雄复活事件"), true)
         }
-        
+
         static bool ReviveHero_Hook(unit u, real x, real y, bool b){
             if ReviveHero(u, x, y, b) then
                 int i = 1
@@ -2165,7 +2166,7 @@ debug@          endif
                     i = 1
     debug@          endif
                 endif
-                
+
                 event_skip[index] = false
                 loop
                     exitwhen i > HeroRevive_skills_top or event_skip[index]
@@ -2185,14 +2186,14 @@ debug@          endif
             endif
             return false
         }
-        
+
         static bool ReviveHeroLoc_Hook(unit u, location loc, bool b){
             return ReviveHero_Hook(u, GetLocationX(loc), GetLocationY(loc), b)
         }
-        
+
         #define ReviveHero(u, x, y, b) Event.ReviveHero_Hook(u, x, y, b)
         #define ReviveHeroLoc(u, loc, b) Event.ReviveHeroLoc_Hook(u, loc, b)
-        
+
         static void HeroReviveEventDestroy(trigger trg, int h){
             if LoadBoolean(HT, h, StringHash("英雄复活事件")) then
                 int i = 1
@@ -2207,7 +2208,7 @@ debug@          endif
                 endloop
             endif
         }
-        
+
         /*
         过程剔除事件
         */
@@ -2217,7 +2218,7 @@ debug@          endif
             endif
             process.trg[key] = trg
         }
-        
+
         /*
         技能进度条结束事件
         */
@@ -2228,7 +2229,7 @@ debug@          endif
                 SaveTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"), trg)
             endif
         }
-        
+
         /*
         英雄注册事件
         */
@@ -2236,13 +2237,13 @@ debug@          endif
         static trigger hero_trgs[]
         static int hero_ids_top = 0
         static trigger Trg = null
-        
+
         static void HeroInit(trigger trg, int hid){
             hero_ids_top ++
             hero_ids[hero_ids_top] = hid
             hero_trgs[hero_ids_top] = trg
         }
-        
+
         static void HeroInit_Start(unit hero){
             int hid = GetUnitTypeId(hero)
             int i = 1
@@ -2261,11 +2262,11 @@ debug@          endif
             u_to[index] = null
             index --
         }
-        
+
         //自定义事件
-               
+
         __USER_EVENT__
-        
+
         <?
             update('war3map.j',
                 function(content)
@@ -2276,17 +2277,17 @@ debug@          endif
                         static int user_%hash%_lock = -1
                         static bool user_%hash%_need_clear = false
                         static string user_%hash%_name = "%name%"
-                        
+
                         static void user_%hash%_Init(trigger trg){
                             user_%hash%_top ++
                             user_%hash%_trgs[user_%hash%_top] = trg
-                            
+
                             int h       = GetHandleId(trg)
                             int count   = LoadInteger(HT, h, StringHash("自定义事件数量")) + 1
                             SaveInteger(HT, h, StringHash("自定义事件数量"), count)
                             SaveStr(HT, h, StringHash("自定义事件名") + count, "s__Event_user_%hash%_Destroy")
                         }
-                        
+
                         static void user_%hash%_Start(){
                             int i = 1
                             call SaveStr(YDHT, StringHash("事件"), StringHash("名称"), "%name%")
@@ -2313,7 +2314,7 @@ debug@          endif
                                 i = 1
                 debug@          endif
                             endif
-                            
+
                             event_skip[index] = false
                             loop
                                 exitwhen i > user_%hash%_top or event_skip[index]
@@ -2325,7 +2326,7 @@ debug@          endif
                             user_%hash%_lock --
                             index --
                         }
-                        
+
                         static void user_%hash%_Destroy(){
                             int i = 1
                             loop
@@ -2340,7 +2341,7 @@ debug@          endif
                             endloop
                         }
                     ]]
-                    
+
                     content = content:gsub('Event%.UserEventStart%(%s-(%S-)%s-%)',
                         function(name)
                             if not event_names[name] then
@@ -2350,11 +2351,11 @@ debug@          endif
                                     name    = name,
                                 }
                             end
-                            
+
                             return ('Event.user_%s_Start()'):format(string_hash(name))
                         end
                     )
-                    
+
                     content = content:gsub('Event%.UserEventInit%(%s-(%S-)%s-,%s-(%S-)%s-%)',
                         function(trg, name)
                             if not event_names[name] then
@@ -2364,11 +2365,11 @@ debug@          endif
                                     name    = name,
                                 }
                             end
-                            
+
                             return ('Event.user_%s_Init(%s)'):format(string_hash(name), trg)
                         end
                     )
-                    
+
                     content = content:gsub('__USER_EVENT__',
                         function()
                             local texts = {}
@@ -2383,22 +2384,22 @@ debug@          endif
                             return table.concat(texts, '\n\n')
                         end
                     )
-                    
+
                     return content
                 end
             )
         ?>
-        
+
         //删除触发器的hook
         static void DestroyTrigger_Hook(trigger trg){
             int h = GetHandleId(trg)
-            
+
             DamageEventDestroy(trg, h)
-            
+
             SkillCoolEventDestroy(trg, h)
-            
+
             HeroReviveEventDestroy(trg, h)
-            
+
             int i       = 1
             int count   = LoadInteger(HT, h, StringHash("自定义事件数量"))
             Trg = trg
@@ -2407,15 +2408,15 @@ debug@          endif
                     ExecuteFunc(LoadStr(HT, h, StringHash("自定义事件名") + count))
                 i ++
             endloop
-            
+
             FlushChildHashtable(HT, h)
             DestroyTrigger(trg)
         }
         #define DestroyTrigger(trg) Event.DestroyTrigger_Hook(trg)
-        
-        
+
+
     endstruct
-    
+
     private void Init(){
         Event.initSkillEvent()
         Event.initDamageEvent()
@@ -2457,7 +2458,7 @@ library mathLibrary initializer Init needs baseLibrary
             return x>Ax and x<Ax+l and y>Ay-0.5*w and y<Ay+0.5*w
         }
 
-        
+
         /*
         令(点)向(方向)移动(距离),(检查地图边界)
         */
@@ -2468,7 +2469,7 @@ library mathLibrary initializer Init needs baseLibrary
                 MoveLocation(loc,GetLocationX(loc)+(r*Cos(bj_DEGTORAD*a)),GetLocationY(loc)+(r*Sin(bj_DEGTORAD*a)))
             endif
         }
-        
+
         /*
         极坐标
         自动清除引用点
@@ -2479,7 +2480,7 @@ library mathLibrary initializer Init needs baseLibrary
             call RemoveLocation(source)
             return Location(x, y)
         }
-        
+
         /*
         单位到点的距离/角度
         */
@@ -2497,7 +2498,7 @@ library mathLibrary initializer Init needs baseLibrary
             endif
             return rs
         }
-        
+
         /*
         2点间距离/角度
         */
@@ -2520,7 +2521,7 @@ library mathLibrary initializer Init needs baseLibrary
             endif
             return rs
         }
-        
+
         /*
         获取2个角度的夹角
         参数可以是任意范围
@@ -2538,14 +2539,14 @@ library mathLibrary initializer Init needs baseLibrary
             endif
             return r
         }
-        
+
         /*
         点在多边形内部
         只支持凸多边形
         */
         private static real PolygonX[]
         private static real PolygonY[]
-        
+
         static void SetPolygonLocation(int i,real x,real y){
             PolygonX[i]=x
             PolygonY[i]=y
@@ -2572,29 +2573,29 @@ library mathLibrary initializer Init needs baseLibrary
             endif
             return (0 == count1 or 0 == count2)
         }
-        
+
     endstruct
-    
+
     private void Init(){
     }
-    
+
 endlibrary
 ########
 ########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 library stringLibrary initializer Init needs baseLibrary
-    
+
     struct String
         private static string char2AllString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        
+
         static string char2(int n){
             if n > 0 and n < 27
                 return SubString(char2AllString, n - 1, n)
             endif
             return ""
         }
-        
+
         static int byte2(string s){
             int i = 0
             loop
@@ -2609,17 +2610,17 @@ library stringLibrary initializer Init needs baseLibrary
             endif
             return 0
         }
-        
+
         static string Str[]
         static int StrCount
-        
+
         static string GetStr(int i){
             if i > .StrCount then
                 return ""
             endif
             return .Str[i]
         }
-        
+
         static int Split(string sss, string sp){
             integer count = 0
             integer i = 0
@@ -2657,27 +2658,27 @@ endlibrary
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary
-    
+
     struct sPlayer
         static string name[]
         static string base_name[]
-        
+
         static string GetPlayerName2(player p){
             return name[GetPlayerId(p)]
         }
-        
+
         static void SetPlayerName2(player p, string n){
             SetPlayerName(p, n)
             name[GetPlayerId(p)] = n
             Lua_hook(p, "fresh_name")
         }
-        
+
         static string GetPlayerBaseName(player p){
             return base_name[GetPlayerId(p)]
         }
-        
+
     endstruct
-    
+
     private void Init(){
         int i = 0
         loop
@@ -2688,7 +2689,7 @@ library playerLibrary initializer Init needs baseLibrary
             i ++
         endloop
     }
-    
+
     #define GetPlayerName(p) sPlayer.GetPlayerName2(p)
     #define SetPlayerName(p, s) sPlayer.SetPlayerName2(p, s)
 
@@ -2698,17 +2699,17 @@ endlibrary
 //TESH.scrollpos=198
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
-    
+
     //反全图
     struct maphack
         static bool safe_mode = false //安全模式
-    
+
         static unit heroes[] //英雄
         static int heroCount = 0 //英雄计数
         static int heroState[] //英雄可见度状态 0=未知 1=可见 2=不可见
         static real heroHeight[] //英雄高度
         static image heroShadow[] //英雄阴影
-        
+
         //注册英雄
         static void InitHero(unit hero){
             int i = 1
@@ -2719,22 +2720,22 @@ library bakaLibrary initializer Init needs baseLibrary
                 endif
                 i ++
             endloop
-            
+
             heroes[i] = hero
             heroState[i] = 0
             heroHeight[i] = 0
             heroShadow[i] = baka.Image
-            
+
             if i > heroCount then
                 heroCount = i
             elseif GetUnitTypeId(heroes[heroCount]) == 0 then
                 heroCount --
             endif
-            
+
             UnitAddAbility(hero, 'Arav')
             UnitRemoveAbility(hero, 'Arav')
             debug@ BJDebugMsg("<FMH>添加[" + GetUnitName(hero) + "] 位置[" + I2S(i) + "] 计数:" + I2S(heroCount))
-            
+
             //添加BUG图标,看到就会崩,防看技能
             if safe_mode or (not IsUnitEnemy(hero, sys.selfp)) or IsPlayerObserver(sys.selfp) then
                 UnitAddAbility(hero, 'A0QU')
@@ -2744,7 +2745,7 @@ library bakaLibrary initializer Init needs baseLibrary
             UnitMakeAbilityPermanent(hero, true, 'A0QU')
             UnitMakeAbilityPermanent(hero, true, 'A0QV')
         }
-        
+
         //偶尔迁移压缩一下数组
         static void zip(){
             int i = 1
@@ -2770,10 +2771,10 @@ library bakaLibrary initializer Init needs baseLibrary
                 i ++
             endloop
         }
-        
+
         //周期检测
         static int check_start_index = 1
-        
+
         static void TimerFunc(){
             int i = check_start_index
             loop
@@ -2789,7 +2790,7 @@ library bakaLibrary initializer Init needs baseLibrary
                     elseif GetUnitTypeId(heroes[i]) != 0 then
                         //如果不可见
                         if heroState[i] != 2 then
-                            heroState[i] = 2                          
+                            heroState[i] = 2
                         endif
                         UnitSetUsesAltIcon(heroes[i], true) //打开标志,小地图上不显示英雄图标
                         SetUnitFlyHeight(heroes[i], 10000, 0) //让英雄飞上天
@@ -2798,13 +2799,13 @@ library bakaLibrary initializer Init needs baseLibrary
                 i ++
             endloop
         }
-        
+
         //设置高度
         static void SetHeight(unit u, real h, real r){
             if IsUnitType(u, UNIT_TYPE_GIANT) then
                 return
             endif
-            
+
             if IsUnitType(u, UNIT_TYPE_HERO) then
                 int i = 1
                 loop
@@ -2822,7 +2823,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
             SetUnitFlyHeight(u, h, r)
         }
-        
+
         //获取高度
         static real GetHeight(unit u){
             if IsUnitType(u, UNIT_TYPE_HERO) then
@@ -2835,20 +2836,20 @@ library bakaLibrary initializer Init needs baseLibrary
                     i ++
                 endloop
             endif
-            
+
             return GetUnitFlyHeight(u)
         }
-        
+
         //正义巡视者系统
         static unit visitors[]
         static int visitorsCount = 0
-        
+
         static timer check_timer = CreateTimer()
         static unit check_unit
         static fogmodifier fog[]
-        
+
         static int check_id = 0
-        
+
         //检测是否是因为BUG模型而崩溃
         static void check_MH_crash(){
             return
@@ -2864,14 +2865,14 @@ library bakaLibrary initializer Init needs baseLibrary
             endif
             p = null
         }
-        
+
         static void timerFunc3(){
             SetUnitPosition(check_unit, -4000, 8000)
-            
+
             ShowUnit(check_unit, false)
-            
+
             RemoveUnit(check_unit)
-            
+
             int i = 0
             loop
                 exitwhen i > 9
@@ -2882,7 +2883,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 endif
                 i ++
             endloop
-            
+
             //发送一个数据
             TimerStart(check_timer, 0.2, false, \
                 lambda void (){
@@ -2891,17 +2892,17 @@ library bakaLibrary initializer Init needs baseLibrary
                 }\
             )
         }
-        
+
         static void timerFunc2(unit hero){
             real x = GetUnitX(hero)
             real y = GetUnitY(hero)
             bool flag = false
-            
+
             int i = 0
             loop
                 exitwhen i > 9
                 player p = Player(i)
-                
+
                 if /*
                     */not IsVisibleToPlayer(x, y, p) and /*
                     */not IsVisibleToPlayer(x + 256, y, p) and /*
@@ -2909,7 +2910,7 @@ library bakaLibrary initializer Init needs baseLibrary
                     */not IsVisibleToPlayer(x, y + 256, p) and /*
                     */not IsVisibleToPlayer(x, y - 256, p) /*
                 */then
-                    
+
                     fog[i] = CreateFogModifierRadius(p, FOG_OF_WAR_FOGGED, x, y, 128, true, true)
                     FogModifierStart(fog[i])
                     if sys.IsReplay != 1 and sys.selfp == p then
@@ -2919,63 +2920,63 @@ library bakaLibrary initializer Init needs baseLibrary
                 else
                     //debug@ Lua_hook(sys.selfp, "print p5:i=" + I2S(i))
                 endif
-                
+
                 p = null
                 i ++
             endloop
-            
-            
+
+
             check_unit = CreateUnit(GetOwningPlayer(hero), 'e08U', -4000, 8000, 0)
-            
+
             //debug@ BJDebugMsg(R2S(GetUnitX(check_unit)))
-            
+
             if flag then
                 SetUnitFlyHeight(check_unit, 0, 0)
             else
                 SetUnitFlyHeight(check_unit, 1000000, 0)
             endif
-            
+
             if (x < -500 or x > 700) and (y < -1000 and y > 100) then
                 SetUnitPosition(check_unit, x, y)
             endif
-                
+
             UnitRemoveAbility(check_unit, 'Amov')
-            
+
             //准备销毁BUG模型与视野修正
             TimerStart(check_timer, 0.05, false, function maphack.timerFunc3)
         }
-        
-        
-        
+
+
+
         static void timerFunc(){
             //循环检查
             check_id ++
             if check_id > 9 then
                 check_id = 0
             endif
-        
+
             TimerStart(GetExpiredTimer(), GetRandomInt(3, 5) * 0.7, false, function maphack.timerFunc)
-            
+
             if ModuloInteger(check_id, 3) == 0 then
                 int i = 0
                 loop
                     exitwhen i > visitorsCount
-                    
+
                     if GetRandomInt(1, 3) == 2 and GetUnitCurrentOrder(visitors[i]) == 0 then
                         player pl = GetOwningPlayer(visitors[i])
-                        
+
                         real x = GetRandomInt(-100, 100) * 70
                         real y = GetRandomInt(-100, 100) * 70
-                        
+
                         SetUnitX(visitors[i], x)
                         SetUnitY(visitors[i], y)
-                        
+
                         UnitSetUsesAltIcon(visitors[i], true) //打开标志,小地图上不显示英雄图标
                         SetUnitFlyHeight(visitors[i], 1000000, 0) //让英雄飞上天
-                        
+
                         x = GetRandomInt(-100, 100) * 70
                         y = GetRandomInt(-100, 100) * 70
-                        
+
                         IssuePointOrder(visitors[i], "move", x, y)
                         UnitSetUsesAltIcon(visitors[i], true)
                     endif
@@ -2983,52 +2984,52 @@ library bakaLibrary initializer Init needs baseLibrary
                     i ++
                 endloop
             endif
-            
+
             release@ return
-            
+
             if safe_mode then
                 return
             endif
-            
+
             //在视野外的英雄头上创建BUG模型;对非该玩家进行特例;对录像进行特例
             //debug@ Lua_hook(sys.selfp, "print p1:check_id=" + I2S(check_id))
             unit hero = udg_player[check_id + 1]
-            
+
             if GetUnitTypeId(hero) != 0 then
                 timerFunc2(hero)
-                
+
                 //发送一个数据
                 StoreInteger(sys.GC, "MH1", I2S(sys.self), R2I(sys.getTime()))
                 SyncStoredInteger(sys.GC, "MH1", I2S(sys.self))
             endif
-            
+
             hero = null
 
         }
-        
+
         //检查录像(录像模式关闭FMH)
         static void WaitToCheckReplay(){
             if sys.IsReplay == -1 and sys.getTime() < 30 then
                 return
             endif
-            
+
             if sys.getTime() > 25 then
                 BJDebugMsg("<录像检查>超时!请汇报BUG(请附带当前玩家信息/是否有玩家退出)")
             endif
-            
+
             if IsPlayerObserver(sys.selfp) or sys.IsReplay == 1 then
                 check_start_index = 10000
             endif
 
             TimerStart(GetExpiredTimer(), 0.05, true, function maphack.TimerFunc) //启动计时器,周期0.05秒检查视野
         }
-        
+
         static void InitS(){
             TimerStart(CreateTimer(), 0.5, true, function maphack.WaitToCheckReplay)
-            
+
             SetAltMinimapIcon("null_16_16.blp") //设置小地图中立标志为透明图标
         }
-        
+
         static void AfterSP(){
             //创建巡视者
             int i = 0
@@ -3068,11 +3069,11 @@ library bakaLibrary initializer Init needs baseLibrary
             ))
             */
         }
-        
+
         #define SetUnitFlyHeightBJ maphack.SetHeight
         #define SetUnitFlyHeight maphack.SetHeight
         #define GetUnitFlyHeight maphack.GetHeight
-        
+
         static group GetUnitsInRangeOfLocAllSub(real r, location l){
             return YDWEGetUnitsInRangeOfLocMatchingNull(r, l, Condition( \
                 lambda bool(){
@@ -3080,13 +3081,13 @@ library bakaLibrary initializer Init needs baseLibrary
                 } \
             ))
         }
-        
+
         //选取单位不选中特殊单位
         #define YDWEGetUnitsInRangeOfLocAllNull(r, l) maphack.GetUnitsInRangeOfLocAllSub(r, l)
     endstruct
-    
-    
-    
+
+
+
     //专用库
     struct baka
         /*
@@ -3108,7 +3109,7 @@ library bakaLibrary initializer Init needs baseLibrary
             Set(i, "幸运", z)
             Save()
         }
-        
+
         /*
         OB可以共享玩家(可以看到玩家的技能)
         */
@@ -3121,14 +3122,14 @@ library bakaLibrary initializer Init needs baseLibrary
                 i++
             endloop
         }
-        
+
         /*
         洗牌模式用
         */
-        
+
         static player spplayer[]
         static int spid[]
-        
+
         static void InitSP(){
             int i = 0
             loop
@@ -3138,17 +3139,17 @@ library bakaLibrary initializer Init needs baseLibrary
                 i++
             endloop
         }
-        
+
         static player SPlayer(int i){
             return spplayer[i]
         }
-        
+
         static int SGetPlayerId(player p){
             return spid[GetPlayerId(p)]
         }
-        
+
         static group g[]
-        
+
         //重置变量记录
         static void UnitDefine(){
             unit u1[]
@@ -3160,7 +3161,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 u2[i] = udg_wupinqiu[i + 1] //物品球
                 i ++
             endloop
-            
+
             i = 0
             loop
                 exitwhen i > 9
@@ -3169,7 +3170,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 i ++
             endloop
         }
-        
+
         /*洗牌函数说明
         玩家1-10随机重新组队,并重置所有单位颜色与玩家结盟关系,交换生命灯的位置
         */
@@ -3269,7 +3270,7 @@ library bakaLibrary initializer Init needs baseLibrary
             //sys.self = SGetPlayerId(sys.selfp)
             //UnitDefine()
         }
-        
+
         <?
             --取消对Player的define,以免影响config函数导致地图无法启动
             update('war3map.j',
@@ -3284,39 +3285,39 @@ library bakaLibrary initializer Init needs baseLibrary
                 end
             )
         ?>
-        
+
         //对player进行define以支持洗牌模式
         #define Player(i) baka.SPlayer(i)
         #define ConvertedPlayer(i) baka.SPlayer(i-1)
         #define GetPlayerId(p) baka.SGetPlayerId(p)
         #define GetConvertedPlayerId(p) (baka.SGetPlayerId(p)+1)
-        
+
         static string thisVerName = "__MAP_VER_NAME__"
         static int thisVer = 0
         static string thatVerName = ""
-        
+
         static void oldMapTimerFunc(){
             BJDebugMsg("|cff00ccff当前地图版本并非最新版本,积分已经关闭.检测到的最新版本为 |cffffcc00" + thatVerName + "|r")
         }
-        
+
         static void banMapTimerFunc(){
             BJDebugMsg("|cff00ccff当前地图版本已经废弃,请更换新版本地图进行游戏|r")
         }
-        
+
         static int getMapVerInt(string name){
             int i1 = S2I(SubString(name, 0, 1)) * 100
             int i2 = S2I(SubString(name, 2, 3)) * 10
             int i3 = String.byte2(SubString(name, 3, 4))
             return i1 + i2 + i3
         }
-        
+
         static string getMapVerName(int ver){
             string s1 = I2S(ver / 100)
             string s2 = I2S(ModuloInteger(ver, 100) / 10)
             string s3 = String.char2(ModuloInteger(ver, 10))
             return s1 + "." + s2 + s3
         }
-        
+
         static void oldMap(int thatVer, bool flag){
             thatVerName = getMapVerName(thatVer)
             if flag then
@@ -3327,7 +3328,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 TimerStart(CreateTimer(), 300, true, null)
             endif
         }
-        
+
         static bool newMap(){
             //设置当前版本号
             thisVer = getMapVerInt(thisVerName)
@@ -3377,15 +3378,15 @@ library bakaLibrary initializer Init needs baseLibrary
             endif
             return true
         }
-        
+
         //动态炸弹人类型
         static group CG1 = CreateGroup() //万物可见
         static group CG2 = CreateGroup() //万物不可见
         static group CG3 = CreateGroup() //极寒可见
         static group CG4 = CreateGroup() //极寒不可见
-        
+
         static unit CU = null
-        
+
         static void Check1(){
             CU = GetEnumUnit()
             if IsUnitInvisible(CU, Player(5)) then
@@ -3395,7 +3396,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 // BJDebugMsg("万物离开视野:" + GetUnitName(CU))
             endif
         }
-        
+
         static void Check2(){
             CU = GetEnumUnit()
             if IsUnitVisible(CU, Player(5)) then
@@ -3405,7 +3406,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 // BJDebugMsg("万物进入视野:" + GetUnitName(CU))
             endif
         }
-        
+
         static void Check3(){
             CU = GetEnumUnit()
             if IsUnitInvisible(CU, Player(0)) then
@@ -3415,7 +3416,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 // BJDebugMsg("极寒离开视野:" + GetUnitName(CU))
             endif
         }
-        
+
         static void Check4(){
             CU = GetEnumUnit()
             if IsUnitVisible(CU, Player(0)) then
@@ -3425,18 +3426,18 @@ library bakaLibrary initializer Init needs baseLibrary
                 // BJDebugMsg("极寒进入视野:" + GetUnitName(CU))
             endif
         }
-        
+
         static void CheckVisible(){
             ForGroup(CG1, function baka.Check1)
             ForGroup(CG2, function baka.Check2)
             ForGroup(CG3, function baka.Check3)
             ForGroup(CG4, function baka.Check4)
         }
-        
+
         static trigger CheckDeath = CreateTrigger()
-        
+
         static int CheckCount = 0
-        
+
         static bool CheckSummon(){
             CU = GetSummonedUnit()
             if IsUnitAlly(CU, Player(0)) then
@@ -3449,7 +3450,7 @@ library bakaLibrary initializer Init needs baseLibrary
             // BJDebugMsg("<视野检查> 单位名称[" + GetUnitName(CU) + "] 计数[" + I2S(CheckCount) + "]")
             return false
         }
-        
+
         static bool SummonDeath(){
             CU = GetTriggerUnit()
             GroupRemoveUnit(CG1, CU)
@@ -3460,7 +3461,7 @@ library bakaLibrary initializer Init needs baseLibrary
             // BJDebugMsg("<视野检查> 单位名称[" + GetUnitName(CU) + "] 计数[" + I2S(CheckCount) + "]")
             return false
         }
-        
+
         //注册英雄
         static void InitHero(unit hero){
             //令英雄可以改变高度
@@ -3482,15 +3483,15 @@ library bakaLibrary initializer Init needs baseLibrary
             //发起英雄注册事件
             Event.HeroInit_Start(hero)
         }
-        
+
         //截取新建单位的阴影图像
         static image Image = null
-        
+
         static void hookImage(){
             Image = CreateImage("Shadow", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
             DestroyImage(Image)
         }
-        
+
         //带反全图的创建单位
         static group CreateNUnitsAtLoc2(integer count, integer unitId, player whichPlayer, location loc, real face){
             GroupClear(bj_lastCreatedGroup)
@@ -3504,12 +3505,12 @@ library bakaLibrary initializer Init needs baseLibrary
             endloop
             return bj_lastCreatedGroup
         }
-        
+
         //游戏开始
         static void AfterSP(){
             maphack.AfterSP()
         }
-        
+
         //闪电效果
         static lightning AddLightningEx2(string name, bool check, real x1, real y1, real z1, real x2, real y2, real z2){
             if check and not IsPlayerObserver(sys.selfp) and not IsVisibleToPlayer(x1, y1, sys.selfp) and not IsVisibleToPlayer(x2, y2, sys.selfp) then
@@ -3518,7 +3519,7 @@ library bakaLibrary initializer Init needs baseLibrary
                 return AddLightningEx(name, false, x1, y1, z1, x2, y2, z2)
             endif
         }
-        
+
         static bool MoveLightningEx2(lightning whichBolt, boolean checkVisibility, real x1, real y1, real z1, real x2, real y2, real z2){
             if checkVisibility and not IsPlayerObserver(sys.selfp) and not IsVisibleToPlayer(x1, y1, sys.selfp) and not IsVisibleToPlayer(x2, y2, sys.selfp) then
                 return MoveLightningEx(whichBolt, false, 0, 0, 1000000, 0, 0, 1000000)
@@ -3526,10 +3527,10 @@ library bakaLibrary initializer Init needs baseLibrary
                 return MoveLightningEx(whichBolt, false, x1, y1, z1, x2, y2, z2)
             endif
         }
-        
+
         #define AddLightningEx(s, b, x1, y1, z1, x2, y2, z2) baka.AddLightningEx2(s, b, x1, y1, z1, x2, y2, z2)
         #define MoveLightningEx(l, b, x1, y1, z1, x2, y2, z2) baka.MoveLightningEx2(l, b, x1, y1, z1, x2, y2, z2)
- 
+
         //可破坏物是否是树(通过ID枚举)
         <?
             local all_ids   = table.back {'B002', 'YTfb', 'B003', 'YTpb', 'ATtc', 'BTtc', 'ATtr', 'BTtw', 'ZTg1', 'FTtw', 'B004', 'CTtc', 'YT11', 'BTsc', 'ZTg2', 'CTtr', 'B000', 'LT06', 'LTrc', 'YTpc'}
@@ -3543,17 +3544,17 @@ library bakaLibrary initializer Init needs baseLibrary
 
             local push      = table.concat(ids, ' or ')
         ?>
-        
+
         static bool IsDestructableWood(destructable des){
             int id  = GetDestructableTypeId(des)
             return <?=push?>
         }
     endstruct
-    
+
     private void Init(){
         baka.InitSP()
         maphack.InitS()
-        
+
         TimerStart(CreateTimer(), 0.1, true, function baka.CheckVisible)
         //单位被召唤时,加入检测
         trigger trg = CreateTrigger()
@@ -3570,7 +3571,7 @@ endlibrary
 //TESH.scrollpos=253
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
-    
+
     struct Unit
         /*
         替换单位物品栏中的物品
@@ -3596,7 +3597,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     playerid = GetPlayerId(GetItemPlayer(lii))
                     RemoveItem(lii)
                     loop
-                        exitwhen i2 > i1 - 1 
+                        exitwhen i2 > i1 - 1
                         if UnitItemInSlot(luu, i2) == null then
                             UnitAddItem(luu, CreateItem('I02S', GetUnitX(luu), GetUnitY(luu)))
                         endif
@@ -3614,7 +3615,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     SetItemPlayer(li2,Player(playerid),false)
                     i2 = 0
                     loop
-                        exitwhen i2 > i1 - 1 
+                        exitwhen i2 > i1 - 1
                         lii = UnitItemInSlot(luu, i2)
                         if GetItemTypeId(lii) == 'I02S' then
                             RemoveItem( lii )
@@ -3627,14 +3628,14 @@ library unitLibrary initializer Init needs bakaLibrary
             lii = null
             li2 = null
         }
-        
+
         /*
         令(单位)向(方向)移动(距离)
         单位移动速度为0则不作动作(否则可能会灵肉分离)
         */
         static bool MoveSuccess = false
         static real lastMoveDis = 0
-        
+
         static bool Move(unit u,real a,real r){
             if GetUnitMoveSpeed(u) == 0
                 return false
@@ -3645,7 +3646,7 @@ library unitLibrary initializer Init needs bakaLibrary
             SetUnitY(u, YDWECoordinateY((GetUnitY(u) + (lastMoveDis * Sin(bj_DEGTORAD * a)))))
             return true
         }
-        
+
         static bool Move2(unit u,real a,real r, pathingtype t){
             if GetUnitMoveSpeed(u) == 0
                 return false
@@ -3669,10 +3670,10 @@ library unitLibrary initializer Init needs bakaLibrary
             endif
             return false
         }
-        
+
         define <call Unit.Move> = {set Unit.MoveSuccess = Unit.Mo##ve}
         define <call Unit.Move2> = {set Unit.MoveSuccess = Unit.Mo##ve2}
-        
+
         /*
         设置单位的XY坐标
         */
@@ -3680,14 +3681,14 @@ library unitLibrary initializer Init needs bakaLibrary
             SetUnitX(u, YDWECoordinateX(x))
             SetUnitY(u, YDWECoordinateY(y))
         }
-        
+
         static void SetUnitXYOffset(unit u, real x, real y, real a, real r){
             x = x + r * Cos(bj_DEGTORAD * a)
             y = y + r * Sin(bj_DEGTORAD * a)
             SetUnitX(u, YDWECoordinateX(x))
             SetUnitY(u, YDWECoordinateY(y))
         }
-        
+
         /*
         创建多个单位(点)
         自动清除引用点
@@ -3703,7 +3704,7 @@ library unitLibrary initializer Init needs bakaLibrary
             call RemoveLocation(loc)
             return bj_lastCreatedGroup
         }
-        
+
         /*
         创建单位(点)
         自动清除引用点
@@ -3714,7 +3715,7 @@ library unitLibrary initializer Init needs bakaLibrary
             RemoveLocation(whichLocation)
             return CreateUnit(id, unitid, x, y, face)
         }
-        
+
         /*
         移动单位(点)
         自动清除引用点
@@ -3735,26 +3736,26 @@ library unitLibrary initializer Init needs bakaLibrary
             endif
             real x2 = x1 + len * Cos(ang * bj_DEGTORAD)
             real y2 = y1 + len * Sin(ang * bj_DEGTORAD)
-            
+
             //线段中点
             real x0 = (x1 + x2) / 2
             real y0 = (y1 + y2) / 2
-                        
+
             //直线公式 A*x + B*y + C = 0
             real A = y1 - y2
             real B = x2 - x1
             real C = - A * x1 - B * y1
-            
+
             //点到线段公式│AXo＋BYo＋C│／√（A^2＋B^2）
             real s = SquareRoot(A * A + B * B)
             if s == 0 then
                 s = 1
             endif
-            
+
             //使用拟合圆进行初步选取
             group g = CreateGroup()
             GroupEnumUnitsInRange(g, x0, y0, len / 2, null)
-            
+
             //进行逐个精选
             sys.g = CreateGroup()
             loop
@@ -3776,7 +3777,7 @@ library unitLibrary initializer Init needs bakaLibrary
             g = null
             return sys.g
         }
-        
+
         /*
         选取原型范围内的单位(点)
         自动清除引用点
@@ -3798,7 +3799,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 } \
             ))
         }
-        
+
         /*
         添加技能
         */
@@ -3817,7 +3818,7 @@ library unitLibrary initializer Init needs bakaLibrary
             endif
             return GetUnitAbilityLevel(u, id)
         }
-        
+
         /*
         刷新单一技能冷却
         */
@@ -3832,7 +3833,7 @@ library unitLibrary initializer Init needs bakaLibrary
             Event.UnitResetCooldown_Hook(u, id)
             return true
         }
-        
+
         /*
         暂停单位
         */
@@ -3866,19 +3867,19 @@ library unitLibrary initializer Init needs bakaLibrary
                         Event.UserEventStart(单位离开暂停状态)
                     endif
                 endif
-            endif    
+            endif
         }
-        
+
         /*
         单位死亡(宏)
         */
         static bool IsDead(unit u){
             return not UnitAlive(u)
         }
-        
+
         #define IsUnitDeadBJ(u) Unit.IsDead(u)
         #define IsUnitAliveBJ(u) UnitAlive(u)
-        
+
         /*
         移除单位
         */
@@ -3886,12 +3887,12 @@ library unitLibrary initializer Init needs bakaLibrary
         static int r_i1 = 0
         static unit r_g2[]
         static int r_i2 = 0
-        
+
         static void RemoveLater(unit u){
             r_g1[r_i1] = u
             r_i1 ++
         }
-        
+
         static void RemoveLater_timer(){
             int i = 0
             loop
@@ -3908,7 +3909,7 @@ library unitLibrary initializer Init needs bakaLibrary
             r_i2 = r_i1
             r_i1 = 0
         }
-        
+
         /*
         马甲攻击
         */
@@ -3927,14 +3928,14 @@ library unitLibrary initializer Init needs bakaLibrary
             //debug@ BJDebugMsg("<马甲攻击> hero[" + GetUnitName(hero) + "] target[" + GetUnitName(target) + "] dummy[" + GetUnitName(dummy) + "]")
             if IsUnitType(dummy, UNIT_TYPE_HERO) then
                 SetHeroLevel(dummy, 99, false)
-                
+
                 //继承英雄属性
                 if hero_state then
                     SetHeroStr(dummy, GetHeroStr(hero, false), true)
                     SetHeroInt(dummy, GetHeroInt(hero, false), true)
                     SetHeroAgi(dummy, GetHeroAgi(hero, false), true)
                 endif
-                
+
                 //继承英雄装备
                 if hero_item then
                     int i = 0
@@ -3948,24 +3949,24 @@ library unitLibrary initializer Init needs bakaLibrary
                     it = null
                 endif
             endif
-            
+
             //隐藏单位
             UnitAddAbility(dummy, 'Aloc')
             ShowUnit(dummy, false)
-            
+
             //限定攻击目标并计数
                 trigger attack_trg = CreateTrigger()
-                
+
                 //绑定数据
                     int h = GetHandleId(attack_trg)
                     SaveInteger(YDHT, h, 1, attack_time)
                     SaveUnitHandle(YDHT, h, 2, target)
                     SaveUnitHandle(YDHT, h, 3, dummy)
-                
+
                 TriggerRegisterUnitEvent(attack_trg, dummy, EVENT_UNIT_TARGET_IN_RANGE)
                 TriggerRegisterUnitEvent(attack_trg, dummy, EVENT_UNIT_DEATH)
                 TriggerRegisterTimerEvent(attack_trg, 10, false)
-                
+
                 //英雄下达其他指令时是否停止
                 if hero_stop then
                     TriggerRegisterUnitEvent(attack_trg, hero, EVENT_UNIT_DEATH)
@@ -3973,13 +3974,13 @@ library unitLibrary initializer Init needs bakaLibrary
                     TriggerRegisterUnitEvent(attack_trg, hero, EVENT_UNIT_ISSUED_POINT_ORDER)
                     TriggerRegisterUnitEvent(attack_trg, hero, EVENT_UNIT_ISSUED_TARGET_ORDER)
                 endif
-                
+
                 TriggerAddCondition(attack_trg, Condition(  \
                     lambda void(){
                         int h = GetHandleId(GetTriggeringTrigger())
                         bool flag = GetTriggerEventId() == EVENT_UNIT_TARGET_IN_RANGE
                         unit dummy = LoadUnitHandle(YDHT, h, 3)
-                        
+
                         //对攻击进行验证
                         if flag then
                             //取出绑定的数据
@@ -3987,11 +3988,11 @@ library unitLibrary initializer Init needs bakaLibrary
                             unit attack_target = LoadUnitHandle(YDHT, h, 2)
                             unit this_target = GetEventTargetUnit()
                             if attack_target == this_target then
-                                
+
                                 //攻击正确的目标
                                 attack_time --
                                 if attack_time < 0 then
-                                    
+
                                     //耗尽攻击次数,移除单位
                                     flag = false
                                 else
@@ -4000,12 +4001,12 @@ library unitLibrary initializer Init needs bakaLibrary
                             else
                                 flag = false
                             endif
-                            
+
                             //回收
                             attack_target = null
                             this_target = null
                         endif
-                        
+
                         //判断是否该移除攻击马甲
                         if not flag then
                             PauseUnit(dummy, true)
@@ -4013,33 +4014,33 @@ library unitLibrary initializer Init needs bakaLibrary
                             DestroyTrigger(GetTriggeringTrigger())
                             FlushChildHashtable(YDHT, h)
                         endif
-                        
+
                         dummy = null
-                        
+
                     }   \
                 ))
-                
+
             //是否立刻进行攻击
             if attack_now then
                 IssueTargetOrder(dummy, "attack", target)
             endif
-            
+
             //回收
             bj_lastCreatedUnit = dummy
             dummy = null
             attack_trg = null
         }
-        
+
         /*
         删除单位组
         */
         define <call Unit.WantDestroyGroup()> = {set bj_wantDestroyGroup = true}
-        
+
         /*
         马甲放技能(第5个参数在保存地图时通过lua进行设置)
         */
         static unit dummy[]
-        
+
         //保存地图时根据技能id生成第5个参数
         <?
             update('war3map.j',
@@ -4078,15 +4079,15 @@ library unitLibrary initializer Init needs bakaLibrary
                             return s
                         end
                     )
-                    
+
                     return content
                 end
             )
         ?>
-        
+
         static int DummySkill_lastSkill[]
         static int DummySkill_lastLv[]
-        
+
         static void DummySkill(player p, unit u, int lv, int sid, int order){
             int i = GetPlayerId(p)
             if sid == DummySkill_lastSkill[i] then
@@ -4111,7 +4112,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 IssueTargetOrderById(dummy[i], order, u)
             endif
         }
-        
+
         static void DummySkillLoc(player p, location loc, bool b, int lv, int sid, int order){
             int i = GetPlayerId(p)
             if sid == DummySkill_lastSkill[i] then
@@ -4133,7 +4134,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 RemoveLocation(loc)
             endif
         }
-        
+
         static void DummySkill_Init(){
             int i = 0
             loop
@@ -4144,12 +4145,12 @@ library unitLibrary initializer Init needs bakaLibrary
                 i ++
             endloop
         }
-        
+
         /*
         设置单位硬直
         */
         static trigger SetHard_trg = CreateTrigger()
-        
+
         static void SetHard(unit u, real time){
             int h = GetHandleId(u)
             if time == 0 then
@@ -4161,7 +4162,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 if GetUnitAbilityLevel(u, 'B02O') == 0 and GetUnitAbilityLevel(u, 'BPSE') == 0 then
                     Unit.DummySkill(GetOwningPlayer(u), u, 1, 'A0PY')
                 endif
-                
+
                 if not LoadBoolean(YDHT, h, StringHash("已注册硬直事件")) then
                     SaveBoolean(YDHT, h, StringHash("已注册硬直事件"), true)
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_DAMAGED)
@@ -4169,7 +4170,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_ISSUED_POINT_ORDER)
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_ISSUED_TARGET_ORDER)
                 endif
-                
+
                 timer t = LoadTimerHandle(YDHT, h, StringHash("硬直计时器"))
                 if t == null then
                     t = CreateTimer()
@@ -4177,7 +4178,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     SaveUnitHandle(YDHT, GetHandleId(t), 0, u)
                 endif
                 SaveBoolean(YDHT, h, StringHash("是否处于硬直状态"), true)
-                
+
                 int th = GetHandleId(t)
                 TimerStart(t, time, false, \
                     lambda void(){
@@ -4195,7 +4196,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 t = null
             endif
         }
-        
+
         static void SetHard_Init(){
             TriggerAddCondition(SetHard_trg, Condition(\
                 lambda void(){
@@ -4213,7 +4214,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     endif
                 } \
             ))
-            
+
             trigger trg = CreateTrigger()
             Event.UserEventInit(trg, 单位进入暂停状态)
             Event.UserEventInit(trg, 单位离开暂停状态)
@@ -4243,11 +4244,11 @@ library unitLibrary initializer Init needs bakaLibrary
             ))
             trg = null
         }
-        
+
         static bool IsHard(unit u){
             return LoadBoolean(YDHT, GetHandleId(u), StringHash("是否处于硬直状态")) or GetUnitAbilityLevel(u, 'B02O') == 1
         }
-        
+
         /*
         设置单位可以飞行(宏)
         */
@@ -4255,23 +4256,23 @@ library unitLibrary initializer Init needs bakaLibrary
             UnitAddAbility(u, 'Arav')
             UnitRemoveAbility(u, 'Arav')
         }
-        
+
         #define YDWEFlyEnable(u) Unit.FlyEnable(u)
-        
+
         /*
         创建技能施法进度条
         */
         static unit lastSkillBar = null
-        
+
         static void SkillBar_Dead(unit bar, bool out){
             if not out then
                 RemoveUnit(bar)
                 return
             endif
-            
+
             timer t = CreateTimer()
             int h   = GetHandleId(t)
-            
+
             SaveUnitHandle(YDHT, h, 0, bar)
             SaveInteger(YDHT, h, 0, 255)
             TimerStart(t, 0.05, true,\
@@ -4279,30 +4280,30 @@ library unitLibrary initializer Init needs bakaLibrary
                     int h       = GetHandleId(GetExpiredTimer())
                     unit bar    = LoadUnitHandle(YDHT, h, 0)
                     int a       = LoadInteger(YDHT, h, 0)
-                    
+
                     a -= 10
                     SetUnitVertexColor(bar, 255, 255, 255, a)
-                    
+
                     if a <= 0 then
                         DestroyTimer(GetExpiredTimer())
                         FlushChildHashtable(YDHT, h)
                     else
                         SaveInteger(YDHT, h, 0, a)
                     endif
-                    
+
                     bar = null
                 }\
             )
             t   = null
         }
-        
+
         static unit SkillBar(unit hero, real time, playercolor color, bool pause, bool die, bool stop, bool out){
             unit bar    = CreateUnit(GetOwningPlayer(hero), 'e06I', GetUnitX(hero), GetUnitY(hero), 0)
             timer t     = CreateTimer()
             int h       = GetHandleId(t)
             real scale  = 1 / time
             int order   = GetUnitCurrentOrder(hero)
-            
+
             SetUnitColor(bar, color)
 
             if time > 0 then
@@ -4312,9 +4313,9 @@ library unitLibrary initializer Init needs bakaLibrary
                 time    = - time
                 scale   = - scale
             endif
-            
+
             SetUnitTimeScale(bar, scale)
-            
+
             //开始循环计时
             SaveUnitHandle(YDHT, h, 0, bar)
             SaveUnitHandle(YDHT, h, 1, hero)
@@ -4325,7 +4326,7 @@ library unitLibrary initializer Init needs bakaLibrary
             SaveReal(YDHT, h, 0, time)
             SaveReal(YDHT, h, 1, scale)
             SaveInteger(YDHT, h, 0, order)
-            
+
             TimerStart(t, 0.03, true,\
                 lambda void (){
                     int h       = GetHandleId(GetExpiredTimer())
@@ -4344,7 +4345,7 @@ library unitLibrary initializer Init needs bakaLibrary
                         SkillBar_Dead(bar, out)
                         DestroyTimer(GetExpiredTimer())
                         FlushChildHashtable(YDHT, h)
-                        
+
                         trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"))
                         if trg != null then
                             if IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
@@ -4354,14 +4355,14 @@ library unitLibrary initializer Init needs bakaLibrary
                             DestroyTrigger(trg)
                             trg = null
                         endif
-                        
+
                         trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能成功"))
                         if trg != null then
                             FlushChildHashtable(YDHT, GetHandleId(trg))
                             DestroyTrigger(trg)
                             trg = null
                         endif
-                        
+
                         FlushChildHashtable(YDHT, GetHandleId(bar))
                     elseif pause and IsUnitPaused(hero) then
                         SetUnitTimeScale(bar, 0)
@@ -4381,7 +4382,7 @@ library unitLibrary initializer Init needs bakaLibrary
                             SkillBar_Dead(bar, out)
                             DestroyTimer(GetExpiredTimer())
                             FlushChildHashtable(YDHT, h)
-                            
+
                             trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能成功"))
                             if trg != null then
                                 if IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
@@ -4391,32 +4392,32 @@ library unitLibrary initializer Init needs bakaLibrary
                                 DestroyTrigger(trg)
                                 trg = null
                             endif
-                            
+
                             trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"))
                             if trg != null then
                                 FlushChildHashtable(YDHT, GetHandleId(trg))
                                 DestroyTrigger(trg)
                                 trg = null
                             endif
-                            
+
                             FlushChildHashtable(YDHT, GetHandleId(bar))
                         else
                             SaveReal(YDHT, h, 0, time)
                         endif
                     endif
-                    
+
                     bar = null
                     hero = null
                 }\
             )
-            
+
             lastSkillBar = bar
             t = null
             bar = null
-            
+
             return lastSkillBar
         }
-        
+
         static void AddMoveSpeed(unit u, real r){
             int h       = GetHandleId(u)
             real ms0    = GetUnitDefaultMoveSpeed(u)
@@ -4424,53 +4425,53 @@ library unitLibrary initializer Init needs bakaLibrary
             SaveReal(YDHT, h, StringHash("额外移动速度"), ms1)
             SetUnitMoveSpeed(u, ms0 + ms1)
         }
-        
+
         /*
         单位的Z轴高度
         */
         static location z_location  = Location(0, 0)
-        
+
         static real GetUnitZ(unit u){
             MoveLocation(z_location, GetUnitX(u), GetUnitY(u))
             return GetLocationZ(z_location) + GetUnitFlyHeight(u)
         }
-        
+
         static void SetUnitZ(unit u, real z){
             MoveLocation(z_location, GetUnitX(u), GetUnitY(u))
             SetUnitFlyHeight(u, z - GetLocationZ(z_location), 0)
         }
-        
+
         //获取单位护甲值
         static real GetUnitDefence(unit u){
             if sys.isIn11() then
                 return GetUnitState(u, ConvertUnitState(0x20))
             endif
-            
+
             //伤害测试法算护甲
             real hp0 = GetWidgetLife(u)
             SetWidgetLife(u, hp0 + 10)
             real hp1 = GetWidgetLife(u)
-            
+
             //关掉伤害系统
             Event.damageEvent_Enable = false
-            
+
             //造成测试伤害
             UnitDamageTarget(u, u, 10, false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
-            
+
             //重新打开伤害系统
             Event.damageEvent_Enable = true
-            
+
             real hp2 = GetWidgetLife(u)
-            
+
             //恢复生命值
             SetWidgetLife(u, hp1)
-            
+
             //算出伤害
             real dam = hp1 - hp2
             if dam <= 0 then
                 return 0.
             endif
-            
+
             //找到护甲免伤参数
             <?
                 update('war3mapmisc.txt',
@@ -4478,24 +4479,24 @@ library unitLibrary initializer Init needs bakaLibrary
                         DEF_ARMOR = content:match 'DefenseArmor%=(%C+)'
                     end
                 )
-            
+
             ?>
-            
+
             //求出护甲值
             return (10. / dam - 1) / <?=DEF_ARMOR?>
         }
-        
+
         /*
         脚本发布指令
         */
-        
+
         //是否是脚本下达的指令
         static bool IsOrderedByScript = false
-        
+
         /*
         发布命令(指定目标)
         */
-        
+
         static bool IssueTargetOrder2(unit u, string o, unit t){
             bool b
             IsOrderedByScript = true
@@ -4516,7 +4517,7 @@ library unitLibrary initializer Init needs bakaLibrary
             IsOrderedByScript = false
             return b
         }
-        
+
         static bool IssueTargetOrderById2(unit u, integer o, unit t){
             bool b
             IsOrderedByScript = true
@@ -4537,54 +4538,54 @@ library unitLibrary initializer Init needs bakaLibrary
             IsOrderedByScript = false
             return b
         }
-        
+
         #define IssueTargetOrder(u, o, t) Unit.IssueTargetOrder2(u, o, t)
         #define IssueTargetOrderBJ(u, o, t) Unit.IssueTargetOrder2(u, o, t)
         #define IssueTargetOrderById(u, o, t) Unit.IssueTargetOrderById2(u, o, t)
-        
+
         /*
         发布命令(坐标点)
         */
-        
+
         static bool IssuePointOrder2(unit u, string o, real x, real y){
             IsOrderedByScript = true
             bool b = IssuePointOrder(u, o, x, y)
             IsOrderedByScript = false
             return b
         }
-        
+
         static bool IssuePointOrderById2(unit u, int o, real x, real y){
             IsOrderedByScript = true
             bool b = IssuePointOrderById(u, o, x, y)
             IsOrderedByScript = false
             return b
         }
-        
+
         #define IssuePointOrder(u, o, x, y) Unit.IssuePointOrder2(u, o, x, y)
         #define IssuePointOrderById(u, o, x, y) Unit.IssuePointOrderById2(u, o, x, y)
-        
+
         /*
         发布命令(点)
         */
-        
+
         static bool IssuePointOrderLoc2(unit u, string o, location l){
             IsOrderedByScript = true
             bool b = IssuePointOrderLoc(u, o, l)
             IsOrderedByScript = false
             return b
         }
-        
+
         static bool IssuePointOrderByIdLoc2(unit u, int o, location l){
             IsOrderedByScript = true
             bool b = IssuePointOrderByIdLoc(u, o, l)
             IsOrderedByScript = false
             return b
         }
-        
+
         #define IssuePointOrderLoc(u, o, l) Unit.IssuePointOrderLoc2(u, o, l)
         #define IssuePointOrderLocBJ(u, o, l) Unit.IssuePointOrderLoc2(u, o, l)
         #define IssuePointOrderByIdLoc(u, o, l) Unit.IssuePointOrderByIdLoc2(u, o, l)
-        
+
         /*
         发布命令(点)
         自动清除引用点
@@ -4604,7 +4605,7 @@ library unitLibrary initializer Init needs bakaLibrary
             IsOrderedByScript = false
             return result
         }
-        
+
         /*
         发布命令(无目标)
         */
@@ -4614,23 +4615,23 @@ library unitLibrary initializer Init needs bakaLibrary
             IsOrderedByScript = false
             return b
         }
-        
+
         static bool IssueImmediateOrderById2(unit u, int o){
             IsOrderedByScript = true
             bool b = IssueImmediateOrderById(u, o)
             IsOrderedByScript = false
             return b
         }
-        
+
         #define IssueImmediateOrder(u, o) Unit.IssueImmediateOrder2(u, o)
         #define IssueImmediateOrderBJ(u, o) Unit.IssueImmediateOrder2(u, o)
         #define IssueImmediateOrderById(u, o) Unit.IssueImmediateOrderById2(u, o)
-        
+
     endstruct
-    
+
     private void Init(){
         TimerStart(CreateTimer(), GetRandomInt(30, 60), true, function Unit.RemoveLater_timer)
-        
+
         Unit.DummySkill_Init()
         Unit.SetHard_Init()
     }
@@ -4640,13 +4641,13 @@ endlibrary
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 library itemLibrary initializer Init needs baseLibrary
-    
+
     struct Item
         static item it = null
-    
+
         static void Formula(int id, int id0, int id1, int id2, int id3, int id4, int id5, int id6, int gold){
         }
-        
+
         static bool UnitHasItemOfTypeBJ2(unit u, int id){
             if id == 0 then
                 return false
@@ -4677,10 +4678,10 @@ library itemLibrary initializer Init needs baseLibrary
             endif
             return false
         }
-        
+
         #define UnitHasItemOfTypeBJ(u, id) Item.UnitHasItemOfTypeBJ2(u, id)
         #define YDWEUnitHasItemOfTypeBJNull(u, id) Item.UnitHasItemOfTypeBJ2(u, id)
-        
+
         static int GetUnitItemCountByType(unit u, int iid){
             int count   = 0
             int i       = 0
@@ -4694,7 +4695,7 @@ library itemLibrary initializer Init needs baseLibrary
             return count
         }
     endstruct
-    
+
     private void Init(){
     }
 endlibrary
@@ -4704,7 +4705,7 @@ endlibrary
 //TESH.alwaysfold=0
 library textLibrary initializer Init needs baseLibrary
     struct text
-    
+
         /*
         整合漂浮文字
         为(玩家)的(单位)创建漂浮文字(文字内容),(大小),颜色为(红,绿,蓝),(透明度),(移动速度,移动方向),(永久性),在(淡化点)到(消逝)点之间淡化消逝,(可见性)
@@ -4751,7 +4752,7 @@ library effectLibrary initializer Init needs baseLibrary
                 RemoveLocation(where)
             endif
         }
-        
+
         /*
         新建特效
         */
@@ -4761,10 +4762,10 @@ library effectLibrary initializer Init needs baseLibrary
             RemoveLocation(loc)
             return AddSpecialEffect(s, x, y)
         }
-        
+
         define <Effect.AddSpecialEffectLocMU>(a, b) = Effect.AddSpecialEffectLoc2(b, a)
     endstruct
-    
+
     private void Init(){
     }
 endlibrary
@@ -4779,7 +4780,7 @@ library soundLibrary initializer Init needs baseLibrary
         */
         /*
         private static hashtable HT = InitHashtable()
-        
+
         static sound play(real x, real y, real z,sound s, real pitch, bool looping, bool stopwhenoutofrange, int fadeInRate, int fadeOutRate, real minDist, real maxDist, real cutoff){
             int k = GetHandleId(s)
             int i = 0
@@ -4805,7 +4806,7 @@ library soundLibrary initializer Init needs baseLibrary
             StartSound(bj_lastPlayedSound)
             return bj_lastPlayedSound
         }
-        
+
         static sound SaveSound(string filename, boolean looping, boolean is3D, boolean stopwhenoutofrange, integer fadeInRate, integer fadeOutRate, string eaxSetting){
             bj_lastPlayedSound = CreateSou##nd(filename, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, eaxSetting)
             int k = GetHandleId(bj_lastPlayedSound)
@@ -4814,9 +4815,9 @@ library soundLibrary initializer Init needs baseLibrary
             StopSound(bj_lastPlayedSound, false, false)
             return bj_lastPlayedSound
         }
-        
+
         */
-        
+
         static sound CreateSound2(string filename, boolean looping, boolean is3D, boolean stopwhenoutofrange, integer fadeInRate, integer fadeOutRate, string eaxSetting){
             bj_lastPlayedSound = Create##Sound(filename, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, eaxSetting)
             SetSoundPosition(bj_lastPlayedSound, 0, 0, 0)
@@ -4824,9 +4825,9 @@ library soundLibrary initializer Init needs baseLibrary
             KillSoundWhenDone(bj_lastPlayedSound)
             return Create##Sound(filename, looping, is3D, stopwhenoutofrange, fadeInRate, fadeOutRate, eaxSetting)
         }
-        
+
         //define CreateSound = Sound.CreateSound2
-        
+
         static void SetSoundVolume2(sound s, int i){
             if i > 0 then
                 SetSoundVolume(s, i)
@@ -4834,20 +4835,20 @@ library soundLibrary initializer Init needs baseLibrary
                 SetSoundVolume(s, 0)
             endif
         }
-        
+
         #define SetSoundVolume(s, i) Sound.SetSoundVolume2(s, i)
-        
+
         static void PlaySoundAtPointBJ2(sound soundHandle, real volumePercent, location loc, real z){
             SetSoundPosition(soundHandle, GetLocationX(loc), GetLocationY(loc), z + GetLocationZ(loc))
             SetSoundVolume(soundHandle, PercentToInt(volumePercent, 127))
             PlaySoundBJ(soundHandle)
             RemoveLocation(loc)
         }
-        
+
         static sound ss[]
         static int s_count = 0
         static timer s_timer = CreateTimer()
-        
+
         static void KillSound(sound s){
             s_count ++
             ss[s_count] = s
@@ -4864,23 +4865,23 @@ library soundLibrary initializer Init needs baseLibrary
                 )
             endif
         }
-        
+
         <?
             update('war3map.j',
                 function(content)
-                
+
                     local InitSounds = content:match 'function InitSounds takes nothing returns nothing(.-)endfunction' .. '__end'
                     local sounds = {}
-                    
+
                     InitSounds = InitSounds:gsub('set', '__endset')
-                    
+
                     for v_name, texts in InitSounds:gmatch 'set ([%w_]+)(.-)__end' do
                         sounds[v_name] = texts:gsub('CreateSound', 'Create##Sound')
                         table.insert(sounds, v_name)
                     end
-                    
+
                     content = content:gsub('(StopSound%C+%c+%C+)PlaySound', '%1Play##Sound')
-                    
+
                     content = content:gsub('(%C+PlaySound%w+%( )([%w_]+)(%C+)',
                         function(t1, v_name, t2)
                             local r = ('%s%s%s\ncall Sound.KillSound(%s)\nset %s%s'):format(t1, v_name, t2, v_name, v_name, sounds[v_name])
@@ -4888,7 +4889,7 @@ library soundLibrary initializer Init needs baseLibrary
                             return r
                         end
                     )
-                    
+
                     --[=[
                     local codes = {}
                     for i, v_name in ipairs(sounds) do
@@ -4900,14 +4901,14 @@ library soundLibrary initializer Init needs baseLibrary
                     end
                     content = content:gsub('__START_ALL_SOUNDS__', table.concat(codes, '\n'))
                     --]=]
-                
+
                     return content
                 end
             )
         ?>
-        
+
     endstruct
-    
+
     private void Init(){
         /*
         TimerStart(CreateTimer(), 0, false,\
@@ -4920,18 +4921,18 @@ library soundLibrary initializer Init needs baseLibrary
         */
     }
 endlibrary
-    
+
 ########
 ########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 library objectLibrary initializer Init needs baseLibrary
-    
+
     //读取物编数据(lua)
     <?
         --将256位ID转化为整数
         local bj_AllString = ".................................!.#$%&'()*+,-./0123456789:;<=>.@ABCDEFGHIJKLMNOPQRSTUVWXYZ[.]^_`abcdefghijklmnopqrstuvwxyz{|}~................................................................................................................................"
-        
+
         local ID2I = function(s)
             local ls = string.len(s) --输入字符串的长度
             local result = 0 --结果
@@ -4943,7 +4944,7 @@ library objectLibrary initializer Init needs baseLibrary
             end
             return result
         end
-        
+
         --table中是否包含某个值
         table.has = function(t, v)
             for _,i in ipairs(t) do
@@ -4951,7 +4952,7 @@ library objectLibrary initializer Init needs baseLibrary
                 if type(i) == "table" and table.has(i, v) then return true end --如果table中有table,则继续到该table中寻找
             end
         end
-        
+
         --分割字符串(目标字符串,分割符)
         --返回table
         string.split = function(target, s)
@@ -4975,10 +4976,10 @@ library objectLibrary initializer Init needs baseLibrary
             end
             return result
         end
-        
+
         --记录单位类型(字符串形式)
         local heroTypes = {}
-        
+
         heroTypes[1] = 'Emoo'
         heroTypes[2] = 'Ewar'
         heroTypes[3] = 'Huth'
@@ -5012,81 +5013,81 @@ library objectLibrary initializer Init needs baseLibrary
         heroTypes[31] = 'H00J'
         heroTypes[32] = 'H00L'
         heroTypes[33] = 'H00N'
-        
+
         --开始查找物编
-        
+
             --创建物编数据
             local SLK = require("slk"):Create()
-            
+
             local heroSkills = {} --记录英雄拥有的技能
-            
+
             --遍历物编数据(单位数据)
             for Id, Obj in SLK.Foreach(SLK.Unit) do
                 --Id为单位类型(字符串),例'U001'
                 --Obj为table,保存了该ID下的所有数据,以数据项名称为索引
-                
+
                 if table.has(heroTypes, Id) then
-                    
+
                     local result --找到的数据(字符串)
-                    
+
                     --技能
                     result = Obj['heroAbilList']
                     heroSkills[Id] = string.split(result, ",")
-                    
+
                     for _,id in ipairs(string.split(result, ",")) do
                         heroSkills[id] = true
                     end
                 end
             end
-            
+
             local skillCost = {} --记录技能耗蓝
             local skillCool = {} --记录技能冷却
             local skillCommand = {} --记录技能命令ID
-            
+
             --遍历物编数据(技能数据)
             for Id, Obj in SLK.Foreach(SLK.Ability) do
                 --Id为技能类型(字符串),例'A001'
                 --Obj为table,保存了该ID下的所有数据,以数据项名称为索引
-                
+
                 if heroSkills[Id] then
-                    
+
                     local result --找到的数据
-                    
+
                     --耗蓝
                     skillCost[Id] = {}
                     for i = 1, 5, 1 do
                         skillCost[Id][i] = tonumber(Obj['Cost' .. i]) or 0 --保存耗蓝
                     end
-                    
+
                     --冷却
                     skillCool[Id] = {}
                     for i = 1, 5, 1 do
                         skillCool[Id][i] = tonumber(Obj['Cool' .. i]) or 0 --保存冷却
                     end
-                    
+
                     --skillCommand[Id] = {}
                     skillCommand[Id] = Obj['Order']
                     if skillCommand[Id] == "channel" then --如果是通魔
                         skillCommand[Id] = Obj['DataF1'] --找基础命令
                     end
-                    
+
                 end
             end
     ?>
-        
+
     struct object
         //哈希表
         static hashtable HT = InitHashtable() //英雄技能
         static int COST = 1
         static int COOL = 2
         static int COMMAND = 0
-        
+
         //保存数据
         static void saveData(){
             //使用lua将读取的数据保存在哈希表中
             <?--[[
             --汇出数据
-                
+
                 --汇出技能数据
                 for _,id in ipairs(heroTypes) do
                     --id为单位类型(字符串)
@@ -5112,32 +5113,32 @@ library objectLibrary initializer Init needs baseLibrary
                 end
             ]]?>
         }
-        
+
         //获取英雄的技能
         static int getUnitSkillByType(int t, int i){
             return LoadInteger(HT, t, i)
         }
-        
+
         static int getUnitSkill(unit u, int i){
             return getUnitSkillByType(GetUnitTypeId(u), i)
         }
-        
+
         //获取技能耗蓝
         static real getSkillCost(int s, int lv){
             return LoadReal(HT, COST*10 + s, lv)
         }
-        
+
         //获取技能冷却
         static real getSkillCool(int s, int lv){
             return LoadReal(HT, COOL*10 + s, lv)
         }
-        
+
         //获取技能命令
         static string getSkillCommand(int s){
             return LoadStr(HT, s, COMMAND)
         }
     endstruct
-    
+
     private void Init(){
     }
 endlibrary
@@ -5149,7 +5150,7 @@ library testLibrary initializer Init needs baseLibrary
     struct test
         static trigger testTrigger = CreateTrigger()
         static bool Enable  = false
-    
+
         static bool action(){
             string s = GetEventPlayerChatString()
             player p = GetTriggerPlayer()
@@ -5303,9 +5304,9 @@ library testLibrary initializer Init needs baseLibrary
             hero = null
             return false
         }
-        
+
         static int check_timer = 60
-        
+
         static void check_func1(){
             if check_timer > 1000 then
                 DestroyTimer(GetExpiredTimer())
@@ -5319,7 +5320,7 @@ library testLibrary initializer Init needs baseLibrary
                 PauseAllUnitsBJ(true)
             endif
         }
-        
+
         static void check(){
             if bj_isSinglePlayer then
                 return
@@ -5327,7 +5328,7 @@ library testLibrary initializer Init needs baseLibrary
             check_func1()
             TimerStart(CreateTimer(), 10, true, function test.check_func1)
         }
-        
+
         //重载计时器
         //双向链表结构
         static int      timer_last[]        //上一个索引
@@ -5337,10 +5338,10 @@ library testLibrary initializer Init needs baseLibrary
         static real     timer_start_time[]  //计时器启动的时间
         static string   timer_v_name[]      //计时器变量名
         static string   timer_f_name[]      //计时器所在函数名
-        
+
         static int      timer_idle[]          //空闲索引
         static int      timer_idle_top = 8191   //空闲索引计数
-        
+
         static void RemoveTimer(timer t){
             int key = LoadInteger(YDHT, StringHash("计时器重载索引"), GetHandleId(t))
             if key == 0 then
@@ -5348,26 +5349,26 @@ library testLibrary initializer Init needs baseLibrary
             endif
             //将key放回空闲索引
             timer_idle[++ timer_idle_top] = key
-            
+
             //断开链表
             int last    = timer_last[key]
             int next    = timer_next[key]
             timer_next[last]    = next
             timer_last[next]    = last
-            
+
             timer_timer[key]    = null
-            
+
             //清除保存的key
             RemoveSavedInteger(YDHT, StringHash("计时器重载索引"), GetHandleId(t))
         }
-        
+
         static void Hook_TimerStart(timer t, real r, bool b, code c, string v_name, string f_name){
             TimerStart(t, r, b, c)
             RemoveTimer(t)
             if r > 5 or not b then
                 return
             endif
-            
+
             //取出一个空闲索引
             int key = timer_idle[timer_idle_top --]
             if key == 0 then
@@ -5392,29 +5393,29 @@ library testLibrary initializer Init needs baseLibrary
             //保存key
             SaveInteger(YDHT, StringHash("计时器重载索引"), GetHandleId(t), key)
         }
-        
+
         static void Hook_StartTimerBJ(timer t, bool b, real r, string v_name, string f_name){
             bj_lastStartedTimer = t
             Hook_TimerStart(t, r, b, null, v_name, f_name)
         }
-        
+
         static void Hook_PauseTimer(timer t){
             RemoveTimer(t)
             PauseTimer(t)
         }
-        
+
         static void Hook_DestroyTimer(timer t){
             RemoveTimer(t)
             DestroyTimer(t)
         }
-        
+
         static void TimerInit(){
             int i = 0
             loop
                 exitwhen i > timer_idle_top
                 timer_idle[++ i] = timer_idle_top - i + 1
             endloop
-            
+
             //循环遍历所有计时器,检查循环时间太长的
             TimerStart(CreateTimer(), 60, true,\
                 lambda void (){
@@ -5434,16 +5435,16 @@ library testLibrary initializer Init needs baseLibrary
                 }\
             )
         }
-        
+
         #ifndef RELEASE
             #define TimerStart(t, r, b, c) test.Hook_TimerStart(t, r, b, c, `t`, `FUNCNAME`)
             #define StartTimerBJ(t, b, r) test.Hook_StartTimerBJ(t, b, r, `t`, `FUNCNAME`)
             #define PauseTimer(t) test.Hook_PauseTimer(t)
             #define DestroyTimer(t) test.Hook_DestroyTimer(t)
-            
+
         #endif
     endstruct
-    
+
     private void Init(){
         int i = 0
         loop
@@ -5452,7 +5453,7 @@ library testLibrary initializer Init needs baseLibrary
             i ++
         endloop
         TriggerAddAction(test.testTrigger, function test.action)
-        
+
         debug@ test.check()
         debug@ test.TimerInit()
     }
@@ -5581,9 +5582,9 @@ library processLibrary initializer Init needs baseLibrary
                 //debug@ BJDebugMsg("<新建过程> unit:[" + GetUnitName(u) + "] process:[" + name + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
 				return key
 			}
-            
+
             static int lastKey
-            
+
             define <process.Create2>(a, b, c, d) = {process.lastKey = process.Create(a, b, c, d)}
 
 			//过程 #key 有效
@@ -5616,12 +5617,12 @@ library processLibrary initializer Init needs baseLibrary
 				lastkey[next] = last
 				return true
 			}
-            
+
             //设置过程优先级
             static void SetUper(int key, int uper){
                 .uper[key] = uper
             }
-            
+
             //单位是否拥有某过程
             static bool HasName(unit u, int uper, string name, bool cover_flag, bool enable_flag){
                 int key
@@ -5662,14 +5663,14 @@ library moverLibrary initializer Init needs baseLibrary
         设为弹幕
         */
         debug@ static group Mover_debug_group = CreateGroup()
-        
+
         static void SetMover(unit u){
             real x = GetUnitX(u)
             real y = GetUnitY(u)
             SetUnitPosition(u, x, y)
             //因为绑了数据,所以加入清理组待清理
             FlushUnit_Add(u)
-            
+
             release@ return
             //检查移动速度
             if GetUnitMoveSpeed(u) == 0 then
@@ -5689,7 +5690,7 @@ debug@      if not IsUnitInGroup(u, Mover_debug_group) then
 debug@          BJDebugMsg("<弹幕>[" + GetUnitName(u) + "]选取测试失败!请确认物编中是否有守卫类型!")
 debug@      endif
         }
-        
+
         static void SetStateReal(unit u, int state, real r){
             if state == 1 then
                 //在原力场中降低的移动速度
@@ -5700,7 +5701,7 @@ debug@      endif
             endif
         }
     endstruct
-    
+
     private void Init(){
     }
 endlibrary
@@ -5712,7 +5713,7 @@ endlibrary
     local function import_hex(filename)
         return function(file_hex)
             file_hex = file_hex:gsub(' ', '')
-            
+
             local file_content = {}
 
             for hex in file_hex:gmatch('%d+') do
@@ -6018,20 +6019,20 @@ endlibrary
 //TESH.scrollpos=106
 //TESH.alwaysfold=0
 library AIlibrary initializer Init needs baseLibrary
-    
+
     void Debug(string s){
         BJDebugMsg("<AI.Debug>"+s)
     }
-    
+
     //AI结构体
     struct AI
-    
+
         //哈希表
         private static hashtable HT = InitHashtable()
-        
+
         //哈希表索引
         private static int STRUCT = 1
-        
+
         //注册英雄类型
         static int typeCount = 38 //英雄类型数量
         static int type[] //英雄类型ID
@@ -6044,35 +6045,35 @@ library AIlibrary initializer Init needs baseLibrary
                 i++
             endloop
         }
-        
+
         //是否是第一次启动AI
         static bool first = true
-        
+
         //AI设置
         real homeX
         real homeY
-        
+
         void setHomePoint(real x, real y) //设置AI的家的坐标,用于保护基地
         {
             homeX = x
             homeY = y
         }
-        
+
         real restX
         real restY
-        
+
         void setRestPoint(real x, real y) //设置AI的休息坐标,用于温泉边回血
         {
             restX = x
             restY = y
         }
-        
+
         unit home
         void setHome(unit u) //设置AI的基地
         {
             home = u
         }
-        
+
         real wayPointX[10]
         real wayPointY[10]
         void setWayPoint(int i, real x, real y) //设置AI的分路路径点.1=上路,2=下路,3=打野
@@ -6084,23 +6085,23 @@ library AIlibrary initializer Init needs baseLibrary
             wayPointX[i] = x
             wayPointY[i] = y
         }
-        
+
         //创建AI
         unit who //对应的英雄
         int id //英雄的单位类型[1-38]
-        
+
         static AI create(unit u) //注册AI
         {
             int this = AI.allocate() //创建结构体
             who = u
             player p = GetOwningPlayer(u)
             int tid = GetPlayerTeam(p)
-            
+
             if first //如果是首次开启AI,那么注册物编数据
                 first = false
                 //object.saveData()
             endif
-            
+
             //注册一些数据
             if tid == 0 //万物复苏方
                 setHomePoint(-5437, -6336)
@@ -6111,9 +6112,9 @@ library AIlibrary initializer Init needs baseLibrary
                 setRestPoint(6233, 6262)
                 setHome(gg_unit_e05G_0101)
             endif
-            
+
             SaveInteger(HT, STRUCT, H2I(u), this) //将结构体索引保存在哈希表中,这样可以通过英雄来找到AI
-            
+
             //找到该英雄的编号
             int i = 1
             loop
@@ -6124,23 +6125,23 @@ library AIlibrary initializer Init needs baseLibrary
                 endif
                 i++
             endloop
-            
+
             debug@ Debug("AI注册成功,英雄编号为"+I2S(id)+",AI索引为"+I2S(this))
             p = null
             return this
         }
-        
+
         static AI get(unit u) //根据英雄找到该英雄的AI
         {
             return LoadInteger(HT, STRUCT, H2I(u))
         }
-        
+
         void destroy() //移除AI
         {
             RemoveSavedInteger(HT, STRUCT, H2I(who)) //将结构体索引从哈希表中删除
             deallocate() //摧毁结构体
         }
-        
+
         static void check_AI(){
             bool flag = true
             int i = 0
@@ -6159,14 +6160,14 @@ library AIlibrary initializer Init needs baseLibrary
                 debug@ Debug("启用AI")
             endif
         }
-        
+
         static void Init(){
             debug@ Debug("开启AI")
             TimerStart(CreateTimer(), 3, true, function AI.check_AI)
         }
-        
+
     endstruct
-    
+
     private void Init(){
     }
 endlibrary
@@ -10041,7 +10042,7 @@ endlibrary
 ########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
-<?  
+<?
     update('war3mapskin.txt',
         function(content)
             local new_lines = {
@@ -10051,11 +10052,11 @@ endlibrary
                 {'[FrameDef]', 'CHAT_RECIPIENT_OBSERVERS', '[围观群众]'},
                 {'[FrameDef]', 'LOADING_WAITING_FOR_PLAYERS', '等待其他小霸王'}
             }
-            
+
             local lines = {
                 [''] = {}
             }
-            
+
             for _, line in ipairs(new_lines) do
                 local type, name, value = line[1], line[2], line[3]
                 if not lines[type] then
@@ -10065,7 +10066,7 @@ endlibrary
                 table.insert(lines[type], {name, value})
                 lines[name] = true
             end
-            
+
             local type = ''
             for line in content:gmatch('%C+') do
                 if line:sub(1, 1) == '[' and line:sub(-1, -1) == ']' then
@@ -10088,7 +10089,7 @@ endlibrary
             end
 
             local new_lines = {}
-            
+
             for _, type in ipairs(lines) do
                 table.insert(new_lines, type)
                 for _, line in ipairs(lines[type]) do
@@ -10097,7 +10098,7 @@ endlibrary
                 end
                 table.insert(new_lines, '\r\n')
             end
-            
+
             return table.concat(new_lines, '\r\n')
         end
     )
@@ -10116,11 +10117,11 @@ endlibrary
                     end
                 end
             )
-            
+
             return content
         end
     )
-    
+
 ?>
 ########
 ########
@@ -10134,7 +10135,7 @@ endlibrary
         function(content)
             local time = {}
             time[0] = os.clock()
-            
+
             local function getType(type)
                 if type:sub(-6) == 'Handle' then
                     type = type:sub(1, -7):lower()
@@ -10145,7 +10146,7 @@ endlibrary
                 end
                 return type
             end
-            
+
             local function getType2(type)
                 if type == 'string' then
                     type = 'str'
@@ -10159,7 +10160,7 @@ endlibrary
                 type = type:sub(1, 1):upper() .. type:sub(2)
                 return type
             end
-            
+
             local function getTypeValue(type)
                 local value
                 if type == 'boolean' then
@@ -10175,26 +10176,26 @@ endlibrary
                 end
                 return value
             end
-            
+
             local function autoFlush(type)
                 return type == 'string' or type == 'boolean' or type == 'integer' or type == 'real'
             end
-            
+
             local globalList = {}
-            
+
             local function addGlobal(name, type, value)
                 if not globalList[name] then
                     table.insert(globalList, name)
                     globalList[name] = {type, value}
                 end
             end
-            
+
             addGlobal('ydg_index', 'integer', 0)
-                    
+
                 --io.save(fs.ydwe_path() / "logs" / "script_lua.j", content)
-                    
+
                     local funcs = {}
-                    
+
                     content = content:gsub('function (%S+)( takes%C+)(.-)endfunction',
                         function(name, l, s)
                             funcs[name] = {
@@ -10206,12 +10207,12 @@ endlibrary
                                 need_locals = {}, --存放选取时,子函数的局部变量状态
                                 type = {}, --函数的逆天类型(局部/计时器/触发器/选取)
                             }
-                                
+
                             table.insert(funcs, name)
                             return '__THIS_IS_FUNCTION__' .. name .. '__FUNCTION_END__'
                         end
                     )
-                    
+
                     local sys_local_var = {
                         ydl_trigger = true,
                         ydl_trigger_handle = true,
@@ -10220,7 +10221,7 @@ endlibrary
                         ydl_exp_timer_handle = true,
                         ydl_tri_trigger_handle = true,
                     }
-                    
+
                     --对逆天局部变量进行初步优化
 
                     local function loadFunction(name)
@@ -10228,9 +10229,9 @@ endlibrary
                         if t.loaded then
                             return
                         end
-                        
+
                         t.loaded = true
-                        
+
                         --添加局部变量
                         local function addLocal(name, type, value, i)
                             if not t.locals[name] then
@@ -10249,7 +10250,7 @@ endlibrary
                                 end
                             end
                         end
-                        
+
                         --设置局部变量
                         local function setLocal(name, flag)
                             if flag then
@@ -10260,9 +10261,9 @@ endlibrary
                             else
                                 t.locals[name].set = (t.locals[name].set or 0) + 1
                             end
-                            
+
                         end
-                        
+
                         --读取局部变量
                         local function getLocal(name, flag)
                             if flag then
@@ -10273,21 +10274,21 @@ endlibrary
                             else
                                 t.locals[name].get = (t.locals[name].get or 0) + 1
                             end
-                            
+
                         end
-                        
+
                         --保存临时局部变量(直接写在逆天计时器/触发器参数里的)
                         local function saveLocal(name, type, value)
                             t.saves[name] = {type, value}
                         end
-                        
+
                         --return的标记
                         local returnData = {}
-                        
+
                         local function returnMark()
                             local data = {}
                             table.insert(returnData, data)
-                            
+
                             --保存当前的局部变量状态
                             for i, name in ipairs(t.locals) do
                                 data[i] = name
@@ -10298,10 +10299,10 @@ endlibrary
                                     data[name][k] = v
                                 end
                             end
-                            
+
                             return '@@return_' .. #returnData
                         end
-                         
+
                         --设置局部变量初始值
                         local function setLocalValue(name, value)
                             local v = t.locals[name]
@@ -10324,7 +10325,7 @@ endlibrary
                             v[2] = funcs[value] and funcs[value]() or value
                             --赋初始值后视为设置(但不需要刷新状态)
                             setLocal(name)
-                            
+
                             --遍历return,进行局部变量状态设置
                             for i, data in ipairs(returnData) do
                                 if not data[name] then
@@ -10333,7 +10334,7 @@ endlibrary
                                 data[name].set = true
                             end
                         end
-                        
+
                         --设置局部变量更新状态
                         local function setLocalFresh(name, value)
                             local v = t.locals[name]
@@ -10359,15 +10360,15 @@ endlibrary
                         --loop的标记
                         local loop_level = 0
                         local loop_start = 0
-                        
+
                         local function loopMark()
                             loop_level = loop_level + 1
                             if loop_level == 1 then
-                                
+
                                 loop_start = #returnData + 1 --用来记录嵌套在loop中的return,以便正确保存数据
                             end
                         end
-                        
+
                         local function endloopMark()
                             loop_level = loop_level - 1
                             if loop_level == 0 then
@@ -10385,7 +10386,7 @@ endlibrary
                                 end
                             end
                         end
-                        
+
                         --更新局部变量(只更新到目前为止赋值过的局部变量)
                         local function freshLocal(i)
                             local fresh = {}
@@ -10400,7 +10401,7 @@ endlibrary
                             end
                             return table.concat(fresh, '\n') .. '\n'
                         end
-                        
+
                         --释放局部变量
                         local function flushLocal(i)
                             local flush = {}
@@ -10415,33 +10416,33 @@ endlibrary
                             end
                             return table.concat(flush, '\n') .. '\n'
                         end
-                        
+
                         --向子函数保存当前局部变量状态
                         local function saveParaLocal(name)
                             local tt = funcs[name].para_locals
-                                
+
                             for name, v in pairs(t.locals) do
                                 if v.set then
                                     tt[name] = v
                                 end
                             end
-                            
+
                             for name, v in pairs(t.para_locals) do
                                 tt[name] = v
                             end
-                            
+
                             if t.saves then
                                 for name, v in pairs(t.saves) do
                                     tt[name] = v
                                 end
                             end
                         end
-                        
+
                         --设置为子函数
                         local function setPara(name)
                             funcs[name].para = t.name
                         end
-                        
+
                         t.s = t.s:gsub('[^\n\r]+',
                             function(line)
                                 if line:match('local integer ydl_localvar_step') then
@@ -10449,38 +10450,38 @@ endlibrary
                                     t.type['局部'] = true
                                     return ''
                                 end
-                                
+
                                 line = line:gsub('LoadInteger%(YDHT, GetHandleId%(GetTriggeringTrigger%(%)%), 0xECE825E7%)',
                                     function()
                                         t.type['局部'] = true
                                         return 'ydl_localvar_step'
                                     end
                                 )
-                                
+
                                 if line:match('return') then
                                     return returnMark(line) .. '\n' .. line
                                 end
-                                
+
                                 if line:match('endloop') then
                                     return endloopMark()
                                 end
-                                
+
                                 if line:match('loop') then
                                     return loopMark()
                                 end
-                                
+
                                 --新建逆天计时器
                                 if line:match('local timer ydl_timer') then
                                     t.saves = {}
                                     return line .. '\nlocal integer ydl_timer_handle'
                                 end
-                                
+
                                 line = line:gsub('GetHandleId%(ydl_timer%)',
                                     function()
                                         return 'ydl_timer_handle'
                                     end
                                 )
-                                
+
                                 line = line:gsub('set ydl_timer = (.+)',
                                     function(value)
                                         if value == 'null' then
@@ -10493,23 +10494,23 @@ endlibrary
                                         return line .. '\nset ydl_timer_handle = GetHandleId(ydl_timer)'
                                     end
                                 )
-                                
+
                                 --新建逆天触发器
                                 if line:match('local trigger ydl_trigger') then
                                     t.saves = {}
                                     return line .. '\nlocal integer ydl_trigger_handle'
                                 end
-                                
+
                                 line = line:gsub('GetHandleId%(ydl_trigger%)',
                                     function()
                                         return 'ydl_trigger_handle'
                                     end
                                 )
-                                
+
                                 if line:match('set ydl_trigger = [^n][^u][^l][^l]') then
                                     line = line .. '\nset ydl_trigger_handle = GetHandleId(ydl_trigger)'
                                 end
-                                
+
                                 --查找子函数
                                 local fname = line:match('function ([%w_]+)')
                                 if fname then
@@ -10540,7 +10541,7 @@ endlibrary
                                                 if tt.need_locals[name].get then
                                                     table.insert(get, ('set %s[ydg_index] = %s'):format(name:gsub('ydl', 'ydg'), name))
                                                     get[name] = true
-                                                    
+
                                                     --检查是否继承父函数状态
                                                     addLocal(name)
                                                     getLocal(name)
@@ -10552,7 +10553,7 @@ endlibrary
                                                             setLocalValue(name, '_trigger')
                                                         end
                                                     end
-                                                    
+
                                                 end
                                                 if tt.need_locals[name].set then
                                                     table.insert(set, ('set %s = %s[ydg_index]'):format(name, name:gsub('ydl', 'ydg')))
@@ -10560,7 +10561,7 @@ endlibrary
                                                     if not get[name] then
                                                         table.insert(get, ('set %s[ydg_index] = %s'):format(name:gsub('ydl', 'ydg'), name))
                                                     end
-                                                    
+
                                                     --检查是否继承父函数状态
                                                     addLocal(name)
                                                     setLocal(name)
@@ -10572,7 +10573,7 @@ endlibrary
                                                             setLocalFresh(name, '_trigger')
                                                         end
                                                     end
-                                                    
+
                                                 end
                                             end
                                             if not t.type['选取'] and (#set > 0 or #get > 0) then
@@ -10589,14 +10590,14 @@ endlibrary
                                         end
                                     end
                                 end
-                                
+
                                 if line:match('set ydl_localvar_step') then
                                     return ''
                                 end
                                 if line:sub(-18, -1) == 'ydl_localvar_step)' then
                                     return ''
                                 end
-                                
+
                                 if t.type['局部'] then
                                     line = line:gsub('Load(%a+)%(YDHT, GetHandleId%(GetTriggeringTrigger%(%)%)%*ydl_localvar_step, (%w+)%)',
                                         function(vtype, key)
@@ -10604,30 +10605,30 @@ endlibrary
                                             local name = ('ydl_%s_%s'):format(type, key)
                                             addLocal(name)
                                             getLocal(name)
-                                            
+
                                             if t.type['选取'] then
                                                 name = ('ydg_%s_%s[ydg_index]'):format(type, key)
                                             end
-                                            
+
                                             return name
                                         end
                                     )
-                                
+
                                     local vtype, key, value = line:match('call Save(%a+)%(YDHT, GetHandleId%(GetTriggeringTrigger%(%)%)%*ydl_localvar_step, (%w+), (.+)%)')
                                     if vtype then
                                         local type = getType(vtype)
                                         local name = ('ydl_%s_%s'):format(type, key)
                                         addLocal(name)
                                         setLocal(name)
-                                        
+
                                         if t.type['选取'] then
                                             name = ('ydg_%s_%s[ydg_index]'):format(type, key)
                                         end
-                                        
+
                                         line = ('set %s = %s'):format(name, value)
                                     end
                                 end
-                                
+
                                 if t.type['计时器'] then
                                     line = line:gsub('Load(%a+)%(YDHT, GetHandleId%(GetExpiredTimer%(%)%)%, (%w+)%)',
                                         function(vtype, key)
@@ -10635,66 +10636,66 @@ endlibrary
                                             local name = ('ydl_%s_%s'):format(type, key)
                                             addLocal(name)
                                             getLocal(name)
-                                            
+
                                             --检查是否继承父函数状态
                                             if t.para_locals[name] then
                                                 setLocalValue(name, '_timer')
                                             end
-                                            
+
                                             if t.type['选取'] then
                                                 name = ('ydg_%s_%s[ydg_index]'):format(type, key)
                                             end
-                                            
+
                                             return name
                                         end
                                     )
-                                    
+
                                     local vtype, key, value = line:match('call Save(%a+)%(YDHT, GetHandleId%(GetExpiredTimer%(%)%)%, (%w+), (.+)%)')
                                     if vtype then
                                         local type = getType(vtype)
                                         local name = ('ydl_%s_%s'):format(type, key)
                                         addLocal(name)
                                         setLocal(name)
-                                        
+
                                         --检查是否继承父函数状态
                                         if t.para_locals[name] then
                                             setLocalFresh(name, '_timer')
                                         end
-                                        
+
                                         if t.type['选取'] then
                                             name = ('ydg_%s_%s[ydg_index]'):format(type, key)
                                         end
-                                        
+
                                         if value == 'null' then
                                             line = ('call RemoveSavedHandle(YDHT, ydl_exp_timer_handle, %s)\nset %s = %s'):format(key, name, value)
                                         else
                                             line = ('set %s = %s'):format(name, value)
                                         end
                                     end
-                                    
+
                                     --检查是否在选取中对到期的计时器地址有需求
                                     if t.type['选取'] and line:match('ydl_exp_timer_handle') then
                                         addLocal('ydl_exp_timer_handle', 'integer', 'GetHandleId(GetExpiredTimer())')
                                         setLocal('ydl_exp_timer_handle')
                                     end
-                                    
+
                                     if line:match('call FlushChildHashtable%(YDHT, GetHandleId%(GetExpiredTimer%(%)%)%)') then
                                         addLocal('ydl_exp_timer_handle', 'integer', 'GetHandleId(GetExpiredTimer())')
                                         setLocal('ydl_exp_timer_handle')
                                         return 'call FlushChildHashtable(YDHT, ydl_exp_timer_handle)\nset ydl_exp_timer_handle = 0'
                                     end
-                                    
+
                                 end
-                                
+
                                 if t.type['触发器'] then
-                                
+
                                     line = line:gsub('Load(%a+)%(YDHT, GetHandleId%(GetTriggeringTrigger%(%)%)%, (%w+)%)',
                                         function(vtype, key)
                                             local type = getType(vtype)
                                             local name = ('ydl_%s_%s'):format(type, key)
                                             addLocal(name)
                                             getLocal(name)
-                                            
+
                                             --检查是否继承父函数状态
                                             if t.para_locals[name] then
                                                 setLocalValue(name, '_trigger')
@@ -10702,18 +10703,18 @@ endlibrary
                                             if t.type['选取'] then
                                                 name = ('ydg_%s_%s[ydg_index]'):format(type, key)
                                             end
-                                            
+
                                             return name
                                         end
                                     )
-                                    
+
                                     local vtype, key, value = line:match('call Save(%a+)%(YDHT, GetHandleId%(GetTriggeringTrigger%(%)%)%, (%w+), (.+)%)')
                                     if vtype then
                                         local type = getType(vtype)
                                         local name = ('ydl_%s_%s'):format(type, key)
                                         addLocal(name)
                                         setLocal(name)
-                                        
+
                                         --检查是否继承父函数状态
                                         if t.para_locals[name] then
                                             setLocalFresh(name, '_trigger')
@@ -10721,29 +10722,29 @@ endlibrary
                                         if t.type['选取'] then
                                             name = ('ydg_%s_%s[ydg_index]'):format(type, key)
                                         end
-                                        
+
                                         if value == 'null' then
                                             line = ('call RemoveSavedHandle(YDHT, ydl_tri_trigger_handle, %s)\nset %s = %s'):format(key, name, value)
                                         else
                                             line = ('set %s = %s'):format(name, value)
                                         end
-                                        
+
                                     end
-                                    
+
                                     --检查是否在选取中对触发的触发器地址有需求
                                     if t.type['选取'] and line:match('ydl_tri_trigger_handle') then
                                         addLocal('ydl_tri_trigger_handle', 'integer', 'GetHandleId(GetTriggeringTrigger())')
                                         setLocal('ydl_tri_trigger_handle')
                                     end
-                                    
+
                                     if line:match('call FlushChildHashtable%(YDHT, GetHandleId%(GetTriggeringTrigger%(%)%)%)') then
                                         addLocal('ydl_tri_trigger_handle', 'integer', 'GetHandleId(GetTriggeringTrigger())')
                                         setLocal('ydl_tri_trigger_handle')
                                         return 'call FlushChildHashtable(YDHT, ydl_tri_trigger_handle)\nset ydl_tri_trigger_handle = 0'
                                     end
-                                    
+
                                 end
-                                
+
                                 --检查新建逆天计时器的冗余代码
                                 local vtype, key, value = line:match('call Save(%a+)%(YDHT, ydl_timer_handle, (%w+), (.+)%)')
                                 if vtype then
@@ -10759,7 +10760,7 @@ endlibrary
                                         saveLocal(name, type, value)
                                     end
                                 end
-                                
+
                                 --检查新建逆天触发器的冗余代码
                                 local vtype, key, value = line:match('call Save(%a+)%(YDHT, ydl_trigger_handle, (%w+), (.+)%)')
                                 if vtype then
@@ -10775,12 +10776,12 @@ endlibrary
                                         saveLocal(name, type, value)
                                     end
                                 end
-                               
-                                
+
+
                                 return line
                             end
                         )
-                        
+
                         --修改return
                         t.s = t.s:gsub('@@return_(%d+)',
                             function(i)
@@ -10795,11 +10796,11 @@ endlibrary
                         if not t.type['选取'] then
                             --在函数尾部更新局部变量
                             t.s = t.s .. freshLocal()
-                            
+
                             --在函数尾部释放局部变量
                             t.s = t.s .. flushLocal()
                         end
-                        
+
                         --生成局部变量
                         local loc_define = {}
                         for _, name in ipairs(t.locals) do
@@ -10823,17 +10824,17 @@ endlibrary
                                 end
                             end
                         end
-                        
+
                         --在函数顶部声明局部变量
                         t.s = table.concat(loc_define, '\n') .. t.s
                     end
-                    
+
                     --遍历
                     for i = #funcs, 1, -1 do
                         local name = funcs[i]
                         loadFunction(name)
                     end
-                    
+
                     content = content:gsub('__THIS_IS_FUNCTION__([%w_]+)__FUNCTION_END__',
                         function(name)
                             if name and funcs[name] then
@@ -10841,17 +10842,17 @@ endlibrary
                             end
                         end
                     )
-                    
+
                     --静态全局变量
-                    
+
                     local event_key = string_hash '事件'
                     local event_key2    = string_hash '事件返回'
-                    
+
                     content = content:gsub('Load(%a+)%(YDHT, (0x%w+), (0x%w+)%)',
                         function(vtype, k1, k2)
                             local type = getType(vtype)
                             local name = ('ydg_%s_%s_%s'):format(type, k1, k2)
-                            
+
                             --对事件变量进行特例
                             if k1 == event_key then
                                 addGlobal(name, type, 'array')
@@ -10866,12 +10867,12 @@ endlibrary
                             end
                         end
                     )
-                    
+
                     content = content:gsub('call Save(%a+)%(YDHT, (0x%w+), (0x%w+), (%C+)%)',
                         function(vtype, k1, k2, v)
                             local type = getType(vtype)
                             local name = ('ydg_%s_%s_%s'):format(type, k1, k2)
-                            
+
                             --对事件变量进行特例
                             if k1 == event_key then
                                 addGlobal(name, type, 'array')
@@ -10886,12 +10887,12 @@ endlibrary
                             end
                         end
                     )
-                    
+
                     content = content:gsub('Save(%a+)%(YDHT, (0x%w+), (0x%w+), (%C+)%)',
                         function(vtype, k1, k2, v)
                             local type = getType(vtype)
                             local name = ('ydg_%s_%s_%s'):format(type, k1, k2)
-                            
+
                             --对事件变量进行特例
                             if k1 == event_key then
                                 addGlobal(name, type, 'array')
@@ -10906,14 +10907,14 @@ endlibrary
                             end
                         end
                     )
-                    
+
                     io.save(fs.ydwe_path() / "logs" / "script_lua.j", content)
-                    
+
                 time[1] = os.clock()
-                
-                
+
+
                 addGlobal('MU_UPDATE_RESULT_1', 'string', ('"优化总用时:%.3f秒"'):format(time[1] - time[0]))
-                
+
                 --生成全局变量
                 local function getGlobal()
                     local list = {}
@@ -10928,21 +10929,21 @@ endlibrary
                     end
                     return table.concat(list, '\n')
                 end
-                
+
                 content = content .. '\nglobals\n' .. getGlobal() .. '\nendglobals\n'
-                
-                
+
+
             return content
         end
     )
-    
+
 ?>
 ########
 ########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
-    --静态命令字符    
+    --静态命令字符
     update('war3map.j',
         function(content)
             content = content:gsub('String2OrderIdBJ%(%s-%"(%a+)%"%s-%)',
@@ -10950,7 +10951,7 @@ endlibrary
                     return order2id[s]
                 end
             )
-            
+
             return content
         end
     )
@@ -10968,7 +10969,7 @@ endlibrary
                     return ('RemoveSavedHandle(%s)'):format(s)
                 end
             )
-            
+
             return content
         end
     )
@@ -10987,21 +10988,21 @@ endlibrary
     update('war3map.j',
         function(content)
             local char_name = content:match([[SetMapName%( "TRIGSTR_(.-)" %)]])
-            
+
             --版本号文本的字符串id
             local ver_name_id = tonumber(char_name)
-            
+
             local name_id
-            
+
             --寻找游戏界面中的文本
             update('war3mapskin.txt',
                 function(txt)
                     name_id = tonumber(txt:match([[UPKEEP_NONE=TRIGSTR_(%d+)]]))
                 end
             )
-            
+
             local ver_name --保存版本号,例如"2.6H"
-            
+
             --处理游戏界面
             update('war3map.wts',
                 function(txt)
@@ -11010,38 +11011,38 @@ endlibrary
                     else
                         ver_name = content:match([[SetMapName%( ".-(%d%.%d.).-" %)]])
                     end
-                    
+
                     txt = txt:gsub(([[(STRING %d%%D-{%%c+)(.-)(%%c+})]]):format(name_id), ([[%%1%s%%3]]):format("|cff00ff00全明星战役|cffffff00" .. ver_name))
-                    
+
                     txt = txt:gsub('__MAP_VER_NAME__', ver_name)
-                    
+
                     return txt
                 end
             )
-            
+
             --修改地图中所有的__MAP_VER_NAME__标记
             content = content:gsub('__MAP_VER_NAME__', ver_name)
-            
+
             return content
-            
+
         end
     )
-    
+
 ?>
 ########
 ########
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
 <?
-    
+
     update('war3map.j',
         function(content)
             content = content:gsub('== true', '')
             content = content:gsub('else[%c%s]+endif', 'endif')
-            
+
             return content
         end
     )
-    
+
 ?>
 ########
