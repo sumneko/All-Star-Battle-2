@@ -10095,10 +10095,10 @@ endlibrary
                     local name, value = line[1], line[2]
                     table.insert(new_lines, ('%s=%s'):format(name, value))
                 end
-                table.insert(new_lines, '\n')
+                table.insert(new_lines, '\r\n')
             end
             
-            return table.concat(new_lines, '\n')
+            return table.concat(new_lines, '\r\n')
         end
     )
 ?>
