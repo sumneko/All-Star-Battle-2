@@ -86,6 +86,6 @@ CommandButtonCooldown=war3mapImported\UI-Cooldown-Indicator.mdx
 Cooldownstock=TRIGSTR_2862
 Outofstock=TRIGSTR_2861
 Notancient=TRIGSTR_773
-Nogold=钱不够啊笨蛋，咱这不打折
+Nogold=TRIGSTR_10403
 Notethereal=TRIGSTR_4045
 
