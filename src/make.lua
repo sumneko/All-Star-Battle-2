@@ -63,6 +63,7 @@ local obj_txt	= {
 local w3x_txt	= {
 	['war3map.wtg']	= 'wtg',
 	['war3map.wct']	= 'wct',
+	['war3map.w3i']	= 'w3i',
 }
 
 local function git_fresh(fname)
