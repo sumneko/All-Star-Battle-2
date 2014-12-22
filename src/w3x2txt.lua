@@ -1805,7 +1805,7 @@
 			return s:gsub('TRIGSTR_(%d+)',
 				function(i)
 					i	= tonumber(i)
-					local s	= wts_strings[i].text:gsub('\n', '@@n'):gsub('\t', '@@t')	--wts文件中的换行符是\n
+					local s	= wts_strings[i].text:gsub('\r\n', '@@n'):gsub('\t', '@@t')
 					wts_strings[i]	= false
 					return s
 				end
