@@ -1476,6 +1476,12 @@
 			push '未知1=%d'			(chunk.map_flag >> 13 & 1)
 			push '未知2=%d'			(chunk.map_flag >> 14 & 1)
 			push '未知3=%d'			(chunk.map_flag >> 15 & 1)
+			push '未知4=%d'			(chunk.map_flag >> 16 & 1)
+			push '未知5=%d'			(chunk.map_flag >> 17 & 1)
+			push '未知6=%d'			(chunk.map_flag >> 18 & 1)
+			push '未知7=%d'			(chunk.map_flag >> 19 & 1)
+			push '未知8=%d'			(chunk.map_flag >> 20 & 1)
+			push '未知9=%d'			(chunk.map_flag >> 21 & 1)
 
 			push '地形类型=%s'		(chunk.map_main_ground_type)
 			
@@ -1667,7 +1673,7 @@
 			push 'll' (readValue(2))
 
 			--地图标记
-			push 'l' (packFlag(readValue(16)))
+			push 'l' (packFlag(readValue(22)))
 
 			--地形类型开始
 			push 'c1lz' (readValue(3, 1))
