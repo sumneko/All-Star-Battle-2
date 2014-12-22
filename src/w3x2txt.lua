@@ -295,7 +295,7 @@
 					datas	= {}
 					obj.datas	= datas
 
-					obj.id, obj.origin_id	= str:match '^%s*(.-)%s*%:%s*(.-)%s*$'
+					obj.id, obj.origin_id	= str:match '^(.-)%:(.-)$'
 					if not obj.id then
 						obj.id, obj.origin_id	= str, str
 					end
@@ -320,7 +320,7 @@
 						id	= id:sub(1, 4)
 					end
 
-					data.id, data.value	= id, line:sub(last + 1):match '^%s*(.*)$'
+					data.id, data.value	= id, line:sub(last + 1)
 					data.value, data.type	= txt2value(data.value, data.id)
 					data.value	= data_type_format[data.type]:pack(data.value)
 
@@ -833,7 +833,7 @@
 						var.name, s	= s:match '^([%w_]+)(.*)$'
 						if s then
 							var.array_size	= s:match '%[%s*(%d+)%s*%]'
-							var.value	= s:match '%=%s*(.-)%s*$'
+							var.value	= s:match '%=(.-)$'
 						end
 
 						--print(var.type, var.name, var.array_size, var.value)
@@ -867,11 +867,6 @@
 
 							--print('line:' .. line)
 							if type then
-								--如果整个name都是空格,那么name就是这串空格;否则去2端空格
-								if not name:match '^%s*$' then
-									name	= name:match '^%s*(.-)%s*$'
-								end
-								
 								local eca	= {}
 								
 								--是否包含复合结构
