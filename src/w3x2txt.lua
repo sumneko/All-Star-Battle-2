@@ -768,9 +768,9 @@
 				
 			end
 
-			--io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts(true))
 
-			io.save(file_name_out, table.concat(lines, '\r\n'))	--貌似wtg文件写入文本会出错
+			--io.save(file_name_out, table.concat(lines, '\r\n'))	--貌似wtg文件写入文本会出错
 		end
 
 		function w3x2txt.txt2wtg(file_name_in, file_name_out)
@@ -1803,10 +1803,13 @@
 			end
 		end
 
-		function string.convert_wts(s)
+		function string.convert_wts(s, only_short)
 			return s:gsub('TRIGSTR_(%d+)',
 				function(i)
 					local s	= wts_strings[i].text:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t')
+					if only_short and #s > 256 then
+						return
+					end
 					wts_strings[i].converted	= true
 					return s
 				end
