@@ -23915,6 +23915,7 @@ Ncl3[1]=9
 abpy=2
 acdn[1]=45.0000
 abpx=1
+ansf=停止
 [A0M8:ANcl]
 anam=|cFFff30a2魔力屏障|r
 aord=dispel
