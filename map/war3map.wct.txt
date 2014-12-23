@@ -2699,7 +2699,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=747
+//TESH.scrollpos=198
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3392,7 +3392,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
         static void Check1(){
             CU = GetEnumUnit()
-            if IsUnitInvisible(CU, Player(11)) then
+            if IsUnitInvisible(CU, Player(5)) then
                 GroupRemoveUnit(CG1, CU)
                 GroupAddUnit(CG2, CU)
                 UnitAddType(CU, UNIT_TYPE_SAPPER)
@@ -3402,7 +3402,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
         static void Check2(){
             CU = GetEnumUnit()
-            if IsUnitVisible(CU, Player(11)) then
+            if IsUnitVisible(CU, Player(5)) then
                 GroupRemoveUnit(CG2, CU)
                 GroupAddUnit(CG1, CU)
                 UnitRemoveType(CU, UNIT_TYPE_SAPPER)
@@ -3412,7 +3412,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
         static void Check3(){
             CU = GetEnumUnit()
-            if IsUnitInvisible(CU, Player(10)) then
+            if IsUnitInvisible(CU, Player(0)) then
                 GroupRemoveUnit(CG3, CU)
                 GroupAddUnit(CG4, CU)
                 UnitAddType(CU, UNIT_TYPE_SAPPER)
@@ -3422,7 +3422,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
         static void Check4(){
             CU = GetEnumUnit()
-            if IsUnitVisible(CU, Player(10)) then
+            if IsUnitVisible(CU, Player(0)) then
                 GroupRemoveUnit(CG4, CU)
                 GroupAddUnit(CG3, CU)
                 UnitRemoveType(CU, UNIT_TYPE_SAPPER)
@@ -3443,7 +3443,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
         static bool CheckSummon(){
             CU = GetSummonedUnit()
-            if IsUnitAlly(CU, Player(10)) then
+            if IsUnitAlly(CU, Player(0)) then
                 GroupAddUnit(CG1, CU)
             else
                 GroupAddUnit(CG3, CU)
@@ -3476,7 +3476,7 @@ library bakaLibrary initializer Init needs baseLibrary
             UnitMakeAbilityPermanent(hero, true, 'A087')
             UnitMakeAbilityPermanent(hero, true, 'A0R8')
             //maphack.InitHero(hero)
-            if IsUnitAlly(hero, Player(10)) then
+            if IsUnitAlly(hero, Player(0)) then
                 GroupAddUnit(CG1, hero)
             else
                 GroupAddUnit(CG3, hero)
