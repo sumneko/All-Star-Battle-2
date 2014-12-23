@@ -1585,7 +1585,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=628
+//TESH.scrollpos=310
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1916,8 +1916,11 @@ library eventLibrary initializer Init needs baseLibrary
 
             return Real_damage_from
         }
-
-        #define Event.GetOriginDamageFrom() GetEventDamageSource()
+        
+        static unit GetOriginDamageFrom(){
+            return GetEventDamageSource()
+        }
+        
         #define GetEventDamageSource() Event.GetDamageFrom()
 
         static void DamageEventDestroy(trigger trg, int h){

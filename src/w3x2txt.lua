@@ -1793,20 +1793,21 @@
 
 			for string in content:gmatch 'STRING.-%\r\n%}' do
 				local i, s	= string:match 'STRING (%d+).-%{\r\n(.+)\r\n%}'
-				i	= tonumber(i)
-				wts_strings[i] = {
+				local t	= {
 					string	= string,
+					index	= i,
 					text	= s,
 				}
+				table.insert(wts_strings, t)
+				wts_strings[('%03d'):format(i)]	= t	--这里的索引是字符串
 			end
 		end
 
 		function string.convert_wts(s)
 			return s:gsub('TRIGSTR_(%d+)',
 				function(i)
-					i	= tonumber(i)
 					local s	= wts_strings[i].text:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t')
-					wts_strings[i]	= false
+					wts_strings[i].converted	= true
 					return s
 				end
 			)
@@ -1814,9 +1815,9 @@
 
 		function w3x2txt.fresh_wts(file_name_out)
 			local lines	= {}
-			for i, string in ipairs(wts_strings) do
-				if string then
-					table.insert(lines, string.string)
+			for i, t in ipairs(wts_strings) do
+				if t and not t.converted then
+					table.insert(lines, t.string)
 				end
 			end
 
