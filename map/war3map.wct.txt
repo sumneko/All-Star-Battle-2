@@ -3571,7 +3571,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1056
+//TESH.scrollpos=60
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -3640,9 +3640,11 @@ library unitLibrary initializer Init needs bakaLibrary
         static real lastMoveDis = 0
 
         static bool Move(unit u,real a,real r){
+            /*
             if GetUnitMoveSpeed(u) == 0
                 return false
             endif
+            */
             real x = LoadReal(YDHT, GetHandleId(u), StringHash("移动干涉"))
             lastMoveDis = r + r * x / 100
             SetUnitX(u, YDWECoordinateX((GetUnitX(u) + (lastMoveDis * Cos(bj_DEGTORAD * a)))))
@@ -3651,9 +3653,11 @@ library unitLibrary initializer Init needs bakaLibrary
         }
 
         static bool Move2(unit u,real a,real r, pathingtype t){
+            /*
             if GetUnitMoveSpeed(u) == 0
                 return false
             endif
+            */
             real x = LoadReal(YDHT, GetHandleId(u), StringHash("移动干涉"))
             lastMoveDis = r + r * x / 100
             real x0 = GetUnitX(u)
@@ -6226,6 +6230,12 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
 ########
 ########
 
