@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=414
+//TESH.scrollpos=27
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -3571,7 +3571,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=253
+//TESH.scrollpos=1056
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4629,6 +4629,58 @@ library unitLibrary initializer Init needs bakaLibrary
         #define IssueImmediateOrder(u, o) Unit.IssueImmediateOrder2(u, o)
         #define IssueImmediateOrderBJ(u, o) Unit.IssueImmediateOrder2(u, o)
         #define IssueImmediateOrderById(u, o) Unit.IssueImmediateOrderById2(u, o)
+        
+        //注册物编数据
+        //Unit.SaveSlkData( 'unit_type_id', slk_name1 slk_name2 slk_name3 )
+        <?
+            update('war3map.j',
+                function(content)
+                    content = content:gsub("call Unit%.SaveSlkData%( '(....)'%, (%C+) %)",
+                        function(unit_type_id, slk_names)
+                            local lines = {}
+                            local unit_slk  = slk.unit[unit_type_id]
+                            for name in slk_names:gmatch '%S+' do
+                                local data  = unit_slk[name]
+                                --判断数据类型
+                                if tonumber(data) then
+                                    --数字
+                                    if data:match '%.' then
+                                        --实数
+                                        table.insert(lines, ("call SaveReal(YDHT, '%s', %s, %s)"):format(unit_type_id, string_hash(name), data))
+                                    else
+                                        --整数
+                                        table.insert(lines, ("call SaveInteger(YDHT, '%s', %s, %s)"):format(unit_type_id, string_hash(name), data))
+                                    end
+                                else
+                                    --字符串类型
+                                    table.insert(lines, ("call SaveStr(YDHT, '%s', %s, %s)"):format(unit_type_id, string_hash(name), data))
+                                end
+                            end
+                            
+                            return table.concat(lines, '\r\n')
+                        end 
+                    )
+                    
+                    return content
+                end
+            )
+        ?>
+        
+        //恢复单位默认颜色
+        static void ResetVertexColor(unit u){
+            int id = GetUnitTypeId(u)
+            int red = 255, green = 255, blue = 255
+            if HaveSavedInteger(YDHT, id, StringHash("red")) then
+                red = LoadInteger(YDHT, id, StringHash("red"))
+            endif
+            if HaveSavedInteger(YDHT, id, StringHash("green")) then
+                red = LoadInteger(YDHT, id, StringHash("green"))
+            endif
+            if HaveSavedInteger(YDHT, id, StringHash("blue")) then
+                red = LoadInteger(YDHT, id, StringHash("blue"))
+            endif
+            SetUnitVertexColor(u, red, green, blue, 255)
+        }
 
     endstruct
 
@@ -10137,7 +10189,7 @@ endlibrary
 ?>
 ########
 ########
-//TESH.scrollpos=733
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 
 <?
