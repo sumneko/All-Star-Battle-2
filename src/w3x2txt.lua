@@ -1182,7 +1182,7 @@
 			chunk.file_ver	= content:match 'VERSION%=(%d+)'
 
 			--遍历文本
-			for chars in content:gmatch '########\r\n(.-)\r\n########' do
+			for chars in content:gmatch '########%c+(.-)%c+########' do
 				table.insert(chunk, chars)
 			end
 
