@@ -1585,7 +1585,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=310
+//TESH.scrollpos=276
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1857,13 +1857,16 @@ library eventLibrary initializer Init needs baseLibrary
 
             if IsUnitType(damage_to[index], UNIT_TYPE_HERO) and not IsUnitType(damage_to[index], UNIT_TYPE_SUMMONED) then
                 if attack then
+                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
                     define_TriggerExecute(1)
                 else
+                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "非攻击伤害")
                     define_TriggerExecute(2)
                 endif
                 //检查是否致命
                 life    = GetWidgetLife(damage_to[index])
                 if life + damage_reduce[index] - GetEventDamage() < 0.5 then
+                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "致命伤害")
                     define_TriggerExecute(5)
                     if event_skip[index] then
                         damage_reduce[index] = GetEventDamage() - life + 0.5
@@ -1871,13 +1874,16 @@ library eventLibrary initializer Init needs baseLibrary
                 endif
             else
                 if attack then
+                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
                     define_TriggerExecute(3)
                 else
+                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "非攻击伤害")
                     define_TriggerExecute(4)
                 endif
                 //检查是否致命
                 life    = GetWidgetLife(damage_to[index])
                 if life + damage_reduce[index] - GetEventDamage() < 0.5 then
+                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "致命伤害")
                     define_TriggerExecute(6)
                     if event_skip[index] then
                         damage_reduce[index] = GetEventDamage() - life + 0.5
@@ -10128,6 +10134,9 @@ endlibrary
 
 ########
 ########
+
+########
+########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
@@ -10213,7 +10222,7 @@ endlibrary
 ?>
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=716
 //TESH.alwaysfold=0
 
 <?
