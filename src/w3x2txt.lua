@@ -706,13 +706,13 @@
 				
 				local function push_eca(eca, is_arg)
 					--print(index, eca, is_arg, max)
-					table.insert(lines, ('%s%s[%d]%s%s%s'):format(
+					table.insert(lines, ('%s%s[%d]%s%s:%s'):format(
 						('\t'):rep(tab),
 						eca.child_id and ('(%d)'):format(eca.child_id) or '',
 						eca.type,
-						eca.name,
+						eca.child_eca_count == 0 and '' or ('<%d>'):format(eca.child_eca_count),
 						(eca.enable == 0 and '*') or (is_arg and '#') or '',
-						eca.child_eca_count == 0 and '' or ('[%d]'):format(eca.child_eca_count)
+						eca.name
 					))
 					--参数
 					tab = tab + 1
@@ -720,11 +720,11 @@
 						if arg.insert_call == 1 then
 							push_eca(arg.eca, true)
 						else
-							table.insert(lines, ('%s[%d]%s%s'):format(
+							table.insert(lines, ('%s[%d]%s:%s'):format(
 								('\t'):rep(tab),
 								arg.type,
-								arg.value:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t'),
-								(arg.insert_index == 1 or arg.insert_call == 1) and '*' or ''
+								(arg.insert_index == 1 or arg.insert_call == 1) and '*' or '',
+								arg.value:gsub('\r\n', '@@n'):gsub('\r', '@@n'):gsub('\n', '@@n'):gsub('\t', '@@t')
 							))
 						end
 					end
@@ -863,14 +863,20 @@
 						local readEca, readArg
 
 						function readEca(is_arg, is_child)
-							local type, name, enable, s	= line:match '%[%s*(%d+)%s*%]([^%*%#%[]+)([%*%#]*)(.-)$'
+							local eca_args, value	= line:match '^[\t]*(.-)%:(.-)$'
 
 							--print('line:' .. line)
-							if type then
+							if value then
 								local eca	= {}
+
+								--eca名字
+								eca.name	= value
+
+								--eca类型
+								eca.type	= tonumber(eca_args:match '%[%s*(%d+)%s*%]')
 								
 								--是否包含复合结构
-								eca.child_eca_count	= s:match '%[%s*(%d+)%s*%]'
+								eca.child_eca_count	= eca_args:match '%<%s*(%d+)%s*%>'
 
 								if is_arg then
 									--是否是参数
@@ -880,12 +886,13 @@
 									table.insert(is_child, eca)
 
 									--子项ID
-									eca.child_id	= line:match '%(%s*(%d+)%s*%)'
+									eca.child_id	= eca_args:match '%(%s*(%d+)%s*%)'
 								else
 									table.insert(trigger.ecas, eca)
 								end
 
-								eca.type, eca.name, eca.enable	= tonumber(type), name, enable
+								--是否允许
+								eca.enable	= eca_args:match '[%*%#]'
 
 								--读取这个ECA下有多少参数
 								--print(eca.type, eca.name)
@@ -916,22 +923,24 @@
 						end
 
 						function readArg(args)
-							local line	= read()
-							local type, value, has_child	= line:match '^%s*%[%s*([%-%d]+)%s*%](.-)([%*%#]*)$'
-							if type then
+							local arg_args, value 	= read():match '^[\t]*(.-)%:(.-)$'
+							if value then
 								local arg	= {}
 								table.insert(args, arg)
 
-								arg.type, arg.value	= tonumber(type), value:gsub('@@n', '\r\n'):gsub('@@t', '\t')
+								--类型
+								arg.type	= tonumber(arg_args:match '%[%s*([%-%d]+)%s*%]')
+								arg.value	= value:gsub('@@n', '\r\n'):gsub('@@t', '\t')
+								arg.has_child	= arg_args:match '[%*%#]'
 
 								--有子数据
-								if has_child == '*' then
+								if arg.has_child == '*' then
 									--数组索引
 									arg.insert_index	= 1
 									--print(has_child .. ':child_index:' .. arg.value)
 									arg.args	= {}
 									readArg(arg.args)
-								elseif has_child == '#' then
+								elseif arg.has_child == '#' then
 									--函数调用
 									arg.insert_call		= 1
 									--print(has_child .. ':child_call:' .. arg.value)
