@@ -11675,7 +11675,6 @@ umpm=1000
 usin=400
 usid=400
 unsf=虹之矢1
-umvh=80.0000
 upoi=4500
 [e07N:ewsp]
 unam=鹿目圆香

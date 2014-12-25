@@ -1182,7 +1182,7 @@
 			chunk.file_ver	= content:match 'VERSION%=(%d+)'
 
 			--遍历文本
-			for chars in content:gmatch '########\r\n(.-)\r\n########' do
+			for chars in content:gmatch '########%c*(.-)%c*########' do
 				table.insert(chunk, chars)
 			end
 
@@ -1791,8 +1791,8 @@
 				return
 			end
 
-			for string in content:gmatch 'STRING.-%\r\n%}' do
-				local i, s	= string:match 'STRING (%d+).-%{\r\n(.+)\r\n%}'
+			for string in content:gmatch 'STRING.-%c*%}' do
+				local i, s	= string:match 'STRING (%d+).-%{%c*(.-)%c*%}'
 				local t	= {
 					string	= string,
 					index	= i,
