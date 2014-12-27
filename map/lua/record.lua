@@ -180,7 +180,7 @@
 									table.insert(texts, ('[%s]\t%d : %d'):format(name, true_value, value))
 								end
 							end
-							print('#texts = ' .. #texts)
+							--print('#texts = ' .. #texts)
 							if #texts ~= 0 then
 								local text	= table.concat(texts, '\n')
 								cmd.maid_chat(player.self, text)
@@ -257,7 +257,7 @@
 		local is_main	= true
 		local data	= player.self.record_data
 		local name, value	= record.loadName('mt')
-		print('main', name, value)
+		--print('main', name, value)
 		if data[name] ~= data[player.self:getBaseName()] and value ~= 0 then
 			is_main	= false
 		end
@@ -347,7 +347,7 @@
 	end
 
 	function record.buff()
-		print('check buff')
+		--print('check buff')
 		if cmd.ver_name == '2.7D' then
 			for i = 1, 10 do
 				if player[i].new_version then
@@ -409,12 +409,12 @@
 		if tid == p:getTeam() then
 			n = n + 50 --胜利+50节操
 			n = math.floor(n * jc['收益'])
-			print(n)
+			--print(n)
 			cmd.maid_chat(p, ('恭喜获胜,您本局收获了 %d 点节操哦~'):format(n))
 		else
 			n = n + 25 --失败+25节操
 			n = math.floor(n * jc['收益'])
-			print(n)
+			--print(n)
 			cmd.maid_chat(p, ('主人,您本局收获了 %d 点节操哦~'):format(n))
 		end
 
