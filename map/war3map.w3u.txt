@@ -4498,6 +4498,7 @@ uslz=75.0000
 udty=hero
 uarm=Wood
 umvs=1
+ufle=0
 [e02T:ewsp]
 unam=卫星射线
 umdl=Abilities\Spells\Other\Monsoon\MonsoonBoltTarget.mdl
@@ -11778,7 +11779,6 @@ usid=400
 unsf=魔法阵平面
 usca=2.0000
 udtm=1.0000
-umvh=300.0000
 [e07R:ewsp]
 unam=凯琳
 uabi=Aloc,Arav
@@ -11853,7 +11853,7 @@ usin=400
 usid=400
 unsf=圆环之理
 udtm=0.0000
-umvh=525.0000
+umvh=400.0000
 usca=5.0000
 [e003:ewsp]
 unam=鹿目圆香
@@ -11880,7 +11880,7 @@ usin=400
 usid=400
 unsf=爆炸
 udtm=0.0000
-umvh=525.0000
+umvh=400.0000
 [e07T:ewsp]
 unam=热血标枪
 uabi=Aloc,Arav
