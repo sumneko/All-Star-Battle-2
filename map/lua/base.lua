@@ -53,8 +53,26 @@
 			end,
 		}
     )
+
+	---[[临时
+	if not japi.InitGameCache then
+		local names	= {
+			'InitGameCache',
+			'StoreInteger',
+			'GetStoredInteger',
+			'StoreString',
+			'SaveGameCache'
+		}
+		
+		for _, name in ipairs(names) do
+			rawset(japi, name, jass[name])
+		end
+
+	end
+	--]]
     
 	require 'lua\\util.lua'
+	require 'lua\\dump.lua'
 	require 'lua\\event.lua'
 	require 'lua\\table.lua'
 	require 'lua\\timer.lua'

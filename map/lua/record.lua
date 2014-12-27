@@ -34,6 +34,9 @@
 
 	timer.wait(1, record.init)
 
+	--本地积分
+	record.my_record	= {}
+
 	function player.__index.getRecord(this, name)
 		--print(('player[%d] load record: %s = %s from %d'):format(this:get(), name, japi.GetStoredInteger(this.record, '', name), this.record))
 		return japi.GetStoredInteger(this.record, '', name) or 0
@@ -41,10 +44,27 @@
 
 	function player.__index.setRecord(this, name, value)
 		--print(('player[%d] save record: %s = %s'):format(this:get(), name, value))
+		if this	== player.self then
+			if not record.my_record[name] then
+				table.insert(record.my_record, name)
+			end
+			record.my_record[name]	= value
+		end
 		return japi.StoreInteger(this.record, '', name, value)
 	end
 
 	function player.__index.saveRecord(this)
+		if this == player.self then
+			local lines	= {}
+			for _, name in ipairs(record.my_record) do
+				table.insert(lines, ('%s=%d'):format(name, record.my_record[name]))
+			end
+			local content	= table.concat(lines, '\r\n')
+			storm.save(
+				('[%s]�ı��ػ��ִ浵(ȫ����ս��).txt'):format(jass.StringHash(player.self:getBaseName())),
+				('玩家名=%s\r\n%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(player.self:getBaseName(), content, dump.save(content))
+			)
+		end
 		return japi.SaveGameCache(this.record)
 	end
 
@@ -148,7 +168,7 @@
 			local name	= data['皮肤']
 			t[name]		= player.self:getRecord(name)
 		end
-
+		
 		--同步数据
 		for i = 1, 10 do
 			local p = player[i]
