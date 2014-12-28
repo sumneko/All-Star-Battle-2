@@ -29,6 +29,7 @@
 			record[i] = jass.GC[i - 1]
 			player[i].record = record[i]
 			player[i].record_data = {}
+			record[record[i]]	= player[i]
 		end
 	end
 
@@ -37,9 +38,38 @@
 	--本地积分
 	record.my_record	= {}
 
+	function hook.StoreString(gc, key1, key2, value, f)
+		if key1 == '' and key2:sub(1, 6) == 'Title@' then
+			record[gc]	= player.self
+			hook.StoreString	= nil
+		end
+		return f(gc, key1, key2, value)
+	end
+
+	function hook.GetStoredInteger(gc, key1, key2, f)
+		if record[gc] then
+			return record[gc]:getRecord(key2)
+		end
+		return f(gc, key1, key2)
+	end
+
 	function player.__index.getRecord(this, name)
 		--print(('player[%d] load record: %s = %s from %d'):format(this:get(), name, japi.GetStoredInteger(this.record, '', name), this.record))
-		return japi.GetStoredInteger(this.record, '', name) or 0
+		local value	= japi.GetStoredInteger(this.record, '', name) or 0
+		if this	== player.self then
+			if not record.my_record[name] then
+				table.insert(record.my_record, name)
+			end
+			record.my_record[name]	= value
+		end
+		return value
+	end
+
+	function hook.SetStoredInteger(gc, key1, key2, value, f)
+		if record[gc] then
+			return record[gc]:setRecord(key2, value)
+		end
+		return f(gc, key1, key2)
 	end
 
 	function player.__index.setRecord(this, name, value)
@@ -53,16 +83,23 @@
 		return japi.StoreInteger(this.record, '', name, value)
 	end
 
+	function hook.SaveGameCache(gc, f)
+		if record[gc] then
+			return record[gc]:saveRecord()
+		end
+		return f(gc)
+	end
+
 	function player.__index.saveRecord(this)
-		if this == player.self then
+		if dump.enable and this == player.self then
 			local lines	= {}
 			for _, name in ipairs(record.my_record) do
 				table.insert(lines, ('%s=%d'):format(name, record.my_record[name]))
 			end
 			local content	= table.concat(lines, '\r\n')
 			storm.save(
-				('[%s]�ı��ػ��ִ浵(ȫ����ս��).txt'):format(jass.StringHash(player.self:getBaseName())),
-				('玩家名=%s\r\n%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(player.self:getBaseName(), content, dump.save(content))
+				('[%s]的本地积分存档(全明星战役).txt'):format(player.self:getBaseName()),
+				('%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(content, dump.save(this:getBaseName(), content))
 			)
 		end
 		return japi.SaveGameCache(this.record)

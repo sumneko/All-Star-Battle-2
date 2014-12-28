@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=27
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -739,7 +739,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=103
+//TESH.scrollpos=660
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -1401,6 +1401,29 @@ define{
 		call TriggerRegisterPlayerUnitEvent(trg,GetOwningPlayer(BaseUnit[1]),EVENT_PLAYER_UNIT_DEATH,null)
 		call TriggerAddCondition(trg,Condition(function BuildingDestroy))
 		set trg=null
+        
+        //写入本地存档
+        Get(99, "局数")
+        Get(99, "连胜")
+        Get(99, "助攻王")
+        Get(99, "节操")
+        Get(99, "胜率")
+        Get(99, "战神")
+        Get(99, "逃跑")
+        Get(99, "MVP")
+        Get(99, "胜利")
+        Get(99, "经验")
+        Get(99, "等级")
+        Get(99, "杀敌")
+        Get(99, "助攻")
+        Get(99, "死亡")
+        Get(99, "荣誉")
+        Get(99, "战神")
+        Get(99, "纪录")
+        Get(99, "时间")
+        Get(99, "R0")
+        Get(99, "R1")
+        Get(99, "R2")
 
         //Set(99,"V",4) --被下面的函数取代
         if not baka.newMap() then
