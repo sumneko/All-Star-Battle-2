@@ -173,7 +173,7 @@
     end
 
     function cmd.maid_chat(p, s)
-	    if not p then
+	    if not s then
 		    s = p
 		    p = player.self
 	    end

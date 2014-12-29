@@ -65,7 +65,7 @@
 		return value
 	end
 
-	function hook.SetStoredInteger(gc, key1, key2, value, f)
+	function hook.StoreInteger(gc, key1, key2, value, f)
 		if record[gc] then
 			return record[gc]:setRecord(key2, value)
 		end
@@ -90,16 +90,22 @@
 		return f(gc)
 	end
 
+	record.local_save_name_utf8	= ('[%08X]的本地积分存档(全明星战役).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
+	record.local_save_name_ansi	= ('[%08X]�ı��ػ��ִ浵(ȫ����ս��).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
+
 	function player.__index.saveRecord(this)
-		if dump.enable and this == player.self then
+		if record.enable_local_save and dump.enable and this == player.self then
 			local lines	= {}
+			table.insert(lines, ('[%s]'):format(player.self:getBaseName()))
 			for _, name in ipairs(record.my_record) do
-				table.insert(lines, ('%s=%d'):format(name, record.my_record[name]))
+				if record.my_record[name] ~= 0 then
+					table.insert(lines, ('%s=%d'):format(name, record.my_record[name]))
+				end
 			end
 			local content	= table.concat(lines, '\r\n')
 			storm.save(
-				('[%s]的本地积分存档(全明星战役).txt'):format(player.self:getBaseName()),
-				('%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(content, dump.save(this:getBaseName(), content))
+				record.local_save_name_utf8,
+				('%s%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(string.char(0xEF, 0xBB, 0xBF), content, dump.save(this:getBaseName(), content))
 			)
 		end
 		return japi.SaveGameCache(this.record)
@@ -140,6 +146,33 @@
 	end
 	
 	function record.save_players()
+		--读取本地积分
+		local text	= storm.load(record.local_save_name_ansi) or storm.load(record.local_save_name_utf8)
+		local local_record	= table.new(0)
+		if text then
+			--读取加密部分
+			local content	= text:match '#start#(.+)#end#'
+			content	= dump.load(player.self:getBaseName(), content)
+			for name, value in content:gmatch '(%C-)%=(%C+)' do
+				table.insert(local_record, name)
+				local_record[name]	= tonumber(value)
+			end
+			
+			--对比2边的局数
+			if local_record['局数'] > player.self:getRecord '局数' then
+				--恢复积分
+				for _, name in ipairs(local_record) do
+					player.self:setRecord(name, local_record[name])
+				end
+				
+				cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
+				cmd.maid_chat '请注意备份魔兽目录下的本地积分存档文件'
+				cmd.maid_chat '录像或单人模式请忽略该信息'
+			end
+			
+		end
+
+		--读取本地大号信息
 		local text	= storm.load 'ushio1.log'
 		if text then
 			record.read_players(text)
@@ -183,8 +216,6 @@
 		record.saveName('mt', name, data[name])
 		--print(name, player.self:getBaseName())
 
-		player.self:saveRecord()
-
 		--将胜利信息发送给其他玩家
 		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db'
 		local t	= {}
@@ -205,6 +236,10 @@
 			local name	= data['皮肤']
 			t[name]		= player.self:getRecord(name)
 		end
+
+		record.enable_local_save	= true
+
+		player.self:saveRecord()
 		
 		--同步数据
 		for i = 1, 10 do
