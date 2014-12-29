@@ -24,7 +24,7 @@
 		return ('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890/*-+=,.<>\\|[]{};:!@#$%^&()'):sub(i, i)
 	end
 
-	function record.init()
+	function cmd.initRecord()
 		for i = 1, 16 do
 			record[i] = jass.GC[i - 1]
 			player[i].record = record[i]
@@ -33,24 +33,11 @@
 		end
 	end
 
-	timer.wait(1, record.init)
-
 	--本地积分
 	record.my_record	= {}
 
-	function hook.StoreString(gc, key1, key2, value, f)
-		if key1 == '' and key2:sub(1, 6) == 'Title@' then
-			record[gc]	= player.self
-			hook.StoreString	= nil
-		end
-		return f(gc, key1, key2, value)
-	end
-
-	function hook.GetStoredInteger(gc, key1, key2, f)
-		if record[gc] then
-			return record[gc]:getRecord(key2)
-		end
-		return f(gc, key1, key2)
+	function cmd.getRecord(p, name)
+		jass.udg_Lua_integer	= p:getRecord(name)
 	end
 
 	function player.__index.getRecord(this, name)
@@ -65,11 +52,8 @@
 		return value
 	end
 
-	function hook.StoreInteger(gc, key1, key2, value, f)
-		if record[gc] then
-			return record[gc]:setRecord(key2, value)
-		end
-		return f(gc, key1, key2)
+	function cmd.setRecord(p, name, value)
+		p:setRecord(name, tonumber(value))
 	end
 
 	function player.__index.setRecord(this, name, value)
@@ -83,11 +67,8 @@
 		return japi.StoreInteger(this.record, '', name, value)
 	end
 
-	function hook.SaveGameCache(gc, f)
-		if record[gc] then
-			return record[gc]:saveRecord()
-		end
-		return f(gc)
+	function cmd.saveRecord(p)
+		p:saveRecord()
 	end
 
 	record.local_save_name_utf8	= ('[%08X]的本地积分存档(全明星战役).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)

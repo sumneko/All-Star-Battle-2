@@ -739,7 +739,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=660
+//TESH.scrollpos=661
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -794,15 +794,16 @@ define{
 	endfunction
 	//提取数据
 	function Get takes integer i,string s returns integer
-		return GetStoredInteger(GC[i],"",s)
+		Lua_hook(Player(i), "getRecord " + s)
+        return udg_Lua_integer
 	endfunction
 	//储存数据
 	function Set takes integer i,string s,integer j returns nothing
-		call StoreInteger(GC[i],"",s,j)
+		Lua_hook(Player(i), "setRecord " + s + " " + I2S(j))
 	endfunction
 	//保存积分
-	function Save takes nothing returns boolean
-		return SaveGameCache(GC[99])
+	function Save takes nothing returns nothing
+		Lua_hook(sys.selfp, "saveRecord")
 	endfunction
 	//测试用
 	function Test2 takes nothing returns boolean
@@ -976,13 +977,13 @@ define{
 	endfunction
 
 	function SetLevel takes nothing returns nothing
-		local integer x=Get(99,"经验")
+		local integer x=Get(sys.self,"经验")
 		local integer i=0
 		loop
 			exitwhen x<(25*i*i+75*i)
 			set i=i+1
 		endloop
-		call Set(99,"等级",i)
+		call Set(sys.self,"等级",i)
 	endfunction
 
 	function RunAway takes integer isrun returns nothing
@@ -1001,20 +1002,20 @@ define{
 			set runaway[Get(i,"R0")]=true
 			call runawayB2I()
 			set isRun=true
-			call Set(99,"经验",Get(99,"经验")-100)
+			call Set(sys.self,"经验",Get(sys.self,"经验")-100)
 		elseif isRun then
 			call runawayI2B()
 			set runaway[Get(i,"R0")]=false
 			call runawayB2I()
 			if isrun==1 then
-				call Set(99,"经验",Get(99,"经验")+50)
+				call Set(sys.self,"经验",Get(sys.self,"经验")+50)
 				set isRun2=true
 			else
 				set isRun=false
 				if isRun2 then
-					call Set(99,"经验",Get(99,"经验")+50)
+					call Set(sys.self,"经验",Get(sys.self,"经验")+50)
 				else
-					call Set(99,"经验",Get(99,"经验")+100)
+					call Set(sys.self,"经验",Get(sys.self,"经验")+100)
 				endif
 			endif
 		endif
@@ -1044,7 +1045,7 @@ define{
 		if IsGameOver or IsPlayerObserver(GetLocalPlayer()) then
 			return
 		endif
-		call Set(99,"时间",1+Get(99,"时间"))
+		call Set(sys.self,"时间",1+Get(sys.self,"时间"))
 		call Save()
 	endfunction
 
@@ -1059,14 +1060,14 @@ define{
 		call RunAway(2)
 		set IsGameOver=true
 		if sys.getTime()<600 or tid<0 then
-			call Set(99,"局数",Get(99,"局数")-1)
-			call Set(99,"经验",Get(99,"经验")-LoseScore-KDScore[j])
-            call Set(99, "连胜", MU_Wins[j])
+			call Set(sys.self,"局数",Get(sys.self,"局数")-1)
+			call Set(sys.self,"经验",Get(sys.self,"经验")-LoseScore-KDScore[j])
+            call Set(sys.self, "连胜", MU_Wins[j])
 			call SetLevel()
-			if Get(99,"局数")==0 then
-				call Set(99,"胜率",0)
+			if Get(sys.self,"局数")==0 then
+				call Set(sys.self,"胜率",0)
 			else
-				call Set(99,"胜率",100*Get(99,"胜利")/Get(99,"局数"))
+				call Set(sys.self,"胜率",100*Get(sys.self,"胜利")/Get(sys.self,"局数"))
 			endif
 			call Save()
 			if sys.getTime()<600 then
@@ -1138,11 +1139,11 @@ define{
 			//set Record[j]=Record[j]+100 //额外经验
 		endif
 		set Record[j]=Record[j]+KDScore[j]
-		call Set(99,"胜率",100*Get(99,"胜利")/Get(99,"局数"))
-        if MU_Score[j+1] > Get(99, "纪录") then
-            call DisplayTimedTextToPlayer(Player(j),0,0,60,"|cff00ff00你刷新了自己的最高积分纪录|r(|cffffcc00"+I2S(Get(99, "纪录"))+"|r)|cff00ff00!!
+		call Set(sys.self,"胜率",100*Get(sys.self,"胜利")/Get(sys.self,"局数"))
+        if MU_Score[j+1] > Get(sys.self, "纪录") then
+            call DisplayTimedTextToPlayer(Player(j),0,0,60,"|cff00ff00你刷新了自己的最高积分纪录|r(|cffffcc00"+I2S(Get(sys.self, "纪录"))+"|r)|cff00ff00!!
 新的纪录为|cffffcc00"+I2S(MU_Score[j+1])+"|cff00ff00分!!|r")
-            call Set(99, "纪录", MU_Score[j+1])
+            call Set(sys.self, "纪录", MU_Score[j+1])
         endif
 		if Record[j]>MaxExp then
 			set Record[j]=MaxExp
@@ -1152,7 +1153,7 @@ define{
 		else
 			//call DisplayTimedTextToPlayer(Player(j),0,0,60,"|cff00ff00经验"+I2S(Record[j])+"|r")
 		endif
-		call Set(99,"经验",Record[j]-LoseScore-KDScore[j]+Get(99,"经验"))
+		call Set(sys.self,"经验",Record[j]-LoseScore-KDScore[j]+Get(sys.self,"经验"))
 		call SetLevel()
 		call Save()
 		call BJDebugMsg("|cffcc00ff积分已保存|r")
@@ -1315,7 +1316,7 @@ define{
 			endif
 			set i=i+1
 		endloop
-		set r1=r2/5.-(r1+I2R(5*Get(99,"等级")))/10.
+		set r1=r2/5.-(r1+I2R(5*Get(sys.self,"等级")))/10.
 		if r1>0 then
 			set WinScore=R2I(100*Sin(RMinBJ(r1,10)*3.1416/20)+50)
 			set LoseScore=R2I(100*Sin(RMinBJ(r1,10)*3.1416/20)-50)
@@ -1329,13 +1330,13 @@ define{
 		if LoseScore<-150 then
 			set LoseScore=-150
 		endif
-        set MU_Wins[GetPlayerId(GetLocalPlayer())] = Get(99, "连胜")
-		call Set(99,"经验",Get(99,"经验")+LoseScore)
+        set MU_Wins[GetPlayerId(GetLocalPlayer())] = Get(sys.self, "连胜")
+		call Set(sys.self,"经验",Get(sys.self,"经验")+LoseScore)
 		call SetLevel()
 		if not IsPlayerObserver(GetLocalPlayer()) then
-			call Set(99,"局数",Get(99,"局数")+1)
-			call Set(99,"胜率",100*Get(99,"胜利")/Get(99,"局数"))
-            call Set(99,"连胜", 0)
+			call Set(sys.self,"局数",Get(sys.self,"局数")+1)
+			call Set(sys.self,"胜率",100*Get(sys.self,"胜利")/Get(sys.self,"局数"))
+            call Set(sys.self,"连胜", 0)
 		endif
 		call Save()
 	endfunction
@@ -1365,18 +1366,18 @@ define{
 			set i=i+1
 		endloop
 		call TriggerAddCondition(trg,Condition(function InitTest))
-		set GC[99]=GC[GetPlayerId(GetLocalPlayer())]
-		call StoreString(GC[99],"","Title@"+I2S2(0),"局数")
-		call StoreString(GC[99],"","Title@"+I2S2(1),"连胜")
-		call StoreString(GC[99],"","Title@"+I2S2(2),"助攻王")
-		call StoreString(GC[99],"","Title@"+I2S2(3),"节操")
-		call StoreString(GC[99],"","Title@"+I2S2(4),"胜率")
-		call StoreString(GC[99],"","Title@"+I2S2(5),"战神")
-		call StoreString(GC[99],"","Title@"+I2S2(6),"逃跑")
-		call StoreString(GC[99],"","Title@"+I2S2(7),"MVP")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(0),"局数")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(1),"连胜")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(2),"助攻王")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(3),"节操")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(4),"胜率")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(5),"战神")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(6),"逃跑")
+		call StoreString(GC[sys.self],"","Title@"+I2S2(7),"MVP")
         if not sys.JAPI then
             return
         endif
+        Lua_hook(sys.selfp, "initRecord")
         set IsGameOver = false
 		call TimerStart(CreateTimer(),1200,false,function RunB)
 		call TimerStart(CreateTimer(),60,true,function MinTimer)
@@ -1403,29 +1404,29 @@ define{
 		set trg=null
         
         //写入本地存档
-        Get(99, "局数")
-        Get(99, "连胜")
-        Get(99, "助攻王")
-        Get(99, "节操")
-        Get(99, "胜率")
-        Get(99, "战神")
-        Get(99, "逃跑")
-        Get(99, "MVP")
-        Get(99, "胜利")
-        Get(99, "经验")
-        Get(99, "等级")
-        Get(99, "杀敌")
-        Get(99, "助攻")
-        Get(99, "死亡")
-        Get(99, "荣誉")
-        Get(99, "战神")
-        Get(99, "纪录")
-        Get(99, "时间")
-        Get(99, "R0")
-        Get(99, "R1")
-        Get(99, "R2")
+        Get(sys.self, "局数")
+        Get(sys.self, "连胜")
+        Get(sys.self, "助攻王")
+        Get(sys.self, "节操")
+        Get(sys.self, "胜率")
+        Get(sys.self, "战神")
+        Get(sys.self, "逃跑")
+        Get(sys.self, "MVP")
+        Get(sys.self, "胜利")
+        Get(sys.self, "经验")
+        Get(sys.self, "等级")
+        Get(sys.self, "杀敌")
+        Get(sys.self, "助攻")
+        Get(sys.self, "死亡")
+        Get(sys.self, "荣誉")
+        Get(sys.self, "战神")
+        Get(sys.self, "纪录")
+        Get(sys.self, "时间")
+        Get(sys.self, "R0")
+        Get(sys.self, "R1")
+        Get(sys.self, "R2")
 
-        //Set(99,"V",4) --被下面的函数取代
+        //Set(sys.self,"V",4) --被下面的函数取代
         if not baka.newMap() then
             call Save()
             set IsGameOver = true
