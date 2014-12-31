@@ -68,7 +68,7 @@ local w3x_txt	= {
 }
 
 local function git_fresh(fname)
-	if ext_ignore[fname] or fname:sub(-4) == '.lua' then
+	if ext_ignore[fname] or fname:sub(-4) == '.lua' or fname:sub(-5) == '.luac' then
 		return
 	end
 	
