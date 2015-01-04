@@ -34,6 +34,8 @@
 	end
 
 	string2id = __id
+
+	string.toid	= __id
     
 	--分割字符串
     string.split = function(str, tos)

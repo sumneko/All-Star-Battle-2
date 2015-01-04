@@ -16,8 +16,8 @@
             end
             for i = 1, #game.heroes do
                 local hero = game.heroes[i]
-                jass.UnitAddAbility(hero, |Amgl|)
-                jass.UnitRemoveAbility(hero, |Amgl|)
+                jass.UnitAddAbility(hero, ('Amgl'):toid())
+                jass.UnitRemoveAbility(hero, ('Amgl'):toid())
             end
         end
     )

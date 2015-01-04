@@ -79,8 +79,8 @@
     
     --一方通行-重力移动冷却2秒
     game[1] = function(u)
-        local ab = japi.EXGetUnitAbility(u, |A0II|)
-        local lv = jass.GetUnitAbilityLevel(u, |A0II|)
+        local ab = japi.EXGetUnitAbility(u, ('A0II'):toid())
+        local lv = jass.GetUnitAbilityLevel(u, ('A0II'):toid())
         japi.EXSetAbilityDataReal(ab, lv, 105, 2)
         japi.EXSetAbilityState(ab, 1, 2)
         japi.EXSetAbilityDataReal(ab, lv, 105, 0)
@@ -88,8 +88,8 @@
     
     --一方通行-重力移动冷却1秒
     game[2] = function(u)
-        local ab = japi.EXGetUnitAbility(u, |A0II|)
-        local lv = jass.GetUnitAbilityLevel(u, |A0II|)
+        local ab = japi.EXGetUnitAbility(u, ('A0II'):toid())
+        local lv = jass.GetUnitAbilityLevel(u, ('A0II'):toid())
         japi.EXSetAbilityDataReal(ab, lv, 105, 1)
         japi.EXSetAbilityState(ab, 1, 1)
         japi.EXSetAbilityDataReal(ab, lv, 105, 0)
@@ -98,10 +98,10 @@
     --三笠阿克曼-技能耗蓝增加50%(废弃)
     game.table_3 = {}
     game.table_4 = {
-        [|A0PX|] = true,
-        [|A0PZ|] = true,
-        [|A0Q0|] = true,
-        [|A0Q1|] = true,
+        [('A0PX'):toid()] = true,
+        [('A0PZ'):toid()] = true,
+        [('A0Q0'):toid()] = true,
+        [('A0Q1'):toid()] = true,
     }
     
     game[3] = function(u)

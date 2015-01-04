@@ -103,44 +103,44 @@
 
 	--信使被动专属技能
 	messenger.skill1 = {
-		|A0RK|,
-		|A0RL|,
-		|A0RM|,
-		|A0RN|,
-		|A0RO|,
-		|A0RP|,
-		|A0RQ|,
-		|A0RR|,
-		|A0RS|,
-		|A0RT|,
+		('A0RK'):toid()
+		('A0RL'):toid()
+		('A0RM'):toid()
+		('A0RN'):toid()
+		('A0RO'):toid()
+		('A0RP'):toid()
+		('A0RQ'):toid()
+		('A0RR'):toid()
+		('A0RS'):toid()
+		('A0RT'):toid()
 	}
 	--信使主动专属技能
 	messenger.skill2 = {
-		|A0RI|,
-		|A0RU|,
-		|A0RV|,
-		|A0RW|,
-		|A0RX|,
-		|A0RY|,
-		|A0RZ|,
-		|A0S0|,
-		|A0S1|,
-		|A0S2|,
+		('A0RI'):toid()
+		('A0RU'):toid()
+		('A0RV'):toid()
+		('A0RW'):toid()
+		('A0RX'):toid()
+		('A0RY'):toid()
+		('A0RZ'):toid()
+		('A0S0'):toid()
+		('A0S1'):toid()
+		('A0S2'):toid()
 	}
 
 	--信使皮肤技能
 	messenger.model_skill = {
-		|A0TD|,
-		|A0TE|,
-		|A0TF|,
-		['up']	= |A0TG|,
-		|A0TH|,
-		|A0TI|,
-		|A0TJ|,
-		['down']	=|A0TK|,
-		|A0TL|,
-		|A0TM|,
-		|A0TN|,
+		('A0TD'):toid()
+		('A0TE'):toid()
+		('A0TF'):toid()
+		['up']	= ('A0TG'):toid()
+		('A0TH'):toid()
+		('A0TI'):toid()
+		('A0TJ'):toid()
+		['down']	=('A0TK'):toid()
+		('A0TL'):toid()
+		('A0TM'):toid()
+		('A0TN'):toid()
 	}
 
 	table.back(messenger.model_skill)
@@ -177,7 +177,7 @@
 
 		p.second_messenger	= true
 		--给信使添加魔法书
-		jass.UnitAddAbility(u, |A0TO|)
+		jass.UnitAddAbility(u, ('A0TO'):toid())
 
 		function p.fresh_messenger_text()
 			local jc	= p:getRecord '节操'
@@ -347,7 +347,7 @@
 							jass.SetItemPosition(items[i], 0, 0)
 						end
 					end
-					jass.UnitRemoveAbility(u, |A0TO|)
+					jass.UnitRemoveAbility(u, ('A0TO'):toid())
 					jass.RemoveUnit(u)
 
 					--创建新的信使
@@ -542,12 +542,12 @@
 	--注册英雄皮肤
 	--皮肤技能
 	hero_model.skills = {
-		|A0T6|,
-		|A0T7|,
-		|A0TB|,
-		|A0T8|,
-		|A0T9|,
-		|A0TA|,
+		('A0T6'):toid()
+		('A0T7'):toid()
+		('A0TB'):toid()
+		('A0T8'):toid()
+		('A0T9'):toid()
+		('A0TA'):toid()
 	}
 	
 	table.back(hero_model.skills)
@@ -722,8 +722,8 @@
 								jass.UnitAddAbility(hero, data.skill_id)
 								jass.UnitRemoveAbility(hero, data.skill_id)
 
-								jass.UnitAddAbility(hero, |Arav|)
-								jass.UnitRemoveAbility(hero, |Arav|)
+								jass.UnitAddAbility(hero, ('Arav'):toid())
+								jass.UnitRemoveAbility(hero, ('Arav'):toid())
 
 								if data['变身特效'] then
 									local t = tonumber(data['特效时间'])
