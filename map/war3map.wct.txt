@@ -4181,6 +4181,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 endif
                 i ++
             endloop
+            dummy[12] = dummy[15]
         }
 
         /*
