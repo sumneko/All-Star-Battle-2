@@ -71,6 +71,10 @@ Event.HeroInit="注册英雄"
 Event.HeroInit=~英雄类型," 被注册"
 Event.HeroInitHint="通过 事件来源 事件目标 获取英雄"
 
+Event.Crit="发动暴击"
+Event.Crit="最后添加的暴击模块发动"
+Event.CritHint="上个添加的暴击模块发动时回调,只能储存一个触发器.暴击模块移除时自动摧毁触发器"
+
 // Game events
 
 TriggerRegisterVariableEvent="实数变量事件"
@@ -650,6 +654,10 @@ Unit.SkillBarHint="通过 最后创建的施法进度条 获取进度条.杀死�
 Unit.SaveSlkData="注册单位的物编数据"
 Unit.SaveSlkData="为 ",~单位类型," 注册 ",~数据名称
 Unit.SaveSlkDataHint="用空格分割多个数据名称,保存时自动从物编中读取保存到哈希表中.可以用逆天自定义值读出数据"
+
+Unit.Crit="添加/移除暴击"
+Unit.Crit="为 ",~单位," ",~添加移除," 几率为 ",~几率," %,倍率为 ",~倍率," ,标签为 ",~标签," 的暴击模块"
+Unit.CritHint="只有当几率,倍率,标签完全匹配时才能移除暴击模块"
 
 //物品库
 //最萌小汐
@@ -6201,9 +6209,21 @@ YDWEIsEventAttackType="攻击类型 [JAPI]"
 YDWEIsEventAttackType="单位所受伤害的攻击类型是 ",~攻击类型
 YDWEIsEventAttackTypeHint="响应'受到伤害'单位事件,不能用在等待之后"
 
-GetEventDamage="伤害值"
+GetEventDamage="获取伤害值"
 GetEventDamage="单位所受伤害"
 GetEventDamageHint="响应'受到伤害'单位事件,指代单位所受伤害."
+
+Event.GetCurrentDamage="获取当前伤害 <事件库>"
+Event.GetCurrentDamage="当前伤害"
+Event.GetCurrentDamageHint="减除触发免伤后的剩余伤害(只统计使用伤害系统的免伤部分,手动预治疗不统计)"
+
+Event.GetCritChance="获取发动的暴击模块的暴击几率 <事件库>"
+Event.GetCritChance="暴击几率"
+Event.GetCritChanceHint="在 暴击伤害 事件中获取该暴击的暴击几率"
+
+Event.GetCritRate="获取发动的暴击模块的暴击倍率 <事件库>"
+Event.GetCritRate="暴击倍率"
+Event.GetCritRateHint="在 暴击伤害 事件中获取该暴击的暴击倍率"
 
 GetOrderPointX="命令发布点X坐标 [R]"
 GetOrderPointX="命令发布点X坐标"
@@ -7016,6 +7036,10 @@ GetEventPlayerChatStringMatchedHint=
 GetSaveBasicFilename="存档文件名"
 GetSaveBasicFilename="存档文件名"
 GetSaveBasicFilenameHint="响应'游戏 - 保存进度'事件."
+
+Event.GetCritTag="获取发动的暴击模块的标签"
+Event.GetCritTag="暴击标签"
+Event.GetCritTagHint="在 暴击伤害 事件中获取该暴击的标签"
 
 GetAbilityName="技能名称"
 GetAbilityName=~技能," 的名称"

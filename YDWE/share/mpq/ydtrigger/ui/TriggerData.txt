@@ -402,6 +402,7 @@ isLuck=0,0,0,神符效果,boolean
 mover_state_real=0,0,0,弹幕属性(实数),integer
 SkillBarEndReason=0,0,0,技能进度条事件原因,integer
 itemPickDrop=0,0,0,获得还是丢弃,integer
+add_remove=0,0,0,添加或移除,boolean
 
 
 //***************************************************************************
@@ -454,12 +455,16 @@ damageTypeB1=0,damageTypeB,0,任意伤害
 damageTypeB2=0,damageTypeB,1,攻击伤害
 damageTypeB3=0,damageTypeB,2,非攻击伤害
 damageTypeB4=0,damageTypeB,3,致命伤害
+damageTypeB5=0,damageTypeB,4,暴击伤害
 
 mover_state_real1=0,mover_state_real,1,在原力场中降低的移动速度(%)
 mover_state_real2=0,mover_state_real,2,在原力场中受到的额外斥力(%)
 
 itemPickDrop1=0,itemPickDrop,0,获得
 itemPickDrop2=0,itemPickDrop,1,失去
+
+add_remove_add=0,add_remove,true,添加
+add_remove_remove=0,add_remove,false,移除
 
 //YDWE 修改属性
 bonusTypeC=0,bonusType,3,攻击
@@ -3434,6 +3439,9 @@ _Event.SkillBarEnd_Category=TC_MU_EVENT
 Event.HeroInit=0,unitcode
 _Event.HeroInit_Category=TC_MU_EVENT
 
+Event.Crit=0
+_Event.Crit_Category=TC_MU_EVENT
+
 //
 YDWEDisableRegister=0,nothing
 _YDWEDisableRegister_Defaults=
@@ -4057,6 +4065,10 @@ _Unit.SkillBar_Category=TC_MU_UNIT
 Unit.SaveSlkData=0,unitcode,scriptcode
 _Unit.SaveSlkData_Defaults=hfoo,_
 _Unit.SaveSlkData_Category=TC_MU_UNIT
+
+Unit.Crit=0,unit,add_remove,real,real,string
+_Unit.Crit_Defaults=GetTriggerUnit,add_remove_add,15,1.5,"无"
+_Unit.Crit_Category=TC_MU_UNIT
 
 //物品库
 Item.Formula=0,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,integer
@@ -10143,6 +10155,15 @@ GetEventDamage=0,1,real
 _GetEventDamage_Defaults=
 _GetEventDamage_Category=TC_EVENTRESPONSE
 
+Event.GetCurrentDamage=0,1,real
+_Event.GetCurrentDamage_Category=TC_EVENTRESPONSE
+
+Event.GetCritChance=0,1,real
+_Event.GetCritChance_Category=TC_EVENTRESPONSE
+
+Event.GetCritRate=0,1,real
+_Event.GetCritRate_Category=TC_EVENTRESPONSE
+
 GetOrderPointX=0,1,real
 _GetOrderPointX_Category=TC_EVENTRESPONSE
 
@@ -10477,6 +10498,9 @@ GetSaveBasicFilename=1,0,string
 _GetSaveBasicFilename_Defaults=
 _GetSaveBasicFilename_Category=TC_EVENTRESPONSE
 
+Event.GetCritTag=0,1,string
+_Event.GetCritTag_Category=TC_EVENTRESPONSE
+
 GetPlayerName=0,1,string,player
 _GetPlayerName_Defaults=GetTriggerPlayer
 _GetPlayerName_Category=TC_PLAYER
@@ -10499,7 +10523,6 @@ GetAbilitySoundBJ=1,1,string,abilcode,soundtype
 _GetAbilitySoundBJ_Defaults=_,SoundTypeEffect
 _GetAbilitySoundBJ_Category=TC_GAME
 _GetAbilitySoundBJ_ScriptName=GetAbilitySoundById
-
 
 GetStoredString=0,1,string,gamecache,string,string
 _GetStoredString_Defaults=GetLastCreatedGameCacheBJ,"Category",_,
