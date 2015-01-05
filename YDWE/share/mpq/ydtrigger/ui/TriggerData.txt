@@ -10158,12 +10158,6 @@ _GetEventDamage_Category=TC_EVENTRESPONSE
 Event.GetCurrentDamage=0,1,real
 _Event.GetCurrentDamage_Category=TC_EVENTRESPONSE
 
-Event.GetCritChance=0,1,real
-_Event.GetCritChance_Category=TC_EVENTRESPONSE
-
-Event.GetCritRate=0,1,real
-_Event.GetCritRate_Category=TC_EVENTRESPONSE
-
 GetOrderPointX=0,1,real
 _GetOrderPointX_Category=TC_EVENTRESPONSE
 
@@ -10497,9 +10491,6 @@ _GetEventPlayerChatStringMatched_Category=TC_EVENTRESPONSE
 GetSaveBasicFilename=1,0,string
 _GetSaveBasicFilename_Defaults=
 _GetSaveBasicFilename_Category=TC_EVENTRESPONSE
-
-Event.GetCritTag=0,1,string
-_Event.GetCritTag_Category=TC_EVENTRESPONSE
 
 GetPlayerName=0,1,string,player
 _GetPlayerName_Defaults=GetTriggerPlayer

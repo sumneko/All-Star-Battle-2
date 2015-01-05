@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=482
+//TESH.scrollpos=338
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1707,16 +1707,20 @@ library eventLibrary initializer Init needs baseLibrary
         static trigger damageEventTrigger4[]
         static trigger damageEventTrigger5[]
         static trigger damageEventTrigger6[]
+        static trigger damageEventTrigger7[]
+        static trigger damageEventTrigger8[]
         static int damageCount1 = 0
         static int damageCount2 = 0
         static int damageCount3 = 0
         static int damageCount4 = 0
         static int damageCount5 = 0
         static int damageCount6 = 0
+        static int damageCount7 = 0
+        static int damageCount8 = 0
 
-        //任意单位/英雄/非英雄 受到 任意伤害/攻击伤害/非攻击伤害/致命伤害
+        //任意单位/英雄/非英雄 受到 任意伤害/攻击伤害/非攻击伤害/致命伤害/暴击伤害
         static void AnyUnitDamage(trigger trg, int i1, int i2){
-            bool hero, nothero, attack, notattack, dying
+            bool hero, nothero, attack, notattack, dying, crit
             if i1 == 0 then
                 hero = true
                 nothero = true
@@ -1735,14 +1739,22 @@ library eventLibrary initializer Init needs baseLibrary
                 attack = true
                 notattack = false
                 dying = false
+                crit = false
             elseif i2 == 2 then
                 attack = false
                 notattack = true
                 dying = false
+                crit = false
             elseif i2 == 3 then
                 attack = false
                 notattack = false
                 dying = true
+                crit = false
+            elseif i2 == 4 then
+                attack = false
+                notattack = false
+                dying = false
+                crit = true
             endif
             int h = GetHandleId(trg)
             SaveInteger(HT, h, 0, 1)
@@ -1753,35 +1765,36 @@ library eventLibrary initializer Init needs baseLibrary
             if hero then
                 if attack then
                     define_InitTrigger(1)
-
                 endif
                 if notattack then
                     define_InitTrigger(2)
-
                 endif
                 if dying then
                     define_InitTrigger(5)
-
+                endif
+                if crit then
+                    define_InitTrigger(7)
                 endif
             endif
             if nothero then
                 if attack then
                     define_InitTrigger(3)
-
                 endif
                 if notattack then
                     define_InitTrigger(4)
-
                 endif
                 if dying then
                     define_InitTrigger(6)
-
+                endif
+                if crit then
+                    define_InitTrigger(8)
                 endif
             endif
 
             undef define_InitTrigger
         }
-
+        
+        static unit damage_from[]
         static unit damage_to[]
         static real damage_reduce[]
 
@@ -1828,8 +1841,104 @@ library eventLibrary initializer Init needs baseLibrary
         static bool damageEvent_need_clear4 = false
         static bool damageEvent_need_clear5 = false
         static bool damageEvent_need_clear6 = false
+        static bool damageEvent_need_clear7 = false
+        static bool damageEvent_need_clear8 = false
 
         static bool damageEvent_Enable = true
+        
+        define define_TriggerExecute(n) = {
+            i = 1
+
+            //检查是否要清理触发器
+release@    if damageEvent_need_clear##n and index == 0 then
+debug@      if damageEvent_need_clear##n then
+debug@          if index != 0 then
+debug@              BJDebugMsg("<清理伤害事件>被跳过")
+debug@          else
+                damageEvent_need_clear##n = false
+                int x = 0
+                loop
+                    exitwhen i > damageCount##n
+                    if damageEventTrigger##n[i] == null then
+                        x ++
+                    elseif x != 0 then
+                        damageEventTrigger##n[i - x] = damageEventTrigger##n[i]
+                    endif
+                    i ++
+                endloop
+                damageCount##n -= x
+                i = 1
+debug@          endif
+            endif
+
+            //循环运行触发器
+            event_skip[index] = false
+            loop
+                exitwhen i > damageCount##n or event_skip[index]
+                if IsTriggerEnabled(damageEventTrigger##n[i]) and TriggerEvaluate(damageEventTrigger##n[i]) then
+                    TriggerExecute(damageEventTrigger##n[i])
+                endif
+                i ++
+            endloop
+        }
+        
+        //检查是否是暴击
+        static void CheckCrit(bool isHero){
+            
+            //检查目标合法性
+            if IsUnitType(damage_to[index], UNIT_TYPE_STRUCTURE) then
+                return
+            endif
+            
+            //取出暴击模块
+            int h     = GetHandleId(damage_from[index])
+            int count = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
+            if count == 0 then
+                return
+            endif
+            
+            //循环遍历暴击模块
+            real thisRate = 0
+            int i = 0
+            loop
+                exitwhen i > h
+                
+                real chance = LoadReal(YDHT, h, StringHash("暴击几率值段") + i)
+                real rate   = LoadReal(YDHT, h, StringHash("暴击倍率值段") + i)
+                
+                //判定是否发动该暴击
+                if rate >= GetRandomReal(0, 100) then
+                    //同时暴击取最高值
+                    if rate > thisRate then
+                        thisRate = rate
+                    endif
+                    
+                    //回调触发
+                    trigger trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
+                    if trg != null and TriggerEvaluate(trg) then
+                        TriggerExecute(trg)
+                    endif
+                    trg = null
+                endif
+                
+                i ++
+            endloop
+            
+            //是否发动了暴击
+            if thisRate == 0 then
+                return
+            endif
+            
+            //发起暴击事件
+            SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "暴击伤害")
+            SaveReal(YDHT, StringHash("事件返回"), StringHash("暴击倍率"), thisRate)
+            if isHero then
+                define_TriggerExecute(7)
+            else
+                define_TriggerExecute(8)
+            endif
+            
+        }
 
         static void damageEventAction(){
             if GetEventDamage() == 0 or not damageEvent_Enable then
@@ -1838,49 +1947,15 @@ library eventLibrary initializer Init needs baseLibrary
 
             int i
             index ++
+            damage_from[index] = GetEventDamageSource()
             damage_to[index] = GetTriggerUnit()
             bool attack = UnitRemoveAbility(damage_to[index], 'B039') or UnitRemoveAbility(damage_to[index], 'A0OB')
-
-            define define_TriggerExecute(n) = {
-                i = 1
-
-                //检查是否要清理触发器
-    release@    if damageEvent_need_clear##n and index == 0 then
-    debug@      if damageEvent_need_clear##n then
-    debug@          if index != 0 then
-    debug@              BJDebugMsg("<清理伤害事件>被跳过")
-    debug@          else
-                    damageEvent_need_clear##n = false
-                    int x = 0
-                    loop
-                        exitwhen i > damageCount##n
-                        if damageEventTrigger##n[i] == null then
-                            x ++
-                        elseif x != 0 then
-                            damageEventTrigger##n[i - x] = damageEventTrigger##n[i]
-                        endif
-                        i ++
-                    endloop
-                    damageCount##n -= x
-                    i = 1
-    debug@          endif
-                endif
-
-                //循环运行触发器
-                event_skip[index] = false
-                loop
-                    exitwhen i > damageCount##n or event_skip[index]
-                    if IsTriggerEnabled(damageEventTrigger##n[i]) and TriggerEvaluate(damageEventTrigger##n[i]) then
-                        TriggerExecute(damageEventTrigger##n[i])
-                    endif
-                    i ++
-                endloop
-            }
 
             real life
 
             if IsUnitType(damage_to[index], UNIT_TYPE_HERO) and not IsUnitType(damage_to[index], UNIT_TYPE_SUMMONED) then
                 if attack then
+                    CheckCrit(true) //检查是否是暴击
                     call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
                     define_TriggerExecute(1)
                 else
@@ -1898,6 +1973,7 @@ library eventLibrary initializer Init needs baseLibrary
                 endif
             else
                 if attack then
+                    CheckCrit(false) //检查是否是暴击
                     call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
                     define_TriggerExecute(3)
                 else
@@ -1952,6 +2028,11 @@ library eventLibrary initializer Init needs baseLibrary
         }
         
         #define GetEventDamageSource() Event.GetDamageFrom()
+        
+        //获取当前伤害
+        static real GetCurrentDamage(){
+            return GetEventDamage() - damage_reduce[index]
+        }
 
         static void DamageEventDestroy(trigger trg, int h){
             if LoadInteger(HT, h, 0) == 1 then
@@ -1961,6 +2042,8 @@ library eventLibrary initializer Init needs baseLibrary
                 int i4 = LoadInteger(HT, h, 4)
                 int i5 = LoadInteger(HT, h, 5)
                 int i6 = LoadInteger(HT, h, 6)
+                int i7 = LoadInteger(HT, h, 7)
+                int i8 = LoadInteger(HT, h, 8)
 
                 define define_DestroyTrigger(n) = {
                     if i##n == 1 then
@@ -1987,6 +2070,10 @@ library eventLibrary initializer Init needs baseLibrary
                 define_DestroyTrigger(5)
 
                 define_DestroyTrigger(6)
+                
+                define_DestroyTrigger(7)
+                
+                define_DestroyTrigger(8)
 
                 undef define_DestroyTrigger
             endif
@@ -2300,6 +2387,14 @@ debug@      endif
             u_from[index] = null
             u_to[index] = null
             index --
+        }
+        
+        /*
+        发动暴击事件
+        */
+        static void Crit(trigger trg){
+            int count = LoadInteger(YDHT, Unit.last_CritAddedUnitHandle, StringHash("暴击模块计数"))
+            SaveTriggerHandle(YDHT, Unit.last_CritAddedUnitHandle, StringHash("暴击触发值段") + count, trg)
         }
 
         //自定义事件
@@ -2735,7 +2830,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=747
+//TESH.scrollpos=744
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3607,7 +3702,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=564
+//TESH.scrollpos=1107
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4721,6 +4816,72 @@ library unitLibrary initializer Init needs bakaLibrary
                 red = LoadInteger(YDHT, id, StringHash("blue"))
             endif
             SetUnitVertexColor(u, red, green, blue, 255)
+        }
+        
+        //添加暴击模块
+        static int last_CritAddedUnitHandle = 0
+        
+        static void Crit(unit u, bool add, real chance, real rate, string tag){
+            //先检查参数合法性
+            if chance <= 0 or rate <= 1 then
+                return
+            endif
+            
+            int h       = GetHandleId(u)
+            int count   = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
+            
+            if add then
+            
+                //在暴击模块队列末端添加新的暴击模块
+                count   = count + 1
+                SaveReal(YDHT, h, StringHash("暴击几率值段") + count, chance)
+                SaveReal(YDHT, h, StringHash("暴击倍率值段") + count, rate)
+                SaveStr(YDHT, h, StringHash("暴击标签值段") + count, tag)
+                
+                //保存计数
+                SaveInteger(YDHT, h, StringHash("暴击模块计数"), count)
+                
+                //保存全局变量
+                last_CritAddedUnitHandle = h
+                
+            else
+                //找到完全匹配的模块才可以移除
+                int i   = 1
+                loop
+                    exitwhen i > count
+                    if chance == LoadReal(YDHT, h, StringHash("暴击几率值段") + i)\
+                    and rate  == LoadReal(YDHT, h, StringHash("暴击倍率值段") + i)\
+                    and tag   == LoadStr(YDHT, h, StringHash("暴击标签值段") + i) then
+                    
+                        //清空当前暴击模块的触发
+                        trigger trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
+                        DestroyTrigger(trg)
+                        FlushChildHashtable(YDHT, GetHandleId(trg))
+                        trg = null
+                        
+                        //将队列最后的暴击模块移动到当前位置
+                        SaveReal(YDHT, h, StringHash("暴击几率值段") + i, LoadReal(YDHT, h, StringHash("暴击几率值段") + count))
+                        SaveReal(YDHT, h, StringHash("暴击倍率值段") + i, LoadReal(YDHT, h, StringHash("暴击倍率值段") + count))
+                        SaveStr(YDHT, h, StringHash("暴击标签值段") + i, LoadStr(YDHT, h, StringHash("暴击标签值段") + count))
+                        SaveTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i, LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + count))
+                        
+                        //保存计数
+                        SaveInteger(YDHT, h, StringHash("暴击模块计数"), count - 1)
+                        return
+                    endif
+                    i ++
+                endloop
+                
+                //没有找打匹配的暴击模块,报错
+                BJDebugMsg("<错误>没有找到要移除的暴击模块!")
+                BJDebugMsg("<单位>" + GetUnitName(u))
+                BJDebugMsg("<几率>" + R2S(chance))
+                BJDebugMsg("<倍率>" + R2S(rate))
+                BJDebugMsg("<标签>" + tag)
+                
+                //让YDWE报错误位置
+                I2R(0 / 0)
+            endif
         }
 
     endstruct

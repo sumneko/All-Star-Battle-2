@@ -6217,14 +6217,6 @@ Event.GetCurrentDamage="获取当前伤害 <事件库>"
 Event.GetCurrentDamage="当前伤害"
 Event.GetCurrentDamageHint="减除触发免伤后的剩余伤害(只统计使用伤害系统的免伤部分,手动预治疗不统计)"
 
-Event.GetCritChance="获取发动的暴击模块的暴击几率 <事件库>"
-Event.GetCritChance="暴击几率"
-Event.GetCritChanceHint="在 暴击伤害 事件中获取该暴击的暴击几率"
-
-Event.GetCritRate="获取发动的暴击模块的暴击倍率 <事件库>"
-Event.GetCritRate="暴击倍率"
-Event.GetCritRateHint="在 暴击伤害 事件中获取该暴击的暴击倍率"
-
 GetOrderPointX="命令发布点X坐标 [R]"
 GetOrderPointX="命令发布点X坐标"
 GetOrderPointXHint="用坐标代替点可以省去创建、删除点的麻烦."
@@ -7036,10 +7028,6 @@ GetEventPlayerChatStringMatchedHint=
 GetSaveBasicFilename="存档文件名"
 GetSaveBasicFilename="存档文件名"
 GetSaveBasicFilenameHint="响应'游戏 - 保存进度'事件."
-
-Event.GetCritTag="获取发动的暴击模块的标签"
-Event.GetCritTag="暴击标签"
-Event.GetCritTagHint="在 暴击伤害 事件中获取该暴击的标签"
 
 GetAbilityName="技能名称"
 GetAbilityName=~技能," 的名称"
