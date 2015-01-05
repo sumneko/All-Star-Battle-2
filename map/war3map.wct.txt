@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=737
+//TESH.scrollpos=482
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2086,6 +2086,9 @@ debug@          endif
         */
 
         static void ItemPick(trigger trg, int iid){
+debug@      if LoadTriggerHandle(HT, StringHash("英雄获得物品"), iid) != null then
+debug@          BJDebugMsg("<错误>重复注册英雄获得物品事件:" + I2S(iid))
+debug@      endif
             SaveTriggerHandle(HT, StringHash("英雄获得物品"), iid, trg)
         }
 
@@ -2120,6 +2123,9 @@ debug@          endif
         */
 
         static void ItemDrop(trigger trg, int iid){
+debug@      if LoadTriggerHandle(HT, StringHash("英雄丢弃物品"), iid) != null then
+debug@          BJDebugMsg("<错误>重复注册英雄丢弃物品事件:" + I2S(iid))
+debug@      endif
             SaveTriggerHandle(HT, StringHash("英雄丢弃物品"), iid, trg)
         }
 
@@ -5394,6 +5400,8 @@ library testLibrary initializer Init needs baseLibrary
                 SaveReal(YDHT, StringHash("事件"), StringHash("几率"), S2R(String.GetStr(2)))
                 SaveReal(YDHT, StringHash("事件"), StringHash("倍率"), S2R(String.GetStr(3)))
                 Event.UserEventStart(移除暴击)
+            elseif s == ".leak" then
+                GetLocalizedHotkey("yd_leak_monitor::create_report")
             else
                 p = null
                 hero = null
@@ -6271,6 +6279,9 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
 ########
 ########
 
