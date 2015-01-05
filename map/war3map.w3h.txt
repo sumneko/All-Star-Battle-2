@@ -603,10 +603,10 @@ fta1=origin
 fta2=overhead
 fta3=overhead
 [B021:BOwk]
-ftip=配置元素
 fube=
 fart=ReplaceableTextures\CommandButtons\BTNNecromancerAdept.blp
 frac=nightelf
+ftip=配置元素
 [B022:BHtc]
 fart=ReplaceableTextures\CommandButtons\BTNShockWave.blp
 ftip=震荡
