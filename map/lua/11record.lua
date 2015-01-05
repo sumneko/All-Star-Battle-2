@@ -103,44 +103,44 @@
 
 	--信使被动专属技能
 	messenger.skill1 = {
-		('A0RK'):toid()
-		('A0RL'):toid()
-		('A0RM'):toid()
-		('A0RN'):toid()
-		('A0RO'):toid()
-		('A0RP'):toid()
-		('A0RQ'):toid()
-		('A0RR'):toid()
-		('A0RS'):toid()
-		('A0RT'):toid()
+		('A0RK'):toid(),
+		('A0RL'):toid(),
+		('A0RM'):toid(),
+		('A0RN'):toid(),
+		('A0RO'):toid(),
+		('A0RP'):toid(),
+		('A0RQ'):toid(),
+		('A0RR'):toid(),
+		('A0RS'):toid(),
+		('A0RT'):toid(),
 	}
 	--信使主动专属技能
 	messenger.skill2 = {
-		('A0RI'):toid()
-		('A0RU'):toid()
-		('A0RV'):toid()
-		('A0RW'):toid()
-		('A0RX'):toid()
-		('A0RY'):toid()
-		('A0RZ'):toid()
-		('A0S0'):toid()
-		('A0S1'):toid()
-		('A0S2'):toid()
+		('A0RI'):toid(),
+		('A0RU'):toid(),
+		('A0RV'):toid(),
+		('A0RW'):toid(),
+		('A0RX'):toid(),
+		('A0RY'):toid(),
+		('A0RZ'):toid(),
+		('A0S0'):toid(),
+		('A0S1'):toid(),
+		('A0S2'):toid(),
 	}
 
 	--信使皮肤技能
 	messenger.model_skill = {
-		('A0TD'):toid()
-		('A0TE'):toid()
-		('A0TF'):toid()
-		['up']	= ('A0TG'):toid()
-		('A0TH'):toid()
-		('A0TI'):toid()
-		('A0TJ'):toid()
-		['down']	=('A0TK'):toid()
-		('A0TL'):toid()
-		('A0TM'):toid()
-		('A0TN'):toid()
+		('A0TD'):toid(),
+		('A0TE'):toid(),
+		('A0TF'):toid(),
+		['up']	= ('A0TG'):toid(),
+		('A0TH'):toid(),
+		('A0TI'):toid(),
+		('A0TJ'):toid(),
+		['down']	=('A0TK'):toid(),
+		('A0TL'):toid(),
+		('A0TM'):toid(),
+		('A0TN'):toid(),
 	}
 
 	table.back(messenger.model_skill)
@@ -542,12 +542,12 @@
 	--注册英雄皮肤
 	--皮肤技能
 	hero_model.skills = {
-		('A0T6'):toid()
-		('A0T7'):toid()
-		('A0TB'):toid()
-		('A0T8'):toid()
-		('A0T9'):toid()
-		('A0TA'):toid()
+		('A0T6'):toid(),
+		('A0T7'):toid(),
+		('A0TB'):toid(),
+		('A0T8'):toid(),
+		('A0T9'):toid(),
+		('A0TA'):toid(),
 	}
 	
 	table.back(hero_model.skills)
