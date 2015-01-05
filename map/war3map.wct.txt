@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=276
+//TESH.scrollpos=737
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3601,7 +3601,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=60
+//TESH.scrollpos=564
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4804,7 +4804,8 @@ library textLibrary initializer Init needs baseLibrary
         static void CreateText(player p, unit luu, string str, real size, real red, real green, real blue, real see, real speed, real angle, boolean permanent,real fadepoint, real lifespan, integer showTo){
             set bj_lastCreatedTextTag = CreateTextTag()
             call SetTextTagText(bj_lastCreatedTextTag, str, size * 0.023 / 10)
-            call SetTextTagPosUnit(bj_lastCreatedTextTag, luu, 0)
+            //call SetTextTagPosUnit(bj_lastCreatedTextTag, luu, 0)
+            call SetTextTagPos(bj_lastCreatedTextTag, GetUnitX(luu) - StringLength(str) * 10, GetUnitY(luu), 0)
             call SetTextTagColor(bj_lastCreatedTextTag, R2I(red * 2.55), R2I(green * 2.55), R2I(blue * 2.55), R2I((100.0 - see) * 2.55))
             call SetTextTagVelocity(bj_lastCreatedTextTag, speed * 0.071 * Cos(angle * bj_DEGTORAD)/ 128, speed * 0.071 * Sin(angle * bj_DEGTORAD)/ 128)
             call SetTextTagPermanent( bj_lastCreatedTextTag, permanent )
@@ -5233,7 +5234,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=123
+//TESH.scrollpos=135
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -5383,6 +5384,16 @@ library testLibrary initializer Init needs baseLibrary
                 endif
             elseif s == ".gamespeed" then
                 SetGameSpeed(ConvertGameSpeed(S2I(String.GetStr(2))))
+            elseif s == ".addcrit" then
+                SaveUnitHandle(YDHT, StringHash("事件"), StringHash("来源"), hero)
+                SaveReal(YDHT, StringHash("事件"), StringHash("几率"), S2R(String.GetStr(2)))
+                SaveReal(YDHT, StringHash("事件"), StringHash("倍率"), S2R(String.GetStr(3)))
+                Event.UserEventStart(添加暴击)
+            elseif s == ".removecrit" then
+                SaveUnitHandle(YDHT, StringHash("事件"), StringHash("来源"), hero)
+                SaveReal(YDHT, StringHash("事件"), StringHash("几率"), S2R(String.GetStr(2)))
+                SaveReal(YDHT, StringHash("事件"), StringHash("倍率"), S2R(String.GetStr(3)))
+                Event.UserEventStart(移除暴击)
             else
                 p = null
                 hero = null

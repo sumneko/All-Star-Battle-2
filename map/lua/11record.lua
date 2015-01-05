@@ -137,7 +137,7 @@
 		('A0TH'):toid(),
 		('A0TI'):toid(),
 		('A0TJ'):toid(),
-		['down']	=('A0TK'):toid(),
+		['down']	= ('A0TK'):toid(),
 		('A0TL'):toid(),
 		('A0TM'):toid(),
 		('A0TN'):toid(),
