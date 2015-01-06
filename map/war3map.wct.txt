@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=338
+//TESH.scrollpos=269
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1735,6 +1735,7 @@ library eventLibrary initializer Init needs baseLibrary
                 attack = true
                 notattack = true
                 dying = false
+                crit = false
             elseif i2 == 1 then
                 attack = true
                 notattack = false
@@ -1794,15 +1795,13 @@ library eventLibrary initializer Init needs baseLibrary
             undef define_InitTrigger
         }
         
-        static unit damage_from[]
-        static unit damage_to[]
         static real damage_reduce[]
 
         static void damageReduce2(){
             timer t = CreateTimer()
             int h = GetHandleId(t)
-            UnitAddAbility(damage_to[index], 'A0RJ')
-            SaveUnitHandle(YDHT, h, 0, damage_to[index])
+            UnitAddAbility(u_to[index], 'A0RJ')
+            SaveUnitHandle(YDHT, h, 0, u_to[index])
             TimerStart(t, 0, false, \
                 lambda void(){
                     timer t = GetExpiredTimer()
@@ -1826,12 +1825,12 @@ library eventLibrary initializer Init needs baseLibrary
             if reduce > damage then
                 reduce = damage
             endif
-            real life = GetUnitState(damage_to[index], UNIT_STATE_LIFE) + reduce
-            if life > GetUnitState(damage_to[index], UNIT_STATE_MAX_LIFE) then
+            real life = GetUnitState(u_to[index], UNIT_STATE_LIFE) + reduce
+            if life > GetUnitState(u_to[index], UNIT_STATE_MAX_LIFE) then
                 //血牌法抵挡伤害
                 damageReduce2()
             endif
-            SetUnitState(damage_to[index], UNIT_STATE_LIFE, life)
+            SetUnitState(u_to[index], UNIT_STATE_LIFE, life)
             damage_reduce[index] = 0
         }
 
@@ -1886,12 +1885,12 @@ debug@          endif
         static void CheckCrit(bool isHero){
             
             //检查目标合法性
-            if IsUnitType(damage_to[index], UNIT_TYPE_STRUCTURE) then
+            if IsUnitType(u_to[index], UNIT_TYPE_STRUCTURE) then
                 return
             endif
             
             //取出暴击模块
-            int h     = GetHandleId(damage_from[index])
+            int h     = GetHandleId(u_from[index])
             int count = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
             if count == 0 then
                 return
@@ -1899,15 +1898,16 @@ debug@          endif
             
             //循环遍历暴击模块
             real thisRate = 0
+            real maxRate = 100 / (1 + LoadReal(YDHT, h, StringHash("暴击几率加成")))
             int i = 0
             loop
-                exitwhen i > h
+                exitwhen i > count
                 
                 real chance = LoadReal(YDHT, h, StringHash("暴击几率值段") + i)
                 real rate   = LoadReal(YDHT, h, StringHash("暴击倍率值段") + i)
                 
                 //判定是否发动该暴击
-                if rate >= GetRandomReal(0, 100) then
+                if chance >= GetRandomReal(0, maxRate) then
                     //同时暴击取最高值
                     if rate > thisRate then
                         thisRate = rate
@@ -1929,9 +1929,12 @@ debug@          endif
                 return
             endif
             
+            //造成暴击伤害
+            UnitDamageTarget(u_from[index], u_to[index], GetEventDamage() * (thisRate - 1), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_ENHANCED, WEAPON_TYPE_WHOKNOWS)
+            
             //发起暴击事件
             SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "暴击伤害")
-            SaveReal(YDHT, StringHash("事件返回"), StringHash("暴击倍率"), thisRate)
+            SaveReal(YDHT, StringHash("事件返回"), StringHash("倍率"), thisRate)
             if isHero then
                 define_TriggerExecute(7)
             else
@@ -1947,25 +1950,25 @@ debug@          endif
 
             int i
             index ++
-            damage_from[index] = GetEventDamageSource()
-            damage_to[index] = GetTriggerUnit()
-            bool attack = UnitRemoveAbility(damage_to[index], 'B039') or UnitRemoveAbility(damage_to[index], 'A0OB')
+            u_from[index] = GetEventDamageSource()
+            u_to[index] = GetTriggerUnit()
+            bool attack = UnitRemoveAbility(u_to[index], 'B039') or UnitRemoveAbility(u_to[index], 'A0OB')
 
             real life
 
-            if IsUnitType(damage_to[index], UNIT_TYPE_HERO) and not IsUnitType(damage_to[index], UNIT_TYPE_SUMMONED) then
+            if IsUnitType(u_to[index], UNIT_TYPE_HERO) and not IsUnitType(u_to[index], UNIT_TYPE_SUMMONED) then
                 if attack then
                     CheckCrit(true) //检查是否是暴击
-                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
+                    SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
                     define_TriggerExecute(1)
                 else
                     call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "非攻击伤害")
                     define_TriggerExecute(2)
                 endif
                 //检查是否致命
-                life    = GetWidgetLife(damage_to[index])
+                life    = GetWidgetLife(u_to[index])
                 if life + damage_reduce[index] - GetEventDamage() < 0.5 then
-                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "致命伤害")
+                    SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "致命伤害")
                     define_TriggerExecute(5)
                     if event_skip[index] then
                         damage_reduce[index] = GetEventDamage() - life + 0.5
@@ -1974,16 +1977,16 @@ debug@          endif
             else
                 if attack then
                     CheckCrit(false) //检查是否是暴击
-                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
+                    SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "攻击伤害")
                     define_TriggerExecute(3)
                 else
-                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "非攻击伤害")
+                    SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "非攻击伤害")
                     define_TriggerExecute(4)
                 endif
                 //检查是否致命
-                life    = GetWidgetLife(damage_to[index])
+                life    = GetWidgetLife(u_to[index])
                 if life + damage_reduce[index] - GetEventDamage() < 0.5 then
-                    call SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "致命伤害")
+                    SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "致命伤害")
                     define_TriggerExecute(6)
                     if event_skip[index] then
                         damage_reduce[index] = GetEventDamage() - life + 0.5
@@ -3702,7 +3705,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1107
+//TESH.scrollpos=847
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4960,7 +4963,7 @@ endlibrary
 ########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
-library textLibrary initializer Init needs baseLibrary
+library textLibrary initializer Init needs unitLibrary
     struct text
 
         /*
@@ -4972,7 +4975,7 @@ library textLibrary initializer Init needs baseLibrary
             set bj_lastCreatedTextTag = CreateTextTag()
             call SetTextTagText(bj_lastCreatedTextTag, str, size * 0.023 / 10)
             //call SetTextTagPosUnit(bj_lastCreatedTextTag, luu, 0)
-            call SetTextTagPos(bj_lastCreatedTextTag, GetUnitX(luu) - StringLength(str) * 10, GetUnitY(luu), 0)
+            call SetTextTagPos(bj_lastCreatedTextTag, GetUnitX(luu) - StringLength(str) * 5, GetUnitY(luu), Unit.GetUnitZ(luu) + 100)
             call SetTextTagColor(bj_lastCreatedTextTag, R2I(red * 2.55), R2I(green * 2.55), R2I(blue * 2.55), R2I((100.0 - see) * 2.55))
             call SetTextTagVelocity(bj_lastCreatedTextTag, speed * 0.071 * Cos(angle * bj_DEGTORAD)/ 128, speed * 0.071 * Sin(angle * bj_DEGTORAD)/ 128)
             call SetTextTagPermanent( bj_lastCreatedTextTag, permanent )
@@ -5401,7 +5404,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=135
+//TESH.scrollpos=129
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -5552,15 +5555,9 @@ library testLibrary initializer Init needs baseLibrary
             elseif s == ".gamespeed" then
                 SetGameSpeed(ConvertGameSpeed(S2I(String.GetStr(2))))
             elseif s == ".addcrit" then
-                SaveUnitHandle(YDHT, StringHash("事件"), StringHash("来源"), hero)
-                SaveReal(YDHT, StringHash("事件"), StringHash("几率"), S2R(String.GetStr(2)))
-                SaveReal(YDHT, StringHash("事件"), StringHash("倍率"), S2R(String.GetStr(3)))
-                Event.UserEventStart(添加暴击)
+                Unit.Crit(hero, true, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试")
             elseif s == ".removecrit" then
-                SaveUnitHandle(YDHT, StringHash("事件"), StringHash("来源"), hero)
-                SaveReal(YDHT, StringHash("事件"), StringHash("几率"), S2R(String.GetStr(2)))
-                SaveReal(YDHT, StringHash("事件"), StringHash("倍率"), S2R(String.GetStr(3)))
-                Event.UserEventStart(移除暴击)
+                Unit.Crit(hero, false, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试")
             elseif s == ".leak" then
                 GetLocalizedHotkey("yd_leak_monitor::create_report")
             else
@@ -6440,6 +6437,15 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
