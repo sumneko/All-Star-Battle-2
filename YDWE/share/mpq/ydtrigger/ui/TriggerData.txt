@@ -403,6 +403,7 @@ mover_state_real=0,0,0,弹幕属性(实数),integer
 SkillBarEndReason=0,0,0,技能进度条事件原因,integer
 itemPickDrop=0,0,0,获得还是丢弃,integer
 add_remove=0,0,0,添加或移除,boolean
+crit_crited=0,0,0,暴击模块对象,integer
 
 
 //***************************************************************************
@@ -465,6 +466,9 @@ itemPickDrop2=0,itemPickDrop,1,失去
 
 add_remove_add=0,add_remove,true,添加
 add_remove_remove=0,add_remove,false,移除
+
+crit_crited_crit=0,crit_crited,0,暴击
+crit_crited_crited=0,crit_crited,1,被暴击
 
 //YDWE 修改属性
 bonusTypeC=0,bonusType,3,攻击
@@ -4066,8 +4070,8 @@ Unit.SaveSlkData=0,unitcode,scriptcode
 _Unit.SaveSlkData_Defaults=hfoo,_
 _Unit.SaveSlkData_Category=TC_MU_UNIT
 
-Unit.Crit=0,unit,add_remove,real,real,string
-_Unit.Crit_Defaults=GetTriggerUnit,add_remove_add,15,1.5,"无"
+Unit.Crit=0,unit,add_remove,real,real,string,crit_crited
+_Unit.Crit_Defaults=GetTriggerUnit,add_remove_add,15,1.5,"无",crit_crited_crit
 _Unit.Crit_Category=TC_MU_UNIT
 
 //物品库

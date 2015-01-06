@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=269
+//TESH.scrollpos=793
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1889,40 +1889,75 @@ debug@          endif
                 return
             endif
             
-            //取出暴击模块
-            int h     = GetHandleId(u_from[index])
-            int count = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
-            if count == 0 then
-                return
-            endif
-            
-            //循环遍历暴击模块
+            int i
+            int h = GetHandleId(u_from[index])
+            int count
+            real chance
+            real rate
+            trigger trg
             real thisRate = 0
             real maxRate = 100 / (1 + LoadReal(YDHT, h, StringHash("暴击几率加成")))
-            int i = 0
-            loop
-                exitwhen i > count
-                
-                real chance = LoadReal(YDHT, h, StringHash("暴击几率值段") + i)
-                real rate   = LoadReal(YDHT, h, StringHash("暴击倍率值段") + i)
-                
-                //判定是否发动该暴击
-                if chance >= GetRandomReal(0, maxRate) then
-                    //同时暴击取最高值
-                    if rate > thisRate then
-                        thisRate = rate
+            
+            //取出暴击模块
+            count = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
+            if count != 0 then
+                //循环遍历暴击模块
+                i = 0
+                loop
+                    exitwhen i > count
+                    
+                    chance = LoadReal(YDHT, h, StringHash("暴击几率值段") + i)
+                    rate   = LoadReal(YDHT, h, StringHash("暴击倍率值段") + i)
+                    
+                    //判定是否发动该暴击
+                    if chance >= GetRandomReal(0, maxRate) then
+                        //同时暴击取最高值
+                        if rate > thisRate then
+                            thisRate = rate
+                        endif
+                        
+                        //回调触发
+                        trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
+                        if trg != null and TriggerEvaluate(trg) then
+                            TriggerExecute(trg)
+                        endif
+                        trg = null
                     endif
                     
-                    //回调触发
-                    trigger trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
-                    if trg != null and TriggerEvaluate(trg) then
-                        TriggerExecute(trg)
+                    i ++
+                endloop
+            endif
+            
+            //取出被暴击模块
+            h     = GetHandleId(u_to[index])
+            count = LoadInteger(YDHT, h, StringHash("被暴击模块计数"))
+            if count != 0 then
+                //循环遍历暴击模块
+                i = 0
+                loop
+                    exitwhen i > count
+                    
+                    chance = LoadReal(YDHT, h, StringHash("被暴击几率值段") + i)
+                    rate   = LoadReal(YDHT, h, StringHash("被暴击倍率值段") + i)
+                    
+                    //判定是否发动该暴击
+                    if chance >= GetRandomReal(0, maxRate) then
+                        //同时暴击取最高值
+                        if rate > thisRate then
+                            thisRate = rate
+                        endif
+                        
+                        //回调触发
+                        trg = LoadTriggerHandle(YDHT, h, StringHash("被暴击触发值段") + i)
+                        if trg != null and TriggerEvaluate(trg) then
+                            TriggerExecute(trg)
+                        endif
+                        trg = null
                     endif
-                    trg = null
-                endif
-                
-                i ++
-            endloop
+                    
+                    i ++
+                endloop
+            endif
             
             //是否发动了暴击
             if thisRate == 0 then
@@ -2396,8 +2431,8 @@ debug@      endif
         发动暴击事件
         */
         static void Crit(trigger trg){
-            int count = LoadInteger(YDHT, Unit.last_CritAddedUnitHandle, StringHash("暴击模块计数"))
-            SaveTriggerHandle(YDHT, Unit.last_CritAddedUnitHandle, StringHash("暴击触发值段") + count, trg)
+            int count = LoadInteger(YDHT, Unit.last_CritAddedUnitHandle, Unit.last_CritAddedCount)
+            SaveTriggerHandle(YDHT, Unit.last_CritAddedUnitHandle, Unit.last_CritAddedTriggerHandle + count, trg)
         }
 
         //自定义事件
@@ -3705,7 +3740,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=847
+//TESH.scrollpos=1123
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4823,53 +4858,74 @@ library unitLibrary initializer Init needs bakaLibrary
         
         //添加暴击模块
         static int last_CritAddedUnitHandle = 0
+        static int last_CritAddedTriggerHandle = 0
+        static int last_CritAddedCount = 0
         
-        static void Crit(unit u, bool add, real chance, real rate, string tag){
+        static void Crit(unit u, bool add, real chance, real rate, string tag, int crit_type){
             //先检查参数合法性
             if chance <= 0 or rate <= 1 then
                 return
             endif
             
+            //是暴击模块还是被暴击模块
+            int hash_count, hash_chance, hash_rate, hash_tag, hash_trigger
+            
+            if crit_type == 0 then
+                hash_count   = StringHash("暴击模块计数")
+                hash_chance  = StringHash("暴击几率值段")
+                hash_rate    = StringHash("暴击倍率值段")
+                hash_tag     = StringHash("暴击标签值段")
+                hash_trigger = StringHash("暴击触发值段")
+            elseif crit_type == 1 then
+                hash_count   = StringHash("被暴击模块计数")
+                hash_chance  = StringHash("被暴击几率值段")
+                hash_rate    = StringHash("被暴击倍率值段")
+                hash_tag     = StringHash("被暴击标签值段")
+                hash_trigger = StringHash("被暴击触发值段")
+            endif
+            
             int h       = GetHandleId(u)
-            int count   = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
+            int count   = LoadInteger(YDHT, h, hash_count)
             
             if add then
             
                 //在暴击模块队列末端添加新的暴击模块
                 count   = count + 1
-                SaveReal(YDHT, h, StringHash("暴击几率值段") + count, chance)
-                SaveReal(YDHT, h, StringHash("暴击倍率值段") + count, rate)
-                SaveStr(YDHT, h, StringHash("暴击标签值段") + count, tag)
+                SaveReal(YDHT, h, hash_chance + count, chance)
+                SaveReal(YDHT, h, hash_rate + count, rate)
+                SaveStr(YDHT, h, hash_tag + count, tag)
                 
                 //保存计数
-                SaveInteger(YDHT, h, StringHash("暴击模块计数"), count)
+                SaveInteger(YDHT, h, hash_count, count)
                 
                 //保存全局变量
                 last_CritAddedUnitHandle = h
+                last_CritAddedTriggerHandle = hash_trigger
+                last_CritAddedCount = hash_count
                 
             else
                 //找到完全匹配的模块才可以移除
                 int i   = 1
                 loop
                     exitwhen i > count
-                    if chance == LoadReal(YDHT, h, StringHash("暴击几率值段") + i)\
-                    and rate  == LoadReal(YDHT, h, StringHash("暴击倍率值段") + i)\
-                    and tag   == LoadStr(YDHT, h, StringHash("暴击标签值段") + i) then
+                    if chance == LoadReal(YDHT, h, hash_chance + i)\
+                    and rate  == LoadReal(YDHT, h, hash_rate + i)\
+                    and tag   == LoadStr(YDHT, h, hash_tag + i) then
                     
                         //清空当前暴击模块的触发
-                        trigger trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
+                        trigger trg = LoadTriggerHandle(YDHT, h, hash_trigger + i)
                         DestroyTrigger(trg)
                         FlushChildHashtable(YDHT, GetHandleId(trg))
                         trg = null
                         
                         //将队列最后的暴击模块移动到当前位置
-                        SaveReal(YDHT, h, StringHash("暴击几率值段") + i, LoadReal(YDHT, h, StringHash("暴击几率值段") + count))
-                        SaveReal(YDHT, h, StringHash("暴击倍率值段") + i, LoadReal(YDHT, h, StringHash("暴击倍率值段") + count))
-                        SaveStr(YDHT, h, StringHash("暴击标签值段") + i, LoadStr(YDHT, h, StringHash("暴击标签值段") + count))
-                        SaveTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i, LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + count))
+                        SaveReal(YDHT, h, hash_chance + i, LoadReal(YDHT, h, hash_chance + count))
+                        SaveReal(YDHT, h, hash_rate + i, LoadReal(YDHT, h, hash_rate + count))
+                        SaveStr(YDHT, h, hash_tag + i, LoadStr(YDHT, h, hash_tag + count))
+                        SaveTriggerHandle(YDHT, h, hash_trigger + i, LoadTriggerHandle(YDHT, h, hash_trigger + count))
                         
                         //保存计数
-                        SaveInteger(YDHT, h, StringHash("暴击模块计数"), count - 1)
+                        SaveInteger(YDHT, h, hash_count, count - 1)
                         return
                     endif
                     i ++
@@ -4975,7 +5031,7 @@ library textLibrary initializer Init needs unitLibrary
             set bj_lastCreatedTextTag = CreateTextTag()
             call SetTextTagText(bj_lastCreatedTextTag, str, size * 0.023 / 10)
             //call SetTextTagPosUnit(bj_lastCreatedTextTag, luu, 0)
-            call SetTextTagPos(bj_lastCreatedTextTag, GetUnitX(luu) - StringLength(str) * 5, GetUnitY(luu), Unit.GetUnitZ(luu) + 100)
+            call SetTextTagPos(bj_lastCreatedTextTag, GetUnitX(luu) - StringLength(str) * 8, GetUnitY(luu), Unit.GetUnitZ(luu) + 100)
             call SetTextTagColor(bj_lastCreatedTextTag, R2I(red * 2.55), R2I(green * 2.55), R2I(blue * 2.55), R2I((100.0 - see) * 2.55))
             call SetTextTagVelocity(bj_lastCreatedTextTag, speed * 0.071 * Cos(angle * bj_DEGTORAD)/ 128, speed * 0.071 * Sin(angle * bj_DEGTORAD)/ 128)
             call SetTextTagPermanent( bj_lastCreatedTextTag, permanent )
@@ -5555,9 +5611,9 @@ library testLibrary initializer Init needs baseLibrary
             elseif s == ".gamespeed" then
                 SetGameSpeed(ConvertGameSpeed(S2I(String.GetStr(2))))
             elseif s == ".addcrit" then
-                Unit.Crit(hero, true, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试")
+                Unit.Crit(hero, true, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试", 0)
             elseif s == ".removecrit" then
-                Unit.Crit(hero, false, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试")
+                Unit.Crit(hero, false, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试", 0)
             elseif s == ".leak" then
                 GetLocalizedHotkey("yd_leak_monitor::create_report")
             else
@@ -6437,6 +6493,9 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
 ########
 ########
 
