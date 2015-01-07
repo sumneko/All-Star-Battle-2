@@ -404,6 +404,7 @@ SkillBarEndReason=0,0,0,技能进度条事件原因,integer
 itemPickDrop=0,0,0,获得还是丢弃,integer
 add_remove=0,0,0,添加或移除,boolean
 crit_crited=0,0,0,暴击模块对象,integer
+hit_dodg=0,0,0,命中闪躲模块对象,integer
 
 
 //***************************************************************************
@@ -469,6 +470,9 @@ add_remove_remove=0,add_remove,false,移除
 
 crit_crited_crit=0,crit_crited,0,暴击
 crit_crited_crited=0,crit_crited,1,被暴击
+
+hit_dodg_hit=0,hit_dodg,0,命中
+hit_dodg_dodg=0,hit_dodg,1,闪躲
 
 //YDWE 修改属性
 bonusTypeC=0,bonusType,3,攻击
@@ -4073,6 +4077,10 @@ _Unit.SaveSlkData_Category=TC_MU_UNIT
 Unit.Crit=0,unit,add_remove,real,real,string,crit_crited
 _Unit.Crit_Defaults=GetTriggerUnit,add_remove_add,15,1.5,"无",crit_crited_crit
 _Unit.Crit_Category=TC_MU_UNIT
+
+Unit.HitDodg=0,unit,add_remove,real,string,hit_dodg
+_Unit.HitDodg_Defaults=GetTriggerUnit,add_remove_add,15,"无",hit_dodg_dodg
+_Unit.HitDodg_Category=TC_MU_UNIT
 
 //物品库
 Item.Formula=0,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,integer

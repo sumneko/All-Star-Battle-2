@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=326
+//TESH.scrollpos=991
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2589,6 +2589,84 @@ debug@      endif
             DestroyTrigger(trg)
         }
         #define DestroyTrigger(trg) Event.DestroyTrigger_Hook(trg)
+        
+        /*
+        命中/闪躲结算
+        */
+        define DODG_MAGIC_BOOK = 'A07L'
+        static trigger HIT_DODG_TRIGGER = CreateTrigger()
+        
+        static void initHitDodg(){
+            int i = 0
+            loop
+                exitwhen i > 11
+                SetPlayerAbilityAvailable(Player(i), DODG_MAGIC_BOOK, false)
+                i ++
+            endloop
+            
+            trigger trg = CreateTrigger()
+            
+            //注册英雄
+            Event.HeroInit(trg, 0)
+            TriggerAddCondition(trg, Condition(\
+                lambda void (){
+                    TriggerRegisterUnitEvent(HIT_DODG_TRIGGER, u_from[index], EVENT_UNIT_ATTACKED)
+                }\
+            ))
+            
+            trg = null
+            
+            //命中/暴击结算
+            TriggerAddCondition(HIT_DODG_TRIGGER, Condition(\
+                lambda void (){
+                    index ++
+                    
+                    u_from[index] = GetAttacker()
+                    u_to[index] = GetTriggerUnit()
+                    
+                    real hit, dodg, thisHit = 100, thisDodg = 100 //当前命中和闪躲都是取倒值
+                    int i, h, count
+                    
+                    //先结算命中
+                    h = GetHandleId(u_from[index])
+                    count = LoadInteger(YDHT, h, StringHash("命中模块计数"))
+                    i = 0
+                    loop
+                        exitwhen i > count
+                        hit = LoadReal(YDHT, h, StringHash("命中几率值段") + i)
+                        thisHit -= thisHit * hit / 100
+                        i ++
+                    endloop
+                    
+                    thisHit = 100 - thisHit
+                    
+                    //再结算闪躲
+                    h = GetHandleId(u_to[index])
+                    count = LoadInteger(YDHT, h, StringHash("闪躲模块计数"))
+                    i = 0
+                    loop
+                        exitwhen i > count
+                        dodg = LoadReal(YDHT, h, StringHash("闪躲几率值段") + i)
+                        thisDodg -= thisDodg * dodg / 100
+                        i ++
+                    endloop
+                    
+                    thisDodg = 100 - thisDodg
+                    
+                    //闪避=闪避×（1-命中×0.25）-命中×0.6    这个闪躲公式是shenmegui
+                    real chance = thisDodg - thisDodg * thisHit / 400 - thisHit * 0.6
+                    
+                    //进行闪躲判定
+                    if chance != 0 and chance >= GetRandomReal(0, 100) then
+                        UnitAddAbility(u_to[index], DODG_MAGIC_BOOK)
+                    else
+                        UnitRemoveAbility(u_to[index], DODG_MAGIC_BOOK)
+                    endif
+                    
+                    index --
+                }\
+            ))
+        }
 
 
     endstruct
@@ -2599,6 +2677,7 @@ debug@      endif
         Event.initItemPick()
         Event.initItemDrop()
         Event.initGetSkill()
+        Event.initHitDodg()
     }
 endlibrary
 ########
@@ -2872,7 +2951,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=744
+//TESH.scrollpos=765
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3744,7 +3823,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1163
+//TESH.scrollpos=1215
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4860,7 +4939,9 @@ library unitLibrary initializer Init needs bakaLibrary
             SetUnitVertexColor(u, red, green, blue, 255)
         }
         
-        //添加暴击模块
+        /*
+        添加暴击模块
+        */
         static int last_CritAddedUnitHandle = 0
         static int last_CritAddedTriggerHandle = 0
         static int last_CritAddedCount = 0
@@ -4941,9 +5022,68 @@ library unitLibrary initializer Init needs bakaLibrary
                 BJDebugMsg("<几率>" + R2S(chance))
                 BJDebugMsg("<倍率>" + R2S(rate))
                 BJDebugMsg("<标签>" + tag)
+            endif
+        }
+        
+        /*
+        添加命中/闪躲模块
+        */
+        
+        static void HitDodg(unit u, bool add, real chance, string tag, int hit_dodge){
+            //检查参数合法性
+            if chance <= 0 then
+                return
+            endif
+            
+            //是命中还是闪躲
+            int hash_count, hash_chance, hash_tag
+            
+            if hit_dodge == 0 then
+                hash_count   = StringHash("命中模块计数")
+                hash_chance  = StringHash("命中几率值段")
+                hash_tag     = StringHash("命中标签值段")
+            else
+                hash_count   = StringHash("闪躲模块计数")
+                hash_chance  = StringHash("闪躲几率值段")
+                hash_tag     = StringHash("闪躲标签值段")
+            endif
+            
+            int h       = GetHandleId(u)
+            int count   = LoadInteger(YDHT, h, hash_count)
+            
+            if add then
+            
+                //在模块队列末端添加新的模块
+                count   = count + 1
+                SaveReal(YDHT, h, hash_chance + count, chance)
+                SaveStr(YDHT, h, hash_tag + count, tag)
                 
-                //让YDWE报错误位置
-debug@          I2R(0 / 0)
+                //保存计数
+                SaveInteger(YDHT, h, hash_count, count)                
+            else
+                //找到完全匹配的模块才可以移除
+                int i   = 1
+                loop
+                    exitwhen i > count
+                    if chance == LoadReal(YDHT, h, hash_chance + i)\
+                    and tag   == LoadStr(YDHT, h, hash_tag + i) then
+                        
+                        //将队列最后的模块移动到当前位置
+                        SaveReal(YDHT, h, hash_chance + i, LoadReal(YDHT, h, hash_chance + count))
+                        SaveStr(YDHT, h, hash_tag + i, LoadStr(YDHT, h, hash_tag + count))
+                        
+                        //保存计数
+                        SaveInteger(YDHT, h, hash_count, count - 1)
+                        return
+                    endif
+                    i ++
+                endloop
+                
+                //没有找打匹配的模块,报错
+                BJDebugMsg("<错误>没有找到要移除的命中/闪躲模块!")
+                BJDebugMsg("<单位>" + GetUnitName(u))
+                BJDebugMsg("<几率>" + R2S(chance))
+                BJDebugMsg("<标签>" + tag)
             endif
         }
 
