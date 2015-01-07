@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=793
+//TESH.scrollpos=296
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1963,6 +1963,8 @@ debug@          endif
             if thisRate == 0 then
                 return
             endif
+            
+            thisRate += LoadReal(YDHT, GetHandleId(u_from[index]), StringHash("暴击倍率加成"))
             
             //造成暴击伤害
             UnitDamageTarget(u_from[index], u_to[index], GetEventDamage() * (thisRate - 1), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_ENHANCED, WEAPON_TYPE_WHOKNOWS)
@@ -3740,7 +3742,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1123
+//TESH.scrollpos=1163
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4939,7 +4941,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 BJDebugMsg("<标签>" + tag)
                 
                 //让YDWE报错误位置
-                I2R(0 / 0)
+debug@          I2R(0 / 0)
             endif
         }
 
@@ -6493,15 +6495,6 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
-########
-########
-
-########
-########
-
-########
-########
-
 ########
 ########
 
