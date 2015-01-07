@@ -584,9 +584,8 @@ ftac=6
 ftip=疾行
 fube=该单位处于疾风之靴疾行范围影响，移动速度被压制了。
 [B01Z:BEah]
-ftip=力之谜
-fube=该单位对近战物理攻击会反弹伤害
-fart=zhanshenkaijia.blp
+ftip=荆棘护甲
+fube=该单位对近战攻击会反弹伤害
 fsat=Abilities\Weapons\Rifle\RifleImpact.mdl
 fspt=chest
 fspd=0

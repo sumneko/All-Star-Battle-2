@@ -16645,11 +16645,12 @@ arut=
 alev=1
 aher=0
 aite=1
-Eah1[1]=0.2500
+Eah1[1]=0.2000
 arac=other
 abuf[1]=B01Z
-anam=力之谜
-ansf=废用
+anam=荆棘护甲
+atat=
+ansf=（野怪）
 [A0ES:ANcl]
 anam=|cffaaffff冻青蛙|r
 aeat=
@@ -34158,3 +34159,10 @@ Hbh1[1]=0.2500
 ansf=腐化树怪
 aub1[1]=
 atp1[1]=重击
+[A0WK:Alit]
+atat=
+amsp=0
+ansf=(法力燃烧)
+arac=human
+amat=Abilities\Spells\NightElf\ManaBurn\ManaBurnTarget.mdl
+alig=MBUR
