@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=296
+//TESH.scrollpos=326
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1886,6 +1886,7 @@ debug@          endif
             
             //检查目标合法性
             if IsUnitType(u_to[index], UNIT_TYPE_STRUCTURE) then
+                SaveReal(YDHT, StringHash("事件返回"), StringHash("倍率"), 1)
                 return
             endif
             
@@ -1961,6 +1962,7 @@ debug@          endif
             
             //是否发动了暴击
             if thisRate == 0 then
+                SaveReal(YDHT, StringHash("事件返回"), StringHash("倍率"), 1)
                 return
             endif
             
