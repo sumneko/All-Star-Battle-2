@@ -34166,3 +34166,15 @@ ansf=(法力燃烧)
 arac=human
 amat=Abilities\Spells\NightElf\ManaBurn\ManaBurnTarget.mdl
 alig=MBUR
+[A0WL:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Emoo
+Eme1[1]=E0AT
+ansf=Saber Bride
+arac=orc
+aher=0
+anam=皮肤

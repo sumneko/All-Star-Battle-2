@@ -559,7 +559,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph alternate
-		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A06C-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
 
@@ -874,6 +874,18 @@
 		变身动画=morph
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
+
+		//Saber Bride
+		皮肤=A0WL
+		前缀=|cffcc00cc花嫁|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
 	==英雄台词==
 
 		//鹿目圆香
@@ -889,4 +901,9 @@
 		英雄=E0AI
 		台词=|cFFFF0000正因为是最爱的人 ，所以才想给她个痛快。|r
 		音效=Show_Akame.mp3
+
+		//白一护
+		英雄=N01T
+		台词=|cFFFF0000よ、久しぶりじゃねが、王|r
+		音效=shiro_ichigo_show.mp3
 		
