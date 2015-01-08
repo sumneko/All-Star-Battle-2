@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=991
+//TESH.scrollpos=1010
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2607,7 +2607,7 @@ debug@      endif
             trigger trg = CreateTrigger()
             
             //注册英雄
-            Event.HeroInit(trg, 0)
+            HeroInit(trg, 0)
             TriggerAddCondition(trg, Condition(\
                 lambda void (){
                     TriggerRegisterUnitEvent(HIT_DODG_TRIGGER, u_from[index], EVENT_UNIT_ATTACKED)
@@ -2630,7 +2630,7 @@ debug@      endif
                     //先结算命中
                     h = GetHandleId(u_from[index])
                     count = LoadInteger(YDHT, h, StringHash("命中模块计数"))
-                    i = 0
+                    i = 1
                     loop
                         exitwhen i > count
                         hit = LoadReal(YDHT, h, StringHash("命中几率值段") + i)
@@ -2638,12 +2638,12 @@ debug@      endif
                         i ++
                     endloop
                     
-                    thisHit = 100 - thisHit
+                    thisHit = (100 - thisHit) * (1 + LoadReal(YDHT, h, StringHash("命中几率加成")))
                     
                     //再结算闪躲
                     h = GetHandleId(u_to[index])
                     count = LoadInteger(YDHT, h, StringHash("闪躲模块计数"))
-                    i = 0
+                    i = 1
                     loop
                         exitwhen i > count
                         dodg = LoadReal(YDHT, h, StringHash("闪躲几率值段") + i)
@@ -2651,7 +2651,7 @@ debug@      endif
                         i ++
                     endloop
                     
-                    thisDodg = 100 - thisDodg
+                    thisDodg = (100 - thisDodg) * (1 + LoadReal(YDHT, h, StringHash("闪躲几率加成")))
                     
                     //闪避=闪避×（1-命中×0.25）-命中×0.6    这个闪躲公式是shenmegui
                     real chance = thisDodg - thisDodg * thisHit / 400 - thisHit * 0.6
@@ -3823,7 +3823,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1215
+//TESH.scrollpos=45
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -3892,11 +3892,10 @@ library unitLibrary initializer Init needs bakaLibrary
         static real lastMoveDis = 0
 
         static bool Move(unit u,real a,real r){
-            /*
-            if GetUnitMoveSpeed(u) == 0
+            if GetUnitDefaultMoveSpeed(u) == 0
                 return false
             endif
-            */
+            
             real x = LoadReal(YDHT, GetHandleId(u), StringHash("移动干涉"))
             lastMoveDis = r + r * x / 100
             SetUnitX(u, YDWECoordinateX((GetUnitX(u) + (lastMoveDis * Cos(bj_DEGTORAD * a)))))
@@ -3905,11 +3904,10 @@ library unitLibrary initializer Init needs bakaLibrary
         }
 
         static bool Move2(unit u,real a,real r, pathingtype t){
-            /*
-            if GetUnitMoveSpeed(u) == 0
+            if GetUnitDefaultMoveSpeed(u) == 0
                 return false
             endif
-            */
+            
             real x = LoadReal(YDHT, GetHandleId(u), StringHash("移动干涉"))
             lastMoveDis = r + r * x / 100
             real x0 = GetUnitX(u)
@@ -5758,6 +5756,10 @@ library testLibrary initializer Init needs baseLibrary
                 Unit.Crit(hero, true, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试", 0)
             elseif s == ".removecrit" then
                 Unit.Crit(hero, false, S2R(String.GetStr(2)), S2R(String.GetStr(3)), "测试", 0)
+            elseif s == ".addhitdodg" then
+                Unit.HitDodg(hero, true, S2R(String.GetStr(2)), "测试", S2I(String.GetStr(3)))
+            elseif s == ".removehitdodg" then
+                Unit.HitDodg(hero, false, S2R(String.GetStr(2)), "测试", S2I(String.GetStr(3)))
             elseif s == ".leak" then
                 GetLocalizedHotkey("yd_leak_monitor::create_report")
             else
@@ -6637,6 +6639,24 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
