@@ -394,6 +394,7 @@ ChatRecipient=0,0,0,频道类型,integer
 skillType=0,0,0,技能阶段,integer
 damageTypeA=0,0,0,单位类型,integer
 damageTypeB=0,0,0,伤害类型,integer
+healType=0,0,0,治疗类型,integer
 typename=0,0,0,变量类型,scriptcode
 removeWhichLocation=0,0,0,清除哪个点,integer
 DisOrAng=0,0,0,距离/方向,integer
@@ -458,6 +459,9 @@ damageTypeB2=0,damageTypeB,1,攻击伤害
 damageTypeB3=0,damageTypeB,2,非攻击伤害
 damageTypeB4=0,damageTypeB,3,致命伤害
 damageTypeB5=0,damageTypeB,4,暴击伤害
+
+healType1=0,healType,0,治疗
+healType2=0,healType,0,治疗(结算)
 
 mover_state_real1=0,mover_state_real,1,在原力场中降低的移动速度(%)
 mover_state_real2=0,mover_state_real,2,在原力场中受到的额外斥力(%)
@@ -3416,6 +3420,10 @@ Event.AnyUnitDamage=0,damageTypeA,damageTypeB
 _Event.AnyUnitDamage_Defaults=damageTypeA1,damageTypeB1
 _Event.AnyUnitDamage_Category=TC_MU_EVENT
 
+Event.AnyUnitHeal=0,damageTypeA,healType
+_Event.AnyUnitHeal_Defaults=damageTypeA1,healType1
+_Event.AnyUnitHeal_Category=TC_MU_EVENT
+
 Event.UserEventInit=0,scriptcode
 _Event.UserEventInit_Category=TC_MU_EVENT
 
@@ -4108,6 +4116,10 @@ _process.SetUper_Category=TC_MU_PROCESS
 Event.ReduceDamage=0,real
 _Event.ReduceDamage_Defaults=100
 _Event.ReduceDamage_Category=TC_MU_EVENT
+
+Event.AddHeal=0,real
+_Event.AddHeal_Defaults=100
+_Event.AddHeal_Category=TC_MU_EVENT
 
 Event.UserEventStart=0,scriptcode
 _Event.UserEventStart_Category=TC_MU_EVENT
@@ -5724,7 +5736,9 @@ UnitDamageTargetBJ=1,unit,unit,real,attacktype,damagetype
 _UnitDamageTargetBJ_Defaults=GetTriggerUnit,GetTriggerUnit,500,AttackTypeNormal,DamageTypeNormal
 _UnitDamageTargetBJ_Category=TC_UNIT
 
-
+Unit.Heal=1,unit,unit,real
+_Unit.Heal_Defaults=GetTriggerUnit,GetTriggerUnit,500
+_Unit.Heal_Category=TC_UNIT
 
 
 
@@ -10169,6 +10183,12 @@ _GetEventDamage_Category=TC_EVENTRESPONSE
 
 Event.GetCurrentDamage=0,1,real
 _Event.GetCurrentDamage_Category=TC_EVENTRESPONSE
+
+Event.GetHeal=0,1,real
+_Event.GetHeal_Category=TC_EVENTRESPONSE
+
+Event.GetCurrentHeal=0,1,real
+_Event.GetCurrentHeal_Category=TC_EVENTRESPONSE
 
 GetOrderPointX=0,1,real
 _GetOrderPointX_Category=TC_EVENTRESPONSE

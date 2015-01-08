@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=1010
+//TESH.scrollpos=824
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3823,7 +3823,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=45
+//TESH.scrollpos=1162
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4935,6 +4935,19 @@ library unitLibrary initializer Init needs bakaLibrary
                 red = LoadInteger(YDHT, id, StringHash("blue"))
             endif
             SetUnitVertexColor(u, red, green, blue, 255)
+        }
+        
+        /*
+        治疗单位
+        */
+        static void Heal(unit from, unit to, real heal){
+            real life = GetWidgetLife(to)
+            real max_life = GetUnitState(to, UNIT_STATE_MAX_LIFE)
+            
+            //预留事件
+            
+            life += heal
+            SetWidgetLife(to, life)
         }
         
         /*
@@ -6639,21 +6652,6 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
 ########
 ########
 

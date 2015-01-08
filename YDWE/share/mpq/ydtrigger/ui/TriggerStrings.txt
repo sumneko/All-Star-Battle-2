@@ -33,7 +33,11 @@ Event.AnyUnitSkillHint="每个阶段与技能的组合下只能存放一个触�
 
 Event.AnyUnitDamage="任意单位受到伤害"
 Event.AnyUnitDamage=~单位选项," 受到 ",~伤害选项
-Event.AnyUnitDamageHint="该事件不会被0伤害驱动"
+Event.AnyUnitDamageHint="该事件不会被0伤害驱动;致命伤害事件中不允许修改受伤单位的生命值"
+
+Event.AnyUnitHeal="任意单位受到治疗"
+Event.AnyUnitHeal=~单位选项," 受到 ",~治疗选项
+Event.AnyUnitHealHint="结算阶段不允许修改治疗量"
 
 Event.UserEventInit="自定义事件"
 Event.UserEventInit=~自定义事件名称," 触发"
@@ -690,6 +694,10 @@ process.SetUper="设置过程 # ",~key," # 的优先级为 ",~优先级
 Event.ReduceDamage="减免伤害"
 Event.ReduceDamage="为 触发单位 减免 ",~实数," 点伤害"
 Event.ReduceDamageHint="只能用在专用的伤害事件中!!!"
+
+Event.AddHeal="增加治疗"
+Event.AddHeal="为 触发单位 增加 ",~实数," 点治疗"
+Event.AddHealHint="只能用在治疗事件中"
 
 Event.UserEventStart="发起自定义事件"
 Event.UserEventStart="发起 ",~自定义事件名称
@@ -1353,6 +1361,9 @@ UnitDamageTargetHint="该动作不会打断单位动作. 由该动作伤害/杀�
 UnitDamageTargetBJ="伤害目标"
 UnitDamageTargetBJ="命令 ",~单位," 对 ",~Target," 造成 ",~Amount," 点伤害,攻击类型: ",~AttackType," 伤害类型: ",~DamageType
 UnitDamageTargetBJHint="该动作不会打断单位动作. 由该动作伤害/杀死单位同样正常触发'受到伤害'和'死亡'单位事件."
+
+Unit.Heal="治疗目标 <单位库>"
+Unit.Heal="命令 ",~来源," 对 ",~目标," 治疗 ",~数值," 点生命值"
 
 
 // Custom actions
@@ -6220,6 +6231,14 @@ GetEventDamageHint="响应'受到伤害'单位事件,指代单位所受伤害."
 Event.GetCurrentDamage="获取当前伤害 <事件库>"
 Event.GetCurrentDamage="当前伤害"
 Event.GetCurrentDamageHint="减除触发免伤后的剩余伤害(只统计使用伤害系统的免伤部分,手动预治疗不统计)"
+
+Event.GetHeal="获取治疗量 <事件库>"
+Event.GetHeal="治疗量"
+Event.GetHealHint="原始治疗量"
+
+Event.GetCurrentHeal="获取当前治疗量 <事件库>"
+Event.GetCurrentHeal="当前治疗量"
+Event.GetCurrentHealHint="经过修正后的当前治疗量"
 
 GetOrderPointX="命令发布点X坐标 [R]"
 GetOrderPointX="命令发布点X坐标"
