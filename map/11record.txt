@@ -903,7 +903,7 @@
 		音效=Show_Akame.mp3
 
 		//白一护
-		英雄=N01T
+		英雄=E09I
 		台词=|cFFFF0000よ、久しぶりじゃねが、王|r
 		音效=shiro_ichigo_show.mp3
 		
