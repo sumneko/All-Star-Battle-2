@@ -112,7 +112,7 @@ endfunction
         local integer i=ABILITY_COUNT[bonusType+1]- 2
         local integer a=ABILITY_NUM[bonusType]
         if value>65535 or value<=0 then
-            call BJDebugMsg("输入数据无效:" + I2S(value))
+            call BJDebugMsg("输入数据无效:" + R2S(value))
             return false
         endif
 
