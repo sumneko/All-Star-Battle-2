@@ -112,7 +112,7 @@ endfunction
         local integer i=ABILITY_COUNT[bonusType+1]- 2
         local integer a=ABILITY_NUM[bonusType]
         if value>65535 or value<=0 then
-            call BJDebugMsg("输入数据无效")
+            call BJDebugMsg("输入数据无效:" + I2S(value))
             return false
         endif
 
@@ -121,7 +121,7 @@ endfunction
           elseif bonusType == 1 then
             set state=UNIT_STATE_MAX_MANA
           else
-            call BJDebugMsg("无效状态")
+            call BJDebugMsg("无效状态:" + I2S(bonusType))
             return false
         endif
         set v=v-R2I(GetUnitState(u, state))
@@ -155,10 +155,10 @@ private function UnitSetBonus takes unit u, integer bonusType, integer ammount r
         return false
     endif
     if ammount < MinBonus[bonusType] or ammount > MaxBonus[bonusType] then
-        call BJDebugMsg("BonusSystem Error: Bonus too high or low (" + I2S(ammount) + ")")
+        call BJDebugMsg("BonusSystem Error: Bonus too high or low (" + I2S(bonusType) + ":" + I2S(ammount) + ")")
         return false
     elseif bonusType < 0 or bonusType >= BONUS_TYPES then
-        call BJDebugMsg("BonusSystem Error: Invalid bonus type (" + I2S(bonusType) + ")")
+        call BJDebugMsg("BonusSystem Error: Invalid bonus type (" + I2S(bonusType) + ":" + I2S(bonusType) + ")")
         return false
     endif
 

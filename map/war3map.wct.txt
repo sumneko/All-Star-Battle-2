@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=1016
+//TESH.scrollpos=1001
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1618,7 +1618,7 @@ library eventLibrary initializer Init needs baseLibrary
 
     struct Event
         static hashtable HT = InitHashtable()
-
+        
         static int index = -1
         static unit u_from[]
         static unit u_to[]
@@ -2593,36 +2593,31 @@ debug@      endif
         /*
         命中/闪躲结算
         */
-        define DODG_MAGIC_BOOK = 'A07L'
-        static trigger HIT_DODG_TRIGGER = CreateTrigger()
+        #define DODG_MAGIC_BOOK 'A07L'
+        #define HIT_MAGIC_BOOK 'A0WM'
         
+        static trigger HIT_DODG_TRIGGER = CreateTrigger()
+
         static void initHitDodg(){
             int i = 0
             loop
                 exitwhen i > 11
                 SetPlayerAbilityAvailable(Player(i), DODG_MAGIC_BOOK, false)
+                SetPlayerAbilityAvailable(Player(i), HIT_MAGIC_BOOK, false)
                 i ++
             endloop
-            
-            trigger trg = CreateTrigger()
-            
-            //注册英雄
-            HeroInit(trg, 0)
-            TriggerAddCondition(trg, Condition(\
-                lambda void (){
-                    TriggerRegisterUnitEvent(HIT_DODG_TRIGGER, u_from[index], EVENT_UNIT_ATTACKED)
-                }\
-            ))
-            
-            trg = null
             
             //命中/暴击结算
             TriggerAddCondition(HIT_DODG_TRIGGER, Condition(\
                 lambda void (){
+                    if IsUnitType(GetEventTargetUnit(), UNIT_TYPE_STRUCTURE) then
+                        return
+                    endif
+                    
                     index ++
                     
-                    u_from[index] = GetAttacker()
-                    u_to[index] = GetTriggerUnit()
+                    u_from[index] = GetTriggerUnit()
+                    u_to[index] = GetEventTargetUnit()
                     
                     real hit, dodg, thisHit = 100, thisDodg = 100 //当前命中和闪躲都是取倒值
                     int i, h, count
@@ -2634,11 +2629,13 @@ debug@      endif
                     loop
                         exitwhen i > count
                         hit = LoadReal(YDHT, h, StringHash("命中几率值段") + i)
-                        thisHit -= thisHit * hit / 100
+                        if hit > 0 then
+                            thisHit -= thisHit * hit / 100
+                        else
+                            thisDodg += thisDodg * hit / 100
+                        endif
                         i ++
                     endloop
-                    
-                    thisHit = (100 - thisHit) * (1 + LoadReal(YDHT, h, StringHash("命中几率加成")))
                     
                     //再结算闪躲
                     h = GetHandleId(u_to[index])
@@ -2647,27 +2644,50 @@ debug@      endif
                     loop
                         exitwhen i > count
                         dodg = LoadReal(YDHT, h, StringHash("闪躲几率值段") + i)
-                        thisDodg -= thisDodg * dodg / 100
+                        if dodg > 0 then
+                            thisDodg -= thisDodg * dodg / 100
+                        else
+                            thisHit += thisHit * dodg / 100
+                        endif
                         i ++
                     endloop
                     
+                    thisHit = (100 - thisHit) * (1 + LoadReal(YDHT, h, StringHash("命中几率加成")))
                     thisDodg = (100 - thisDodg) * (1 + LoadReal(YDHT, h, StringHash("闪躲几率加成")))
                     
                     //闪避=闪避×（1-命中×0.25）-命中×0.6    这个闪躲公式是shenmegui
                     real chance = thisDodg - thisDodg * thisHit / 400 - thisHit * 0.6
                     
                     //进行闪躲判定
+                    UnitAddAbility(u_to[index], DODG_MAGIC_BOOK) //添加100%闪躲
                     if chance != 0 and chance >= GetRandomReal(0, 100) then
-                        UnitAddAbility(u_to[index], DODG_MAGIC_BOOK)
+                        UnitRemoveAbility(u_from[index], HIT_MAGIC_BOOK) //移除必定命中
                     else
-                        UnitRemoveAbility(u_to[index], DODG_MAGIC_BOOK)
+                        UnitAddAbility(u_from[index], HIT_MAGIC_BOOK) //添加必定命中
                     endif
                     
                     index --
                 }\
             ))
+            
+            //重置攻击动画
+            trigger trg = CreateTrigger()
+            TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_ATTACKED)
+            TriggerAddCondition(trg, Condition(\
+                lambda void(){
+                    SetUnitAnimation(GetAttacker(), "attack")
+                }\
+            ))
+            trg = null
         }
-
+        #undef DODG_MAGIC_BOOK
+        #undef HIT_MAGIC_BOOK
+        
+        //任意单位被创建(包含预设单位,不包含蝗虫)
+        static void AnyUnitInit(unit u){
+            //命中/闪躲结算触发器
+            TriggerRegisterUnitEvent(HIT_DODG_TRIGGER, u, EVENT_UNIT_TARGET_IN_RANGE)
+        }
 
     endstruct
 
@@ -3823,7 +3843,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1162
+//TESH.scrollpos=1211
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5041,8 +5061,8 @@ library unitLibrary initializer Init needs bakaLibrary
         */
         
         static void HitDodg(unit u, bool add, real chance, string tag, int hit_dodge){
-            //检查参数合法性
-            if chance <= 0 then
+            //检查合法性
+            if chance == 0 then
                 return
             endif
             
@@ -6652,6 +6672,18 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
