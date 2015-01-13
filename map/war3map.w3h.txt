@@ -1165,3 +1165,15 @@ ftip=|cff00ff00战神祝福|r
 frac=nightelf
 fnsf= (BUFF)
 ftat=
+[B046:Bakb]
+ftip=巨魔狂热
+fube=该单位的攻击力和攻击速度提升了
+ftat=
+fart=ReplaceableTextures\CommandButtons\BTNBloodLust.blp
+[B047:Basl]
+fube=该单位的移动速度大幅度降低了，攻击速度也降低了。
+fart=ReplaceableTextures\CommandButtons\BTNWeb.blp
+ftip=蛛网
+frac=nightelf
+fnsf= (BUFF)
+ftat=
