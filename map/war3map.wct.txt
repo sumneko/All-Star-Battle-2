@@ -2594,7 +2594,7 @@ debug@      endif
         命中/闪躲结算
         */
         #define DODG_MAGIC_BOOK 'A07L'
-        #define HIT_MAGIC_BOOK 'A0WM'
+        #define HIT_MAGIC_BOOK 'A901'
         
         static trigger HIT_DODG_TRIGGER = CreateTrigger()
 
