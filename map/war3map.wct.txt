@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=1001
+//TESH.scrollpos=776
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -5795,6 +5795,10 @@ library testLibrary initializer Init needs baseLibrary
                 Unit.HitDodg(hero, false, S2R(String.GetStr(2)), "测试", S2I(String.GetStr(3)))
             elseif s == ".leak" then
                 GetLocalizedHotkey("yd_leak_monitor::create_report")
+            elseif s == ".getherodataint" then
+                BJDebugMsg(String.GetStr(2) + "→" + I2S(LoadInteger(YDHT, GetHandleId(hero), StringHash(String.GetStr(2)))))
+            elseif s == ".getherodataint" then
+                BJDebugMsg(String.GetStr(2) + "→" + R2S(LoadReal(YDHT, GetHandleId(hero), StringHash(String.GetStr(2)))))
             else
                 p = null
                 hero = null
@@ -6672,6 +6676,12 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
 ########
 ########
 
