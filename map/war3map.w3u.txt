@@ -16319,7 +16319,7 @@ uori=0
 utub=利用地形游击的远程输出
 usnd=Dryad
 uhpr=0.0000
-uhrt=day
+uhrt=none
 [H014:Hamg]
 umdl=war3mapImported\LS ydssx.mdl
 unam=第十精灵

@@ -876,7 +876,7 @@
 
 
 		//Saber Bride
-		皮肤=A0WL
+		皮肤=A0WV
 		前缀=|cffcc00cc花嫁|r 
 		说明=
 		价格=
