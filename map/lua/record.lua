@@ -419,61 +419,6 @@
 		p.new_version	= p:isPlayer()
 	end
 
-	function record.buff()
-		--print('check buff')
-		if cmd.ver_name == '2.7D' then
-			for i = 1, 10 do
-				if player[i].new_version then
-					print('new_version')
-					--清掉所有的特殊积分数据
-					player[i]:setRecord('节操', 0)
-
-					--判断老玩家
-					local n	= player[i]:getRecord '局数' > 5 and 1 or 0
-					
-					--清空信使次数
-					for _, data in ipairs(messenger) do
-						player[i]:setRecord(data['信使'], n)
-					end
-
-					--清空皮肤次数
-					for _, data in ipairs(hero_model) do
-						player[i]:setRecord(data['皮肤'], n)
-					end
-
-					--清掉积分中的大号信息
-					record.saveName('mt', player[i]:getBaseName(), 0)
-
-					--清掉本地的大号信息
-					storm.save('save\\Profile1\\Campaigns.mu2', ' ')
-					
-					if n == 1 then
-					--老玩家,计算BUFF
-						local n	= player[i]:getRecord '局数' * 20 + player[i]:getRecord '胜利' * 10 + player[i]:getRecord '时间'
-						--折算为25%
-						n	= math.floor(n * 0.25)
-						--立即领取的节操
-						local m	= math.floor(n * 0.2)
-						player[i]:setRecord('db', n - m)
-						player[i]:setRecord('节操', m)
-						cmd.maid_chat(player[i], ('主人您领取了 %d 点节操奖励,待领取的奖励为 %d 点'):format(m, n - m))
-						cmd.maid_chat(player[i], '您将在游戏结束时获得双倍的节操,直到领完这些奖励为止!')
-					else
-						player[i]:setRecord('db', -1)
-					end
-
-					player[i]:saveRecord()
-				end
-			end
-		end
-	end
-
-	timer.wait(30,
-		function()
-			record.buff()
-		end
-	)
-
 	function cmd.game_over(p, tid)
 		local n 	= timer.time() / 60 --每分钟+1节操
 		local jc 	= record.jc[p:get()]

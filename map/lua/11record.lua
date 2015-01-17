@@ -5,16 +5,17 @@
 	messenger = {}
 	hero_model = {}
 	hero_lines = {}
+	player_reward = {}
 	
 	local funcs = {
 		['特殊称号'] = function(line)
-			local name, title = line:match('(.+)=(.+)')
+			local name, title = line:match('(.-)=(.+)')
 			if name then
 				names[name] = title
 			end
 		end,
 		['特殊信使'] = function(line)
-			local name, value = line:match('(.+)=(.+)')
+			local name, value = line:match('(.-)=(.+)')
 			if name then
 				if name == '信使' then
 					messenger.now = value
@@ -38,7 +39,7 @@
 			end
 		end,
 		['英雄皮肤'] = function(line)
-			local name, value = line:match('(.+)=(.+)')
+			local name, value = line:match('(.-)=(.+)')
 			if name then
 				if name == '皮肤' then
 					hero_model.now = value
@@ -49,7 +50,7 @@
 			end
 		end,
 		['英雄台词'] = function(line)
-			local name, value = line:match '(.+)=(.+)'
+			local name, value = line:match '(.-)=(.+)'
 			if name then
 				if name == '英雄' then
 					hero_lines.now	= value
@@ -57,6 +58,16 @@
 					table.insert(hero_lines, hero_lines[value])
 				end
 				hero_lines[hero_lines.now][name]	= value
+			end
+		end,
+		['节操奖励'] = function(line)
+			local name, value = line:match '(.-)=(.+)'
+			if name then
+				if name == '版本' then
+					player_reward.now = value
+					player_reward[value] = {}
+				end
+				table.insert(player_reward[player_reward.now], {name, value})
 			end
 		end,
 	}
@@ -930,3 +941,28 @@
 			end
 		end
 	end
+
+	--解析节操奖励
+	timer.wait(1,
+		function()
+			
+			local reward = player_reward[cmd.ver_name]
+			if not reward then
+				return
+			end
+
+			local jc
+			for _, data in ipairs(reward) then
+				local name, value = data[1], data[2]
+				if name == '节操' then
+					jc = tonumber(value)
+				end
+
+				if name == '名字' then
+					for name in value:gmatch '[^%;]+' do
+						
+					end
+				end
+			end
+		end
+	)
