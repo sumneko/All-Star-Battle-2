@@ -943,9 +943,10 @@
 	end
 
 	--解析节操奖励
-	timer.wait(1,
+	event('确定游戏版本',
 		function()
-			
+			player_reward.jc = {}
+	
 			local reward = player_reward[cmd.ver_name]
 			if not reward then
 				return
@@ -960,9 +961,24 @@
 
 				if name == '名字' then
 					for name in value:gmatch '[^%;]+' do
-						
+						player_reward.jc[name] = jc
 					end
 				end
 			end
+
+		end
+	)
+
+	event('玩家版本更新',
+		function(this)
+			local p = this.player
+			local name = p:getBaseName()
+			local reward = player_reward.jc[name]
+			local jc = p:getRecord '节操' + reward
+			p:setRecord('节操', jc)
+			p:saveRecord()
+
+			p:maid_chat '感谢积极参与活动'
+			p:maid_chat(('您已成功领取了 %d 点节操奖励,剩余 %d 点!'):format(reward, jc))
 		end
 	)

@@ -280,7 +280,8 @@
 		)
 	end
 
-	--��¼�汾��
+	--记录版本号
 	function cmd.set_ver_name(_, s)
 		cmd.ver_name = s
+		event('确定游戏版本', {version = s})
 	end

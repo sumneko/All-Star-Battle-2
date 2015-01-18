@@ -5797,7 +5797,7 @@ library testLibrary initializer Init needs baseLibrary
                 GetLocalizedHotkey("yd_leak_monitor::create_report")
             elseif s == ".getherodataint" then
                 BJDebugMsg(String.GetStr(2) + "→" + I2S(LoadInteger(YDHT, GetHandleId(hero), StringHash(String.GetStr(2)))))
-            elseif s == ".getherodataint" then
+            elseif s == ".getherodatareal" then
                 BJDebugMsg(String.GetStr(2) + "→" + R2S(LoadReal(YDHT, GetHandleId(hero), StringHash(String.GetStr(2)))))
             else
                 p = null

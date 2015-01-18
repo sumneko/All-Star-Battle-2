@@ -417,6 +417,7 @@
 	function cmd.new_version(p)
 		--print(p:get())
 		p.new_version	= p:isPlayer()
+		event('玩家版本更新', {player = p})
 	end
 
 	function cmd.game_over(p, tid)
