@@ -953,7 +953,7 @@
 			end
 
 			local jc
-			for _, data in ipairs(reward) then
+			for _, data in ipairs(reward) do
 				local name, value = data[1], data[2]
 				if name == '节操' then
 					jc = tonumber(value)
@@ -974,11 +974,15 @@
 			local p = this.player
 			local name = p:getBaseName()
 			local reward = player_reward.jc[name]
+			if not reward then
+				return
+			end
 			local jc = p:getRecord '节操' + reward
+
 			p:setRecord('节操', jc)
 			p:saveRecord()
 
 			p:maid_chat '感谢积极参与活动'
-			p:maid_chat(('您已成功领取了 %d 点节操奖励,剩余 %d 点!'):format(reward, jc))
+			p:maid_chat(('您已成功领取了 %d 点节操奖励,总节操 %d 点!'):format(reward, jc))
 		end
 	)
