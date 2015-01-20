@@ -34588,7 +34588,7 @@ anam=攻击必中
 [A901:Aspb]
 anam=攻击必中
 aite=0
-spb1[1]=A0WN
+spb1[1]=A900
 spb2[1]=0
 spb5[1]=spellbook
 ansf=魔法书
