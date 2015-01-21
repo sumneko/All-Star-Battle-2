@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=399
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -1609,7 +1609,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=776
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1979,7 +1979,7 @@ debug@          endif
             else
                 define_TriggerExecute(8)
             endif
-            
+            SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "")
         }
 
         static void damageEventAction(){
@@ -2032,6 +2032,7 @@ debug@          endif
                     endif
                 endif
             endif
+            SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "")
 
             undef define_TriggerExecute
 
@@ -2413,6 +2414,11 @@ debug@      endif
         }
 
         static void HeroInit_Start(unit hero){
+            if LoadBoolean(YDHT, GetHandleId(hero), StringHash("英雄已经被注册过")) then
+                return
+            endif
+            
+            SaveBoolean(YDHT, GetHandleId(hero), StringHash("英雄已经被注册过"), true)
             int hid = GetUnitTypeId(hero)
             int i = 1
             index ++
@@ -2466,7 +2472,6 @@ debug@      endif
 
                         static void user_%hash%_Start(){
                             int i = 1
-                            call SaveStr(YDHT, StringHash("事件"), StringHash("名称"), "%name%")
                             index ++
                             user_%hash%_lock ++
                 release@    if user_%hash%_need_clear and user_%hash%_lock == 0 then
@@ -2490,7 +2495,7 @@ debug@      endif
                                 i = 1
                 debug@          endif
                             endif
-
+                            SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "%name%")
                             event_skip[index] = false
                             loop
                                 exitwhen i > user_%hash%_top or event_skip[index]
@@ -2499,6 +2504,7 @@ debug@      endif
                                 endif
                                 i ++
                             endloop
+                            SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "")
                             user_%hash%_lock --
                             index --
                         }
@@ -2971,7 +2977,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=765
+//TESH.scrollpos=721
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3843,7 +3849,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1211
+//TESH.scrollpos=316
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -6000,6 +6006,8 @@ library processLibrary initializer Init needs baseLibrary
                 int new_max = 0
 				int i = 1
                 //BJDebugMsg(I2S(max))
+                Event.index ++
+                SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "过程被剔除")
 				loop
 					exitwhen i > max
 					int key = LoadInteger(YDHT, h, h_index[i])
@@ -6022,6 +6030,8 @@ library processLibrary initializer Init needs baseLibrary
 					endif
 					i ++
 				endloop
+                SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "")
+                Event.index --
                 SaveInteger(YDHT, h, h_max, new_max)
                 SaveInteger(YDHT, h, h_count, count)
 				return count
@@ -10755,6 +10765,18 @@ endlibrary
 
 ########
 ########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
@@ -10840,7 +10862,7 @@ endlibrary
 ?>
 ########
 ########
-//TESH.scrollpos=716
+//TESH.scrollpos=644
 //TESH.alwaysfold=0
 
 <?
@@ -11508,6 +11530,10 @@ endlibrary
                                 end
                             end
                         )
+                        
+                        --手动更新标记
+                        t.s = t.s:gsub('@@fresh_locals', freshLocal())
+                        
                         if not t.type['选取'] then
                             --在函数尾部更新局部变量
                             t.s = t.s .. freshLocal()
