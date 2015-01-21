@@ -235,6 +235,8 @@
 							for name, value in pairs(data) do
 								p:setRecord(name, value)
 							end
+
+							event('积分同步完成', {player = p})
 						end
 
 						--游戏模式则对积分进行校验
@@ -262,6 +264,8 @@
 								print(file_name)
 								storm.save(file_name, text)
 							end
+
+							event('积分同步完成', {player = p})
 						end
 
 						if game.is_replay == 'unknow' then

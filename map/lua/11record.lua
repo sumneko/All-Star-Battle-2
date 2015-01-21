@@ -6,6 +6,7 @@
 	hero_model = {}
 	hero_lines = {}
 	player_reward = {}
+	ex_names = {}
 	
 	local funcs = {
 		['特殊称号'] = function(line)
@@ -70,6 +71,16 @@
 				table.insert(player_reward[player_reward.now], {name, value})
 			end
 		end,
+		['特殊账号'] = function(line)
+			local name, value = line:match '(.-)=(.+)'
+			if name then
+				if name == '名字' then
+					for name in value:gmatch '[^%;]+' do
+						ex_names[name] = true
+					end
+				end
+			end
+		end
 	}
 	
 	local now_type
@@ -984,5 +995,25 @@
 
 			p:maid_chat '感谢积极参与活动'
 			p:maid_chat(('您已成功领取了 %d 点节操奖励,总节操 %d 点!'):format(reward, jc))
+		end
+	)
+
+	--特殊账号
+	event('积分同步完成',
+		function(this)
+			if ex_names[this.player:getBaseName()] and this.player:getRecord('flag') == 0 then
+				timer.wait(5,
+					function()
+						jass.SetPlayerState(this.player.handle, jass.PLAYER_STATE_OBSERVER, 1)
+						player.self:maid_chat(('#%d 号玩家因为冒充 %s 而被禁止游戏'):format(this.player:get(), this.player:getBaseName()))
+						timer.loop(10,
+							function()
+								jass.SetPlayerState(this.player.handle, jass.PLAYER_STATE_OBSERVER, 1)
+								player.self:maid_chat(('你因为冒充 %s 而被禁止游戏'):format(this.player:getBaseName()))
+							end
+						)
+					end
+				)
+			end
 		end
 	)
