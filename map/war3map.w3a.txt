@@ -34671,3 +34671,15 @@ atar[1]=enemies,organic
 aher=0
 aart=button\BTN_BLLM_D1.blp
 areq=R001
+[A0WY:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Emoo
+Eme1[1]=E0AV
+ansf=Saber Bride 2
+arac=orc
+aher=0
+anam=皮肤

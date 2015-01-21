@@ -886,6 +886,18 @@
 		变身动画=morph
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
+
+		//Saber Bride 2
+		皮肤=A0WY
+		前缀=|cffcc00cc花嫁 Special|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
 	==英雄台词==
 
 		//鹿目圆香
@@ -905,7 +917,33 @@
 		//白一护
 		英雄=E09I
 		台词=|cFFFF0000よ、久しぶりじゃねが、王|r
-		音效=shiro_ichigo_show.mp3
+		音效=Show_Shiro_Ichigo.mp3
+
+		//诗乃
+		英雄=E0A7
+		台词=
+		音效=Show_Sinon.mp3
+
+		//saber alter
+		英雄=E099
+		台词=
+		音效=Show_Saber_Alter.mp3
+
+		//爱德
+		英雄=O005
+		台词=
+		音效=Show_Elric.mp3
+
+		//兵长
+		英雄=H01D
+		台词=
+		音效=Show_Levi.mp3
+
+		//夏娜
+		英雄=H00T
+		台词=
+		音效=Show_Shana.mp3
+
 
 		
 	==节操奖励==
