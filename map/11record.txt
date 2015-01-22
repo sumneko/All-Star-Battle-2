@@ -944,6 +944,11 @@
 		台词=
 		音效=Show_Shana.mp3
 
+		//夜夜 special
+		英雄=O002
+		台词=
+		音效=Show_Yaya.mp3
+
 
 		
 	==节操奖励==
