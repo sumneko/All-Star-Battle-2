@@ -75,7 +75,7 @@
 	record.local_save_name_ansi	= ('[%08X]的本地积分存档(全明星战役).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
 
 	function player.__index.saveRecord(this)
-		if record.enable_local_save and dump.enable and this == player.self then
+		if record.enable_local_save and dump.enable and this == player.self and this:isPlayer() then
 			local lines	= {}
 			table.insert(lines, ('[%s]'):format(player.self:getBaseName()))
 			for _, name in ipairs(record.my_record) do
@@ -130,7 +130,7 @@
 		--璇诲彇鏈湴绉垎
 		local text	= storm.load(record.local_save_name_ansi) or storm.load(record.local_save_name_utf8)
 		local local_record	= table.new(0)
-		if text then
+		if text and player.self:isPlayer() then
 			--璇诲彇鍔犲瘑閮ㄥ垎
 			local content	= text:match '#start#(.+)#end#'
 			content	= dump.load(player.self:getBaseName(), content)
