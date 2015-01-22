@@ -227,6 +227,8 @@
 				local count	= p:getRecord(data['信使'])
 				if data.names[p:getBaseName()] then
 					table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
+				elseif cmd.ver_name == '2.8E' then
+					table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
 				elseif game.debug then
 					table.insert(texts, ('\n|cffffcc00测试模式,全皮肤开放!\n\n点击使用该皮肤|r'))
 				elseif #data.gold == 0 then
@@ -478,6 +480,8 @@
 				--确认是否能直接使用
 				if data.names[p:getBaseName()] then
 					change()
+				elseif cmd.ver_name == '2.8E' then
+					change()
 				elseif game.debug then
 					change()
 				elseif count == 0 then
@@ -665,6 +669,8 @@
 					local show	= 1
 					if data.names[p:getBaseName()] then
 						table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
+					elseif cmd.ver_name == '2.8E' then
+						table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
 					elseif game.debug then
 						table.insert(texts, ('\n|cffffcc00测试模式,全皮肤开放!\n\n点击使用该皮肤|r'))
 					elseif #data.gold == 0 then
@@ -814,6 +820,8 @@
 
 							--确认是否能直接使用
 							if data.names[p:getBaseName()] then
+								change()
+							elseif cmd.ver_name == '2.8E' then
 								change()
 							elseif game.debug then
 								change()
