@@ -24,27 +24,71 @@
 		return ('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890/*-+=,.<>\\|[]{};:!@#$%^&()'):sub(i, i)
 	end
 
-	function record.init()
+	function cmd.initRecord()
 		for i = 1, 16 do
 			record[i] = jass.GC[i - 1]
 			player[i].record = record[i]
 			player[i].record_data = {}
+			record[record[i]]	= player[i]
 		end
 	end
 
-	timer.wait(1, record.init)
+	--本地积分
+	record.my_record	= {}
+
+	function cmd.getRecord(p, name)
+		jass.udg_Lua_integer	= p:getRecord(name)
+	end
 
 	function player.__index.getRecord(this, name)
 		--print(('player[%d] load record: %s = %s from %d'):format(this:get(), name, japi.GetStoredInteger(this.record, '', name), this.record))
-		return japi.GetStoredInteger(this.record, '', name) or 0
+		local value	= japi.GetStoredInteger(this.record, '', name) or 0
+		if this	== player.self then
+			if not record.my_record[name] then
+				table.insert(record.my_record, name)
+			end
+			record.my_record[name]	= value
+		end
+		return value
+	end
+
+	function cmd.setRecord(p, name, value)
+		p:setRecord(name, tonumber(value))
 	end
 
 	function player.__index.setRecord(this, name, value)
 		--print(('player[%d] save record: %s = %s'):format(this:get(), name, value))
+		if this	== player.self then
+			if not record.my_record[name] then
+				table.insert(record.my_record, name)
+			end
+			record.my_record[name]	= value
+		end
 		return japi.StoreInteger(this.record, '', name, value)
 	end
 
+	function cmd.saveRecord(p)
+		p:saveRecord()
+	end
+
+	record.local_save_name_utf8	= ('[%08X]的本地积分存档(全明星战役).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
+	record.local_save_name_ansi	= ('[%08X]�ı��ػ��ִ浵(ȫ����ս��).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
+
 	function player.__index.saveRecord(this)
+		if record.enable_local_save and dump.enable and this == player.self then
+			local lines	= {}
+			table.insert(lines, ('[%s]'):format(player.self:getBaseName()))
+			for _, name in ipairs(record.my_record) do
+				if record.my_record[name] ~= 0 then
+					table.insert(lines, ('%s=%d'):format(name, record.my_record[name]))
+				end
+			end
+			local content	= table.concat(lines, '\r\n')
+			storm.save(
+				record.local_save_name_utf8,
+				('%s%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(string.char(0xEF, 0xBB, 0xBF), content, dump.save(this:getBaseName(), content))
+			)
+		end
 		return japi.SaveGameCache(this.record)
 	end
 
@@ -83,6 +127,33 @@
 	end
 	
 	function record.save_players()
+		--读取本地积分
+		local text	= storm.load(record.local_save_name_ansi) or storm.load(record.local_save_name_utf8)
+		local local_record	= table.new(0)
+		if text then
+			--读取加密部分
+			local content	= text:match '#start#(.+)#end#'
+			content	= dump.load(player.self:getBaseName(), content)
+			for name, value in content:gmatch '(%C-)%=(%C+)' do
+				table.insert(local_record, name)
+				local_record[name]	= tonumber(value)
+			end
+			
+			--对比2边的局数
+			if local_record['局数'] > player.self:getRecord '局数' then
+				--恢复积分
+				for _, name in ipairs(local_record) do
+					player.self:setRecord(name, local_record[name])
+				end
+				
+				cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
+				cmd.maid_chat '请注意备份魔兽目录下的本地积分存档文件'
+				cmd.maid_chat '录像或单人模式请忽略该信息'
+			end
+			
+		end
+
+		--读取本地大号信息
 		local text	= storm.load 'ushio1.log'
 		if text then
 			record.read_players(text)
@@ -126,8 +197,6 @@
 		record.saveName('mt', name, data[name])
 		--print(name, player.self:getBaseName())
 
-		player.self:saveRecord()
-
 		--将胜利信息发送给其他玩家
 		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db'
 		local t	= {}
@@ -149,6 +218,10 @@
 			t[name]		= player.self:getRecord(name)
 		end
 
+		record.enable_local_save	= true
+
+		player.self:saveRecord()
+		
 		--同步数据
 		for i = 1, 10 do
 			local p = player[i]
@@ -162,6 +235,8 @@
 							for name, value in pairs(data) do
 								p:setRecord(name, value)
 							end
+
+							event('积分同步完成', {player = p})
 						end
 
 						--游戏模式则对积分进行校验
@@ -180,7 +255,7 @@
 									table.insert(texts, ('[%s]\t%d : %d'):format(name, true_value, value))
 								end
 							end
-							print('#texts = ' .. #texts)
+							--print('#texts = ' .. #texts)
 							if #texts ~= 0 then
 								local text	= table.concat(texts, '\n')
 								cmd.maid_chat(player.self, text)
@@ -189,6 +264,8 @@
 								print(file_name)
 								storm.save(file_name, text)
 							end
+
+							event('积分同步完成', {player = p})
 						end
 
 						if game.is_replay == 'unknow' then
@@ -257,7 +334,7 @@
 		local is_main	= true
 		local data	= player.self.record_data
 		local name, value	= record.loadName('mt')
-		print('main', name, value)
+		--print('main', name, value)
 		if data[name] ~= data[player.self:getBaseName()] and value ~= 0 then
 			is_main	= false
 		end
@@ -344,62 +421,8 @@
 	function cmd.new_version(p)
 		--print(p:get())
 		p.new_version	= p:isPlayer()
+		event('玩家版本更新', {player = p})
 	end
-
-	function record.buff()
-		print('check buff')
-		if cmd.ver_name == '2.7D' then
-			for i = 1, 10 do
-				if player[i].new_version then
-					print('new_version')
-					--清掉所有的特殊积分数据
-					player[i]:setRecord('节操', 0)
-
-					--判断老玩家
-					local n	= player[i]:getRecord '局数' > 5 and 1 or 0
-					
-					--清空信使次数
-					for _, data in ipairs(messenger) do
-						player[i]:setRecord(data['信使'], n)
-					end
-
-					--清空皮肤次数
-					for _, data in ipairs(hero_model) do
-						player[i]:setRecord(data['皮肤'], n)
-					end
-
-					--清掉积分中的大号信息
-					record.saveName('mt', player[i]:getBaseName(), 0)
-
-					--清掉本地的大号信息
-					storm.save('save\\Profile1\\Campaigns.mu2', ' ')
-					
-					if n == 1 then
-					--老玩家,计算BUFF
-						local n	= player[i]:getRecord '局数' * 20 + player[i]:getRecord '胜利' * 10 + player[i]:getRecord '时间'
-						--折算为25%
-						n	= math.floor(n * 0.25)
-						--立即领取的节操
-						local m	= math.floor(n * 0.2)
-						player[i]:setRecord('db', n - m)
-						player[i]:setRecord('节操', m)
-						cmd.maid_chat(player[i], ('主人您领取了 %d 点节操奖励,待领取的奖励为 %d 点'):format(m, n - m))
-						cmd.maid_chat(player[i], '您将在游戏结束时获得双倍的节操,直到领完这些奖励为止!')
-					else
-						player[i]:setRecord('db', -1)
-					end
-
-					player[i]:saveRecord()
-				end
-			end
-		end
-	end
-
-	timer.wait(30,
-		function()
-			record.buff()
-		end
-	)
 
 	function cmd.game_over(p, tid)
 		local n 	= timer.time() / 60 --每分钟+1节操
@@ -409,12 +432,12 @@
 		if tid == p:getTeam() then
 			n = n + 50 --胜利+50节操
 			n = math.floor(n * jc['收益'])
-			print(n)
+			--print(n)
 			cmd.maid_chat(p, ('恭喜获胜,您本局收获了 %d 点节操哦~'):format(n))
 		else
 			n = n + 25 --失败+25节操
 			n = math.floor(n * jc['收益'])
-			print(n)
+			--print(n)
 			cmd.maid_chat(p, ('主人,您本局收获了 %d 点节操哦~'):format(n))
 		end
 

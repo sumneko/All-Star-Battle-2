@@ -54,20 +54,22 @@
 			return
 		end
 		local first	= sync.str:sub(index, index)
-		print(('sync[%d]: first = %s'):format(p:get(), first))
+		--print(('sync[%d]: first = %s'):format(p:get(), first))
 		local keys	= {}
 		for name, value in pairs(data) do
-			i	= i + 1
-			keys[i]	= name
-			local key = sync.getKey(i)
-			if p == player.self then
-				--将数据保存到缓存中
-				jass.StoreInteger(sync.gc, first, key, value)
-				--发起同步
-				jass.SyncStoredInteger(sync.gc, first, key)
+			if value ~= 0 then
+				i	= i + 1
+				keys[i]	= name
+				local key = sync.getKey(i)
+				if p == player.self then
+					--将数据保存到缓存中
+					jass.StoreInteger(sync.gc, first, key, value)
+					--发起同步
+					jass.SyncStoredInteger(sync.gc, first, key)
+				end
+				--清空本地数据
+				jass.StoreInteger(sync.gc, first, key, 0)
 			end
-			--清空本地数据
-			jass.StoreInteger(sync.gc, first, key, 0)
 		end
 		--发送一个结束标记
 		if p == player.self then
@@ -102,7 +104,7 @@
 				local data	= {}
 				for i, name in ipairs(keys) do
 					data[name]	= jass.GetStoredInteger(sync.gc, first, sync.getKey(i))
-					print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
+					--print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
 				end
 				--回调数据
 				--print(('Ready Sync: %s\t%s'):format(p:get(), func))

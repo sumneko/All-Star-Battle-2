@@ -55,6 +55,7 @@
     )
     
 	require 'lua\\util.lua'
+	require 'lua\\dump.lua'
 	require 'lua\\event.lua'
 	require 'lua\\table.lua'
 	require 'lua\\timer.lua'

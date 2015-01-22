@@ -54,16 +54,22 @@
 
 	--批量删除表中指定的索引
 	function table.removes(a, b)
-		local n = #a - #b + 1
-		for j = 1, #b do
-			local x, y = b[j], b[j + 1] or #a
-			for i = x - j + 1, y - j + 1 do
-				a[i] = a[i + j]
+		local c	= {}
+		for i = 1, #b do
+			c[b[i]]	= true
+		end
+		local jumped	= 0
+		for i = 1, #a do
+			if c[i] then
+				jumped	= jumped + 1
+			else
+				a[i - jumped]	= a[i]
 			end
 		end
-		for i = n, #a do
-			a[i] = nil
+		for i = #a - #b + 1, #a do
+			a[i]	= nil
 		end
+		return a
 	end
 
 	
