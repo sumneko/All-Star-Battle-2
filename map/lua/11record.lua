@@ -1013,11 +1013,11 @@
 				timer.wait(5,
 					function()
 						jass.SetPlayerState(this.player.handle, jass.PLAYER_STATE_OBSERVER, 1)
-						player.self:maid_chat(('#%d 号玩家因为冒充 %s 而被禁止游戏'):format(this.player:get(), this.player:getBaseName()))
+						this.player:maid_chat(('#%d 号玩家因为冒充 %s 而被禁止游戏'):format(this.player:get(), this.player:getBaseName()))
 						timer.loop(10,
 							function()
 								jass.SetPlayerState(this.player.handle, jass.PLAYER_STATE_OBSERVER, 1)
-								player.self:maid_chat(('你因为冒充 %s 而被禁止游戏'):format(this.player:getBaseName()))
+								this.player:maid_chat(('你因为冒充 %s 而被禁止游戏'):format(this.player:getBaseName()))
 							end
 						)
 					end
