@@ -4760,7 +4760,7 @@ library unitLibrary initializer Init needs bakaLibrary
             <?
                 update('war3mapmisc.txt',
                     function(content)
-                        DEF_ARMOR = content:match 'DefenseArmor%=(%C+)'
+                        DEF_ARMOR = content:match 'DefenseArmor%=(%C+)' or 0.06
                     end
                 )
 
