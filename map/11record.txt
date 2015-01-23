@@ -899,6 +899,42 @@
 		变身动画=morph
 		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
 
+
+		//圣骑士
+		皮肤=A0X3
+		前缀=|cffcc00cc女·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//黑暗骑士
+		皮肤=A0X4
+		前缀=|cffcc00cc女·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//雅典娜
+		皮肤=A0X5
+		前缀=|cffcc00cc奥林波斯神族|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
 	==英雄台词==
 
 		//鹿目圆香
