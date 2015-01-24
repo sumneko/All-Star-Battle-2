@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=399
+//TESH.scrollpos=436
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -393,7 +393,7 @@ endlibrary
 
     hero_types = {}
 	hero_types[0] = 'Emoo'
-	hero_types[1] = 'Ewar'
+    hero_types[1] = 'Ewar'
 	hero_types[2] = 'Huth'
 	hero_types[3] = 'Ntin'
 	hero_types[4] = 'Hpal'
@@ -455,6 +455,32 @@ endlibrary
 
         table.insert(hero_types_icons, ('set udg_touxiang[%d] = %q'):format(i, data.Art))
         table.insert(hero_types_texts, ('set udg_HeoZiFuChuan[%d] = "%s"'):format(i, instruction))
+        
+        --检查英雄属性
+            --技能
+            local error_type = {}
+            if not meta.abilList:match 'A0NA' or not meta.abilList:match 'A0F5' then
+                table.insert(error_type, {id, 'abilList'})
+            end
+            if tonumber(meta.propWin) ~= 180 then
+                table.insert(error_type, {id, 'propWin'})
+            end
+            if tonumber(meta.orientInterp) ~= 0 then
+                table.insert(error_type, {id, 'orientInterp'})
+            end
+            if tonumber(meta.regenMana) ~= 0 or tonumber(meta.regenHP) ~= 0 or meta.regenType ~= 'none' then
+                table.insert(error_type, {id, 'regen'})
+            end
+            if tonumber(meta.canFlee) ~= 0 then
+                table.insert(error_type, {id, 'canFlee'})
+            end
+            if #error_type ~= 0 then
+                local texts = {}
+                for _, data in ipairs(error_type) do
+                    table.insert(texts, ('Hero state error:[%s][%s]'):format(data[1], data[2]))
+                end
+                error(table.concat(texts, '\n'))
+            end
     end
 
     --创建反向表(不要吐槽我英文)
