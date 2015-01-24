@@ -31,6 +31,8 @@
 			player[i].record_data = {}
 			record[record[i]]	= player[i]
 		end
+
+		event('注册积分', {})
 	end
 
 	--本地积分
@@ -404,13 +406,7 @@
 		print('jc:' .. jc['收益'])
 	end
 	
-	timer.wait(1,
-		function()
-			
-			record.save_players()
-			
-		end
-	)
+	event('注册积分', record.save_players)
 
 	timer.wait(30,
 		function()
