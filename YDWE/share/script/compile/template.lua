@@ -76,6 +76,7 @@ function template:do_compile(op)
 	end
 	
 	local lua_codes = {''}
+	table.insert(lua_codes, 'local _time_1 = os.clock()')
 	table.insert(lua_codes, [[
 		stormlib = ar.stormlib
     
@@ -112,6 +113,10 @@ function template:do_compile(op)
 	if not r then
 		return r, err
 	end
+	table.insert(lua_codes, [[
+	local _time_2 = os.clock()
+	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(_time_2 - _time_1))
+	]])
 	
 	package.loaded['slk'] = nil
 	__map_handle__ = op.map_handle
@@ -119,13 +124,10 @@ function template:do_compile(op)
 	local env = setmetatable({import = map_file_import, StringHash = string_hash}, {__index = _G})
 	table.insert(lua_codes, "return do_update_j(table.concat(__jass_result__))")	
 	io.save(fs.ydwe_path() / "logs" / "调用lua插件前最后看一眼脚本.lua", table.concat(lua_codes, '\n'))
-	local time_1 = os.clock()
 	local f, err = load(table.concat(lua_codes, '\n'), nil, 't', env)
 	if not f then
 		return f, err
 	end
-	local time_2 = os.clock()
-	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(time_2 - time_1))
 	
 	return pcall(f)
 end
