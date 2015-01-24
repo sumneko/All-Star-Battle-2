@@ -76,7 +76,6 @@ function template:do_compile(op)
 	end
 	
 	local lua_codes = {''}
-	table.insert(lua_codes, 'local _time_1 = os.clock()')
 	table.insert(lua_codes, [[
 		stormlib = ar.stormlib
     
@@ -113,10 +112,6 @@ function template:do_compile(op)
 	if not r then
 		return r, err
 	end
-	table.insert(lua_codes, [[
-	local _time_2 = os.clock()
-	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(_time_2 - _time_1))
-	]])
 	
 	package.loaded['slk'] = nil
 	__map_handle__ = op.map_handle
@@ -135,7 +130,9 @@ end
 function template:compile(op)
 	log.trace("Template compilation start.")
 	op.output = fs.ydwe_path() / "logs" / "lua_processed.j"
+	local time_1 = os.clock()
 	local success, content = self:do_compile(op)
+	local time_2 = os.clock()
 	if not success then
 		if content then
 			gui.message_dialog(nil, content, _("Error"), bit32.bor(gui.MB_ICONERROR, gui.MB_OK))
@@ -145,6 +142,7 @@ function template:compile(op)
 		log.error("Template error processing: " .. tostring(content))
 		return false
 	end
+	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(time_2 - time_1))
 
 	local result, err = io.save(op.output, content)
 	if not result then
