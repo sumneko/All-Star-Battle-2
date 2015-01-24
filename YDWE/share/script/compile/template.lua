@@ -125,7 +125,7 @@ function template:do_compile(op)
 		return f, err
 	end
 	local time_2 = os.clock()
-	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(time_2 - time1))
+	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(time_2 - time_1))
 	
 	return pcall(f)
 end
