@@ -917,7 +917,7 @@
 		前缀=|cffcc00cc女·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\firaga4.mdl
+		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
@@ -930,6 +930,18 @@
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;lianhuohuo2333;qilunuobaka9999;WorldEdit
+
+
+		//狂三 黑礼服
+		皮肤=A0XD
+		前缀=|cffcc00cc黑礼服·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph

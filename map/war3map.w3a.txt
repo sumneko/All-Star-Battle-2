@@ -35032,3 +35032,15 @@ anam=优
 atp1[1]=闪回(|cffffcc00Q|r)
 ansf=闪回Q
 ahky=Q
+[A0XD:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=H00N
+Eme1[1]=H01H
+ansf=狂三 黑礼服
+arac=orc
+aher=0
+anam=皮肤
