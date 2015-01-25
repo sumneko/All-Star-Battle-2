@@ -633,7 +633,7 @@
 
 		--检查数据
 		if game.debug then
-			local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip'}
+			local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip', 'run', 'walk'}
 			table.back(ignore)
 			for name, value in pairs(slk.unit[data.hero_id_base]) do
 				if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then
