@@ -1177,3 +1177,18 @@ ftip=蛛网
 frac=nightelf
 fnsf= (BUFF)
 ftat=
+[B048:Basl]
+ftip=死线
+fube=该单位被死线缠绕，移动速度与魔抗降低
+ftat=
+fart=
+[B049:Bslo]
+fnam=减速 阴阳玉
+ftat=Abilities\Spells\Orc\StasisTrap\StasisTotemTarget.mdl,Abilities\Spells\Human\slow\slowtarget.mdl
+fart=button\BTN_BLLM_E1.blp
+ftac=1
+fta0=overhead
+fspd=0
+[B04A:Bslo]
+fnam=减速 回旋斩
+fspd=0

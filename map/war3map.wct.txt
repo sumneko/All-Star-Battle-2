@@ -3876,7 +3876,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1235
+//TESH.scrollpos=222
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -6713,15 +6713,6 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
-########
-########
-
-########
-########
-
-########
-########
-
 ########
 ########
 
