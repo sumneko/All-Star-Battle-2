@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=404
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -746,6 +746,8 @@ library YDWELibrary initializer Init needs baseLibrary
             if Iflush_first > 500 then
                 BJDebugMsg("<请截图汇报>单位主键大于500!!!")
                 BJDebugMsg("单位类型 [" + I2S(GetUnitTypeId(Uflush_units[GetRandomInt(1, 500)])) + "]")
+            else
+                GetLocalizedHotkey("yd_leak_monitor::create_report")
             endif
         endif
     }
@@ -1636,7 +1638,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=362
+//TESH.scrollpos=379
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3876,7 +3878,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=222
+//TESH.scrollpos=880
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5668,7 +5670,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=129
+//TESH.scrollpos=57
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -6713,6 +6715,12 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
 ########
 ########
 
