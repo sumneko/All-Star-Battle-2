@@ -1,4 +1,4 @@
-﻿VERSION=2
+VERSION=2
 [CHUNK]
 [hgtw]
 uabi=A0F5,ACnr,ANre,Adts
@@ -19587,7 +19587,6 @@ usnd=VillagerKid
 udty=none
 udea=0
 uarm=Ethereal
-usca=0.0500
 udef=10.0000
 utub=一个可以运送物品的信使
 utip=可爱的小球
@@ -19598,6 +19597,7 @@ ufle=0
 urun=400.0000
 uwal=400.0000
 ushu=
+usca=0.8000
 [n03B:nech]
 uabi=A0XM,A0XN,A0FP,A091,A090,A03C,A0H8,A0EB,A039,A0S6
 unam=北方栖姬
@@ -19628,4 +19628,3 @@ utyp=ancient
 ufle=0
 uwal=522.0000
 urun=522.0000
-usca=0.0600
