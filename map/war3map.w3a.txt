@@ -35143,7 +35143,7 @@ atp1[1]=电极（T）
 aut1[1]=关闭电极（T）
 ansf=开关按钮
 Eim3[1]=0.0000
-[A0XO:Aave]
+[A0XQ:Aave]
 arac=critters
 areq=
 ave5[1]=0.0000

@@ -1,4 +1,4 @@
-VERSION=2
+﻿VERSION=2
 [CHUNK]
 [hgtw]
 uabi=A0F5,ACnr,ANre,Adts
@@ -19569,7 +19569,7 @@ umdl=Objects\InventoryItems\CrystalShard\CrystalShard.mdl
 udtm=0.6000
 umvs=1
 [n03A:nech]
-uabi=A0XO,A0XN,A091,A090,A03C,A0EB,A0XO,A039
+uabi=A0XO,A0XN,A091,A090,A03C,A0EB,A0XQ,A039
 unam=北方栖姬
 unsf=信使1
 umdl=war3mapImported\yy.mdl
