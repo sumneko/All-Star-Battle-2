@@ -3791,7 +3791,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1326
+//TESH.scrollpos=703
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4498,9 +4498,12 @@ library unitLibrary initializer Init needs bakaLibrary
 
             timer t = CreateTimer()
             int h   = GetHandleId(t)
+            
+            SetUnitColor(bar, PLAYER_COLOR_LIGHT_GRAY)
 
             SaveUnitHandle(YDHT, h, 0, bar)
             SaveInteger(YDHT, h, 0, 255)
+            
             TimerStart(t, 0.05, true,\
                 lambda void(){
                     int h       = GetHandleId(GetExpiredTimer())
@@ -6731,6 +6734,15 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 

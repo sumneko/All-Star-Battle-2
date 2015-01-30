@@ -1197,3 +1197,10 @@ fube=该攻击未命中
 ftip=未命中
 ftat=
 fta0=
+[B04C:BEim]
+ftat=
+fspt=
+fsat=
+ftip=电极
+fube=开启电极
+fart=ReplaceableTextures\CommandButtons\BTNNeutralManaShield.blp

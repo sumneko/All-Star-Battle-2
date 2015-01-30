@@ -630,7 +630,7 @@ Unit.SetUnitXY="设置单位XY坐标"
 Unit.SetUnitXY="设置 ",~单位," 的坐标为 ( ",~x," , ",~y," )"
 
 Unit.SetUnitXYOffset="设置单位XY坐标偏移"
-Unit.SetUnitXYOffset="设置 ",~单位," 的坐标为 ( ",~x," , ",~y," ) 向 ",~方向," 的方向偏移 ",~距离," °"
+Unit.SetUnitXYOffset="设置 ",~单位," 的坐标为 ( ",~x," , ",~y," ) 向 ",~方向," ° 的方向偏移 ",~距离
 
 Unit.DummyAttack="马甲攻击"
 Unit.DummyAttack="创建隶属于 ",~英雄," 的攻击马甲 [",~单位类型,"] ,攻击 ",~目标单位," ",~整数," 次,立即进行攻击 ",~true," ,继承英雄属性 ",~true," ,继承物品 ",~true,", 当英雄进行其他指令时停止攻击 ",~true
