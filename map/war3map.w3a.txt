@@ -35144,3 +35144,44 @@ atp1[1]=电极（T）
 aut1[1]=关闭电极（T）
 ansf=开关按钮
 Eim3[1]=0.0000
+[A0XO:Aave]
+arac=critters
+areq=
+ave5[1]=0.0000
+Eme1[1]=n03A
+Emeu[1]=n03B
+anam=信使升级
+auby=1
+abpy=1
+abpx=2
+aubx=2
+aart=button\BTN_XS_BFXJ.blp
+auar=button\BTN_XS_BFXJ.blp
+Eme3[1]=0.0000
+adur[1]=0.0000
+ansf=北方栖姬
+[A0XN:AIat]
+Iatt[1]=0
+ansf=北方栖姬 灰尘
+aart=ReplaceableTextures\CommandButtons\BTNUsedSoulGem.blp
+atac=1
+atat=Abilities\Weapons\TreantMissile\TreantMissile.mdl
+ata0=foot
+aite=0
+anam=特效信使
+[A0XM:AIth]
+aite=0
+Iatt[1]=0
+atat=war3mapImported\ICBM_projectile.mdx
+atac=1
+ata0=overhead
+ansf=北方栖姬 鱼雷
+anam=特效信使
+[A0XO:AIth]
+anam=特效信使
+aite=0
+Iatt[1]=0
+atat=Objects\InventoryItems\TreasureChest\treasurechest.mdl
+atac=1
+ata0=overhead
+ansf=北方栖姬 物品
