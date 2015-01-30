@@ -35115,7 +35115,7 @@ Neg5[1]=
 Neg6[1]=
 Neg3[1]=A0X8,A0XH
 [A0XK:Acrs]
-Crs [1]=1.0
+Crs [1]=1.0000
 ansf=闪躲系统用
 acdn[1]=0.0000
 atar[1]=debris,enemies,ground,air,friend,organic,neutral,self
@@ -35124,7 +35124,6 @@ ahdu[1]=10.0000
 amcs[1]=0
 aran[1]=999999.0000
 abuf[1]=B04B
-Crs [1]=1.0
 [A0XL:AEim]
 anam=电极
 alev=1

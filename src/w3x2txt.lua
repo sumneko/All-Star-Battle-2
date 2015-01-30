@@ -12,7 +12,10 @@
 		
 		setmetatable(meta_list,
 			{
-				__index = function(_, id)
+				__index = function(self, id)
+					if id:sub(-1) == '\0' then
+						return self[('z'):unpack(id)]
+					end
 					return rawget(meta_list, 'default')
 				end
 			}
