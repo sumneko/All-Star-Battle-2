@@ -206,12 +206,17 @@
 			
 			for i = 1, #messenger.model_skill do
 				local data	= messenger[i + p.messenger_page]
-				if not data then
-					break
-				end
+				
 				--遍历当前的皮肤
 				local sid	= messenger.model_skill[i]
 				local ab	= japi.EXGetUnitAbility(u, sid)
+
+				if not data then
+					if p == player.self then
+						japi.EXSetAbilityDataReal(ab, 1, 110, 0)
+					end
+					goto continue
+				end
 
 				local texts	= {}
 
@@ -256,6 +261,8 @@
 					japi.EXSetAbilityDataString(ab, 1, 218, direct)
 					japi.EXSetAbilityDataString(ab, 1, 204, slk.unit[data.id].Art)
 				end
+
+				:: continue ::
 			end
 
 			--往上翻按钮
