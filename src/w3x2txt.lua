@@ -246,7 +246,7 @@
 				end
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts() .. '\r\n')
 
 		end
 
@@ -771,7 +771,7 @@
 				
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts(true))
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts(true) .. '\r\n')
 
 			--io.save(file_name_out, table.concat(lines, '\r\n'))	--貌似wtg文件写入文本会出错
 		end
@@ -1176,7 +1176,7 @@
 				table.insert(lines, ('########\r\n%s\r\n########'):format(trigger.content))
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts() .. '\r\n')
 			
 		end
 
@@ -1608,7 +1608,7 @@
 				end
 			end
 
-			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts())
+			io.save(file_name_out, table.concat(lines, '\r\n'):convert_wts() .. '\r\n')
 
 		end
 

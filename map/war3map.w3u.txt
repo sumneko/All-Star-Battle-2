@@ -1,4 +1,4 @@
-﻿VERSION=2
+VERSION=2
 [CHUNK]
 [hgtw]
 uabi=A0F5,ACnr,ANre,Adts
