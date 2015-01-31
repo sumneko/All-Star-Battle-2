@@ -2919,7 +2919,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=348
+//TESH.scrollpos=533
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -5689,7 +5689,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=57
+//TESH.scrollpos=87
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -6734,12 +6734,6 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
-########
-########
-
-########
-########
-
 ########
 ########
 
