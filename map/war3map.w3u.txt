@@ -19628,7 +19628,6 @@ utyp=ancient
 ufle=0
 uwal=522.0000
 urun=522.0000
-usca=0.0600
 [e0B5:ewsp]
 unam=狂三
 uabi=Aloc,Arav
