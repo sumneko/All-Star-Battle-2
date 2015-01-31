@@ -66,6 +66,11 @@
 		isEnemy = function(this, p)
 			return jass.IsPlayerEnemy(this.handle, p.handle)
 		end,
+
+		--发送文本
+		display = function(this, dur, text)
+			jass.DisplayTimedTextToPlayer(this.handle, 0, 0, dur, text)
+		end,
 	}
 	
 	function player.__call(_, i)

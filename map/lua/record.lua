@@ -135,22 +135,29 @@
 		if text and player.self:isPlayer() then
 			--读取加密部分
 			local content	= text:match '#start#(.+)#end#'
-			content	= dump.load(player.self:getBaseName(), content)
-			for name, value in content:gmatch '(%C-)%=(%C+)' do
-				table.insert(local_record, name)
-				local_record[name]	= tonumber(value)
-			end
-			
-			--对比2边的局数
-			if local_record['局数'] > player.self:getRecord '局数' then
-				--恢复积分
-				for _, name in ipairs(local_record) do
-					player.self:setRecord(name, local_record[name])
+			local result, content	= pcall(dump.load, player.self:getBaseName(), content)
+			if result then
+				for name, value in content:gmatch '(%C-)%=(%C+)' do
+					table.insert(local_record, name)
+					local_record[name]	= tonumber(value)
 				end
 				
-				cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
-				cmd.maid_chat '请注意备份魔兽目录下的本地积分存档文件'
-				cmd.maid_chat '录像或单人模式请忽略该信息'
+				--对比2边的局数
+				if local_record['局数'] > player.self:getRecord '局数' then
+					--恢复积分
+					for _, name in ipairs(local_record) do
+						player.self:setRecord(name, local_record[name])
+					end
+					
+					cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
+					cmd.maid_chat '请注意备份魔兽目录下的本地积分存档文件'
+					cmd.maid_chat '录像或单人模式请忽略该信息'
+				end
+			else
+				cmd.maid_chat '积分文件解析出错'
+				cmd.maid_chat '如果你改了文件,请删除文件'
+				cmd.maid_chat '否则请截图并联系最萌小汐'
+				player.self:display(content)
 			end
 			
 		end
@@ -185,8 +192,18 @@
 			table.insert(texts, ('%s=%d'):format(name, data[name]))
 		end
 		--保存到本地
+		record.ushio1_log = table.concat(texts, '\n')
 		--print(table.concat(texts, '\n'))
-		storm.save('ushio1.log', table.concat(texts, '\n'))
+		--storm.save('ushio1.log', table.concat(texts, '\n'))
+
+		event('录像检测完成',
+			function()
+				if not game.is_replay then
+					record.enable_local_save	= true
+					storm.save('ushio1.log', record.ushio1_log)
+				end
+			end
+		)
 
 		--找到胜利最多的一个名字
 		local name	= table.pick(data,
@@ -200,7 +217,7 @@
 		--print(name, player.self:getBaseName())
 
 		--将胜利信息发送给其他玩家
-		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db'
+		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db flag'
 		local t	= {}
 		for name in sync_names:gmatch '(%S+)' do
 			t[name]	= player.self:getRecord(name)
@@ -220,7 +237,7 @@
 			t[name]		= player.self:getRecord(name)
 		end
 
-		record.enable_local_save	= true
+		--record.enable_local_save	= true
 
 		player.self:saveRecord()
 		
