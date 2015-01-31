@@ -34988,6 +34988,11 @@ acdn[2]=11.0000
 acdn[3]=10.0000
 acdn[4]=9.0000
 acdn[5]=8.0000
+atar[1]=air,ground,enemy,neutral
+atar[2]=air,ground,enemy,neutral
+atar[3]=air,ground,enemy,neutral
+atar[4]=air,ground,enemy,neutral
+atar[5]=air,ground,enemy,neutral
 [A0X7:ANcl]
 anam=优
 alev=5
