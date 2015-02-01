@@ -471,8 +471,8 @@
 							
 							event('-玩家离开', f)
 
-							--有玩家在20分钟内退出
-							if timer.time() - time < 1200 then
+							--有玩家在5分钟内退出
+							if timer.time() - time < 300 then
 								local count = p:getRecord(data['信使'])
 								count = count + 1
 								p:setRecord(data['信使'], count)
@@ -812,8 +812,8 @@
 										
 										event('-玩家离开', f)
 
-										--有玩家在20分钟内退出
-										if timer.time() - time < 1200 then
+										--有玩家在5分钟内退出
+										if timer.time() - time < 300 then
 											local count = p:getRecord(data['皮肤'])
 											count = count + 1
 											p:setRecord(data['皮肤'], count)
