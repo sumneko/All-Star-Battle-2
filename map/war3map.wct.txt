@@ -6100,6 +6100,11 @@ library processLibrary initializer Init needs baseLibrary
                 int key
 				//检查是否有更高优先级存在
 				int h = GetHandleId(u)
+                if h == 0 then
+                    BJDebugMsg("<过程目标不存在!>请截图汇报")
+                    BJDebugMsg("<名称>" + name)
+                    BJDebugMsg("<优先级>" + I2S(uper))
+                endif
 				int max = LoadInteger(YDHT, h, h_max)
 				int i = 1
 				loop
