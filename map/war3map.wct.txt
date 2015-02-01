@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=9
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -618,9 +618,10 @@ library baseLibrary initializer Init needs LuaLibrary
 
             real x = GetStoredReal(GC, "CR", "x")
             real y = GetStoredReal(GC, "CR", "y")
+            bool hasPlayed = GetStoredBoolean(GC, "CR", "p")
 
             if sys.selfp == firstPlayer then
-                if x != cx or y != cy then
+                if x != cx or y != cy or hasPlayed != baka.hasPlayed then
                     IsReplay = 1
                     BJDebugMsg("|cffffff00<录像模式>|r")
                     udg_GodView    = true
@@ -655,12 +656,15 @@ library baseLibrary initializer Init needs LuaLibrary
             if selfp == firstPlayer then
                 StoreReal(GC, "CR", "x", cx)
                 StoreReal(GC, "CR", "y", cy)
+                StoreBoolean(GC, "CR", "p", baka.hasPlayed)
                 StoreInteger(GC, "CR", "i", 1)
                 SyncStoredReal(GC, "CR", "x")
                 SyncStoredReal(GC, "CR", "y")
+                SyncStoredBoolean(GC, "CR", "p")
                 SyncStoredInteger(GC, "CR", "i")
                 StoreReal(GC, "CR", "x", 0)
                 StoreReal(GC, "CR", "y", 0)
+                StoreBoolean(GC, "CR", "p", false)
                 StoreInteger(GC, "CR", "i", 0)
             endif
 
@@ -768,7 +772,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=625
+//TESH.scrollpos=661
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -2919,7 +2923,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=533
+//TESH.scrollpos=608
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3551,11 +3555,12 @@ library bakaLibrary initializer Init needs baseLibrary
                 TimerStart(CreateTimer(), 300, true, null)
             endif
         }
+        
+        static bool hasPlayed = false
 
         static bool newMap(){
             //设置当前版本号
             thisVer = getMapVerInt(thisVerName)
-            debug@ return true
             //寻找所有玩家记录的最新版本
             int thatVer = 0
             int banVer = 0
@@ -3569,6 +3574,10 @@ library bakaLibrary initializer Init needs baseLibrary
                 int ban = Get(x, "B")
                 if ban > banVer
                     banVer = ban
+                endif
+                //特例,顺便检查是否是录像状态(局数都为0)
+                if Get(x, "局数") != 0 then
+                    hasPlayed = true
                 endif
                 x ++
             endloop
@@ -3584,9 +3593,9 @@ library bakaLibrary initializer Init needs baseLibrary
                 exitwhen x > 11
                 if Get(x, "V") < thatVer then
                     Lua_hook(Player(x), "new_version")
-                    Set(x, "V", thatVer)
+                    release@ Set(x, "V", thatVer)
                 endif
-                Set(x, "B", banVer)
+                release@ Set(x, "B", banVer)
                 x ++
             endloop
             //根据情况是否废除当前版本地图
