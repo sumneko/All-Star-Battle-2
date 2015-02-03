@@ -1642,7 +1642,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=491
+//TESH.scrollpos=338
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1930,6 +1930,7 @@ debug@          endif
             real rate
             trigger trg
             real thisRate = 0
+            real exRate = LoadReal(YDHT, GetHandleId(u_from[index]), StringHash("暴击倍率加成"))
             real maxRate = 100 / (1 + LoadReal(YDHT, h, StringHash("暴击几率加成")))
             
             //取出暴击模块
@@ -1999,11 +2000,8 @@ debug@          endif
                 return
             endif
             
-            thisRate += LoadReal(YDHT, GetHandleId(u_from[index]), StringHash("暴击倍率加成"))
-            
-            //造成暴击伤害
-            UnitDamageTarget(u_from[index], u_to[index], GetEventDamage() * (thisRate - 1), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_ENHANCED, WEAPON_TYPE_WHOKNOWS)
-            
+            thisRate += exRate
+
             //发起暴击事件
             SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "暴击伤害")
             SaveReal(YDHT, StringHash("事件返回"), StringHash("倍率"), thisRate)
@@ -2013,6 +2011,9 @@ debug@          endif
                 define_TriggerExecute(8)
             endif
             SaveStr(YDHT, StringHash("事件返回"), StringHash("名称"), "")
+            
+            //造成暴击伤害
+            UnitDamageTarget(u_from[index], u_to[index], GetEventDamage() * (thisRate - 1), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_ENHANCED, WEAPON_TYPE_WHOKNOWS)
         }
 
         static void damageEventAction(){
@@ -3800,7 +3801,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=703
+//TESH.scrollpos=1139
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4939,7 +4940,7 @@ library unitLibrary initializer Init needs bakaLibrary
         
         static void Crit(unit u, bool add, real chance, real rate, string tag, int crit_type){
             //先检查参数合法性
-            if chance <= 0 or rate <= 1 then
+            if chance <= 0 or rate <= 0 then
                 return
             endif
             
@@ -5698,7 +5699,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=87
+//TESH.scrollpos=135
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -6748,6 +6749,9 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
 ########
 ########
 
