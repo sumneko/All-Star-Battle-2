@@ -16344,12 +16344,13 @@ Slo2[1]=0.5000
 Slo1[1]=0.5000
 ahdu[1]=2.0000
 adur[1]=2.0000
-aran[1]=2000.0000
+aran[1]=99999.0000
 achd=0
 acdn[1]=0.0000
 amcs[1]=0
 acat=
 abuf[1]=B00A
+atar[1]=vulnerable,invulnerable
 [A0EE:AIms]
 anam=移动速度
 Imvb[1]=500
