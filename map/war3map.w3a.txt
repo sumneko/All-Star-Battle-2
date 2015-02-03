@@ -35294,7 +35294,7 @@ Neg5[1]=
 Neg6[1]=
 Neg3[1]=A0X8,A0XH
 [A0XK:Acrs]
-Crs [1]=1.0000
+Crs [1]=1.0000
 ansf=闪躲系统用
 acdn[1]=0.0000
 atar[1]=debris,enemies,ground,air,friend,organic,neutral,self
