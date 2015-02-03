@@ -135,31 +135,32 @@
 		if text and player.self:isPlayer() then
 			--读取加密部分
 			local content	= text:match '#start#(.+)#end#'
-			local result, content	= pcall(dump.load, player.self:getBaseName(), content)
-			if result then
-				for name, value in content:gmatch '(%C-)%=(%C+)' do
-					table.insert(local_record, name)
-					local_record[name]	= tonumber(value)
-				end
-				
-				--对比2边的局数
-				if local_record['局数'] > player.self:getRecord '局数' then
-					--恢复积分
-					for _, name in ipairs(local_record) do
-						player.self:setRecord(name, local_record[name])
+			if content then
+				local result, content	= pcall(dump.load, player.self:getBaseName(), content)
+				if result then
+					for name, value in content:gmatch '(%C-)%=(%C+)' do
+						table.insert(local_record, name)
+						local_record[name]	= tonumber(value)
 					end
 					
-					cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
-					cmd.maid_chat '请注意备份魔兽目录下的本地积分存档文件'
-					cmd.maid_chat '录像或单人模式请忽略该信息'
+					--对比2边的局数
+					if local_record['局数'] > player.self:getRecord '局数' then
+						--恢复积分
+						for _, name in ipairs(local_record) do
+							player.self:setRecord(name, local_record[name])
+						end
+						
+						cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
+						cmd.maid_chat '请注意备份魔兽目录下的本地积分存档文件'
+						cmd.maid_chat '录像或单人模式请忽略该信息'
+					end
+				else
+					cmd.maid_chat '积分文件解析出错'
+					cmd.maid_chat '如果你改了文件,请删除文件'
+					cmd.maid_chat '否则请截图并联系最萌小汐'
+					player.self:display(content)
 				end
-			else
-				cmd.maid_chat '积分文件解析出错'
-				cmd.maid_chat '如果你改了文件,请删除文件'
-				cmd.maid_chat '否则请截图并联系最萌小汐'
-				player.self:display(content)
 			end
-			
 		end
 
 		--读取本地大号信息
