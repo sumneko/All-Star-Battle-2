@@ -1192,6 +1192,7 @@ fspd=0
 [B04A:Bslo]
 fnam=减速 回旋斩
 fspd=0
+ftat=
 [B04B:Bcrs]
 fube=该攻击未命中
 ftip=未命中
