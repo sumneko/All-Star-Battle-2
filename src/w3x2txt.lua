@@ -1849,8 +1849,8 @@
 			push '高=$l$'
 			chunk.my = vars[1]
 			
-			push '中心点x坐标偏移=$f$'
-			push '中心点y坐标偏移=$f$'
+			push '左下角x坐标=$f$'
+			push '左下角y坐标=$f$'
 
 			--枚举每个地形
 			for x = 1, chunk.mx do
@@ -1862,14 +1862,14 @@
 					push('$I1$', true)
 					local flag = tonumber(vars[1])
 					push '标记=%d' (flag >> 4)
-					push '贴图=%d' (flag & 15)
+					push '纹理=%d' (flag & 15)
 
 					push '细节=$I1$'
 
 					--flag
 					push('$I1$', true)
 					local flag = tonumber(vars[1])
-					push '纹理=%d' (flag >> 4)
+					push '样式=%d' (flag >> 4)
 					push '层面=%d' (flag & 15)
 				end
 			end
