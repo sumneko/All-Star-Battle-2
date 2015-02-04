@@ -65,6 +65,7 @@ local w3x_txt	= {
 	['war3map.wtg']	= 'wtg',
 	['war3map.wct']	= 'wct',
 	['war3map.w3i']	= 'w3i',
+	['war3map.w3e'] = 'w3e',
 }
 
 local function git_fresh(fname)

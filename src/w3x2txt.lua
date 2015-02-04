@@ -1794,6 +1794,179 @@
 			io.save(file_name_out, table.concat(pack))		
 		end
 
+		function w3x2txt.w3e2txt(file_name_in, file_name_out)
+			local content	= io.load(file_name_in)
+			if not content then
+				print('文件无效:' .. file_name_in)
+				return
+			end
+
+			local chunk	= {}
+			local index = 1
+			local vars
+			--转换txt文件
+			local lines	= {}
+
+			local function push(line, get)
+				vars	= {}
+				line	= line:gsub('%$(.-)%$',
+					function(btype)
+						local var
+						var, index	= btype:unpack(content, index)
+						table.insert(vars, var)
+						return var
+					end
+				)
+				if get then
+					return
+				end
+				table.insert(lines, line)
+				return function (...)
+					lines[#lines] = line:format(...)
+				end
+			end
+
+			--开始解析
+			push '文件头=$c4$'
+			push '文件版本=$l$'
+			push '地形类型=$c1$'
+			push '自定义地形=$l$'
+
+			--使用到的地形列表
+			push '地形数量=$l$'
+			for i = 1, vars[1] do
+				push '地形%02d=$c4$' (i)
+			end
+
+			--使用到的悬崖列表
+			push '悬崖数量=$l$'
+			for i = 1, vars[1] do
+				push '悬崖%d=$c4$' (i)
+			end
+
+			push '宽=$l$'
+			chunk.mx = vars[1]
+			push '高=$l$'
+			chunk.my = vars[1]
+			
+			push '中心点x坐标偏移=$f$'
+			push '中心点y坐标偏移=$f$'
+
+			--枚举每个地形
+			for x = 1, chunk.mx do
+				for y = 1, chunk.my do
+					push '[%03d:%03d]' (x, y)
+					push '高度=$I2$'
+					push '水面=$I2$'
+					--flag
+					push('$I1$', true)
+					local flag = tonumber(vars[1])
+					push '标记=%d' (flag >> 4)
+					push '贴图=%d' (flag & 15)
+
+					push '细节=$I1$'
+
+					--flag
+					push('$I1$', true)
+					local flag = tonumber(vars[1])
+					push '纹理=%d' (flag >> 4)
+					push '层面=%d' (flag & 15)
+				end
+			end
+
+			--生成文件
+			io.save(file_name_out, table.concat(lines, '\r\n') .. '\r\n')
+		end
+
+		function w3x2txt.txt2w3e(file_name_in, file_name_out)
+			local content	= io.load(file_name_in)
+			if not content then
+				print('文件无效:' .. file_name_in)
+				return
+			end
+			
+			local index = 0
+			local line
+			local function read()
+				local _
+				_, index, line	= content:find('(%C+)', index + 1)
+				if line and line:match '^%s*$' then
+					return read()
+				end
+				return line
+			end
+
+			local function readValue(n, ...)
+				if not n then
+					return read():match '^.-%=(.*)$'
+				end
+
+				local t	= {}
+				local len	= {...}
+				for i = 1, n do
+					t[i]	= read():match '^.-%=(.*)$'
+					if len[i] and len[i] - #t[i] > 0 then
+						t[i]	= t[i] .. ('\0'):rep(len[i] - #t[i])
+					end
+					--print(t[i])
+				end
+				return table.unpack(t)
+			end
+
+			local function packFlag(...)
+				local int	= 0
+				for i, v in ipairs {...} do
+					int	= int + (v << i - 1)
+				end
+				return int
+			end
+
+			local pack = {}
+			local function push(format)
+				return function (...)
+					--print(format, ...)
+					table.insert(pack, format:pack(...))
+				end
+			end
+
+			--开始打包
+			push 'c4lc1l' (readValue(4, 4, nil, 1))
+
+			--使用的地形
+			local count = readValue()
+			push 'l' (count)
+			for i = 1, count do
+				push 'c4' (readValue(1, 4))
+			end
+
+			--使用的悬崖
+			local count = readValue()
+			push 'l' (count)
+			for i = 1, count do
+				push 'c4' (readValue(1, 4))
+			end
+
+			local mx, my = readValue(2)
+			push 'llff' (mx, my, readValue(2))
+
+			--遍历每个格子
+			for x = 1, mx do
+				for y = 1, my do
+					read()
+					push 'I2I2' (readValue(2))
+					local flag1, flag2 = readValue(2)
+					push 'I1' (flag1 << 4 | flag2)
+
+					push 'I1' (readValue())
+
+					local flag1, flag2 = readValue(2)
+					push 'I1' (flag1 << 4 | flag2)
+				end
+			end			
+
+			io.save(file_name_out, table.concat(pack))
+		end
+
 		local wts_strings	= {}
 
 		function w3x2txt.read_wts(file_name_in)
