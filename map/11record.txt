@@ -68,7 +68,7 @@
 
 			//皮肤无限使用权
 
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的女儿
@@ -116,7 +116,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=WuKong.blp
 			技能=被动
 			标题=特殊信使
@@ -170,7 +170,7 @@
 			标题=|cffffcc00%player_name%|r的专属信使
 			内容=筒隐月子俺嫁,萝莉后宫万岁!
 
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=button\BTNXS_U_saber.blp
 			技能=被动
 			标题=特殊信使
@@ -200,7 +200,7 @@
 			标题=|cffffcc00%player_name%|r,测试辛苦了!
 			内容=无聊的时候就逗逗裂魂人玩吧~
 
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
 			技能=被动
 			标题=特殊信使
@@ -224,7 +224,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=button\BTNXS_U_YUI.blp
 			技能=被动
 			标题=特殊信使
@@ -248,7 +248,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=button\BTNXS_U_LD.blp
 			技能=被动
 			标题=特殊信使
@@ -272,7 +272,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=本少不少喵;qilunuobaka9999
+			名字=本少不是喵;qilunuobaka9999
 			图标=button\BTNXS_U_ZM.blp
 			技能=被动
 			标题=特殊信使
@@ -296,7 +296,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;本少不是喵;qilunuobaka9999
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -320,7 +320,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_Gundam.blp
 			技能=被动
 			标题=特殊信使
@@ -344,7 +344,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_Vya.blp
 			技能=被动
 			标题=特殊信使
@@ -368,7 +368,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_Zombie.blp
 			技能=被动
 			标题=特殊信使
@@ -392,7 +392,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_Konata.blp
 			技能=被动
 			标题=特殊信使
@@ -416,7 +416,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
@@ -440,7 +440,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_Teemo.blp
 			技能=被动
 			标题=特殊信使
@@ -464,7 +464,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_OldTeemo.blp
 			技能=被动
 			标题=特殊信使
@@ -488,7 +488,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_DYCX.blp.blp
 			技能=被动
 			标题=特殊信使
@@ -513,7 +513,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不少喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
@@ -531,7 +531,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=本少不少喵;qilunuobaka9999;s芙兰朵露z;
+		名字=本少不是喵;qilunuobaka9999;s芙兰朵露z;
 
 		//saber extra
 		皮肤=A0TT
@@ -542,7 +542,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;s芙兰朵露z
+		名字=本少不是喵;qilunuobaka9999;s芙兰朵露z
 
 		//黑崎一护 白
 		皮肤=A0TU
@@ -553,7 +553,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -564,7 +564,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit
 
 		//夜夜
 		皮肤=A0TZ
@@ -575,7 +575,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//夜夜 Special
@@ -588,7 +588,7 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//超电磁炮
@@ -600,7 +600,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=藤原_妹红_;s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=藤原_妹红_;s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 
@@ -613,7 +613,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//真·爱德华
@@ -625,7 +625,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//真·克劳德
@@ -637,7 +637,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//天罚者
@@ -649,7 +649,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//女剑客
@@ -661,7 +661,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//装甲屠夫
 		皮肤=A0UI
@@ -672,7 +672,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;s芙兰朵露z;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;s芙兰朵露z;WorldEdit
 
 		//祸灵梦
 		皮肤=A0UU
@@ -683,7 +683,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//黑剑客
 		皮肤=A0UY
@@ -694,7 +694,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit
 	/*
 		//新约·一方
 		皮肤=A0V2
@@ -716,7 +716,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//黑暗游侠
 		皮肤=A0UV
@@ -727,7 +727,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//桔梗
 		皮肤=A0UW
@@ -738,7 +738,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不少喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit
 
 		//初音
 		皮肤=A0UX
@@ -749,7 +749,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//诗乃
 		皮肤=A0UZ
@@ -760,7 +760,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//狗剪
 		皮肤=A0V3
@@ -771,7 +771,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//十香
 		皮肤=A0V4
@@ -782,7 +782,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//十香灵装
 		皮肤=A0V5
@@ -793,7 +793,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//黑脸
 		皮肤=A0V1
@@ -804,7 +804,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 		//赤瞳
 		皮肤=A0VC
@@ -816,7 +816,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//圆神
@@ -828,7 +828,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 	
 		//神圣天使兽
@@ -840,7 +840,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 	
 
 		//兵长
@@ -852,7 +852,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//咲夜Diam
@@ -864,7 +864,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//阿尔冯斯
@@ -876,7 +876,7 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+//		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//阿露蒂娜
@@ -888,7 +888,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//萝泽琳蒂
@@ -900,7 +900,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//Saber Bride
@@ -912,7 +912,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//Saber Bride 2
@@ -924,7 +924,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//圣骑士
@@ -936,7 +936,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//黑暗骑士
@@ -948,7 +948,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//雅典娜
@@ -960,7 +960,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 
 		//狂三 黑礼服
@@ -972,7 +972,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
 
 	==英雄台词==
 
@@ -1042,4 +1042,4 @@
 		//注册方法:单机激活权限后输入 .set 0 flag 1
 		//别忘了 .save
 
-		名字=s芙兰朵露z;本少不少喵;qilunuobaka9999;最萌小汐
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;最萌小汐
