@@ -24185,10 +24185,10 @@ function SelectTerrainTypeA_timed takes nothing returns nothing
 	local timer t = GetExpiredTimer()
 	local integer h = GetHandleId(t)
 	local integer i = LoadInteger(YDHT, h, 1)
-	if i <= 129 then
+	if i > 0 then
 		set udg_tempPlayer = LoadPlayerHandle(YDHT, h, 2)
 		call ExecuteFunc("SelectTerrainTypeA_" + I2S(i))
-		call SaveInteger(YDHT, h, 1, i + 1)
+		call SaveInteger(YDHT, h, 1, i - 1)
 	else
 		call DestroyTimer(t)
 		call FlushChildHashtable(YDHT, h)
@@ -24200,11 +24200,12 @@ endfunction
 function SelectTerrainTypeA takes nothing returns nothing
 	local timer t = CreateTimer()
 	local integer h = GetHandleId(t)
-	call SaveInteger(YDHT, h, 1, 0)
+	call SaveInteger(YDHT, h, 1, 129)
 	call SavePlayerHandle(YDHT, h, 2, udg_tempPlayer)
 	call TimerStart(t, 0.1, true, function SelectTerrainTypeA_timed)
 	set t = null
 endfunction
+	
 ########
 ########
 //TESH.scrollpos=0
@@ -41628,10 +41629,10 @@ function SelectTerrainTypeB_timed takes nothing returns nothing
 	local timer t = GetExpiredTimer()
 	local integer h = GetHandleId(t)
 	local integer i = LoadInteger(YDHT, h, 1)
-	if i <= 129 then
+	if i > 0 then
 		set udg_tempPlayer = LoadPlayerHandle(YDHT, h, 2)
 		call ExecuteFunc("SelectTerrainTypeB_" + I2S(i))
-		call SaveInteger(YDHT, h, 1, i + 1)
+		call SaveInteger(YDHT, h, 1, i - 1)
 	else
 		call DestroyTimer(t)
 		call FlushChildHashtable(YDHT, h)
@@ -41643,11 +41644,12 @@ endfunction
 function SelectTerrainTypeB takes nothing returns nothing
 	local timer t = CreateTimer()
 	local integer h = GetHandleId(t)
-	call SaveInteger(YDHT, h, 1, 0)
+	call SaveInteger(YDHT, h, 1, 129)
 	call SavePlayerHandle(YDHT, h, 2, udg_tempPlayer)
 	call TimerStart(t, 0.1, true, function SelectTerrainTypeB_timed)
 	set t = null
 endfunction
+	
 ########
 ########
 
