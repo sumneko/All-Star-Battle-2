@@ -772,7 +772,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=661
+//TESH.scrollpos=654
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -2924,7 +2924,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=786
+//TESH.scrollpos=638
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3568,7 +3568,7 @@ library bakaLibrary initializer Init needs baseLibrary
             int x = 0
             loop
                 exitwhen x > 11
-                int that = Get(x, "V")
+                int that = Get(x, "V2")
                 if that > thatVer
                     thatVer = that
                 endif
@@ -3592,9 +3592,9 @@ library bakaLibrary initializer Init needs baseLibrary
             x = 0
             loop
                 exitwhen x > 11
-                if Get(x, "V") < thatVer then
+                if Get(x, "V2") < thatVer then
                     Lua_hook(Player(x), "new_version")
-                    release@ Set(x, "V", thatVer)
+                    release@ Set(x, "V2", thatVer)
                 endif
                 release@ Set(x, "B", banVer)
                 x ++

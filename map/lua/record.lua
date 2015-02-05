@@ -218,7 +218,7 @@
 		--print(name, player.self:getBaseName())
 
 		--将胜利信息发送给其他玩家
-		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V db flag'
+		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V2 db flag'
 		local t	= {}
 		for name in sync_names:gmatch '(%S+)' do
 			t[name]	= player.self:getRecord(name)
