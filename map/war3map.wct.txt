@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=9
+//TESH.scrollpos=441
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -772,7 +772,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=654
+//TESH.scrollpos=370
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -1100,7 +1100,7 @@ define{
 			if Get(sys.self,"局数")==0 then
 				call Set(sys.self,"胜率",0)
 			else
-				call Set(sys.self,"胜率",100*Get(sys.self,"胜利")/Get(sys.self,"局数"))
+				call Set(sys.self,"胜率",100*Get(sys.self,"胜利") / IMaxBJ(Get(sys.self,"局数"), 1))
 			endif
 			call Save()
 			if sys.getTime()<600 then
@@ -1172,7 +1172,7 @@ define{
 			//set Record[j]=Record[j]+100 //额外经验
 		endif
 		set Record[j]=Record[j]+KDScore[j]
-		call Set(sys.self,"胜率",100*Get(sys.self,"胜利")/Get(sys.self,"局数"))
+		call Set(sys.self,"胜率",100*Get(sys.self,"胜利") / IMaxBJ(Get(sys.self,"局数"), 1))
         if MU_Score[j+1] > Get(sys.self, "纪录") then
             call DisplayTimedTextToPlayer(Player(j),0,0,60,"|cff00ff00你刷新了自己的最高积分纪录|r(|cffffcc00"+I2S(Get(sys.self, "纪录"))+"|r)|cff00ff00!!
 新的纪录为|cffffcc00"+I2S(MU_Score[j+1])+"|cff00ff00分!!|r")
@@ -2924,7 +2924,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=638
+//TESH.scrollpos=587
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3802,7 +3802,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1139
+//TESH.scrollpos=1169
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
