@@ -23,6 +23,22 @@
         空心de木偶=|cffffcc00[|cFF00FFFF完美潇洒の从者|cffffcc00]|r
         樱逝夕颜=|cffffcc00[|cFFFFCC66远离尘世の理想乡|cffffcc00]|r
 
+	//贴吧抽奖
+		我有原罪=|cffffcc00[对不起这场比赛我要赢]|r
+		夜月凉咚茹=|cffffcc00[凉生忆兮弥の尘封]|r
+		小紫妹丶=|cffffcc00[破碎的心_归根的叶]|r
+		BAKA鱿鱼=|cffffcc00[极死の杀人鬼]|r
+		凉城空若染=|cffffcc00[这个菜鸡相当弱]|r
+		葛力姆乔酱=|cffffcc00[虫群之心]|r
+		丶夏_娜=|cffffcc00[天罚神の契约者]|r
+		小小瘦子酱=|cffffcc00[吾等前方,绝无敌手]|r
+		神级推土=|cffffcc00[生者必灭之理]|r
+		夜刀十神香=|cffffcc00[呐_我们约会吧]|r
+		御宅丿柠茶=|cffffcc00[不明所以の孩纸]|r
+		真白抱枕=|cffffcc00[呆到深处_自然萌]|r
+		BAKA丶灼瞳=|cffffcc00[不明的魔法之元]|r
+		水树琉璃=|cffffcc00[誓约胜利之剑]|r
+		三月夜空=|cffffcc00[吃翔の紫天]|r
         
 	==特殊信使==
 
@@ -122,6 +138,13 @@
 			标题=特殊信使
 			内容=0_0
 
+			//贴吧抽奖
+			名字=楼上没J啊
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
 		//⑨ 	n01D
 
 			信使=n01D
@@ -145,6 +168,13 @@
 			技能=被动
 			标题=特殊信使
 			内容=⑨、⑨
+
+			//贴吧抽奖
+			名字=萌狼爱尾巴;呆蠢月菟_;香香的花猪
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
 		//Saber	n01I
 
@@ -176,6 +206,13 @@
 			标题=特殊信使
 			内容=汪！
 
+			//贴吧抽奖
+			名字=S丶a_魅姬
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
 		//裂魂	n01F
 
 			信使=n01F
@@ -206,6 +243,13 @@
 			标题=特殊信使
 			内容=wwwwwww
 
+			//贴吧抽奖
+			名字=八神疾风;Remilia茶;S灭杀_____
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
 		//呆唯 	n01L
 
 			信使=n01L
@@ -229,6 +273,13 @@
 			技能=被动
 			标题=特殊信使
 			内容=YUUUUUUUUUUUUUUUUI！！
+
+			//贴吧抽奖
+			名字=影子ui;指尖空白丶
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
 		//律队 	n01M
 
@@ -278,8 +329,16 @@
 			标题=特殊信使
 			内容=梓喵
 
-		//优	n01X
+			//贴吧抽奖
+			名字=战神喜洋洋;不俗不雅丶;友利奈绪
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
+		//优	n01X
+		//此皮肤被移除
+		/*
 			信使=n01X
 			前缀=|cffffcc00···|r
 			说明=优·克里伍德
@@ -301,6 +360,7 @@
 			技能=被动
 			标题=特殊信使
 			内容=优·克里伍德
+		*/
 
 		//高达 n01Z
 
@@ -326,6 +386,13 @@
 			标题=特殊信使
 			内容=高达
 
+			//贴吧抽奖
+			名字=艾莉卡丶;呆蠢月菟_
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
 		//V仔兽 n02B
 
 			信使=n02B
@@ -349,6 +416,13 @@
 			技能=被动
 			标题=特殊信使
 			内容=V仔兽
+
+			//贴吧抽奖
+			名字=我好兴奋呀
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
 		//僵尸 n02F
 
@@ -397,6 +471,13 @@
 			技能=被动
 			标题=特殊信使
 			内容=泉此方
+
+			//贴吧抽奖
+			名字=曾经的小伊
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
 		//火柴人 n023
 
@@ -470,6 +551,13 @@
 			标题=特殊信使
 			内容=约德尔商人
 
+			//贴吧抽奖
+			名字=楼上没J啊;我是文字
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
 		//丹羽长秀 n02D
 
 			信使=n02D
@@ -494,6 +582,13 @@
 			标题=特殊信使
 			内容=姬武将
 
+			//贴吧抽奖
+			名字=星辰傲世
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
 
 		//北方栖姬 n03A
 
@@ -513,7 +608,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999
+			名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;最萌小汐
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
@@ -542,7 +637,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不是喵;qilunuobaka9999;s芙兰朵露z
+		名字=本少不是喵;qilunuobaka9999;s芙兰朵露z;丶Angel丨;龙套路过
 
 		//黑崎一护 白
 		皮肤=A0TU
@@ -553,7 +648,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;丨红尘丶梦;彡朝田诗乃
 
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -575,7 +670,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不是喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit;CLANNAD_汐;犯罪系数;理lilili
 
 
 		//夜夜 Special
@@ -600,7 +695,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=藤原_妹红_;s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=藤原_妹红_;s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;紫炫妖瞳;艾莉卡丶;萝莉与和平
 
 
 
@@ -649,7 +744,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;丶莉莉丝灬;呆毛傲娇娜;萝莉与和平
 
 
 		//女剑客
@@ -661,7 +756,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;理lilili
 
 		//装甲屠夫
 		皮肤=A0UI
@@ -683,7 +778,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;丶莉莉丝灬;犯罪系数
 
 		//黑剑客
 		皮肤=A0UY
@@ -738,7 +833,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=本少不是喵;qilunuobaka9999;WorldEdit
+		名字=本少不是喵;qilunuobaka9999;WorldEdit;不破之鱿鱼;Topo丶
 
 		//初音
 		皮肤=A0UX
@@ -749,7 +844,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;不破之鱿鱼;F李斯特;CLANNAD_汐
 
 		//诗乃
 		皮肤=A0UZ
@@ -760,7 +855,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;Topo丶;萝莉与和平
 
 		//狗剪
 		皮肤=A0V3
@@ -793,7 +888,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;逗比傲娇纳;理lilili
 
 		//黑脸
 		皮肤=A0V1
@@ -888,7 +983,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit
+		名字=s芙兰朵露z;本少不是喵;qilunuobaka9999;WorldEdit;萝太爱萝莉;堀部营;绫濑芽依
 
 
 		//萝泽琳蒂
@@ -1027,11 +1122,11 @@
 		//需要定义版本号,当玩家第一次玩该版本时将领取到节操奖励(皮肤奖励直接在上面手动加名字就好了)
 		版本=2.9a
 		节操=3000
-		名字=最萌小汐;WorldEdit
+		名字=绯色菠萝;黑川灬雪;虾米三文治;EvileAngel;丨红尘丶梦;rain灭;娜迦的荣耀;犯罪系数;灼眼夏娜;右手执浮生;N丶T丿;风起炎舞;salvare008;名濑博臣丶;S灭杀_____;我是文字;逗比傲娇纳
 		
 		//如果版本号相同,就不需要重新定义版本号了
 		节操=1000
-		名字=筒隐月子喵
+		名字=丶Angel丨;紫炫妖瞳;丨红尘丶梦;萝太爱萝莉;堀部营;艾莉卡丶;绫濑芽依;龙套路过;彡朝田诗乃
 
 
 	==特殊账号==
