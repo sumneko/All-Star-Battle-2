@@ -1642,7 +1642,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=962
+//TESH.scrollpos=351
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3802,7 +3802,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1169
+//TESH.scrollpos=818
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4539,8 +4539,8 @@ library unitLibrary initializer Init needs bakaLibrary
 
         static unit SkillBar(unit hero, real time, playercolor color, bool pause, bool die, bool stop, bool out){
             unit bar    = CreateUnit(GetOwningPlayer(hero), 'e06I', GetUnitX(hero), GetUnitY(hero), 0)
-            timer t     = CreateTimer()
-            int h       = GetHandleId(t)
+            trigger trg = CreateTrigger()
+            int h       = GetHandleId(trg)
             real scale  = 1 / time
             int order   = GetUnitCurrentOrder(hero)
 
@@ -4556,7 +4556,7 @@ library unitLibrary initializer Init needs bakaLibrary
 
             SetUnitTimeScale(bar, scale)
 
-            //开始循环计时
+            //创建触发器
             SaveUnitHandle(YDHT, h, 0, bar)
             SaveUnitHandle(YDHT, h, 1, hero)
             SaveBoolean(YDHT, h, 1, pause)
@@ -4566,10 +4566,17 @@ library unitLibrary initializer Init needs bakaLibrary
             SaveReal(YDHT, h, 0, time)
             SaveReal(YDHT, h, 1, scale)
             SaveInteger(YDHT, h, 0, order)
-
-            TimerStart(t, 0.03, true,\
+            
+            //添加事件
+            
+            TriggerRegisterTimerEvent(trg, 0.03, true)
+            TriggerRegisterUnitEvent(trg, bar, EVENT_UNIT_DEATH)
+            TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_DEATH)
+            TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_SPELL_ENDCAST)
+            TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_SPELL_FINISH)
+            TriggerAddCondition(trg, Condition(\
                 lambda void (){
-                    int h       = GetHandleId(GetExpiredTimer())
+                    int h       = GetHandleId(GetTriggeringTrigger())
                     unit bar    = LoadUnitHandle(YDHT, h, 0)
                     unit hero   = LoadUnitHandle(YDHT, h, 1)
                     bool pause  = LoadBoolean(YDHT, h, 1)
@@ -4579,11 +4586,11 @@ library unitLibrary initializer Init needs bakaLibrary
                     real time   = LoadReal(YDHT, h, 0)
                     real scale  = LoadReal(YDHT, h, 1)
                     real order  = LoadInteger(YDHT, h, 0)
-                    if IsUnitType(bar, UNIT_TYPE_DEAD) or (die and IsUnitType(hero, UNIT_TYPE_DEAD)) or (stop and order != GetUnitCurrentOrder(hero)) then
+                    if IsUnitType(bar, UNIT_TYPE_DEAD) or (die and IsUnitType(hero, UNIT_TYPE_DEAD)) or (stop and GetTriggerEventId() == EVENT_UNIT_SPELL_ENDCAST) then
                         SetUnitTimeScale(bar, 0)
                         KillUnit(bar)
                         SkillBar_Dead(bar, out)
-                        DestroyTimer(GetExpiredTimer())
+                        DestroyTrigger(GetTriggeringTrigger())
                         FlushChildHashtable(YDHT, h)
 
                         trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"))
@@ -4616,11 +4623,11 @@ library unitLibrary initializer Init needs bakaLibrary
                         SetUnitY(bar, GetUnitY(hero))
                         SetUnitFlyHeight(bar, 225 + maphack.GetHeight(hero), 0)
                         time -= 0.03
-                        if time <= 0 then
+                        if time <= 0 or GetTriggerEventId() == EVENT_UNIT_SPELL_FINISH then
                             SetUnitTimeScale(bar, 0)
                             KillUnit(bar)
                             SkillBar_Dead(bar, out)
-                            DestroyTimer(GetExpiredTimer())
+                            DestroyTrigger(GetTriggeringTrigger())
                             FlushChildHashtable(YDHT, h)
 
                             trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能成功"))
@@ -4649,10 +4656,10 @@ library unitLibrary initializer Init needs bakaLibrary
                     bar = null
                     hero = null
                 }\
-            )
+            ))
 
             lastSkillBar = bar
-            t = null
+            trg = null
             bar = null
 
             return lastSkillBar
@@ -41648,6 +41655,12 @@ function SelectTerrainTypeB takes nothing returns nothing
 	call TimerStart(t, 0.1, true, function SelectTerrainTypeB_timed)
 	set t = null
 endfunction
+########
+########
+
+########
+########
+
 ########
 ########
 
