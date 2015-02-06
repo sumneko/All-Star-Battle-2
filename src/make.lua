@@ -326,7 +326,7 @@ local function main()
 		local fail_files = {}
 		for _, name in ipairs(files) do
 			if zip_files[name] then
-				os.execute(('%s\\unrar x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / name):string() .. '.zip', name, file_dir:string()))
+				os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / name):string() .. '.zip', name, file_dir:string()))
 				if inmap:import(name, file_dir / name) then
 					--print('[成功]: 导入 ' .. name)
 					count = count + 1
