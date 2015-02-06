@@ -275,7 +275,7 @@
 			内容=YUUUUUUUUUUUUUUUUI！！
 
 			//贴吧抽奖
-			名字=影子ui;指尖空白丶
+			名字=永棘之刃;指尖空白丶
 			图标=button\BTNXS_S_YY.blp
 			技能=被动
 			标题=贴吧抽奖奖励!
