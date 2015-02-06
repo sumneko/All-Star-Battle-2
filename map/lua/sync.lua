@@ -57,9 +57,9 @@
 		--print(('sync[%d]: first = %s'):format(p:get(), first))
 		local keys	= {}
 		for name, value in pairs(data) do
+			i	= i + 1
+			keys[i]	= name
 			if value ~= 0 then
-				i	= i + 1
-				keys[i]	= name
 				local key = sync.getKey(i)
 				if p == player.self then
 					--将数据保存到缓存中
