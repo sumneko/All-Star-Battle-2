@@ -51,8 +51,10 @@ dwlk=1
 dwlk=1
 [NPth]
 dcat=O
+dptx=
 [APtv]
 dcat=O
+dptx=
 [ZOrc]
 dptx=
 [NOft]
@@ -127,6 +129,10 @@ dwlk=1
 [ORrk]
 dptx=
 dwlk=1
+[YPbs]
+dptx=
+[APbs]
+dptx=
 [CHUNK]
 [D000:LPwh]
 dfil=Doodads\Terrain\LOSBlocker\LOSBlocker.mdl
