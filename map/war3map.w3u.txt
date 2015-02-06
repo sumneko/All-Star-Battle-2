@@ -13017,7 +13017,7 @@ usin=0
 uhpm=30
 uhpr=-1.0000
 uhrt=always
-[H00G:Hamg]
+[H90G:Hamg]
 umdl=units\undead\Abomination\Abomination.mdl
 unam=正义巡视者
 usnd=Shandris
@@ -13128,7 +13128,7 @@ utyp=ancient,tauren,giant
 usca=50.0000
 uhhb=1
 upru=1
-[e08U:ewsp]
+[e98U:ewsp]
 unam=崩魔兽专用
 uabi=Aloc,Arav
 utyp=ancient,tauren,giant

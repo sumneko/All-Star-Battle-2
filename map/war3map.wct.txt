@@ -2968,10 +2968,10 @@ library bakaLibrary initializer Init needs baseLibrary
             if safe_mode or (not IsUnitEnemy(hero, sys.selfp)) or IsPlayerObserver(sys.selfp) then
                 UnitAddAbility(hero, 'A0QU')
             else
-                UnitAddAbility(hero, 'A0QV')
+                UnitAddAbility(hero, 'A9QV')
             endif
             UnitMakeAbilityPermanent(hero, true, 'A0QU')
-            UnitMakeAbilityPermanent(hero, true, 'A0QV')
+            UnitMakeAbilityPermanent(hero, true, 'A9QV')
         }
 
         //偶尔迁移压缩一下数组
@@ -3154,7 +3154,7 @@ library bakaLibrary initializer Init needs baseLibrary
             endloop
 
 
-            check_unit = CreateUnit(GetOwningPlayer(hero), 'e08U', -4000, 8000, 0)
+            check_unit = CreateUnit(GetOwningPlayer(hero), 'e98U', -4000, 8000, 0)
 
             //debug@ BJDebugMsg(R2S(GetUnitX(check_unit)))
 
@@ -3272,7 +3272,7 @@ library bakaLibrary initializer Init needs baseLibrary
                     if IsPlayerAlly(p, sys.selfp) or sys.IsReplay == 1 or GetPlayerTeam(p) == -1 then
                         visitors[visitorsCount] = CreateUnit(p, 'H00H', x, y, 0)
                     else
-                        visitors[visitorsCount] = CreateUnit(p, 'H00G', x, y, 0)
+                        visitors[visitorsCount] = CreateUnit(p, 'H90G', x, y, 0)
                     endif
                     UnitSetUsesAltIcon(visitors[visitorsCount], true) //打开标志,小地图上不显示英雄图标
                     SetUnitFlyHeight(visitors[visitorsCount], 10000, 0) //让英雄飞上天
