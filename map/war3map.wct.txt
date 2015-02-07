@@ -3802,7 +3802,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=818
+//TESH.scrollpos=779
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4502,6 +4502,7 @@ library unitLibrary initializer Init needs bakaLibrary
         static unit lastSkillBar = null
 
         static void SkillBar_Dead(unit bar, bool out){
+            FlushChildHashtable(YDHT, GetHandleId(bar))
             if not out then
                 RemoveUnit(bar)
                 return
@@ -4525,6 +4526,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     SetUnitVertexColor(bar, 255, 255, 255, a)
 
                     if a <= 0 then
+                        RemoveUnit(bar)
                         DestroyTimer(GetExpiredTimer())
                         FlushChildHashtable(YDHT, h)
                     else
@@ -4571,9 +4573,16 @@ library unitLibrary initializer Init needs bakaLibrary
             
             TriggerRegisterTimerEvent(trg, 0.03, true)
             TriggerRegisterUnitEvent(trg, bar, EVENT_UNIT_DEATH)
-            TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_DEATH)
-            TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_SPELL_ENDCAST)
-            TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_SPELL_FINISH)
+            
+            if die then
+                TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_DEATH)
+            endif
+            
+            if stop then
+                TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_SPELL_ENDCAST)
+                TriggerRegisterUnitEvent(trg, hero, EVENT_UNIT_SPELL_FINISH)
+            endif
+            
             TriggerAddCondition(trg, Condition(\
                 lambda void (){
                     int h       = GetHandleId(GetTriggeringTrigger())
@@ -4586,12 +4595,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     real time   = LoadReal(YDHT, h, 0)
                     real scale  = LoadReal(YDHT, h, 1)
                     real order  = LoadInteger(YDHT, h, 0)
-                    if IsUnitType(bar, UNIT_TYPE_DEAD) or (die and IsUnitType(hero, UNIT_TYPE_DEAD)) or (stop and GetTriggerEventId() == EVENT_UNIT_SPELL_ENDCAST) then
-                        SetUnitTimeScale(bar, 0)
-                        KillUnit(bar)
-                        SkillBar_Dead(bar, out)
-                        DestroyTrigger(GetTriggeringTrigger())
-                        FlushChildHashtable(YDHT, h)
+                    if IsUnitType(bar, UNIT_TYPE_DEAD) or (die and IsUnitType(hero, UNIT_TYPE_DEAD)) or GetTriggerEventId() == EVENT_UNIT_SPELL_ENDCAST then
 
                         trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"))
                         if trg != null then
@@ -4610,11 +4614,14 @@ library unitLibrary initializer Init needs bakaLibrary
                             trg = null
                         endif
 
-                        FlushChildHashtable(YDHT, GetHandleId(bar))
+                        SetUnitTimeScale(bar, 0)
+                        SkillBar_Dead(bar, out)
+                        DestroyTrigger(GetTriggeringTrigger())
+                        FlushChildHashtable(YDHT, h)
                     elseif pause and IsUnitPaused(hero) then
                         SetUnitTimeScale(bar, 0)
                         PauseUnit(bar, true)
-                    else
+                    elseif GetTriggerEventId() == EVENT_GAME_TIMER_EXPIRED then
                         if IsUnitPaused(bar) then
                             SetUnitTimeScale(bar, scale)
                             PauseUnit(bar, false)
@@ -4623,34 +4630,33 @@ library unitLibrary initializer Init needs bakaLibrary
                         SetUnitY(bar, GetUnitY(hero))
                         SetUnitFlyHeight(bar, 225 + maphack.GetHeight(hero), 0)
                         time -= 0.03
-                        if time <= 0 or GetTriggerEventId() == EVENT_UNIT_SPELL_FINISH then
-                            SetUnitTimeScale(bar, 0)
-                            KillUnit(bar)
-                            SkillBar_Dead(bar, out)
-                            DestroyTrigger(GetTriggeringTrigger())
-                            FlushChildHashtable(YDHT, h)
-
-                            trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能成功"))
-                            if trg != null then
-                                if IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
-                                    TriggerExecute(trg)
-                                endif
-                                FlushChildHashtable(YDHT, GetHandleId(trg))
-                                DestroyTrigger(trg)
-                                trg = null
+                    endif
+                    
+                    if time <= 0 or GetTriggerEventId() == EVENT_UNIT_SPELL_FINISH then
+                    
+                        trigger trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能成功"))
+                        if trg != null then
+                            if IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
+                                TriggerExecute(trg)
                             endif
-
-                            trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"))
-                            if trg != null then
-                                FlushChildHashtable(YDHT, GetHandleId(trg))
-                                DestroyTrigger(trg)
-                                trg = null
-                            endif
-
-                            FlushChildHashtable(YDHT, GetHandleId(bar))
-                        else
-                            SaveReal(YDHT, h, 0, time)
+                            FlushChildHashtable(YDHT, GetHandleId(trg))
+                            DestroyTrigger(trg)
+                            trg = null
                         endif
+
+                        trg = LoadTriggerHandle(YDHT, GetHandleId(bar), StringHash("技能失败"))
+                        if trg != null then
+                            FlushChildHashtable(YDHT, GetHandleId(trg))
+                            DestroyTrigger(trg)
+                            trg = null
+                        endif
+
+                        SetUnitTimeScale(bar, 0)
+                        SkillBar_Dead(bar, out)
+                        DestroyTrigger(GetTriggeringTrigger())
+                        FlushChildHashtable(YDHT, h)
+                    else
+                        SaveReal(YDHT, h, 0, time)
                     endif
 
                     bar = null
