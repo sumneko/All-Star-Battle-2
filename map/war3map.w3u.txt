@@ -19274,7 +19274,7 @@ umdl=war3mapImported\LS you.mdl
 upro=优库里伍德
 upru=1
 unam=言灵师【重度二设】
-ua1c=1.7000
+ua1c=1.8000
 ucs1=MetalHeavySlice
 ubs1=0.6000
 ucpt=0.0000
@@ -19309,6 +19309,7 @@ urtm=0
 usid=1400
 usin=700
 upoi=43
+ua1b=20
 [e0AX:ewsp]
 ubui=
 uabi=Aloc,Arav
