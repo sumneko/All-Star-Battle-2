@@ -155,10 +155,10 @@ private function UnitSetBonus takes unit u, integer bonusType, integer ammount r
         return false
     endif
     if ammount < MinBonus[bonusType] or ammount > MaxBonus[bonusType] then
-        call BJDebugMsg("BonusSystem Error: Bonus too high or low (" + I2S(bonusType) + ":" + I2S(ammount) + ")")
+        call BJDebugMsg("BonusSystem Error: Bonus too high or low (" + GetUnitName(u) + ":" + I2S(bonusType) + ":" + I2S(ammount) + ")")
         return false
     elseif bonusType < 0 or bonusType >= BONUS_TYPES then
-        call BJDebugMsg("BonusSystem Error: Invalid bonus type (" + I2S(bonusType) + ":" + I2S(bonusType) + ")")
+        call BJDebugMsg("BonusSystem Error: Invalid bonus type (" + GetUnitName(u) + ":" + I2S(bonusType) + ":" + I2S(ammount) + ")")
         return false
     endif
 
