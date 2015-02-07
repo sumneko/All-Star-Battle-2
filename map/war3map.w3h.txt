@@ -1195,9 +1195,10 @@ fspd=0
 ftat=
 [B04B:Bcrs]
 fube=该攻击未命中
-ftip=未命中
+ftip=瞅啥瞅，没见过这么帅的BUFF嘛
 ftat=
 fta0=
+fart=null_16_16.blp
 [B04C:BEim]
 ftat=
 fspt=
