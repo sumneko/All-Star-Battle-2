@@ -15904,7 +15904,7 @@ umvr=3.0000
 usid=700
 udty=hero
 uarm=Metal
-ussc=0.6000
+ussc=-0.6000
 [H00Z:Hblm]
 umdl=war3mapImported\reimuE.mdl
 usca=1.2500
