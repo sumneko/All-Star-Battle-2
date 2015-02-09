@@ -2025,7 +2025,13 @@ debug@          endif
             index ++
             u_from[index] = GetEventDamageSource()
             u_to[index] = GetTriggerUnit()
-            bool attack = UnitRemoveAbility(u_to[index], 'B039') or UnitRemoveAbility(u_to[index], 'A0OB')
+            bool attack
+            if UnitRemoveAbility(u_to[index], 'B039') then
+                attack = true
+                UnitRemoveAbility(u_to[index], 'A0OB')
+            else
+                attack = UnitRemoveAbility(u_to[index], 'A0OB')
+            endif
 
             real life
 
