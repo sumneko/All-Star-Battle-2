@@ -643,6 +643,7 @@ uacq=800.0000
 ua1g=debris,ground,nonsapper,structure,item
 udu1=6
 ua1c=0.9000
+ufoo=0
 [negf]
 uhpm=2200
 ua1b=119
@@ -906,6 +907,7 @@ ua2r=450
 udty=medium
 udu1=15
 udu2=15
+ufoo=0
 [hrif]
 ubba=100
 uhpm=180
@@ -925,6 +927,7 @@ ua1r=450
 ua1s=8
 ua1g=debris,ground,nonsapper,structure,air,item
 udu1=10
+ufoo=0
 [nban]
 ubsi=1
 ubba=50
@@ -1225,6 +1228,7 @@ umpr=1.0000
 udty=none
 ua1g=debris,ground,nonsapper,structure,item
 udu1=11
+ufoo=0
 [Orex]
 umdl=war3mapImported\noshadehagaren.mdl
 upro=爱德华·艾尔利克,小豆丁,地刺王,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克,爱德华·艾尔利克
@@ -1919,6 +1923,7 @@ usin=1400
 udup=3.0000
 uprw=1.0000
 utyp=
+ufoo=0
 [Udea]
 uabi=A0NA,A0F5
 umdl=war3mapImported\Grim.mdl
@@ -19310,6 +19315,7 @@ usid=1400
 usin=700
 upoi=43
 ua1b=20
+ussc=1.5000
 [e0AX:ewsp]
 ubui=
 uabi=Aloc,Arav
