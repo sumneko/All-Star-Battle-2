@@ -42,6 +42,9 @@
         local lv = jass.GetUnitAbilityLevel(selfhero, id)
         local nums = {}
         local t = texts[lv] --该等级的数据
+        if not t then
+	        return
+        end
         for i = 1 , 10 do
             local func = t[i * 2 - 1]
             if not func then
