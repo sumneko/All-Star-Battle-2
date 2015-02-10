@@ -1,4 +1,4 @@
-﻿
+
 	==特殊称号==
 		WorldEdit=|cffffcc00[正在测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
@@ -13,7 +13,7 @@
                 藤原_妹红_=|cffffcc00[飞上月球☆不死之烟]|r
                 moon_shin=|cffffcc00[全明星の模型师]|r
                 本少不是喵=|cFFFF66FF[旋转吧，雪月花~]|r
-                qilunuobaka9999=|cFF66FFFF[ぽい]|r
+                佐藤桑=|cFF66FFFF[ぽい]|r
                 
              
               
