@@ -197,10 +197,10 @@
 		--print(table.concat(texts, '\n'))
 		--storm.save('ushio1.log', table.concat(texts, '\n'))
 
-		event('录像检测完成',
+		event('录像检测完毕',
 			function()
-				if not game.is_replay then
-					record.enable_local_save	= true
+				if game.is_replay ~= 'true' then
+					record.enable_local_save = true
 					storm.save('ushio1.log', record.ushio1_log)
 				end
 			end
