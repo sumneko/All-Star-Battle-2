@@ -860,7 +860,7 @@
 		//狗剪
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
-		说明=
+		说明=1-888;10-6888
 		价格=
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
@@ -918,7 +918,7 @@
 		皮肤=A0VF
 		前缀=|cffff1111神|r
 		说明=这里是皮肤说明
-		价格=
+		价格=1-1288;10-10888
 		变身特效=
 		特效点=
 		特效时间=0.5
@@ -1002,7 +1002,7 @@
 		皮肤=A0WV
 		前缀=|cffcc00cc花嫁|r 
 		说明=
-		价格=
+		价格=1-1288;10-10888
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -1026,7 +1026,7 @@
 		皮肤=A0X3
 		前缀=|cffcc00cc女·|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -1038,7 +1038,7 @@
 		皮肤=A0X4
 		前缀=|cffcc00cc女·|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
@@ -1050,7 +1050,7 @@
 		皮肤=A0X5
 		前缀=|cffcc00cc奥林波斯神族|r 
 		说明=
-		价格=
+		价格=1-500;5-2250;25-9999
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
@@ -1062,7 +1062,7 @@
 		皮肤=A0XD
 		前缀=|cffcc00cc黑礼服·|r 
 		说明=
-		价格=
+		价格=1-1288;10-10888
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
