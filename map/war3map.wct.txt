@@ -3841,7 +3841,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=779
+//TESH.scrollpos=1209
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4993,7 +4993,7 @@ library unitLibrary initializer Init needs bakaLibrary
         
         static void Crit(unit u, bool add, real chance, real rate, string tag, int crit_type){
             //先检查参数合法性
-            if chance <= 0 or rate <= 0 then
+            if chance <= 0 or rate <= 0 or GetUnitTypeId(u) == 0 then
                 return
             endif
             
@@ -5076,7 +5076,7 @@ library unitLibrary initializer Init needs bakaLibrary
         
         static void HitDodg(unit u, bool add, real chance, string tag, int hit_dodge){
             //检查合法性
-            if chance == 0 then
+            if chance == 0 or GetUnitTypeId(u) == 0 then
                 return
             endif
             
