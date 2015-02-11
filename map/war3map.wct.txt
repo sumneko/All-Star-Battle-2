@@ -1642,7 +1642,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=351
+//TESH.scrollpos=352
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1655,13 +1655,22 @@ library eventLibrary initializer Init needs baseLibrary
         static int index = -1
         static unit u_from[]
         static unit u_to[]
-        static bool event_skip[]
-
         /*
         跳过自定义事件的剩余触发
         */
+        static bool event_skip[]
+        
         static void SkipTriggers(){
             event_skip[index] = true
+        }
+        
+        /*
+        阻止当前模块发动
+        */
+        static bool enable_module = true
+        
+        static void BlockCurrentModule(){
+            enable_module = false
         }
 
         /*
@@ -1946,17 +1955,23 @@ debug@          endif
                     
                     //判定是否发动该暴击
                     if chance >= GetRandomReal(0, maxRate) then
-                        //同时暴击取最高值
-                        if rate > thisRate then
-                            thisRate = rate
-                        endif
-                        
+                    
                         //回调触发
                         trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
                         if trg != null and TriggerEvaluate(trg) then
                             TriggerExecute(trg)
                         endif
                         trg = null
+                        
+                        if enable_module then
+                            //同时暴击取最高值
+                            if rate > thisRate then
+                                thisRate = rate
+                            endif
+                        else
+                            enable_module = true
+                        endif
+                        
                     endif
                     
                     i ++
@@ -1977,17 +1992,23 @@ debug@          endif
                     
                     //判定是否发动该暴击
                     if chance >= GetRandomReal(0, maxRate) then
-                        //同时暴击取最高值
-                        if rate > thisRate then
-                            thisRate = rate
-                        endif
-                        
+                    
                         //回调触发
                         trg = LoadTriggerHandle(YDHT, h, StringHash("被暴击触发值段") + i)
                         if trg != null and TriggerEvaluate(trg) then
                             TriggerExecute(trg)
                         endif
                         trg = null
+                        
+                        if enable_module then
+                            //同时暴击取最高值
+                            if rate > thisRate then
+                                thisRate = rate
+                            endif
+                        else
+                            enable_module = true
+                        endif
+                        
                     endif
                     
                     i ++
