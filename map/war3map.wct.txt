@@ -1642,7 +1642,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=352
+//TESH.scrollpos=463
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -5455,24 +5455,44 @@ library soundLibrary initializer Init needs baseLibrary
         }
 
         static sound ss[]
+        static int si[]
         static int s_count = 0
         static timer s_timer = CreateTimer()
 
         static void KillSound(sound s){
             s_count ++
             ss[s_count] = s
-            if s_count == 1 then
-                TimerStart(s_timer, 60, false, \
-                    lambda void(){
-                        int i = 1
-                        loop
-                            exitwhen i > s_count
-                            KillSoundWhenDone(ss[s_count])
-                            i ++
-                        endloop
-                    } \
-                )
-            endif
+            si[s_count] = 2
+        }
+        
+        static void KillSound_Init(){
+            TimerStart(CreateTimer(), 60, true,\
+                lambda void(){
+                    int x = 1
+                    loop
+                        exitwhen x > s_count
+                        si[x] --
+                        if si[x] == 0 then
+                            KillSoundWhenDone(ss[x])
+                            //从队列尾部拉个过来
+                            loop
+                                si[s_count] --
+                                if si[s_count] == 0 then
+                                    KillSoundWhenDone(ss[s_count])
+                                    s_count --
+                                    exitwhen s_count == 0
+                                else
+                                    si[x] = si[s_count]
+                                    ss[x] = ss[s_count]
+                                    s_count --
+                                    exitwhen true
+                                endif 
+                            endloop
+                        endif
+                        x ++
+                    endloop
+                }\
+            )
         }
 
         <?
@@ -5528,6 +5548,7 @@ library soundLibrary initializer Init needs baseLibrary
             }\
         )
         */
+        Sound.KillSound_Init()
     }
 endlibrary
 ########
@@ -5752,7 +5773,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=135
+//TESH.scrollpos=261
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
