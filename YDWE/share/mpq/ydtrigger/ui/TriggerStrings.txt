@@ -3483,23 +3483,23 @@ SetLightningColorBJHint="颜色格式为(红,绿,蓝). 颜色和Alpha通道值�
 // Sound actions
 PlaySoundBJ="播放音效"
 PlaySoundBJ="播放 ",~音效
-PlaySoundBJHint="音效不能在地图初始化时播放. 注意3D音效必须指定地点播放."
+PlaySoundBJHint="注意该函数必须要同步,除非在上一行有停止音效.音效不能在地图初始化时播放. 注意3D音效必须指定地点播放."
 
 PlaySoundAtPointBJ="播放3D音效(指定点)"
 PlaySoundAtPointBJ="播放 ",~3D音效," ,音量: ",~Volume,"% 播放位置: ",~指定点," Z轴高度: ",~Z
-PlaySoundAtPointBJHint="音效不能在地图初始化时播放. 该动作只能用于播放3D音效."
+PlaySoundAtPointBJHint="注意该函数必须要同步,除非在上一行有停止音效.音效不能在地图初始化时播放. 该动作只能用于播放3D音效."
 
 Sound.PlaySoundAtPointBJ2="播放3D音效(自动清除点) - <音效库>"
 Sound.PlaySoundAtPointBJ2="播放 ",~3D音效," ,音量: ",~Volume,"% 播放位置: ",~指定点," Z轴高度偏移: ",~Z
-Sound.PlaySoundAtPointBJ2Hint="音效不能在地图初始化时播放. 该动作只能用于播放3D音效.z轴的高度偏移将相对于点的高度."
+Sound.PlaySoundAtPointBJ2Hint="注意该函数必须要同步,除非在上一行有停止音效.音效不能在地图初始化时播放. 该动作只能用于播放3D音效.z轴的高度偏移将相对于点的高度."
 
 PlaySoundOnUnitBJ="播放3D音效(跟随单位)"
 PlaySoundOnUnitBJ="播放 ",~3D音效," ,音量: ",~Volume,"%, 跟随单位: ",~目标单位
-PlaySoundOnUnitBJHint="音效不能在地图初始化时播放. 该动作只能用于播放3D音效."
+PlaySoundOnUnitBJHint="注意该函数必须要同步,除非在上一行有停止音效.音效不能在地图初始化时播放. 该动作只能用于播放3D音效."
 
 PlaySoundFromOffsetBJ="跳播音效"
 PlaySoundFromOffsetBJ="播放 ",~音效,",音量: ",~Volume,"%,跳过开始 ",~Offset," 秒"
-PlaySoundFromOffsetBJHint="音效不能在地图初始化时播放.该动作不能用于3D音效."
+PlaySoundFromOffsetBJHint="注意该函数必须要同步,除非在上一行有停止音效.音效不能在地图初始化时播放.该动作不能用于3D音效."
 
 StopSoundBJ="停止音效"
 StopSoundBJ="停止播放 ",~音效," ",~After Fading/Immediately
