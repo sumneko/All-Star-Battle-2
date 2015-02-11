@@ -1958,8 +1958,12 @@ debug@          endif
                     
                         //回调触发
                         trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
-                        if trg != null and TriggerEvaluate(trg) then
-                            TriggerExecute(trg)
+                        if trg != null then
+                            SaveReal(YDHT, StringHash("事件返回"), StringHash("暴击倍率加成"), 0)
+                            if TriggerEvaluate(trg) then
+                                TriggerExecute(trg)
+                            endif
+                            exRate += LoadReal(YDHT, StringHash("事件"), StringHash("暴击倍率加成"))
                         endif
                         trg = null
                         
@@ -1995,8 +1999,12 @@ debug@          endif
                     
                         //回调触发
                         trg = LoadTriggerHandle(YDHT, h, StringHash("被暴击触发值段") + i)
-                        if trg != null and TriggerEvaluate(trg) then
-                            TriggerExecute(trg)
+                        if trg != null then
+                            SaveReal(YDHT, StringHash("事件返回"), StringHash("暴击倍率加成"), 0)
+                            if TriggerEvaluate(trg) then
+                                TriggerExecute(trg)
+                            endif
+                            exRate += LoadReal(YDHT, StringHash("事件"), StringHash("暴击倍率加成"))
                         endif
                         trg = null
                         
@@ -2951,7 +2959,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=696
+//TESH.scrollpos=144
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
