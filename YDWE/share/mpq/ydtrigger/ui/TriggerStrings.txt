@@ -707,6 +707,10 @@ Event.SkipTriggers="跳过自定义事件的剩余触发器"
 Event.SkipTriggers="跳过自定义事件的剩余触发器"
 Event.SkipTriggersHint="在 致命伤害 事件中使用可以令单位免疫死亡.只能用在专用的伤害事件中!!!"
 
+Event.BlockCurrentModule="阻止当前模块发动"
+Event.BlockCurrentModule="阻止当前模块发动"
+Event.BlockCurrentModuleHint="只能用在模块发动事件中"
+
 //弹幕库
 Mover.SetMover="设为弹幕"
 Mover.SetMover="将 ",~弹幕," 设置为弹幕"

@@ -4127,6 +4127,9 @@ _Event.UserEventStart_Category=TC_MU_EVENT
 Event.SkipTriggers=0
 _Event.SkipTriggers_Category=TC_MU_EVENT
 
+Event.BlockCurrentModule=0
+_Event.BlockCurrentModule_Category=TC_MU_EVENT
+
 //弹幕库
 Mover.SetMover=0,unit
 _Mover.SetMover_Defaults=bj_lastCreatedUnit
