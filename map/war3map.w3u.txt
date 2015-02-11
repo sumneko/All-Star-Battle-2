@@ -800,7 +800,6 @@ uagp=2.0000
 uinp=2.6000
 usnd=HeroTaurenChieftain
 ua1m=Abilities\Spells\Other\Stampede\StampedeMissileDeath.mdl
-ua1w=instant
 ua1s=6
 ucpt=0.3000
 usca=1.2000
