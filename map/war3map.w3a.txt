@@ -34668,7 +34668,7 @@ acdn[1]=15.0000
 amcs[1]=100
 atar[1]=enemies,organic
 aher=0
-aart=button\BTN_BLLM_D1.blp
+aart=button\BTN_tina_RD.blp
 areq=R001
 [A0WY:AEme]
 acdn[1]=0.0000
