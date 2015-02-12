@@ -1181,7 +1181,7 @@ ftat=
 ftip=死线
 fube=该单位被死线缠绕，移动速度与魔抗降低
 ftat=
-fart=
+fart=button\BTNYouR.blp
 [B049:Bslo]
 fnam=减速 阴阳玉
 ftat=Abilities\Spells\Orc\StasisTrap\StasisTotemTarget.mdl,Abilities\Spells\Human\slow\slowtarget.mdl
