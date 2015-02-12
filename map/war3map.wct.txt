@@ -1642,7 +1642,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=463
+//TESH.scrollpos=562
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1696,7 +1696,7 @@ library eventLibrary initializer Init needs baseLibrary
             elseif id == EVENT_PLAYER_UNIT_SPELL_FINISH
                 trg = LoadTriggerHandle(HT, 5, GetSpellAbilityId())
             endif
-            if trg != null and TriggerEvaluate(trg)
+            if trg != null and IsTriggerEnabled(trg) and TriggerEvaluate(trg)
                 TriggerExecute(trg)
             endif
             id = null
@@ -1725,7 +1725,7 @@ library eventLibrary initializer Init needs baseLibrary
 
         static void GetSkill_Action(){
             trigger trg = LoadTriggerHandle(HT, StringHash("获得技能事件"), GetSpellAbilityId())
-            if trg != null and TriggerEvaluate(trg) then
+            if trg != null and IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
                 TriggerExecute(trg)
             endif
             trg = null
@@ -1960,7 +1960,7 @@ debug@          endif
                         trg = LoadTriggerHandle(YDHT, h, StringHash("暴击触发值段") + i)
                         if trg != null then
                             SaveReal(YDHT, StringHash("事件返回"), StringHash("暴击倍率加成"), 0)
-                            if TriggerEvaluate(trg) then
+                            if IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
                                 TriggerExecute(trg)
                             endif
                             exRate += LoadReal(YDHT, StringHash("事件"), StringHash("暴击倍率加成"))
@@ -2001,7 +2001,7 @@ debug@          endif
                         trg = LoadTriggerHandle(YDHT, h, StringHash("被暴击触发值段") + i)
                         if trg != null then
                             SaveReal(YDHT, StringHash("事件返回"), StringHash("暴击倍率加成"), 0)
-                            if TriggerEvaluate(trg) then
+                            if IsTriggerEnabled(trg) and TriggerEvaluate(trg) then
                                 TriggerExecute(trg)
                             endif
                             exRate += LoadReal(YDHT, StringHash("事件"), StringHash("暴击倍率加成"))
@@ -2959,7 +2959,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=144
+//TESH.scrollpos=729
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3841,7 +3841,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=546
+//TESH.scrollpos=800
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
