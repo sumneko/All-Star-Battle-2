@@ -772,7 +772,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=370
+//TESH.scrollpos=646
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -3841,7 +3841,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1209
+//TESH.scrollpos=546
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4414,12 +4414,13 @@ library unitLibrary initializer Init needs bakaLibrary
             int i = 0
             loop
                 exitwhen i > 15
-                if i != 12 then
+                if i == 12 then
+                    dummy[i] = CreateUnit(Player(15), 'e010', 0, 0, 0)
+                else
                     dummy[i] = CreateUnit(Player(i), 'e010', 0, 0, 0)
                 endif
                 i ++
             endloop
-            dummy[12] = dummy[15]
         }
 
         /*
