@@ -35197,6 +35197,7 @@ ansf=闪回E
 ahky=E
 abpx=2
 aub1[1]=立即回到释放技能前的位置|n|n|Cffffcc00该技能可以在硬直中使用|r
+aart=button\BTN_U_back.blp
 [A0XC:Absk]
 arac=creeps
 anam=闪回
@@ -35204,6 +35205,7 @@ atp1[1]=闪回(|cffffcc00Q|r)
 ansf=闪回Q
 ahky=Q
 aub1[1]=立即回到释放技能前的位置|n|n|Cffffcc00该技能可以在硬直中使用|r
+aart=button\BTN_U_back.blp
 [A0XD:AEme]
 acdn[1]=0.0000
 adur[1]=0.0000
