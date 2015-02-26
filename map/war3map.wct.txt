@@ -547,6 +547,7 @@ library defineLibrary
         <GetLastCreatedTextTag()> = bj_lastCreatedTextTag
         TriggerRegisterTimerEventSingle(a, b) = TriggerRegisterTimerEvent(a, b, false)
         ResetUnitAnimation(u) = SetUnitAnimation(u, "stand")
+        //UnitAddItemByIdSwapped(id, u) = UnitAddItemById(u, id)
     }
 
     #define YDWEH2I(h) GetHandleId(h)
