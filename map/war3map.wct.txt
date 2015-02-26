@@ -1643,7 +1643,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=488
+//TESH.scrollpos=623
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2292,7 +2292,7 @@ debug@          endif
 
         static void ItemPick(trigger trg, int iid){
 debug@      if LoadTriggerHandle(HT, StringHash("英雄获得物品"), iid) != null then
-debug@          BJDebugMsg("<错误>重复注册英雄获得物品事件:" + I2S(iid))
+debug@          Lua_hook(sys.selfp, "print Error_event_ItemPick " + I2S(iid))
 debug@      endif
             SaveTriggerHandle(HT, StringHash("英雄获得物品"), iid, trg)
         }
