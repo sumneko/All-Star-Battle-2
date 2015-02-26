@@ -6484,6 +6484,10 @@ GetUnitStateSwap="属性"
 GetUnitStateSwap=~Property," 对于 ",~单位
 GetUnitStateSwapHint=
 
+Unit.GetMaxLife="最大生命值 <单位库>"
+Unit.GetMaxLife=~单位," 的 最大生命值"
+Unit.GetMaxLifeHint="请使用该函数来获取最大生命值"
+
 GetUnitLifePercent="生命百分比"
 GetUnitLifePercent=~单位," 的生命百分比"
 GetUnitLifePercentHint=

@@ -1643,7 +1643,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=623
+//TESH.scrollpos=187
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3842,7 +3842,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=329
+//TESH.scrollpos=1383
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5236,6 +5236,33 @@ library unitLibrary initializer Init needs bakaLibrary
         }
         //#undef DODG_MAGIC_BOOK
         //#undef HIT_MAGIC_BOOK
+        
+        /*
+        获取单位最大生命值(修正伤害减免系统带来的误差)
+        */
+        static real GetMaxLife(unit u){
+            if GetUnitAbilityLevel(u, 'A0RJ') == 0 then
+                return GetUnitState(u, UNIT_STATE_MAX_LIFE)
+            else
+                return GetUnitState(u, UNIT_STATE_MAX_LIFE) - <?=slk.ability.A0RJ.DataA1?>
+            endif
+        }
+        
+        static real GetLifePercent(unit u){
+            real max_life = GetMaxLife(u)
+            if max_life == 0 then
+                return 0.
+            else
+                return GetUnitState(u, UNIT_STATE_LIFE) * 100 / max_life
+            endif
+        }
+        
+        static void SetLifePercent(unit u, real r){
+            SetUnitState(u, UNIT_STATE_LIFE, GetMaxLife(u) * RMaxBJ(0, r) * 0.01)
+        }
+        
+        #define GetUnitLifePercent(u) Unit.GetLifePercent(u)
+        #define SetUnitLifePercentBJ(u, r) Unit.SetLifePercent(u, r)
 
     endstruct
 

@@ -9904,6 +9904,10 @@ GetUnitStateSwap=0,1,real,unitstate,unit
 _GetUnitStateSwap_Defaults=UnitStateLife,GetTriggerUnit
 _GetUnitStateSwap_Category=TC_UNIT
 
+Unit.GetMaxLife=0,1,real,unit
+_Unit.GetMaxLife_Defaults=GetTriggerUnit
+_Unit.GetMaxLife_Category=TC_UNIT
+
 GetUnitLifePercent=1,1,real,unit
 _GetUnitLifePercent_Defaults=GetTriggerUnit
 _GetUnitLifePercent_Category=TC_UNIT
