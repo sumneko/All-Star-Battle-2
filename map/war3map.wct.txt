@@ -1485,7 +1485,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=125
 //TESH.alwaysfold=0
 <?
 import("Moe_Init.lua")[[
@@ -3842,7 +3842,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1374
+//TESH.scrollpos=1326
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5174,7 +5174,7 @@ library unitLibrary initializer Init needs bakaLibrary
                         hit = LoadReal(YDHT, h, StringHash("命中几率值段") + i)
                         if hit > 0 then
                             thisHit -= thisHit * hit / 100
-                        else
+                        elseif thisDodg > 0 then
                             thisDodg += thisDodg * hit / 100
                         endif
                         i ++
@@ -5189,7 +5189,7 @@ library unitLibrary initializer Init needs bakaLibrary
                         dodg = LoadReal(YDHT, h, StringHash("闪躲几率值段") + i)
                         if dodg > 0 then
                             thisDodg -= thisDodg * dodg / 100
-                        else
+                        elseif thisHit > 0 then
                             thisHit += thisHit * dodg / 100
                         endif
                         i ++
