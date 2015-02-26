@@ -47,7 +47,11 @@
 					hero_model[value] = {}
 					table.insert(hero_model, hero_model[value])
 				end
-				hero_model[hero_model.now][name] = value
+				if hero_model[hero_model.now][name] then
+					hero_model[hero_model.now][name] = hero_model[hero_model.now][name] .. ';' .. value
+				else
+					hero_model[hero_model.now][name] = value
+				end
 			end
 		end,
 		['英雄台词'] = function(line)
