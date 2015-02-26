@@ -3842,7 +3842,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1170
+//TESH.scrollpos=1167
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5026,6 +5026,7 @@ library unitLibrary initializer Init needs bakaLibrary
                 SaveReal(YDHT, h, hash_chance + count, chance)
                 SaveReal(YDHT, h, hash_rate + count, rate)
                 SaveStr(YDHT, h, hash_tag + count, tag)
+                RemoveSavedHandle(YDHT, h, hash_trigger + count)
                 
                 //保存计数
                 SaveInteger(YDHT, h, hash_count, count)
