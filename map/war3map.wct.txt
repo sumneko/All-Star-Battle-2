@@ -1643,7 +1643,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=358
+//TESH.scrollpos=488
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3842,7 +3842,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1167
+//TESH.scrollpos=329
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5202,7 +5202,7 @@ library unitLibrary initializer Init needs bakaLibrary
                     real chance = thisDodg - thisDodg * thisHit / 400 - thisHit * 0.6
                     
                     //进行闪躲判定
-                    if chance != 0 and chance >= GetRandomReal(0, 100) then
+                    if chance > 0 and chance >= GetRandomReal(0, 100) then
                         //攻击miss
                         Unit.DummySkill(Player(15), Event.u_from[Event.index], 1, 'A0XK')
                     else
