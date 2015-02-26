@@ -270,7 +270,7 @@
 							--自己的积分则仔细验证,不重载
 							local texts	= {}
 							for name, value in pairs(data) do
-								local true_value	= p:getRecord(name)
+								local true_value	= t[name]
 								if true_value ~= value then
 									table.insert(texts, ('[%s]\t%d : %d'):format(name, true_value, value))
 								end
