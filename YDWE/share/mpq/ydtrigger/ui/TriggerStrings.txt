@@ -6967,6 +6967,9 @@ OperatorStringHint=
     ="代码: ",~Jass代码
     Hint="输入一行Jass代码"
 
+String.ConvertStringExt="转换长字符串"
+String.ConvertStringExt=~字符串
+
 GetObjectName="物体名称 [C]"
 GetObjectName=~物体ID," 的名称"
 GetObjectNameHint="如'A01Z',物体编辑器中物体的名字"

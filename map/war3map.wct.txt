@@ -2912,6 +2912,10 @@ library stringLibrary initializer Init needs baseLibrary
             .StrCount=count
             return count
         }
+
+        static string ConvertStringExt(s){
+			return s
+        }
     endstruct
 
     private void Init(){

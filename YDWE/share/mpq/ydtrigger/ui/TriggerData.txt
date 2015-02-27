@@ -26,6 +26,7 @@ TC_MU_BAKA=专用库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_MU_BASE=基础库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_MU_EVENT=事件库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_MU_MATH=数学库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
+TC_MU_STRING=字符串库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_MU_UNIT=单位库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_MU_ITEM=物品库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
 TC_MU_TEXT=漂浮文字库<MU>,ReplaceableTextures\WorldEditUI\Actions-Game
@@ -10421,6 +10422,9 @@ _OperatorString_Category=TC_NOTHING
     =0,1,string,scriptcode
 _    _Defaults=_
 _    _Category=TC_NOTHING
+
+String.ConvertStringExt=0,1,string,StringExt
+_String.ConvertStringExt_Category=TC_MU_STRING
 
 GetObjectName=0,1,string,scriptcode
 _GetObjectName_Defaults=_
