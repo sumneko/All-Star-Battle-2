@@ -1648,7 +1648,7 @@ ubpy=2
 ubpx=1
 uhot=X
 [I027:asbl]
-iabi=A059,A0GI,A09H,A03S
+iabi=A059,A0GI,A03S
 utub=提高75点攻击力|n提高25点力量|n提高25点敏捷|n提高5点智力|n提高7.5/s的生命恢复|n|n|cffffff00越战越勇：|r|n每次攻击提升20%攻击速度最高200%|n但是每过2秒会降低20%攻击速度|n|n|cffccffff横扫(仅近战)：|r|n前方400范围35%的强化伤害溅射(可叠加)|n|n|cff757575近战不出狂战斧，不如回家卖红薯
 istr=1
 icla=Artifact
