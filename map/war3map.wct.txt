@@ -2913,7 +2913,7 @@ library stringLibrary initializer Init needs baseLibrary
             return count
         }
 
-        static string ConvertStringExt(s){
+        static string ConvertStringExt(string s){
 			return s
         }
     endstruct

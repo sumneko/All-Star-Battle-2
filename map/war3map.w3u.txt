@@ -9491,6 +9491,7 @@ umvh=175.0000
 usid=1800
 usin=1800
 usca=2.0000
+unsf=真
 [e05S:ewsp]
 unam=元素-日月-星空
 uabi=A0GH,Aloc,Arav
