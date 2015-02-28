@@ -1643,7 +1643,7 @@ library RecordFix initializer Init needs Record
 endlibrary
 ########
 ########
-//TESH.scrollpos=187
+//TESH.scrollpos=498
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -3846,7 +3846,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1326
+//TESH.scrollpos=1462
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5267,6 +5267,106 @@ library unitLibrary initializer Init needs bakaLibrary
         
         #define GetUnitLifePercent(u) Unit.GetLifePercent(u)
         #define SetUnitLifePercentBJ(u, r) Unit.SetLifePercent(u, r)
+        
+        /*
+        额外移动速度
+        */
+        static int extraMoveSpeed_count = 0
+        static unit extraMoveSpeed_units[]
+        static real extraMoveSpeed_speed[]
+        static real extraMoveSpeed_x[]
+        static real extraMoveSpeed_y[]
+        static timer extraMoveSpeed_timer = CreateTimer()
+        
+        static void ExtraMoveSpeed_Kick(int x){
+            //从数组尾部把数据移动过来覆盖
+            extraMoveSpeed_units[x] = extraMoveSpeed_units[extraMoveSpeed_count]
+            extraMoveSpeed_speed[x] = extraMoveSpeed_speed[extraMoveSpeed_count]
+            extraMoveSpeed_x[x]     = extraMoveSpeed_x[extraMoveSpeed_count]
+            extraMoveSpeed_y[x]     = extraMoveSpeed_y[extraMoveSpeed_count]
+            
+            extraMoveSpeed_count --
+            
+            //如果数组大小为0,则停止计时器
+            if extraMoveSpeed_count == 0 then
+                PauseTimer(extraMoveSpeed_timer)
+            endif
+        }
+        
+        static real ExtraMoveSpeed(unit u, real r){
+            int i = 1
+            int x = 0
+            
+            //先检查是否已经在数组中
+            loop
+                exitwhen i > extraMoveSpeed_count
+                if extraMoveSpeed_units[i] == u then
+                    x = i
+                    i = extraMoveSpeed_count
+                elseif GetUnitTypeId(extraMoveSpeed_units[i]) == 0 then
+                    ExtraMoveSpeed_Kick(i)
+                    i --
+                endif
+                i ++
+            endloop
+            
+            if x == 0 then
+                //不在数组中,新建
+                extraMoveSpeed_count ++
+                extraMoveSpeed_units[extraMoveSpeed_count] = u
+                extraMoveSpeed_speed[extraMoveSpeed_count] = r
+                extraMoveSpeed_x[extraMoveSpeed_count]     = GetUnitX(u)
+                extraMoveSpeed_y[extraMoveSpeed_count]     = GetUnitY(u)
+                
+                //如果是数组中第一个单位,则开启计时器
+                if extraMoveSpeed_count == 1 then
+                    TimerStart(extraMoveSpeed_timer, 0.02, true,\
+                        lambda void (){
+                            unit u
+                            int i = 1
+                            loop
+                                exitwhen i > extraMoveSpeed_count
+                                u = extraMoveSpeed_units[i]
+                                real ms = GetUnitMoveSpeed(u)
+                                real x  = GetUnitX(u)
+                                real y  = GetUnitY(u)
+                                real lx = extraMoveSpeed_x[i]
+                                real ly = extraMoveSpeed_y[i]
+                                real cx = x - lx
+                                real cy = y - ly
+                                real ds = SquareRoot(cx * cx + cy * cy)
+                                real sp = extraMoveSpeed_speed[i]
+                                if ms > 10 and ds > ms * 0.018 and ds < ms * 0.022 then
+                                    x += cx * sp / ms
+                                    y += cy * sp / ms
+                                    SetUnitX(u, x)
+                                    SetUnitY(u, y)
+                                endif
+                                extraMoveSpeed_x[i] = x
+                                extraMoveSpeed_y[i] = y
+                                i ++
+                            endloop
+                            u = null
+                        }\
+                    )
+                endif
+                
+                return r
+            else
+                //在数组中,改变速度
+                extraMoveSpeed_speed[x] += r
+                
+                //若果移动速度变为0,则移出数组
+                if extraMoveSpeed_speed[x] == 0 then
+                    
+                    ExtraMoveSpeed_Kick(x)
+                    
+                    return 0.
+                endif
+                
+                return extraMoveSpeed_speed[x]
+            endif
+        }
 
     endstruct
 
@@ -41758,6 +41858,9 @@ function SelectTerrainTypeB takes nothing returns nothing
 	call TimerStart(t, 0.1, true, function SelectTerrainTypeB_timed)
 	set t = null
 endfunction
+########
+########
+
 ########
 ########
 

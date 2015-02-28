@@ -4091,6 +4091,10 @@ Unit.HitDodg=0,unit,add_remove,real,string,hit_dodg
 _Unit.HitDodg_Defaults=GetTriggerUnit,add_remove_add,15,"无",hit_dodg_dodg
 _Unit.HitDodg_Category=TC_MU_UNIT
 
+Unit.ExtraMoveSpeed=0,unit,real
+_Unit.ExtraMoveSpeed_Defaults=GetTriggerUnit,500
+_Unit.ExtraMoveSpeed_Category=TC_MU_UNIT
+
 //物品库
 Item.Formula=0,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,integer
 _Item.Formula_Defaults=_,_,_,_,ches,ches,ches,ches,0

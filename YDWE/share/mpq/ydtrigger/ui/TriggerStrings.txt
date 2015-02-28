@@ -667,6 +667,10 @@ Unit.HitDodg="添加/移除命中/闪躲"
 Unit.HitDodg="为 ",~单位," ",~添加移除," 几率为 ",~几率," %,标签为 ",~标签," 的 ",~命中/闪躲模块对象," 模块"
 Unit.HitDodgHint="只有当几率,标签完全匹配时才能移除命中/闪躲模块"
 
+Unit.ExtraMoveSpeed="额外移动速度"
+Unit.ExtraMoveSpeed="为 ",~单位," 添加 ",~实数," 点额外移动速度"
+Unit.ExtraMoveSpeedHint="通过计时器辅助移动"
+
 //物品库
 //最萌小汐
 Item.Formula="注册物品合成"
