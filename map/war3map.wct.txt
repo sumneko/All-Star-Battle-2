@@ -3846,7 +3846,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1462
+//TESH.scrollpos=1306
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5158,7 +5158,7 @@ library unitLibrary initializer Init needs bakaLibrary
             endloop
             */
             
-            //命中/暴击结算
+            //命中/闪躲结算
             TriggerAddCondition(HIT_DODG_TRIGGER, Condition(\
                 lambda void (){
                     Event.index ++
@@ -5167,17 +5167,21 @@ library unitLibrary initializer Init needs bakaLibrary
                     Event.u_to[Event.index] = GetEventTargetUnit()
                     
                     real hit, dodg, thisHit = 100, thisDodg = 100 //当前命中和闪躲都是取倒值
-                    int i, h, count
+                    int i, h, count, disable
                     
                     //先结算命中
                     h = GetHandleId(Event.u_from[Event.index])
+                    //命中模块是否无效
+                    disable = LoadInteger(YDHT, h, StringHash("命中模块无效"))
                     count = LoadInteger(YDHT, h, StringHash("命中模块计数"))
                     i = 1
                     loop
                         exitwhen i > count
                         hit = LoadReal(YDHT, h, StringHash("命中几率值段") + i)
                         if hit > 0 then
-                            thisHit -= thisHit * hit / 100
+                            if disable == 0 then
+                                thisHit -= thisHit * hit / 100
+                            endif
                         elseif thisDodg > 0 then
                             thisDodg += thisDodg * hit / 100
                         endif
