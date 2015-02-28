@@ -71,3 +71,5 @@
 	require 'lua\\hot_fix.lua'
 
 	pcall(require, 'MoeUshio\\All-Star-Battle\\init.lua')
+
+	require 'lua\\debug.lua'
