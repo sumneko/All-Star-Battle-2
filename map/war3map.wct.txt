@@ -3846,7 +3846,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1306
+//TESH.scrollpos=617
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -41880,6 +41880,12 @@ function SelectTerrainTypeB takes nothing returns nothing
 	call TimerStart(t, 0.1, true, function SelectTerrainTypeB_timed)
 	set t = null
 endfunction
+########
+########
+
+########
+########
+
 ########
 ########
 
