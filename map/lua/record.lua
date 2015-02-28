@@ -91,6 +91,9 @@
 				('%s%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(string.char(0xEF, 0xBB, 0xBF), content, dump.save(this:getBaseName(), content))
 			)
 		end
+		if game.is_replay ~= 'false' then
+			return false
+		end
 		return japi.SaveGameCache(this.record)
 	end
 
