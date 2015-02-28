@@ -5907,7 +5907,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=261
+//TESH.scrollpos=292
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -6220,6 +6220,24 @@ library testLibrary initializer Init needs baseLibrary
             #define DestroyTimer(t) test.Hook_DestroyTimer(t)
 
         #endif
+        
+        #ifndef RELEASE
+        
+            static location temp_Loc
+            
+            static location PolarProjectionBJ2(location source, real dist, real angle, string func_name){
+                real x = GetLocationX(source) + dist * Cos(angle * bj_DEGTORAD)
+                real y = GetLocationY(source) + dist * Sin(angle * bj_DEGTORAD)
+                temp_Loc = Location(x, y)
+                //发送给lua:点,函数名
+                Lua_hook(sys.selfp, "debug_PolarProjection " + I2S(GetHandleId(temp_Loc)) + " " + func_name)
+                return temp_Loc
+            }
+
+            #define PolarProjectionBJ(l, d, a) test.PolarProjectionBJ2(l, d, a, `FUNCNAME`)
+        
+        #endif
+        
     endstruct
 
     private void Init(){
