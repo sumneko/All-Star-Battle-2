@@ -56,6 +56,10 @@
 
 	function cmd.setRecord(p, name, value)
 		p:setRecord(name, tonumber(value))
+
+		if p == player.self then
+			cmd.log('积分', ('%s --> %s'):format(name, tonumber(value)))
+		end
 	end
 
 	function player.__index.setRecord(this, name, value)
@@ -77,7 +81,10 @@
 	record.local_save_name_ansi	= ('[%08X]�ı��ػ��ִ浵(ȫ����ս��).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
 
 	function player.__index.saveRecord(this)
-		if record.enable_local_save and dump.enable and this == player.self and this:isPlayer() then
+		if not record.enable_local_save then
+			return false
+		end
+		if dump.enable and this == player.self and this:isPlayer() then
 			local lines	= {}
 			table.insert(lines, ('[%s]'):format(player.self:getBaseName()))
 			for _, name in ipairs(record.my_record) do
@@ -87,13 +94,14 @@
 			end
 			local content	= table.concat(lines, '\r\n')
 			storm.save(
-				record.local_save_name_utf8,
+				cmd.dir_record .. record.local_save_name_utf8,
 				('%s%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(string.char(0xEF, 0xBB, 0xBF), content, dump.save(this:getBaseName(), content))
 			)
+
+			cmd.log('积分', '保存本地积分')
 		end
-		if game.is_replay ~= 'false' then
-			return false
-		end
+
+		cmd.log('积分', '保存在线积分')
 		return japi.SaveGameCache(this.record)
 	end
 
@@ -122,6 +130,7 @@
 	--本地记录玩家
 	--解析本地文件
 	function record.read_players(text)
+		text = text:gsub('\xEF\xBB\xBF', '')
 		for line in text:gmatch '(%C+)' do
 			local name, value	= line:match '(.+)%=(%d+)'
 			if name then
@@ -133,7 +142,10 @@
 	
 	function record.save_players()
 		--读取本地积分
-		local text	= storm.load(record.local_save_name_ansi) or storm.load(record.local_save_name_utf8)
+		local text	= storm.load(cmd.dir_ansi_record .. record.local_save_name_ansi)
+			or storm.load(cmd.dir_ansi_record .. record.local_save_name_utf8)
+			or storm.load(record.local_save_name_ansi) 
+			or storm.load(record.local_save_name_utf8)
 		local local_record	= table.new(0)
 		if text and player.self:isPlayer() then
 			--读取加密部分
@@ -167,7 +179,7 @@
 		end
 
 		--读取本地大号信息
-		local text	= storm.load 'ushio1.log'
+		local text	= storm.load(cmd.dir_ansi_account .. 'account.txt')
 		if text then
 			pcall(record.read_players, text)
 		end
@@ -191,12 +203,12 @@
 		data[name] = math.max(data[name] or 0, player.self:getRecord '胜利' + math.floor(player.self:getRecord '时间' / 30))
 		
 		--生成新的本地记录
-		local texts = {}
+		local texts = {'\xEF\xBB\xBF'}
 		for _, name in ipairs(data) do
 			table.insert(texts, ('%s=%d'):format(name, data[name]))
 		end
 		--保存到本地
-		record.ushio1_log = table.concat(texts, '\n')
+		record.account_info = table.concat(texts, '\n')
 		--print(table.concat(texts, '\n'))
 		--storm.save('ushio1.log', table.concat(texts, '\n'))
 
@@ -204,7 +216,7 @@
 			function()
 				if game.is_replay ~= 'true' then
 					record.enable_local_save = true
-					storm.save('ushio1.log', record.ushio1_log)
+					storm.save(cmd.dir_account .. 'account.txt', record.account_info)
 				end
 			end
 		)
@@ -283,9 +295,9 @@
 								local text	= table.concat(texts, '\n')
 								cmd.maid_chat(player.self, text)
 								cmd.maid_chat(player.self, '积分同步异常,请截图汇报')
-								local file_name	= ('Errors\\ASB_SyncError_%02d_%02d_%08s.txt'):format(player.self:get(), p:get(), random)
+								local file_name	= ('ASB_SyncError_%02d_%02d_%08s.txt'):format(player.self:get(), p:get(), random)
 								print(file_name)
-								storm.save(file_name, text)
+								storm.save(cmd.dir_errors .. file_name, text)
 							end
 
 							event('积分同步完成', {player = p})

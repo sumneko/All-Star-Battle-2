@@ -36,7 +36,7 @@
 				for func_name, count in pairs(loc_count) do
 					table.insert(lines, ('%s=%s'):format(func_name, count))
 				end
-				storm.save('Logs\\极坐标泄露报告(全明星战役).txt', table.concat(lines, '\n'))
+				storm.save(cmd.dir_logs .. '极坐标泄露报告(全明星战役).txt', table.concat(lines, '\n'))
 			end
 		end
 	)

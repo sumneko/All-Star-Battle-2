@@ -28,6 +28,9 @@
 		print(tostring(msg) .. "\n")
 		print(debug.traceback())
 		print("---------------------------------------")
+
+		cmd.error(tostring(msg) .. "\n")
+		cmd.error(debug.traceback())
 	end
 	--]]
 
@@ -283,5 +286,83 @@
 	--è®°å½•ç‰ˆæœ¬å·
 	function cmd.set_ver_name(_, s)
 		cmd.ver_name = s
+
+		--åˆ›å»ºç›®å½•
+		cmd.dir_hot_fix = 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\çƒ­è¡¥ä¸\\' .. cmd.ver_name .. '\\'
+		cmd.dir_account	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\è´¦å·è®°å½•\\'
+		cmd.dir_record	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\ç§¯åˆ†å­˜æ¡£\\'
+		cmd.dir_logs	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\æ—¥å¿—\\' .. cmd.ver_name .. '\\'
+		cmd.dir_errors	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\é”™è¯¯æŠ¥å‘Š\\' .. cmd.ver_name .. '\\'
+		cmd.dir_dynamic	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\åŠ¨æ€è„šæœ¬\\'
+
+		cmd.dir_ansi_hot_fix	= 'È«Ã÷ĞÇÕ½ÒÛ\\ÈÈ²¹¶¡\\' .. cmd.ver_name .. '\\'
+		cmd.dir_ansi_account	= 'È«Ã÷ĞÇÕ½ÒÛ\\ÕËºÅ¼ÇÂ¼\\'
+		cmd.dir_ansi_record		= 'È«Ã÷ĞÇÕ½ÒÛ\\»ı·Ö´æµµ\\'
+		cmd.dir_ansi_logs		= 'È«Ã÷ĞÇÕ½ÒÛ\\ÈÕÖ¾\\' .. cmd.ver_name .. '\\'
+		cmd.dir_ansi_errors		= 'È«Ã÷ĞÇÕ½ÒÛ\\´íÎó±¨¸æ\\' .. cmd.ver_name .. '\\'
+		cmd.dir_ansi_dynamic	= 'È«Ã÷ĞÇÕ½ÒÛ\\¶¯Ì¬½Å±¾\\'
+
+		--ç›®å‰storm.saveå‡½æ•°ä¸èƒ½åˆ›å»ºç›®å½•,å…ˆç”¨jasså‡½æ•°è¿›è¡Œåˆ›å»º
+		jass.PreloadGenEnd(cmd.dir_ansi_hot_fix)
+		jass.PreloadGenEnd(cmd.dir_ansi_account)
+		jass.PreloadGenEnd(cmd.dir_ansi_record)
+		jass.PreloadGenEnd(cmd.dir_ansi_logs)
+		jass.PreloadGenEnd(cmd.dir_ansi_errors)
+		jass.PreloadGenEnd(cmd.dir_ansi_dynamic)
+
+		pcall(require, cmd.dir_ansi_dynamic .. 'init.lua')
+
+		--æŠ›å‡ºäº‹ä»¶
 		event('ç¡®å®šæ¸¸æˆç‰ˆæœ¬', {version = s})
+	end
+
+	--Éú³ÉÈÕÖ¾
+	function cmd.log(type, line)
+		if not cmd.log_lines then
+			cmd.log_lines = {'\xEF\xBB\xBF'}
+			--¶ÁÈ¡id
+			local id = tonumber(storm.load(cmd.dir_ansi_logs .. 'logsdata.txt')) or 0
+			id = id + 1
+			storm.save(cmd.dir_logs .. 'logsdata.txt', id)
+			cmd.log_file_name = id .. '.txt'
+		end
+
+		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(), type, line))
+
+		if cmd.dir_logs then
+			storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
+		else
+			timer.wait(1,
+				function()
+					if cmd.dir_logs then
+						storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
+					end
+				end
+			)
+		end
+	end
+
+	function cmd.error(type, line)
+		if not cmd.error_lines then
+			cmd.error_lines = {}
+			--¶ÁÈ¡id
+			local id = tonumber(storm.load(cmd.dir_ansi_errors .. 'errorsdata.txt')) or 0
+			id = id + 1
+			storm.save(cmd.dir_errors .. 'errorsdata.txt', id)
+			cmd.error_file_name = id .. '.txt'
+		end
+
+		table.insert(cmd.error_lines, ('[%s] - [%s]%s'):format(timer.time(), type, line))
+
+		if cmd.dir_errors then
+			storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
+		else
+			timer.wait(1,
+				function()
+					if cmd.dir_errors then
+						storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
+					end
+				end
+			)
+		end
 	end
