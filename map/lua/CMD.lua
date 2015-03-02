@@ -7,6 +7,8 @@
 	cmd.print = print
 
 	cmd.text_print = {}
+
+	cmd.utf8_bom = '\xEF\xBB\xBF'
 	
 	---[[
 	function print(...)
@@ -319,6 +321,15 @@
 
 	--生成日志
 	function cmd.log(type, line)
+		if not cmd.dir_ansi_logs then
+			timer.wait(1,
+				function()
+					cmd.log(type, line)
+				end
+			)
+			return
+		end
+		
 		if not cmd.log_lines then
 			cmd.log_lines = {'\xEF\xBB\xBF'}
 			--读取id
@@ -330,20 +341,19 @@
 
 		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(true), type, line))
 
-		if cmd.dir_logs then
-			storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
-		else
-			timer.wait(5,
-				function()
-					if cmd.dir_logs then
-						storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
-					end
-				end
-			)
-		end
+		storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
 	end
 
 	function cmd.error(type, line)
+		if not cmd.dir_errors then
+			timer.wait(1,
+				function()
+					cmd.error(type, line)
+				end
+			)
+			return
+		end
+		
 		if not cmd.error_lines then
 			cmd.error_lines = {}
 			--读取id
@@ -355,17 +365,8 @@
 
 		table.insert(cmd.error_lines, ('[%s] - [%s]%s'):format(timer.time(true), type, line))
 
-		if cmd.dir_errors then
-			storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
-		else
-			timer.wait(5,
-				function()
-					if cmd.dir_errors then
-						storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
-					end
-				end
-			)
-		end
+		storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
+		
 	end
 
 	function cmd.check_maphack()

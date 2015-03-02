@@ -5,66 +5,119 @@
 
 	setmetatable(hot_fix, hot_fix)
 
-	event('玩家聊天',
-		function(this, name, f)
-			if this.player == player[1] and this.text == ',hot fix' then
-				event('-玩家聊天', f)
-				local len 	= 0
-				local text
-				if player.self == this.player then
-					text	= storm.load(('MoeUshio\\All-Star-Battle\\hot_fix_%s.lua'):format(cmd.ver_name))
-					if text then
-						len = #text
-						local key	= text:match '--####(%d+)'
-						text		= text:sub(1, len - #key - 6)
-						key			= tonumber(key) - 2 ^ 31
-						local hash	= jass.StringHash(text .. cmd.ver_name)
-						if hash ~= key then
-							len	= 0
-							print(hash)
-						end
-					end
-				end
-				--发送脚本长度信息
-				this.player:sync({len = len},
+	-- 新的热补丁流程如下
+	-- 每个玩家查询自己的热补丁版本号并同步
+	-- 找到版本号最大的那个玩家,将整个热补丁文件进行同步
+	-- 所有玩家将本地热补丁更新为该文件
+	-- 所有玩家一起加载热补丁中的代码
+
+	function hot_fix.main()
+
+		hot_fix.file_name = 'hot_fix.lua'
+		hot_fix.my_ver = 0
+		hot_fix.my_content = ''
+
+		--读取自己的热补丁
+		local content = storm.load(cmd.dir_ansi_hot_fix .. hot_fix.file_name)
+		if content then
+			hot_fix.my_ver = content:match '--ver%=(%d+)'
+			hot_fix.my_ver = tonumber(hot_fix.my_ver) or 0
+			hot_fix.my_content = content
+		end
+		cmd.log('lua', 'hot_fix_ver=' .. hot_fix.my_ver)
+
+		--将热补丁版本号同步
+		hot_fix.vers = {}
+		
+		for i = 1, 10 do
+			local p = player[i]
+			if p:isPlayer() then
+				p:sync(
+					{ver = hot_fix.my_ver},
 					function(data)
-						if data.len == 0 then
-							--长度为0的脚本,不再执行
+						p.hot_fix_ver = data.ver
+						hot_fix.vers[i] = data.ver
+						cmd.log('lua', ('hot_fix_ver[%s]=%s'):format(i, data.ver))
+					end
+				)
+			else
+				p.hot_fix_ver = 0
+				hot_fix.vers[i] = 0
+			end
+		end
+
+		--等待3秒后执行
+		timer.wait(3,
+			function()
+
+				--找到版本号最大的玩家
+				local ver, n = math.maxn(unpack(hot_fix.vers))
+
+				--所有玩家都没有热补丁
+				if not ver or ver == 0 then
+					cmd.log('lua', '无热补丁')
+					return
+				end
+
+				hot_fix.ver = ver
+				hot_fix.player = player[n]
+				cmd.log('lua', ('[%s]同步热补丁,版本号为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
+				
+				--版本号最大的玩家同步热补丁
+				if not hot_fix.player:isPlayer() then
+					cmd.log('lua', ('[%s]离开游戏,同步失败'):format(hot_fix.player:getBaseName()))
+					return
+				end
+				
+				hot_fix.player:syncText(
+					{
+						content = hot_fix.my_content,
+						len		= #hot_fix.my_content,
+					},
+					function(data)
+						local content 	= data.content
+						local len		= tonumber(data.len)
+						
+						--验证一下文本是否正常
+						if len ~= #content then
+							cmd.log('lua', '热补丁同步异常')
+							cmd.log('lua', content)
 							return
 						end
 
-						local ss	= {}
-						local count	= math.ceil(data.len / 4) --每4个字节组成一个整数
-						if player.self == this.player then
-							for i = 1, count do
-								ss[i]	= string2id(text:sub(i * 4 - 3, i * 4)) - 2 ^ 31
-							end
-						else
-							for i = 1, count do
-								ss[i]	= 0
-							end
-						end
+						--同学们,加载起热补丁啦
+						local func, res = load(content)
+						if func then
+							--运行热补丁函数
+							local suc, res = pcall(func)
+							
+							if suc then
+								--在本地生成该热补丁
+								storm.save(cmd.dir_ansi_hot_fix .. hot_fix.file_name, content)
+								cmd.log('lua', '生成热补丁,长度为' .. len)
 
-						local t1	= timer.time()
+								player.self:maid_chat(('来自[%s]的热补丁加载完成,版本为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
+							else
+								cmd.log('lua', '热补丁运行错误')
+								cmd.log('lua', res)
+							end					
+						else
+							cmd.log('lua', '热补丁语法错误')
+							cmd.log('lua', res)
+						end
 						
-						--开始同步文本
-						this.player:sync(ss,
-							function(ss)
-								for i = 1, count do
-									ss[i]	= id2string(ss[i] + 2 ^ 31)
-								end
-								--生成文本
-								local text	= table.concat(ss):sub(1, data.len)
-								
-								--加载文本
-								local f = assert(load(text))
-								print(text, f)
-								print(('hot_fix ready, time: %s'):format(timer.time() - t1))
-								f()
-							end
-						)
 					end
 				)
+				
+			end
+		)
+	end
+		
+	timer.wait(5,
+		function()
+			local suc, res = pcall(hot_fix.main)
+			if not suc then
+				cmd.error('hot_fix', res)
 			end
 		end
 	)

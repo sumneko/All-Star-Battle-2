@@ -115,3 +115,81 @@
 			end
 		)
 	end
+
+	function player.__index.syncText(p, data, func)
+
+		local texts = {}
+
+		local ints	= {}
+		--先发送文本数量与每个文本的长度
+
+		for key, text in pairs(data) do
+			key		= tostring(key)
+			text	= tostring(text)
+			table.insert(texts, key)
+			table.insert(texts, text)
+			table.insert(ints, #key)
+			table.insert(ints, #text)
+		end
+
+		table.insert(ints, 1, #texts / 2)
+
+		--拼成一个长文本
+		local all_text = table.concat(texts)
+
+		--全部拆成整数,每4个字节存在一个整数里
+		for i = 1, math.ceil(#all_text / 4) do
+			local text	= all_text:sub(i * 4 - 3, i * 4)
+			local int	= string2id(text) - 2 ^ 31
+			table.insert(ints, int)
+		end
+
+		--同步所有的整数
+		p:sync(
+			ints,
+			function(data)
+				--文本数量
+				local text_count = data[1]
+				local key_lens	= {}
+				local text_lens	= {}
+				local all_len	= 0
+				
+				for i = 1, text_count do
+					--key的长度
+					key_lens[i]		= data[i * 2]
+					--文本的长度
+					text_lens[i]	= data[i * 2 + 1]
+					--文本总长度
+					all_len = all_len + key_lens[i] + text_lens[i]
+				end
+
+				--拼出长文本
+				local texts = {}
+				for i = text_count * 2 + 2, #data do
+					table.insert(texts, id2string(data[i] + 2 ^ 31))
+				end
+
+				local all_text = table.concat(texts):sub(1, all_len)
+
+				--取出文本
+				local pos = 0
+				local function read(len)
+					local text = all_text:sub(pos + 1, pos + len)
+					pos = pos + len
+					return text
+				end
+
+				--循环取出每个key和text
+				for i = 1, text_count do
+					local key	= read(key_lens[i])
+					local text	= read(text_lens[i])
+					data[key]	= text
+				end
+
+				if func then
+					func(data)
+				end
+			end
+		)
+		
+	end

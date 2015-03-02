@@ -54,3 +54,16 @@
         end
         return strs
     end
+
+    --找最大值以及位置
+    function math.maxn(...)
+	    local ns = {...}
+	    local mn, mi
+	    for i, n in ipairs(ns) do
+		    if not mn or n > mn then
+			    mn = n
+			    mi = i
+		    end
+	    end
+	    return mn, mi
+    end
