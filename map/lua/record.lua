@@ -169,7 +169,7 @@
 		--读取本地大号信息
 		local text	= storm.load 'ushio1.log'
 		if text then
-			record.read_players(text)
+			pcall(record.read_players, text)
 		end
 		local data = player.self.record_data
 
