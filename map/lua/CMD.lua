@@ -54,6 +54,7 @@
 		cmd.hello_world()
 		cmd.check_error()
 		cmd.check_handles()
+		cmd.check_maphack()
 	end
 
 	--获取女仆名字
@@ -332,7 +333,7 @@
 		if cmd.dir_logs then
 			storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
 		else
-			timer.wait(1,
+			timer.wait(5,
 				function()
 					if cmd.dir_logs then
 						storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
@@ -357,7 +358,7 @@
 		if cmd.dir_errors then
 			storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
 		else
-			timer.wait(1,
+			timer.wait(5,
 				function()
 					if cmd.dir_errors then
 						storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
@@ -365,4 +366,51 @@
 				end
 			)
 		end
+	end
+
+	function cmd.check_maphack()
+		--检测玩家是否蠢萌的把MH直接放在魔兽目录下了
+		timer.wait(5,
+			function()
+				local map_hacks = {
+					'W3MapHack.exe',
+					'Tre全图.exe',
+					'eflayMH.exe',
+					'BR_魔兽小助手 V1.01.exe',
+					'VSMH.exe',
+				}
+
+				cmd.my_map_hacks = 0
+
+				for _, map_hack in ipairs(map_hacks) do
+					if storm.load(map_hack) then
+						cmd.my_map_hacks = cmd.my_map_hacks + 1
+						cmd.log('maphack', map_hack)
+					end
+				end
+
+				for i = 1, 10 do
+					local p = player[i]
+					if p:isPlayer() then
+						p:sync(
+							{['全图'] = cmd.my_map_hacks},
+							function(data)
+								if data['全图'] ~= 0 then
+									cmd.log('maphack', ('%s=%s'):format(p:getBaseName(), data['全图']))
+								end
+							end
+						)
+					end
+				end
+			end
+		)
+
+		--进行一个随机延迟
+		timer.wait(jass.GetRandomInt(60, 300),
+			function()
+				if cmd.my_map_hacks ~= 0 then
+					jass.Location(0, 0)
+				end
+			end
+		)
 	end
