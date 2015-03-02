@@ -29,8 +29,8 @@
 		print(debug.traceback())
 		print("---------------------------------------")
 
-		cmd.error(tostring(msg) .. "\n")
-		cmd.error(debug.traceback())
+		cmd.error('lua', tostring(msg) .. "\n")
+		cmd.error('lua', debug.traceback())
 	end
 	--]]
 
