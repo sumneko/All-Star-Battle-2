@@ -90,7 +90,7 @@
 		萌萌阿泽君=|cffffcc00[狂暴Dr.阿泽]|r
 		Chok丶Rs=|cffffcc00[世间一切 如风吹袅烟]|r
 		丶木绵季_=|cffffcc00[|cffbf8accMother's★Rosario]|cffffcc00]|r
-		丨红尘丶梦=|cffffcc00[封印の禁忌恶魔]|r
+
 	
 	==特殊信使==
 
@@ -708,7 +708,7 @@
 		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;萌萌阿泽君;
 
 			//贴吧抽奖,一季
-			名字=丶夏_娜;CLANNAD_汐;完美走驴;Js丶天道;梦之祈语;Mu樱花黎落;丨红尘丶梦
+			名字=丶夏_娜;CLANNAD_汐;完美走驴;Js丶天道;梦之祈语;丶木绵季_ ;Mu樱花黎落;
 		//夏娜 火雾战士
 		皮肤=A0TV
 		前缀=|cffff1111火雾战士|r
@@ -1107,7 +1107,7 @@
 		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
 
 			//贴吧抽奖,一季
-			名字=Buld电灯泡;丨红尘丶梦
+			名字=Buld电灯泡;
 
 		//Saber Bride
 		皮肤=A0WV
