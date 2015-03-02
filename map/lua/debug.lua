@@ -1,6 +1,12 @@
 	
 	local debug = debug
 
+	timer.loop(1,
+		function()
+			event('周期事件', {})
+		end
+	)
+
 	if not game.debug then
 		return
 	end
