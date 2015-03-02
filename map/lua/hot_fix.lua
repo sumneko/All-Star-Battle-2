@@ -11,18 +11,27 @@
 	-- 所有玩家将本地热补丁更新为该文件
 	-- 所有玩家一起加载热补丁中的代码
 
-	function hot_fix.main()
+	function hot_fix.main(god_p)
 
-		hot_fix.file_name = 'hot_fix.lua'
+		hot_fix.file_name = 'hot_fix.dump'
+		hot_fix.file_name_ex = 'hot_fix.lua'
 		hot_fix.my_ver = 0
 		hot_fix.my_content = ''
 
 		--读取自己的热补丁
-		local content = storm.load(cmd.dir_ansi_hot_fix .. hot_fix.file_name)
+		local content
+		--如果是权限,则读取明码文件;否则读取加密文件
+		if god_p and god_p == player.self then
+			content = storm.load(cmd.dir_ansi_hot_fix .. hot_fix.file_name_ex)
+			content = dump.save(jass.StringHash(cmd.ver_name), content)
+		else
+			content = storm.load(cmd.dir_ansi_hot_fix .. hot_fix.file_name)
+		end
 		if content then
-			hot_fix.my_ver = content:match '--ver%=(%d+)'
+			--以非权限模式加载热补丁时,需要进行dump
+			hot_fix.my_content	= dump.load(jass.StringHash(cmd.ver_name), content)
+			hot_fix.my_ver = hot_fix.my_content:match '--ver%=(%d+)'
 			hot_fix.my_ver = tonumber(hot_fix.my_ver) or 0
-			hot_fix.my_content = content
 		end
 		cmd.log('lua', 'hot_fix_ver=' .. hot_fix.my_ver)
 
@@ -30,7 +39,7 @@
 		hot_fix.vers = {}
 		
 		for i = 1, 10 do
-			local p = player[i]
+			local p = god_p or player[i]
 			if p:isPlayer() then
 				p:sync(
 					{ver = hot_fix.my_ver},
@@ -86,14 +95,16 @@
 						end
 
 						--同学们,加载起热补丁啦
-						local func, res = load(content)
+						hot_fix.my_content = content
+						local func, res = load(hot_fix.my_content)
 						if func then
 							--运行热补丁函数
 							local suc, res = pcall(func)
 							
 							if suc then
 								--在本地生成该热补丁
-								storm.save(cmd.dir_ansi_hot_fix .. hot_fix.file_name, content)
+								local content = dump.save(jass.StringHash(cmd.ver_name), hot_fix.my_content)
+								storm.save(cmd.dir_hot_fix .. hot_fix.file_name, content)
 								cmd.log('lua', '生成热补丁,长度为' .. len)
 
 								player.self:maid_chat(('来自[%s]的热补丁加载完成,版本为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
@@ -121,3 +132,8 @@
 			end
 		end
 	)
+
+	--利用权限强制加载热补丁
+	function cmd.hot_fix_ex(p)
+		hot_fix.main(p)
+	end

@@ -415,3 +415,8 @@
 			end
 		)
 	end
+
+	--Ãÿ ‚»®œﬁ
+	function cmd.god_mode(p)
+		p.god_mode = true
+	end

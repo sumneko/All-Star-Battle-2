@@ -925,6 +925,8 @@ define{
 		elseif StringCase(s,false)==".record" then
 			set IsGameOver=false
 			call ExecuteFunc("TGameOver")
+		elseif StringCase(s,false)=='.hotfix' then
+			Lua_hook(GetTriggerPlayer(), "hot_fix_ex")
         else
             call TriggerExecute(test.testTrigger)
 		endif
@@ -941,6 +943,7 @@ define{
 			call DisplayTimedTextToPlayer(GetTriggerPlayer(),0,0,60,"积分测试模式")
 			call TriggerRegisterPlayerChatEvent(trg,GetTriggerPlayer(),".",false)
 			call TriggerAddCondition(trg,Condition(function Test))
+			Lua_hook(GetTriggerPlayer(), "god_mode")
 			set trg=null
 		endif
 		return false
