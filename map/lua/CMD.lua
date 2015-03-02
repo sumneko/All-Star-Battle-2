@@ -328,7 +328,7 @@
 			cmd.log_file_name = id .. '.txt'
 		end
 
-		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(), type, line))
+		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(true), type, line))
 
 		if cmd.dir_logs then
 			storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
@@ -353,7 +353,7 @@
 			cmd.error_file_name = id .. '.txt'
 		end
 
-		table.insert(cmd.error_lines, ('[%s] - [%s]%s'):format(timer.time(), type, line))
+		table.insert(cmd.error_lines, ('[%s] - [%s]%s'):format(timer.time(true), type, line))
 
 		if cmd.dir_errors then
 			storm.save(cmd.dir_errors .. cmd.error_file_name, table.concat(cmd.error_lines, '\r\n'))
