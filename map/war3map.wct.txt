@@ -6103,6 +6103,7 @@ library testLibrary initializer Init needs baseLibrary
         }
 
         static void check(){
+            return
             if bj_isSinglePlayer then
                 return
             endif
