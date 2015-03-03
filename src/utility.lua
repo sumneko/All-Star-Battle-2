@@ -31,8 +31,16 @@ function mpq_open(path)
 	return setmetatable({handle = h}, mpq_meta)
 end
 
+function mpq_create(path, max_file_count)
+	local h = stormlib.create_archive(path, 0, max_file_count or 1)
+	if not h then
+		return nil
+	end
+	return setmetatable({handle = h}, mpq_meta)
+end
+
 function io.load(file_path)
-	local f, e = io.open(file_path:string(), "rb")
+	local f, e = io.open(utf8_to_ansi(file_path:string()), "rb")
 
 	if f then
 		local content	= f:read 'a'
@@ -44,7 +52,7 @@ function io.load(file_path)
 end
 
 function io.save(file_path, content)
-	local f, e = io.open(file_path:string(), "wb")
+	local f, e = io.open(utf8_to_ansi(file_path:string()), "wb")
 
 	if f then
 		f:write(content)

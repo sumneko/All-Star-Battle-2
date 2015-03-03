@@ -79,7 +79,16 @@ local function git_fresh(fname)
 	end
 	if zip_files[fname] then
 		fs.remove(file_dir / fname)
-		os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / fname):string() .. '.zip', fname, file_dir:string()))
+		--解压出文件
+		--os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / fname):string() .. '.zip', fname, file_dir:string()))
+		local mpq_file_name = fname .. '.mpq'
+		local arc = mpq_open(file_dir / mpq_file_name)
+		if arc then
+			arc:extract(fname, file_dir / fname)
+			arc:close()
+		else
+			print('[失败]: 打开 ' .. mpq_file_name)
+		end
 	end
 	local f = io.open((test_dir / fname):string(), r)
 	local test_file = f:read('*a')
@@ -96,7 +105,17 @@ local function git_fresh(fname)
 		f:write(test_file)
 		f:close()
 		if zip_files[fname] then
-			os.execute(('"%s\\rar" a -ep -inul %s %s'):format((root_dir / 'build'):string(), (file_dir / fname):string() .. '.zip', (file_dir / fname):string(), fname))
+			--压缩文件
+			--os.execute(('"%s\\rar" a -ep -inul %s %s'):format((root_dir / 'build'):string(), (file_dir / fname):string() .. '.zip', (file_dir / fname):string(), fname))
+			local mpq_file_name = fname .. '.mpq'
+			fs.remove(file_dir / mpq_file_name)
+			local arc = mpq_create(file_dir / mpq_file_name)
+			if arc then
+				arc:import(fname, file_dir / fname)
+				arc:close()
+			else
+				print('[失败]: 创建 ' .. mpq_file_name)
+			end
 		end
 		print('[成功]: 更新 ' .. fname)
 	end
@@ -124,6 +143,7 @@ local function main()
 	require 'filesystem'
 	require 'utility'
 	require 'w3x2txt'
+	require 'localization'
 
 	--保存路径
 	git_path	= root_dir
@@ -326,7 +346,16 @@ local function main()
 		local fail_files = {}
 		for _, name in ipairs(files) do
 			if zip_files[name] then
-				os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / name):string() .. '.zip', name, file_dir:string()))
+				--os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / name):string() .. '.zip', name, file_dir:string()))
+				--解压mpq
+				local mpq_file_name = name .. '.mpq'
+				local arc = mpq_open(file_dir / mpq_file_name)
+				if arc then
+					arc:extract(name, file_dir / name)
+					arc:close()
+				else
+					print('[失败]: 打开 ' .. mpq_file_name)
+				end
 				if inmap:import(name, file_dir / name) then
 					--print('[成功]: 导入 ' .. name)
 					count = count + 1
@@ -384,7 +413,7 @@ local function main()
 			local lines = {}
 			table.insert(lines, 'ver = 1.0')
 			table.insert(lines, 'YDWE = D:\\魔兽争霸III\\YDWE1.27.5测试版(全明星)')
-			f:write(table.concat(lines, '\n\r'))
+			f:write(table.concat(lines, '\r\n'))
 			f:close()
 		end
 
@@ -393,7 +422,7 @@ local function main()
 		for name, value in ini:gmatch('(%C-) = (%C+)') do
 			if name == 'YDWE' then
 				local path_len = #(root_dir / 'YDWE'):string() + 2
-				local ydwe_dir = fs.path(value)
+				local ydwe_dir = fs.path(ansi_to_utf8(value))
 				if fs.exists(ydwe_dir) then
 					local function dir_scan(dir)
 						for full_path in dir:list_directory() do
@@ -406,7 +435,7 @@ local function main()
 								if io.load(full_path) ~= io.load(yd_path) then
 									fs.create_directories(yd_path:parent_path())
 									fs.copy_file(full_path, yd_path, true)
-									print('[更新]: ' .. yd_path:string())
+									print('[更新]: ' .. utf8_to_ansi(yd_path:string()))
 								end
 							end
 						end
