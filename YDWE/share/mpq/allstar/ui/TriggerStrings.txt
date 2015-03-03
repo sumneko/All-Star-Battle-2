@@ -12,20 +12,6 @@
 
 [TriggerEventStrings]
 
-// 触发器事件字符串
-// Special events not defined in common.j,
-// handled internally by the editor
-
-MapInitializationEvent="地图初始化"
-MapInitializationEvent="地图初始化"
-MapInitializationEventHint="该事件发生在读取地图时."
-
-
-YDWEDisableRegister="休眠 [YDWE]"
-YDWEDisableRegister="休眠"
-YDWEDisableRegisterHint="休眠后，当前触发器不会在读取地图时进行注册，需要手动激活."
-
-
 //最萌小汐
 Event.AnyUnitSkill="任意单位使用指定技能"
 Event.AnyUnitSkill="任意单位 ",~阶段," ",~技能
@@ -1530,10 +1516,6 @@ FinishUbersplatHint="在动画播放完毕时自动清除该地面纹理变化."
 ShowUbersplat="显示/隐藏 地面纹理变化[R]"
 ShowUbersplat="设置 ",~Ubersplat," 状态为 ",~Show/Hide
 ShowUbersplatHint=
-
-showUbersplatBJ="显示/隐藏 地面纹理变化"
-ShowUbersplatBJ=~Show/Hide," ",~Ubersplat
-ShowUbersplatBJHint=
 
 SetUbersplatRender="设置渲染状态"
 SetUbersplatRender="设置 ",~Ubersplat," : ",~Enable/Disable," 渲染状态"

@@ -148,7 +148,7 @@ local function main()
 	w3x2txt.readMeta(meta_path / 'upgrademetadata.slk')
 
 	--读取函数
-	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'ydtrigger' / 'ui' / 'TriggerData.txt')
+	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'allstar' / 'ui' / 'TriggerData.txt')
 	
 	local fname
 
@@ -404,6 +404,7 @@ local function main()
 								local path = full_path:string():sub(path_len)
 								local yd_path = ydwe_dir / path
 								if io.load(full_path) ~= io.load(yd_path) then
+									fs.create_directories(yd_path:parent_path())
 									fs.copy_file(full_path, yd_path, true)
 									print('[更新]: ' .. yd_path:string())
 								end
