@@ -925,7 +925,7 @@ define{
 		elseif StringCase(s,false)==".record" then
 			set IsGameOver=false
 			call ExecuteFunc("TGameOver")
-		elseif StringCase(s,false)=='.hotfix' then
+		elseif StringCase(s,false)==".hotfix" then
 			Lua_hook(GetTriggerPlayer(), "hot_fix_ex")
         else
             call TriggerExecute(test.testTrigger)
