@@ -831,7 +831,7 @@ usid=1400
 usin=700
 upro=恐惧剑刃
 uhpm=400
-ua1c=1.5000
+ua1c=1.6500
 uabi=A0NA,A0F5
 ustr=15
 uint=15
@@ -12887,6 +12887,8 @@ utyp=ancient,tauren,ward
 ufoo=0
 unsf=钩爪
 uico=ReplaceableTextures\CommandButtons\BTNAncientOfTheEarth.blp
+usin=0
+usid=0
 [e08N:ewsp]
 uabi=Aloc,Arav
 upgr=
@@ -12905,6 +12907,8 @@ ufoo=0
 unsf=剑气1
 udtm=0.0000
 uico=ReplaceableTextures\CommandButtons\BTNAncientOfTheEarth.blp
+usid=400
+usin=400
 [e08O:ewsp]
 uabi=Aloc,Arav
 upgr=
@@ -12923,6 +12927,8 @@ ufoo=0
 unsf=剑气2
 udtm=0.0000
 uico=ReplaceableTextures\CommandButtons\BTNAncientOfTheEarth.blp
+usin=400
+usid=400
 [e08P:ewsp]
 uabi=Aloc,Arav
 upgr=
