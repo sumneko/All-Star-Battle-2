@@ -273,7 +273,7 @@ local function main()
 					local name = full_path:string():sub(path_len)
 					if name:sub(1, 1) ~= '(' and not zip_files[name] then
 						--将文件名保存在files中
-						if name:sub(-4, -1) == '.zip' then
+						if name:sub(-4, -1) == '.mpq' then
 							name = name:sub(1, -5)
 						end
 						table.insert(files, name)
