@@ -547,6 +547,7 @@ library defineLibrary
         <GetLastCreatedTextTag()> = bj_lastCreatedTextTag
         TriggerRegisterTimerEventSingle(a, b) = TriggerRegisterTimerEvent(a, b, false)
         ResetUnitAnimation(u) = SetUnitAnimation(u, "stand")
+        I2R(i) = {(i)}
         //UnitAddItemByIdSwapped(id, u) = UnitAddItemById(u, id)
     }
 
@@ -2926,7 +2927,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=-1
+//TESH.scrollpos=55
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary
 
@@ -2947,10 +2948,107 @@ library playerLibrary initializer Init needs baseLibrary
         static string GetPlayerBaseName(player p){
             return base_name[GetPlayerId(p)]
         }
+        
+        static int gold[]
+        static unit buying_unit = null
+        
+        static void AdjustPlayerStateBJ2(integer delta, player whichPlayer, playerstate whichPlayerState){
+            // If the change was positive, apply the difference to the player's
+            // gathered resources property as well.
+            call AdjustPlayerStateSimpleBJ(whichPlayer, whichPlayerState, delta)
+            if (delta > 0) then
+                if (whichPlayerState == PLAYER_STATE_RESOURCE_GOLD) then
+                    call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_GOLD_GATHERED, delta)
+                    
+                    gold[GetPlayerId(whichPlayer)] = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
+                elseif (whichPlayerState == PLAYER_STATE_RESOURCE_LUMBER) then
+                    call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_LUMBER_GATHERED, delta)
+                endif
+            elseif whichPlayerState == PLAYER_STATE_RESOURCE_GOLD
+                gold[GetPlayerId(whichPlayer)] = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
+            endif
+        }
+        
+        static void SetPlayerStateBJ2(player whichPlayer, playerstate whichPlayerState, integer value){
+            local integer oldValue = GetPlayerState(whichPlayer, whichPlayerState)
+            call AdjustPlayerStateBJ2(value - oldValue, whichPlayer, whichPlayerState)
+        }
+        
+        #define AdjustPlayerStateBJ(i, p, ps) sPlayer.AdjustPlayerStateBJ2(i, p, ps)
+        #define SetPlayerStateBJ(p, ps, i) sPlayer.SetPlayerStateBJ2(p, ps, i)
+        
+        static void FindTrueBuyer(bool find){
+            buying_unit = null
+            
+            if find then
+                player p = null
+                //循环遍历玩家的钱
+                int i = 0
+                loop
+                    exitwhen i > 9
+                    if gold[i] != GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) then
+                        
+                        //认定真实购买者是该玩家
+                        if GetOwningPlayer(GetBuyingUnit()) == Player(i) then
+                            buying_unit = GetBuyingUnit()
+                        elseif UnitAlive(udg_player[i + 1]) and YDWEDistanceBetweenUnits(udg_player[i + 1], GetSellingUnit()) < 1500 then
+                            buying_unit = udg_player[i + 1]
+                        elseif UnitAlive(udg_Pet[i + 1]) and YDWEDistanceBetweenUnits(udg_Pet[i + 1], GetSellingUnit()) < 1500 then
+                            buying_unit = udg_Pet[i + 1]
+                        endif
+                        
+                        p = Player(i)
+                        
+                        debug@ BJDebugMsg("<物品购买者>" + GetPlayerName(p))
+                        
+                        exitwhen true
+                    endif
+                    i ++
+                endloop
+                
+                //如果没有找到购买者,则退钱
+                if buying_unit == null then
+                    //2个眼不退,给当前购买者
+                    if GetItemTypeId(GetSoldItem()) == 'I03X' or GetItemTypeId(GetSoldItem()) == 'I03W' then
+                        buying_unit = GetBuyingUnit()
+                    else
+                        SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, gold[GetPlayerId(p)])
+                        RemoveItem(GetSoldItem())
+                        p = null
+                        return
+                    endif
+                endif
+                
+                gold[i] = GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD)
+                p = null
+            endif
+        }
+        
+        static unit GetBuyingUnit2(){
+            return buying_unit
+        }
+        
+        #define GetBuyingUnit() sPlayer.GetBuyingUnit2()
+        
+        static void FreshPlayerGold(){
+            TimerStart(CreateTimer(), 0, false,\
+                lambda void(){
+                    DestroyTimer(GetExpiredTimer())
+                    int i = 0
+                    loop
+                        exitwhen i > 9
+                        gold[i] = GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD)
+                        i ++
+                    endloop
+                }\
+            )
+        }
 
     endstruct
 
     private void Init(){
+        trigger trg
+    
         int i = 0
         loop
             exitwhen i > 11
@@ -2959,6 +3057,13 @@ library playerLibrary initializer Init needs baseLibrary
             Lua_hook(Player(i), "fresh_name")
             i ++
         endloop
+        
+        //卖出物品
+        trg = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_PAWN_ITEM)
+        TriggerAddCondition(trg, Condition(function sPlayer.FreshPlayerGold))
+        
+        trg = null
     }
 
     #define GetPlayerName(p) sPlayer.GetPlayerName2(p)
@@ -5914,7 +6019,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=292
+//TESH.scrollpos=28
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary
     struct test
@@ -5963,7 +6068,7 @@ library testLibrary initializer Init needs baseLibrary
                 SetUnitX(hero, x)
                 SetUnitY(hero, y)
             elseif s == ".gold" then
-                SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, 999999999)
+                SetPlayerStateBJ(p, PLAYER_STATE_RESOURCE_GOLD, 999999999)
             elseif s == ".skill" then
                 int sid = YDWES2Id(String.GetStr(2))
                 int lv = S2I(String.GetStr(3))
