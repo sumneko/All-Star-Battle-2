@@ -10,7 +10,7 @@ local zip_files = {
 	['war3map.doo'] = true,
 	['War3MapPreview.tga'] = true,
 	--['war3map.wct'] = true,
-	['war3map.w3e'] = true,
+	--['war3map.w3e'] = true,
 	--['war3map.w3a'] = true,
 	--['war3map.w3u'] = true,
 }
@@ -68,6 +68,16 @@ local w3x_txt	= {
 	['war3map.w3e'] = 'w3e',
 }
 
+local real_print = print
+
+local function print(...)
+	local args = {...}
+	for i = 1, #args do
+		args[i] = utf8_to_ansi(tostring(args[i]))
+	end
+	return real_print(table.unpack(args))
+end
+
 local function git_fresh(fname)
 	if ext_ignore[fname] or fname:sub(-4) == '.lua' or fname:sub(-5) == '.luac' then
 		return
@@ -79,7 +89,7 @@ local function git_fresh(fname)
 	end
 	if zip_files[fname] then
 		fs.remove(file_dir / fname)
-		--½âÑ¹³öÎÄ¼ş
+		--è§£å‹å‡ºæ–‡ä»¶
 		--os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / fname):string() .. '.zip', fname, file_dir:string()))
 		local mpq_file_name = fname .. '.mpq'
 		local arc = mpq_open(file_dir / mpq_file_name)
@@ -87,7 +97,7 @@ local function git_fresh(fname)
 			arc:extract(fname, file_dir / fname)
 			arc:close()
 		else
-			print('[Ê§°Ü]: ´ò¿ª ' .. mpq_file_name)
+			print('[å¤±è´¥]: æ‰“å¼€ ' .. mpq_file_name)
 		end
 	end
 	local f = io.open((test_dir / fname):string(), r)
@@ -105,7 +115,7 @@ local function git_fresh(fname)
 		f:write(test_file)
 		f:close()
 		if zip_files[fname] then
-			--Ñ¹ËõÎÄ¼ş
+			--å‹ç¼©æ–‡ä»¶
 			--os.execute(('"%s\\rar" a -ep -inul %s %s'):format((root_dir / 'build'):string(), (file_dir / fname):string() .. '.zip', (file_dir / fname):string(), fname))
 			local mpq_file_name = fname .. '.mpq'
 			fs.remove(file_dir / mpq_file_name)
@@ -114,10 +124,10 @@ local function git_fresh(fname)
 				arc:import(fname, file_dir / fname)
 				arc:close()
 			else
-				print('[Ê§°Ü]: ´´½¨ ' .. mpq_file_name)
+				print('[å¤±è´¥]: åˆ›å»º ' .. mpq_file_name)
 			end
 		end
-		print('[³É¹¦]: ¸üĞÂ ' .. fname)
+		print('[æˆåŠŸ]: æ›´æ–° ' .. fname)
 	end
 	if zip_files[fname] then
 		fs.remove(file_dir / fname)
@@ -126,7 +136,7 @@ end
 
 local function main()
 
-	--¼ì²é²ÎÊı arg[1]ÎªµØÍ¼, arg[2]Îª±¾µØÂ·¾¶
+	--æ£€æŸ¥å‚æ•° arg[1]ä¸ºåœ°å›¾, arg[2]ä¸ºæœ¬åœ°è·¯å¾„
 	local flag_newmap
 	
 	if (not arg) or (#arg < 2) then
@@ -136,7 +146,7 @@ local function main()
 	input_map  = flag_newmap and (arg[1] .. 'build\\map.w3x') or arg[1]
 	root_dir   = flag_newmap and arg[1] or arg[2]
 	
-	--Ìí¼ÓrequireËÑÑ°Â·¾¶
+	--æ·»åŠ requireæœå¯»è·¯å¾„
 	package.path = package.path .. ';' .. root_dir .. 'src\\?.lua'
 	package.cpath = package.cpath .. ';' .. root_dir .. 'build\\?.dll'
 	require 'luabind'
@@ -145,7 +155,7 @@ local function main()
 	require 'w3x2txt'
 	require 'localization'
 
-	--±£´æÂ·¾¶
+	--ä¿å­˜è·¯å¾„
 	git_path	= root_dir
 	input_map	= fs.path(input_map)
 	root_dir	= fs.path(root_dir)
@@ -157,7 +167,7 @@ local function main()
 	test_dir	= root_dir / 'test'
 	output_map	= test_dir / input_map:filename():string()
 
-	--¶ÁÈ¡meta±í
+	--è¯»å–metaè¡¨
 	w3x2txt.readMeta(meta_path / 'abilitybuffmetadata.slk')
 	w3x2txt.readMeta(meta_path / 'abilitymetadata.slk')
 	w3x2txt.readMeta(meta_path / 'destructablemetadata.slk')
@@ -167,19 +177,19 @@ local function main()
 	w3x2txt.readMeta(meta_path / 'upgradeeffectmetadata.slk')
 	w3x2txt.readMeta(meta_path / 'upgrademetadata.slk')
 
-	--¶ÁÈ¡º¯Êı
+	--è¯»å–å‡½æ•°
 	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'allstar' / 'ui' / 'TriggerData.txt')
 	
 	local fname
 
 	if not flag_newmap then
-		--¸´ÖÆÒ»·İµØÍ¼
+		--å¤åˆ¶ä¸€ä»½åœ°å›¾
 		pcall(fs.copy_file, input_map, output_map, true)
 
-		--µ¼³öµØÍ¼Í·
+		--å¯¼å‡ºåœ°å›¾å¤´
 		local map_f = io.open(output_map:string(), 'rb')
 		if map_f then
-			print('[³É¹¦]: ´ò¿ª ' .. input_map:string())
+			print('[æˆåŠŸ]: æ‰“å¼€ ' .. input_map:string())
 			local head = map_f:read('*a'):match('(HM3W.-MPQ)')
 			map_f:close()
 			local head_f = io.open((test_dir / '(map_head)'):string(), 'wb')
@@ -187,38 +197,38 @@ local function main()
 			head_f:close()
 			git_fresh('(map_head)')
 		else
-			print('[Ê§°Ü]: ´ò¿ª ' .. input_map:string())
+			print('[å¤±è´¥]: æ‰“å¼€ ' .. input_map:string())
 			return
 		end
 
-		--±£´æµØÍ¼Ãû×Ö
+		--ä¿å­˜åœ°å›¾åå­—
 		local map_name = output_map:filename():string()
 		local map_name_f = io.open((test_dir / '(map_name)'):string(), 'wb')
 		map_name_f:write(map_name)
 		map_name_f:close()
 		git_fresh('(map_name)')
 
-		--´ò¿ªµØÍ¼
+		--æ‰“å¼€åœ°å›¾
 		local inmap = mpq_open(output_map)
 		if inmap then
-			print('[³É¹¦]: ´ò¿ª ' .. input_map:string())
+			print('[æˆåŠŸ]: æ‰“å¼€ ' .. input_map:string())
 		else
-			print('[Ê§°Ü]: ´ò¿ª ' .. input_map:string())
+			print('[å¤±è´¥]: æ‰“å¼€ ' .. input_map:string())
 			return
 		end
 		
-		--µ¼³ölistfile
+		--å¯¼å‡ºlistfile
 		fname = '(listfile)'
 		if inmap:extract(fname, test_dir / fname) then
-			print('[³É¹¦]: µ¼³ö ' .. fname)
+			print('[æˆåŠŸ]: å¯¼å‡º ' .. fname)
 		else
-			print('[Ê§°Ü]: µ¼³ö ' .. fname)
+			print('[å¤±è´¥]: å¯¼å‡º ' .. fname)
 			return
 		end
 
-		--´ò¿ªlistfile
+		--æ‰“å¼€listfile
 		for line in io.lines((test_dir / fname):string()) do
-			--µ¼³ö²¢¸üĞÂlistfileÖĞÁĞ¾ÙµÄÃ¿Ò»¸öÎÄ¼ş
+			--å¯¼å‡ºå¹¶æ›´æ–°listfileä¸­åˆ—ä¸¾çš„æ¯ä¸€ä¸ªæ–‡ä»¶
 			local dir = fs.path(test_dir:string() .. '\\' .. line)
 			local map_dir = fs.path(file_dir:string() .. '\\' .. line)
 			local dir_par = dir:parent_path()
@@ -226,17 +236,17 @@ local function main()
 			fs.create_directories(dir_par)
 			fs.create_directories(map_dir_par)
 			if inmap:extract(line, dir) then
-				--print('[³É¹¦]: µ¼³ö ' .. line)
+				--print('[æˆåŠŸ]: å¯¼å‡º ' .. line)
 			else
-				print('[Ê§°Ü]: µ¼³ö ' .. line)
+				print('[å¤±è´¥]: å¯¼å‡º ' .. line)
 				return
 			end
 		end
 
-		--¶ÁÈ¡wts
+		--è¯»å–wts
 		w3x2txt.read_wts(test_dir / 'war3map.wts')
 
-		--×ª»»txt
+		--è½¬æ¢txt
 		for file_name, has_level in pairs(obj_txt) do
 			w3x2txt.obj2txt(test_dir / file_name, test_dir / (file_name .. '.txt'), has_level)
 		end
@@ -245,10 +255,10 @@ local function main()
 			w3x2txt[func_name .. '2txt'](test_dir / file_name, test_dir / (file_name .. '.txt'))
 		end
 
-		--¸üĞÂwts
+		--æ›´æ–°wts
 		w3x2txt.fresh_wts(test_dir / 'war3map.wts')
 
-		--¸üĞÂgit
+		--æ›´æ–°git
 		for line in io.lines((test_dir / fname):string()) do
 			if obj_txt[line] == nil and not w3x_txt[line] then
 				git_fresh(line)
@@ -259,7 +269,7 @@ local function main()
 		
 		inmap:close()
 	else
-		--ËÑË÷dirÏÂµÄËùÓĞÎÄ¼ş,µ¼ÈëµØÍ¼
+		--æœç´¢dirä¸‹çš„æ‰€æœ‰æ–‡ä»¶,å¯¼å…¥åœ°å›¾
 		local files = {}
 
 		local path_len = #file_dir:string() + 2
@@ -267,12 +277,12 @@ local function main()
 		local function dir_scan(dir)
 			for full_path in dir:list_directory() do
 				if fs.is_directory(full_path) then
-					-- µİ¹é´¦Àí
+					-- é€’å½’å¤„ç†
 					dir_scan(full_path)
 				else
 					local name = full_path:string():sub(path_len)
 					if name:sub(1, 1) ~= '(' and not zip_files[name] then
-						--½«ÎÄ¼şÃû±£´æÔÚfilesÖĞ
+						--å°†æ–‡ä»¶åä¿å­˜åœ¨filesä¸­
 						if name:sub(-4, -1) == '.mpq' then
 							name = name:sub(1, -5)
 						end
@@ -284,7 +294,7 @@ local function main()
 
 		dir_scan(file_dir)
 
-		--Éú³ÉĞÂµÄwar3map.imp
+		--ç”Ÿæˆæ–°çš„war3map.imp
 		fname = 'war3map.imp'
 		local file_path = test_dir / fname
 		local file = io.open(file_path:string(), 'wb')
@@ -302,20 +312,20 @@ local function main()
 
 		local map_dir = root_dir / 'build' / 'map.w3x'
 
-		--»ñÈ¡µØÍ¼Ãû×Ö
+		--è·å–åœ°å›¾åå­—
 		local map_name_f = io.open((file_dir / '(map_name)'):string(), 'rb')
 		local map_name = map_name_f:read('*a')
 		map_name_f:close()
 
-		--Çå¿ÕÓë´´½¨Ä¿Â¼
+		--æ¸…ç©ºä¸åˆ›å»ºç›®å½•
 		fs.create_directories(root_dir / 'output')
 		
 		local new_dir = root_dir / 'output' / map_name
 
-		--½«Ä£°åµØÍ¼¸´ÖÆµ½outputÂ·¾¶
+		--å°†æ¨¡æ¿åœ°å›¾å¤åˆ¶åˆ°outputè·¯å¾„
 		pcall(fs.copy_file, map_dir, new_dir, true)
 		
-		--ĞŞ¸ÄÎÄ¼şÍ·
+		--ä¿®æ”¹æ–‡ä»¶å¤´
 		local head_f = io.open((file_dir / '(map_head)'):string(), 'rb')
 		local head_hex = head_f:read('*a')
 		head_f:close()
@@ -326,19 +336,19 @@ local function main()
 
 		local map_f = io.open(new_dir:string(), 'wb')
 		if not map_f then
-			print '[´íÎó]: µØÍ¼ÎÄ¼ş±»Õ¼ÓÃ,ÏÈ°Ñ±à¼­Æ÷¹ØµôÔÙ´ò°üµØÍ¼°¡±¿µ°!'
+			print '[é”™è¯¯]: åœ°å›¾æ–‡ä»¶è¢«å ç”¨,å…ˆæŠŠç¼–è¾‘å™¨å…³æ‰å†æ‰“åŒ…åœ°å›¾å•Šç¬¨è›‹!'
 			return
 		end
 		map_f:write(map_hex)
 		map_f:close()
 
-		--½«ÎÄ¼şÈ«²¿µ¼Èë»ØÈ¥
+		--å°†æ–‡ä»¶å…¨éƒ¨å¯¼å…¥å›å»
 		local inmap = mpq_open(new_dir)
 
 		if inmap then
-			print('[³É¹¦]: ´ò¿ª ' .. new_dir:string())
+			print('[æˆåŠŸ]: æ‰“å¼€ ' .. new_dir:string())
 		else
-			print('[Ê§°Ü]: ´ò¿ª ' .. new_dir:string())
+			print('[å¤±è´¥]: æ‰“å¼€ ' .. new_dir:string())
 			return
 		end
 
@@ -347,51 +357,51 @@ local function main()
 		for _, name in ipairs(files) do
 			if zip_files[name] then
 				--os.execute(('"%s\\unrar" x -o+ -inul %s %s %s'):format((root_dir / 'build'):string(), (file_dir / name):string() .. '.zip', name, file_dir:string()))
-				--½âÑ¹mpq
+				--è§£å‹mpq
 				local mpq_file_name = name .. '.mpq'
 				local arc = mpq_open(file_dir / mpq_file_name)
 				if arc then
 					arc:extract(name, file_dir / name)
 					arc:close()
 				else
-					print('[Ê§°Ü]: ´ò¿ª ' .. mpq_file_name)
+					print('[å¤±è´¥]: æ‰“å¼€ ' .. mpq_file_name)
 				end
 				if inmap:import(name, file_dir / name) then
-					--print('[³É¹¦]: µ¼Èë ' .. name)
+					--print('[æˆåŠŸ]: å¯¼å…¥ ' .. name)
 					count = count + 1
 				else
-					print('[Ê§°Ü]: µ¼Èë ' .. name)
+					print('[å¤±è´¥]: å¯¼å…¥ ' .. name)
 					table.insert(fail_files, name)
 				end
 				fs.remove(file_dir / name)
 			else
-				--¼ì²éÊÇ·ñÒª×ª»»³Éobj
+				--æ£€æŸ¥æ˜¯å¦è¦è½¬æ¢æˆobj
 				if obj_txt[name:sub(1, -5)] ~= nil then
 					name	= name:sub(1, -5)
 					w3x2txt.txt2obj(file_dir / (name .. '.txt'), test_dir / name, obj_txt[name])
 					if inmap:import(name, test_dir / name) then
-						--print('[³É¹¦]: µ¼Èë ' .. name)
+						--print('[æˆåŠŸ]: å¯¼å…¥ ' .. name)
 						count = count + 1
 					else
-						print('[Ê§°Ü]: µ¼Èë ' .. name)
+						print('[å¤±è´¥]: å¯¼å…¥ ' .. name)
 						table.insert(fail_files, name)
 					end
 				elseif w3x_txt[name:sub(1, -5)] then
 					name	= name:sub(1, -5)
 					w3x2txt['txt2' .. w3x_txt[name]](file_dir / (name .. '.txt'), test_dir / name, obj_txt[name])
 					if inmap:import(name, test_dir / name) then
-						--print('[³É¹¦]: µ¼Èë ' .. name)
+						--print('[æˆåŠŸ]: å¯¼å…¥ ' .. name)
 						count = count + 1
 					else
-						print('[Ê§°Ü]: µ¼Èë ' .. name)
+						print('[å¤±è´¥]: å¯¼å…¥ ' .. name)
 						table.insert(fail_files, name)
 					end
 				else
 					if inmap:import(name, file_dir / name) then
-						--print('[³É¹¦]: µ¼Èë ' .. name)
+						--print('[æˆåŠŸ]: å¯¼å…¥ ' .. name)
 						count = count + 1
 					else
-						print('[Ê§°Ü]: µ¼Èë ' .. name)
+						print('[å¤±è´¥]: å¯¼å…¥ ' .. name)
 						table.insert(fail_files, name)
 					end
 				end
@@ -401,18 +411,18 @@ local function main()
 
 		inmap:close()
 
-		print('[³É¹¦]: Ò»¹²µ¼ÈëÁË ' .. count .. ' ¸öÎÄ¼ş')
+		print('[æˆåŠŸ]: ä¸€å…±å¯¼å…¥äº† ' .. count .. ' ä¸ªæ–‡ä»¶')
 		if #fail_files > 0 then
-			print(('[´íÎó]: ÒÔÉÏ %s ¸öÎÄ¼şµ¼ÈëÊ§°Ü!!!'):format(#fail_files))
+			print(('[é”™è¯¯]: ä»¥ä¸Š %s ä¸ªæ–‡ä»¶å¯¼å…¥å¤±è´¥!!!'):format(#fail_files))
 		end
 
-		--¶ÁÈ¡»òÉú³ÉiniÎÄ¼ş
+		--è¯»å–æˆ–ç”Ÿæˆiniæ–‡ä»¶
 		local config_dir = root_dir / 'config.ini'
 		if not fs.exists(config_dir) then
 			local f = io.open(config_dir:string(), 'wb')
-			local lines = {}
-			table.insert(lines, 'ver = 1.0')
-			table.insert(lines, 'YDWE = D:\\Ä§ÊŞÕù°ÔIII\\YDWE1.27.5²âÊÔ°æ(È«Ã÷ĞÇ)')
+			local lines = {'\xEF\xBB\xBF'}
+			table.insert(lines, 'ver = 1.1')
+			table.insert(lines, 'YDWE = D:\\é­”å…½äº‰éœ¸III\\YDWE1.28.4æµ‹è¯•ç‰ˆ(å…¨æ˜æ˜Ÿ)')
 			f:write(table.concat(lines, '\r\n'))
 			f:close()
 		end
@@ -422,12 +432,12 @@ local function main()
 		for name, value in ini:gmatch('(%C-) = (%C+)') do
 			if name == 'YDWE' then
 				local path_len = #(root_dir / 'YDWE'):string() + 2
-				local ydwe_dir = fs.path(ansi_to_utf8(value))
+				local ydwe_dir = fs.path(value)
 				if fs.exists(ydwe_dir) then
 					local function dir_scan(dir)
 						for full_path in dir:list_directory() do
 							if fs.is_directory(full_path) then
-								-- µİ¹é´¦Àí
+								-- é€’å½’å¤„ç†
 								dir_scan(full_path)
 							else
 								local path = full_path:string():sub(path_len)
@@ -435,21 +445,21 @@ local function main()
 								if io.load(full_path) ~= io.load(yd_path) then
 									fs.create_directories(yd_path:parent_path())
 									fs.copy_file(full_path, yd_path, true)
-									print('[¸üĞÂ]: ' .. utf8_to_ansi(yd_path:string()))
+									print('[æ›´æ–°]: ' .. yd_path:string())
 								end
 							end
 						end
 					end
 					dir_scan(root_dir / 'YDWE')
 				else
-					print('[´íÎó]: YDWEÂ·¾¶²»´æÔÚ!ÇëĞŞ¸Äconfig.ini')
+					print('[é”™è¯¯]: YDWEè·¯å¾„ä¸å­˜åœ¨!è¯·ä¿®æ”¹config.ini')
 				end
 			end
 		end
 
 	end
 	
-	print('[Íê±Ï]: ÓÃÊ± ' .. os.clock() .. ' Ãë') 
+	print('[å®Œæ¯•]: ç”¨æ—¶ ' .. os.clock() .. ' ç§’') 
 
 end
 
