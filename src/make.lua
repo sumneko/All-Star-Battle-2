@@ -157,8 +157,8 @@ local function main()
 
 	--保存路径
 	git_path	= root_dir
-	input_map	= fs.path(input_map)
-	root_dir	= fs.path(root_dir)
+	input_map	= fs.path(ansi_to_utf8(input_map))
+	root_dir	= fs.path(ansi_to_utf8(root_dir))
 	file_dir	= root_dir / 'map'
 	meta_path	= root_dir / 'meta'
 	
