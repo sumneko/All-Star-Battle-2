@@ -45,6 +45,10 @@
         if not t then
 	        return
         end
+        if player.self.origin_skill_text then
+	        japi.EXSetAbilityDataString(ab, lv, 218, t.origin_text)
+	        return
+        end
         for i = 1 , 10 do
             local func = t[i * 2 - 1]
             if not func then
@@ -91,6 +95,7 @@
         local start = 1
         local t = {}
         local flag
+        t.origin_text = te
 		te = string.gsub(te, "%%", "%%%%") --以免文本中本来包含的%符号被当做匹配符
         while start do
             start = string.find(te, "×", start)
@@ -126,3 +131,9 @@
             return t
         end
     end
+
+	--是否显示原始伤害公式
+	function cmd.origin_skill_text(p)
+		p.origin_skill_text = not p.origin_skill_text
+		p:maid_chat(('已%s动态技能文本'):format(p.origin_skill_text and '关闭' or '开启'))
+	end
