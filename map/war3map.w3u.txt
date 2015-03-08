@@ -199,7 +199,7 @@ uori=0
 utub=性能综合型
 uhrt=none
 uhpr=0.0000
-usnd=HeroWarden
+usnd=
 [Hmkg]
 unam=盾卫
 umdl=war3mapImported\Captain Garithos.mdl

@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=441
+//TESH.scrollpos=195
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -226,7 +226,6 @@ endlibrary
 		grabtree = 852511,
 		attack = 851983,
 		attackonce = 851985,
-		smart = 851988,
 		setrally = 851980,
 		stop = 851972,
 		holdposition = 851993,
@@ -2850,7 +2849,7 @@ library mathLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=-1
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library stringLibrary initializer Init needs baseLibrary
 
@@ -3954,7 +3953,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=617
+//TESH.scrollpos=2
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5626,7 +5625,7 @@ library effectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=-1
+//TESH.scrollpos=193
 //TESH.alwaysfold=0
 library soundLibrary initializer Init needs baseLibrary
     struct Sound
@@ -5781,6 +5780,102 @@ library soundLibrary initializer Init needs baseLibrary
                 end
             )
         ?>
+        
+        /*
+        单位回应
+        */
+        
+        static void InitUnitResponses(int uid, int restype, string files){
+            int key
+            if restype == 1 then
+                key = StringHash("选中回应")
+            elseif restype == 2 then
+                key = StringHash("移动回应")
+            elseif restype == 3 then
+                key = StringHash("攻击回应")
+            endif
+            
+            int count = String.Split(files, ";")
+            SaveInteger(YDHT, uid, key, count)
+            
+            int i = 1
+            loop
+                exitwhen i > count
+                SaveStr(YDHT, uid, key + i, String.GetStr(i))
+                i ++
+            endloop
+        }
+        
+        static real last_UnitResponseTime[]
+        
+        static void PlayUnitResponses(int key){
+            int i = GetPlayerId(GetTriggerPlayer())
+            int uid = GetUnitTypeId(GetTriggerUnit())
+            
+            //音效数量
+            int count = LoadInteger(YDHT, uid, key)
+            if count == 0 then
+                return
+            endif
+            
+            //随机取出一个音效
+            string file = LoadStr(YDHT, uid, key + GetRandomInt(1, count))
+            
+            //创建音效
+            sound snd = CreateSound(file, false, false, false, 10, 10, "HeroAcksEAX")
+            if Player(i) == GetLocalPlayer() then
+                StartSound(snd)
+            endif
+            
+            //记录播放时间
+            last_UnitResponseTime[i] = sys.getTime() + GetSoundDuration(snd) * 0.001
+            
+            //音效回收
+            KillSound(snd)
+            
+            snd = null
+        }
+        
+        static void UnitResponses_Init(){
+            trigger trg = CreateTrigger()
+            
+            TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_SELECTED)
+            TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+            TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+            
+            TriggerAddCondition(trg, Condition(\
+                lambda void(){
+                    int i = GetPlayerId(GetTriggerPlayer())
+                    
+                    //上次的单位回应是否还在播放
+                    if sys.getTime() < last_UnitResponseTime[i] then
+                        return
+                    endif
+                    
+                    if GetTriggerEventId() == EVENT_PLAYER_UNIT_SELECTED then
+                        //选中回应
+                        PlayUnitResponses(StringHash("选中回应"))
+                    elseif not Unit.IsOrderedByScript then
+                        //指令不是由触发器发布的
+                        int order = GetIssuedOrderId()
+                        if order == OrderId("move") then
+                            PlayUnitResponses(StringHash("移动回应"))
+                        elseif order == OrderId("attack") then
+                            PlayUnitResponses(StringHash("攻击回应"))
+                        elseif order == OrderId("smart") then
+                            //右键点击
+                            if IsUnitEnemy(GetOrderTargetUnit(), GetTriggerPlayer()) then
+                                PlayUnitResponses(StringHash("攻击回应"))
+                            else
+                                PlayUnitResponses(StringHash("移动回应"))
+                            endif
+                        endif
+                    endif
+                }\
+            ))
+            
+            trg = null
+        }
 
     endstruct
 
@@ -5795,6 +5890,7 @@ library soundLibrary initializer Init needs baseLibrary
         )
         */
         Sound.KillSound_Init()
+        Sound.UnitResponses_Init()
     }
 endlibrary
 ########
@@ -46155,6 +46251,9 @@ endfunction
 
 ########
 ########
+
+########
+########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
@@ -47066,6 +47165,12 @@ endfunction
     update('war3map.j',
         function(content)
             content = content:gsub('String2OrderIdBJ%(%s-%"(%a+)%"%s-%)',
+                function(s)
+                    return order2id[s]
+                end
+            )
+            
+            content = content:gsub('OrderId%(%s-%"(%a+)%"%s-%)',
                 function(s)
                     return order2id[s]
                 end

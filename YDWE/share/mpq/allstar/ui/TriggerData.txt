@@ -407,6 +407,7 @@ itemPickDrop=0,0,0,获得还是丢弃,integer
 add_remove=0,0,0,添加或移除,boolean
 crit_crited=0,0,0,暴击模块对象,integer
 hit_dodg=0,0,0,命中闪躲模块对象,integer
+unit_response_type=0,0,0,单位回应类型,integer
 
 
 //***************************************************************************
@@ -479,9 +480,13 @@ crit_crited_crited=0,crit_crited,1,被暴击
 hit_dodg_hit=0,hit_dodg,0,命中
 hit_dodg_dodg=0,hit_dodg,1,闪躲
 
+unit_response_type1=0,unit_response_type,1,选中回应
+unit_response_type2=0,unit_response_type,2,移动回应
+unit_response_type3=0,unit_response_type,3,攻击回应
+
 //YDWE 修改属性
 bonusTypeC=0,bonusType,3,攻击
-bonusTypeD=0,bonusType,2,防御(%)
+bonusTypeD=0,bonusType,2,防御(*0.01)
 bonusTypeA=0,bonusType,0,生命上限
 bonusTypeB=0,bonusType,1,魔法上限
 bonusTypeE=0,bonusType,4,攻击速度
@@ -4099,6 +4104,11 @@ _Unit.ExtraMoveSpeed_Category=TC_MU_UNIT
 Item.Formula=0,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,itemcode,integer
 _Item.Formula_Defaults=_,_,_,_,ches,ches,ches,ches,0
 _Item.Formula_Category=TC_MU_ITEM
+
+//音效库
+Sound.InitUnitResponses=0,unitcode,unit_response_type,StringExt
+_Sound.InitUnitResponses_Defaults=_,unit_response_type1,_
+_Sound.InitUnitResponses_Category=TC_MU_SOUND
 
 //过程库
 process.Create2=0,unit,string,integer,boolean
