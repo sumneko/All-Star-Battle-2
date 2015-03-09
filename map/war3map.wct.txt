@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=416
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -451,7 +451,15 @@ endlibrary
         data.hero_name      = meta.Propernames:match '([^%,]+)'
         data.primary_name   = primary_names[meta.Primary]
         data.range_name     = meta.weapTp1 == 'normal' and '近战' or meta.rangeN1
-        local instruction   = hero_type_instr:gsub('%%(.-)%%', function(name) return data[name] end)
+        local instruction   = hero_type_instr:gsub('%%(.-)%%',
+            function(name)
+                local s = data[name]
+                if tonumber(s) and s:match '%.' then
+                    s = ('%0.3f'):format(s)
+                end
+                return s
+            end
+        )
 
         table.insert(hero_types_icons, ('set udg_touxiang[%d] = %q'):format(i, data.Art))
         table.insert(hero_types_texts, ('set udg_HeoZiFuChuan[%d] = "%s"'):format(i, instruction))
@@ -3795,7 +3803,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=2
+//TESH.scrollpos=1313
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
