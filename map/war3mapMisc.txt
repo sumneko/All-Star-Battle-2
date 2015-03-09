@@ -29,12 +29,13 @@ DamageBonusMagic=0.50,0.75,2.00,1.00,1.00,0.70,0.05,0.25
 MinUnitSpeed=0.0
 DamageBonusNormal=1.50,1.20,0.80,0.70,1.00,1.00,0.05,1.00
 DamageBonusSiege=0.50,0.75,1.20,1.50,1.00,0.70,0.05,1.50
-AgiDefenseBonus=0.2
+AgiDefenseBonus=0.0
 IntRegenBonus=0.0
 DefenseArmor=0.05
 SummonedKillFactor=0.0
 ReactionDelay=0.0
 StrRegenBonus=0.0
+AgiDefenseBase=0.0
 
 [InfoPanel]
 SpeedAverage=340.0
