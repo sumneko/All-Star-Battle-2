@@ -8892,7 +8892,6 @@ umvr=3.0000
 utub=压制远程的物理攻击型
 uhpr=0.0000
 uhrt=none
-usnd=
 [H008:Hmkg]
 unam=灭龙魔导士
 usnd=
