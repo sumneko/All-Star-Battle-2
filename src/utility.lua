@@ -40,7 +40,7 @@ function mpq_create(path, max_file_count)
 end
 
 function io.load(file_path)
-	local f, e = io.open(utf8_to_ansi(file_path:string()), "rb")
+	local f, e = io.open(file_path:string(), "rb")
 
 	if f then
 		local content	= f:read 'a'
@@ -52,7 +52,7 @@ function io.load(file_path)
 end
 
 function io.save(file_path, content)
-	local f, e = io.open(utf8_to_ansi(file_path:string()), "wb")
+	local f, e = io.open(file_path:string(), "wb")
 
 	if f then
 		f:write(content)

@@ -9,3 +9,9 @@ end
 function ansi_to_utf8(str)
 	return i18n.ansi_to_utf8(str, cm)
 end
+
+local real_io_open = io.open
+
+function io.open(path, ...)
+	return real_io_open(utf8_to_ansi(path), ...)
+end
