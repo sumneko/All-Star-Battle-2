@@ -5477,7 +5477,7 @@ library effectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=193
+//TESH.scrollpos=223
 //TESH.alwaysfold=0
 library soundLibrary initializer Init needs baseLibrary
     struct Sound
@@ -5650,12 +5650,22 @@ library soundLibrary initializer Init needs baseLibrary
             int count = String.Split(files, ";")
             SaveInteger(YDHT, uid, key, count)
             
+            sound snd
+            
             int i = 1
             loop
                 exitwhen i > count
                 SaveStr(YDHT, uid, key + i, String.GetStr(i))
+                
+                //预播放
+                snd = CreateSound(String.GetStr(i), false, false, false, 10, 10, "HeroAcksEAX")
+                SetSoundVolume(snd, 0)
+                StartSound(snd)
+                KillSoundWhenDone(snd)
                 i ++
             endloop
+            
+            snd = null
         }
         
         static real last_UnitResponseTime[]
@@ -5670,8 +5680,14 @@ library soundLibrary initializer Init needs baseLibrary
                 return
             endif
             
-            //随机取出一个音效
-            string file = LoadStr(YDHT, uid, key + GetRandomInt(1, count))
+            //按顺序取出一个音效
+            int index = LoadInteger(YDHT, key, i) + 1
+            if index > count then
+                index = 1
+            endif
+            SaveInteger(YDHT, key, i, index)
+            
+            string file = LoadStr(YDHT, uid, key + index)
             
             //创建音效
             sound snd = CreateSound(file, false, false, false, 10, 10, "HeroAcksEAX")
@@ -5706,7 +5722,10 @@ library soundLibrary initializer Init needs baseLibrary
                     
                     if GetTriggerEventId() == EVENT_PLAYER_UNIT_SELECTED then
                         //选中回应
-                        PlayUnitResponses(StringHash("选中回应"))
+                        if i == 15 or GetOwningPlayer(GetTriggerUnit()) == GetTriggerPlayer() then
+                            //选中中立英雄(选人区)或自己的英雄才会有回应
+                            PlayUnitResponses(StringHash("选中回应"))
+                        endif
                     elseif not Unit.IsOrderedByScript then
                         //指令不是由触发器发布的
                         int order = GetIssuedOrderId()
@@ -5716,7 +5735,7 @@ library soundLibrary initializer Init needs baseLibrary
                             PlayUnitResponses(StringHash("攻击回应"))
                         elseif order == OrderId("smart") then
                             //右键点击
-                            if IsUnitEnemy(GetOrderTargetUnit(), GetTriggerPlayer()) then
+                            if GetTriggerEventId() == EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER and IsUnitEnemy(GetOrderTargetUnit(), GetTriggerPlayer()) then
                                 PlayUnitResponses(StringHash("攻击回应"))
                             else
                                 PlayUnitResponses(StringHash("移动回应"))
