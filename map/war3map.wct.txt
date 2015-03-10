@@ -3803,7 +3803,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1313
+//TESH.scrollpos=622
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4402,23 +4402,22 @@ library unitLibrary initializer Init needs bakaLibrary
                     Unit.DummySkill(GetOwningPlayer(u), u, 1, 'A0PY')
                 endif
 
+                timer t = LoadTimerHandle(YDHT, h, StringHash("硬直计时器"))
+
                 if not LoadBoolean(YDHT, h, StringHash("已注册硬直事件")) then
                     SaveBoolean(YDHT, h, StringHash("已注册硬直事件"), true)
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_DAMAGED)
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_ISSUED_ORDER)
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_ISSUED_POINT_ORDER)
                     TriggerRegisterUnitEvent(SetHard_trg, u, EVENT_UNIT_ISSUED_TARGET_ORDER)
-                endif
 
-                timer t = LoadTimerHandle(YDHT, h, StringHash("硬直计时器"))
-                if t == null then
                     t = CreateTimer()
                     SaveTimerHandle(YDHT, h, StringHash("硬直计时器"), t)
                     SaveUnitHandle(YDHT, GetHandleId(t), 0, u)
                 endif
+
                 SaveBoolean(YDHT, h, StringHash("是否处于硬直状态"), true)
 
-                int th = GetHandleId(t)
                 TimerStart(t, time, false, \
                     lambda void(){
                         int th = GetHandleId(GetExpiredTimer())
@@ -4429,6 +4428,7 @@ library unitLibrary initializer Init needs bakaLibrary
                         u = null
                     }\
                 )
+
                 if LoadInteger(YDHT, h, StringHash("全局暂停计数")) != 0 then
                     PauseTimer(t)
                 endif
@@ -4443,11 +4443,13 @@ library unitLibrary initializer Init needs bakaLibrary
                         unit u = GetTriggerUnit()
                         int h = GetHandleId(u)
                         if LoadBoolean(YDHT, h, StringHash("是否处于硬直状态")) and GetUnitAbilityLevel(u, 'B02O') == 0 and GetUnitAbilityLevel(u, 'BPSE') == 0 then
-                            DisableTrigger(GetTriggeringTrigger())
-                            PauseUnit(u, true)
-                            PauseUnit(u, false)
+                            DisableTrigger(SetHard_trg)
+                            if not IsUnitPaused(u) then
+                                PauseUnit(u, true)
+                                PauseUnit(u, false)
+                            endif
                             Unit.DummySkill(GetOwningPlayer(u), u, 1, 'A0PY')
-                            EnableTrigger(GetTriggeringTrigger())
+                            EnableTrigger(SetHard_trg)
                         endif
                         u = null
                     endif
