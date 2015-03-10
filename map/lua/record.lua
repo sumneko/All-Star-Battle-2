@@ -607,9 +607,11 @@
 		end
 
 		p:setRecord('节操', p:getRecord('节操') - 1000)
+		p:saveRecord()
 
 		p.cheat_marks[dest:get()] = true
 		dest:setRecord('cht', dest:getRecord('cht') + 1)
+		dest:saveRecord()
 		
 		if game.is_replay == 'false' then
 			storm.save(cmd.path_cheat_mark, player.self:getRecord 'cht')
