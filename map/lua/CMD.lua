@@ -305,6 +305,8 @@
 		cmd.dir_ansi_errors		= '全明星战役\\错误报告\\' .. cmd.ver_name .. '\\'
 		cmd.dir_ansi_dynamic	= '全明星战役\\动态脚本\\'
 
+		cmd.path_cheat_mark	= 'Maps\\download\\TurtleRock.w3m'
+
 		--鐩墠storm.save鍑芥暟涓嶈兘鍒涘缓鐩綍,鍏堢敤jass鍑芥暟杩涜鍒涘缓
 		jass.PreloadGenEnd(cmd.dir_ansi_hot_fix)
 		jass.PreloadGenEnd(cmd.dir_ansi_account)

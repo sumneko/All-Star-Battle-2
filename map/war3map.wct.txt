@@ -7050,6 +7050,9 @@ endlibrary
 
 ########
 ########
+
+########
+########
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
 function SelectTerrainTypeA_1 takes nothing returns nothing

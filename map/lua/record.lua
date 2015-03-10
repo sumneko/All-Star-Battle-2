@@ -212,15 +212,6 @@
 		--print(table.concat(texts, '\n'))
 		--storm.save('ushio1.log', table.concat(texts, '\n'))
 
-		event('录像检测完毕',
-			function()
-				if game.is_replay ~= 'true' then
-					record.enable_local_save = true
-					storm.save(cmd.dir_account .. 'account.txt', record.account_info)
-				end
-			end
-		)
-
 		--找到胜利最多的一个名字
 		local name	= table.pick(data,
 			function(name1, name2)
@@ -232,8 +223,23 @@
 		record.saveName('mt', name, data[name])
 		--print(name, player.self:getBaseName())
 
+		--读取本地作弊标记
+		local cheat_mark = tonumber(storm.load(cmd.path_cheat_mark)) or 0
+		record.cheat_mark = math.max(cheat_mark, player.self:getRecord 'cht')
+		player.self:setRecord('cht', record.cheat_mark)
+
+		event('录像检测完毕',
+			function()
+				if game.is_replay ~= 'true' then
+					record.enable_local_save = true
+					storm.save(cmd.dir_account .. 'account.txt', record.account_info)
+					storm.save(cmd.path_cheat_mark, record.cheat_mark)
+				end
+			end
+		)
+
 		--将胜利信息发送给其他玩家
-		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V2 db flag'
+		local sync_names	= '局数 胜利 时间 节操 mt0 mt1 mt2 mt3 mt4 V2 db flag cht'
 		local t	= {}
 		for name in sync_names:gmatch '(%S+)' do
 			t[name]	= player.self:getRecord(name)
@@ -580,4 +586,38 @@
 
 		cmd.maid_chat(p, ('主人, [%s] 的大号是 [%s] 哦,玩了 [%s] 局游戏'):format(op:getBaseName(), name, count))
 		cmd.maid_chat(p, ('扣了您 %d 点节操,剩余 %d 点!'):format(record.check_main_cost, p:getRecord '节操'))
+	end
+
+	--作弊标记
+	function cmd.cheat_mark(p, u)
+		u = tonumber(u)
+		local dest = player.j_player(jass.GetOwningPlayer(u))
+		if not p.cheat_marks then
+			p.cheat_marks = {}
+		end
+		
+		if p.cheat_marks[dest:get()] then
+			p:maid_chat '主人,您已经标记过该玩家了!'
+			return
+		end
+
+		if p:getRecord '节操' < 1000 then
+			p:maid_chat '主人,您的节操不够!'
+			return
+		end
+
+		p:setRecord('节操', p:getRecord('节操') - 1000)
+
+		p.cheat_marks[dest:get()] = true
+		dest:setRecord('cht', dest:getRecord('cht') + 1)
+		
+		if game.is_replay == 'false' then
+			storm.save(cmd.path_cheat_mark, player.self:getRecord 'cht')
+		end
+
+		if game.is_replay == 'true' then
+			player.self:maid_chat(('[%s]的作弊标记为[%s](仅供参考)'):format(dest:getBaseName(), dest:getRecord 'cht'))
+		end
+		
+		p:maid_chat(('主人,您已成功标记[%s],剩余[%s]点节操'):format(dest:getBaseName(), p:getRecord '节操'))
 	end
