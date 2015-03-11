@@ -640,7 +640,7 @@ ubpx=3
 ubpy=1
 uhot=F
 [sreg]
-iabi=AItb
+iabi=A0XW
 unam=尘土之影
 utip=购买尘土之影(|cffffcc00C|r)
 utub=|cffffcc00破影：|r获得450范围内敌方单位的视野并使他们无所遁形|n|n|cffaabbff持续时间：|r5秒|n|cffaabbff间隔时间：|r30秒|n|n|cff757575撒沙子是很缺德的- -
@@ -648,7 +648,7 @@ ides=|cffffcc00破影：|r获得450范围内敌方单位的视野并使他们无
 iico=ReplaceableTextures\CommandButtons\BTNDustOfAppearance.blp
 istr=1
 isto=1
-icid=AItb
+icid=A0XW
 ubpy=2
 ubpx=2
 uhot=C
