@@ -10,7 +10,7 @@
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
                 s芙兰朵露z=|Cffff00ff[永远の二妹]|r
-                藤原_妹红_=|cffffcc00[|cffff2525凤舞天，翼盘旋★月球上不死之烟cffffcc00]|r
+                藤原_妹红_=|cffffcc00[|cffff2525凤舞天，翼盘旋★月球上不死之烟|cffffcc00]|r
                 moon_shin=|cffffcc00[全明星の模型师]|r
                 小爱不是处=|cFFFF66FF[旋转吧，雪月花~]|r
                 佐藤桑=|cFF66FFFF[ぽい]|r
