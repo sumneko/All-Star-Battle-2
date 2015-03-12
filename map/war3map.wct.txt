@@ -5722,7 +5722,7 @@ library soundLibrary initializer Init needs baseLibrary
                     
                     if GetTriggerEventId() == EVENT_PLAYER_UNIT_SELECTED then
                         //选中回应
-                        if i == 15 or GetOwningPlayer(GetTriggerUnit()) == GetTriggerPlayer() then
+                        if GetOwningPlayer(GetTriggerUnit()) == Player(15) or GetOwningPlayer(GetTriggerUnit()) == GetTriggerPlayer() then
                             //选中中立英雄(选人区)或自己的英雄才会有回应
                             PlayUnitResponses(StringHash("选中回应"))
                         endif
