@@ -516,7 +516,7 @@ library defineLibrary
         bool = boolean
     }
 
-    //#define RELEASE //内测版本请将此行注释
+    #define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -1496,7 +1496,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=498
+//TESH.scrollpos=411
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
