@@ -144,51 +144,62 @@
 			table.insert(ints, int)
 		end
 
-		--同步所有的整数
+		--先同步长度
 		p:sync(
-			ints,
+			{count = #ints},
 			function(data)
-				--文本数量
-				local text_count = data[1]
-				local key_lens	= {}
-				local text_lens	= {}
-				local all_len	= 0
-				
-				for i = 1, text_count do
-					--key的长度
-					key_lens[i]		= data[i * 2]
-					--文本的长度
-					text_lens[i]	= data[i * 2 + 1]
-					--文本总长度
-					all_len = all_len + key_lens[i] + text_lens[i]
+				if player.self ~= p then
+					for i = 1, data.count do
+						ints[i] = 0
+					end
 				end
+				--同步所有的整数
+				p:sync(
+					ints,
+					function(data)
+						--文本数量
+						local text_count = data[1]
+						local key_lens	= {}
+						local text_lens	= {}
+						local all_len	= 0
+						
+						for i = 1, text_count do
+							--key的长度
+							key_lens[i]		= data[i * 2]
+							--文本的长度
+							text_lens[i]	= data[i * 2 + 1]
+							--文本总长度
+							all_len = all_len + key_lens[i] + text_lens[i]
+						end
 
-				--拼出长文本
-				local texts = {}
-				for i = text_count * 2 + 2, #data do
-					table.insert(texts, id2string(data[i] + 2 ^ 31))
-				end
+						--拼出长文本
+						local texts = {}
+						for i = text_count * 2 + 2, #data do
+							table.insert(texts, id2string(data[i] + 2 ^ 31))
+						end
 
-				local all_text = table.concat(texts):sub(1, all_len)
+						local all_text = table.concat(texts):sub(1, all_len)
 
-				--取出文本
-				local pos = 0
-				local function read(len)
-					local text = all_text:sub(pos + 1, pos + len)
-					pos = pos + len
-					return text
-				end
+						--取出文本
+						local pos = 0
+						local function read(len)
+							local text = all_text:sub(pos + 1, pos + len)
+							pos = pos + len
+							return text
+						end
 
-				--循环取出每个key和text
-				for i = 1, text_count do
-					local key	= read(key_lens[i])
-					local text	= read(text_lens[i])
-					data[key]	= text
-				end
+						--循环取出每个key和text
+						for i = 1, text_count do
+							local key	= read(key_lens[i])
+							local text	= read(text_lens[i])
+							data[key]	= text
+						end
 
-				if func then
-					func(data)
-				end
+						if func then
+							func(data)
+						end
+					end
+				)
 			end
 		)
 		
