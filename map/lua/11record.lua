@@ -69,6 +69,7 @@
 			local name, value = line:match '(.-)=(.+)'
 			if name then
 				if name == '版本' then
+					value = value:lower()
 					player_reward.now = value
 					player_reward[value] = {}
 				end
@@ -977,7 +978,7 @@
 		function()
 			player_reward.jc = {}
 	
-			local reward = player_reward[cmd.ver_name]
+			local reward = player_reward[cmd.ver_name:lower()]
 			if not reward then
 				return
 			end
