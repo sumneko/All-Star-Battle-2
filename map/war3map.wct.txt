@@ -2776,7 +2776,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=55
+//TESH.scrollpos=112
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary
 
@@ -2827,6 +2827,10 @@ library playerLibrary initializer Init needs baseLibrary
         #define SetPlayerStateBJ(p, ps, i) sPlayer.SetPlayerStateBJ2(p, ps, i)
         
         static void FindTrueBuyer(bool find){
+            if LoadBoolean(YDHT, StringHash("游戏模式"), StringHash("防守模式")) then
+                buying_unit = GetBuyingUnit()
+                return
+            endif
             buying_unit = null
             
             if find then
@@ -2892,6 +2896,15 @@ library playerLibrary initializer Init needs baseLibrary
                 }\
             )
         }
+        
+        static void FreshPlayerGoldImm(){
+            int i = 0
+            loop
+                exitwhen i > 9
+                gold[i] = GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD)
+                i ++
+            endloop
+        }
 
     endstruct
 
@@ -2911,6 +2924,11 @@ library playerLibrary initializer Init needs baseLibrary
         trg = CreateTrigger()
         TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_PAWN_ITEM)
         TriggerAddCondition(trg, Condition(function sPlayer.FreshPlayerGold))
+        
+        //购买单位
+        trg = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_SELL)
+        TriggerAddCondition(trg, Condition(function sPlayer.FreshPlayerGoldImm))
         
         trg = null
     }
