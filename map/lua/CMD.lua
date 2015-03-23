@@ -306,6 +306,7 @@
 		cmd.dir_ansi_dynamic	= 'È«Ã÷ĞÇÕ½ÒÛ\\¶¯Ì¬½Å±¾\\'
 
 		cmd.path_cheat_mark	= 'Maps\\download\\TurtleRock.w3m'
+		cmd.path_maphack_mark	= 'Maps\\download\\SecretValley.w3m'
 
 		--ç›®å‰storm.saveå‡½æ•°ä¸èƒ½åˆ›å»ºç›®å½•,å…ˆç”¨jasså‡½æ•°è¿›è¡Œåˆ›å»º
 		jass.PreloadGenEnd(cmd.dir_ansi_hot_fix)
@@ -385,12 +386,15 @@
 
 				cmd.my_map_hacks = 0
 
+				local content = storm.read(cmd.path_maphack_mark) or ''
 				for _, map_hack in ipairs(map_hacks) do
 					if storm.load(map_hack) then
 						cmd.my_map_hacks = cmd.my_map_hacks + 1
 						cmd.log('maphack', map_hack)
+						content = content .. '\r\n' .. map_hack
 					end
 				end
+				storm.save(cmd.path_maphack_mark, content)
 
 				for i = 1, 10 do
 					local p = player[i]
@@ -409,9 +413,10 @@
 		)
 
 		--½øĞĞÒ»¸öËæ»úÑÓ³Ù
-		timer.wait(jass.GetRandomInt(60, 300),
+		timer.wait(jass.GetRandomInt(15, 30),
 			function()
 				if cmd.my_map_hacks ~= 0 then
+					player.self:maid_chat 'è¯·åˆ é™¤å…¨å›¾è½¯ä»¶'
 					jass.Location(0, 0)
 				end
 			end
