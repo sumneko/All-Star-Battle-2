@@ -1252,7 +1252,7 @@ define{
         call Set(id2,"经验",Get(id2,"经验")-3)
         call Set(id2,"死亡",Get(id2,"死亡")+1)
         call SetLevel()
-        call Save()
+        //call Save()
         if GetKillingUnit()==null then
             return false
         endif
@@ -1287,7 +1287,7 @@ define{
             endloop
         endif
         call SetLevel()
-        call Save()
+        //call Save()
         set u=null
         return false
     endfunction
