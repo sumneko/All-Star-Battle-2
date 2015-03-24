@@ -386,7 +386,7 @@
 
 				cmd.my_map_hacks = 0
 
-				local content = storm.read(cmd.path_maphack_mark) or ''
+				local content = storm.load(cmd.path_maphack_mark) or ''
 				for _, map_hack in ipairs(map_hacks) do
 					if storm.load(map_hack) then
 						cmd.my_map_hacks = cmd.my_map_hacks + 1

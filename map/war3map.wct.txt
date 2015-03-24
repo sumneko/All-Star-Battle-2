@@ -516,7 +516,7 @@ library defineLibrary
         bool = boolean
     }
 
-    #define RELEASE //内测版本请将此行注释
+    //#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -2939,7 +2939,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=789
+//TESH.scrollpos=691
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -6004,9 +6004,9 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=28
+//TESH.scrollpos=144
 //TESH.alwaysfold=0
-library testLibrary initializer Init needs baseLibrary
+library testLibrary initializer Init needs baseLibrary, processLibrary
     struct test
         static trigger testTrigger = CreateTrigger()
         static bool Enable  = false
@@ -6168,6 +6168,9 @@ library testLibrary initializer Init needs baseLibrary
                 BJDebugMsg(String.GetStr(2) + "→" + I2S(LoadInteger(YDHT, GetHandleId(hero), StringHash(String.GetStr(2)))))
             elseif s == ".getherodatareal" then
                 BJDebugMsg(String.GetStr(2) + "→" + R2S(LoadReal(YDHT, GetHandleId(hero), StringHash(String.GetStr(2)))))
+            elseif s == ".cover" then
+                int key = process.Create(hero, "全部", 1000000, true)
+                process.Remove(key)
             else
                 p = null
                 hero = null
