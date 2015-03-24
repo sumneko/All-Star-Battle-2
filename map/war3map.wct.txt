@@ -781,7 +781,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=646
+//TESH.scrollpos=631
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -2939,7 +2939,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=691
+//TESH.scrollpos=24
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3095,15 +3095,15 @@ library bakaLibrary initializer Init needs baseLibrary
 
         //检测是否是因为BUG模型而崩溃
         static void check_MH_crash(){
-            return
             local player p = GetTriggerPlayer()
             local integer i = baka.spid[GetPlayerId(p)]
             if GetStoredInteger(sys.GC, "MH1", I2S(i)) > GetStoredInteger(sys.GC, "MH2", I2S(i)) then
                 if sys.isIn11() then
-                    Lua_hook(sys.selfp, "maid_chat 主人主人,刚刚【" + GetPlayerName(p) + "】开图被我发现了")
-                    Lua_hook(sys.selfp, "maid_chat 我果断把他踢掉了,快夸奖我一下吧~")
+                    Lua_hook(p, "log FMH检测数据有异常")
+                    //Lua_hook(sys.selfp, "maid_chat 主人主人,刚刚【" + GetPlayerName(p) + "】开图被我发现了")
+                    //Lua_hook(sys.selfp, "maid_chat 我果断把他踢掉了,快夸奖我一下吧~")
                 else
-                    BJDebugMsg(GetPlayerName(p) + "|cffff1111因为使用全图作弊工具被T出游戏啦!|r")
+                    //BJDebugMsg(GetPlayerName(p) + "|cffff1111因为使用全图作弊工具被T出游戏啦!|r")
                 endif
             endif
             p = null
@@ -3646,6 +3646,8 @@ library bakaLibrary initializer Init needs baseLibrary
                 GroupAddUnit(CG2, CU)
                 UnitAddType(CU, UNIT_TYPE_SAPPER)
                 // BJDebugMsg("万物离开视野:" + GetUnitName(CU))
+            else
+                UnitRemoveType(CU, UNIT_TYPE_SAPPER)
             endif
         }
 
@@ -3656,6 +3658,8 @@ library bakaLibrary initializer Init needs baseLibrary
                 GroupAddUnit(CG1, CU)
                 UnitRemoveType(CU, UNIT_TYPE_SAPPER)
                 // BJDebugMsg("万物进入视野:" + GetUnitName(CU))
+            else
+                UnitAddType(CU, UNIT_TYPE_SAPPER)
             endif
         }
 
@@ -3666,6 +3670,8 @@ library bakaLibrary initializer Init needs baseLibrary
                 GroupAddUnit(CG4, CU)
                 UnitAddType(CU, UNIT_TYPE_SAPPER)
                 // BJDebugMsg("极寒离开视野:" + GetUnitName(CU))
+            else
+                UnitRemoveType(CU, UNIT_TYPE_SAPPER)
             endif
         }
 
@@ -3676,6 +3682,8 @@ library bakaLibrary initializer Init needs baseLibrary
                 GroupAddUnit(CG3, CU)
                 UnitRemoveType(CU, UNIT_TYPE_SAPPER)
                 // BJDebugMsg("极寒进入视野:" + GetUnitName(CU))
+            else
+                UnitAddType(CU, UNIT_TYPE_SAPPER)
             endif
         }
 

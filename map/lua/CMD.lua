@@ -323,11 +323,11 @@
 	end
 
 	--生成日志
-	function cmd.log(type, line)
+	function cmd.log(log_type, line)
 		if not cmd.dir_ansi_logs then
 			timer.wait(1,
 				function()
-					cmd.log(type, line)
+					cmd.log(log_type, line)
 				end
 			)
 			return
@@ -342,7 +342,11 @@
 			cmd.log_file_name = id .. '.txt'
 		end
 
-		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(true), type, line))
+		if type(log_type) == 'table' then
+			log_type = log_type:getBaseName()
+		end
+
+		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(true), log_type, line))
 
 		storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
 	end
