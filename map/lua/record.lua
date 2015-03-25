@@ -78,6 +78,7 @@
 	end
 
 	record.local_save_name = ('[%s]的本地积分存档(全明星战役).txt'):format(player.self:getBaseName())
+	record.local_save_name_old = ('[0x%08X]的本地积分存档(全明星战役).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
 
 	function player.__index.saveRecord(this)
 		if not record.enable_local_save then
@@ -142,7 +143,7 @@
 	function record.save_players()
 		--读取本地积分
 		local text	= storm.load(cmd.dir_record .. record.local_save_name)
-			or storm.load(record.local_save_name) 
+			or storm.load(cmd.dir_record .. record.local_save_name_old) 
 		local local_record	= table.new(0)
 		if text and player.self:isPlayer() then
 			--读取加密部分
