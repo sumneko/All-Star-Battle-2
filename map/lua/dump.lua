@@ -11,8 +11,10 @@
 	----写于2014年12月27日
 	if result and dump.save then
 		dump.enable	= true
+		print 'dump enbale'
 	else
 		dump.enable	= false
+		print 'dump disable'
 		
 		function dump.save()
 			return ''

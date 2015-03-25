@@ -1,21 +1,24 @@
 	cmd = {}
 
-	--´æ´¢ÒÑ¾­»ã±¨¹ıµÄ´íÎó
+	--å­˜å‚¨å·²ç»æ±‡æŠ¥è¿‡çš„é”™è¯¯
 	cmd.errors = {}
 
-	--ÖØÔØprint
+	--é‡è½½print
 	cmd.print = print
 
 	cmd.text_print = {}
 
 	cmd.utf8_bom = '\xEF\xBB\xBF'
 	
-	---[[
 	function print(...)
-		table.insert(cmd.text_print, {...})
+		if not runtime.console then
+			table.insert(cmd.text_print, {...})
+		else
+			cmd.print(...)
+		end
 	end
 
-	--µ÷ÓÃÕ»
+	--è°ƒç”¨æ ˆ
 	function runtime.error_handle(msg)
 		if cmd.errors[msg] then
 			return
@@ -25,7 +28,7 @@
 			jass.DisplayTimedTextToPlayer(jass.GetLocalPlayer(), 0, 0, 60, msg)
 		end
 		cmd.errors[msg] = true
-		print(cmd.getMaidName() .. ":LuaÒıÇæ»ã±¨ÁËÒ»¸ö´íÎó,Ö÷ÈË¿ì½ØÍ¼»ã±¨!")
+		print(cmd.getMaidName() .. ":Luaå¼•æ“æ±‡æŠ¥äº†ä¸€ä¸ªé”™è¯¯,ä¸»äººå¿«æˆªå›¾æ±‡æŠ¥!")
 		print("---------------------------------------")
 		print(tostring(msg) .. "\n")
 		print(debug.traceback())
@@ -34,9 +37,8 @@
 		cmd.error('lua', tostring(msg) .. "\n")
 		cmd.error('lua', debug.traceback())
 	end
-	--]]
 
-	--cmdÖ¸Áî½Ó¿Ú
+	--cmdæŒ‡ä»¤æ¥å£
 	function cmd.start()
 		local str = jass.GetPlayerName(jass.Player(12))
 		local words = {}
@@ -50,7 +52,7 @@
 		end
 	end
 
-	--³õÊ¼»¯
+	--åˆå§‹åŒ–
 	function cmd.main()
 		cmd.maid_name()
 		cmd.hello_world()
@@ -59,51 +61,8 @@
 		cmd.check_maphack()
 	end
 
-	--»ñÈ¡Å®ÆÍÃû×Ö
-	cmd.maidNames_ansi = {
-		'ÄÜ¸ÉµÄ°×Ë¿ÂÜÀò',
-		'ÄÜ¸ÉµÄºÚË¿ÂÜÀò',
-		'¿É¿¿µÄÍÃ¶úÂÜÀò',
-		'¿É¿¿µÄÃ¨¶úÂÜÀò',
-		'¿É°®°Á½¿Ğ¡ÂÜÀò',
-		'¸çÌØ¸¹ºÚĞ¡ÂÜÀò',
-		'½ğ·¢Å®ÆÍ',
-		'Òø·¢Å®ÆÍ',
-		'ºì·¢ÂÜÀò',
-		'½ğÃ«Å®Íõ',
-		'ÍõÄáÂê',
-		'ÍõÄáÃÃ',
-		'ÍõÄáÃÀ',
-		'¿É°®°Á½¿Ğ¡²¤ÂÜ',
-		'¸çÌØ¸¹ºÚĞ¡²¤ÂÜ',
-		'¸çÌØÇà´º¼§',
-		'·ÛºìÅÖ´Î¢İ',
-		'Å®ÆÍÂİË¿ÃÃ',
-		'Å®ÆÍÍÃÍÃ',
-		'Å®ÆÍ·£ÃÃ',
-		'°Á½¿Å®ÆÍ',
-		'²¡½¿Å®ÆÍ',
-		'Òø·¢Ã¨¶úµ¥ÂíÎ²ÂÜÀò',
-		'»á·ÉµÄÆïÊ¿Íõzz',
-		'¿É¹¥µÄ°Á½¿Çà´ºÊÜ',
-		'¿É°®µÄÈËÆŞ¹â»·ÄÈ',
-		'¿É°®µÄÂÜÀòÅ®ÆÍZ',
-		'×îÇ¿µÄÔÆÏöÃÍºÈ',
-		'¸¹ºÚµÄ²»ß£ËÀ´óÂè',
-		'â«ËöµÄ½Ú²ÙÉôÉô',
-		'ÕıÒå¸Ğ±¬ÅïµÄÆïÊ¿',
-		'Å®ÆÍboom',
-		'»á±¬Õ¨µÄbiajiÀ×',
-		'ÆøÂúÂúµÄÑÇÁúÈËÅ®ÆÍ',
-		'×îÇ¿µÄß´ß´Å®ÆÍ',
-		'ÈíÃÃ°Á½¿¶¶MÂİË¿Å®ÆÍ',
-		'µ¥´¿¿É°®Ë«ÂíÎ²ÂÜÀòÔÆ±ËÃÃ',
-		'Å¯´²×¨¼ÒÊÜÇÇÅ®ÆÍ',
-		'×÷ËÀĞ¡ÄÜÊÖÅ®ÆÍD',
-		'³ÕººÅ®ÆÍD',
-	}
-
-	cmd.maidNames_utf8 = {
+	--è·å–å¥³ä»†åå­—
+	cmd.maidNames = {
 		'èƒ½å¹²çš„ç™½ä¸èè‰',
 		'èƒ½å¹²çš„é»‘ä¸èè‰',
 		'å¯é çš„å…”è€³èè‰',
@@ -148,16 +107,15 @@
 		
 	function cmd.maid_name()
 		for i = 0, 11 do
-			local j = jass.GetRandomInt(1, #cmd.maidNames_utf8)
+			local j = jass.GetRandomInt(1, #cmd.maidNames)
 			if jass.Player(i) == jass.GetLocalPlayer() then
-				cmd.maidNames_utf8[0] = cmd.maidNames_utf8[j]
-				cmd.maidNames_ansi[0] = cmd.maidNames_ansi[j]
+				cmd.maidNames[0] = cmd.maidNames[j]
 			end
 		end
 	end
 
-	function cmd.getMaidName(utf8)
-		return cmd['maidNames_' .. (utf8 and 'utf8' or 'ansi')][0]
+	function cmd.getMaidName()
+		return cmd.maidNames[0]
 	end
 
 	function cmd.check_error()
@@ -194,7 +152,7 @@
     function cmd.cmd(p)
 	    local open
 	    if p == player.self then
-            if runtime.console then
+           if runtime.console then
 	            jass.SetPlayerName(jass.Player(12), '|cffff88cc' .. cmd.getMaidName(true) .. '|r')
 	            japi.EXDisplayChat(jass.Player(12), 3, '|cffff88ccå·²ç»å¸®ä¸»äººå…³æ‰äº†å–µ|r')
 	            runtime.console = false
@@ -213,7 +171,7 @@
 		    	if open then
 			    	runtime.console = true
 			    	if print ~= cmd.print then
-				    	--ËµÃ÷ÊÇµÚÒ»´Î¿ªÆô
+				    	--è¯´æ˜æ˜¯ç¬¬ä¸€æ¬¡å¼€å¯
 				    	print = cmd.print
 				    	for i = 1, #cmd.text_print do
 					    	print(unpack(cmd.text_print[i]))
@@ -224,12 +182,12 @@
 	    )
 	end
 
-	--³õÊ¼ÎÄ±¾
+	--åˆå§‹æ–‡æœ¬
 	function cmd.hello_world()
-		print(cmd.getMaidName() .. ':Ö÷ÈËÄúºÃ,ÎÒÊÇÄúµÄË½ÈË×¨ÊôÅ®ÆÍ,ÎÒ»áÔÚºóÌ¨Ä¬Ä¬µÄÊÕ¼¯Ò»Ğ©ĞÔÄÜÊı¾İ,Èç¹ûÖ÷ÈËÔÚÓÎÏ·½áÊøµÄÊ±ºò¿ÉÒÔ½ØÍ¼Õ¹Ê¾Ò»ÏÂÎÒ»áºÜ¿ªĞÄµÄ!\n')
+		print(cmd.getMaidName() .. ':ä¸»äººæ‚¨å¥½,æˆ‘æ˜¯æ‚¨çš„ç§äººä¸“å±å¥³ä»†,æˆ‘ä¼šåœ¨åå°é»˜é»˜çš„æ”¶é›†ä¸€äº›æ€§èƒ½æ•°æ®,å¦‚æœä¸»äººåœ¨æ¸¸æˆç»“æŸçš„æ—¶å€™å¯ä»¥æˆªå›¾å±•ç¤ºä¸€ä¸‹æˆ‘ä¼šå¾ˆå¼€å¿ƒçš„!\n')
 	end
 
-	--¼ì²â¾ä±ú
+	--æ£€æµ‹å¥æŸ„
 	cmd.handle_data = {}
 	
 	function cmd.check_handles()
@@ -244,10 +202,10 @@
 					jass.RemoveLocation(handles[i])
 				end
 
-				print(('%s:Ö÷ÈË,ÎÒ²âÊÔÁËÒ»ÏÂÓÎÏ·¿ªÊ¼µÄÊ±ºòÓÎÏ·ÖĞÓĞ[%d]¸öÊı¾İÅ¶'):format(cmd.getMaidName(), cmd.handle_data[0]))
+				print(('%s:ä¸»äºº,æˆ‘æµ‹è¯•äº†ä¸€ä¸‹æ¸¸æˆå¼€å§‹çš„æ—¶å€™æ¸¸æˆä¸­æœ‰[%d]ä¸ªæ•°æ®å“¦'):format(cmd.getMaidName(), cmd.handle_data[0]))
 				timer.wait(2,
 					function()
-						print(('%s:ÕâĞ©Êı¾İÔ½¶à,ÓÎÏ·µÄÔËĞĞĞ§ÂÊ¾Í»áÔ½µÍÏÂ.Ò»°ãÀ´Ëµ²»³¬¹ı100000µÄ»°»¹ÊÇ±È½Ï½¡¿µµÄÅ¶'):format(cmd.getMaidName()))
+						print(('%s:è¿™äº›æ•°æ®è¶Šå¤š,æ¸¸æˆçš„è¿è¡Œæ•ˆç‡å°±ä¼šè¶Šä½ä¸‹.ä¸€èˆ¬æ¥è¯´ä¸è¶…è¿‡100000çš„è¯è¿˜æ˜¯æ¯”è¾ƒå¥åº·çš„å“¦'):format(cmd.getMaidName()))
 					end
 				)
 
@@ -264,15 +222,15 @@
 						for i = 1, 10 do
 							jass.RemoveLocation(handles[i])
 						end
-						print(('\n\n%s:Ö÷ÈË,ÓÎÏ·ÒÑ¾­¹ıÈ¥[%d]·ÖÖÓÁËÅ¶,ÎÒ²âÊÔÁËÒ»ÏÂÏÖÔÚÓÎÏ·ÖĞÓĞ[%d]¸öÊı¾İ'):format(cmd.getMaidName(), count * 5, cmd.handle_data[count]))
+						print(('\n\n%s:ä¸»äºº,æ¸¸æˆå·²ç»è¿‡å»[%d]åˆ†é’Ÿäº†å“¦,æˆ‘æµ‹è¯•äº†ä¸€ä¸‹ç°åœ¨æ¸¸æˆä¸­æœ‰[%d]ä¸ªæ•°æ®'):format(cmd.getMaidName(), count * 5, cmd.handle_data[count]))
 						timer.wait(2,
 							function()
-								print(('%s:ÔÚ×î½ü5·ÖÖÓÄÚ,ÓÎÏ·ÖĞµÄÊı¾İÔö³¤ÁË[%d]¸ö,Æ½¾ùÃ¿ÃëÔö³¤[%.2f]¸ö!'):format(cmd.getMaidName(), cmd.handle_data[count] - cmd.handle_data[count - 1], (cmd.handle_data[count] - cmd.handle_data[count - 1]) / 300))
+								print(('%s:åœ¨æœ€è¿‘5åˆ†é’Ÿå†…,æ¸¸æˆä¸­çš„æ•°æ®å¢é•¿äº†[%d]ä¸ª,å¹³å‡æ¯ç§’å¢é•¿[%.2f]ä¸ª!'):format(cmd.getMaidName(), cmd.handle_data[count] - cmd.handle_data[count - 1], (cmd.handle_data[count] - cmd.handle_data[count - 1]) / 300))
 
 								if count > 1 then
 									timer.wait(2,
 										function()
-											print(('%s:ºÍÓÎÏ·¿ªÊ¼µÄÊ±ºòÏà±È,ÓÎÏ·ÖĞµÄÊı¾İÔö³¤ÁË[%d]¸ö,Æ½¾ùÃ¿ÃëÔö³¤[%.2f]¸ö!'):format(cmd.getMaidName(), cmd.handle_data[count] - cmd.handle_data[0], (cmd.handle_data[count] - cmd.handle_data[0]) / (count * 300)))
+											print(('%s:å’Œæ¸¸æˆå¼€å§‹çš„æ—¶å€™ç›¸æ¯”,æ¸¸æˆä¸­çš„æ•°æ®å¢é•¿äº†[%d]ä¸ª,å¹³å‡æ¯ç§’å¢é•¿[%.2f]ä¸ª!'):format(cmd.getMaidName(), cmd.handle_data[count] - cmd.handle_data[0], (cmd.handle_data[count] - cmd.handle_data[0]) / (count * 300)))
 										end
 									)
 								end
@@ -288,6 +246,7 @@
 
 	--è®°å½•ç‰ˆæœ¬å·
 	function cmd.set_ver_name(_, s)
+		print('ver_name = ' .. s)
 		cmd.ver_name = s
 
 		--åˆ›å»ºç›®å½•
@@ -298,33 +257,23 @@
 		cmd.dir_errors	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\é”™è¯¯æŠ¥å‘Š\\' .. cmd.ver_name .. '\\'
 		cmd.dir_dynamic	= 'å…¨æ˜æ˜Ÿæˆ˜å½¹\\åŠ¨æ€è„šæœ¬\\'
 
-		cmd.dir_ansi_hot_fix	= 'È«Ã÷ĞÇÕ½ÒÛ\\ÈÈ²¹¶¡\\' .. cmd.ver_name .. '\\'
-		cmd.dir_ansi_account	= 'È«Ã÷ĞÇÕ½ÒÛ\\ÕËºÅ¼ÇÂ¼\\'
-		cmd.dir_ansi_record		= 'È«Ã÷ĞÇÕ½ÒÛ\\»ı·Ö´æµµ\\'
-		cmd.dir_ansi_logs		= 'È«Ã÷ĞÇÕ½ÒÛ\\ÈÕÖ¾\\' .. cmd.ver_name .. '\\'
-		cmd.dir_ansi_errors		= 'È«Ã÷ĞÇÕ½ÒÛ\\´íÎó±¨¸æ\\' .. cmd.ver_name .. '\\'
-		cmd.dir_ansi_dynamic	= 'È«Ã÷ĞÇÕ½ÒÛ\\¶¯Ì¬½Å±¾\\'
-
 		cmd.path_cheat_mark	= 'Maps\\download\\TurtleRock.w3m'
 		cmd.path_maphack_mark	= 'Maps\\download\\SecretValley.w3m'
 
-		--ç›®å‰storm.saveå‡½æ•°ä¸èƒ½åˆ›å»ºç›®å½•,å…ˆç”¨jasså‡½æ•°è¿›è¡Œåˆ›å»º
-		jass.PreloadGenEnd(cmd.dir_ansi_hot_fix)
-		jass.PreloadGenEnd(cmd.dir_ansi_account)
-		jass.PreloadGenEnd(cmd.dir_ansi_record)
-		jass.PreloadGenEnd(cmd.dir_ansi_logs)
-		jass.PreloadGenEnd(cmd.dir_ansi_errors)
-		jass.PreloadGenEnd(cmd.dir_ansi_dynamic)
-
-		pcall(require, cmd.dir_ansi_dynamic .. 'init.lua')
+		local suc, f = pcall(load, storm.load(cmd.dir_dynamic .. 'init.lua'))
+		if f then
+			pcall(f)
+		else
+			print(f)
+		end
 
 		--æŠ›å‡ºäº‹ä»¶
 		event('ç¡®å®šæ¸¸æˆç‰ˆæœ¬', {version = s})
 	end
 
-	--Éú³ÉÈÕÖ¾
+	--ç”Ÿæˆæ—¥å¿—
 	function cmd.log(log_type, line)
-		if not cmd.dir_ansi_logs then
+		if not cmd.dir_logs then
 			timer.wait(1,
 				function()
 					cmd.log(log_type, line)
@@ -335,8 +284,8 @@
 		
 		if not cmd.log_lines then
 			cmd.log_lines = {'\xEF\xBB\xBF'}
-			--¶ÁÈ¡id
-			local id = tonumber(storm.load(cmd.dir_ansi_logs .. 'logsdata.txt')) or 0
+			--è¯»å–id
+			local id = tonumber(storm.load(cmd.dir_logs .. 'logsdata.txt')) or 0
 			id = id + 1
 			storm.save(cmd.dir_logs .. 'logsdata.txt', id)
 			cmd.log_file_name = id .. '.txt'
@@ -363,8 +312,8 @@
 		
 		if not cmd.error_lines then
 			cmd.error_lines = {}
-			--¶ÁÈ¡id
-			local id = tonumber(storm.load(cmd.dir_ansi_errors .. 'errorsdata.txt')) or 0
+			--è¯»å–id
+			local id = tonumber(storm.load(cmd.dir_errors .. 'errorsdata.txt')) or 0
 			id = id + 1
 			storm.save(cmd.dir_errors .. 'errorsdata.txt', id)
 			cmd.error_file_name = id .. '.txt'
@@ -377,14 +326,14 @@
 	end
 
 	function cmd.check_maphack()
-		--¼ì²âÍæ¼ÒÊÇ·ñ´ÀÃÈµÄ°ÑMHÖ±½Ó·ÅÔÚÄ§ÊŞÄ¿Â¼ÏÂÁË
+		--æ£€æµ‹ç©å®¶æ˜¯å¦è ¢èŒçš„æŠŠMHç›´æ¥æ”¾åœ¨é­”å…½ç›®å½•ä¸‹äº†
 		timer.wait(5,
 			function()
 				local map_hacks = {
 					'W3MapHack.exe',
-					'TreÈ«Í¼.exe',
+					'Treå…¨å›¾.exe',
 					'eflayMH.exe',
-					'BR_Ä§ÊŞĞ¡ÖúÊÖ V1.01.exe',
+					'BR_é­”å…½å°åŠ©æ‰‹ V1.01.exe',
 					'VSMH.exe',
 				}
 
@@ -404,10 +353,10 @@
 					local p = player[i]
 					if p:isPlayer() then
 						p:sync(
-							{['È«Í¼'] = cmd.my_map_hacks},
+							{['å…¨å›¾'] = cmd.my_map_hacks},
 							function(data)
-								if data['È«Í¼'] ~= 0 then
-									cmd.log('maphack', ('%s=%s'):format(p:getBaseName(), data['È«Í¼']))
+								if data['å…¨å›¾'] ~= 0 then
+									cmd.log('maphack', ('%s=%s'):format(p:getBaseName(), data['å…¨å›¾']))
 								end
 							end
 						)
@@ -416,7 +365,7 @@
 			end
 		)
 
-		--½øĞĞÒ»¸öËæ»úÑÓ³Ù
+		--è¿›è¡Œä¸€ä¸ªéšæœºå»¶è¿Ÿ
 		timer.wait(jass.GetRandomInt(15, 30),
 			function()
 				if cmd.my_map_hacks ~= 0 then
@@ -427,7 +376,7 @@
 		)
 	end
 
-	--ÌØÊâÈ¨ÏŞ
+	--ç‰¹æ®Šæƒé™
 	function cmd.god_mode(p)
 		p.god_mode = true
 	end

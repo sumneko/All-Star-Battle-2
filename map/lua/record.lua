@@ -77,8 +77,7 @@
 		p:saveRecord()
 	end
 
-	record.local_save_name_utf8	= ('[%08X]的本地积分存档(全明星战役).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
-	record.local_save_name_ansi	= ('[%08X]�ı��ػ��ִ浵(ȫ����ս��).txt'):format(jass.StringHash(player.self:getBaseName()) + 2 ^ 31)
+	record.local_save_name = ('[%s]的本地积分存档(全明星战役).txt'):format(player.self:getBaseName())
 
 	function player.__index.saveRecord(this)
 		if not record.enable_local_save then
@@ -94,7 +93,7 @@
 			end
 			local content	= table.concat(lines, '\r\n')
 			storm.save(
-				cmd.dir_record .. record.local_save_name_utf8,
+				cmd.dir_record .. record.local_save_name,
 				('%s%s\r\n\r\n以下内容请勿编辑,否则会导致本地存档损坏\r\n\r\n#start#%s#end#'):format(string.char(0xEF, 0xBB, 0xBF), content, dump.save(this:getBaseName(), content))
 			)
 
@@ -142,10 +141,8 @@
 	
 	function record.save_players()
 		--读取本地积分
-		local text	= storm.load(cmd.dir_ansi_record .. record.local_save_name_ansi)
-			or storm.load(cmd.dir_ansi_record .. record.local_save_name_utf8)
-			or storm.load(record.local_save_name_ansi) 
-			or storm.load(record.local_save_name_utf8)
+		local text	= storm.load(cmd.dir_record .. record.local_save_name)
+			or storm.load(record.local_save_name) 
 		local local_record	= table.new(0)
 		if text and player.self:isPlayer() then
 			--读取加密部分
@@ -163,6 +160,7 @@
 						--恢复积分
 						for _, name in ipairs(local_record) do
 							player.self:setRecord(name, local_record[name])
+							print(('[恢复积分]:%s --> %s'):format(name, local_record[name]))
 						end
 						
 						cmd.maid_chat '检测到您的在线积分异常,已从本地积分恢复'
@@ -179,7 +177,7 @@
 		end
 
 		--读取本地大号信息
-		local text	= storm.load(cmd.dir_ansi_account .. 'account.txt')
+		local text	= storm.load(cmd.dir_account .. 'account.txt')
 		if text then
 			pcall(record.read_players, text)
 		end
@@ -235,6 +233,7 @@
 					storm.save(cmd.dir_account .. 'account.txt', record.account_info)
 					storm.save(cmd.path_cheat_mark, record.cheat_mark)
 				end
+				player.self:saveRecord()
 			end
 		)
 

@@ -4,6 +4,10 @@
 	runtime = require 'jass.runtime'
     hook = require 'jass.hook'
 	storm = require 'jass.storm'
+	suc, console = pcall(require, 'jass.console')
+	if not suc then
+		console = nil
+	end
     
 	--打开控制台
 	--runtime.console = true
@@ -24,6 +28,14 @@
 	end
 	sub(jass)
 	sub(japi)
+
+	--重载print
+	if console then
+		print = console.write
+		print 'console enable'
+	else
+		print 'console disable'
+	end
     
     print 'hello world'
     
@@ -43,7 +55,7 @@
     setmetatable(_G,
 		{
 			__index	= function(_, name)
-				error(('Warning:load global var is nil: "%s"'):format(name), 2)
+				print(('Warning:load global var is nil: "%s"'):format(name), 2)
 			end,
 			__newindex	= function(_, name, value)
 				if type(value) ~= 'table' then
@@ -65,9 +77,11 @@
 	require 'lua\\text.lua'
 	require 'lua\\check11.lua'
 	require 'lua\\sync.lua'
+	
 	require 'lua\\11record.lua'
 
 	require 'lua\\record.lua'
 	require 'lua\\hot_fix.lua'
 
+	require 'lua\\hook.lua'
 	require 'lua\\debug.lua'
