@@ -2776,7 +2776,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=112
+//TESH.scrollpos=14
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary
 
@@ -2808,12 +2808,23 @@ library playerLibrary initializer Init needs baseLibrary
             if (delta > 0) then
                 if (whichPlayerState == PLAYER_STATE_RESOURCE_GOLD) then
                     call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_GOLD_GATHERED, delta)
-                    
+                    if GetTriggerEventId() == EVENT_PLAYER_UNIT_SPELL_EFFECT then
+                        int sid = GetSpellAbilityId()
+                        if sid == 'A0LX' or sid == 'A0BJ' or sid == 'A0QE' or sid == 'A004' then
+                            return
+                        endif
+                    endif
                     gold[GetPlayerId(whichPlayer)] = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
                 elseif (whichPlayerState == PLAYER_STATE_RESOURCE_LUMBER) then
                     call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_LUMBER_GATHERED, delta)
                 endif
             elseif whichPlayerState == PLAYER_STATE_RESOURCE_GOLD
+                if GetTriggerEventId() == EVENT_PLAYER_UNIT_SPELL_EFFECT then
+                    int sid = GetSpellAbilityId()
+                    if sid == 'A0LX' or sid == 'A0BJ' or sid == 'A0QE' or sid == 'A004' then
+                        return
+                    endif
+                endif
                 gold[GetPlayerId(whichPlayer)] = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
             endif
         }
@@ -2939,7 +2950,7 @@ library playerLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=24
+//TESH.scrollpos=78
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
