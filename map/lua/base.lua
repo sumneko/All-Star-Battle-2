@@ -4,20 +4,6 @@
     hook = require 'jass.hook'
 	storm = require 'jass.storm'
     
-	--拆解table
-	local function sub(t)
-		local meta = getmetatable(t)
-		local __index = meta.__index
-		local function new__index(t, k)
-			local r = __index(t, k)
-			t[k] = r
-			return r
-		end
-		meta.__index = new__index
-	end
-	sub(jass)
-	sub(japi)
-    
     print 'hello world'
     
 	--汇报错误啦
