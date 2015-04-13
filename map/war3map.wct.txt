@@ -516,7 +516,7 @@ library defineLibrary
         bool = boolean
     }
 
-    #define RELEASE //内测版本请将此行注释
+    //#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
