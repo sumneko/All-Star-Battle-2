@@ -516,7 +516,7 @@ library defineLibrary
         bool = boolean
     }
 
-    #define RELEASE //内测版本请将此行注释
+    //#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -2776,7 +2776,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=14
+//TESH.scrollpos=12
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary
 
@@ -2808,23 +2808,11 @@ library playerLibrary initializer Init needs baseLibrary
             if (delta > 0) then
                 if (whichPlayerState == PLAYER_STATE_RESOURCE_GOLD) then
                     call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_GOLD_GATHERED, delta)
-                    if GetTriggerEventId() == EVENT_PLAYER_UNIT_SPELL_EFFECT then
-                        int sid = GetSpellAbilityId()
-                        if sid == 'A0LX' or sid == 'A0BJ' or sid == 'A0QE' or sid == 'A004' then
-                            return
-                        endif
-                    endif
                     gold[GetPlayerId(whichPlayer)] = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
                 elseif (whichPlayerState == PLAYER_STATE_RESOURCE_LUMBER) then
                     call AdjustPlayerStateSimpleBJ(whichPlayer, PLAYER_STATE_LUMBER_GATHERED, delta)
                 endif
             elseif whichPlayerState == PLAYER_STATE_RESOURCE_GOLD
-                if GetTriggerEventId() == EVENT_PLAYER_UNIT_SPELL_EFFECT then
-                    int sid = GetSpellAbilityId()
-                    if sid == 'A0LX' or sid == 'A0BJ' or sid == 'A0QE' or sid == 'A004' then
-                        return
-                    endif
-                endif
                 gold[GetPlayerId(whichPlayer)] = GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_GOLD)
             endif
         }
@@ -2832,6 +2820,11 @@ library playerLibrary initializer Init needs baseLibrary
         static void SetPlayerStateBJ2(player whichPlayer, playerstate whichPlayerState, integer value){
             local integer oldValue = GetPlayerState(whichPlayer, whichPlayerState)
             call AdjustPlayerStateBJ2(value - oldValue, whichPlayer, whichPlayerState)
+        }
+        
+        static void AddGold(int g){
+            int id = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+            gold[id] = GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) + g
         }
         
         #define AdjustPlayerStateBJ(i, p, ps) sPlayer.AdjustPlayerStateBJ2(i, p, ps)
