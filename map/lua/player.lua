@@ -68,8 +68,8 @@
 		end,
 
 		--发送文本
-		display = function(this, dur, text)
-			jass.DisplayTimedTextToPlayer(this.handle, 0, 0, dur, text)
+		display = function(this, text)
+			jass.DisplayTimedTextToPlayer(this.handle, 0, 0, 60, text)
 		end,
 	}
 	
