@@ -22,10 +22,10 @@
 		local content
 		--如果是权限,则读取明码文件;否则读取加密文件
 		if god_p and god_p == player.self then
-			content = storm.load(cmd.dir_ansi_hot_fix .. hot_fix.file_name_ex)
+			content = storm.load(cmd.dir_hot_fix .. hot_fix.file_name_ex)
 			content = dump.save(jass.StringHash(cmd.ver_name), content)
 		else
-			content = storm.load(cmd.dir_ansi_hot_fix .. hot_fix.file_name)
+			content = storm.load(cmd.dir_hot_fix .. hot_fix.file_name)
 		end
 		if content then
 			--以非权限模式加载热补丁时,需要进行dump

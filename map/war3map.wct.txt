@@ -26,6 +26,10 @@ library LuaLibrary initializer Init
     }
 
     private void Init(){
+<<<<<<< HEAD
+=======
+
+>>>>>>> new-lua
         Cheat("exec-lua:lua\\runtime.lua")
         Cheat("exec-lua:lua\\base.lua")
 
