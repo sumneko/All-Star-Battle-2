@@ -67,3 +67,36 @@
 	    end
 	    return mn, mi
     end
+
+    --求平均值
+    function math.ave(...)
+    	local ns = {...}
+    	local count = #ns
+    	if count == 0 then
+	    	return
+    	end
+
+    	local m = 0
+    	for i = 1, count do
+	    	m = m + ns[i]
+    	end
+    	return m / count
+    end
+
+    --求出方差
+    function math.dx(...)
+	    local ns = {...}
+	    local count = #ns
+	    if count == 0 then
+		    return
+	    end
+	    
+	    local ave = math.ave(...)
+	    for i = 1, count do
+		    local a = ave - ns[i]
+		    ns[i] = a * a
+	    end
+
+	    return ns
+	    
+    end

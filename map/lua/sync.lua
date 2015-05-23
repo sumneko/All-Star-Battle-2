@@ -89,6 +89,9 @@
 					if not p:isPlayer() then
 						sync.using[index]	= nil
 						t:destroy()
+						if func then
+							func(data, false)
+						end
 					end
 					times	= times + 1
 					if times > 1000 then
@@ -96,6 +99,9 @@
 						t:destroy()
 						cmd.maid_chat(player.self, '数据同步超时,请截图汇报')
 						cmd.maid_chat(player.self, ('[%s-%s][%s][%s][%s][%s][%s]'):format(p:get(), p:getBaseName(), keys[1], keys[2], keys[3], keys[4], keys[5]))
+						if func then
+							func(data, false)
+						end
 					end
 					return
 				end
@@ -110,10 +116,12 @@
 				--回调数据
 				--print(('Ready Sync: %s\t%s'):format(p:get(), func))
 				if func then
-					func(data)
+					func(data, true)
 				end
 			end
 		)
+
+		return true
 	end
 
 	function player.__index.syncText(p, data, func)
