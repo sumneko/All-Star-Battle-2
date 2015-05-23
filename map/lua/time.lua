@@ -3,6 +3,11 @@
 
 	function time.readTime()
 		time.my_time = os.time()
+		time.my_date = os.date('%Y-%m-%d-%H.%M.%S', time.my_time)
+
+	end
+
+	function time.syncTime()
 		time.times = {}
 		
 		local count = 0

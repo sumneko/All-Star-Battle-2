@@ -58,7 +58,8 @@
 			end,
 		}
     )
-    
+
+    require 'lua\\time.lua'
 	require 'lua\\util.lua'
 	require 'lua\\dump.lua'
 	require 'lua\\event.lua'
@@ -70,7 +71,7 @@
 	require 'lua\\text.lua'
 	require 'lua\\check11.lua'
 	require 'lua\\sync.lua'
-	require 'lua\\time.lua'
+	
 	
 	require 'lua\\11record.lua'
 

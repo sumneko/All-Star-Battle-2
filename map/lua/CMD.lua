@@ -285,10 +285,10 @@
 		if not cmd.log_lines then
 			cmd.log_lines = {'\xEF\xBB\xBF'}
 			--读取id
-			local id = tonumber(storm.load(cmd.dir_logs .. 'logsdata.txt')) or 0
-			id = id + 1
-			storm.save(cmd.dir_logs .. 'logsdata.txt', id)
-			cmd.log_file_name = id .. '.txt'
+			--local id = tonumber(storm.load(cmd.dir_logs .. 'logsdata.txt')) or 0
+			--id = id + 1
+			--storm.save(cmd.dir_logs .. 'logsdata.txt', id)
+			cmd.log_file_name = time.my_date .. '.txt'
 		end
 
 		if type(log_type) == 'table' then
@@ -313,10 +313,10 @@
 		if not cmd.error_lines then
 			cmd.error_lines = {}
 			--读取id
-			local id = tonumber(storm.load(cmd.dir_errors .. 'errorsdata.txt')) or 0
-			id = id + 1
-			storm.save(cmd.dir_errors .. 'errorsdata.txt', id)
-			cmd.error_file_name = id .. '.txt'
+			--local id = tonumber(storm.load(cmd.dir_errors .. 'errorsdata.txt')) or 0
+			--id = id + 1
+			--storm.save(cmd.dir_errors .. 'errorsdata.txt', id)
+			cmd.error_file_name = time.my_date .. '.txt'
 		end
 
 		table.insert(cmd.error_lines, ('[%s] - [%s]%s'):format(timer.time(true), type, line))

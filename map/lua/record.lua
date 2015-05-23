@@ -5,6 +5,8 @@
 
 	setmetatable(record, record)
 
+	time.syncTime()
+
 	if not japi.InitGameCache then
 		local names	= {
 			'InitGameCache',
