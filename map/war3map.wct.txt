@@ -8,7 +8,7 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=416
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -26,10 +26,6 @@ library LuaLibrary initializer Init
     }
 
     private void Init(){
-<<<<<<< HEAD
-=======
-
->>>>>>> new-lua
         Cheat("exec-lua:lua\\runtime.lua")
         Cheat("exec-lua:lua\\base.lua")
 
@@ -520,7 +516,7 @@ library defineLibrary
         bool = boolean
     }
 
-    //#define RELEASE //内测版本请将此行注释
+    #define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
