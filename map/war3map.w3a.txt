@@ -35603,3 +35603,15 @@ Ncl3[1]=18
 anam=尘土之影
 ansf=目标区域
 acdn[1]=30.0000
+[A0XX:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=H00N
+Eme1[1]=H00G
+ansf=狂三 花嫁
+arac=orc
+aher=0
+anam=皮肤
