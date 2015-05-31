@@ -63,6 +63,12 @@ function io.save(file_path, content)
 	end
 end
 
+local io_lines = io.lines
+
+function io.lines(path)
+	return io_lines(utf8_to_ansi(path:string()))
+end
+
 function io.lines2(path)
     local f, e = io.open(path, "rb")
     if not f then
