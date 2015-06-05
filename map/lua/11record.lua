@@ -239,6 +239,10 @@
 					table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
 				elseif cmd.ver_name == '2.8E' then
 					table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
+				elseif game.messenger_all_free then
+					table.insert(texts, ('\n|cffffcc00信使皮肤全开放!\n\n点击使用该皮肤|r'))
+				elseif data.free then
+					table.insert(texts, ('\n|cffffcc00该皮肤开放!\n\n点击使用该皮肤|r'))
 				elseif game.debug then
 					table.insert(texts, ('\n|cffffcc00测试模式,全皮肤开放!\n\n点击使用该皮肤|r'))
 				elseif #data.gold == 0 then
@@ -494,6 +498,10 @@
 					change()
 				elseif cmd.ver_name == '2.8E' then
 					change()
+				elseif game.messenger_all_free then
+					change()
+				elseif data.free then
+					change()
 				elseif game.debug then
 					change()
 				elseif count == 0 then
@@ -683,6 +691,10 @@
 						table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
 					elseif cmd.ver_name == '2.8E' then
 						table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
+					elseif game.hero_all_free then
+						table.insert(texts, ('\n|cffffcc00英雄皮肤全开放!\n\n点击使用该皮肤|r'))
+					elseif data.free then
+						table.insert(texts, ('\n|cffffcc00该皮肤开放!\n\n点击使用该皮肤|r'))
 					elseif game.debug then
 						table.insert(texts, ('\n|cffffcc00测试模式,全皮肤开放!\n\n点击使用该皮肤|r'))
 					elseif #data.gold == 0 then
@@ -834,6 +846,10 @@
 							if data.names[p:getBaseName()] then
 								change()
 							elseif cmd.ver_name == '2.8E' then
+								change()
+							elseif game.hero_all_free then
+								change()
+							elseif data.free then
 								change()
 							elseif game.debug then
 								change()
