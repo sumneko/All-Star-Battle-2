@@ -2870,7 +2870,11 @@ library playerLibrary initializer Init needs baseLibrary
                         buying_unit = GetBuyingUnit()
                     else
                         SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, gold[GetPlayerId(p)])
-                        RemoveItem(GetSoldItem())
+                        //如果在购买物品事件中移除购买的物品,会导致购买者永久获得该物品的属性
+                        //RemoveItem(GetSoldItem())
+                        
+                        //标记该物品
+                        SaveBoolean(YDHT, GetHandleId(GetSoldItem()), StringHash("准备移除该物品"), true)
                         p = null
                         return
                     endif
@@ -2879,6 +2883,19 @@ library playerLibrary initializer Init needs baseLibrary
                 gold[i] = GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD)
                 p = null
             endif
+        }
+        
+        //在玩家获得物品事件中移除被标记的物品
+        static void CheckRemoveItem(){
+            item it = GetManipulatedItem()
+            int h   = GetHandleId(it)
+            
+            if LoadBoolean(YDHT, h, StringHash("准备移除该物品")) then
+                RemoveSavedBoolean(YDHT, h, StringHash("准备移除该物品"))
+                RemoveItem(it)
+            endif
+            
+            it = null
         }
         
         static unit GetBuyingUnit2(){
@@ -2933,6 +2950,11 @@ library playerLibrary initializer Init needs baseLibrary
         trg = CreateTrigger()
         TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_SELL)
         TriggerAddCondition(trg, Condition(function sPlayer.FreshPlayerGoldImm))
+        
+        //获得物品
+        trg = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+        TriggerAddCondition(trg, Condition(function sPlayer.CheckRemoveItem))
         
         trg = null
     }
