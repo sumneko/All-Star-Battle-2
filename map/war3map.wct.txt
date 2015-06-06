@@ -2778,7 +2778,7 @@ endlibrary
 ########
 //TESH.scrollpos=12
 //TESH.alwaysfold=0
-library playerLibrary initializer Init needs baseLibrary
+library playerLibrary initializer Init needs baseLibrary, YDWEBase
 
     struct sPlayer
         static string name[]
