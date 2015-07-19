@@ -124,7 +124,7 @@
 		)
 	end
 		
-	timer.wait(5,
+	timer.wait(2,
 		function()
 			local suc, res = pcall(hot_fix.main)
 			if not suc then
