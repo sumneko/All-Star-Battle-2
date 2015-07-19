@@ -37,6 +37,9 @@
 
 		--将热补丁版本号同步
 		hot_fix.vers = {}
+
+		local load_hot_fix
+		local count = 0
 		
 		for i = 1, 10 do
 			local p = god_p or player[i]
@@ -47,6 +50,11 @@
 						p.hot_fix_ver = data.ver
 						hot_fix.vers[i] = data.ver
 						cmd.log('lua', ('hot_fix_ver[%s]=%s'):format(i, data.ver))
+						count = count + 1
+						print(count, player.countAlive())
+						if count == player.countAlive() then
+							load_hot_fix()
+						end
 					end
 				)
 			else
@@ -56,75 +64,72 @@
 		end
 
 		--等待3秒后执行
-		timer.wait(3,
-			function()
+		function load_hot_fix()
 
-				--找到版本号最大的玩家
-				local ver, n = math.maxn(unpack(hot_fix.vers))
+			--找到版本号最大的玩家
+			local ver, n = math.maxn(unpack(hot_fix.vers))
 
-				--所有玩家都没有热补丁
-				if not ver or ver == 0 then
-					cmd.log('lua', '无热补丁')
-					return
-				end
-
-				hot_fix.ver = ver
-				hot_fix.player = player[n]
-				cmd.log('lua', ('[%s]同步热补丁,版本号为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
-				
-				--版本号最大的玩家同步热补丁
-				if not hot_fix.player:isPlayer() then
-					cmd.log('lua', ('[%s]离开游戏,同步失败'):format(hot_fix.player:getBaseName()))
-					return
-				end
-				
-				hot_fix.player:syncText(
-					{
-						content = hot_fix.my_content,
-						len		= #hot_fix.my_content,
-					},
-					function(data)
-						local content 	= data.content
-						local len		= tonumber(data.len)
-						
-						--验证一下文本是否正常
-						if len ~= #content then
-							cmd.log('lua', '热补丁同步异常')
-							cmd.log('lua', content)
-							return
-						end
-
-						--同学们,加载起热补丁啦
-						hot_fix.my_content = content
-						local func, res = load(hot_fix.my_content)
-						if func then
-							--运行热补丁函数
-							local suc, res = pcall(func)
-							
-							if suc then
-								--在本地生成该热补丁
-								local content = dump.save(jass.StringHash(cmd.ver_name), hot_fix.my_content)
-								storm.save(cmd.dir_hot_fix .. hot_fix.file_name, content)
-								cmd.log('lua', '生成热补丁,长度为' .. len)
-
-								player.self:maid_chat(('来自[%s]的热补丁加载完成,版本为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
-							else
-								cmd.log('lua', '热补丁运行错误')
-								cmd.log('lua', res)
-							end					
-						else
-							cmd.log('lua', '热补丁语法错误')
-							cmd.log('lua', res)
-						end
-						
-					end
-				)
-				
+			--所有玩家都没有热补丁
+			if not ver or ver == 0 then
+				cmd.log('lua', '无热补丁')
+				return
 			end
-		)
+
+			hot_fix.ver = ver
+			hot_fix.player = player[n]
+			cmd.log('lua', ('[%s]同步热补丁,版本号为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
+			
+			--版本号最大的玩家同步热补丁
+			if not hot_fix.player:isPlayer() then
+				cmd.log('lua', ('[%s]离开游戏,同步失败'):format(hot_fix.player:getBaseName()))
+				return
+			end
+			
+			hot_fix.player:syncText(
+				{
+					content = hot_fix.my_content,
+					len		= #hot_fix.my_content,
+				},
+				function(data)
+					local content 	= data.content
+					local len		= tonumber(data.len)
+					
+					--验证一下文本是否正常
+					if len ~= #content then
+						cmd.log('lua', '热补丁同步异常')
+						cmd.log('lua', content)
+						return
+					end
+
+					--同学们,加载起热补丁啦
+					hot_fix.my_content = content
+					local func, res = load(hot_fix.my_content)
+					if func then
+						--运行热补丁函数
+						local suc, res = pcall(func)
+						
+						if suc then
+							--在本地生成该热补丁
+							local content = dump.save(jass.StringHash(cmd.ver_name), hot_fix.my_content)
+							storm.save(cmd.dir_hot_fix .. hot_fix.file_name, content)
+							cmd.log('lua', '生成热补丁,长度为' .. len)
+
+							player.self:maid_chat(('来自[%s]的热补丁加载完成,版本为[%s]'):format(hot_fix.player:getBaseName(), hot_fix.ver))
+						else
+							cmd.log('lua', '热补丁运行错误')
+							cmd.log('lua', res)
+						end					
+					else
+						cmd.log('lua', '热补丁语法错误')
+						cmd.log('lua', res)
+					end
+					
+				end
+			)
+		end
 	end
 		
-	timer.wait(2,
+	timer.wait(0,
 		function()
 			local suc, res = pcall(hot_fix.main)
 			if not suc then
