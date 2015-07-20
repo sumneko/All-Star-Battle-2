@@ -72,6 +72,17 @@
 			jass.DisplayTimedTextToPlayer(this.handle, 0, 0, 60, text)
 		end,
 	}
+
+	--清点存活玩家
+	function player.countAlive()
+		local count = 0
+		for i = 1, 16 do
+			if player[i]:isPlayer() then
+				count = count + 1
+			end
+		end
+		return count
+	end
 	
 	function player.__call(_, i)
 		return player[i]

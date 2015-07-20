@@ -226,7 +226,7 @@ local function main()
 		end
 
 		--打开listfile
-		for line in io.lines((test_dir / fname):string()) do
+		for line in io.lines(test_dir / fname) do
 			--导出并更新listfile中列举的每一个文件
 			local dir = fs.path(test_dir:string() .. '\\' .. line)
 			local map_dir = fs.path(file_dir:string() .. '\\' .. line)
@@ -258,7 +258,7 @@ local function main()
 		w3x2txt.fresh_wts(test_dir / 'war3map.wts')
 
 		--更新git
-		for line in io.lines((test_dir / fname):string()) do
+		for line in io.lines(test_dir / fname) do
 			if obj_txt[line] == nil and not w3x_txt[line] then
 				git_fresh(line)
 			else
