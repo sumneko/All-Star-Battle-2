@@ -6952,6 +6952,9 @@ endlibrary
 
 ########
 ########
+
+########
+########
 //TESH.scrollpos=106
 //TESH.alwaysfold=0
 library AIlibrary initializer Init needs baseLibrary
@@ -45796,6 +45799,30 @@ endfunction
 
 ########
 ########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
@@ -45858,26 +45885,6 @@ endfunction
             return table.concat(new_lines, '\r\n')
         end
     )
-?>
-########
-########
-//TESH.scrollpos=-1
-//TESH.alwaysfold=0
-<?
-    update('war3map.j',
-        function(content)
-            content = content:gsub('StringHash%(%s-%"(.-)%"%s-%)',
-                function(s)
-                    if not s:match('"') then
-                        return string_hash(s)
-                    end
-                end
-            )
-
-            return content
-        end
-    )
-
 ?>
 ########
 ########
@@ -46727,6 +46734,42 @@ endfunction
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
+    update('war3map.j',
+        function(content)
+            content = content:gsub('StringHash%(%s-%"(.-)%"%s-%)',
+                function(s)
+                    if not s:match('"') then
+                        return string_hash(s)
+                    end
+                end
+            )
+
+            return content
+        end
+    )
+
+?>
+########
+########
+//TESH.scrollpos=0
+//TESH.alwaysfold=0
+<?
+
+    update('war3map.j',
+        function(content)
+            content = content:gsub('== true', '')
+            content = content:gsub('else[%c%s]+endif', 'endif')
+
+            return content
+        end
+    )
+
+?>
+########
+########
+//TESH.scrollpos=-1
+//TESH.alwaysfold=0
+<?
 
     update('war3map.j',
         function(content)
@@ -46790,22 +46833,6 @@ endfunction
 
             return content
 
-        end
-    )
-
-?>
-########
-########
-//TESH.scrollpos=0
-//TESH.alwaysfold=0
-<?
-
-    update('war3map.j',
-        function(content)
-            content = content:gsub('== true', '')
-            content = content:gsub('else[%c%s]+endif', 'endif')
-
-            return content
         end
     )
 
