@@ -921,7 +921,8 @@
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
 		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
 
-			
+			//送给某妹子的
+			名字=乙坂丨步未
 
 		
 		//圆神
