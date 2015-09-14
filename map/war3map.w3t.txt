@@ -1505,7 +1505,7 @@ uhot=X
 ubpx=1
 [I01U:mnsf]
 unam=烈火神盾
-iabi=A05D,A0YA,A0PN
+iabi=A07X,A05D,A0YA,A0PN
 utip=购买烈火神盾
 utub=提高25点力量|n提高10点护甲值|n提高100点生命值|n提高10.0/s的生命恢复|n|n|cff0075ff格挡|r50%几率格挡60点物理伤害|n|cffff7500烈火金焰|r对275范围内敌人每秒造成30+3*自身等级点伤害|n|n|cff757575火……火遁！炽热锅盖之术……
 igol=8500
