@@ -118,7 +118,7 @@ function template:do_compile(op)
 	__map_path__   = op.map_path
 	local env = setmetatable({import = map_file_import, StringHash = string_hash}, {__index = _G})
 	table.insert(lua_codes, "return do_update_j(table.concat(__jass_result__))")	
-	io.save(fs.ydwe_path() / "logs" / "µ÷ÓÃlua²å¼şÇ°×îºó¿´Ò»ÑÛ½Å±¾.lua", table.concat(lua_codes, '\n'))
+	io.save(fs.ydwe_path() / "logs" / "è°ƒç”¨luaæ’ä»¶å‰æœ€åçœ‹ä¸€çœ¼è„šæœ¬.lua", table.concat(lua_codes, '\n'))
 	local f, err = load(table.concat(lua_codes, '\n'), nil, 't', env)
 	if not f then
 		return f, err
@@ -142,7 +142,7 @@ function template:compile(op)
 		log.error("Template error processing: " .. tostring(content))
 		return false
 	end
-	io.save(fs.ydwe_path() / "logs" / "×Ô¶¨ÒåluaºÄÊ±.txt", tostring(time_2 - time_1))
+	io.save(fs.ydwe_path() / "logs" / "è‡ªå®šä¹‰luaè€—æ—¶.txt", tostring(time_2 - time_1))
 
 	local result, err = io.save(op.output, content)
 	if not result then
