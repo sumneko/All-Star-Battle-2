@@ -45888,6 +45888,26 @@ endfunction
 ?>
 ########
 ########
+//TESH.scrollpos=-1
+//TESH.alwaysfold=0
+<?
+    update('war3map.j',
+        function(content)
+            content = content:gsub('StringHash%(%s-%"(.-)%"%s-%)',
+                function(s)
+                    if not s:match('"') then
+                        return string_hash(s)
+                    end
+                end
+            )
+
+            return content
+        end
+    )
+
+?>
+########
+########
 //TESH.scrollpos=644
 //TESH.alwaysfold=0
 
@@ -46728,26 +46748,6 @@ endfunction
             return content
         end
     )
-?>
-########
-########
-//TESH.scrollpos=-1
-//TESH.alwaysfold=0
-<?
-    update('war3map.j',
-        function(content)
-            content = content:gsub('StringHash%(%s-%"(.-)%"%s-%)',
-                function(s)
-                    if not s:match('"') then
-                        return string_hash(s)
-                    end
-                end
-            )
-
-            return content
-        end
-    )
-
 ?>
 ########
 ########
