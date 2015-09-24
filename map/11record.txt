@@ -1110,7 +1110,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1122,7 +1122,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1134,7 +1134,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1146,7 +1146,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1158,7 +1158,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1170,7 +1170,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1182,7 +1182,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1194,7 +1194,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1206,7 +1206,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
@@ -1218,7 +1218,7 @@
 		前缀=|cffcc00cc泳装·|r 
 		说明=
 		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph

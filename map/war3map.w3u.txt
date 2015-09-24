@@ -3516,6 +3516,7 @@ ubui=
 upgr=
 umvt=
 usca=0.7500
+udtm=0.1000
 [n00F:ngme]
 unam=灯塔
 usei=
@@ -14884,6 +14885,7 @@ upgr=
 umvt=
 usca=0.7500
 unsf=白
+udtm=0.1000
 [e09S:ewsp]
 unam=一户
 uabi=Aloc,Arav
@@ -20636,3 +20638,19 @@ upgr=
 umvt=
 usca=0.8000
 unsf=泳装
+udtm=0.1000
+[e0BI:ewsp]
+unam=夏娜
+umdl=war3mapImported\Shana_Swimsuit.mdl
+uabi=Arav,Aloc
+ufoo=0
+utyp=ward
+usid=0
+usin=0
+umvt=
+ubui=
+ucol=0.0000
+udtm=0.0000
+usca=1.1000
+unsf=泳装 残影
+upgr=
