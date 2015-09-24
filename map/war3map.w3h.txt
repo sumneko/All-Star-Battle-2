@@ -1206,3 +1206,18 @@ fsat=
 ftip=电极
 fube=开启电极
 fart=ReplaceableTextures\CommandButtons\BTNNeutralManaShield.blp
+[B04D:Basl]
+fube=该单位受到强力切割，护甲值降低了。
+ftat=
+fart=ReplaceableTextures\CommandButtons\BTNImprovedUnholyArmor.blp
+ftip=透甲
+frac=nightelf
+fnsf= (BUFF)
+fnam=切割
+[B04E:BNab]
+ftip=透甲
+fube=该单位受到强力切割，护甲值降低了。
+fart=ReplaceableTextures\CommandButtons\BTNImprovedUnholyArmor.blp
+ftat=
+fta0=
+fnam=切割
