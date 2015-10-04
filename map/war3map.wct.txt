@@ -42805,6 +42805,74 @@ endfunction
 
 ########
 ########
+//TESH.scrollpos=18
+//TESH.alwaysfold=0
+function Trig________________uActions takes nothing returns nothing
+    set udg_pp[1] = 'A0Z4'
+    set udg_pp[2] = 'A0Z5'
+    set udg_pp[3] = 'A0Z6'
+    set udg_pp[4] = 'A0Z7'
+    set udg_pp[5] = 'A0Z8'
+    set udg_pp[6] = 'A0Z9'
+    set udg_pp[7] = 'A0ZA'
+    set udg_pp[8] = 'A0ZB'
+    set udg_pp[9] = 'A0ZC'
+    set udg_pp[10] = 'A0ZD'
+    set udg_pp[11] = 'A0ZE'
+    set udg_pp[12] = 'A0ZF'
+    set udg_pp[13] = 'A0ZG'
+    set udg_pp[14] = 'A0ZH'
+    set udg_pp[15] = 'A0ZI'
+    set udg_pp[16] = 'A0ZJ'
+    set udg_pp[17] = 'A0ZK'
+    set udg_pp[18] = 'A0ZL'
+    set udg_pp[19] = 'A0ZM'
+    set udg_pp[20] = 'A0ZN'
+    set udg_pp[21] = 'A0ZO'
+    set udg_pp[22] = 'A0ZP'
+    set udg_pp[23] = 'A0ZQ'
+    set udg_pp[24] = 'A0ZR'
+    set udg_pp[25] = 'A0ZS'
+    set udg_pp[26] = 'A0ZT'
+    set udg_pp[27] = 'A0ZU'
+    set udg_pp[28] = 'A0ZV'
+    set udg_pp[29] = 'A0ZW'
+    set udg_pp[30] = 'A0ZX'
+    set udg_pp[31] = 'A0ZY'
+    set udg_pp[32] = 'A0ZZ'
+    set udg_pp[33] = 'A100'
+    set udg_pp[34] = 'A101'
+    set udg_pp[35] = 'A102'
+    set udg_pp[36] = 'A103'
+    set udg_pp[37] = 'A104'
+    set udg_pp[38] = 'A105'
+    set udg_pp[39] = 'A106'
+    set udg_pp[40] = 'A107'
+    set udg_pp[41] = 'A108'
+    set udg_pp[42] = 'A109'
+    set udg_pp[43] = 'A10A'
+    set udg_pp[44] = 'A10B'
+endfunction
+
+//===========================================================================
+function InitTrig________________u takes nothing returns nothing
+    set gg_trg________________u = CreateTrigger()
+#ifdef DEBUG
+    call YDWESaveTriggerName(gg_trg________________u, "表情初始化")
+#endif
+    call TriggerRegisterTimerEventSingle( gg_trg________________u, 2.00 )
+    call TriggerAddAction(gg_trg________________u, function Trig________________uActions)
+endfunction
+
+
+########
+########
+
+########
+########
+
+########
+########
 
 ########
 ########

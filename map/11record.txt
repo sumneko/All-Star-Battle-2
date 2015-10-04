@@ -13,7 +13,7 @@
                 藤原_妹红_=|cffff9933[凤舞天，翼盘旋★月球上不死之烟]|r
                 moon_shin=|cffffcc00[全明星の模型师]|r
                 小爱不是处=|cffff00ff[愛の最强自在法]|r
-                佐藤桑=|cFF66FFFF[ぽい]|r
+                LemonHunter=|cFF66FFFF[ぽい]|r
                 
              
               
@@ -73,7 +73,7 @@
 
 			//皮肤无限使用权
 
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的女儿
@@ -121,7 +121,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=WuKong.blp
 			技能=被动
 			标题=特殊信使
@@ -152,7 +152,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处喵;佐藤桑
+			名字=小爱不是处喵;LemonHunter
 			图标=button\BTNXS_U_9.blp
 			技能=被动
 			标题=特殊信使
@@ -189,7 +189,7 @@
 			标题=|cffffcc00%player_name%|r的专属信使
 			内容=筒隐月子俺嫁,萝莉后宫万岁!
 
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_saber.blp
 			技能=被动
 			标题=特殊信使
@@ -226,7 +226,7 @@
 			标题=|cffffcc00%player_name%|r,测试辛苦了!
 			内容=无聊的时候就逗逗裂魂人玩吧~
 
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
 			技能=被动
 			标题=特殊信使
@@ -257,7 +257,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_YUI.blp
 			技能=被动
 			标题=特殊信使
@@ -288,7 +288,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_LD.blp
 			技能=被动
 			标题=特殊信使
@@ -312,7 +312,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_ZM.blp
 			技能=被动
 			标题=特殊信使
@@ -344,7 +344,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;LemonHunter
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -369,7 +369,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Gundam.blp
 			技能=被动
 			标题=特殊信使
@@ -400,7 +400,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Vya.blp
 			技能=被动
 			标题=特殊信使
@@ -431,7 +431,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Zombie.blp
 			技能=被动
 			标题=特殊信使
@@ -455,7 +455,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Konata.blp
 			技能=被动
 			标题=特殊信使
@@ -486,7 +486,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
@@ -510,7 +510,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Teemo.blp
 			技能=被动
 			标题=特殊信使
@@ -534,7 +534,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_OldTeemo.blp
 			技能=被动
 			标题=特殊信使
@@ -565,7 +565,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_DYCX.blp.blp
 			技能=被动
 			标题=特殊信使
@@ -597,7 +597,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑;最萌小汐;藤原_妹红_
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
@@ -615,7 +615,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=小爱不是处;佐藤桑;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
 		
 
 		//saber extra
@@ -627,7 +627,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;s芙兰朵露z;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;
 
 		
 			
@@ -640,7 +640,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
 
 			
 		//夏娜 火雾战士
@@ -652,7 +652,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 	
@@ -665,7 +665,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 		//夜夜 Special
@@ -678,18 +678,18 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;
 
 		//超电磁炮
 		皮肤=A0U5
 		前缀=|cffff1111超电磁炮|r
-		说明=想拥有更多隐藏皮肤吗？多关注全明星战役贴吧活动吧！
-		价格=
+		说明=
+		价格=1-700;10-6888
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=藤原_妹红_;s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;月丶魔理莎;抱腿蕾米莉亚;
+		名字=藤原_妹红_;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;抱腿蕾米莉亚;
 
 		
 
@@ -702,7 +702,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 
@@ -715,7 +715,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 		
 		//真·克劳德
 		皮肤=A0U8
@@ -726,7 +726,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 
@@ -739,7 +739,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 		//女剑客
@@ -751,7 +751,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 		//装甲屠夫
@@ -763,7 +763,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;s芙兰朵露z;WorldEdit;藤原_妹红_
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;藤原_妹红_
 
 		//祸灵梦
 		皮肤=A0UU
@@ -774,7 +774,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 
@@ -787,7 +787,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 	/*
 		//新约·一方
 		皮肤=A0V2
@@ -809,7 +809,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 		//黑暗游侠
@@ -821,7 +821,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 
@@ -834,7 +834,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 		
 		
 
@@ -847,7 +847,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 		
 		//诗乃
 		皮肤=A0UZ
@@ -858,7 +858,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 	
 		//狗剪
@@ -870,7 +870,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;夏阁艾狄剑;Chok丶Rs
 
 			
 		//十香
@@ -882,7 +882,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 
@@ -895,7 +895,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
 		
 		
 		
@@ -908,7 +908,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 
@@ -922,7 +922,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
 
 			//送给某妹子的
 			名字=乙坂丨步未
@@ -937,7 +937,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 			//贴吧抽奖,一季
 			名字=芙蕾雅SAMA;法法法克优;双马尾萝莉;梦之祈语;蕾蒂|斯卡;机巧_Yeye;御宅丿柠茶;雪下樱花舞;名濑博臣丶;星野雪奈
 	
@@ -951,7 +951,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 		//兵长
 		皮肤=A0VZ
@@ -962,7 +962,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 
@@ -976,7 +976,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 
@@ -989,19 +989,19 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 
 		//阿露蒂娜
 		皮肤=A0VV
 		前缀=|cffcc00cc银之森的妖精公主|r 
 		说明=
-		价格=
+		价格=1-700;10-6888
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;蕾蒂|斯卡;朝田诗乃;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;蕾蒂|斯卡;朝田诗乃;
 
 			
 
@@ -1014,7 +1014,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 		
 
@@ -1027,7 +1027,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 		//Saber Bride 2
@@ -1039,7 +1039,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 		
 
@@ -1052,7 +1052,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 		
 
@@ -1065,7 +1065,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 		
 		//雅典娜
 		皮肤=A0X5
@@ -1076,7 +1076,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 			
 
@@ -1084,12 +1084,12 @@
 		皮肤=A0XD
 		前缀=|cffcc00cc黑礼服·|r 
 		说明=呐，士道桑 我们融合吧
-		价格=
+		价格=1-700;10-6888
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;Aki|
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;Aki|
 
 		
 
@@ -1102,7 +1102,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;万条小三;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
 
 
 		//狂三 泳装
@@ -1114,7 +1114,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;真白抱枕;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;真白抱枕;
 		
 
 		//赤瞳 泳装
@@ -1126,7 +1126,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//saber 泳装
@@ -1138,7 +1138,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//缇娜 泳装
@@ -1150,7 +1150,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//姆Q 泳装
@@ -1162,7 +1162,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;白鹿爱莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;白鹿爱莉;
 		
 
 		//克劳德 泳装
@@ -1174,7 +1174,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;暴击型KLD;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;暴击型KLD;
 		
 
 		//一方 泳装
@@ -1186,7 +1186,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
 		
 
 		//一护 泳装
@@ -1198,7 +1198,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
 		
 
 		//夏娜 泳装
@@ -1210,7 +1210,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
 		
 
 		//初音 泳装
@@ -1222,7 +1222,43 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;凝梦i;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i;
+		
+
+		//琴里
+		皮肤=A0Z3
+		前缀=|cffcc00cc第五精灵·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//立华奏 天使
+		皮肤=A0Z4
+		前缀=|cffcc00cc天使·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//夜夜 泳装
+		皮肤=A0Z5
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;此生无悔入;
 		
 
 /*未实装
@@ -1235,7 +1271,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//蒂法 泳装
@@ -1247,7 +1283,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//阿露蒂娜 泳装
@@ -1259,7 +1295,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//灵梦 泳装
@@ -1271,7 +1307,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//十香 泳装
@@ -1283,7 +1319,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
 		
 
 		//小圆 泳装
@@ -1295,7 +1331,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;双马尾萝莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;双马尾萝莉;
 		
 
 		//夏野姬 泳装
@@ -1307,7 +1343,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;月丶魔理莎;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;
 		
 
 		//小爱 泳装
@@ -1319,7 +1355,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
 		
 
 		//黑子 泳装
@@ -1331,19 +1367,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;上彬绘梨衣;
-		
-
-		//夜夜 泳装
-		皮肤=
-		前缀=|cffcc00cc泳装·|r 
-		说明=
-		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
-		特效点=origin
-		特效时间=1
-		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;此生无悔入;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;上彬绘梨衣;
 
 		
 		//由乃 泳装
@@ -1355,7 +1379,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;梦之祈语;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;
 
 		*/
 
@@ -1422,4 +1446,4 @@
 		//注册方法:单机激活权限后输入 .set 0 flag 1
 		//别忘了 .save
 
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;最萌小汐;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
