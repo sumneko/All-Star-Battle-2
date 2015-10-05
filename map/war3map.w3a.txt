@@ -37005,3 +37005,27 @@ aart=pp_44.BLP
 atat=paopao\pp_44.mdx
 atac=1
 ata0=overhead
+[A10C:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Hblm
+Eme1[1]=H01R
+ansf=咲夜 泳装蓝
+arac=orc
+aher=0
+anam=皮肤
+[A10D:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Hblm
+Eme1[1]=H01S
+ansf=咲夜 泳装黑
+arac=orc
+aher=0
+anam=皮肤
