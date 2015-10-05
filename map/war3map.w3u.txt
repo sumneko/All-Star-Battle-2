@@ -14985,7 +14985,6 @@ unsf=Special
 uprw=180.0000
 uori=0
 umvr=3.0000
-uani=alternate
 uhrt=none
 uhpr=0.0000
 [O003:Oshd]
@@ -20836,7 +20835,6 @@ unsf=泳装
 uprw=180.0000
 uori=0
 umvr=3.0000
-uani=alternate
 uhrt=none
 uhpr=0.0000
 [H01R:Hblm]
