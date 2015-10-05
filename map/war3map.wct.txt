@@ -42863,8 +42863,6 @@ function InitTrig________________u takes nothing returns nothing
     call TriggerRegisterTimerEventSingle( gg_trg________________u, 2.00 )
     call TriggerAddAction(gg_trg________________u, function Trig________________uActions)
 endfunction
-
-
 ########
 ########
 
