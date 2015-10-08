@@ -270,6 +270,13 @@
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
+			//3.0小版本
+			名字=呆毛傲娇娜
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧劳动节动手活动奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧劳动节动手活动获得的奖励，劳动光荣!
+
 		//律队 	n01M
 
 			信使=n01M
@@ -642,6 +649,9 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
 
+		//3.0小版本
+		名字=加藤慧;
+
 			
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -665,6 +675,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
@@ -835,6 +846,9 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		//3.0小版本
+		名字=始源乔治;
 		
 		
 
@@ -938,8 +952,6 @@
 		特效时间=0.5
 		变身动画=Spell Three
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
-			//贴吧抽奖,一季
-			名字=芙蕾雅SAMA;法法法克优;双马尾萝莉;梦之祈语;蕾蒂|斯卡;机巧_Yeye;御宅丿柠茶;雪下樱花舞;名濑博臣丶;星野雪奈
 	
 
 		//神圣天使兽
@@ -977,6 +989,9 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		//3.0大版本
+		名字=Re丿佐佐木;
 
 			
 
@@ -1258,6 +1273,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;此生无悔入;
 		
 

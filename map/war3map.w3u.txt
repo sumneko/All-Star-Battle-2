@@ -20752,7 +20752,7 @@ uhpr=0.0000
 [E0BJ:Ekee]
 umdl=war3mapImported\Kotori.mdl
 ussc=1.5000
-uico=button\BTNhero_shinai.blp
+uico=button\BTNhero_Kotori.blp
 upoi=21
 unam=第五精灵
 uhab=A0LE,A0LH,A0LI,A02D,A0LP
@@ -20777,7 +20777,7 @@ ucbs=0.0000
 ua1c=1.7000
 udp1=0.3000
 ubs1=0.3000
-ussi=button\BTNhero_shinai.blp
+ussi=button\BTNhero_Kotori.blp
 umvs=340
 umvt=foot
 ua1b=24
