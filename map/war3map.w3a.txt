@@ -8473,7 +8473,7 @@ anam=烈火金焰
 abuf[1]=B00G
 ahdu[1]=0.5000
 adur[1]=0.5000
-Eim1[1]=0.0000
+Eim1[1]=0.1000
 ansf=
 aare[1]=275.0000
 aite=1
@@ -27886,7 +27886,7 @@ aeat=
 ansf=+150
 Ilif[1]=150
 [A0PN:Aspb]
-spb1[1]=A072,A0Y9
+spb1[1]=A0Y9
 spb2[1]=0
 spb5[1]=spellbook
 spb5[2]=spellbook
