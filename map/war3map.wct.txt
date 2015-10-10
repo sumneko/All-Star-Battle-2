@@ -8,7 +8,10 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=3
+
+########
+########
+//TESH.scrollpos=459
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -430,6 +433,7 @@ endlibrary
 	hero_types[41] = 'H00R'
     hero_types[42] = 'H00S'
 	hero_types[45] = 'H01G'
+    --新英雄在此注册
 
     --英雄介绍模板
     local hero_type_instr = [[

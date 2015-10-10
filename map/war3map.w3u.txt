@@ -19977,6 +19977,7 @@ uico=button\BTN_Hero_U2
 ustp=2.9000
 usnd=Priest
 utub=团队辅助强袭型
+uhrt=none
 [h01J:hrif]
 umdl=war3mapImported\SakaiYuji_Snake_DAce(Head).mdl
 unam=祭礼之蛇
