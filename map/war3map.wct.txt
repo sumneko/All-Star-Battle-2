@@ -420,6 +420,7 @@ endlibrary
 	hero_types[29] = 'Hkal'
 	hero_types[30] = 'Hmbr'
 	hero_types[31] = 'H006'
+	hero_types[32] = 'H01I'
 	hero_types[34] = 'Udea'
 	hero_types[35] = 'H00J'
 	hero_types[37] = 'H00L'
