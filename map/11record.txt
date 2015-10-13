@@ -18,6 +18,7 @@
         //测试奖励
         中端路人局=|cFF66FFFF[叫我雷锋就好]|r
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
+        我只是16=|cFF66FFFF[叫我雷锋就好]|r
         丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
                 
              
@@ -394,6 +395,9 @@
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
+			//贴吧国庆比赛奖励 3.0小版本
+			名字=Wind雀明华
+
 		//V仔兽 n02B
 
 			信使=n02B
@@ -503,6 +507,9 @@
 			技能=被动
 			标题=特殊信使
 			内容=火柴人
+
+			//贴吧国庆比赛奖励 3.0小版本
+			名字=羽山雅文
 
 		//提莫 n029
 
@@ -615,6 +622,13 @@
 			标题=特殊信使
 			内容=舰娘
 
+			//贴吧国庆比赛奖励 3.0大版本
+			名字=琪露诺;氵_____乌龟
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=特殊信使
+			内容=这是国庆比赛的冠军奖励
+
 	==英雄皮肤==
 
 		//saber alter
@@ -628,6 +642,9 @@
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
 		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
+
+		    //贴吧国庆活动奖励 3.0小版本
+		    名字=草薙护堂
 		
 
 		//saber extra
@@ -682,6 +699,9 @@
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		    //贴吧国庆比赛奖励
+		    名字=倾城壹平
 
 			
 		//夜夜 Special
@@ -743,6 +763,9 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=Handsonic丶;苗木小丸
 
 		
 
@@ -883,8 +906,8 @@
 		//狗剪
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
-		说明=1-888;10-6888
-		价格=
+		说明=
+		价格=1-888;10-6888
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
@@ -946,6 +969,9 @@
 			//送给某妹子的
 			名字=乙坂丨步未
 
+			//贴吧国庆比赛奖励 3.0大版本
+			名字=超鬼君尼嚎
+
 		
 		//圆神
 		皮肤=A0VF
@@ -980,6 +1006,9 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=雨月夜痕
 
 		
 
@@ -1061,6 +1090,9 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
+		    //贴吧国庆活动奖励
+		    名字=夜空下樱花;白发天使
+
 		
 
 		//圣骑士
@@ -1123,6 +1155,9 @@
 		特效时间=1
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
+
+		    //贴吧国庆比赛奖励 3.0大版本
+		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉
 
 
 		//狂三 泳装
