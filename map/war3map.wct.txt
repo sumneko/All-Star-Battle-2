@@ -8,7 +8,10 @@ VERSION=1
     native UnitAlive takes unit u returns bool
 ########
 ########
-//TESH.scrollpos=0
+
+########
+########
+//TESH.scrollpos=459
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -420,6 +423,7 @@ endlibrary
 	hero_types[29] = 'Hkal'
 	hero_types[30] = 'Hmbr'
 	hero_types[31] = 'H006'
+	hero_types[32] = 'H01I'
 	hero_types[34] = 'Udea'
 	hero_types[35] = 'H00J'
 	hero_types[37] = 'H00L'
@@ -429,6 +433,7 @@ endlibrary
 	hero_types[41] = 'H00R'
     hero_types[42] = 'H00S'
 	hero_types[45] = 'H01G'
+    --新英雄在此注册
 
     --英雄介绍模板
     local hero_type_instr = [[
@@ -781,7 +786,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=631
+//TESH.scrollpos=673
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -1496,7 +1501,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=411
+//TESH.scrollpos=823
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2776,7 +2781,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=12
+//TESH.scrollpos=147
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary, YDWEBase
 
@@ -2965,7 +2970,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=78
+//TESH.scrollpos=848
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3855,7 +3860,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=622
+//TESH.scrollpos=1369
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -6038,7 +6043,7 @@ library objectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=144
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary, processLibrary
     struct test
@@ -6952,7 +6957,10 @@ endlibrary
 
 ########
 ########
-//TESH.scrollpos=106
+
+########
+########
+//TESH.scrollpos=113
 //TESH.alwaysfold=0
 library AIlibrary initializer Init needs baseLibrary
 
@@ -42802,6 +42810,99 @@ endfunction
 
 ########
 ########
+//TESH.scrollpos=18
+//TESH.alwaysfold=0
+function Trig________________uActions takes nothing returns nothing
+    set udg_pp[1] = 'A0Z4'
+    set udg_pp[2] = 'A0Z5'
+    set udg_pp[3] = 'A0Z6'
+    set udg_pp[4] = 'A0Z7'
+    set udg_pp[5] = 'A0Z8'
+    set udg_pp[6] = 'A0Z9'
+    set udg_pp[7] = 'A0ZA'
+    set udg_pp[8] = 'A0ZB'
+    set udg_pp[9] = 'A0ZC'
+    set udg_pp[10] = 'A0ZD'
+    set udg_pp[11] = 'A0ZE'
+    set udg_pp[12] = 'A0ZF'
+    set udg_pp[13] = 'A0ZG'
+    set udg_pp[14] = 'A0ZH'
+    set udg_pp[15] = 'A0ZI'
+    set udg_pp[16] = 'A0ZJ'
+    set udg_pp[17] = 'A0ZK'
+    set udg_pp[18] = 'A0ZL'
+    set udg_pp[19] = 'A0ZM'
+    set udg_pp[20] = 'A0ZN'
+    set udg_pp[21] = 'A0ZO'
+    set udg_pp[22] = 'A0ZP'
+    set udg_pp[23] = 'A0ZQ'
+    set udg_pp[24] = 'A0ZR'
+    set udg_pp[25] = 'A0ZS'
+    set udg_pp[26] = 'A0ZT'
+    set udg_pp[27] = 'A0ZU'
+    set udg_pp[28] = 'A0ZV'
+    set udg_pp[29] = 'A0ZW'
+    set udg_pp[30] = 'A0ZX'
+    set udg_pp[31] = 'A0ZY'
+    set udg_pp[32] = 'A0ZZ'
+    set udg_pp[33] = 'A100'
+    set udg_pp[34] = 'A101'
+    set udg_pp[35] = 'A102'
+    set udg_pp[36] = 'A103'
+    set udg_pp[37] = 'A104'
+    set udg_pp[38] = 'A105'
+    set udg_pp[39] = 'A106'
+    set udg_pp[40] = 'A107'
+    set udg_pp[41] = 'A108'
+    set udg_pp[42] = 'A109'
+    set udg_pp[43] = 'A10A'
+    set udg_pp[44] = 'A10B'
+endfunction
+
+//===========================================================================
+function InitTrig________________u takes nothing returns nothing
+    set gg_trg________________u = CreateTrigger()
+#ifdef DEBUG
+    call YDWESaveTriggerName(gg_trg________________u, "表情初始化")
+#endif
+    call TriggerRegisterTimerEventSingle( gg_trg________________u, 2.00 )
+    call TriggerAddAction(gg_trg________________u, function Trig________________uActions)
+endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
 
 ########
 ########
@@ -46724,6 +46825,22 @@ endfunction
 ?>
 ########
 ########
+//TESH.scrollpos=0
+//TESH.alwaysfold=0
+<?
+
+    update('war3map.j',
+        function(content)
+            content = content:gsub('== true', '')
+            content = content:gsub('else[%c%s]+endif', 'endif')
+
+            return content
+        end
+    )
+
+?>
+########
+########
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
@@ -46790,22 +46907,6 @@ endfunction
 
             return content
 
-        end
-    )
-
-?>
-########
-########
-//TESH.scrollpos=0
-//TESH.alwaysfold=0
-<?
-
-    update('war3map.j',
-        function(content)
-            content = content:gsub('== true', '')
-            content = content:gsub('else[%c%s]+endif', 'endif')
-
-            return content
         end
     )
 

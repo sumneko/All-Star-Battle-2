@@ -1,4 +1,4 @@
-﻿
+
 	==特殊称号==
 		WorldEdit=|cffffcc00[正在测试中]|r
 		最萌小汐=|cffffcc00[超高校级の]|r
@@ -9,11 +9,17 @@
 		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
 		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
 		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
-                s芙兰朵露z=|Cffff00ff[永远の二妹]|r
-                藤原_妹红_=|cffffcc00[|cffff0000凤舞天，翼盘旋★月球上不死之烟|cffffcc00]|r
+                s芙兰朵露z=|cffff00ff[永远の二妹]|r
+                藤原_妹红_=|cffff9933[凤舞天，翼盘旋★月球上不死之烟]|r
                 moon_shin=|cffffcc00[全明星の模型师]|r
-                小爱不是处=|cFFFF66FF[像我这样的大帅比，装个逼有错吗？]|r
-                佐藤桑=|cFF66FFFF[ぽい]|r
+                小爱不是处=|cffff00ff[爱の最强自在法]|r
+                LemonHunter=|cFF66FFFF[ぽい]|r
+
+        //测试奖励
+        中端路人局=|cFF66FFFF[叫我雷锋就好]|r
+        工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
+        我只是16=|cFF66FFFF[叫我雷锋就好]|r
+        丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
                 
              
               
@@ -25,61 +31,10 @@
         空心de木偶=|cffffcc00[|cFF00FFFF完美潇洒の从者|cffffcc00]|r
         樱逝夕颜=|cffffcc00[|cFFFFCC66远离尘世の理想乡|cffffcc00]|r
 
-	r
-	*/	
-	//贴吧抽奖,3.0版本全部删除
-		倾城壹平=|cffffcc00[新世界の神]|r
-		BAKA丶兔子=|cffffcc00[飘上月球の不死之烟]|r
-		一剑镇九州=|cffffcc00[幻想乡之王]|r
-		名濑博臣丶=|cffffcc00[とある科学の超电磁炮]|r
-		匹夫的逆袭=|cffffcc00[为了圣光！]|r
-		双马尾萝莉=|cffffcc00[人家真的不萌啦]|r
-		芙蕾雅SAMA=|cffffcc00[魂逗螺大教主]|r
-		丶夏_娜=|cffffcc00[天罚神の契约者]|r
-		柒夜之夏=|cffffcc00[世界の公主殿下]|r
-		丶北城灬1=|cffffcc00[罪恶の王]|r
-		Sanction_Z=|cffffcc00[指尖的彩虹]|r
-		法法法克优=|cffffcc00[円环の理]|r
-		晓黑雾里剑=|cffffcc00[灼眼炎发的恶行者]|r
-		勿忘本心i=|cffffcc00[我，是至高无上の王]|r
-		Maple故事=|cffffcc00[骑士王のExcalibur]|r
-		梦之祈语=|cffffcc00[刹那遥远的凄惶]|r
-		月丶魔理莎=|cffffcc00[瞬眼の间 ]|r
-		龌龊的秃子=|cffffcc00[巨坑秃已死]|r
-		验证码t236=|cffffcc00[水贴之神崩溃码]|r
-		蕾蒂丨斯卡=|cffffcc00[最爱の奏酱 ]|r
-		神级推土=|cffffcc00[湮灭万象]|r
-		夏阁艾狄剑=|cffffcc00[就算是神我也杀给你看]|r
-		机巧_Yeye=|cffffcc00[原典候补者]|r
-		朝田诗乃=|cffffcc00[冰之狙击手]|r
-		呆毛傲娇娜=|cffffcc00[世界第一卖萌娜]|r
-		亚里亚=|cffffcc00[绯绯神]|r
-		我只是大叔=|cffffcc00[我是猥琐大叔]|r
-		绘梨衣丶碎梦=|cffffcc00[吾の理即为真理]|r
-		丨风逝丨=|cffffcc00[逝风随我，我随风逝]|r
-		蔓珠沙华彡=|cffffcc00[生如夏花之绚烂 ]|r
-		绯色菠萝=|cffffcc00[菠萝姬★才不是傲娇呢√]|r
-		蕾蒂西亚=|cffffcc00[箱中庭の血族の骑士姬]|r
-		真白抱枕=|cffffcc00[陪你到天堂看日落]|r
-		绘梨衣丶碎=|cffffcc00[吾之理即为真理]|r
-		红叶未颜=|cffffcc00[魔神显现.艾斯德斯]|r
-		Angel_真白=|cffffcc00[和秋天最配的是什么]|r
-		柒染夜=|cffffcc00[「幸福の游戏」]|r
-		十六的PAD=|cffffcc00[完美潇洒の从者]|r
-		冢耶舞莉=|cffffcc00[制裁之刃]|r
-		穗乃果_=|cffffcc00[|cffff6600届けて切なさには|cffffcc00]|r
-		Js丶天道=|cffffcc00[神化のApophis]|r
-		自律性马机=|cffffcc00[命运の链接]|r
-		抱腿蕾米莉亚=|cffffcc00[抱谁谁断腿]|r
-		d很胖的瘦子b=|cffffcc00[小小瘦子酱]|r
-		萌萌阿泽君=|cffffcc00[狂暴Dr.阿泽]|r
-		Chok丶Rs=|cffffcc00[世间一切 如风吹袅烟]|r
-		丶木绵季_=|cffffcc00[|cff8200ffMother's★Rosario|cffffcc00]|r
-		我有原罪=|cffffcc00[对不起这场比赛我要赢]|r
-		蕾蒂|斯卡=|cffffcc00[最爱の奏酱]|r
-		堕一D神=|cffffcc00[想打我来调教我啊!]|r
-		土御门十四=|cffffcc00[博博养的驴霜]|r
-	
+    //又是送妹子的
+    	疯狂妮妮=|cffff83fa[色情女主播]|r
+
+		
 	==特殊信使==
 
 		//皮卡丘	n01J
@@ -124,7 +79,7 @@
 
 			//皮肤无限使用权
 
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的女儿
@@ -172,7 +127,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=WuKong.blp
 			技能=被动
 			标题=特殊信使
@@ -203,7 +158,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处喵;佐藤桑
+			名字=小爱不是处喵;LemonHunter
 			图标=button\BTNXS_U_9.blp
 			技能=被动
 			标题=特殊信使
@@ -240,7 +195,7 @@
 			标题=|cffffcc00%player_name%|r的专属信使
 			内容=筒隐月子俺嫁,萝莉后宫万岁!
 
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_saber.blp
 			技能=被动
 			标题=特殊信使
@@ -277,7 +232,7 @@
 			标题=|cffffcc00%player_name%|r,测试辛苦了!
 			内容=无聊的时候就逗逗裂魂人玩吧~
 
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
 			技能=被动
 			标题=特殊信使
@@ -308,7 +263,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_YUI.blp
 			技能=被动
 			标题=特殊信使
@@ -320,6 +275,13 @@
 			技能=被动
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+			//3.0小版本
+			名字=呆毛傲娇娜
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧劳动节动手活动奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧劳动节动手活动获得的奖励，劳动光荣!
 
 		//律队 	n01M
 
@@ -339,7 +301,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_LD.blp
 			技能=被动
 			标题=特殊信使
@@ -363,7 +325,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;佐藤桑
+			名字=小爱不是处;LemonHunter
 			图标=button\BTNXS_U_ZM.blp
 			技能=被动
 			标题=特殊信使
@@ -395,7 +357,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;LemonHunter
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -420,7 +382,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Gundam.blp
 			技能=被动
 			标题=特殊信使
@@ -432,6 +394,9 @@
 			技能=被动
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+			//贴吧国庆比赛奖励 3.0小版本
+			名字=Wind雀明华
 
 		//V仔兽 n02B
 
@@ -451,7 +416,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Vya.blp
 			技能=被动
 			标题=特殊信使
@@ -482,7 +447,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Zombie.blp
 			技能=被动
 			标题=特殊信使
@@ -506,7 +471,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Konata.blp
 			技能=被动
 			标题=特殊信使
@@ -537,11 +502,14 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
 			内容=火柴人
+
+			//贴吧国庆比赛奖励 3.0小版本
+			名字=羽山雅文
 
 		//提莫 n029
 
@@ -561,7 +529,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_Teemo.blp
 			技能=被动
 			标题=特殊信使
@@ -585,7 +553,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_OldTeemo.blp
 			技能=被动
 			标题=特殊信使
@@ -616,7 +584,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
 			图标=button\BTN_XS_DYCX.blp.blp
 			技能=被动
 			标题=特殊信使
@@ -648,11 +616,18 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;佐藤桑;最萌小汐
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
 			内容=舰娘
+
+			//贴吧国庆比赛奖励 3.0大版本
+			名字=琪露诺;氵_____乌龟
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=特殊信使
+			内容=这是国庆比赛的冠军奖励
 
 	==英雄皮肤==
 
@@ -666,9 +641,11 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=小爱不是处;佐藤桑;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
-			//贴吧抽奖,一季
-			名字=蔓珠沙华彡;小紫妹丶;法法法克优;蕾蒂酱;绯樱灬
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
+
+		    //贴吧国庆活动奖励 3.0小版本
+		    名字=草薙护堂
+		
 
 		//saber extra
 		皮肤=A0TT
@@ -679,9 +656,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;s芙兰朵露z;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;
 
-			//贴吧抽奖,一季
+		
 			
 		//黑崎一护 白
 		皮肤=A0TU
@@ -692,12 +669,11 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;萌萌阿泽君;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
 
-			//贴吧抽奖,一季
-			名字=丶夏_娜;CLANNAD_汐;完美走驴;Js丶天道;梦之祈语;丶木绵季_ ;Mu樱花黎落;
-			
-		
+		//3.0小版本
+		名字=加藤慧;
+
 			
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -708,10 +684,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=ZorY2;抱腿蕾米莉亚
+			
 	
 		//夜夜
 		皮肤=A0TZ
@@ -722,10 +697,13 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=BAKA丶兔子;此生无悔入东方;冰狩星陨;女王丨小缘;丶夏_娜;herunnerup;知心妹妹艾;咖啡最爱人;结城明奈良;中津川初
+		    //贴吧国庆比赛奖励
+		    名字=倾城壹平
+
+			
 		//夜夜 Special
 		皮肤=A0U1
 		前缀=|cffff1111机巧少女 Special|r
@@ -736,27 +714,20 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;
-
-			//贴吧抽奖,一季
-			名字=BAKA深夏
-			
-			//宣传视频奖励，一季
-			名字=杀戮De骚年
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;
 
 		//超电磁炮
 		皮肤=A0U5
 		前缀=|cffff1111超电磁炮|r
-		说明=想拥有更多隐藏皮肤吗？多关注全明星战役贴吧活动吧！
-		价格=
+		说明=
+		价格=1-700;10-6888
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=藤原_妹红_;s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;月丶魔理莎;抱腿蕾米莉亚;
+		名字=藤原_妹红_;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
 
-			//贴吧抽奖,一季
-			名字=倾城壹平;名濑博臣丶;丶北城灬1;双马尾萝莉;机巧_Yeye;真白抱枕;夏阁艾狄剑;彼岸的樱花;BAKA丶兔子
+		
 
 		//阎魔爱 学生装
 		皮肤=A0U6
@@ -767,10 +738,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=绫羽锌月;
+		
 
 		//真·爱德华
 		皮肤=A0U7
@@ -781,10 +751,8 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
-			//贴吧抽奖,一季
-			名字=柒夜丶清明;Maple故事;里见莲太郎;零De迷时;
-
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
 		//真·克劳德
 		皮肤=A0U8
 		前缀=|cffff1111真·|r
@@ -794,10 +762,12 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=oz张帆;匹夫的逆袭
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=Handsonic丶;苗木小丸
+
+		
 
 		//天罚者
 		皮肤=A0U9
@@ -808,11 +778,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=丶夏_娜;冢耶舞莉;苍井典子;娜迦的荣耀;龌龊的秃子;Eldrida__;小小瘦子酱;虚荣Gradens;可爱唯独猪;
-
+		
 		//女剑客
 		皮肤=A0UA
 		前缀=|cffff1111女·|r
@@ -822,7 +790,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
 			
 		//装甲屠夫
@@ -834,7 +802,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;s芙兰朵露z;WorldEdit;藤原_妹红_
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;藤原_妹红_
 
 		//祸灵梦
 		皮肤=A0UU
@@ -845,10 +813,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=龌龊的秃子;鹭之宫伊澄;世纪乱__
+			
 
 		//黑剑客
 		皮肤=A0UY
@@ -859,7 +826,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 	/*
 		//新约·一方
 		皮肤=A0V2
@@ -881,11 +848,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=夏阁艾狄剑;Sanction_Z;
-
+		
 		//黑暗游侠
 		皮肤=A0UV
 		前缀=|cffff1111黑暗·|r
@@ -895,10 +860,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=丶蔷薇灬1;丶北城灬1;
+			
 
 		//桔梗
 		皮肤=A0UW
@@ -909,12 +873,12 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		//3.0小版本
+		名字=始源乔治;
 		
-			//贴吧抽奖,一季
-			名字=五河_幻羽;晓黑雾里剑;陌落丶伤;Fantasy_奏;Js丶天道;勿忘本心i
-			
-			
+		
 
 		//初音
 		皮肤=A0UX
@@ -925,10 +889,8 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
-			//贴吧抽奖,一季
-			名字=丶木绵季_;彡朝田诗乃
-
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
 		//诗乃
 		皮肤=A0UZ
 		前缀=|cffff1111冰之狙击手·|r
@@ -938,19 +900,19 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 	
 		//狗剪
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
-		说明=1-888;10-6888
-		价格=
+		说明=
+		价格=1-888;10-6888
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;夏阁艾狄剑;Chok丶Rs
 
 			
 		//十香
@@ -962,10 +924,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=小夜十六夜;十六的PAD
+		
 
 		//十香灵装
 		皮肤=A0V5
@@ -976,10 +937,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
 		
-			//贴吧抽奖,一季
-			名字=Sanction_Z;晓黑雾里剑
+		
 		
 		//黑脸
 		皮肤=A0V1
@@ -990,10 +950,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=虾米三文治
+			
 
 		//赤瞳
 		皮肤=A0VC
@@ -1005,10 +964,13 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
 
-			//贴吧抽奖,一季
-			名字=风起炎舞;小小瘦子酱;樱花黎落;穗乃果_;土御门十四
+			//送给某妹子的
+			名字=乙坂丨步未
+
+			//贴吧国庆比赛奖励 3.0大版本
+			名字=超鬼君尼嚎
 
 		
 		//圆神
@@ -1020,9 +982,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
-			//贴吧抽奖,一季
-			名字=芙蕾雅SAMA;法法法克优;双马尾萝莉;梦之祈语;蕾蒂|斯卡;机巧_Yeye;御宅丿柠茶;雪下樱花舞;名濑博臣丶;星野雪奈
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 	
 
 		//神圣天使兽
@@ -1034,7 +994,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 		//兵长
 		皮肤=A0VZ
@@ -1045,10 +1005,12 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=葛力姆乔酱;小紫妹丶
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=雨月夜痕
+
+		
 
 
 		//咲夜Diam
@@ -1060,9 +1022,12 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
+		//3.0大版本
+		名字=Re丿佐佐木;
+
+			
 
 		//阿尔冯斯
 //		皮肤=A0VU
@@ -1073,22 +1038,21 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 
 		//阿露蒂娜
 		皮肤=A0VV
 		前缀=|cffcc00cc银之森的妖精公主|r 
 		说明=
-		价格=
+		价格=1-700;10-6888
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;蕾蒂|斯卡;朝田诗乃;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;蕾蒂|斯卡;朝田诗乃;
 
-			//贴吧抽奖,一季
-			名字=法法法克优;Sanction_Z;Buld电灯泡;自律性马机;月火i
+			
 
 		//萝泽琳蒂
 		皮肤=A0VW
@@ -1099,10 +1063,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=Buld电灯泡;
+		
 
 		//Saber Bride
 		皮肤=A0WV
@@ -1113,11 +1076,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-			//贴吧抽奖,一季
-			名字=柴崎芦苇花;我是绯月;三月夜空;真白抱枕;户川汐音;朝田诗乃;如月MOM0;两仪丿真那;丨风逝丨;绘梨衣丶碎;自律性马机;伊吹库特;篮羽浅葱;我与东条希;纯血种;salvare008;Lostxmas_U;土御门十四;女王丨小缘;月火i
-
+			
 		//Saber Bride 2
 		皮肤=A0WY
 		前缀=|cffcc00cc花嫁 Special|r 
@@ -1127,9 +1088,12 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
-			//贴吧抽奖,一季
+		    //贴吧国庆活动奖励
+		    名字=夜空下樱花;白发天使
+
+		
 
 		//圣骑士
 		皮肤=A0X3
@@ -1140,7 +1104,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
 		
 
@@ -1153,10 +1117,8 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
-			//贴吧抽奖,一季
-			名字=我不是老余
-
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
 		//雅典娜
 		皮肤=A0X5
 		前缀=|cffcc00cc奥林波斯神族|r 
@@ -1166,23 +1128,341 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
-			//贴吧抽奖,一季
+			
 
 		//狂三 黑礼服
 		皮肤=A0XD
 		前缀=|cffcc00cc黑礼服·|r 
 		说明=呐，士道桑 我们融合吧
-		价格=
+		价格=1-700;10-6888
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;Aki|
 
-			//贴吧抽奖,一季
-			名字=勿忘本心i;oz张帆;机巧_Yeye;葛力姆乔酱;绘梨衣丶碎;龌龊的秃子
+		
+
+		//狂三 花嫁
+		皮肤=A0XX
+		前缀=|cffcc00cc花嫁·|r 
+		说明=士道桑，你愿意娶我么
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
+
+		    //贴吧国庆比赛奖励 3.0大版本
+		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉
+
+
+		//狂三 泳装
+		皮肤=A0YM
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;真白抱枕;
+		
+
+		//赤瞳 泳装
+		皮肤=A0YO
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//saber 泳装
+		皮肤=A0YP
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//缇娜 泳装
+		皮肤=A0YQ
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//姆Q 泳装
+		皮肤=A0YR
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;白鹿爱莉;
+		
+
+		//克劳德 泳装
+		皮肤=A0YS
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;暴击型KLD;
+		
+
+		//一方 泳装
+		皮肤=A0YT
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
+		
+
+		//一护 泳装
+		皮肤=A0YN
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
+		
+
+		//夏娜 泳装
+		皮肤=A0YU
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
+		
+
+		//初音 泳装
+		皮肤=A0YV
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i;
+		
+
+		//琴里
+		皮肤=A0Z3
+		前缀=|cffcc00cc第五精灵·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//立华奏 天使
+		皮肤=A0Z4
+		前缀=|cffcc00cc天使·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//夜夜 泳装
+		皮肤=A0Z5
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;此生无悔入;
+		
+
+		//咲夜 泳装蓝
+		皮肤=A10C
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//咲夜 泳装黑
+		皮肤=A10D
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+/*未实装
+		//炮姐 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//蒂法 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//阿露蒂娜 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//灵梦 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//十香 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//小圆 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;双马尾萝莉;
+		
+
+		//夏野姬 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;
+		
+
+		//小爱 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
+		
+
+		//黑子 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;上彬绘梨衣;
+
+		
+		//由乃 泳装
+		皮肤=
+		前缀=|cffcc00cc泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;
+
+		*/
+
 	==英雄台词==
 
 		//鹿目圆香
@@ -1231,6 +1511,9 @@
 
 
 		
+	
+		
+
 
 
 
@@ -1243,4 +1526,4 @@
 		//注册方法:单机激活权限后输入 .set 0 flag 1
 		//别忘了 .save
 
-		名字=s芙兰朵露z;小爱不是处;佐藤桑;最萌小汐;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
