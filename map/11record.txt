@@ -15,11 +15,16 @@
                 小爱不是处=|cffff00ff[爱の最强自在法]|r
                 LemonHunter=|cFF66FFFF[ぽい]|r
 
-        //测试奖励
+        //测试奖励 3.0小版本
         中端路人局=|cFF66FFFF[叫我雷锋就好]|r
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
         我只是16=|cFF66FFFF[叫我雷锋就好]|r
+        Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
         丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
+
+        //竞猜奖励 3.0小版本
+        易推的萝莉=|cffffcc00[萝莉大法好]|r
+        琪露诺=|cffffcc00[你才是baka，你全家都是baka]|r
                 
              
               
@@ -623,7 +628,7 @@
 			内容=舰娘
 
 			//贴吧国庆比赛奖励 3.0大版本
-			名字=琪露诺;氵_____乌龟
+			名字=琪露诺;
 			图标=button\BTNXS_S_XY.blp
 			技能=被动
 			标题=特殊信使
@@ -671,8 +676,8 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
 
-		//3.0小版本
-		名字=加藤慧;
+		//签到奖励 3.0小版本
+		名字=琪露诺;
 
 			
 		//夏娜 火雾战士
@@ -700,7 +705,7 @@
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-		    //贴吧国庆比赛奖励
+		    //贴吧国庆比赛奖励 3.0小版本
 		    名字=倾城壹平
 
 			
@@ -1090,7 +1095,7 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
-		    //贴吧国庆活动奖励
+		    //贴吧国庆活动奖励 3.0小版本
 		    名字=夜空下樱花;白发天使
 
 		
@@ -1157,7 +1162,9 @@
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
 
 		    //贴吧国庆比赛奖励 3.0大版本
-		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉
+		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
+		    //竞猜奖励 3.0小版本
+		    名字=琪露诺
 
 
 		//狂三 泳装
@@ -1326,7 +1333,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞
 		
 
 		//咲夜 泳装黑
@@ -1338,7 +1345,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;牛头一户
 		
 
 /*未实装
