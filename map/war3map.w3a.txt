@@ -260,6 +260,9 @@ Nab5[1]=0.0000
 Nab6[1]=0.5000
 Nab6[2]=0.5000
 Nab6[3]=0.5000
+amcs[1]=0
+amcs[2]=0
+amcs[3]=0
 [AOwk]
 anam=|cFF3399CC潜行|r
 Owk3[1]=0.0000
@@ -37056,3 +37059,19 @@ spb3[1]=2
 [A10G:AIcs]
 ansf=防御塔 20%×2
 atar[1]=ground,air,hero
+[A10H:AIi4]
+Iint[1]=30
+anam=提高智力
+ansf=+30
+[A10I:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Ekee
+Eme1[1]=E0BM
+ansf=莉莉丝
+arac=orc
+aher=0
+anam=皮肤

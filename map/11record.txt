@@ -1348,6 +1348,18 @@
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;牛头一户
 		
 
+		//莉莉丝
+		皮肤=A10I
+		前缀=|cffcc00cc绝对双刃·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
 /*未实装
 		//炮姐 泳装
 		皮肤=
