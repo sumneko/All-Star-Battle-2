@@ -1267,7 +1267,7 @@
 		皮肤=A0YU
 		前缀=|cffcc00cc泳装·|r 
 		说明=
-		价格=
+		价格=1-888;10-6888
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
