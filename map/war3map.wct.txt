@@ -1501,7 +1501,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=267
+//TESH.scrollpos=280
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2970,7 +2970,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=848
+//TESH.scrollpos=468
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3860,7 +3860,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1413
+//TESH.scrollpos=699
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -42868,6 +42868,27 @@ function InitTrig________________u takes nothing returns nothing
     call TriggerRegisterTimerEventSingle( gg_trg________________u, 2.00 )
     call TriggerAddAction(gg_trg________________u, function Trig________________uActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
