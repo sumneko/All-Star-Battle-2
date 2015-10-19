@@ -21215,4 +21215,4 @@ uori=0
 unsf=泳装
 uhrt=none
 uhpr=0.0000
-usca=1.2000
+usca=1.3500
