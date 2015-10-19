@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=459
+//TESH.scrollpos=417
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -1501,7 +1501,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=823
+//TESH.scrollpos=280
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1799,7 +1799,7 @@ debug@          endif
             trigger trg
             real thisRate = 0
             real exRate = LoadReal(YDHT, GetHandleId(u_from[index]), StringHash("暴击倍率加成"))
-            real maxRate = 100 / (1 + LoadReal(YDHT, h, StringHash("暴击几率加成")))
+            real maxRate = 100 / (1 + LoadReal(YDHT, h, StringHash("暴击几率加成")) + LoadReal(YDHT, GetHandleId(u_to[index]), StringHash("被暴击几率加成")))
             
             //取出暴击模块
             count = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
@@ -2970,7 +2970,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=848
+//TESH.scrollpos=468
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3860,7 +3860,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1369
+//TESH.scrollpos=699
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -6826,6 +6826,11 @@ endlibrary
 ########
 ########
 
+########
+########
+//TESH.scrollpos=0
+//TESH.alwaysfold=0
+#define SetMapDescription(s) SetMapDescription(s) YDNL call PlayMusic("LoadingMusic.mp3")
 ########
 ########
 
@@ -42810,11 +42815,11 @@ endfunction
 
 ########
 ########
-//TESH.scrollpos=18
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 function Trig________________uActions takes nothing returns nothing
-    set udg_pp[1] = 'A0Z4'
-    set udg_pp[2] = 'A0Z5'
+    set udg_pp[1] = 'A0Z2'
+    set udg_pp[2] = 'A0Z1'
     set udg_pp[3] = 'A0Z6'
     set udg_pp[4] = 'A0Z7'
     set udg_pp[5] = 'A0Z8'
@@ -42868,6 +42873,36 @@ function InitTrig________________u takes nothing returns nothing
     call TriggerRegisterTimerEventSingle( gg_trg________________u, 2.00 )
     call TriggerAddAction(gg_trg________________u, function Trig________________uActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 

@@ -15,11 +15,16 @@
                 小爱不是处=|cffff00ff[爱の最强自在法]|r
                 LemonHunter=|cFF66FFFF[ぽい]|r
 
-        //测试奖励
+        //测试奖励 3.0小版本
         中端路人局=|cFF66FFFF[叫我雷锋就好]|r
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
         我只是16=|cFF66FFFF[叫我雷锋就好]|r
+        Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
         丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
+
+        //竞猜奖励 3.0小版本
+        易推的萝莉=|cffffcc00[萝莉大法好]|r
+        琪露诺=|cffffcc00[你才是baka，你全家都是baka]|r
                 
              
               
@@ -623,7 +628,7 @@
 			内容=舰娘
 
 			//贴吧国庆比赛奖励 3.0大版本
-			名字=琪露诺;氵_____乌龟
+			名字=琪露诺;
 			图标=button\BTNXS_S_XY.blp
 			技能=被动
 			标题=特殊信使
@@ -671,8 +676,8 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
 
-		//3.0小版本
-		名字=加藤慧;
+		//签到奖励 3.0小版本
+		名字=琪露诺;
 
 			
 		//夏娜 火雾战士
@@ -700,7 +705,7 @@
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
 
-		    //贴吧国庆比赛奖励
+		    //贴吧国庆比赛奖励 3.0小版本
 		    名字=倾城壹平
 
 			
@@ -1090,7 +1095,7 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
 
-		    //贴吧国庆活动奖励
+		    //贴吧国庆活动奖励 3.0小版本
 		    名字=夜空下樱花;白发天使
 
 		
@@ -1157,12 +1162,14 @@
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
 
 		    //贴吧国庆比赛奖励 3.0大版本
-		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉
+		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
+		    //竞猜奖励 3.0小版本
+		    名字=琪露诺
 
 
 		//狂三 泳装
 		皮肤=A0YM
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1174,7 +1181,7 @@
 
 		//赤瞳 泳装
 		皮肤=A0YO
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1186,7 +1193,7 @@
 
 		//saber 泳装
 		皮肤=A0YP
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1198,7 +1205,7 @@
 
 		//缇娜 泳装
 		皮肤=A0YQ
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1210,7 +1217,7 @@
 
 		//姆Q 泳装
 		皮肤=A0YR
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1222,7 +1229,7 @@
 
 		//克劳德 泳装
 		皮肤=A0YS
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1234,7 +1241,7 @@
 
 		//一方 泳装
 		皮肤=A0YT
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1246,7 +1253,7 @@
 
 		//一护 泳装
 		皮肤=A0YN
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1258,9 +1265,9 @@
 
 		//夏娜 泳装
 		皮肤=A0YU
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
-		价格=
+		价格=1-888;10-6888
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
@@ -1270,7 +1277,7 @@
 
 		//初音 泳装
 		皮肤=A0YV
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1306,7 +1313,7 @@
 
 		//夜夜 泳装
 		皮肤=A0Z5
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
@@ -1319,32 +1326,70 @@
 
 		//咲夜 泳装蓝
 		皮肤=A10C
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞
 		
 
 		//咲夜 泳装黑
 		皮肤=A10D
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;牛头一户
+		
+
+		//莉莉丝
+		皮肤=A10I
+		前缀=|cffcc00cc绝对双刃·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i
+		
+
+		//水银灯
+		皮肤=A10M
+		前缀=|cffcc00cc蔷薇少女·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i
+		
+
+		//小爱 泳装
+		皮肤=A10O
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风
 		
 
 /*未实装
+
+
 		//炮姐 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1356,7 +1401,7 @@
 
 		//蒂法 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1368,7 +1413,7 @@
 
 		//阿露蒂娜 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1380,7 +1425,7 @@
 
 		//灵梦 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1392,7 +1437,7 @@
 
 		//十香 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1404,7 +1449,7 @@
 
 		//小圆 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1416,7 +1461,7 @@
 
 		//夏野姬 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1428,7 +1473,7 @@
 
 		//小爱 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1440,7 +1485,7 @@
 
 		//黑子 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1452,7 +1497,7 @@
 		
 		//由乃 泳装
 		皮肤=
-		前缀=|cffcc00cc泳装·|r 
+		前缀=|cFF66FFFF泳装·|r 
 		说明=
 		价格=
 		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
@@ -1508,6 +1553,11 @@
 		英雄=O002
 		台词=
 		音效=Show_Yaya.mp3
+
+		//莉莉丝
+		英雄=E0BM
+		台词=我是从英国分校转学过来的莉莉丝·布里斯托，在此特别准许你们用名字称呼我
+		音效=Show_lls.mp3
 
 
 		

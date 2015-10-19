@@ -729,7 +729,7 @@ fube=该单位降低了攻击速度和移动速度。
 fart=gppx.blp
 ftip=减速
 frac=nightelf
-fnsf= (高抛咆哮)
+fnsf= (高频咆哮)
 ftat=
 [B00C:Basl]
 fube=该单位受到夜魔血刃效果，护甲值降低了。
@@ -1221,3 +1221,13 @@ fart=ReplaceableTextures\CommandButtons\BTNImprovedUnholyArmor.blp
 ftat=
 fta0=
 fnam=切割
+[B04F:Basl]
+fube=该单位降低了攻击速度和移动速度。
+fart=hanbingguanghuan.blp
+ftip=减速
+frac=nightelf
+fnsf= (冰封神盾)
+ftat=Abilities\Weapons\ZigguratFrostMissile\ZigguratFrostMissile.mdl
+ftac=2
+fta0=foot,left
+fta1=foot,right
