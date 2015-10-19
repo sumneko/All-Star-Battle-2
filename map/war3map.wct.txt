@@ -6828,6 +6828,11 @@ endlibrary
 
 ########
 ########
+//TESH.scrollpos=0
+//TESH.alwaysfold=0
+#define SetMapDescription(s) SetMapDescription(s) YDNL call PlayMusic("LoadingMusic.mp3")
+########
+########
 
 ########
 ########
