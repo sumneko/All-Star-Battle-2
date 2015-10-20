@@ -719,7 +719,7 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;丨薛定谔的;
 
 		//超电磁炮
 		皮肤=A0U5
