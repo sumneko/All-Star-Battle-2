@@ -521,7 +521,7 @@ library defineLibrary
         bool = boolean
     }
 
-    #define RELEASE //内测版本请将此行注释
+    //#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -1501,7 +1501,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=280
+//TESH.scrollpos=328
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -1799,11 +1799,16 @@ debug@          endif
             trigger trg
             real thisRate = 0
             real exRate = LoadReal(YDHT, GetHandleId(u_from[index]), StringHash("暴击倍率加成"))
-            real maxRate = 100 / (1 + LoadReal(YDHT, h, StringHash("暴击几率加成")) + LoadReal(YDHT, GetHandleId(u_to[index]), StringHash("被暴击几率加成")))
-            
+            real maxRate = 1 + LoadReal(YDHT, h, StringHash("暴击几率加成")) + LoadReal(YDHT, GetHandleId(u_to[index]), StringHash("被暴击几率加成"))
+            //检查被暴击几率是否小于0
+            if maxRate <= 0 then
+                maxRate = -1
+            else
+                maxRate = 100 / maxRate
+            endif
             //取出暴击模块
             count = LoadInteger(YDHT, h, StringHash("暴击模块计数"))
-            if count != 0 then
+            if maxRate!=-1 && count != 0 then
                 //循环遍历暴击模块
                 i = 0
                 loop
@@ -1844,7 +1849,7 @@ debug@          endif
             //取出被暴击模块
             h     = GetHandleId(u_to[index])
             count = LoadInteger(YDHT, h, StringHash("被暴击模块计数"))
-            if count != 0 then
+            if maxRate!=-1 && count != 0 then
                 //循环遍历暴击模块
                 i = 0
                 loop
@@ -42653,6 +42658,100 @@ function InitTrig________________u takes nothing returns nothing
     call TriggerRegisterTimerEventSingle( gg_trg________________u, 2.00 )
     call TriggerAddAction(gg_trg________________u, function Trig________________uActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+//TESH.scrollpos=2
+//TESH.alwaysfold=0
+function Trig______________CJBZConditions takes nothing returns boolean
+    #ifdef RELEASE
+        return false
+    #else
+        return true
+    #endif
+endfunction
+
+function Trig______________CJBZFunc006Conditions takes nothing returns nothing
+    call RemoveUnit( YDTriggerGetEx(unit, YDTriggerH2I(GetTriggeringTrigger()), 0xD3ACADB7) )
+    call EnableTrigger( gg_trg______________CJBZ )
+    call YDTriggerClearTable(YDTriggerH2I(GetTriggeringTrigger()))
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Trig______________CJBZActions takes nothing returns nothing
+    local trigger ydl_trigger
+    local integer ydl_localvar_step = YDTriggerGetEx(integer, YDTriggerH2I(GetTriggeringTrigger()), 0xCFDE6C76)
+    set ydl_localvar_step = ydl_localvar_step + 3
+    call YDTriggerSetEx(integer, YDTriggerH2I(GetTriggeringTrigger()), 0xCFDE6C76, ydl_localvar_step)
+    call YDTriggerSetEx(integer, YDTriggerH2I(GetTriggeringTrigger()), 0xECE825E7, ydl_localvar_step)
+    call CreateNUnitsAtLoc( 1, 'Hmgd', Player(11), Location(-6900.00, -5000.00), bj_UNIT_FACING )
+    call YDTriggerSetEx(unit, YDTriggerH2I(GetTriggeringTrigger())*ydl_localvar_step, 0xD3ACADB7, bj_lastCreatedUnit)
+    call UnitAddItemByIdSwapped( 'I057', YDTriggerGetEx(unit, YDTriggerH2I(GetTriggeringTrigger())*ydl_localvar_step, 0xD3ACADB7) )
+    call DisableTrigger( GetTriggeringTrigger() )
+    set ydl_trigger = CreateTrigger()
+    call YDTriggerSetEx(unit, YDTriggerH2I(ydl_trigger), 0xD3ACADB7, YDTriggerGetEx(unit, YDTriggerH2I(GetTriggeringTrigger())*ydl_localvar_step, 0xD3ACADB7))
+    call TriggerRegisterPlayerChatEvent( ydl_trigger, Player(0), "/-target", true )
+    call TriggerAddCondition(ydl_trigger, Condition(function Trig______________CJBZFunc006Conditions))
+    call YDTriggerClearTable(YDTriggerH2I(GetTriggeringTrigger())*ydl_localvar_step)
+    set ydl_trigger = null
+endfunction
+
+//===========================================================================
+function InitTrig______________CJBZ takes nothing returns nothing
+    set gg_trg______________CJBZ = CreateTrigger()
+#ifdef DEBUG
+    call YDWESaveTriggerName(gg_trg______________CJBZ, "创建靶子 CJBZ")
+#endif
+    call TriggerRegisterPlayerChatEvent( gg_trg______________CJBZ, Player(0), "/-target", true )
+    call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
+    call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
+endfunction
+
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
