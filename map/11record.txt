@@ -1,0 +1,1583 @@
+
+	==特殊称号==
+		WorldEdit=|cffffcc00[正在测试中]|r
+		最萌小汐=|cffffcc00[超高校级の]|r
+		哇嘎嘎西奈=|cffffcc00[BOOM!]|r
+		沙门丶=|cffffcc00[|cffff80ff破碎王者之刃★|cffffcc00]|r
+		Any_遗失=|cffffcc00[|cffaa10bb泯灭虚空之刃★|cffffcc00]|r
+		姬神小桃=|cffffcc00[|cffffff00誓约胜利之剑★|cffffcc00]|r
+		藤林杏=|cffffcc00[|cff9925ff灭杀魔王之剑★|cffffcc00]|r
+		S灭杀_____=|cffffcc00[|cff1BE6B8贯穿真实之剑★|cffffcc00]|r
+		噩梦睡篮丶=|cffffcc00[|cffDF4C13破碎虚伪之枪★|cffffcc00]|r
+                s芙兰朵露z=|cffff00ff[永远の二妹]|r
+                藤原_妹红_=|cffff9933[凤舞天，翼盘旋★月球上不死之烟]|r
+                moon_shin=|cffffcc00[全明星の模型师]|r
+                小爱不是处=|cffff00ff[爱の最强自在法]|r
+                LemonHunter=|cFF66FFFF[ぽい]|r
+
+        //测试奖励 3.0小版本
+        中端路人局=|cFF66FFFF[叫我雷锋就好]|r
+        工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
+        我只是16=|cFF66FFFF[叫我雷锋就好]|r
+        Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
+        丿鸢一折纸=|cFF66FFFF[叫我雷锋就好]|r
+        葛力姆乔酱=|cFF66FFFF[叫我雷锋就好]|r
+        黎明曦光=|cFF66FFFF[叫我雷锋就好]|r
+        纯血种=|cFF66FFFF[叫我雷锋就好]|r
+        丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
+
+        //竞猜奖励 3.0小版本
+        易推的萝莉=|cffffcc00[萝莉大法好]|r
+        琪露诺=|cffffcc00[你才是baka，你全家都是baka]|r
+                
+             
+              
+    //天道受1
+        我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
+        艾斯特=|cffffcc00[|cFF38efff魔王剑-Terminus Est Zwei|cffffcc00]|r
+        云雀丘由贵=|cffffcc00[|cFF38efffLost time Memory|cffffcc00]|r
+        户川汐音=|cffffcc00[|cFFFF66FF最萌眼镜娘|cffffcc00]|r
+        空心de木偶=|cffffcc00[|cFF00FFFF完美潇洒の从者|cffffcc00]|r
+        樱逝夕颜=|cffffcc00[|cFFFFCC66远离尘世の理想乡|cffffcc00]|r
+
+    //又是送妹子的
+    	疯狂妮妮=|cffff83fa[色情女主播]|r
+
+		
+	==特殊信使==
+
+		//皮卡丘	n01J
+		//⑨ 	n01D
+		//Saber	n01I
+		//裂魂	n01F
+		//呆唯 	n01L
+		//律队 	n01M
+		//梓喵 	n01N
+		//凛凛蝶	n01S
+		//优    n01X
+		//悟空  n01U
+		//高达  n01Z
+		//V仔兽 n02B
+		//僵尸  n02F
+		//此方  n025
+		//火柴人 n023
+		//提莫  n029
+		//老提莫 n027
+		//丹羽长秀 n02D
+		//北方栖姬 n03A
+
+		//幸运	button\BTNXS_S_XY.blp
+		//YY	button\BTNXS_S_YY.blp
+
+		//凛凛蝶 n01S 注意,现在不允许多次注册信使了,只能注册一次信使,但是可以多次注册名字
+
+			信使=n01S
+			前缀=|cffffcc00这里是前缀|r
+			说明=这里是皮肤说明
+			价格=
+			变身特效=war3mapImported\A5_zisekuosan.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+			//皮肤无限使用权
+
+			名字=小爱不是处;LemonHunter
+			图标=button\BTNBTNXS_U_Riricho.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r的女儿
+			内容=么么哒
+
+		//皮卡丘	n01J
+
+			信使=n01J
+			前缀=|cffffcc00这里是前缀|r
+			说明=这里是皮肤说明
+			价格=不填价格表示非卖品
+			变身特效=war3mapImported\A2_leidian.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+			//皮肤无限使用权
+			名字=沙门丶;Any_遗失;藤林杏;S灭杀_____;噩梦睡篮丶;艾莉卡丶
+			图标=button\BTNXS_S_PKQ.blp
+			技能=主动
+			标题=专属信使
+			内容=这个信使是战队|cffffdd00黑店1队|r的专属信使。荣耀与你同在,|cffffcc00%player_name%|r!|n|n|cffffcc00点击翻滚~皮卡皮卡~
+
+        //孙悟空        n01U
+
+			信使=n01U
+			前缀=|cffffcc00这里是前缀|r
+			说明=这里是皮肤说明
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\enchant.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=小爱不是处;LemonHunter
+			图标=WuKong.blp
+			技能=被动
+			标题=特殊信使
+			内容=0_0
+
+			//贴吧抽奖,一季
+			名字=楼上没J啊
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//⑨ 	n01D
+
+			信使=n01D
+			前缀=|cffffcc00笨蛋|r
+			说明=据说越用越笨
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\A8_bing.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=小爱不是处喵;LemonHunter
+			图标=button\BTNXS_U_9.blp
+			技能=被动
+			标题=特殊信使
+			内容=⑨、⑨
+
+			//贴吧抽奖
+			名字=萌狼爱尾巴;呆蠢月菟_;香香的花猪
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//Saber	n01I
+
+			信使=n01I
+			前缀=|cffffcc00嗷~|r
+			说明=好有威严，不如买一只送给大小姐
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\cauterize.mdl
+			特效点=
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=最萌小汐
+			图标=button\BTNXS_U_saber.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r的专属信使
+			内容=筒隐月子俺嫁,萝莉后宫万岁!
+
+			名字=小爱不是处;LemonHunter
+			图标=button\BTNXS_U_saber.blp
+			技能=被动
+			标题=特殊信使
+			内容=汪！
+
+			//贴吧抽奖
+			名字=S丶a_魅姬
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//裂魂	n01F
+
+			信使=n01F
+			前缀=|cffffcc00白牛~|r
+			说明=据说这是跑得最快的信使【错觉
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\C4_fensekuosan.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=WorldEdit
+			图标=war3mapImported\btntemp.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r,测试辛苦了!
+			内容=无聊的时候就逗逗裂魂人玩吧~
+
+			名字=小爱不是处;LemonHunter
+			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
+			技能=被动
+			标题=特殊信使
+			内容=wwwwwww
+
+			//贴吧抽奖
+			名字=八神疾风;Remilia茶;S灭杀_____
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//呆唯 	n01L
+
+			信使=n01L
+			前缀=|cffffcc00YUI~|r
+			说明=YUUUUUUUUUUUUUUUUI！！
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=小爱不是处;LemonHunter
+			图标=button\BTNXS_U_YUI.blp
+			技能=被动
+			标题=特殊信使
+			内容=YUUUUUUUUUUUUUUUUI！！
+
+			//贴吧抽奖
+			名字=永棘之刃;指尖空白丶
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+			//3.0小版本
+			名字=呆毛傲娇娜
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧劳动节动手活动奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧劳动节动手活动获得的奖励，劳动光荣!
+
+		//律队 	n01M
+
+			信使=n01M
+			前缀=|cffffcc00光额头|r
+			说明=律队
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=小爱不是处;LemonHunter
+			图标=button\BTNXS_U_LD.blp
+			技能=被动
+			标题=特殊信使
+			内容=律队
+
+		//梓喵 	n01N
+
+			信使=n01N
+			前缀=|cffffcc00喵~|r
+			说明=梓喵
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=小爱不是处;LemonHunter
+			图标=button\BTNXS_U_ZM.blp
+			技能=被动
+			标题=特殊信使
+			内容=梓喵
+
+			//贴吧抽奖
+			名字=战神喜洋洋;不俗不雅丶;友利奈绪
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//优	n01X
+		//此皮肤被移除
+		/*
+			信使=n01X
+			前缀=|cffffcc00···|r
+			说明=优·克里伍德
+			价格=
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;LemonHunter
+			图标=button\you.blp
+			技能=被动
+			标题=特殊信使
+			内容=优·克里伍德
+		*/
+
+		//高达 n01Z
+
+			信使=n01Z
+			前缀=|cffffcc00口_口|r
+			说明=高达
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_Gundam.blp
+			技能=被动
+			标题=特殊信使
+			内容=高达
+
+			//贴吧抽奖
+			名字=艾莉卡丶;呆蠢月菟_
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+			//贴吧国庆比赛奖励 3.0小版本
+			名字=Wind雀明华
+
+		//V仔兽 n02B
+
+			信使=n02B
+			前缀=|cffffcc00V·|r
+			说明=V仔兽
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_Vya.blp
+			技能=被动
+			标题=特殊信使
+			内容=V仔兽
+
+			//贴吧抽奖
+			名字=我好兴奋呀
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//僵尸 n02F
+
+			信使=n02F
+			前缀=|cffffcc00普通的|r
+			说明=僵尸
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_Zombie.blp
+			技能=被动
+			标题=特殊信使
+			内容=僵尸
+
+		//泉此方 n025
+
+			信使=n025
+			前缀=|cffffcc00幸运星|r
+			说明=泉此方
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_Konata.blp
+			技能=被动
+			标题=特殊信使
+			内容=泉此方
+
+			//贴吧抽奖
+			名字=曾经的小伊
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//火柴人 n023
+
+			信使=n023
+			前缀=|cffffcc00·|r
+			说明=火柴人
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_huocairen.blp
+			技能=被动
+			标题=特殊信使
+			内容=火柴人
+
+			//贴吧国庆比赛奖励 3.0小版本
+			名字=羽山雅文
+
+		//提莫 n029
+
+			信使=n029
+			前缀=|cffffcc00迅捷斥候|r
+			说明=提莫
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_Teemo.blp
+			技能=被动
+			标题=特殊信使
+			内容=提莫
+
+		//老提莫 n027
+
+			信使=n027
+			前缀=|cffffcc00黑商|r
+			说明=约德尔商人
+			价格=1-50 5-200 25-900
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_OldTeemo.blp
+			技能=被动
+			标题=特殊信使
+			内容=约德尔商人
+
+			//贴吧抽奖
+			名字=楼上没J啊;我是文字
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+		//丹羽长秀 n02D
+
+			信使=n02D
+			前缀=|cffffcc00姬武将|r
+			说明=姬武将
+			价格=1-100 5-400 25-1800
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			图标=button\BTN_XS_DYCX.blp.blp
+			技能=被动
+			标题=特殊信使
+			内容=姬武将
+
+			//贴吧抽奖
+			名字=星辰傲世
+			图标=button\BTNXS_S_YY.blp
+			技能=被动
+			标题=贴吧抽奖奖励!
+			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
+
+
+		//北方栖姬 n03A
+
+			信使=n03A
+			前缀=|cffffcc00舰娘·|r
+			说明=舰娘
+			价格=
+			变身特效=war3mapImported\gate keeper.mdl
+			特效点=origin
+			特效时间=0.5
+			变身动画=morph
+
+			//从商店中购买时的额外技能
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=|cffffcc00%player_name%|r 从商城中购买的信使
+			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
+
+            //皮肤无限使用权
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
+			图标=button\BTN_XS_BFXJ.blp
+			技能=被动
+			标题=特殊信使
+			内容=舰娘
+
+			//贴吧国庆比赛奖励 3.0大版本
+			名字=琪露诺;
+			图标=button\BTNXS_S_XY.blp
+			技能=被动
+			标题=特殊信使
+			内容=这是国庆比赛的冠军奖励
+
+	==英雄皮肤==
+
+		//saber alter
+		皮肤=A0S9
+		前缀=|cffcc00cc黑色圣光|r
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
+
+		    //贴吧国庆活动奖励 3.0小版本
+		    名字=草薙护堂
+		
+
+		//saber extra
+		皮肤=A0TT
+		前缀=|cFFFFFF00黄金剧场|r
+		说明=这里是皮肤说明
+		价格=1-200;5-900;25-4000
+		变身特效=war3mapImported\Fire Aura.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;
+
+		
+			
+		//黑崎一护 白
+		皮肤=A0TU
+		前缀=|cffcc00cc死神代理|r 白
+		说明=想拥有更多隐藏皮肤吗？多关注全明星战役贴吧活动吧！
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
+
+		//签到奖励 3.0小版本
+		名字=琪露诺;
+
+			
+		//夏娜 火雾战士
+		皮肤=A0TV
+		前缀=|cffff1111火雾战士|r
+		说明=这里是皮肤说明
+		价格=1-200;5-900;25-4000
+		变身特效=war3mapImported\Fire Aura.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+			
+	
+		//夜夜
+		皮肤=A0TZ
+		前缀=|cffff1111机巧少女|r
+		说明=这里是皮肤说明
+		价格=1-300;5-1300;25-6000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=倾城壹平
+
+			
+		//夜夜 Special
+		皮肤=A0U1
+		前缀=|cffff1111机巧少女 Special|r
+		说明=
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph alternate
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;丨薛定谔的;
+
+		//超电磁炮
+		皮肤=A0U5
+		前缀=|cffff1111超电磁炮|r
+		说明=
+		价格=1-700;10-6888
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=藤原_妹红_;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
+
+		
+
+		//阎魔爱 学生装
+		皮肤=A0U6
+		前缀=|cffff1111学生装|r
+		说明=这里是皮肤说明
+		价格=1-200;5-900;25-4000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		
+
+		//真·爱德华
+		皮肤=A0U7
+		前缀=|cffff1111真·|r
+		说明=这里是皮肤说明
+		价格=1-300;5-1300;25-6000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+		//真·克劳德
+		皮肤=A0U8
+		前缀=|cffff1111真·|r
+		说明=这里是皮肤说明
+		价格=1-200;5-900;25-4000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=Handsonic丶;苗木小丸
+
+		
+
+		//天罚者
+		皮肤=A0U9
+		前缀=|cffff1111天罚者|r
+		说明=这里是皮肤说明
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		
+		//女剑客
+		皮肤=A0UA
+		前缀=|cffff1111女·|r
+		说明=这里是皮肤说明
+		价格=1-200;5-900;25-4000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+			
+		//装甲屠夫
+		皮肤=A0UI
+		前缀=|cffff1111装甲|r
+		说明=这里是皮肤说明
+		价格=1-300;5-1300;25-6000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;藤原_妹红_
+
+		//祸灵梦
+		皮肤=A0UU
+		前缀=|cffff1111祸·|r
+		说明=这里是皮肤说明
+		价格=1-450;5-1800;25-8000
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+			
+
+		//黑剑客
+		皮肤=A0UY
+		前缀=|cffff1111黑化·|r
+		说明=这里是皮肤说明
+		价格=1-300;5-1300;25-6000
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+	/*
+		//新约·一方
+		皮肤=A0V2
+		前缀=|cffff1111新约·|r
+		说明=该皮肤在魔兽画质不为高的情况下会导致魔兽崩溃,不要使用,等待修正
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=
+	*/
+		//和服 小爱
+		皮肤=A0V0
+		前缀=|cffff1111和服·|r
+		说明=这里是皮肤说明
+		价格=1-450;5-1800;25-8000
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		
+		//黑暗游侠
+		皮肤=A0UV
+		前缀=|cffff1111黑暗·|r
+		说明=这里是皮肤说明
+		价格=1-300;5-1300;25-6000
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+			
+
+		//桔梗
+		皮肤=A0UW
+		前缀=|cffff1111犬夜叉·|r
+		说明=这里是皮肤说明
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		//3.0小版本
+		名字=始源乔治;
+		
+		
+
+		//初音
+		皮肤=A0UX
+		前缀=|cffff1111世界第一公主殿下·|r
+		说明=这里是皮肤说明
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+		//诗乃
+		皮肤=A0UZ
+		前缀=|cffff1111冰之狙击手·|r
+		说明=这里是皮肤说明
+		价格=1-350;5-1800;25-8000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+
+	
+		//狗剪
+		皮肤=A0V3
+		前缀=|cffff1111狗剪·|r
+		说明=
+		价格=1-888;10-6888
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;夏阁艾狄剑;Chok丶Rs
+
+			
+		//十香
+		皮肤=A0V4
+		前缀=|cffff1111第十精灵·|r
+		说明=这里是皮肤说明
+		价格=1-450;5-1800;25-8000
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		
+
+		//十香灵装
+		皮肤=A0V5
+		前缀=|cffff1111第十精灵[灵装]·|r
+		说明=
+		价格=
+		变身特效=war3mapImported\A2_leidian.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		
+		
+		
+		//黑脸
+		皮肤=A0V1
+		前缀=|cffff1111死神·|r
+		说明=这里是皮肤说明
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+			
+
+		//赤瞳
+		皮肤=A0VC
+		前缀=|cffff1111夜袭|r
+		说明=
+		价格=
+		变身特效=war3mapImported\Fire Aura.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=attack
+		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
+
+			//送给某妹子的
+			名字=乙坂丨步未
+
+			//贴吧国庆比赛奖励 3.0大版本
+			名字=超鬼君尼嚎
+
+		
+		//圆神
+		皮肤=A0VF
+		前缀=|cffff1111神|r
+		说明=这里是皮肤说明
+		价格=1-700;10-6888
+		变身特效=
+		特效点=
+		特效时间=0.5
+		变身动画=Spell Three
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+	
+
+		//神圣天使兽
+		皮肤=A0VY
+		前缀=|cffcc00cc究极体|r 
+		说明=
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+
+		//兵长
+		皮肤=A0VZ
+		前缀=|cffcc00cc兵长|r 
+		说明=
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		    //贴吧国庆比赛奖励 3.0小版本
+		    名字=雨月夜痕
+
+		
+
+
+		//咲夜Diam
+		皮肤=A0VX
+		前缀=|cffcc00cc七色的剑灵使用者|r 
+		说明=
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		//3.0大版本
+		名字=Re丿佐佐木;
+
+			
+
+		//阿尔冯斯
+//		皮肤=A0VU
+//		前缀=|cffcc00cc锁住的灵魂|r 
+//		说明=
+//		价格=
+//		变身特效=war3mapImported\firaga4.mdl
+//		特效点=origin
+//		特效时间=0.5
+//		变身动画=morph
+//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+
+
+		//阿露蒂娜
+		皮肤=A0VV
+		前缀=|cffcc00cc银之森的妖精公主|r 
+		说明=
+		价格=1-700;10-6888
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;蕾蒂|斯卡;朝田诗乃;
+
+			
+
+		//萝泽琳蒂
+		皮肤=A0VW
+		前缀=|cffcc00cc红之战巫女|r 
+		说明=
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+		
+
+		//Saber Bride
+		皮肤=A0WV
+		前缀=|cffcc00cc花嫁|r 
+		说明=
+		价格=1-700;10-6888
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+
+			
+		//Saber Bride 2
+		皮肤=A0WY
+		前缀=|cffcc00cc花嫁 Special|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+
+		    //贴吧国庆活动奖励 3.0小版本
+		    名字=夜空下樱花;白发天使
+
+		
+
+		//圣骑士
+		皮肤=A0X3
+		前缀=|cffcc00cc女·|r 
+		说明=
+		价格=1-200;5-980;25-4888
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+
+		
+
+		//黑暗骑士
+		皮肤=A0X4
+		前缀=|cffcc00cc女·|r 
+		说明=
+		价格=1-200;5-980;25-4888
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+		//雅典娜
+		皮肤=A0X5
+		前缀=|cffcc00cc奥林波斯神族|r 
+		说明=
+		价格=1-500;5-2250;25-9999
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+
+			
+
+		//狂三 黑礼服
+		皮肤=A0XD
+		前缀=|cffcc00cc黑礼服·|r 
+		说明=呐，士道桑 我们融合吧
+		价格=1-700;10-6888
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;Aki|
+
+		
+
+		//狂三 花嫁
+		皮肤=A0XX
+		前缀=|cffcc00cc花嫁·|r 
+		说明=士道桑，你愿意娶我么
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
+
+		    //贴吧国庆比赛奖励 3.0大版本
+		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
+		    //竞猜奖励 3.0小版本
+		    名字=琪露诺
+
+
+		//狂三 泳装
+		皮肤=A0YM
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;真白抱枕;
+		
+
+		//赤瞳 泳装
+		皮肤=A0YO
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//saber 泳装
+		皮肤=A0YP
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//缇娜 泳装
+		皮肤=A0YQ
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//姆Q 泳装
+		皮肤=A0YR
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;白鹿爱莉;
+		
+
+		//克劳德 泳装
+		皮肤=A0YS
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;暴击型KLD;
+		
+
+		//一方 泳装
+		皮肤=A0YT
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
+		
+
+		//一护 泳装
+		皮肤=A0YN
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
+		
+
+		//夏娜 泳装
+		皮肤=A0YU
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=1-888;10-6888
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
+		
+
+		//初音 泳装
+		皮肤=A0YV
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i;
+		
+
+		//琴里
+		皮肤=A0Z3
+		前缀=|cffcc00cc第五精灵·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//立华奏 天使
+		皮肤=A0Z4
+		前缀=|cffcc00cc天使·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		
+
+		//夜夜 泳装
+		皮肤=A0Z5
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;此生无悔入;
+		
+
+		//咲夜 泳装蓝
+		皮肤=A10C
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞
+		
+
+		//咲夜 泳装黑
+		皮肤=A10D
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;牛头一户
+		
+
+		//莉莉丝
+		皮肤=A10I
+		前缀=|cffcc00cc绝对双刃·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\firaga4.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i
+		
+
+		//水银灯
+		皮肤=A10M
+		前缀=|cffcc00cc蔷薇少女·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i
+		
+
+		//小爱 泳装
+		皮肤=A10O
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风
+		
+
+/*未实装
+
+
+		//炮姐 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//蒂法 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//阿露蒂娜 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//灵梦 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//十香 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		
+
+		//小圆 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;双马尾萝莉;
+		
+
+		//夏野姬 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;
+		
+
+		//小爱 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
+		
+
+		//黑子 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;上彬绘梨衣;
+
+		
+		//由乃 泳装
+		皮肤=
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;
+
+		*/
+
+	==英雄台词==
+
+		//鹿目圆香
+		英雄=H017
+		台词=|cFFFF99FF这就是我的心愿，我的愿望，好了，实现吧！|r
+		音效=Show_Madoka.mp3
+
+		//西尔瓦娜斯 黑
+		//英雄=H012
+		//台词=测试2
+
+		//赤瞳
+		英雄=E0AI
+		台词=|cFFFF0000正因为是最爱的人 ，所以才想给她个痛快。|r
+		音效=Show_Akame.mp3
+
+		//白一护
+		英雄=E09I
+		台词=|cFFFF0000よ、久しぶりじゃねが、王|r
+		音效=Show_Shiro_Ichigo.mp3
+
+		//诗乃
+		英雄=E0A7
+		台词=
+		音效=Show_Sinon.mp3
+
+		//saber alter
+		英雄=E099
+		台词=
+		音效=Show_Saber_Alter.mp3
+
+		//爱德
+		英雄=O005
+		台词=
+		音效=Show_Elric.mp3
+
+		//夏娜
+		英雄=H00T
+		台词=
+		音效=Show_Shana.mp3
+
+		//夜夜 special
+		英雄=O002
+		台词=
+		音效=Show_Yaya.mp3
+
+		//莉莉丝
+		英雄=E0BM
+		台词=我是从英国分校转学过来的莉莉丝·布里斯托，在此特别准许你们用名字称呼我
+		音效=Show_lls.mp3
+
+
+		
+	
+		
+
+
+
+
+
+	==特殊账号==
+
+		//该模板定义了11平台的特殊账号
+		//游戏开始后将验证账号积分下flag索引的值,若 flag & (1 << 0) == 0,该账号被封禁
+
+		//注册方法:单机激活权限后输入 .set 0 flag 1
+		//别忘了 .save
+
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
