@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=417
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -3860,7 +3860,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=699
+//TESH.scrollpos=465
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -4359,7 +4359,7 @@ library unitLibrary initializer Init needs bakaLibrary
                                         error(('%s[%s]%s(%d)'):format(string.char(188, 188, 196, 220), sid, string.char(181, 196, 202, 169, 183, 168, 202, 177, 188, 228, 178, 187, 202, 199, 48), ab.Cast1))
                                     end
                                     local order_id
-                                    if ab.Order == '' then
+                                    if not ab.Order or ab.Order == '' then
                                         order_id = ab.YDWEtip:sub(-6, -1)
                                     else
                                         order_id = order2id[ab.Order]
@@ -5819,226 +5819,6 @@ library soundLibrary initializer Init needs baseLibrary
         */
         Sound.KillSound_Init()
         Sound.UnitResponses_Init()
-    }
-endlibrary
-########
-########
-//TESH.scrollpos=-1
-//TESH.alwaysfold=0
-library objectLibrary initializer Init needs baseLibrary
-
-    //读取物编数据(lua)
-    <?
-        --将256位ID转化为整数
-        local bj_AllString = ".................................!.#$%&'()*+,-./0123456789:;<=>.@ABCDEFGHIJKLMNOPQRSTUVWXYZ[.]^_`abcdefghijklmnopqrstuvwxyz{|}~................................................................................................................................"
-
-        local ID2I = function(s)
-            local ls = string.len(s) --输入字符串的长度
-            local result = 0 --结果
-            local p = 1 --权重
-            for i = ls, 1, -1 do --从最后一位往前依次取值
-                local s = string.find(bj_AllString, string.sub(s, i, i))
-                result = result + p * s
-                p = p * 256
-            end
-            return result
-        end
-
-        --table中是否包含某个值
-        table.has = function(t, v)
-            for _,i in ipairs(t) do
-                if i == v then return true end
-                if type(i) == "table" and table.has(i, v) then return true end --如果table中有table,则继续到该table中寻找
-            end
-        end
-
-        --分割字符串(目标字符串,分割符)
-        --返回table
-        string.split = function(target, s)
-            local result = {} --把结果存在这个table中(返回table)
-            local x = 1 --当前字符串的开始位置
-            local c = string.len(s) --分割符的长度
-            local l = string.len(target) --目标字符串的长度
-            for i = 1, l, 1 do --遍历所有字符
-                local ss = string.sub(target, i, i+c-1) --当前检查到的字符(分割符长度)
-                if ss == s then --如果当前字符为分隔符
-                    table.insert(result, string.sub(target, x, i-1)) --把找到的字符串存到table中
-                    x = i+c --下个字符串的开始位置移动到当前分割符的右方
-                end
-            end
-            local ss = string.sub(target, x, l)
-            if ss then
-                l = string.len(ss)
-                if l and l > 0 then
-                    table.insert(result, ss) --把最后一段字符串加入进去
-                end
-            end
-            return result
-        end
-
-        --记录单位类型(字符串形式)
-        local heroTypes = {}
-
-        heroTypes[1] = 'Emoo'
-        heroTypes[2] = 'Ewar'
-        heroTypes[3] = 'Huth'
-        heroTypes[4] = 'Ntin'
-        heroTypes[5] = 'Hpal'
-        heroTypes[6] = 'Hamg'
-        heroTypes[7] = 'Hmkg'
-        heroTypes[8] = 'Hvwd'
-        heroTypes[9] = 'Harf'
-        heroTypes[10] = 'Otch'
-        heroTypes[11] = 'Edem'
-        heroTypes[12] = 'Ewrd'
-        heroTypes[13] = 'Udre'
-        heroTypes[14] = 'Oshd'
-        heroTypes[15] = 'Obla'
-        heroTypes[16] = 'Eill'
-        heroTypes[17] = 'Orex'
-        heroTypes[18] = 'Ofar'
-        heroTypes[19] = 'Ekee'
-        heroTypes[20] = 'Hblm'
-        heroTypes[21] = 'Eevi'
-        heroTypes[22] = 'Efur'
-        heroTypes[23] = 'Ocbh'
-        heroTypes[24] = 'H000'
-        heroTypes[25] = 'Osam'
-        heroTypes[26] = 'Ulic'
-        heroTypes[27] = 'Hkal'
-        heroTypes[28] = 'Hmbr'
-        heroTypes[29] = 'H006'
-        heroTypes[30] = 'Udea'
-        heroTypes[31] = 'H00J'
-        heroTypes[32] = 'H00L'
-        heroTypes[33] = 'H00N'
-
-        --开始查找物编
-
-            --创建物编数据
-            local SLK = require("slk"):Create()
-
-            local heroSkills = {} --记录英雄拥有的技能
-
-            --遍历物编数据(单位数据)
-            for Id, Obj in SLK.Foreach(SLK.Unit) do
-                --Id为单位类型(字符串),例'U001'
-                --Obj为table,保存了该ID下的所有数据,以数据项名称为索引
-
-                if table.has(heroTypes, Id) then
-
-                    local result --找到的数据(字符串)
-
-                    --技能
-                    result = Obj['heroAbilList']
-                    heroSkills[Id] = string.split(result, ",")
-
-                    for _,id in ipairs(string.split(result, ",")) do
-                        heroSkills[id] = true
-                    end
-                end
-            end
-
-            local skillCost = {} --记录技能耗蓝
-            local skillCool = {} --记录技能冷却
-            local skillCommand = {} --记录技能命令ID
-
-            --遍历物编数据(技能数据)
-            for Id, Obj in SLK.Foreach(SLK.Ability) do
-                --Id为技能类型(字符串),例'A001'
-                --Obj为table,保存了该ID下的所有数据,以数据项名称为索引
-
-                if heroSkills[Id] then
-
-                    local result --找到的数据
-
-                    --耗蓝
-                    skillCost[Id] = {}
-                    for i = 1, 5, 1 do
-                        skillCost[Id][i] = tonumber(Obj['Cost' .. i]) or 0 --保存耗蓝
-                    end
-
-                    --冷却
-                    skillCool[Id] = {}
-                    for i = 1, 5, 1 do
-                        skillCool[Id][i] = tonumber(Obj['Cool' .. i]) or 0 --保存冷却
-                    end
-
-                    --skillCommand[Id] = {}
-                    skillCommand[Id] = Obj['Order']
-                    if skillCommand[Id] == "channel" then --如果是通魔
-                        skillCommand[Id] = Obj['DataF1'] --找基础命令
-                    end
-
-                end
-            end
-    ?>
-
-    struct object
-        //哈希表
-        static hashtable HT = InitHashtable() //英雄技能
-        static int COST = 1
-        static int COOL = 2
-        static int COMMAND = 0
-
-        //保存数据
-        static void saveData(){
-            //使用lua将读取的数据保存在哈希表中
-            <?--[[
-            --汇出数据
-
-                --汇出技能数据
-                for _,id in ipairs(heroTypes) do
-                    --id为单位类型(字符串)
-                    local t = heroSkills[id] --获取英雄的技能列表
-                    for i,s in ipairs(t) do --遍历技能列表
-                        --i为索引
-                        --s为技能类型(字符串)
-                        ?>
-                        SaveInteger(HT, '<?=id?>', <?=i?>, '<?=s?>') //保存方式(单位类型,索引,技能类型)
-                        SaveStr(HT, '<?=s?>', COMMAND, "<?=skillCommand[s]?>") //保存方式(技能类型,0,命令字符)
-                        <?
-                        for lev, cost in ipairs(skillCost[s]) do
-                            ?>
-                            SaveReal(HT, '<?=s?>', COST*10 + <?=lev?>, <?=cost?>) //保存方式(技能类型,10+等级,耗蓝)
-                            <?
-                        end
-                        for lev, cool in ipairs(skillCool[s]) do
-                            ?>
-                            SaveReal(HT, '<?=s?>', COOL*10 + <?=lev?>, <?=cool?>) //保存方式(技能类型,20+等级,冷却)
-                            <?
-                        end
-                    end
-                end
-            ]]?>
-        }
-
-        //获取英雄的技能
-        static int getUnitSkillByType(int t, int i){
-            return LoadInteger(HT, t, i)
-        }
-
-        static int getUnitSkill(unit u, int i){
-            return getUnitSkillByType(GetUnitTypeId(u), i)
-        }
-
-        //获取技能耗蓝
-        static real getSkillCost(int s, int lv){
-            return LoadReal(HT, COST*10 + s, lv)
-        }
-
-        //获取技能冷却
-        static real getSkillCool(int s, int lv){
-            return LoadReal(HT, COOL*10 + s, lv)
-        }
-
-        //获取技能命令
-        static string getSkillCommand(int s){
-            return LoadStr(HT, s, COMMAND)
-        }
-    endstruct
-
-    private void Init(){
     }
 endlibrary
 ########
