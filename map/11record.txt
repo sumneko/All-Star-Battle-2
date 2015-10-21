@@ -20,6 +20,11 @@
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
         我只是16=|cFF66FFFF[叫我雷锋就好]|r
         Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
+
+        丿鸢一折纸=|cFF66FFFF[叫我雷锋就好]|r
+        葛力姆乔酱=|cFF66FFFF[叫我雷锋就好]|r
+        黎明曦光=|cFF66FFFF[叫我雷锋就好]|r
+        纯血种=|cFF66FFFF[叫我雷锋就好]|r
         丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
 
         //竞猜奖励 3.0小版本
@@ -1577,4 +1582,3 @@
 		//别忘了 .save
 
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
-		
