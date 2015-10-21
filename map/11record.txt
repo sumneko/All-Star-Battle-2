@@ -20,6 +20,7 @@
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
         我只是16=|cFF66FFFF[叫我雷锋就好]|r
         Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
+
         丿鸢一折纸=|cFF66FFFF[叫我雷锋就好]|r
         葛力姆乔酱=|cFF66FFFF[叫我雷锋就好]|r
         黎明曦光=|cFF66FFFF[叫我雷锋就好]|r
@@ -1580,4 +1581,4 @@
 		//注册方法:单机激活权限后输入 .set 0 flag 1
 		//别忘了 .save
 
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
