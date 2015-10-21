@@ -27772,6 +27772,7 @@ Ncl3[1]=9
 abpy=2
 acdn[1]=45.0000
 Ncl2[1]=2
+amcs[1]=40
 [A0PH:Aasl]
 aare[1]=0.0000
 Slo1[1]=-0.3500
@@ -37137,8 +37138,8 @@ acat=Abilities\Spells\NightElf\Blink\BlinkTarget.mdl
 abuf[1]=
 atar[1]=_
 [A10J:AIl2]
-ansf=+900
-Ilif[1]=900
+ansf=+800
+Ilif[1]=800
 [A10L:Aslo]
 apri=0
 adur[1]=2.0000
