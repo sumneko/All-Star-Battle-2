@@ -1,10 +1,8 @@
 
 local select=select
-local setfenv=setfenv
 local load=load
 local string=string
 local table=table
-local stormlib = ar.stormlib
 
 local function result(...)
 	return select("#",...), select(1,...)
@@ -47,7 +45,7 @@ end
 local function map_file_import(path_in_archive)
 	return function (buf, is_path)		
 		if is_path then
-			mpq_util:import_file(__map_handle__, __map_path__:parent_path() / buf, path_in_archive)
+			__map_handle__:import(path_in_archive, __map_path__:parent_path() / buf)
 			return
 		else
 			local temp_file_path = fs.ydwe_path() / "logs" / "import" / path_in_archive
@@ -56,7 +54,7 @@ local function map_file_import(path_in_archive)
 				log.error("failed: save " .. temp_file_path:string())
 				return
 			end
-			mpq_util:import_file(__map_handle__, temp_file_path, path_in_archive)
+			__map_handle__:import(path_in_archive, temp_file_path)
 			return
 		end
 	end
@@ -76,35 +74,35 @@ function template:do_compile(op)
 	end
 	
 	local lua_codes = {''}
-	table.insert(lua_codes, [[
+	table.insert(lua_codes,	[[
 		stormlib = ar.stormlib
-    
-	    local file_path = fs.ydwe_path() / "logs" / "mu.out"
+	
+		local file_path	= fs.ydwe_path() / "logs" /	"mu.out"
 
-	    local update_j = {}
-	    
-	    local function update(file_name, func)
-	        if file_name == 'war3map.j' then
-	            table.insert(update_j, func)
-	        else
-	            if stormlib.has_file(__map_handle__, file_name) and
-	                stormlib.extract_file(__map_handle__, file_path, file_name)
-	            then
-	                local content = func(io.load(file_path))
-	                if content then
-	                    io.save(file_path, content)
-	                   	mpq_util:import_file(__map_handle__, file_path, file_name)
-                	end
-	            end
-	        end
-	    end
+		local update_j = {}
+		
+		local function update(file_name, func)
+			if file_name ==	'war3map.j'	then
+				table.insert(update_j, func)
+			else
+				if __map_handle__:has(file_name) and
+					__map_handle__:extract(file_name, file_path)
+				then
+					local content =	func(io.load(file_path))
+					if content then
+						io.save(file_path, content)
+						__map_handle__:import(file_name, file_path)
+					end
+				end
+			end
+		end
 
-	    local function do_update_j(content)
-	    	for _, func in ipairs(update_j) do
-		    	content = func(content) or content
-	    	end
-	    	return content
-    	end
+		local function do_update_j(content)
+			for	_, func	in ipairs(update_j)	do
+				content	= func(content)	or content
+			end
+			return content
+		end
 	]])
 	table.insert(lua_codes, "local __jass_result__ = {''}")
 	table.insert(lua_codes, "local function __jass_output__(str) table.insert(__jass_result__, str) end")
@@ -117,8 +115,8 @@ function template:do_compile(op)
 	__map_handle__ = op.map_handle
 	__map_path__   = op.map_path
 	local env = setmetatable({import = map_file_import, StringHash = string_hash}, {__index = _G})
-	table.insert(lua_codes, "return do_update_j(table.concat(__jass_result__))")	
-	io.save(fs.ydwe_path() / "logs" / "调用lua插件前最后看一眼脚本.lua", table.concat(lua_codes, '\n'))
+	table.insert(lua_codes,	"return	do_update_j(table.concat(__jass_result__))")	
+	io.save(fs.ydwe_path() / "logs"	/ "调用lua插件前最后看一眼脚本.lua", table.concat(lua_codes, '\n'))
 	local f, err = load(table.concat(lua_codes, '\n'), nil, 't', env)
 	if not f then
 		return f, err
@@ -142,7 +140,7 @@ function template:compile(op)
 		log.error("Template error processing: " .. tostring(content))
 		return false
 	end
-	io.save(fs.ydwe_path() / "logs" / "自定义lua耗时.txt", tostring(time_2 - time_1))
+	io.save(fs.ydwe_path() / "logs"	/ "自定义lua耗时.txt", tostring(time_2 - time_1))
 
 	local result, err = io.save(op.output, content)
 	if not result then
