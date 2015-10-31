@@ -626,7 +626,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;藤原_妹红_
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;及川_冰丽
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
@@ -651,7 +651,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;冢耶舞莉;亚里亚;
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;及川_冰丽;冢耶舞莉;亚里亚;
 
 		    //贴吧国庆活动奖励 3.0小版本
 		    名字=草薙护堂
@@ -666,7 +666,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;及川_冰丽;
+		//清明比赛补档 3.0小版本
+		名字=种菜的大叔;
 
 		
 			
@@ -679,7 +681,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;萌萌阿泽君;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;萌萌阿泽君;风起炎舞;
 
 		//签到奖励 3.0小版本
 		名字=琪露诺;
@@ -694,7 +696,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 			
 	
@@ -708,7 +710,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		    //贴吧国庆比赛奖励 3.0小版本
 		    名字=倾城壹平
@@ -724,7 +726,9 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;绯色菠萝;龌龊的秃子;丨薛定谔的;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;绯色菠萝;龌龊的秃子;丨薛定谔的;
+		//清明比赛补档 3.0大版本
+		名字=丶五月星空;
 
 		//超电磁炮
 		皮肤=A0U5
@@ -735,7 +739,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=藤原_妹红_;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
+		名字=及川_冰丽;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
 
 		
 
@@ -748,7 +752,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		
 
@@ -761,7 +765,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 		
 		//真·克劳德
 		皮肤=A0U8
@@ -772,10 +776,12 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		    //贴吧国庆比赛奖励 3.0小版本
 		    名字=Handsonic丶;苗木小丸
+		    //清明比赛补档 3.0大版本
+		    名字=emiya桐子;
 
 		
 
@@ -788,7 +794,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		
 		//女剑客
@@ -800,7 +806,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 			
 		//装甲屠夫
@@ -812,7 +818,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;藤原_妹红_
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;及川_冰丽
 
 		//祸灵梦
 		皮肤=A0UU
@@ -823,7 +829,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		//清明比赛补档 3.0大版本
+		名字=冰封泪殇;
 
 			
 
@@ -836,7 +844,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 	/*
 		//新约·一方
 		皮肤=A0V2
@@ -858,7 +866,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		
 		//黑暗游侠
@@ -870,7 +878,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		//清明比赛补档 3.0小版本
+		名字=氵____乌龟;
 
 			
 
@@ -883,7 +893,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		//3.0小版本
 		名字=始源乔治;
@@ -899,7 +909,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 		
 		//诗乃
 		皮肤=A0UZ
@@ -910,7 +920,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 
 	
 		//狗剪
@@ -922,7 +932,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		//清明比赛补档 3.0小版本
+		名字=一色彩羽;
 
 			
 		//十香
@@ -934,7 +946,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		
 
@@ -947,7 +959,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
 		
 		
 		
@@ -960,7 +972,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 			
 
@@ -974,13 +986,16 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;我妻桃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;神级推土;我妻桃子;
 
 			//送给某妹子的
 			名字=乙坂丨步未
 
 			//贴吧国庆比赛奖励 3.0大版本
 			名字=超鬼君尼嚎
+
+		    //五一比赛补档 3.0小版本
+	     	名字=丶五月星空;
 
 		
 		//圆神
@@ -992,7 +1007,9 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		//清明比赛补档 3.0大版本
+		名字=彼岸的樱花;
 	
 
 		//神圣天使兽
@@ -1004,7 +1021,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 
 		//兵长
 		皮肤=A0VZ
@@ -1015,7 +1032,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		    //贴吧国庆比赛奖励 3.0小版本
 		    名字=雨月夜痕
@@ -1032,7 +1049,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		//3.0大版本
 		名字=Re丿佐佐木;
@@ -1048,7 +1065,7 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 
 
 		//阿露蒂娜
@@ -1060,7 +1077,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;蕾蒂|斯卡;朝田诗乃;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;蕾蒂|斯卡;朝田诗乃;
 
 			
 
@@ -1073,7 +1090,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
 		
 
@@ -1086,7 +1103,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		//清明比赛补档 3.0大版本
+		名字=吾妻夏娜;
 
 			
 		//Saber Bride 2
@@ -1098,7 +1117,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 
 		    //贴吧国庆活动奖励 3.0小版本
 		    名字=夜空下樱花;白发天使
@@ -1114,7 +1133,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+		//清明比赛补档 3.0小版本
+		名字=狱门幻流;
 
 		
 
@@ -1127,7 +1148,9 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		//清明比赛补档 3.0小版本
+		名字=丿_着迷;
 		
 		//雅典娜
 		皮肤=A0X5
@@ -1138,7 +1161,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 
 			
 
@@ -1151,7 +1174,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;Aki|
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;Aki|
 
 		
 
@@ -1164,7 +1187,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;万条小三;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;万条小三;
 
 		    //贴吧国庆比赛奖励 3.0大版本
 		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
@@ -1181,7 +1204,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;真白抱枕;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;真白抱枕;
 		
 
 		//赤瞳 泳装
@@ -1193,7 +1216,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//saber 泳装
@@ -1205,7 +1228,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//缇娜 泳装
@@ -1217,7 +1240,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//姆Q 泳装
@@ -1229,7 +1252,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;白鹿爱莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;白鹿爱莉;
 		
 
 		//克劳德 泳装
@@ -1241,7 +1264,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;暴击型KLD;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;暴击型KLD;
 		
 
 		//一方 泳装
@@ -1253,7 +1276,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;神级推土;
 		
 
 		//一护 泳装
@@ -1265,7 +1288,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;神级推土;
 		
 
 		//夏娜 泳装
@@ -1277,7 +1300,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;幻0风;
 		
 
 		//初音 泳装
@@ -1289,7 +1312,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;凝梦i;
 		
 
 		//琴里
@@ -1301,7 +1324,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 		
 
 		//立华奏 天使
@@ -1313,7 +1336,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 		
 
 		//夜夜 泳装
@@ -1326,7 +1349,7 @@
 		特效时间=1
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;此生无悔入;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;此生无悔入;
 		
 
 		//咲夜 泳装蓝
@@ -1338,7 +1361,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞
 		
 
 		//咲夜 泳装黑
@@ -1350,7 +1373,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;牛头一户
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;牛头一户
 		
 
 		//莉莉丝
@@ -1362,7 +1385,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;凝梦i
 		
 
 		//水银灯
@@ -1374,7 +1397,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;凝梦i
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;凝梦i
 		
 
 		//小爱 泳装
@@ -1386,7 +1409,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;幻0风
 		
 
 /*未实装
@@ -1401,7 +1424,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//蒂法 泳装
@@ -1413,7 +1436,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//阿露蒂娜 泳装
@@ -1425,7 +1448,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//灵梦 泳装
@@ -1437,7 +1460,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//十香 泳装
@@ -1449,7 +1472,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
 		
 
 		//小圆 泳装
@@ -1461,7 +1484,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;双马尾萝莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;双马尾萝莉;
 		
 
 		//夏野姬 泳装
@@ -1473,7 +1496,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;月丶魔理莎;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;月丶魔理莎;
 		
 
 		//小爱 泳装
@@ -1485,7 +1508,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;幻0风;
 		
 
 		//黑子 泳装
@@ -1497,7 +1520,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;上彬绘梨衣;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;上彬绘梨衣;
 
 		
 		//由乃 泳装
@@ -1509,7 +1532,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;藤原_妹红_;梦之祈语;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;梦之祈语;
 
 		*/
 
