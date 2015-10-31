@@ -5559,6 +5559,7 @@ Ncl6[1]=chemicalrage
 abpx=1
 aher=0
 ansf=多次释放
+acdn[1]=0.0800
 [A051:ANso]
 anam=|cff00ffff逮捕|r
 acdn[1]=40.0000
