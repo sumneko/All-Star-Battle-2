@@ -26,10 +26,6 @@
         纯血种=|cFF66FFFF[叫我雷锋就好]|r
         丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
 
-        //竞猜奖励 3.0小版本
-        易推的萝莉=|cffffcc00[萝莉大法好]|r
-        琪露诺=|cffffcc00[你才是baka，你全家都是baka]|r
-
         //贴吧抽奖 3.0小版本
         氵____乌龟=|cffffcc00[とある科学の超電磁砲]|r
         暴击型KLD=|cffffcc00[自带60%暴击加成的]|r
@@ -148,13 +144,6 @@
 			技能=被动
 			标题=特殊信使
 			内容=0_0
-
-			//贴吧抽奖,一季
-			名字=楼上没J啊
-			图标=button\BTNXS_S_YY.blp
-			技能=被动
-			标题=贴吧抽奖奖励!
-			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
 		//⑨ 	n01D
 
@@ -292,13 +281,6 @@
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
-			//3.0小版本
-			名字=呆毛傲娇娜
-			图标=button\BTNXS_S_YY.blp
-			技能=被动
-			标题=贴吧劳动节动手活动奖励!
-			内容=这是 |cffffcc00%player_name%|r 在贴吧劳动节动手活动获得的奖励，劳动光荣!
-
 		//律队 	n01M
 
 			信使=n01M
@@ -411,9 +393,6 @@
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
-			//贴吧国庆比赛奖励 3.0小版本
-			名字=Wind雀明华
-
 		//V仔兽 n02B
 
 			信使=n02B
@@ -523,9 +502,6 @@
 			技能=被动
 			标题=特殊信使
 			内容=火柴人
-
-			//贴吧国庆比赛奖励 3.0小版本
-			名字=羽山雅文
 
 		//提莫 n029
 
@@ -658,9 +634,6 @@
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
 		名字=小爱不是处;LemonHunter;s芙兰朵露z;及川_冰丽;冢耶舞莉;亚里亚;
-
-		    //贴吧国庆活动奖励 3.0小版本
-		    名字=草薙护堂
 		
 
 		//saber extra
@@ -673,6 +646,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=小爱不是处;LemonHunter;s芙兰朵露z;及川_冰丽;
+
 		//清明比赛补档 3.0小版本
 		名字=种菜的大叔;
 
@@ -688,9 +662,6 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;萌萌阿泽君;风起炎舞;
-
-		//签到奖励 3.0小版本
-		名字=琪露诺;
 
 			
 		//夏娜 火雾战士
@@ -718,9 +689,6 @@
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
-		    //贴吧国庆比赛奖励 3.0小版本
-		    名字=倾城壹平
-
 			
 		//夜夜 Special
 		皮肤=A0U1
@@ -733,6 +701,7 @@
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;绯色菠萝;龌龊的秃子;丨薛定谔的;
+
 		//清明比赛补档 3.0大版本
 		名字=丶五月星空;
 
@@ -784,8 +753,6 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
 
-		    //贴吧国庆比赛奖励 3.0小版本
-		    名字=Handsonic丶;苗木小丸
 		    //清明比赛补档 3.0大版本
 		    名字=emiya桐子;
 
@@ -836,6 +803,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+
 		//清明比赛补档 3.0大版本
 		名字=冰封泪殇;
 
@@ -885,6 +853,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+
 		//清明比赛补档 3.0小版本
 		名字=氵____乌龟;
 
@@ -939,6 +908,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;梦之祈语;夏阁艾狄剑;Chok丶Rs
+
 		//清明比赛补档 3.0小版本
 		名字=一色彩羽;
 
@@ -1017,6 +987,7 @@
 		特效时间=0.5
 		变身动画=Spell Three
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+
 		//清明比赛补档 3.0大版本
 		名字=彼岸的樱花;
 	
@@ -1042,9 +1013,6 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
-
-		    //贴吧国庆比赛奖励 3.0小版本
-		    名字=雨月夜痕
 
 		
 
@@ -1113,6 +1081,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+
 		//清明比赛补档 3.0大版本
 		名字=吾妻夏娜;
 
@@ -1128,9 +1097,6 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
 
-		    //贴吧国庆活动奖励 3.0小版本
-		    名字=夜空下樱花;白发天使
-
 		
 
 		//圣骑士
@@ -1143,6 +1109,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+
 		//清明比赛补档 3.0小版本
 		名字=狱门幻流;
 
@@ -1158,6 +1125,7 @@
 		特效时间=0.5
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+
 		//清明比赛补档 3.0小版本
 		名字=丿_着迷;
 		
@@ -1200,8 +1168,6 @@
 
 		    //贴吧国庆比赛奖励 3.0大版本
 		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
-		    //竞猜奖励 3.0小版本
-		    名字=琪露诺
 
 
 		//狂三 泳装
@@ -1359,6 +1325,7 @@
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;此生无悔入;
+		
 		//微博抽奖 3.0小版本
 		名字=华城凌女;
 		
