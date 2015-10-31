@@ -20,7 +20,6 @@
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
         我只是16=|cFF66FFFF[叫我雷锋就好]|r
         Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
-
         丿鸢一折纸=|cFF66FFFF[叫我雷锋就好]|r
         葛力姆乔酱=|cFF66FFFF[叫我雷锋就好]|r
         黎明曦光=|cFF66FFFF[叫我雷锋就好]|r
@@ -30,6 +29,13 @@
         //竞猜奖励 3.0小版本
         易推的萝莉=|cffffcc00[萝莉大法好]|r
         琪露诺=|cffffcc00[你才是baka，你全家都是baka]|r
+
+        //贴吧抽奖 3.0小版本
+        氵____乌龟=|cffffcc00[とある科学の超電磁砲]|r
+        暴击型KLD=|cffffcc00[自带60%暴击加成的]|r
+
+        //微博抽奖 3.0小版本
+        俸禄=|cffffcc00[level4空間移動者だった]|r
                 
              
               
@@ -997,6 +1003,9 @@
 		    //五一比赛补档 3.0小版本
 	     	名字=丶五月星空;
 
+	     	//贴吧抽奖 3.0大版本
+	     	名字=极限xxj;
+
 		
 		//圆神
 		皮肤=A0VF
@@ -1350,6 +1359,8 @@
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;此生无悔入;
+		//微博抽奖 3.0小版本
+		名字=华城凌女;
 		
 
 		//咲夜 泳装蓝
@@ -1374,6 +1385,9 @@
 		特效时间=1
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;牛头一户
+
+		//贴吧抽奖 3.0小版本
+		名字=Sora灬娜;
 		
 
 		//莉莉丝
