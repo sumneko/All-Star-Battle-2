@@ -772,6 +772,7 @@ Htb1[1]=500.0000
 atp1[1]=|cFF66FFFF冰封王座|r（D）
 aub1[1]=将目标急速冻成冰块再推出去最后形成巨大的冰山，不过这冰山却不能冻住任何人，顺便说下，冰封王座只有一座，技能名字只是为了显得很酷吧|n|n|cff66ffff伤害：500(目标)+智力×4(范围)|n|n|cff757575施法距离：200|n间隔时间：60秒
 amat=Abilities\Spells\Other\BreathOfFrost\BreathOfFrostMissile.mdl
+aani=spell,three
 [AIx3]
 ansf=+10
 Iint[1]=10
@@ -8673,7 +8674,7 @@ ahky=W
 arhk=W
 aret=学习|cFF25FFFF寒霜冰封|r（W）
 arut=凝聚寒霜之力，在|cffffff001秒后|r冰封一个区域，|cffffff00300范围内的敌人|r受到|cff00ffff2秒冻结|r，再突然地粉碎冰块对其造成大量伤害并在|cff66ffff3秒内造成20%/25%/30%/35%/40%的减速|r|n|n|cff66ffff伤害：35/70/105/140/175+智力×2.5|n|n|cff757575施法距离：700/750/800/850/900|n间隔时间：15秒
-aani=spell
+aani=spell,one
 acat=
 aeat=
 atat=
@@ -10748,7 +10749,7 @@ aran[3]=1200.0000
 aran[4]=1200.0000
 aran[5]=1200.0000
 amcs[4]=135
-aani=attack
+aani=spell,three
 [A09W:AHtb]
 anam=眩晕
 amsp=0
@@ -23885,6 +23886,7 @@ amcs[2]=90
 amcs[3]=90
 amcs[4]=90
 amcs[5]=90
+aani=spell,two
 [A0M4:ANcl]
 anam=|cFFff50aa彩焰射击|r
 aord=dispel
