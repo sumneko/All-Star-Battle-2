@@ -37359,3 +37359,15 @@ spb1[5]=A02U,A02Q,A02M
 ansf=魔法书
 spb4[1]=1
 spb3[1]=1
+[A10S:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Ulic
+Eme1[1]=U012
+ansf=艾斯德斯
+arac=orc
+aher=0
+anam=皮肤
