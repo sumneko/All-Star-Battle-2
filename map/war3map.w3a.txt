@@ -4503,10 +4503,10 @@ ansf=+100%
 Isx1[2]=0.7500
 [A03X:AIi3]
 Iint[1]=40
-ansf=+15力量、15敏捷、40智力
+ansf=+10力量、15敏捷、40智力
 anam=提高属性
 Iagi[1]=15
-Istr[1]=15
+Istr[1]=10
 [A03Y:AIrm]
 ansf=85%
 Imrp[1]=0.8500
@@ -15538,9 +15538,9 @@ Iagi[1]=35
 Istr[1]=20
 [A0D8:AIi3]
 Iint[1]=30
-ansf=+25力量、45敏捷、30智力
+ansf=+25力量、50敏捷、30智力
 anam=提高属性
-Iagi[1]=45
+Iagi[1]=50
 Istr[1]=25
 [A0D9:AIi3]
 Iint[1]=30
@@ -18497,7 +18497,7 @@ acdn[4]=0.1000
 acdn[5]=0.1000
 aani=spell
 aite=1
-acdn[1]=30.0000
+acdn[1]=45.0000
 [A0GG:Assk]
 areq=
 atar[2]=enemy,ally
@@ -19464,11 +19464,11 @@ Htc3[1]=0.0000
 arlv=24
 aani=stand
 [A031:AIi4]
-Iint[1]=45
+Iint[1]=50
 anam=提高智力
-ansf=+18力量、18敏捷、45智力
-Iagi[1]=18
-Istr[1]=18
+ansf=+10力量、15敏捷、50智力
+Iagi[1]=15
+Istr[1]=10
 [A0HE:Aspb]
 anam=奥术法球
 aite=0
@@ -37043,7 +37043,7 @@ anam=皮肤
 Iatt[1]=110
 ansf=+110
 [A10F:Aspb]
-spb1[1]=A043,A07O
+spb1[1]=A0D5,A01L,A043,A07O
 spb2[1]=0
 spb5[1]=spellbook
 spb5[2]=spellbook
@@ -37063,8 +37063,8 @@ spb1[3]=A02U,A02Q,A02K
 spb1[4]=A02U,A02Q,A02P
 spb1[5]=A02U,A02Q,A02M
 ansf=龙宫使的羽衣
-spb4[1]=2
-spb3[1]=2
+spb4[1]=4
+spb3[1]=4
 [A10G:AIcs]
 ansf=防御塔 20%×2
 atar[1]=ground,air,hero
@@ -37373,3 +37373,9 @@ ansf=艾斯德斯
 arac=orc
 aher=0
 anam=皮肤
+[A10T:AIl2]
+ansf=-100
+Ilif[1]=-100
+[A10U:AIat]
+Iatt[1]=30
+ansf=+30

@@ -6317,7 +6317,7 @@ library processLibrary initializer Init needs baseLibrary
 					if key != 0 then
                         new_max = i
 						if (name == "全部" or .name[key] == name) and uper >= .uper[key] and enable[key] then
-                            debug@ BJDebugMsg("<优先级被剔除> unit:[" + GetUnitName(u) + "] process:[" + .name[key] + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
+                            //debug@ BJDebugMsg("<优先级被剔除> unit:[" + GetUnitName(u) + "] process:[" + .name[key] + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
 							enable[key] = false
 							SaveInteger(YDHT, h, h_index[i], 0)
                             if trg[key] != null then
@@ -6357,7 +6357,7 @@ library processLibrary initializer Init needs baseLibrary
 					exitwhen i > max
 					key = LoadInteger(YDHT, h, h_index[i])
 					if key != 0 and .name[key] == name and .uper[key] > uper and .cover[key] and enable[key] then
-                        debug@ BJDebugMsg("<有更高优先级存在> unit:[" + GetUnitName(u) + "] process:[" + name + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
+                        //debug@ BJDebugMsg("<有更高优先级存在> unit:[" + GetUnitName(u) + "] process:[" + name + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
 						return 0
 					endif
 					i ++
@@ -6402,7 +6402,7 @@ library processLibrary initializer Init needs baseLibrary
 				lastkey[key] = 0
 				nextkey[key] = nextkey[0]
 				nextkey[0] = key
-                debug@ BJDebugMsg("<新建过程> unit:[" + GetUnitName(u) + "] process:[" + name + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
+                //debug@ BJDebugMsg("<新建过程> unit:[" + GetUnitName(u) + "] process:[" + name + "] hashindex:[" + I2S(i) + "] key:[" + I2S(key) + "]")
 				return key
 			}
 
@@ -6432,7 +6432,7 @@ library processLibrary initializer Init needs baseLibrary
                     enable[key] = false
                     SaveInteger(YDHT, h, h_index[hashindex[key]], 0)
                 endif
-                debug@ BJDebugMsg("<结束过程> unit:[" + GetUnitName(us[key]) + "] process:[" + name[key] + "] hashindex:[" + I2S(hashindex[key]) + "] key:[" + I2S(key) + "]")
+                //debug@ BJDebugMsg("<结束过程> unit:[" + GetUnitName(us[key]) + "] process:[" + name[key] + "] hashindex:[" + I2S(hashindex[key]) + "] key:[" + I2S(key) + "]")
 				hashindex[key] = 0
 				int last = lastkey[key]
 				int next = nextkey[key]
