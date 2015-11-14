@@ -2,7 +2,7 @@
 MaxUnitSpeed=522.0
 MaxHeroLevel=30
 StrAttackBonus=1.0
-StrHitPointBonus=10.0
+StrHitPointBonus=15.0
 AgiAttackSpeedBonus=0.008
 DamageBonusChaos=1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
 MaxLevelHeroesDrainExp=0
