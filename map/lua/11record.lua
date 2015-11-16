@@ -237,6 +237,8 @@
 				local count	= p:getRecord(data['信使'])
 				if data.names[p:getBaseName()] then
 					table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
+				elseif count ~= 0 then
+					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
 				elseif cmd.ver_name == '2.8E' then
 					table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
 				elseif game.messenger_all_free then
@@ -248,10 +250,8 @@
 				elseif #data.gold == 0 then
 					table.insert(texts, ('\n|cffffcc00非卖品|r'))
 					show = 0
-				elseif count == 0 then
-					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 				else
-					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
+					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 				end
 
 				data.name = slk.unit[data.id].Name
@@ -689,6 +689,8 @@
 					local show	= 1
 					if data.names[p:getBaseName()] then
 						table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
+					elseif count ~= 0 then
+						table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
 					elseif cmd.ver_name == '2.8E' then
 						table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
 					elseif game.hero_all_free then
@@ -700,10 +702,8 @@
 					elseif #data.gold == 0 then
 						table.insert(texts, ('\n|cffffcc00非卖品|r'))
 						show = 0
-					elseif count == 0 then
-						table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 					else
-						table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
+						table.insert(texts, ('\n|cffffcc00您当前拥有 %d 点节操\n\n点击购买该皮肤|r'):format(jc))
 					end
 
 					data.name = slk.unit[data.hero_id_new].Propernames:match '([^%,]+)'
