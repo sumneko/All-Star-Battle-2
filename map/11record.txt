@@ -20,16 +20,18 @@
         工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
         我只是16=|cFF66FFFF[叫我雷锋就好]|r
         Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
-
         丿鸢一折纸=|cFF66FFFF[叫我雷锋就好]|r
         葛力姆乔酱=|cFF66FFFF[叫我雷锋就好]|r
         黎明曦光=|cFF66FFFF[叫我雷锋就好]|r
         纯血种=|cFF66FFFF[叫我雷锋就好]|r
         丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
 
-        //竞猜奖励 3.0小版本
-        易推的萝莉=|cffffcc00[萝莉大法好]|r
-        琪露诺=|cffffcc00[你才是baka，你全家都是baka]|r
+        //贴吧抽奖 3.0小版本
+        氵____乌龟=|cffffcc00[とある科学の超電磁砲]|r
+        暴击型KLD=|cffffcc00[自带60%暴击加成的]|r
+
+        //微博抽奖 3.0小版本
+        俸禄=|cffffcc00[level4空間移動者だった]|r
                 
              
               
@@ -142,13 +144,6 @@
 			技能=被动
 			标题=特殊信使
 			内容=0_0
-
-			//贴吧抽奖,一季
-			名字=楼上没J啊
-			图标=button\BTNXS_S_YY.blp
-			技能=被动
-			标题=贴吧抽奖奖励!
-			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
 		//⑨ 	n01D
 
@@ -286,13 +281,6 @@
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
-			//3.0小版本
-			名字=呆毛傲娇娜
-			图标=button\BTNXS_S_YY.blp
-			技能=被动
-			标题=贴吧劳动节动手活动奖励!
-			内容=这是 |cffffcc00%player_name%|r 在贴吧劳动节动手活动获得的奖励，劳动光荣!
-
 		//律队 	n01M
 
 			信使=n01M
@@ -405,9 +393,6 @@
 			标题=贴吧抽奖奖励!
 			内容=这是 |cffffcc00%player_name%|r 在贴吧抽奖活动中抽到的信使,运气真是太好了!
 
-			//贴吧国庆比赛奖励 3.0小版本
-			名字=Wind雀明华
-
 		//V仔兽 n02B
 
 			信使=n02B
@@ -518,9 +503,6 @@
 			标题=特殊信使
 			内容=火柴人
 
-			//贴吧国庆比赛奖励 3.0小版本
-			名字=羽山雅文
-
 		//提莫 n029
 
 			信使=n029
@@ -626,7 +608,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;及川_冰丽
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;刀藤丨绮凛
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
@@ -651,22 +633,20 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;及川_冰丽;冢耶舞莉;亚里亚;
-
-		    //贴吧国庆活动奖励 3.0小版本
-		    名字=草薙护堂
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;刀藤丨绮凛;冢耶舞莉;亚里亚;
 		
 
 		//saber extra
 		皮肤=A0TT
 		前缀=|cFFFFFF00黄金剧场|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;及川_冰丽;
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;刀藤丨绮凛;
+
 		//清明比赛补档 3.0小版本
 		名字=种菜的大叔;
 
@@ -681,22 +661,19 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;萌萌阿泽君;风起炎舞;
-
-		//签到奖励 3.0小版本
-		名字=琪露诺;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;萌萌阿泽君;风起炎舞;
 
 			
 		//夏娜 火雾战士
 		皮肤=A0TV
 		前缀=|cffff1111火雾战士|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\Fire Aura.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 			
 	
@@ -704,16 +681,13 @@
 		皮肤=A0TZ
 		前缀=|cffff1111机巧少女|r
 		说明=这里是皮肤说明
-		价格=1-300;5-1300;25-6000
+		价格=1-250;5-1000;25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
-
-		    //贴吧国庆比赛奖励 3.0小版本
-		    名字=倾城壹平
+		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 			
 		//夜夜 Special
@@ -726,7 +700,8 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;绯色菠萝;龌龊的秃子;丨薛定谔的;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;绯色菠萝;龌龊的秃子;丨薛定谔的;
+
 		//清明比赛补档 3.0大版本
 		名字=丶五月星空;
 
@@ -734,12 +709,12 @@
 		皮肤=A0U5
 		前缀=|cffff1111超电磁炮|r
 		说明=
-		价格=1-700;10-6888
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=及川_冰丽;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
+		名字=刀藤丨绮凛;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
 
 		
 
@@ -747,12 +722,12 @@
 		皮肤=A0U6
 		前缀=|cffff1111学生装|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -760,26 +735,24 @@
 		皮肤=A0U7
 		前缀=|cffff1111真·|r
 		说明=这里是皮肤说明
-		价格=1-300;5-1300;25-6000
+		价格=1-250;5-1000;25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 		
 		//真·克劳德
 		皮肤=A0U8
 		前缀=|cffff1111真·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
-		    //贴吧国庆比赛奖励 3.0小版本
-		    名字=Handsonic丶;苗木小丸
 		    //清明比赛补档 3.0大版本
 		    名字=emiya桐子;
 
@@ -789,47 +762,48 @@
 		皮肤=A0U9
 		前缀=|cffff1111天罚者|r
 		说明=这里是皮肤说明
-		价格=1-500;5-2250;25-9999
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		
 		//女剑客
 		皮肤=A0UA
 		前缀=|cffff1111女·|r
 		说明=这里是皮肤说明
-		价格=1-200;5-900;25-4000
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 			
 		//装甲屠夫
 		皮肤=A0UI
 		前缀=|cffff1111装甲|r
 		说明=这里是皮肤说明
-		价格=1-300;5-1300;25-6000
+		价格=1-250;5-1000;25-4000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;及川_冰丽
+		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;刀藤丨绮凛
 
 		//祸灵梦
 		皮肤=A0UU
 		前缀=|cffff1111祸·|r
 		说明=这里是皮肤说明
-		价格=1-450;5-1800;25-8000
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+
 		//清明比赛补档 3.0大版本
 		名字=冰封泪殇;
 
@@ -839,12 +813,12 @@
 		皮肤=A0UY
 		前缀=|cffff1111黑化·|r
 		说明=这里是皮肤说明
-		价格=1-300;5-1300;25-6000
+		价格=1-250;5-1000;25-4000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
 	/*
 		//新约·一方
 		皮肤=A0V2
@@ -861,24 +835,25 @@
 		皮肤=A0V0
 		前缀=|cffff1111和服·|r
 		说明=这里是皮肤说明
-		价格=1-450;5-1800;25-8000
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		
 		//黑暗游侠
 		皮肤=A0UV
 		前缀=|cffff1111黑暗·|r
 		说明=这里是皮肤说明
-		价格=1-300;5-1300;25-6000
+		价格=1-250;5-1000;25-4000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+
 		//清明比赛补档 3.0小版本
 		名字=氵____乌龟;
 
@@ -888,12 +863,12 @@
 		皮肤=A0UW
 		前缀=|cffff1111犬夜叉·|r
 		说明=这里是皮肤说明
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		//3.0小版本
 		名字=始源乔治;
@@ -904,35 +879,36 @@
 		皮肤=A0UX
 		前缀=|cffff1111世界第一公主殿下·|r
 		说明=这里是皮肤说明
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 		
 		//诗乃
 		皮肤=A0UZ
 		前缀=|cffff1111冰之狙击手·|r
 		说明=这里是皮肤说明
-		价格=1-350;5-1800;25-8000
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
 
 	
 		//狗剪
 		皮肤=A0V3
 		前缀=|cffff1111狗剪·|r
 		说明=
-		价格=1-888;10-6888
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;梦之祈语;夏阁艾狄剑;Chok丶Rs
+
 		//清明比赛补档 3.0小版本
 		名字=一色彩羽;
 
@@ -941,12 +917,12 @@
 		皮肤=A0V4
 		前缀=|cffff1111第十精灵·|r
 		说明=这里是皮肤说明
-		价格=1-450;5-1800;25-8000
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\A2_leidian.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -959,7 +935,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
 		
 		
 		
@@ -967,12 +943,12 @@
 		皮肤=A0V1
 		前缀=|cffff1111死神·|r
 		说明=这里是皮肤说明
-		价格=1-500;5-2250;25-9999
+		价格=1-250;5-1000;25-4000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 			
 
@@ -986,7 +962,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;神级推土;我妻桃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;神级推土;我妻桃子;
 
 			//送给某妹子的
 			名字=乙坂丨步未
@@ -997,17 +973,21 @@
 		    //五一比赛补档 3.0小版本
 	     	名字=丶五月星空;
 
+	     	//贴吧抽奖 3.0大版本
+	     	名字=极限xxj;
+
 		
 		//圆神
 		皮肤=A0VF
 		前缀=|cffff1111神|r
 		说明=这里是皮肤说明
-		价格=1-700;10-6888
+		价格=1-450;5-1800;25-8000
 		变身特效=
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+
 		//清明比赛补档 3.0大版本
 		名字=彼岸的樱花;
 	
@@ -1016,26 +996,23 @@
 		皮肤=A0VY
 		前缀=|cffcc00cc究极体|r 
 		说明=
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
 
 		//兵长
 		皮肤=A0VZ
 		前缀=|cffcc00cc兵长|r 
 		说明=
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
-
-		    //贴吧国庆比赛奖励 3.0小版本
-		    名字=雨月夜痕
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -1044,12 +1021,12 @@
 		皮肤=A0VX
 		前缀=|cffcc00cc七色的剑灵使用者|r 
 		说明=
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		//3.0大版本
 		名字=Re丿佐佐木;
@@ -1065,19 +1042,19 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
 
 
 		//阿露蒂娜
 		皮肤=A0VV
 		前缀=|cffcc00cc银之森的妖精公主|r 
 		说明=
-		价格=1-700;10-6888
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;蕾蒂|斯卡;朝田诗乃;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;蕾蒂|斯卡;朝田诗乃;
 
 			
 
@@ -1085,12 +1062,12 @@
 		皮肤=A0VW
 		前缀=|cffcc00cc红之战巫女|r 
 		说明=
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -1098,12 +1075,13 @@
 		皮肤=A0WV
 		前缀=|cffcc00cc花嫁|r 
 		说明=
-		价格=1-700;10-6888
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+
 		//清明比赛补档 3.0大版本
 		名字=吾妻夏娜;
 
@@ -1117,10 +1095,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
-
-		    //贴吧国庆活动奖励 3.0小版本
-		    名字=夜空下樱花;白发天使
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
 
 		
 
@@ -1128,12 +1103,13 @@
 		皮肤=A0X3
 		前缀=|cffcc00cc女·|r 
 		说明=
-		价格=1-200;5-980;25-4888
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+
 		//清明比赛补档 3.0小版本
 		名字=狱门幻流;
 
@@ -1143,12 +1119,13 @@
 		皮肤=A0X4
 		前缀=|cffcc00cc女·|r 
 		说明=
-		价格=1-200;5-980;25-4888
+		价格=1-150;5-500;25-2000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+
 		//清明比赛补档 3.0小版本
 		名字=丿_着迷;
 		
@@ -1156,12 +1133,12 @@
 		皮肤=A0X5
 		前缀=|cffcc00cc奥林波斯神族|r 
 		说明=
-		价格=1-500;5-2250;25-9999
+		价格=1-350;5-1500;25-6000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
 
 			
 
@@ -1169,12 +1146,12 @@
 		皮肤=A0XD
 		前缀=|cffcc00cc黑礼服·|r 
 		说明=呐，士道桑 我们融合吧
-		价格=1-700;10-6888
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;Aki|
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;Aki|
 
 		
 
@@ -1187,12 +1164,10 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;万条小三;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;万条小三;
 
 		    //贴吧国庆比赛奖励 3.0大版本
 		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
-		    //竞猜奖励 3.0小版本
-		    名字=琪露诺
 
 
 		//狂三 泳装
@@ -1204,7 +1179,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;真白抱枕;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;真白抱枕;
 		
 
 		//赤瞳 泳装
@@ -1216,7 +1191,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//saber 泳装
@@ -1228,7 +1203,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//缇娜 泳装
@@ -1240,7 +1215,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//姆Q 泳装
@@ -1252,7 +1227,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;白鹿爱莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;白鹿爱莉;
 		
 
 		//克劳德 泳装
@@ -1264,43 +1239,43 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;暴击型KLD;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;暴击型KLD;
 		
 
 		//一方 泳装
 		皮肤=A0YT
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=
+		说明=此皮肤由玩家“神级推土”定做并共享
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;神级推土;
 		
 
 		//一护 泳装
 		皮肤=A0YN
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=
+		说明=此皮肤由玩家“神级推土”定做并共享
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;神级推土;
 		
 
 		//夏娜 泳装
 		皮肤=A0YU
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=1-888;10-6888
+		说明=此皮肤由玩家“幻0风”定做并共享
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;幻0风;
 		
 
 		//初音 泳装
@@ -1312,7 +1287,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;凝梦i;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;凝梦i;
 		
 
 		//琴里
@@ -1324,7 +1299,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 		
 
 		//立华奏 天使
@@ -1336,7 +1311,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
 		
 
 		//夜夜 泳装
@@ -1349,7 +1324,10 @@
 		特效时间=1
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;此生无悔入;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;此生无悔入;
+		
+		//微博抽奖 3.0小版本
+		名字=华城凌女;
 		
 
 		//咲夜 泳装蓝
@@ -1361,7 +1339,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞
 		
 
 		//咲夜 泳装黑
@@ -1373,7 +1351,10 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;牛头一户
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;牛头一户
+
+		//贴吧抽奖 3.0小版本
+		名字=Sora灬娜;
 		
 
 		//莉莉丝
@@ -1385,7 +1366,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;凝梦i
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;凝梦i
 		
 
 		//水银灯
@@ -1397,7 +1378,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;凝梦i
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;凝梦i
 		
 
 		//小爱 泳装
@@ -1409,7 +1390,19 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;幻0风
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;幻0风
+		
+
+		//艾斯德斯
+		皮肤=A10S
+		前缀=|cFF66FFFF恶魔之粹·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;
 		
 
 /*未实装
@@ -1424,7 +1417,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//蒂法 泳装
@@ -1436,7 +1429,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//阿露蒂娜 泳装
@@ -1448,7 +1441,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//灵梦 泳装
@@ -1460,7 +1453,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//十香 泳装
@@ -1472,7 +1465,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//小圆 泳装
@@ -1484,7 +1477,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;双马尾萝莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;双马尾萝莉;
 		
 
 		//夏野姬 泳装
@@ -1496,7 +1489,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;月丶魔理莎;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;月丶魔理莎;
 		
 
 		//小爱 泳装
@@ -1508,7 +1501,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;幻0风;
 		
 
 		//黑子 泳装
@@ -1520,7 +1513,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;上彬绘梨衣;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;上彬绘梨衣;
 
 		
 		//由乃 泳装
@@ -1532,7 +1525,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;及川_冰丽;梦之祈语;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;梦之祈语;
 
 		*/
 

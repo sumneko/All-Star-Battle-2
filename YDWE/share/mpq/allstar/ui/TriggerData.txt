@@ -407,6 +407,7 @@ itemPickDrop=0,0,0,获得还是丢弃,integer
 add_remove=0,0,0,添加或移除,boolean
 crit_crited=0,0,0,暴击模块对象,integer
 hit_dodg=0,0,0,命中闪躲模块对象,integer
+hit_dodg_crit=0,0,0,命中闪躲暴击模块对象,integer
 unit_response_type=0,0,0,单位回应类型,integer
 
 
@@ -479,6 +480,10 @@ crit_crited_crited=0,crit_crited,1,被暴击
 
 hit_dodg_hit=0,hit_dodg,0,命中
 hit_dodg_dodg=0,hit_dodg,1,闪躲
+
+hit_dodg_crit_hit=0,hit_dodg_crit,0,命中
+hit_dodg_crit_dodg=0,hit_dodg_crit,1,闪躲
+hit_dodg_crit_crit=0,hit_dodg_crit,2,暴击
 
 unit_response_type1=0,unit_response_type,1,选中回应
 unit_response_type2=0,unit_response_type,2,移动回应
@@ -4095,6 +4100,10 @@ _Unit.Crit_Category=TC_MU_UNIT
 Unit.HitDodg=0,unit,add_remove,real,string,hit_dodg
 _Unit.HitDodg_Defaults=GetTriggerUnit,add_remove_add,15,"无",hit_dodg_dodg
 _Unit.HitDodg_Category=TC_MU_UNIT
+
+Unit.PrintHitDodgCrit=0,unit,hit_dodg_crit,player
+_Unit.PrintHitDodgCrit_Defaults=GetTriggerUnit,hit_dodg_crit_hit,GetTriggerPlayer
+_Unit.PrintHitDodgCrit_Category=TC_MU_UNIT
 
 Unit.ExtraMoveSpeed=0,unit,real
 _Unit.ExtraMoveSpeed_Defaults=GetTriggerUnit,500
