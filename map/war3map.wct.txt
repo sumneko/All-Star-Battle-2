@@ -5838,11 +5838,11 @@ library testLibrary initializer Init needs baseLibrary, processLibrary
         static bool action(){
             string s = GetEventPlayerChatString()
             player p = GetTriggerPlayer()
-            if p != Play##er(0) and not test.Enable then
-                DisplayTimedTextToPlayer(p, 0, 0, 10, "1楼关闭了测试指令,若需启用请1楼输入 .test")
-                p = null
-                return false
-            endif
+debug@      if p != Play##er(0) and not test.Enable then
+debug@          DisplayTimedTextToPlayer(p, 0, 0, 10, "1楼关闭了测试指令,若需启用请1楼输入 .test")
+debug@          p = null
+debug@          return false
+debug@      endif
             int id = GetPlayerId(p)
             unit hero = udg_player[id + 1]
             String.Split(s, " ")
