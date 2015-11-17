@@ -1405,6 +1405,30 @@
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;
 		
 
+		//晓
+		皮肤=A10V
+		前缀=|cFF66FFFF舰队Collection·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit,风起炎舞;
+		
+
+		//响
+		皮肤=A10W
+		前缀=|cFF66FFFF舰队Collection·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit,风起炎舞;
+		
+
 /*未实装
 
 

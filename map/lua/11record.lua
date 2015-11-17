@@ -367,7 +367,7 @@
 				--使用皮肤
 				local function change()
 					if game.debug or true then
-						local ignore = {'file', 'ScoreScreenIcon', 'Art', 'modelScale', 'scale', 'unitSound', 'EditorSuffix', 'name', 'abilList', 'shadowH', 'death', 'unitShadow', 'shadowW', 'shadowX', 'shadowY', 'Tip'}
+						local ignore = {'file', 'ScoreScreenIcon', 'Art', 'modelScale', 'scale', 'unitSound', 'EditorSuffix', 'name', 'abilList', 'shadowH', 'death', 'unitShadow', 'shadowW', 'shadowX', 'shadowY', 'Tip', 'Missileart'}
 						table.back(ignore)
 						local old_id = id2string(jass.GetUnitTypeId(u))
 						for name, value in pairs(slk.unit[data.id]) do
@@ -653,7 +653,7 @@
 
 		--检查数据
 		if game.debug then
-			local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip', 'run', 'walk'}
+			local ignore = {'file', 'ScoreScreenIcon', 'Art', 'Propernames', 'Name', 'ModelScale', 'scale', 'UnitSound', 'EditorSuffix', 'name', 'modelScale', 'blend', 'unitSound', 'Ubertip', 'run', 'walk', 'Missileart', 'launchX', 'launchY', 'launchZ'}
 			table.back(ignore)
 			for name, value in pairs(slk.unit[data.hero_id_base]) do
 				if not ignore[name] and slk.unit[data.hero_id_new][name] ~= value then
