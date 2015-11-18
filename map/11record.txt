@@ -16,15 +16,16 @@
                 LemonHunter=|cFF66FFFF[ぽい]|r
 
         //测试奖励 3.0小版本
-        中端路人局=|cFF66FFFF[叫我雷锋就好]|r
-        工口大猩猩=|cFF66FFFF[叫我雷锋就好]|r
-        我只是16=|cFF66FFFF[叫我雷锋就好]|r
-        Samuel_夜末=|cFF66FFFF[叫我雷锋就好]|r
-        丿鸢一折纸=|cFF66FFFF[叫我雷锋就好]|r
-        葛力姆乔酱=|cFF66FFFF[叫我雷锋就好]|r
-        黎明曦光=|cFF66FFFF[叫我雷锋就好]|r
-        纯血种=|cFF66FFFF[叫我雷锋就好]|r
-        丿BeSt丶轩=|cFF66FFFF[夜哲炫]|r
+        A拉垃圾君=|cFFFF33FF[封弊者]|r
+        工口大猩猩=|cFFFF33FF[封弊者]|r
+        一只野生9=|cFFFF33FF[纣钰曈]|r
+        丿BeSt丶轩=|cFFFF33FF[夜哲炫]|r
+        纯血种=|cFFFF33FF[封弊者]|r
+        Samuel丶黑奈=|cFFFF33FF[封弊者]|r
+        无言的约定=|cFFFF33FF[封弊者]|r
+        幻0风=|cFFFF33FF[封弊者]|r
+        月丶魔理莎=|cFFFF33FF[封弊者]|r
+        青血羽=|cFFFF33FF[封弊者]|r
 
         //贴吧抽奖 3.0小版本
         氵____乌龟=|cffffcc00[とある科学の超電磁砲]|r
@@ -139,7 +140,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;LemonHunter
+			名字=小爱不是处;LemonHunter;最萌小汐
 			图标=WuKong.blp
 			技能=被动
 			标题=特殊信使
@@ -163,7 +164,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处喵;LemonHunter
+			名字=小爱不是处喵;LemonHunter;最萌小汐
 			图标=button\BTNXS_U_9.blp
 			技能=被动
 			标题=特殊信使
@@ -200,7 +201,7 @@
 			标题=|cffffcc00%player_name%|r的专属信使
 			内容=筒隐月子俺嫁,萝莉后宫万岁!
 
-			名字=小爱不是处;LemonHunter
+			名字=小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTNXS_U_saber.blp
 			技能=被动
 			标题=特殊信使
@@ -237,7 +238,7 @@
 			标题=|cffffcc00%player_name%|r,测试辛苦了!
 			内容=无聊的时候就逗逗裂魂人玩吧~
 
-			名字=小爱不是处;LemonHunter
+			名字=小爱不是处;LemonHunter;最萌小汐
 			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
 			技能=被动
 			标题=特殊信使
@@ -268,7 +269,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;LemonHunter
+			名字=小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTNXS_U_YUI.blp
 			技能=被动
 			标题=特殊信使
@@ -299,7 +300,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;LemonHunter
+			名字=小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTNXS_U_LD.blp
 			技能=被动
 			标题=特殊信使
@@ -323,7 +324,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;LemonHunter
+			名字=小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTNXS_U_ZM.blp
 			技能=被动
 			标题=特殊信使
@@ -355,7 +356,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;LemonHunter;最萌小汐
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -380,7 +381,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_Gundam.blp
 			技能=被动
 			标题=特殊信使
@@ -411,7 +412,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_Vya.blp
 			技能=被动
 			标题=特殊信使
@@ -442,7 +443,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_Zombie.blp
 			技能=被动
 			标题=特殊信使
@@ -466,7 +467,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_Konata.blp
 			技能=被动
 			标题=特殊信使
@@ -497,7 +498,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
@@ -521,7 +522,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_Teemo.blp
 			技能=被动
 			标题=特殊信使
@@ -545,7 +546,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_OldTeemo.blp
 			技能=被动
 			标题=特殊信使
@@ -576,7 +577,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;LemonHunter
+			名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
 			图标=button\BTN_XS_DYCX.blp.blp
 			技能=被动
 			标题=特殊信使
@@ -633,7 +634,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;刀藤丨绮凛;冢耶舞莉;亚里亚;
+		名字=小爱不是处;LemonHunter;最萌小汐;s芙兰朵露z;刀藤丨绮凛;冢耶舞莉;亚里亚;
 		
 
 		//saber extra
@@ -645,7 +646,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;刀藤丨绮凛;
+		名字=小爱不是处;LemonHunter;最萌小汐;s芙兰朵露z;刀藤丨绮凛;
 
 		//清明比赛补档 3.0小版本
 		名字=种菜的大叔;
@@ -661,7 +662,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;萌萌阿泽君;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;萌萌阿泽君;风起炎舞;
 
 			
 		//夏娜 火雾战士
@@ -673,7 +674,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 			
 	
@@ -687,7 +688,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 			
 		//夜夜 Special
@@ -700,7 +701,7 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;绯色菠萝;龌龊的秃子;丨薛定谔的;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;绯色菠萝;龌龊的秃子;丨薛定谔的;
 
 		//清明比赛补档 3.0大版本
 		名字=丶五月星空;
@@ -714,7 +715,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=刀藤丨绮凛;s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
+		名字=刀藤丨绮凛;s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
 
 		
 
@@ -727,7 +728,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -740,7 +741,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 		
 		//真·克劳德
 		皮肤=A0U8
@@ -751,7 +752,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		    //清明比赛补档 3.0大版本
 		    名字=emiya桐子;
@@ -767,7 +768,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		
 		//女剑客
@@ -779,7 +780,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 			
 		//装甲屠夫
@@ -791,7 +792,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;s芙兰朵露z;WorldEdit;刀藤丨绮凛
+		名字=小爱不是处;LemonHunter;最萌小汐;s芙兰朵露z;WorldEdit;刀藤丨绮凛
 
 		//祸灵梦
 		皮肤=A0UU
@@ -802,7 +803,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//清明比赛补档 3.0大版本
 		名字=冰封泪殇;
@@ -818,7 +819,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 	/*
 		//新约·一方
 		皮肤=A0V2
@@ -840,7 +841,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		
 		//黑暗游侠
@@ -852,7 +853,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//清明比赛补档 3.0小版本
 		名字=氵____乌龟;
@@ -868,7 +869,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//3.0小版本
 		名字=始源乔治;
@@ -884,7 +885,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 		
 		//诗乃
 		皮肤=A0UZ
@@ -895,7 +896,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 
 	
 		//狗剪
@@ -907,7 +908,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;梦之祈语;夏阁艾狄剑;Chok丶Rs
 
 		//清明比赛补档 3.0小版本
 		名字=一色彩羽;
@@ -922,7 +923,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -935,7 +936,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
 		
 		
 		
@@ -948,7 +949,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 			
 
@@ -962,7 +963,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;神级推土;我妻桃子;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;神级推土;我妻桃子;
 
 			//送给某妹子的
 			名字=乙坂丨步未
@@ -986,7 +987,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//清明比赛补档 3.0大版本
 		名字=彼岸的樱花;
@@ -1001,7 +1002,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 
 		//兵长
 		皮肤=A0VZ
@@ -1012,7 +1013,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -1026,7 +1027,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//3.0大版本
 		名字=Re丿佐佐木;
@@ -1042,7 +1043,7 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+//		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 
 
 		//阿露蒂娜
@@ -1054,7 +1055,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;蕾蒂|斯卡;朝田诗乃;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;蕾蒂|斯卡;朝田诗乃;
 
 			
 
@@ -1067,7 +1068,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		
 
@@ -1080,7 +1081,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//清明比赛补档 3.0大版本
 		名字=吾妻夏娜;
@@ -1095,7 +1096,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 
 		
 
@@ -1108,7 +1109,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 
 		//清明比赛补档 3.0小版本
 		名字=狱门幻流;
@@ -1124,7 +1125,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 		//清明比赛补档 3.0小版本
 		名字=丿_着迷;
@@ -1138,7 +1139,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛
 
 			
 
@@ -1151,7 +1152,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;Aki|
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;Aki|
 
 		
 
@@ -1164,7 +1165,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;万条小三;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;万条小三;
 
 		    //贴吧国庆比赛奖励 3.0大版本
 		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
@@ -1179,7 +1180,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;真白抱枕;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;真白抱枕;
 		
 
 		//赤瞳 泳装
@@ -1191,7 +1192,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//saber 泳装
@@ -1203,7 +1204,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//缇娜 泳装
@@ -1215,7 +1216,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//姆Q 泳装
@@ -1227,7 +1228,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;白鹿爱莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;白鹿爱莉;
 		
 
 		//克劳德 泳装
@@ -1239,7 +1240,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;暴击型KLD;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;暴击型KLD;
 		
 
 		//一方 泳装
@@ -1251,7 +1252,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;神级推土;
 		
 
 		//一护 泳装
@@ -1263,7 +1264,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;神级推土;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;神级推土;
 		
 
 		//夏娜 泳装
@@ -1275,7 +1276,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;幻0风;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;幻0风;
 		
 
 		//初音 泳装
@@ -1287,7 +1288,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;凝梦i;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;凝梦i;
 		
 
 		//琴里
@@ -1299,7 +1300,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 		
 
 		//立华奏 天使
@@ -1311,7 +1312,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 		
 
 		//夜夜 泳装
@@ -1324,7 +1325,7 @@
 		特效时间=1
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;此生无悔入;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;此生无悔入;
 		
 		//微博抽奖 3.0小版本
 		名字=华城凌女;
@@ -1339,7 +1340,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞
 		
 
 		//咲夜 泳装黑
@@ -1351,7 +1352,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;牛头一户
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;牛头一户
 
 		//贴吧抽奖 3.0小版本
 		名字=Sora灬娜;
@@ -1366,7 +1367,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;凝梦i
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;凝梦i
 		
 
 		//水银灯
@@ -1378,19 +1379,21 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;凝梦i
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;凝梦i
+		//贡献奖励
+		名字=幻0风
 		
 
 		//小爱 泳装
 		皮肤=A10O
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=
+		说明=此皮肤由玩家“幻0风”定做并共享
+		价格=1-450;5-1800;25-8000
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;幻0风
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;幻0风
 		
 
 		//艾斯德斯
@@ -1402,7 +1405,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 		
 
 		//晓
@@ -1414,7 +1417,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit,风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//响
@@ -1426,7 +1429,19 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit,风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		
+
+		//黑子 泳装
+		皮肤=A10Z
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;上彬绘梨衣;
 		
 
 /*未实装
@@ -1441,7 +1456,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//蒂法 泳装
@@ -1453,7 +1468,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//阿露蒂娜 泳装
@@ -1465,7 +1480,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//灵梦 泳装
@@ -1477,7 +1492,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//十香 泳装
@@ -1489,7 +1504,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
 		//小圆 泳装
@@ -1501,7 +1516,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;双马尾萝莉;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;双马尾萝莉;
 		
 
 		//夏野姬 泳装
@@ -1513,31 +1528,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;月丶魔理莎;
-		
-
-		//小爱 泳装
-		皮肤=
-		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
-		特效点=origin
-		特效时间=1
-		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;幻0风;
-		
-
-		//黑子 泳装
-		皮肤=
-		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
-		特效点=origin
-		特效时间=1
-		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;上彬绘梨衣;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;月丶魔理莎;
 
 		
 		//由乃 泳装
@@ -1549,7 +1540,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;WorldEdit;刀藤丨绮凛;梦之祈语;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;梦之祈语;
 
 		*/
 

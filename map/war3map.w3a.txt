@@ -37436,3 +37436,15 @@ spb1[5]=A02U,A02Q,A02M
 ansf=识破
 spb4[1]=2
 spb3[1]=2
+[A10Z:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=Efur
+Eme1[1]=E0BP
+ansf=黑子 泳装
+arac=orc
+aher=0
+anam=皮肤
