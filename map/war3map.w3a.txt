@@ -10755,7 +10755,6 @@ amcs[4]=135
 aani=spell,three
 [A09W:AHtb]
 anam=眩晕
-amsp=0
 arar=huowushunsha.blp
 aret=学习|cFFFF0033火雾瞬斩|r（R）
 arut=对目标进行快速斩击。|n|cFFFF3333伤害公式：造成敏捷×6的伤害|r|n|cFF00FF33初始施法距离100，每级增加50|r|n|cFF3366FF初始技能CD40秒，每级减少5秒|r
@@ -10794,6 +10793,7 @@ Htb1[1]=0.0000
 atp1[1]=风暴之锤(|cffffcc00T|r)
 aran[1]=99999.0000
 atar[1]=neutral,friend,ground,enemies,organic,debris,air,self
+amsp=1200
 [A09X:AUcs]
 anam=|cffaa7525石墙炼成|r
 amat=
