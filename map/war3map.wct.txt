@@ -6432,6 +6432,10 @@ library processLibrary initializer Init needs baseLibrary
                     enable[key] = false
                     SaveInteger(YDHT, h, h_index[hashindex[key]], 0)
                 endif
+                if trg[key] != null then
+                    FlushChildHashtable(YDHT, GetHandleId(trg[key]))
+                    DestroyTrigger(trg[key])
+                endif
                 //debug@ BJDebugMsg("<结束过程> unit:[" + GetUnitName(us[key]) + "] process:[" + name[key] + "] hashindex:[" + I2S(hashindex[key]) + "] key:[" + I2S(key) + "]")
 				hashindex[key] = 0
 				int last = lastkey[key]
