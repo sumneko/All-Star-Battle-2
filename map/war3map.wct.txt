@@ -3588,16 +3588,16 @@ library bakaLibrary initializer Init needs baseLibrary
         }
 
         static int getMapVerInt(string name){
-            int i1 = S2I(SubString(name, 0, 1)) * 100
-            int i2 = S2I(SubString(name, 2, 3)) * 10
+            int i1 = S2I(SubString(name, 0, 1)) * 1000
+            int i2 = S2I(SubString(name, 2, 3)) * 100
             int i3 = String.byte2(SubString(name, 3, 4))
             return i1 + i2 + i3
         }
 
         static string getMapVerName(int ver){
-            string s1 = I2S(ver / 100)
+            string s1 = I2S(ver / 1000)
             string s2 = I2S(ModuloInteger(ver, 100) / 10)
-            string s3 = String.char2(ModuloInteger(ver, 10))
+            string s3 = String.char2(ModuloInteger(ver, 100))
             return s1 + "." + s2 + s3
         }
 
