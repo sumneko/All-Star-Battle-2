@@ -521,7 +521,7 @@ library defineLibrary
         bool = boolean
     }
 
-    #define RELEASE //内测版本请将此行注释
+    //#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -5633,7 +5633,7 @@ library effectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=223
+//TESH.scrollpos=39
 //TESH.alwaysfold=0
 library soundLibrary initializer Init needs baseLibrary
     struct Sound

@@ -1231,3 +1231,10 @@ ftat=Abilities\Weapons\ZigguratFrostMissile\ZigguratFrostMissile.mdl
 ftac=2
 fta0=foot,left
 fta1=foot,right
+[B04G:Basl]
+fube=该单位的攻击速度和移动速度降低了。
+ftat=
+fart=ReplaceableTextures\CommandButtons\BTNNecromancerAdept.blp
+ftip=|cff00ff00元素配置|r
+frac=nightelf
+fnsf= (BUFF)
