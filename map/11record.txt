@@ -1441,7 +1441,19 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;上彬绘梨衣;
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;琪诺露;
+		
+
+		//安兹
+		皮肤=A112
+		前缀=|cFF66FFFFOverlord·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
 		
 
 /*未实装
