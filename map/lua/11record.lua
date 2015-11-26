@@ -480,6 +480,10 @@
 							
 							event('-玩家离开', f)
 
+							if #data.gold == 0 then
+								return
+							end
+
 							--有玩家在5分钟内退出
 							if timer.time() - time < 300 then
 								local count = p:getRecord(data['信使'])
@@ -829,6 +833,10 @@
 										
 										event('-玩家离开', f)
 
+										if #data.gold == 0 then
+											return
+										end
+										
 										--有玩家在5分钟内退出
 										if timer.time() - time < 300 then
 											local count = p:getRecord(data['皮肤'])
