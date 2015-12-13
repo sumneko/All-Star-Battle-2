@@ -2975,7 +2975,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=468
+//TESH.scrollpos=844
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
