@@ -433,7 +433,7 @@
 			
 			--检查是不是小号
 			if not is_main then
-				if player.self:getRecord '局数' == 1 then
+				if player.self:getRecord '局数' <= 1 then
 					cmd.maid_chat(player.self, '主人您居然开小号虐菜!')
 					cmd.maid_chat(player.self, '主人您的大号是 [' .. name .. '] 没错吧~')
 				else
@@ -627,11 +627,13 @@
 	end
 
 	event('积分同步完成', function(this)
-		if this.player:getRecord '局数' == 1 and this.player:getRecord '节操' == 0 then
+		if this.player:getRecord '局数' <= 1 and this.player:getRecord '节操' == 0 then
 			this.player:setRecord('节操', 1000)
-			this.player:maid_chat '主人,您是第一次玩这张地图,送您1000节操哦~'
-			timer.wait(1, function()
-				this.player:maid_chat '什么?你是被清了积分?不要在意这种细节嘛...'
+			timer.wait(3, function()
+				this.player:maid_chat '主人,您是第一次玩这张地图,送您1000节操哦~'
+				timer.wait(1, function()
+					this.player:maid_chat '什么?你是被清了积分?不要在意这种细节嘛...'
+				end)
 			end)
 		end
 	end)
