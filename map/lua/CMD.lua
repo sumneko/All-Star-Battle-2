@@ -380,3 +380,10 @@
 	function cmd.god_mode(p)
 		p.god_mode = true
 	end
+
+	--智能施法
+	function cmd.smart_cast(p)
+		if p == player.self then
+			require 'lua\\smart_cast.lua'
+		end
+	end
