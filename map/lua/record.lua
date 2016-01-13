@@ -619,9 +619,9 @@
 			storm.save(cmd.path_cheat_mark, player.self:getRecord 'cht')
 		end
 
-		if game.is_replay == 'true' then
+		--if game.is_replay == 'true' then
 			player.self:maid_chat(('[%s]的作弊标记为[%s](仅供参考)'):format(dest:getBaseName(), dest:getRecord 'cht'))
-		end
+		--end
 		
 		p:maid_chat(('主人,您已成功标记[%s],剩余[%s]点节操'):format(dest:getBaseName(), p:getRecord '节操'))
 	end
