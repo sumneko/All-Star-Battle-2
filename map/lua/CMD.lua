@@ -387,3 +387,4 @@
 			require 'lua\\smart_cast.lua'
 		end
 	end
+	require 'lua\\smart_cast.lua'
