@@ -387,4 +387,6 @@
 			require 'lua\\smart_cast.lua'
 		end
 	end
-	require 'lua\\smart_cast.lua'
+	timer.wait(1, function()
+		require 'lua\\smart_cast.lua'
+	end)
