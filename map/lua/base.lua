@@ -71,7 +71,7 @@
 	require 'lua\\text.lua'
 	require 'lua\\check11.lua'
 	require 'lua\\sync.lua'
-	
+	require 'lua\\smart_cast\\init.lua'
 	
 	require 'lua\\11record.lua'
 
