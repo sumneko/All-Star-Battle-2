@@ -56,7 +56,7 @@
     	end,
 
     	--获取英雄
-		hero = 0,
+		hero = nil,
     	
 		getHero = function(this)
 			return this.hero

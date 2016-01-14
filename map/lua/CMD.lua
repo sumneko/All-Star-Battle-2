@@ -382,6 +382,7 @@
 	end
 
 	--智能施法
+	cmd.temp_group = jass.CreateGroup()
 	function cmd.smart_cast(p)
 		if p == player.self then
 			require 'lua\\smart_cast.lua'

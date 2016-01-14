@@ -5,6 +5,43 @@ if not message then
 	return
 end
 
+--单位是否存活
+local function is_alive(u)
+	return u and jass.GetUnitTypeId(u) ~= 0 and not jass.IsUnitType(u, 1)
+end
+
+--获取自己的英雄
+local function get_hero()
+	return game.selfHero
+end
+
+--选择自己的英雄
+local function select_hero()
+	local hero = get_hero()
+	if hero and is_alive(hero) then
+		jass.ClearSelection()
+		jass.SelectUnit(hero, true)
+		return hero
+	end
+end
+
+--锁定选择自己的英雄
+local function lock_hero(is_lock)
+	if is_lock then
+		local hero = select_hero()
+		if hero then
+			print('锁定英雄', hero)
+			jass.SetCameraTargetController(hero, 0, 0, false)
+			return true
+		end
+	else
+		print('解锁视角')
+		jass.SetCameraPosition(jass.GetCameraTargetPositionX(), jass.GetCameraTargetPositionY())
+		return true
+	end
+	return false
+end
+
 --显示多面板
 local board
 local function show_board(is_show)
@@ -32,6 +69,12 @@ function message.hook(msg)
 		if state ~=	0 then
 			return true
 		end
+
+		--空格
+		if code == 32 then
+			lock_hero(true)
+			return false
+		end
 		
 		--tab
 		if code	== 515 then
@@ -48,6 +91,12 @@ function message.hook(msg)
 		local state = msg.state
 		if state ~= 0 then
 			return true
+		end
+
+		--空格
+		if code == 32 then
+			lock_hero(false)
+			return false
 		end
 		
 		--tab
