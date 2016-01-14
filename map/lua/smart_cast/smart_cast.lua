@@ -5,6 +5,11 @@ if not message then
 	return
 end
 
+local order = require 'lua\\smart_cast\\order.lua'
+
+--显示本地消息(开销较高,正式版要注释掉)
+message.order_enable_debug()
+
 --单位是否存活
 local function is_alive(u)
 	return u and jass.GetUnitTypeId(u) ~= 0 and not jass.IsUnitType(u, 1)
