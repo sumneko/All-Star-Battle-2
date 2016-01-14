@@ -1,5 +1,6 @@
 --智能施法
-cmd.temp_group = jass.CreateGroup()
+sc = {}
+
 function cmd.smart_cast(p)
 	if p == player.self then
 		require 'lua\\smart_cast\\smart_cast.lua'
