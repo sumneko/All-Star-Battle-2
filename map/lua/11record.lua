@@ -532,6 +532,9 @@
 										return
 									end
 
+									if this.text:sub(1, 1) == '#' then
+										this.text = this.text:sub(2, -1)
+									end
 									local n = tonumber(this.text)
 									if n then
 										--检查是否有该套餐
@@ -889,7 +892,9 @@
 												if timer.time() > 300 then
 													return
 												end
-												
+												if this.text:sub(1, 1) == '#' then
+													this.text = this.text:sub(2, -1)
+												end
 												local n = tonumber(this.text)
 												if n then
 													--检查是否有该套餐
