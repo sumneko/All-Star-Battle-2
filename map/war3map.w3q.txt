@@ -36,8 +36,8 @@ gar1[10]=ReplaceableTextures\CommandButtons\BTNStoneArchitecture.blp
 greq[2]=
 greq[3]=
 [Robs]
-gba1=0.2000
-gmo1=0.2000
+gba1=0.3000
+gmo1=0.3000
 gba2=8.0000
 gmo2=8.0000
 grac=human
@@ -122,8 +122,8 @@ gub1[2]=
 [Rhri]
 gef1=ratt
 gef2=rhpx
-gmo2=200.0000
-gba2=200.0000
+gmo2=300.0000
+gba2=300.0000
 gnam[1]=超级兵升级
 glvl=10
 gnam[2]=坦克升级

@@ -433,7 +433,7 @@
 			
 			--检查是不是小号
 			if not is_main then
-				if player.self:getRecord '局数' == 0 then
+				if player.self:getRecord '局数' <= 1 then
 					cmd.maid_chat(player.self, '主人您居然开小号虐菜!')
 					cmd.maid_chat(player.self, '主人您的大号是 [' .. name .. '] 没错吧~')
 				else
@@ -504,9 +504,9 @@
 		if x and y and y > 10 and x / y > 2 then
 			--判定为碾压
 			if jc['收益'] > 1 and player.self:getTeam() == tid then
-				local debuff	= math.ceil((jc['收益'] - 1) * 2 * n)
-				local n 		= n - debuff
-				cmd.maid_chat(p, ('主人,您受到了 %d 点节操的特殊惩罚,实际获得的节操为 %d 点'):format(debuff, n))
+				--local debuff	= math.ceil((jc['收益'] - 1) * 2 * n)
+				--local n 		= n - debuff
+				--cmd.maid_chat(p, ('主人,您受到了 %d 点节操的特殊惩罚,实际获得的节操为 %d 点'):format(debuff, n))
 			elseif jc['收益'] < 1 and player.self:getTeam() ~= tid then
 				local buff	= math.ceil((1 - jc['收益']) * 5 * n)
 				local n		= n + buff
@@ -619,9 +619,21 @@
 			storm.save(cmd.path_cheat_mark, player.self:getRecord 'cht')
 		end
 
-		if game.is_replay == 'true' then
+		--if game.is_replay == 'true' then
 			player.self:maid_chat(('[%s]的作弊标记为[%s](仅供参考)'):format(dest:getBaseName(), dest:getRecord 'cht'))
-		end
+		--end
 		
 		p:maid_chat(('主人,您已成功标记[%s],剩余[%s]点节操'):format(dest:getBaseName(), p:getRecord '节操'))
 	end
+
+	event('积分同步完成', function(this)
+		if this.player:getRecord '局数' <= 1 and this.player:getRecord '节操' == 0 then
+			this.player:setRecord('节操', 1000)
+			timer.wait(3, function()
+				this.player:maid_chat '主人,您是第一次玩这张地图,送您1000节操哦~'
+				timer.wait(1, function()
+					this.player:maid_chat '什么?你是被清了积分?不要在意这种细节嘛...'
+				end)
+			end)
+		end
+	end)

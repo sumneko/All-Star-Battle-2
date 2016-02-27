@@ -1231,3 +1231,22 @@ ftat=Abilities\Weapons\ZigguratFrostMissile\ZigguratFrostMissile.mdl
 ftac=2
 fta0=foot,left
 fta1=foot,right
+[B04G:Basl]
+fube=该单位的攻击速度和移动速度降低了。
+ftat=
+fart=ReplaceableTextures\CommandButtons\BTNNecromancerAdept.blp
+ftip=|cff00ff00元素配置|r
+frac=nightelf
+fnsf= (BUFF)
+[B04H:Basl]
+fube=该单位受到了减速。
+ftat=
+fart=button\BTN_U2_R.blp
+ftip=胧天震
+fnsf= (减速)
+[B04I:Basl]
+fube=该单位心跳加速中，使用[瞬间移动]可以移动更远距离，但是也会消耗更多魔法值。
+ftat=
+fart=ReplaceableTextures\CommandButtons\BTNFeedBack.blp
+ftip=心跳加速
+fnsf=
