@@ -45,7 +45,7 @@
         樱逝夕颜=|cffffcc00[|cFFFFCC66远离尘世の理想乡|cffffcc00]|r
 
     //又是送妹子的
-    	疯狂妮妮=|cffff83fa[色情女主播]|r
+    	疯狂妮妮=|cffff83fa[天才援交少女]|r
 
 		
 	==特殊信使==
@@ -955,7 +955,7 @@
 
 		//赤瞳
 		皮肤=A0VC
-		前缀=|cffff1111夜袭|r
+		前缀=|cffff1111夜袭·|r
 		说明=
 		价格=
 		变身特效=war3mapImported\Fire Aura.mdl
@@ -976,6 +976,20 @@
 
 	     	//贴吧抽奖 3.0大版本
 	     	名字=极限xxj;
+
+			
+
+		//赤瞳 暗部
+		皮肤=A115
+		前缀=|cffff1111暗部·|r
+		说明=
+		价格=
+		变身特效=war3mapImported\Fire Aura.mdl
+		特效点=origin
+		特效时间=0.5
+		变身动画=attack
+		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;小奏Angel;
 
 		
 		//圆神
@@ -1432,6 +1446,18 @@
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
 		
 
+		//夕立
+		皮肤=A116
+		前缀=|cFF66FFFF舰队Collection·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;风起炎舞;
+		
+
 		//黑子 泳装
 		皮肤=A10Z
 		前缀=|cFF66FFFF泳装·|r 
@@ -1453,7 +1479,23 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
+<<<<<<< HEAD
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;bb杀了你00;
+=======
+		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;
+
+		
+		//由乃 泳装
+		皮肤=A117
+		前缀=|cFF66FFFF泳装·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=小爱不是处;LemonHunter;最萌小汐;WorldEdit;梦之祈语;
+>>>>>>> HF_Ver
 		
 
 /*未实装
@@ -1542,18 +1584,6 @@
 		变身动画=morph
 		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;月丶魔理莎;
 
-		
-		//由乃 泳装
-		皮肤=
-		前缀=|cFF66FFFF泳装·|r 
-		说明=
-		价格=
-		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
-		特效点=origin
-		特效时间=1
-		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐;WorldEdit;刀藤丨绮凛;梦之祈语;
-
 		*/
 
 	==英雄台词==
@@ -1624,4 +1654,4 @@
 		//注册方法:单机激活权限后输入 .set 0 flag 1
 		//别忘了 .save
 
-		名字=s芙兰朵露z;小爱不是处;LemonHunter;最萌小汐
+		名字=
