@@ -29,8 +29,8 @@ library LuaLibrary initializer Init
     }
 
     private void Init(){
-        Cheat("exec-lua:lua\\runtime.lua")
-        Cheat("exec-lua:lua\\base.lua")
+        Cheat("exec-lua:lua\\runtime")
+        Cheat("exec-lua:lua\\base")
 
         trigger trg = CreateTrigger()
         int i = 0
