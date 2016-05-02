@@ -59,24 +59,24 @@
 		}
     )
 
-    require 'lua\\time.lua'
-	require 'lua\\util.lua'
-	require 'lua\\dump.lua'
-	require 'lua\\event.lua'
-	require 'lua\\table.lua'
-	require 'lua\\timer.lua'
-	require 'lua\\player.lua'
-	require 'lua\\cmd.lua'
-	require 'lua\\game.lua'
-	require 'lua\\text.lua'
-	require 'lua\\check11.lua'
-	require 'lua\\sync.lua'
+    require 'lua\\time'
+	require 'lua\\util'
+	require 'lua\\dump'
+	require 'lua\\event'
+	require 'lua\\table'
+	require 'lua\\timer'
+	require 'lua\\player'
+	require 'lua\\cmd'
+	require 'lua\\game'
+	require 'lua\\text'
+	require 'lua\\check11'
+	require 'lua\\sync'
 	
 	
-	require 'lua\\11record.lua'
+	require 'lua\\11record'
 
-	require 'lua\\record.lua'
-	require 'lua\\hot_fix.lua'
+	require 'lua\\record'
+	require 'lua\\hot_fix'
 
-	require 'lua\\hook.lua'
-	require 'lua\\debug.lua'
+	require 'lua\\hook'
+	require 'lua\\debug'
