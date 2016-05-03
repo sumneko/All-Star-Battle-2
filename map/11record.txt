@@ -816,7 +816,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
 
 			
 		//夜夜 Special
@@ -1151,7 +1151,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;小奏Angel;叁刖柒汐
+		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;小奏Angel;叁刖柒汐
 
 		
 		//圆神
@@ -1677,7 +1677,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;风起炎舞;
+		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;风起炎舞;
 		
                 //圣诞抽奖
 		名字=特洛伊专用;h149455;马鹿紫;丿鸢一折纸;千叶龙之介;林斯奥德;藤田修平;单马尾萝莉丶;江户丨r瑶;
@@ -1719,7 +1719,18 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;梦之祈语;
+		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;梦之祈语;
+
+		//狂三 吊带袜
+		皮肤=A11A
+		前缀=|cFF66FFFF吊带袜·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\mr.war3_hbfw_white.mdx
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;幻0风;
 		
 
 /*未实装

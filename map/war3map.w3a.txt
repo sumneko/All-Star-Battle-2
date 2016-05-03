@@ -37568,3 +37568,15 @@ Ncl2[1]=1
 Ncl1[1]=0.0000
 amat=abilities\weapons\catapult\catapultmissile.mdl
 ansf=通魔
+[A11A:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=H00N
+Eme1[1]=H01V
+ansf=狂三 吊带袜
+arac=orc
+aher=0
+anam=皮肤
