@@ -239,8 +239,8 @@
 					table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
 				elseif count ~= 0 then
 					table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
-				elseif cmd.ver_name == '2.8E' then
-					table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
+				elseif p.all_model then
+					table.insert(texts, ('\n|cffffcc00本地文件验证成功\n\n点击使用该皮肤|r'))
 				elseif game.messenger_all_free then
 					table.insert(texts, ('\n|cffffcc00信使皮肤全开放!\n\n点击使用该皮肤|r'))
 				elseif data.free then
@@ -698,8 +698,8 @@
 						table.insert(texts, ('\n|cffffcc00无限使用!\n\n点击使用该皮肤|r'))
 					elseif count ~= 0 then
 						table.insert(texts, ('\n|cffffcc00您当前拥有 %d 次使用权\n\n点击使用该皮肤|r'):format(count))
-					elseif cmd.ver_name == '2.8E' then
-						table.insert(texts, ('\n|cffffcc00恭贺新春,心想事成!\n\n点击使用该皮肤|r'))
+					elseif p.all_model then
+						table.insert(texts, ('\n|cffffcc00本地文件验证成功\n\n点击使用该皮肤|r'))
 					elseif game.hero_all_free then
 						table.insert(texts, ('\n|cffffcc00英雄皮肤全开放!\n\n点击使用该皮肤|r'))
 					elseif data.free then
@@ -1046,23 +1046,17 @@
 			p:maid_chat(('您已成功领取了 %d 点节操奖励,总节操 %d 点!'):format(reward, jc))
 		end
 	)
-
-	--特殊账号
-	event('积分同步完成',
-		function(this)
-			if ex_names[this.player:getBaseName()] and this.player:getRecord('flag') == 0 then
-				timer.wait(5,
-					function()
-						jass.SetPlayerState(this.player.handle, jass.PLAYER_STATE_OBSERVER, 1)
-						this.player:maid_chat(('#%d 号玩家因为冒充 %s 而被禁止游戏'):format(this.player:get(), this.player:getBaseName()))
-						timer.loop(10,
-							function()
-								jass.SetPlayerState(this.player.handle, jass.PLAYER_STATE_OBSERVER, 1)
-								this.player:maid_chat(('你因为冒充 %s 而被禁止游戏'):format(this.player:getBaseName()))
-							end
-						)
+	event('确定游戏版本', function()
+		-- 验证本地文件
+		local sign = storm.load(cmd.dir_dynamic .. 'sign') or ''
+		for i = 1, 10 do
+			local p = player[i]
+			if p:isPlayer() then
+				p:syncText({sign = sign}, function(data)
+					if jass.StringHash(data.sign) == -563631457 then
+						p.all_model = true
 					end
-				)
+				end)
 			end
 		end
-	)
+	end)

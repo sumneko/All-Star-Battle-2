@@ -91,7 +91,7 @@
 
 			//皮肤无限使用权
 
-			名字=小爱不是处;TakanashiRikka
+			名字=
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的女儿
@@ -147,7 +147,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=WuKong.blp
 			技能=被动
 			标题=特殊信使
@@ -178,7 +178,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处喵;TakanashiRikka;最萌小汐
+			名字=小爱不是处喵;
 			图标=button\BTNXS_U_9.blp
 			技能=被动
 			标题=特殊信使
@@ -216,13 +216,13 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=最萌小汐
+			名字=
 			图标=button\BTNXS_U_saber.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r的专属信使
 			内容=筒隐月子俺嫁,萝莉后宫万岁!
 
-			名字=小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTNXS_U_saber.blp
 			技能=被动
 			标题=特殊信使
@@ -260,13 +260,13 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=WorldEdit
+			名字=
 			图标=war3mapImported\btntemp.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r,测试辛苦了!
 			内容=无聊的时候就逗逗裂魂人玩吧~
 
-			名字=小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=ReplaceableTextures\CommandButtons\BTNSpiritWalker.blp
 			技能=被动
 			标题=特殊信使
@@ -304,7 +304,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTNXS_U_YUI.blp
 			技能=被动
 			标题=特殊信使
@@ -342,7 +342,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTNXS_U_LD.blp
 			技能=被动
 			标题=特殊信使
@@ -373,7 +373,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTNXS_U_ZM.blp
 			技能=被动
 			标题=特殊信使
@@ -412,7 +412,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处;TakanashiRikka;最萌小汐
+			名字=我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -437,7 +437,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_Gundam.blp
 			技能=被动
 			标题=特殊信使
@@ -475,7 +475,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_Vya.blp
 			技能=被动
 			标题=特殊信使
@@ -513,7 +513,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐野良神彡
+			名字=最萌小汐野良神彡
 			图标=button\BTN_XS_Zombie.blp
 			技能=被动
 			标题=特殊信使
@@ -544,7 +544,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_Konata.blp
 			技能=被动
 			标题=特殊信使
@@ -582,7 +582,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
@@ -614,7 +614,7 @@
 
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_Teemo.blp
 			技能=被动
 			标题=特殊信使
@@ -646,7 +646,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_OldTeemo.blp
 			技能=被动
 			标题=特殊信使
@@ -684,7 +684,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐
+			名字=
 			图标=button\BTN_XS_DYCX.blp.blp
 			技能=被动
 			标题=特殊信使
@@ -723,7 +723,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;刀藤丨绮凛
+			名字=
 			图标=button\BTN_XS_BFXJ.blp
 			技能=被动
 			标题=特殊信使
@@ -755,7 +755,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=小爱不是处;TakanashiRikka;最萌小汐;s芙兰朵露z;刀藤丨绮凛;冢耶舞莉;亚里亚;
+		名字=冢耶舞莉;亚里亚;
 		
                 //圣诞抽奖
 		名字=绯色菠萝;Remilia茶;我有原罪;biluohuang;花名木;樱川丶未央;博丽神社巫女;
@@ -769,7 +769,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;s芙兰朵露z;刀藤丨绮凛;
+		名字=
 
 		//清明比赛补档 3.0小版本
 		名字=种菜的大叔;
@@ -787,7 +787,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;萌萌阿泽君;风起炎舞;叁刖柒汐
+		名字=萌萌阿泽君;风起炎舞;叁刖柒汐
                 
                 //圣诞抽奖
 		名字=特洛伊专用; 虾米三文治;青血羽;Remilia茶;默默默229;风见一姬丨;樱田茜;Ms灬丿童话;星伽白雪;小五萝莉喵;鼬仰望那天;阎魔丨小爱;
@@ -801,7 +801,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=命当;或守丿鞠亚;一攻一受;中二暴走的;Hagikaze;自律性马机;
@@ -816,7 +816,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 			
 		//夜夜 Special
@@ -829,7 +829,7 @@
 		特效时间=0.5
 		变身动画=morph alternate
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;绯色菠萝;龌龊的秃子;丨薛定谔的;
+		名字=绯色菠萝;龌龊的秃子;丨薛定谔的;
 
 		//清明比赛补档 3.0大版本
 		名字=丶五月星空;
@@ -846,7 +846,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=刀藤丨绮凛;s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
+		名字=;月丶魔理莎;抱腿蕾米莉亚;双马尾萝莉
 
 		//圣诞抽奖
         名字=氵____乌龟;o80899;bifishhead;秋天的奶糖;丶水树琉璃;或守丿鞠亚;jofan1019;乙坂步未;八神疾风;一方通行;存在的忘记了;小小瘦子酱;柒染夜;ads730681;
@@ -861,7 +861,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=马鹿紫;或守丿鞠亚;魂魂魂墓;龌龊的秃子;八神疾风;帕秋莉;残夜之光1;悲伤落幕9;欺诈者丶灼;魔法海螺;
@@ -875,7 +875,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 		
                 //圣诞抽奖
 		名字=邪阳妖月;新手喵喵哒;z135936;真红帝白协奏曲;梦之祈语;艾斯特;乙坂丨步未;我有原罪;八神疾风;藤田修平;冰狩星陨;栗沫;
@@ -889,7 +889,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		    //清明比赛补档 3.0大版本
 		    名字=emiya桐子;
@@ -906,7 +906,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=绯色菠萝;彡朝田诗乃;绯樱灬;邪阳妖月;新手喵喵哒;天野雪輝;氵下面真凉;神级推土;I关闭l;萌狼爱尾巴;乙坂丨步未;单马尾萝莉丶;樱川丶未央;
@@ -920,7 +920,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
       
                 //圣诞抽奖
 		名字=重生光环|;z135936;jofan1019;萌狼爱尾巴;叫我兔兔姐;
@@ -934,7 +934,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;s芙兰朵露z;WorldEdit;刀藤丨绮凛
+		名字=
 
                 //圣诞抽奖
 		名字=萝莉麦丘利;智障咸鱼渣;彡朝田诗乃;命当;萌狼爱尾巴;小奏Angel;
@@ -948,7 +948,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//清明比赛补档 3.0大版本
 		名字=冰封泪殇;
@@ -965,7 +965,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+		名字=
 
                 //圣诞抽奖
 		名字=克丽丝;小夜十六夜;白发天使;CLANNAD_殇;I关闭l;矢野艾莉卡;艾斯特;纸色茉莉;中二暴走的;我不是大灰;夜空下樱花;ads730681;自律性马机;
@@ -991,7 +991,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=白发天使;绯樱灬;炎发Saber;一方通行;红之蝶;小小瘦子酱;部落战争0;
@@ -1005,7 +1005,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//清明比赛补档 3.0小版本
 		名字=氵____乌龟;
@@ -1022,7 +1022,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;和平的螺莉;
+		名字=和平的螺莉;
 
 		//3.0小版本
 		名字=始源乔治;
@@ -1039,7 +1039,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 		
 		//圣诞抽奖
 		名字=矢野艾莉卡;艾斯特;红叶未颜;
@@ -1053,7 +1053,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+		名字=
 
 	
 		//狗剪
@@ -1065,7 +1065,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;梦之祈语;夏阁艾狄剑;Chok丶Rs
+		名字=梦之祈语;夏阁艾狄剑;Chok丶Rs
 
 		//清明比赛补档 3.0小版本
 		名字=一色彩羽;
@@ -1082,7 +1082,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		
 
@@ -1095,7 +1095,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
+		名字=丶夏_娜;双马尾萝莉;Angel_真白;手机上夜班
 		
 		//圣诞抽奖
 		名字=李舜生丿;夜刀十神香;萝莉控之魂;水树琉璃;
@@ -1109,7 +1109,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=S丶a_魅姬;	丶水树琉璃;白鹿爱莉;幻羽星魂;Sylvanas癫疯;艾丽奥诺拉丨;西园寺筑紫;花名木;宠物小菲特;红叶未颜;
@@ -1124,7 +1124,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;神级推土;我妻桃子;
+		名字=神级推土;我妻桃子;
 
 			//送给某妹子的
 			名字=乙坂丨步未
@@ -1151,7 +1151,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;小奏Angel;叁刖柒汐
+		名字=小奏Angel;叁刖柒汐
 
 		
 		//圆神
@@ -1163,7 +1163,7 @@
 		特效点=
 		特效时间=0.5
 		变身动画=Spell Three
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//清明比赛补档 3.0大版本
 		名字=彼岸的樱花;
@@ -1180,7 +1180,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+		名字=
 
                 //圣诞抽奖
 		名字=我死定了;虾米三文治;马鹿紫;致丶安心院;天野雪輝;真红帝白协奏曲;I关闭l;户川汐音;驱逐舰晓改;寒诗易水;栗沫;
@@ -1194,7 +1194,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=修罗妖翼;白发天使;易推的萝莉;葳蕤一季;龌龊的秃子;Ms灬丿童话;黑化若雪;水树琉璃;宫圆薰;欺诈者丶灼;土御门十四;
@@ -1209,7 +1209,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//3.0大版本
 		名字=Re丿佐佐木;
@@ -1226,7 +1226,7 @@
 //		特效点=origin
 //		特效时间=0.5
 //		变身动画=morph
-//		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+//		名字=
 
 
 		//阿露蒂娜
@@ -1238,7 +1238,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;蕾蒂|斯卡;朝田诗乃;
+		名字=蕾蒂|斯卡;朝田诗乃;
 
 		//圣诞抽奖
 		名字=致丶安心院;CLANNAD_殇;工口大猩猩;残夜之光1;桉璃i;此生无悔入东方;大情圣伊藤诚
@@ -1252,7 +1252,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//圣诞抽奖
 		名字=丿鸢一折纸;命当;走位如疯;龙丶领域;工口大猩猩;神乐莹;吾妻灬夏娜;土御门十四;
@@ -1266,7 +1266,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//清明比赛补档 3.0大版本
 		名字=吾妻夏娜;
@@ -1280,7 +1280,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+		名字=
 
                 //圣诞抽奖
 		名字=萝莉麦丘利;一只蕾咪球;真白抱枕;邪阳妖月;h149455;重生光环|;新手喵喵哒;虾米三文治;或守丿鞠亚;乙坂步未;艾斯特;工口大猩猩;乙坂丨步未;月丶魔理莎;红之蝶;艾丽奥诺拉丨;存在的忘记了;倾城壹平;龙套路过;
@@ -1295,7 +1295,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+		名字=
 
 		//清明比赛补档 3.0小版本
 		名字=狱门幻流;
@@ -1312,7 +1312,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
 		//清明比赛补档 3.0小版本
 		名字=丿_着迷;
@@ -1329,7 +1329,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛
+		名字=
 
 		//圣诞抽奖
 		名字=萝莉麦丘利;克丽丝;	黄金支配;验证码t236;本城百合;黑铁一辉;aaa1313364;勿忘本心i;迭夜;一色彩羽;雨月夜痕;水树琉璃;
@@ -1343,7 +1343,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;Aki|
+		名字=Aki|
 
 		//圣诞抽奖
 		名字=s洛可可z;白鹿爱莉;我有原罪;月丶魔理莎;粉色的萝莉;
@@ -1357,7 +1357,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;万条小三;
+		名字=万条小三;
 
 		    //贴吧国庆比赛奖励 3.0大版本
 		    名字=黑雪姬______;枪樱姬;艾丽奥诺拉;氵____乌龟
@@ -1374,7 +1374,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;真白抱枕;
+		名字=真白抱枕;
 		
                 //圣诞抽奖
 		名字=永远是一只菜鸟;小夜十六夜;丶水树琉璃;马鹿紫;致丶安心院;乙坂步未;樱田茜;华城凌女;黑铁一辉;月丶魔理莎;时崎l狂三;bakasu酱;友利奈绪;
@@ -1388,7 +1388,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
                 //圣诞抽奖
 		名字=修罗妖翼;inorte;氵下面真凉;biluohuang;勿忘本心i;长歌公主;和平的螺莉;bakasu酱;红之蝶;叫我兔兔姐;ads730681;三无ilem;
@@ -1402,7 +1402,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
                 //圣诞抽奖
 		名字=永远是一只菜鸟;木崎真昼;CLANNAD_殇;夜刀十神香;驱逐舰响改;白板路人王;欺诈者丶灼;
@@ -1416,7 +1416,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
                 //圣诞抽奖
 		名字=西瓜丶布丁;邪阳妖月;樱田茜;神级推土;萌狼爱尾巴;黄金支配;小奏Angel;纸色茉莉;一色彩羽;断月之弦;宫圆薰;丿游灬;
@@ -1430,7 +1430,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;白鹿爱莉;本城百合;
+		名字=白鹿爱莉;本城百合;
 		
                 //圣诞抽奖
 		名字=白发天使;虾米三文治;或守丿鞠亚;CLANNAD_殇;白板路人王;西格x图纳;吾妻灬夏娜;大情圣伊藤诚;
@@ -1444,7 +1444,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;暴击型KLD;
+		名字=暴击型KLD;
 		
                 //圣诞抽奖
 		名字=bifishhead;斯巴达们;天野雪輝;绯樱筱萌灬;乙坂丨步未;丿游灬;墨尘飞血;
@@ -1458,7 +1458,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;神级推土;
+		名字=神级推土;
 		
         //圣诞抽奖
 		名字=零丶_L;手拽杀猪刀;黑崎理香;挣扎的抉择;氵下面真凉;乙坂步未;无敌板凳丶;堕一D神;月丶魔理莎;一方通行;星伽白雪;夜幕灬红尘;天使罪翼;
@@ -1472,7 +1472,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;神级推土;驱逐舰响改;
+		名字=神级推土;驱逐舰响改;
 		
 		//圣诞抽奖
 		名字=红之蝶;Main帝罪;死库水;迭夜;一颗螺丝;
@@ -1486,7 +1486,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;幻0风;
+		名字=幻0风;
 		
                 //圣诞抽奖
 		名字=零丶_L;绯樱灬;无敌板凳丶;堕一D神;Ms灬丿童话;纸色茉莉;叫我兔兔姐;中二暴走的;
@@ -1500,7 +1500,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;凝梦i;
+		名字=凝梦i;
 		
                 //圣诞抽奖
 		名字=西瓜丶布丁;一只蕾咪球;永远是一只菜鸟;默默默229;挣扎的抉择;堕一D神;花名木;
@@ -1514,7 +1514,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 		
                 //圣诞抽奖
 		名字=h149455;S丶a_魅姬;染血人偶使;默默默229;龙丶领域;龙胆琉璃;天使罪翼;西格x图纳;水树琉璃;小元和小素;嗯魔法师;
@@ -1528,7 +1528,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 		
                 //圣诞抽奖
 		名字=inorte;白发天使;琪露诺;乙坂丨步未;时崎l狂三;Ms灬丿童话;凝梦i;死库水;鼬仰望那天;我不是大灰;宫内莲华酱;ads730681;
@@ -1543,7 +1543,7 @@
 		特效时间=1
 		变身动画=morph
 		技能图标=A067-BTNYaya_Q.blp;AOws-BTNYaya_W.blp;A0W3-BTNYaya_E.blp;A06I-BTNYaya_R.blp;A0I0-BTNYaya_R.blp;A06A-BTNYaya_D.blp
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;此生无悔入;
+		名字=此生无悔入;
 		
 		//微博抽奖 3.0小版本
 		名字=华城凌女;
@@ -1560,7 +1560,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞
+		名字=风起炎舞
 		
                 //圣诞抽奖
 		名字=俸禄;伊吹库特;白发天使;彡朝田诗乃;无头龟龟;真红帝白协奏曲;工口大猩猩;TheNull;紫妈万万岁;樱川丶未央;柒染夜;部落战争0; 
@@ -1574,7 +1574,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;牛头一户
+		名字=牛头一户
 
 		//贴吧抽奖 3.0小版本
 		名字=Sora灬娜;
@@ -1591,7 +1591,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;凝梦i
+		名字=凝梦i
 		
                 //圣诞抽奖
 		名字=萝莉麦丘利;西瓜丶布丁;手拽杀猪刀;孔明killed;夜刀十神香;aaa1313364;时崎l狂三;艾丽奥诺拉丨;我不是大灰;悲伤落幕9;
@@ -1605,7 +1605,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;凝梦i
+		名字=凝梦i
 		//贡献奖励
 		名字=幻0风
 		
@@ -1621,7 +1621,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;幻0风
+		名字=幻0风
 		
                 //圣诞抽奖
 		名字=零丶_L;青血羽;地狱委托;CLANNAD_殇;I关闭l;乙坂丨步未;勿忘本心i;月丶魔理莎;小元和小素;我不是大灰;
@@ -1635,7 +1635,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 		
                 //圣诞抽奖
 		名字=修罗妖翼;神级推土;艾斯特;单马尾萝莉丶;冰狩星陨;
@@ -1649,7 +1649,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 	 
                 //圣诞抽奖
 		名字=智障咸鱼渣;永远是一只菜鸟;	孤独蝶羽7;重生光环|;秋天的奶糖;丿雪灬辉;驱逐舰晓改;
@@ -1663,7 +1663,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
                 //圣诞抽奖
 		名字=邪阳妖月;秋天的奶糖;致丶安心院;龙丶领域;本城百合;矢野艾莉卡;红色的萝莉;驱逐舰响改;biluohuang;aaa1313364;艾丽奥诺拉丨;白板路人王;Hagikaze;三无ilem;土御门十四;
@@ -1677,7 +1677,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;风起炎舞;
+		名字=风起炎舞;
 		
                 //圣诞抽奖
 		名字=特洛伊专用;h149455;马鹿紫;丿鸢一折纸;千叶龙之介;林斯奥德;藤田修平;单马尾萝莉丶;江户丨r瑶;
@@ -1691,7 +1691,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;琪诺露;
+		名字=琪诺露;
 		
                 //圣诞抽奖
 		名字=萝莉麦丘利;李舜生丿;绯樱灬;Samele丶黑奈;神级推土;艾斯特;乙坂丨步未;吾妻灬夏娜;红叶未颜;
@@ -1705,7 +1705,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;
+		名字=
 
                 //圣诞抽奖
 		名字=萝莉麦丘利;西瓜丶布丁;绯色菠萝;智障咸鱼渣;野良神彡;氵下面真凉;古明地恋;aaa1313364;犯罪系数;bakasu酱;死库水;丿雪灬辉;	
@@ -1719,7 +1719,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;梦之祈语;
+		名字=梦之祈语;
 
 		//狂三 吊带袜
 		皮肤=A11A
@@ -1730,7 +1730,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;幻0风;
+		名字=幻0风;
 		
 
 /*未实装
@@ -1745,7 +1745,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
 
 		//蒂法 泳装
@@ -1757,7 +1757,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
 
 		//阿露蒂娜 泳装
@@ -1769,7 +1769,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
 
 		//灵梦 泳装
@@ -1781,7 +1781,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
 
 		//十香 泳装
@@ -1793,7 +1793,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;风起炎舞;
+		名字=风起炎舞;
 		
                 //圣诞抽奖
 		名字=走位如疯;染血人偶使;樱田茜;Hagikaze;栗沫;我不是大灰;
@@ -1807,7 +1807,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;双马尾萝莉;
+		名字=双马尾萝莉;
 		
 
 		//夏野姬 泳装
@@ -1819,7 +1819,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=s芙兰朵露z;小爱不是处;TakanashiRikka;最萌小汐;WorldEdit;刀藤丨绮凛;月丶魔理莎;
+		名字=月丶魔理莎;
 
 		*/
 
@@ -1891,4 +1891,4 @@
 		//注册方法:单机激活权限后输入 .set 0 flag 1
 		//别忘了 .save
 
-		名字=小爱不是处
+		名字=
