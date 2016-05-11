@@ -407,7 +407,7 @@
 					p.messenger_type	= data.uid
 
 					--保存到jass中
-					jass.udg_danwei[328]	= u
+					globals.udg_temp = u
 
 					--添加特殊技能
 					local pid		= p:get()

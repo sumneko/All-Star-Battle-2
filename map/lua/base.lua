@@ -6,12 +6,16 @@ storm = require 'jass.storm'
 console = require 'jass.console'
 globals = require 'jass.globals'
 
---debug.sethook(function ()
---	local info = debug.getinfo(2)
---	if info then
---		print('call', 'name:', info.name, 'namewhat:', info.namewhat, 'source:', info.source, 'currentline', info.currentline)
---	end
---end, 'c')
+debug.sethook(function ()
+	local info = debug.getinfo(2)
+	if info then
+		print('call', 'name:', info.name, 'source:', info.source, 'currentline', info.currentline)
+	end
+	local info = debug.getinfo(3)
+	if info then
+		print('trace', 'name:', info.name, 'source:', info.source, 'currentline', info.currentline)
+	end
+end, 'c')
 
 
 --拆解table
