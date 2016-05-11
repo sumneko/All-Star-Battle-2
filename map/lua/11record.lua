@@ -188,7 +188,7 @@
 	end
 	
 	function cmd.get_messenger_type(p)
-		jass.udg_Lua_integer = p.messenger_type or ('n008'):toid()
+		globals.udg_Lua_integer = p.messenger_type or ('n008'):toid()
 	end
 
 	function cmd.set_messenger_text(p, u)

@@ -47,7 +47,7 @@
 		end
 		local f_name = words[1]
 		if f_name and cmd[f_name] then
-			words[1] = player.j_player(jass.Lua_player)
+			words[1] = player.j_player(globals.Lua_player)
 			cmd[f_name](unpack(words))
 		end
 	end

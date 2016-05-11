@@ -41,7 +41,7 @@
 	record.my_record	= {}
 
 	function cmd.getRecord(p, name)
-		jass.udg_Lua_integer	= p:getRecord(name)
+		globals.udg_Lua_integer	= p:getRecord(name)
 	end
 
 	function player.__index.getRecord(this, name)
@@ -497,9 +497,9 @@
 		--检查特殊奖惩
 		local x, y
 		if tid == 0 then
-			x, y = jass.udg_FS, jass.udg_FSDL
+			x, y = globals.udg_FS, globals.udg_FSDL
 		else
-			x, y = jass.udg_FSDL, jass.udg_FS
+			x, y = globals.udg_FSDL, globals.udg_FS
 		end
 		if x and y and y > 10 and x / y > 2 then
 			--判定为碾压

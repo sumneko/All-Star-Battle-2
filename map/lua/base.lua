@@ -4,6 +4,15 @@ slk = require 'jass.slk'
 hook = require 'jass.hook'
 storm = require 'jass.storm'
 console = require 'jass.console'
+globals = require 'jass.globals'
+
+debug.sethook(function ()
+	local info = debug.getinfo(2)
+	if info then
+		print('call', 'name:', info.name, 'namewhat:', info.namewhat, 'source:', info.source, 'currentline', info.currentline)
+	end
+end, 'c')
+
 
 --拆解table
 local function sub(t)
