@@ -26,8 +26,8 @@
 		return ('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890/*-+=,.<>\\|[]{};:!@#$%^&()'):sub(i, i)
 	end
 
-	function cmd.setGC(player, gc)
-		local i = player:get()
+	function cmd.setGC(p, gc)
+		local i = p:get()
 		record[i] = gc
 		player[i].record = record[i]
 		player[i].record_data = {}
