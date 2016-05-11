@@ -26,14 +26,15 @@
 		return ('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890/*-+=,.<>\\|[]{};:!@#$%^&()'):sub(i, i)
 	end
 
-	function cmd.initRecord()
-		for i = 1, 16 do
-			record[i] = jass.GC[i - 1]
-			player[i].record = record[i]
-			player[i].record_data = {}
-			record[record[i]]	= player[i]
-		end
+	function cmd.setGC(player, gc)
+		local i = player:get()
+		record[i] = gc
+		player[i].record = record[i]
+		player[i].record_data = {}
+		record[record[i]] = player[i]
+	end
 
+	function cmd.initRecord()
 		event('注册积分', {})
 	end
 
