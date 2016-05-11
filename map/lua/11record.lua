@@ -500,7 +500,7 @@
 				--确认是否能直接使用
 				if data.names[p:getBaseName()] then
 					change()
-				elseif cmd.ver_name == '2.8E' then
+				elseif p.all_model then
 					change()
 				elseif game.messenger_all_free then
 					change()
@@ -856,7 +856,7 @@
 							--确认是否能直接使用
 							if data.names[p:getBaseName()] then
 								change()
-							elseif cmd.ver_name == '2.8E' then
+							elseif p.all_model then
 								change()
 							elseif game.hero_all_free then
 								change()
