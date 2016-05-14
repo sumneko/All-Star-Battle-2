@@ -1,5 +1,5 @@
     
-    jass.hasLua = true
+    globals.hasLua = true
     
     cmd.main()
     

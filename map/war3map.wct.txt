@@ -29,8 +29,8 @@ library LuaLibrary initializer Init
     }
 
     private void Init(){
-        Cheat("exec-lua:lua\\runtime.lua")
-        Cheat("exec-lua:lua\\base.lua")
+        Cheat("exec-lua:lua\\runtime")
+        Cheat("exec-lua:lua\\base")
 
         trigger trg = CreateTrigger()
         int i = 0
@@ -1412,6 +1412,7 @@ define{
 			else
 				set GC[i]=InitGameCache("11SAV@"+I2S2(i))
 			endif
+			call Lua_hook(Player(i),"setGC "+I2S(GetHandleId(GC[i])))
 			call TriggerRegisterPlayerChatEvent(trg,Player(i),"",false)
 			set i=i+1
 		endloop
@@ -42633,6 +42634,12 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
 ########
 ########
 
