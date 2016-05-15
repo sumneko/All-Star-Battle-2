@@ -26,14 +26,15 @@
 		return ('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890/*-+=,.<>\\|[]{};:!@#$%^&()'):sub(i, i)
 	end
 
-	function cmd.initRecord()
-		for i = 1, 16 do
-			record[i] = jass.GC[i - 1]
-			player[i].record = record[i]
-			player[i].record_data = {}
-			record[record[i]]	= player[i]
-		end
+	function cmd.setGC(p, gc)
+		local i = p:get()
+		record[i] = gc
+		player[i].record = record[i]
+		player[i].record_data = {}
+		record[record[i]] = player[i]
+	end
 
+	function cmd.initRecord()
 		event('注册积分', {})
 	end
 
@@ -41,7 +42,7 @@
 	record.my_record	= {}
 
 	function cmd.getRecord(p, name)
-		jass.udg_Lua_integer	= p:getRecord(name)
+		globals.udg_Lua_integer	= p:getRecord(name)
 	end
 
 	function player.__index.getRecord(this, name)
@@ -497,9 +498,9 @@
 		--检查特殊奖惩
 		local x, y
 		if tid == 0 then
-			x, y = jass.udg_FS, jass.udg_FSDL
+			x, y = globals.udg_FS, globals.udg_FSDL
 		else
-			x, y = jass.udg_FSDL, jass.udg_FS
+			x, y = globals.udg_FSDL, globals.udg_FS
 		end
 		if x and y and y > 10 and x / y > 2 then
 			--判定为碾压

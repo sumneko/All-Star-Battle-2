@@ -9,7 +9,7 @@
 	function sync.init()
 		sync.gc		= jass.InitGameCache 'U'
 		--将缓存文件保存给jass
-		jass.s__sys_GC	= sync.gc
+		globals.s__sys_GC	= sync.gc
 		sync.using	= {} --记录正在使用的
 		sync.str	= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
 		sync.len	= #sync.str

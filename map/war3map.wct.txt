@@ -1412,6 +1412,7 @@ define{
 			else
 				set GC[i]=InitGameCache("11SAV@"+I2S2(i))
 			endif
+			call Lua_hook(Player(i),"setGC "+I2S(GetHandleId(GC[i])))
 			call TriggerRegisterPlayerChatEvent(trg,Player(i),"",false)
 			set i=i+1
 		endloop
@@ -3865,7 +3866,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=237
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 

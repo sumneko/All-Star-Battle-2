@@ -188,7 +188,7 @@
 	end
 	
 	function cmd.get_messenger_type(p)
-		jass.udg_Lua_integer = p.messenger_type or |n008|
+		globals.udg_Lua_integer = p.messenger_type or ('n008'):toid()
 	end
 
 	function cmd.set_messenger_text(p, u)
@@ -407,7 +407,7 @@
 					p.messenger_type	= data.uid
 
 					--保存到jass中
-					jass.udg_danwei[328]	= u
+					globals.udg_temp = u
 
 					--添加特殊技能
 					local pid		= p:get()
@@ -500,7 +500,7 @@
 				--确认是否能直接使用
 				if data.names[p:getBaseName()] then
 					change()
-				elseif cmd.ver_name == '2.8E' then
+				elseif p.all_model then
 					change()
 				elseif game.messenger_all_free then
 					change()
@@ -856,7 +856,7 @@
 							--确认是否能直接使用
 							if data.names[p:getBaseName()] then
 								change()
-							elseif cmd.ver_name == '2.8E' then
+							elseif p.all_model then
 								change()
 							elseif game.hero_all_free then
 								change()
