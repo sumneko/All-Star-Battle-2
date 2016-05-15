@@ -37545,9 +37545,9 @@ aart=ReplaceableTextures\CommandButtons\BTNBlink.blp
 ahky=D
 abpx=2
 abpy=1
-abuf[1]=
 acdn[1]=0.0000
 amcs[1]=25
+ansf=狂战士
 [A119:ANcl]
 anam=|cffaaaaff相斥冲击|r
 aeat=
