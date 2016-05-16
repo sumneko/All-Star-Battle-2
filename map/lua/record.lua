@@ -427,7 +427,7 @@
 				end
 				if x ~= 1 then
 					cmd.maid_chat(player.self, '主人呀,对面差你们太多了吧')
-					cmd.maid_chat(player.self, ('本局的节操收益只有%d%%了哟'):format(100 * x))
+					cmd.maid_chat(player.self, ('本局的节操收益只有%.f%%了哟'):format(100 * x))
 					jc['收益'] = jc['收益'] * x
 				end
 			end
