@@ -12,7 +12,7 @@
                 s芙兰朵露z=|cffff00ff[永远の二妹]|r
                 藤原_妹红_=|cffff9933[凤舞天，翼盘旋★月球上不死之烟]|r
                 moon_shin=|cffffcc00[全明星の模型师]|r
-                小爱不是处=|cffff00ff[现在不是本人在玩]|cFFFFADE6
+                小爱不是处=|cffff00ff[现在不是本人在玩，我是真白抱枕]|cFFFFADE6
                 TakanashiRikka=|cFFFF93FF[邪|cFFFFA8EB王|cFFFFBCD6真|cFFFFD1C2眼]|cFF66FFFF
 
         //测试奖励 3.0小版本
