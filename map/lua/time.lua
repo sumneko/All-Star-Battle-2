@@ -48,7 +48,7 @@
 			if mn > 1e2 then
 				table.remove(time.times, mi)
 			else
-				time.now_time = math.ave(table.unpack(time.times))
+				time.now_time = math.floor(math.ave(table.unpack(time.times)))
 				time.now_date = os.date('%Y年%m月%d日%H:%M:%S', time.now_time)
 				break
 			end
