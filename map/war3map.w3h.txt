@@ -10,8 +10,8 @@ fta1=chest
 [BHds]
 ftat=
 fart=ReplaceableTextures\CommandButtons\BTNLightningShield.blp
-ftip=伤害矢量反射
 fube=能反射任何伤害
+ftip=伤害矢量反射
 [BHtc]
 fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
 ftip=震晕
@@ -1250,3 +1250,10 @@ ftat=
 fart=ReplaceableTextures\CommandButtons\BTNFeedBack.blp
 ftip=心跳加速
 fnsf=
+[B04J:BHds]
+ftat=war3mapImported\butter two.MDX
+ftip=格挡技巧
+fube=该目标可以对对其造成伤害的英雄进行反击。
+fnsf=(BUFF)
+fta0=
+fart=button\BTN_yomi_W.blp

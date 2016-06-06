@@ -3866,7 +3866,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=237
+//TESH.scrollpos=1428
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -42634,6 +42634,48 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
