@@ -39,8 +39,7 @@
 	end
 
 	--cmd指令接口
-	function cmd.start()
-		local str = jass.GetPlayerName(jass.Player(12))
+	function cmd.start(str)
 		local words = {}
 		for word in str:gmatch('%S+') do
 			table.insert(words, word)

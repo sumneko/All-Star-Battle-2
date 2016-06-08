@@ -18,8 +18,7 @@ library LuaLibrary initializer Init
 
     void Lua_hook(player p, string s){
         Lua_player = p
-        SetPlayerName(Player(12), s)
-        SetUnitRescueRange(null, 23333)
+        CopySaveGame(s, null)
     }
 
     void Lua_chat(){
