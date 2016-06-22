@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=403
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -432,6 +432,8 @@ endlibrary
 	hero_types[41] = 'H00R'
     hero_types[42] = 'H00S'
 	hero_types[45] = 'H01G'
+    hero_types[43] = 'H00W'
+    hero_types[47] = 'H01W'
     --新英雄在此注册
 
     --英雄介绍模板
@@ -3865,7 +3867,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=1428
+//TESH.scrollpos=141
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -6851,7 +6853,10 @@ endlibrary
 
 ########
 ########
-//TESH.scrollpos=0
+
+########
+########
+//TESH.scrollpos=60
 //TESH.alwaysfold=0
 function SelectTerrainTypeA_1 takes nothing returns nothing
 	if udg_tempPlayer != GetLocalPlayer() then
@@ -42633,6 +42638,18 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
