@@ -114,9 +114,9 @@
 					if s then
 						local num = string.sub(te, s, e)
                         if te:sub(s - 9, s - 9) == '+' then
-                            te = string.sub(te, 1, s - 10) .. "(+%d)" .. string.sub(te, e + 1, -1)
+                            te = string.sub(te, 1, s - 10) .. "(+%.f)" .. string.sub(te, e + 1, -1)
                         else
-                            te = string.sub(te, 1, s - 9) .. "%d" .. string.sub(te, e + 1, -1)
+                            te = string.sub(te, 1, s - 9) .. "%.f" .. string.sub(te, e + 1, -1)
                         end
 						table.insert(t, func)
 						table.insert(t, num)
