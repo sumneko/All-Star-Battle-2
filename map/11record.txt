@@ -16,7 +16,7 @@
                 TakanashiRikka=|cFFFF93FF[邪|cFFFFA8EB王|cFFFFBCD6真|cFFFFD1C2眼]|cFF66FFFF
 
         //赞助奖励 3.1
-        紫店丨意识=|#FF00FF[全明星第一上单]|r
+        紫店丨意识=|cffff00ff[全明星第一上单]|r
         
 
         
