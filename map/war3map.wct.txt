@@ -45931,7 +45931,7 @@ endfunction
 
                     local funcs = {}
 
-                    content = content:gsub('function (%S+)( takes%C+)(.-)endfunction',
+                    content = content:gsub('function (Trig_%S+)( takes%C+)(.-)endfunction',
                         function(name, l, s)
                             funcs[name] = {
                                 name = name, --名字
