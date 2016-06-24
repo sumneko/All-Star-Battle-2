@@ -411,7 +411,7 @@
 						return
 					end
 
-					funcs.states	= {}
+					funcs.states	= function_state[trigger_type] or {}
 					funcs.trigger_type	= trigger_type
 					function_state[trigger_type]	= funcs.states
 
