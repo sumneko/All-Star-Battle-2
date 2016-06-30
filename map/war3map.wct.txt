@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=403
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -787,7 +787,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=673
+//TESH.scrollpos=511
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -1503,7 +1503,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=287
+//TESH.scrollpos=1002
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2977,7 +2977,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=839
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -45863,7 +45863,7 @@ endfunction
 ?>
 ########
 ########
-//TESH.scrollpos=644
+//TESH.scrollpos=50
 //TESH.alwaysfold=0
 
 <?
@@ -46791,5 +46791,17 @@ endfunction
         end
     )
 
+?>
+########
+########
+//TESH.scrollpos=0
+//TESH.alwaysfold=0
+<?
+
+    --将所有的换行符修改为 \r\n 格式
+    update('war3map.j', function(content)
+        return content:gsub('%c+', '\r\n')
+    end)
+    
 ?>
 ########
