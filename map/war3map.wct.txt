@@ -522,7 +522,7 @@ library defineLibrary
         bool = boolean
     }
 
-    #define RELEASE //内测版本请将此行注释
+    //#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -6833,6 +6833,9 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
 ########
 ########
 
@@ -45931,7 +45934,7 @@ endfunction
 
                     local funcs = {}
 
-                    content = content:gsub('function (%S+)( takes%C+)(.-)endfunction',
+                    content = content:gsub('function (Trig_%S+)( takes%C+)(.-)endfunction',
                         function(name, l, s)
                             funcs[name] = {
                                 name = name, --名字

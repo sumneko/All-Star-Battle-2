@@ -177,6 +177,7 @@ local function main()
 	w3x2txt.readMeta(meta_path / 'upgrademetadata.slk')
 
 	--读取函数
+	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'japi' / 'ui' / 'TriggerData.txt')
 	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'allstar' / 'ui' / 'TriggerData.txt')
 	
 	local fname
