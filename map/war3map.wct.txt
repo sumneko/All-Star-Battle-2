@@ -2711,7 +2711,7 @@ library mathLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=26
 //TESH.alwaysfold=0
 library stringLibrary initializer Init needs baseLibrary
 
@@ -5635,7 +5635,7 @@ library effectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=39
+//TESH.scrollpos=162
 //TESH.alwaysfold=0
 library soundLibrary initializer Init needs baseLibrary
     struct Sound
@@ -5794,26 +5794,29 @@ library soundLibrary initializer Init needs baseLibrary
         /*
         单位回应
         */
+        private static int guid
+        private static int grestype
+        private static string gfiles
         
-        static void InitUnitResponses(int uid, int restype, string files){
+        static void InitUnitResponses_Execute(){
             int key
-            if restype == 1 then
+            if grestype == 1 then
                 key = StringHash("选中回应")
-            elseif restype == 2 then
+            elseif grestype == 2 then
                 key = StringHash("移动回应")
-            elseif restype == 3 then
+            elseif grestype == 3 then
                 key = StringHash("攻击回应")
             endif
             
-            int count = String.Split(files, ";")
-            SaveInteger(YDHT, uid, key, count)
+            int count = String.Split(gfiles, ";")
+            SaveInteger(YDHT, guid, key, count)
             
             sound snd
             
             int i = 1
             loop
                 exitwhen i > count
-                SaveStr(YDHT, uid, key + i, String.GetStr(i))
+                SaveStr(YDHT, guid, key + i, String.GetStr(i))
                 
                 //预播放
                 snd = CreateSound(String.GetStr(i), false, false, false, 10, 10, "HeroAcksEAX")
@@ -5824,6 +5827,18 @@ library soundLibrary initializer Init needs baseLibrary
             endloop
             
             snd = null
+        }
+        
+        static void InitUnitResponses(int uid, int restype, string files){
+            guid = uid
+            grestype = restype
+            gfiles = files
+            
+            trigger trg = CreateTrigger()
+            TriggerAddAction(trg, function Sound.InitUnitResponses_Execute)
+            TriggerExecute(trg)
+            DestroyTrigger(trg)
+            trg = null
         }
         
         static real last_UnitResponseTime[]
