@@ -81,7 +81,7 @@
 
 			//皮肤无限使用权
 
-			名字=小爱不是处
+			名字=小爱不是处;夜空下樱花
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r小爱不是处的女儿
@@ -572,7 +572,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处；聆听丶黑夜
+			名字=小爱不是处;聆听丶黑夜
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
