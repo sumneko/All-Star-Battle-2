@@ -84,7 +84,7 @@
 			名字=小爱不是处
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
-			标题=|cffffcc00%player_name%|r的女儿
+			标题=|cffffcc00%player_name%|r小爱不是处的女儿
 			内容=么么哒
 
 		//皮卡丘	n01J
@@ -572,7 +572,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=小爱不是处
+			名字=小爱不是处；聆听丶黑夜
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
@@ -745,7 +745,7 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=冢耶舞莉;亚里亚;
+		名字=冢耶舞莉;亚里亚;只喝妹汁;夜空下樱花
 		
                 //圣诞抽奖
 		名字=
@@ -777,7 +777,7 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=萌萌阿泽君;风起炎舞;叁刖柒汐；
+		名字=萌萌阿泽君;风起炎舞;叁刖柒汐；夜空下樱花
                 
                 //圣诞抽奖
 		名字=
@@ -1139,7 +1139,7 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=小奏Angel;叁刖柒汐;
+		名字=小奏Angel;叁刖柒汐;抹茶少女甜如蜜i
 
 		
 		//圆神
@@ -1361,7 +1361,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=真白抱枕;
+		名字=真白抱枕;刀藤绮凛丶
 		
                 //圣诞抽奖
 		名字=
@@ -1677,7 +1677,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=琪诺露;
+		名字=琪诺露;M丨天
 		
                 //圣诞抽奖
 		名字=
