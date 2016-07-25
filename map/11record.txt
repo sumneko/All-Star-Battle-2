@@ -16,9 +16,12 @@
                 TakanashiRikka=|cFFFF93FF[邪|cFFFFA8EB王|cFFFFBCD6真|cFFFFD1C2眼]|cFF66FFFF
 
         //2016暑假荣誉之战冠军
-        夜空下樱花=|cff80ffff[xxxxxxxxxx]|r
-        
-
+        夜空下樱花=|cff80ffff[杀戮心灵之欲丶]|r
+        M丨天=|cffc205fa[撕碎次元之欲丶]|r
+        刀藤绮凛丶=|cffff80c0[划破天际之欲丶]|r
+        最爱荡漾=|cffff0000[挂破天机之欲丶]|r
+        聆听丶黑夜=|cff000000[吞噬梦境之欲丶]|r
+        只喝妹汁=|cfff709a9[我叫藤林杏丶]|r
         
         //圣诞抽奖
         
