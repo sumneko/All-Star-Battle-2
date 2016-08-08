@@ -48,7 +48,18 @@ AttackAverage=0.8
 
 [TWN2]
 XPFactor=0.00,0
+DependencyOr=hkee,ostr,etoa,unp1
 
 [TWN3]
 XPFactor=0.00,0
+DependencyOr=hcas,ofrt,etoe,unp2
+
+[HERO]
+DependencyOr=Hamg,Hblm,Hmkg,Hpal,Obla,Ofar,Oshd,Otch,Edem,Ekee,Emoo,Ewar,Ucrl,Udea,Udre,Ulic,Npbm,Nbrn,Nngs,Nplh,Nbst,Nalc,Ntin,Nfir
+
+[TALT]
+DependencyOr=halt,oalt,eate,uaod
+
+[TWN1]
+DependencyOr=htow,ogre,etol,unpl
 
