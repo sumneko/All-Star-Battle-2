@@ -83,6 +83,10 @@ fnsf= (一律使用该BUFF)
 fnsf= (不要使用该BUFF)
 [BNms]
 ftip=月耀环盾
+[BHab]
+fube=该单位被桐人标记
+ftip=剑气斩
+fart=ReplaceableTextures\CommandButtons\tongrenE.blp
 [CHUNK]
 [B000:BHds]
 fnam=神圣之力
@@ -1261,3 +1265,10 @@ ftac=1
 ftat=
 fta1=
 fta0=origin
+[B04K:BHab]
+ftat=
+ftip=魔剑·改
+fube=攻击力减少段数增加
+fart=ReplaceableTextures\CommandButtons\tongrenR.blp
+fnam=魔剑·改
+fnsf=R

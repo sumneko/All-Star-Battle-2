@@ -431,7 +431,7 @@ endlibrary
 	hero_types[40] = 'H00Q'
 	hero_types[41] = 'H00R'
     hero_types[42] = 'H00S'
-	hero_types[45] = 'H01G'
+	hero_types[45] = 'H000'
     hero_types[43] = 'H00W'
     hero_types[47] = 'H01W'
     --新英雄在此注册
@@ -2788,7 +2788,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=147
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary, YDWEBase
 
@@ -3867,7 +3867,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=141
+//TESH.scrollpos=1274
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -6547,9 +6547,6 @@ debug@      endif
 endlibrary
 ########
 ########
-
-########
-########
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
 #define SetMapDescription(s) SetMapDescription(s) YDNL call PlayMusic("LoadingMusic.mp3")
@@ -6693,7 +6690,13 @@ endlibrary
 
 ########
 ########
-//TESH.scrollpos=113
+
+########
+########
+
+########
+########
+//TESH.scrollpos=98
 //TESH.alwaysfold=0
 library AIlibrary initializer Init needs baseLibrary
 
@@ -42549,7 +42552,13 @@ endfunction
 
 ########
 ########
-//TESH.scrollpos=0
+
+########
+########
+
+########
+########
+//TESH.scrollpos=24
 //TESH.alwaysfold=0
 function Trig________________uActions takes nothing returns nothing
     set udg_pp[1] = 'A0Z2'
@@ -42656,6 +42665,75 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
