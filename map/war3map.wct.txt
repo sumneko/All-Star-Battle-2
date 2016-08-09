@@ -45941,6 +45941,7 @@ endfunction
 <?
     update('war3map.j',
         function(content)
+            local clock = os.clock()
             content = content:gsub('StringHash%(%s-%"(.-)%"%s-%)',
                 function(s)
                     if not s:match('"') then
@@ -45948,7 +45949,8 @@ endfunction
                     end
                 end
             )
-
+            
+            io.save(fs.ydwe_path() / "logs" / "静态哈希时间", os.clock() - clock)
             return content
         end
     )
@@ -45956,7 +45958,7 @@ endfunction
 ?>
 ########
 ########
-//TESH.scrollpos=50
+//TESH.scrollpos=768
 //TESH.alwaysfold=0
 
 <?
@@ -46781,6 +46783,7 @@ endfunction
     --静态命令字符
     update('war3map.j',
         function(content)
+            local clock = os.clock()
             content = content:gsub('String2OrderIdBJ%(%s-%"(%a+)%"%s-%)',
                 function(s)
                     return order2id[s]
@@ -46792,7 +46795,8 @@ endfunction
                     return order2id[s]
                 end
             )
-
+            
+            io.save(fs.ydwe_path() / "logs" / "静态命令字符时间", os.clock() - clock)
             return content
         end
     )
@@ -46805,9 +46809,11 @@ endfunction
 
     update('war3map.j',
         function(content)
+            local clock = os.clock()
             content = content:gsub('== true', '')
             content = content:gsub('else[%c%s]+endif', 'endif')
-
+            
+            io.save(fs.ydwe_path() / "logs" / "优化脚本时间", os.clock() - clock)
             return content
         end
     )
@@ -46821,12 +46827,14 @@ endfunction
 
     update('war3map.j',
         function(content)
+            local clock = os.clock()
             content = content:gsub('Save%a-Handle%((%C-), null%)',
                 function(s)
                     return ('RemoveSavedHandle(%s)'):format(s)
                 end
             )
-
+            
+            io.save(fs.ydwe_path() / "logs" / "哈希表保存null时间", os.clock() - clock)
             return content
         end
     )
@@ -46843,6 +46851,7 @@ endfunction
     ----脚本中所有的__MAP_VER_NAME__标记
     update('war3map.j',
         function(content)
+            local clock = os.clock()
             local char_name = content:match([[SetMapName%( "TRIGSTR_(.-)" %)]])
 
             --版本号文本的字符串id
@@ -46878,7 +46887,8 @@ endfunction
 
             --修改地图中所有的__MAP_VER_NAME__标记
             content = content:gsub('__MAP_VER_NAME__', ver_name)
-
+            
+            io.save(fs.ydwe_path() / "logs" / "自动版本号时间", os.clock() - clock)
             return content
 
         end
@@ -46893,7 +46903,10 @@ endfunction
 
     --将所有的换行符修改为 \r\n 格式
     update('war3map.j', function(content)
-        return content:gsub('%c+', '\r\n')
+        local clock = os.clock()
+        local content = content:gsub('%c+', '\r\n')
+        io.save(fs.ydwe_path() / "logs" / "修改换行符时间", os.clock() - clock)
+        return content
     end)
     
 ?>
