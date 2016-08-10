@@ -147,8 +147,8 @@
 		--读取本地积分
 		local text	= storm.load(cmd.dir_record .. record.local_save_name)
 			or storm.load(cmd.dir_record .. record.local_save_name_old) 
-		local local_record	= table.new(0)
 		if text and player.self:isPlayer() then
+		local local_record	= {}
 			--读取加密部分
 			local content	= text:match '#start#(.+)#end#'
 			if content then
@@ -160,7 +160,7 @@
 					end
 					
 					--对比2边的局数
-					if local_record['局数'] > player.self:getRecord '局数' then
+					if local_record['局数'] and local_record['局数'] > player.self:getRecord '局数' then
 						--恢复积分
 						for _, name in ipairs(local_record) do
 							player.self:setRecord(name, local_record[name])
