@@ -573,6 +573,7 @@ endlibrary
 library baseLibrary initializer Init needs LuaLibrary
 
     bool hasLua = false
+    bool KoreanVer = false
 
     struct sys
         static bool JAPI = false
@@ -787,7 +788,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=511
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -2977,7 +2978,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=839
+//TESH.scrollpos=848
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -42665,6 +42666,15 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
