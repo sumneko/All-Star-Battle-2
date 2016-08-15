@@ -573,7 +573,7 @@ endlibrary
 library baseLibrary initializer Init needs LuaLibrary
 
     bool hasLua = false
-    bool KoreanVer = false
+    bool KoreanVer = true
 
     struct sys
         static bool JAPI = false
