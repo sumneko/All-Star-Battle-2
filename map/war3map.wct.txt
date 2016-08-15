@@ -522,7 +522,7 @@ library defineLibrary
         bool = boolean
     }
 
-    //#define RELEASE //内测版本请将此行注释
+#define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -5939,7 +5939,7 @@ library soundLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=126
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary, processLibrary
     struct test
@@ -42624,7 +42624,7 @@ endfunction
 
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=4
 //TESH.alwaysfold=0
 function Trig______________CJBZConditions takes nothing returns boolean
     return test.Enable
@@ -42665,27 +42665,6 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
 ########
 ########
 
