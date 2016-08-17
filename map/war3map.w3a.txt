@@ -38713,3 +38713,15 @@ ansf=炮姐（外套）
 arac=orc
 aher=0
 anam=皮肤
+[A12D:AEme]
+acdn[1]=0.0000
+adur[1]=0.0000
+ahdu[1]=0.0000
+amcs[1]=0
+Eme5[1]=0.0000
+Emeu[1]=H00R
+Eme1[1]=H01Z
+ansf=缇娜 雷姬
+arac=orc
+aher=0
+anam=皮肤
