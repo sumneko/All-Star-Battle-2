@@ -486,7 +486,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=聆听丶黑夜
+			名字=
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
