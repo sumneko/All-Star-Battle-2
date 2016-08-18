@@ -42625,7 +42625,7 @@ endfunction
 
 ########
 ########
-//TESH.scrollpos=4
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 function Trig______________CJBZConditions takes nothing returns boolean
     return test.Enable

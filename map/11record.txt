@@ -1416,6 +1416,17 @@
 		变身动画=morph
 		名字=幻0风;
 		
+		//缇娜 雷姬
+		皮肤=A12D
+		前缀=|cFF66FFFF雷姬·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=沫沫很聪明;
+		
 
 /*未实装
 
