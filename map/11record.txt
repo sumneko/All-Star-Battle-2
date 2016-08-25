@@ -152,7 +152,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=
+			名字=一只野生9
 			图标=button\BTNXS_U_9.blp
 			技能=被动
 			标题=特殊信使
