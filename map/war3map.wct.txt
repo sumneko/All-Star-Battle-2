@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=407
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -432,7 +432,7 @@ endlibrary
 	hero_types[41] = 'H00R'
     hero_types[42] = 'H00S'
 	hero_types[45] = 'H000'
-    hero_types[43] = 'H00W'
+    hero_types[43] = 'H01Y'
     hero_types[47] = 'H01W'
     --新英雄在此注册
 
@@ -573,6 +573,7 @@ endlibrary
 library baseLibrary initializer Init needs LuaLibrary
 
     bool hasLua = false
+    bool KoreanVer = false
 
     struct sys
         static bool JAPI = false
@@ -787,7 +788,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=511
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -2977,7 +2978,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=839
+//TESH.scrollpos=848
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -5939,7 +5940,7 @@ library soundLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=126
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary, processLibrary
     struct test
@@ -42558,6 +42559,9 @@ endfunction
 
 ########
 ########
+
+########
+########
 //TESH.scrollpos=24
 //TESH.alwaysfold=0
 function Trig________________uActions takes nothing returns nothing
@@ -42624,7 +42628,7 @@ endfunction
 
 ########
 ########
-//TESH.scrollpos=4
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 function Trig______________CJBZConditions takes nothing returns boolean
     return test.Enable
@@ -42665,6 +42669,27 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 

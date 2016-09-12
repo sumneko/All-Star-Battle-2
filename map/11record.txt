@@ -14,7 +14,7 @@
 		moon_shin=|cffffcc00[全明星の模型师]|r
 		TakanashiRikka=|cFFFF93FF[邪|cFFFFA8EB王|cFFFFBCD6真|cFFFFD1C2眼]|cFF66FFFF
 
-	//2016暑假荣誉之战冠军
+	//2016暑假荣誉之战冠军 3.1大版本
 		夜空下樱花=|cff80ffff[杀戮心灵之欲丶]|r
 		M丨天=|cffc205fa[撕碎次元之欲丶]|r
 		刀藤绮凛丶=|cffff80c0[划破天际之欲丶]|r
@@ -23,7 +23,7 @@
 		只喝妹汁=|cfff709a9[我叫藤林杏丶]|r
         
               
-    //天道受1
+    //天道受
 		我妻桃子=|cffffcc00[|cFFFF5020炎发灼眼の讨伐者|cffffcc00]|r
 		艾斯特=|cffffcc00[|cFF38efff魔王剑-Terminus Est Zwei|cffffcc00]|r
 		云雀丘由贵=|cffffcc00[|cFF38efffLost time Memory|cffffcc00]|r
@@ -79,7 +79,7 @@
 
 			//皮肤无限使用权
 
-			名字=夜空下樱花
+			名字=
 			图标=button\BTNBTNXS_U_Riricho.blp
 			技能=被动
 			标题=|cffffcc00%player_name%|r小爱不是处的女儿
@@ -152,7 +152,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=
+			名字=一只野生9
 			图标=button\BTNXS_U_9.blp
 			技能=被动
 			标题=特殊信使
@@ -344,7 +344,7 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇;小爱不是处
+			名字=我妻桃子;户川汐音;空心de木偶;樱逝夕颜;艾斯特;CLANNAD_殇
 			图标=button\you.blp
 			技能=被动
 			标题=特殊信使
@@ -486,11 +486,18 @@
 			内容=该皮肤还剩余 |cffffcc00%messenger_count%|r 次使用次数
 
             //皮肤无限使用权
-			名字=聆听丶黑夜
+			名字=
 			图标=button\BTN_XS_huocairen.blp
 			技能=被动
 			标题=特殊信使
 			内容=火柴人
+
+			//暑假比赛 3.1小版本
+			名字=聆听丶黑夜
+			图标=button\BTN_XS_huocairen.blp
+			技能=被动
+			标题=特殊信使
+			内容=2016年暑假荣誉之战获得的奖励
 
 		//提莫 n029
 
@@ -623,10 +630,10 @@
 		特效时间=0.5
 		变身动画=morph
 		技能图标=A01A-BTNSkill_Saber_Alter_Q.blp;A0E4-BTNSkill_Saber_Alter_Q.blp;A0OD-BTNSkill_Saber_Alter_W.blp;A0GX-BTNSkill_Saber_Alter_E.blp;A03D-BTNSkill_Saber_Alter_R.blp;A0I0-BTNSkill_Saber_Alter_R.blp;AOw2-BTNSkill_Saber_Alter_D.blp
-		名字=冢耶舞莉;亚里亚;只喝妹汁;夜空下樱花
-		
-		   //2016暑假荣誉之战冠军奖励
-		   名字=如流萤乱舞
+		名字=冢耶舞莉;亚里亚;
+
+			//暑假比赛 3.1小版本
+			名字=夜空下樱花;只喝妹汁
 
 		//saber extra
 		皮肤=A0TT
@@ -648,10 +655,13 @@
 		特效点=origin
 		特效时间=0.5
 		变身动画=morph
-		名字=萌萌阿泽君;风起炎舞;叁刖柒汐;夜空下樱花
+		名字=萌萌阿泽君;风起炎舞;
 
-			//暑假比赛
+			//暑假比赛 3.1大版本
 			名字=超鬼君尼嚎
+
+			//录入圣诞抽奖信息奖励 3.1大版本
+			名字=叁刖柒汐;
 			
 		//夏娜 火雾战士
 		皮肤=A0TV
@@ -924,7 +934,13 @@
 		特效时间=0.5
 		变身动画=attack
 		技能图标=AOwk-BTNAkame_Q.blp;A00N-BTNAkame_QQ.blp;A0O0-BTNAkame_W.blp;A0JA-BTNAkame_E.blp;A02V-BTNAkame_R.blp;A092-BTNAkame_D.blp
-		名字=小奏Angel;叁刖柒汐;抹茶少女甜如蜜i
+		名字=小奏Angel;
+
+			//录入圣诞抽奖信息奖励 3.1大版本
+			名字=叁刖柒汐;
+
+			//暑假比赛奖励 3.1小版本
+			名字=抹茶少女甜如蜜i
 
 		//圆神
 		皮肤=A0VF
@@ -1090,7 +1106,10 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=真白抱枕;刀藤绮凛丶
+		名字=真白抱枕;
+
+			//暑假比赛 3.1小版本
+			名字=刀藤绮凛丶
 
 		//赤瞳 泳装
 		皮肤=A0YO
@@ -1125,7 +1144,7 @@
 		变身动画=morph
 		名字=风起炎舞;
 
-			//暑假比赛
+			//暑假比赛 3.1大版本
 			名字=玲於奈
 
 		//姆Q 泳装
@@ -1205,7 +1224,7 @@
 		变身动画=morph
 		名字=
 
-			//暑假比赛
+			//暑假比赛 3.1大版本
 			名字=蕾姆
 
 		//立华奏 天使
@@ -1219,7 +1238,7 @@
 		变身动画=morph
 		名字=
 
-			//暑假比赛
+			//暑假比赛 3.1大版本
 			名字=沫沫很聪明
 
 		//夜夜 泳装
@@ -1267,7 +1286,7 @@
 		变身动画=morph
 		名字=凝梦i;
 
-			//暑假比赛
+			//暑假比赛 3.1大版本
 			名字=枪樱姬
 
 		//水银灯
@@ -1348,7 +1367,10 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=琪诺露;M丨天
+		名字=琪诺露
+
+			//暑假比赛 3.1小版本
+			名字=M丨天
 
 		//安兹
 		皮肤=A112
@@ -1393,6 +1415,17 @@
 		特效时间=1
 		变身动画=morph
 		名字=幻0风;
+		
+		//缇娜 雷姬
+		皮肤=A12D
+		前缀=|cFF66FFFF雷姬·|r 
+		说明=
+		价格=
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=沫沫很聪明;
 		
 
 /*未实装
