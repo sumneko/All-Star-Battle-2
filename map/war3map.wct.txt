@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=439
+//TESH.scrollpos=394
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
