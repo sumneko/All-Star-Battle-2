@@ -2979,13 +2979,13 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=778
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
     //反全图
     struct maphack
-        static bool safe_mode = true //安全模式
+        static bool safe_mode = false //安全模式
 
         static unit heroes[] //英雄
         static int heroCount = 0 //英雄计数
