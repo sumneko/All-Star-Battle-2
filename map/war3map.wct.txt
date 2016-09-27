@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=394
+//TESH.scrollpos=337
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -6698,7 +6698,7 @@ endlibrary
 
 ########
 ########
-//TESH.scrollpos=98
+//TESH.scrollpos=12
 //TESH.alwaysfold=0
 library AIlibrary initializer Init needs baseLibrary
 
@@ -6716,7 +6716,7 @@ library AIlibrary initializer Init needs baseLibrary
         private static int STRUCT = 1
 
         //注册英雄类型
-        static int typeCount = 38 //英雄类型数量
+        static int typeCount = 47 //英雄类型数量
         static int type[] //英雄类型ID
         static void initType() //注册英雄类型,在全局变量 Hero 设置后调用
         {
@@ -6770,7 +6770,7 @@ library AIlibrary initializer Init needs baseLibrary
 
         //创建AI
         unit who //对应的英雄
-        int id //英雄的单位类型[1-38]
+        int id //英雄的单位类型[1-47]
 
         static AI create(unit u) //注册AI
         {
@@ -6853,6 +6853,12 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
 ########
 ########
 
@@ -42560,9 +42566,6 @@ endfunction
 
 ########
 ########
-
-########
-########
 //TESH.scrollpos=24
 //TESH.alwaysfold=0
 function Trig________________uActions takes nothing returns nothing
@@ -42670,15 +42673,6 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
-########
-########
-
-########
-########
-
-########
-########
-
 ########
 ########
 
