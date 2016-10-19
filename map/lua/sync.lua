@@ -42,7 +42,7 @@
 		end
 		local i 	= 0
 		local index = 0
-		for n = 1, 36 do
+		for n = 1, 360 do
 			if not sync.using[n] then
 				sync.using[n]	= data
 				index	= n
@@ -53,7 +53,9 @@
 			error('sync.lua error:Could not find idle index', 2)
 			return
 		end
-		local first	= sync.str:sub(index, index)
+		local x = index % sync.len + 1
+		local y = index // sync.len + 1
+		local first	= sync.str:sub(x, x) .. sync.str:sub(y, y)
 		--print(('sync[%d]: first = %s'):format(p:get(), first))
 		local keys	= {}
 		for name, value in pairs(data) do
