@@ -140,6 +140,7 @@
 		    s = p
 		    p = player.self
 	    end
+	    cmd.log('maid', ('玩家[%s]发送女仆消息[%s]'):format(p:getBaseName(), s))
 	    if p == player.self then
 		    jass.SetPlayerName(jass.Player(12), '|cffff88cc' .. cmd.getMaidName(true) .. '|r')
 	        japi.EXDisplayChat(jass.Player(12), 3, '|cffff88cc' .. s .. '|r')
