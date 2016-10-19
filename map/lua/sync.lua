@@ -56,6 +56,7 @@
 		local x = index % sync.len + 1
 		local y = index // sync.len + 1
 		local first	= sync.str:sub(x, x) .. sync.str:sub(y, y)
+		cmd.log('sync', ('玩家[%s]开始同步整数,使用的同步索引为[%s][%s]'):format(p:getBaseName(), index, first))
 		--print(('sync[%d]: first = %s'):format(p:get(), first))
 		local keys	= {}
 		for name, value in pairs(data) do
@@ -110,10 +111,12 @@
 				sync.using[index]	= nil
 				t:destroy()
 				--同步完成,开始写回数据
+				cmd.log('sync', ('玩家[%s]同步整数完成,使用的同步索引为[%s][%s]'):format(p:getBaseName(), index, first))
 				local data	= {}
 				for i, name in ipairs(keys) do
 					data[name]	= jass.GetStoredInteger(sync.gc, first, sync.getKey(i))
 					--print(('player[%d] synced: %s = %s'):format(p:get(), name, data[name]))
+					cmd.log('sync', ('++\t[%s]=%s'):format(name, data[name]))
 				end
 				--回调数据
 				--print(('Ready Sync: %s\t%s'):format(p:get(), func))
@@ -154,6 +157,8 @@
 			table.insert(ints, int)
 		end
 
+		cmd.log('sync', ('玩家[%s]开始同步文本'):format(p:getBaseName()))
+
 		--先同步长度
 		p:sync(
 			{count = #ints},
@@ -163,6 +168,7 @@
 						ints[i] = 0
 					end
 				end
+				cmd.log('sync', ('玩家[%s]同步文本长度[%s]'):format(p:getBaseName(), data.count))
 				--同步所有的整数
 				p:sync(
 					ints,
@@ -198,11 +204,14 @@
 							return text
 						end
 
+						cmd.log('sync', ('玩家[%s]同步文本内容'):format(p:getBaseName()))
+
 						--循环取出每个key和text
 						for i = 1, text_count do
 							local key	= read(key_lens[i])
 							local text	= read(text_lens[i])
 							data[key]	= text
+							cmd.log('sync', ('++\t[%s]=%s'):format(key, text))
 						end
 
 						if func then
