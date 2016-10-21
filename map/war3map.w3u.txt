@@ -17778,6 +17778,7 @@ uprw=180.0000
 utub=穿梭战场持续打击型（不推荐新手使用）
 uhpr=0.0000
 uhrt=none
+umpi=400
 [e0AL:ewsp]
 unam=翼天使幻影
 umdl=war3mapImported\SanctitudeAngell.mdl
@@ -20516,7 +20517,7 @@ usnd=
 umdl=war3mapImported\Patchouli_Swiimsuit.mdl
 uico=paqiuli.blp
 uhpm=900
-umvs=250
+umvs=300
 upoi=29
 upro=帕秋莉·诺蕾姬,姆Q,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬,帕秋莉·诺蕾姬
 uabi=A0NA,A0F5

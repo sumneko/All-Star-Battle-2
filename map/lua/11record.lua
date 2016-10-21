@@ -367,7 +367,7 @@
 				--使用皮肤
 				local function change()
 					if game.debug or true then
-						local ignore = {'file', 'ScoreScreenIcon', 'Art', 'modelScale', 'scale', 'unitSound', 'EditorSuffix', 'name', 'abilList', 'shadowH', 'death', 'unitShadow', 'shadowW', 'shadowX', 'shadowY', 'Tip', 'Missileart'}
+						local ignore = {'file', 'ScoreScreenIcon', 'Art', 'modelScale', 'scale', 'unitSound', 'EditorSuffix', 'name', 'abilList', 'shadowH', 'death', 'unitShadow', 'shadowW', 'shadowX', 'shadowY', 'Tip', 'Missileart', 'nameCount'}
 						table.back(ignore)
 						local old_id = id2string(jass.GetUnitTypeId(u))
 						for name, value in pairs(slk.unit[data.id]) do
