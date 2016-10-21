@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=337
+//TESH.scrollpos=383
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -423,6 +423,7 @@ endlibrary
 	hero_types[30] = 'Hmbr'
 	hero_types[31] = 'H006'
 	--hero_types[32] = 'H01I'
+    --hero_types[33] = 'H00C'
 	hero_types[34] = 'Udea'
 	hero_types[35] = 'H00J'
 	hero_types[37] = 'H00L'
@@ -432,6 +433,7 @@ endlibrary
 	hero_types[41] = 'H00R'
     hero_types[42] = 'H00S'
     hero_types[43] = 'H01Y'
+    hero_types[44] = 'H021'
 	hero_types[45] = 'H01G'
 	hero_types[46] = 'H01I'
     hero_types[47] = 'H01W'
@@ -523,7 +525,7 @@ library defineLibrary
         bool = boolean
     }
 
-#define RELEASE //内测版本请将此行注释
+// #define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -6853,9 +6855,6 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
-########
-########
-
 ########
 ########
 
@@ -42673,6 +42672,45 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
