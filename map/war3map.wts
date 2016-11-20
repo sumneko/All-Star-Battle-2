@@ -3,6 +3,35 @@ STRING 0
 学习|cff9000ff收割之镰|r(E)
 }
 
+STRING 271
+{
+单机模式下：
+-djcs（单机测试）
+-cxxr (重新选人)
+任意玩家输入：
+-BUG (解除卡死)
+-OB （自由模式下、选择人物前，输入后成为观看者）
+-zs    （自杀）
+-pk -j（邀请PK）（接受PK）
+-gbhy （关闭回应）
+-kqhy （开启回应）
+-cksx(查看属性暴击/命中/闪避)
+}
+
+STRING 314
+{
+提高100点攻击力
+提高力量35点
+提高敏捷15点
+提高智力10点
+提高10.0/s的生命恢复
+|Cff80e000吸血：|r提高20%(近战)/15%(远程)攻击吸血
+|Cffff0000赤化：|r每点力量生命加成减少5点，自身血量越低力量就越高最高叠加40
+|Cffff8000鲜血魔斧：（被动）|r血红魔斧在身边旋转，每次切割造成100点伤害并吸血15点
+|Cff80e000血魔：|r释放后5秒内的5次攻击，增加攻速400%、遭受到攻击敌人进入出血状态（造成攻击伤害的50%物理伤害）
+冷却时间：40秒
+}
+
 STRING 617
 {
 |cff2599cc高阶奥术箭：|r消耗125+5%最大魔法值
@@ -16,6 +45,40 @@ STRING 617
 |cff7575ff奥术攻击：|r攻击附加智力×0.4~0.6的魔法伤害
 |cffaabbff间隔时间：|r1秒
 |cffffcc00智力属性非最高伤害减半|r
+}
+
+STRING 709
+{
+Response\kcwiki\attack\1.mp3;Response\kcwiki\attack\2.mp3;Response\kcwiki\attack\3.mp3;Response\kcwiki\attack\4.mp3;Response\kcwiki\attack\5.mp3;Response\kcwiki\attack\6.mp3;Response\kcwiki\attack\7.mp3;Response\kcwiki\attack\8.mp3;Response\kcwiki\attack\9.mp3;Response\kcwiki\attack\10.mp3;
+}
+
+STRING 712
+{
+Response\kcwiki\move\1.mp3;Response\kcwiki\move\2.mp3;Response\kcwiki\move\3.mp3;Response\kcwiki\move\4.mp3;Response\kcwiki\move\5.mp3;Response\kcwiki\move\6.mp3;Response\kcwiki\move\7.mp3;Response\kcwiki\move\8.mp3;Response\kcwiki\move\9.mp3;Response\kcwiki\move\10.mp3;
+}
+
+STRING 3221
+{
+降低部分技能特效
+降低塔受到攻击增强的防御
+增加分经验时获得的经验
+治愈师：
+死亡时增恢复队友血量
+天使
+天雷光束【RQ】
+雷光风暴【W】
+暗影十六连斩【D】
+以上技能伤害从 （X敏捷） 变为  （X最高属性）
+}
+
+STRING 3749
+{
+全明星战役伤害类型分为四类：
+
+魔法伤害（计算魔抗/无视护甲/无法攻击小精灵/可以攻击虚无单位）
+物理伤害（无视魔抗/计算护甲/可以攻击小精灵/无法攻击虚无单位）
+强化伤害（无视魔抗/无视护甲/可以攻击小精灵/无法攻击虚无单位）
+混乱伤害（无视魔抗/无视算护/无法攻击小精灵/无法攻击虚无单位）
 }
 
 STRING 4809
@@ -361,21 +424,7 @@ STRING 11338
 
 STRING 11339
 {
-|cff00ff00全明星战役|cffffff003.1c
-}
-
-STRING 12208
-{
-提高100点攻击力
-提高力量35点
-提高敏捷15点
-提高智力10点
-提高10.0/s的生命恢复
-|Cff80e000吸血：|r提高20%(近战)/15%(远程)攻击吸血
-|Cffff0000赤化：|r每点力量生命加成减少5点，自身血量越低力量就越高最高叠加40
-|Cffff8000鲜血魔斧：（被动）|r血红魔斧在身边旋转，每次切割造成100点伤害并吸血15点
-|Cff80e000血魔：|r释放后10秒内的5次攻击，增加攻速400%、攻击力增加力量X1
-冷却时间：40秒
+|cff00ff00全明星战役|cffffff003.1d
 }
 
 STRING 12222
