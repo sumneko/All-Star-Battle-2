@@ -15,7 +15,15 @@
 		TakanashiRikka=|cFFFF93FF[邪|cFFFFA8EB王|cFFFFBCD6真|cFFFFD1C2眼]|cFF66FFFF
       //测试奖励
                 A拉垃圾君=|Cff9000FF[打死肉壁]|r
-                无言的约定=|Cff00FFFF[NO.1]|r
+                风起炎舞=|Cff9000FF[全明星第一帅]|r
+                Jw丶上帝=|CffFF8040[专注咸鱼二十年]|r
+                沿路演=|CffFF8040[高手寂寞]|r
+                灬绘梨衣=|CffFF8040[Angel Beats]|r
+                baka樱=|CffFF8040[Dark Flame Master]|r
+                圣斯提亚=|Cff0000FF[吾爱格兰]|r
+                圣斯格兰=|Cff0000FF[吾爱提亚]|r
+                冬绘衣=|CffFFA8FF[绘梨衣我老婆]|r
+
 
 	//2016暑假荣誉之战冠军 3.1大版本
        //夜空下樱花=|cff80ffff[杀戮心灵之欲丶]|r
@@ -24,6 +32,7 @@
 		最爱荡漾=|cffff0000[挂破天机之欲丶]|r
 		聆听丶黑夜=|cff000000[吞噬梦境之欲丶]|r
 		只喝妹汁=|cfff709a9[我叫藤林杏丶]|r
+                
         
               
     //天道受
@@ -1279,7 +1288,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=牛头一户;
+		名字=baka樱;
 
 		//莉莉丝
 		皮肤=A10I
@@ -1357,7 +1366,7 @@
 		皮肤=A116
 		前缀=|cFF66FFFF舰队Collection·|r 
 		说明=
-		价格=
+		价格=1-800;5-1800;25-8500
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=1
@@ -1373,7 +1382,7 @@
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=莉莉露卡厄德;
+		名字=千叶艾莉卡;
 
 			//暑假比赛 3.1小版本
 			名字=M丨天
@@ -1432,6 +1441,28 @@
 		特效时间=1
 		变身动画=morph
 		名字=沫沫很聪明;
+
+		//由乃 Broccoli
+		皮肤=A136
+		前缀=|cFF66FFFFBroccoli·|r 
+		说明=
+		价格=1-800;5-1800;25-8500
+		变身特效=war3mapImported\C2_blackdong.mdl
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=
+
+		//治愈师 MaYu
+		皮肤=A13H
+		前缀=|cFF66FFFFMaYu·|r 
+		说明=
+		价格=1-800;5-1800;25-8500
+		变身特效=
+		特效点=origin
+		特效时间=1
+		变身动画=morph
+		名字=
 		
 
 /*未实装

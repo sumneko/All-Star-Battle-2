@@ -1,3 +1,5 @@
+	local log = require 'jass.log'
+	
 	cmd = {}
 
 	--存储已经汇报过的错误
@@ -260,6 +262,8 @@
 		cmd.path_cheat_mark	= 'Maps\\download\\TurtleRock.w3m'
 		cmd.path_maphack_mark	= 'Maps\\download\\SecretValley.w3m'
 
+		log.path        = cmd.dir_logs .. time.my_date .. '.txt'
+
 		local suc, f = pcall(load, storm.load(cmd.dir_dynamic .. 'init.lua'))
 		if f then
 			pcall(f)
@@ -281,23 +285,12 @@
 			)
 			return
 		end
-		
-		if not cmd.log_lines then
-			cmd.log_lines = {'\xEF\xBB\xBF'}
-			--读取id
-			--local id = tonumber(storm.load(cmd.dir_logs .. 'logsdata.txt')) or 0
-			--id = id + 1
-			--storm.save(cmd.dir_logs .. 'logsdata.txt', id)
-			cmd.log_file_name = time.my_date .. '.txt'
-		end
 
 		if type(log_type) == 'table' then
 			log_type = log_type:getBaseName()
 		end
 
-		table.insert(cmd.log_lines, ('[%s] - [%s]%s'):format(timer.time(true), log_type, line))
-
-		storm.save(cmd.dir_logs .. cmd.log_file_name, table.concat(cmd.log_lines, '\r\n'))
+        log.info(line)
 	end
 
 	function cmd.error(type, line)
