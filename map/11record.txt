@@ -1129,7 +1129,7 @@
 		//赤瞳 泳装
 		皮肤=A0YO
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
+		说明=此皮肤由玩家“风起炎舞”定做并共享
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
@@ -1140,7 +1140,7 @@
 		//saber 泳装
 		皮肤=A0YP
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
+		说明=此皮肤由玩家“风起炎舞”定做并共享
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
@@ -1151,7 +1151,7 @@
 		//缇娜 泳装
 		皮肤=A0YQ
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
+		说明=此皮肤由玩家“风起炎舞”定做并共享
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
@@ -1271,7 +1271,7 @@
 		//咲夜 泳装蓝
 		皮肤=A10C
 		前缀=|cFF66FFFF泳装·|r 
-		说明=
+		说明=此皮肤由玩家“风起炎舞”定做并共享
 		价格=
 		变身特效=war3mapImported\firaga4.mdl
 		特效点=origin
@@ -1343,18 +1343,18 @@
 		//晓
 		皮肤=A10V
 		前缀=|cFF66FFFF舰队Collection·|r 
-		说明=
+		说明=此皮肤由玩家“风起炎舞”定做并共享
 		价格=
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=1
 		变身动画=morph
-		名字=风起炎舞
+		名字=
 
 		//响
 		皮肤=A10W
 		前缀=|cFF66FFFF舰队Collection·|r 
-		说明=
+		说明=此皮肤由玩家“风起炎舞”定做并共享
 		价格=
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
@@ -1365,8 +1365,8 @@
 		//夕立
 		皮肤=A116
 		前缀=|cFF66FFFF舰队Collection·|r 
-		说明=
-		价格=1-800;5-1800;25-8500
+		说明=此皮肤由玩家“风起炎舞”定做并共享
+		价格=
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
 		特效时间=1
@@ -1434,7 +1434,7 @@
 		//缇娜 雷姬
 		皮肤=A12D
 		前缀=|cFF66FFFF雷姬·|r 
-		说明=
+		说明=此皮肤由玩家“沫沫很聪明”定做并共享
 		价格=
 		变身特效=war3mapImported\C2_blackdong.mdl
 		特效点=origin
