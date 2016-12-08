@@ -1267,10 +1267,10 @@ fta1=
 fta0=origin
 [B04K:BHab]
 ftat=
-ftip=魔剑·改
+ftip=二刀流
 fube=攻击力减少段数增加
 fart=ReplaceableTextures\CommandButtons\tongrenR.blp
-fnam=魔剑·改
+fnam=二刀流
 fnsf=R
 [B04M:Basl]
 fube=该单位被减速了。
