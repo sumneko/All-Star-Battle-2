@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=456
+//TESH.scrollpos=403
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -439,6 +439,7 @@ endlibrary
     hero_types[47] = 'H01W'
     hero_types[48] = 'U014'
     
+    
     --新英雄在此注册
 
     --英雄介绍模板
@@ -527,7 +528,7 @@ library defineLibrary
         bool = boolean
     }
 
-// #define RELEASE //内测版本请将此行注释
+  #define RELEASE //内测版本请将此行注释
 
     #ifdef RELEASE
         define <debug@> = /##/
@@ -793,7 +794,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=665
+//TESH.scrollpos=671
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -1509,7 +1510,7 @@ define{
 endlibrary
 ########
 ########
-//TESH.scrollpos=1002
+//TESH.scrollpos=243
 //TESH.alwaysfold=0
 //直接挂载YDWE的伤害事件
 #include "YDWETriggerEvent.j"
@@ -2717,7 +2718,7 @@ library mathLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=26
+//TESH.scrollpos=39
 //TESH.alwaysfold=0
 library stringLibrary initializer Init needs baseLibrary
 
@@ -2794,7 +2795,7 @@ library stringLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=117
 //TESH.alwaysfold=0
 library playerLibrary initializer Init needs baseLibrary, YDWEBase
 
@@ -2983,7 +2984,7 @@ library playerLibrary initializer Init needs baseLibrary, YDWEBase
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=852
 //TESH.alwaysfold=0
 library bakaLibrary initializer Init needs baseLibrary
 
@@ -3873,7 +3874,7 @@ library bakaLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=0
+//TESH.scrollpos=24
 //TESH.alwaysfold=0
 library unitLibrary initializer Init needs bakaLibrary
 
@@ -5641,7 +5642,7 @@ library effectLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=253
+//TESH.scrollpos=224
 //TESH.alwaysfold=0
 library soundLibrary initializer Init needs baseLibrary
     struct Sound
@@ -5945,7 +5946,7 @@ library soundLibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=301
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library testLibrary initializer Init needs baseLibrary, processLibrary
     struct test
@@ -6667,9 +6668,6 @@ endlibrary
 //TESH.scrollpos=0
 //TESH.alwaysfold=0
 #define SetMapDescription(s) SetMapDescription(s) YDNL call PlayMusic("LoadingMusic.mp3")
-########
-########
-
 ########
 ########
 
@@ -42198,6 +42196,9 @@ endfunction
 
 ########
 ########
+
+########
+########
 //TESH.scrollpos=9
 //TESH.alwaysfold=0
 function Trig________________uActions takes nothing returns nothing
@@ -46036,7 +46037,7 @@ endfunction
 ?>
 ########
 ########
-//TESH.scrollpos=780
+//TESH.scrollpos=768
 //TESH.alwaysfold=0
 
 <?

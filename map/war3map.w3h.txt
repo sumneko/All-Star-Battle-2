@@ -1363,3 +1363,11 @@ ftip=|Cff00FF00神迹|r
 frac=nightelf
 fnsf=
 ftat=
+[B04X:Bslo]
+fnam=暗黑之炎
+ftat=Abilities\Spells\Orc\StasisTrap\StasisTotemTarget.mdl,Abilities\Spells\Human\slow\slowtarget.mdl
+fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
+ftac=1
+fta0=overhead
+fspd=0
+ftip=黑暗
