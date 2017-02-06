@@ -177,8 +177,12 @@ local function main()
 	w3x2txt.readMeta(meta_path / 'upgrademetadata.slk')
 
 	--读取函数
-	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'japi' / 'ui' / 'TriggerData.txt')
-	w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / 'allstar' / 'ui' / 'TriggerData.txt')
+	local buf = io.load(root_dir / 'YDWE' / 'share' / 'mpq' / 'config')
+	if buf then
+        for name in buf:gmatch '%C+' do
+            w3x2txt.readTriggerData(root_dir / 'YDWE' / 'share' / 'mpq' / name / 'ui' / 'TriggerData.txt')
+        end
+	end
 	
 	local fname
 

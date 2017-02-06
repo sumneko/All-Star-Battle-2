@@ -1267,10 +1267,10 @@ fta1=
 fta0=origin
 [B04K:BHab]
 ftat=
-ftip=魔剑·改
+ftip=二刀流
 fube=攻击力减少段数增加
 fart=ReplaceableTextures\CommandButtons\tongrenR.blp
-fnam=魔剑·改
+fnam=二刀流
 fnsf=R
 [B04M:Basl]
 fube=该单位被减速了。
@@ -1363,3 +1363,11 @@ ftip=|Cff00FF00神迹|r
 frac=nightelf
 fnsf=
 ftat=
+[B04X:Bslo]
+fnam=暗黑之炎
+ftat=Abilities\Spells\Orc\StasisTrap\StasisTotemTarget.mdl,Abilities\Spells\Human\slow\slowtarget.mdl
+fart=ReplaceableTextures\CommandButtons\BTNDizzy.blp
+ftac=1
+fta0=overhead
+fspd=0
+ftip=黑暗
