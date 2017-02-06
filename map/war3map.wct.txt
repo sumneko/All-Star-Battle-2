@@ -5773,7 +5773,7 @@ library soundLibrary initializer Init needs baseLibrary
 
                     content = content:gsub('(StopSound%C+%c+%C+)PlaySound', '%1Play##Sound')
 
-                    content = content:gsub('(%C+PlaySound%w+%( )([%w_]+)(%C+)',
+                    content = content:gsub('([%s%.]PlaySound%w+%( )([%w_]+)(%C+)',
                         function(t1, v_name, t2)
                             local r = ('%s%s%s\ncall Sound.KillSound(%s)\nset %s%s'):format(t1, v_name, t2, v_name, v_name, sounds[v_name])
                             --error(r)
