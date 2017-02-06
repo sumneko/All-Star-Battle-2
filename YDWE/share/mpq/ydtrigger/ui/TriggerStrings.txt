@@ -1,0 +1,195 @@
+[TriggerEventStrings]
+
+YDWEDisableRegister="休眠 [YDWE]"
+YDWEDisableRegister="休眠"
+YDWEDisableRegisterHint="休眠后，当前触发器不会在读取地图时进行注册，需要手动激活."
+TriggerRegisterPlayerAllianceChangeHint="当改变项目为【共享单位】时，(触发玩家)会不生效，此时不建议使用【任意玩家】事件。"
+
+
+[TriggerActionStrings]
+﻿
+
+
+DzAPI_Map_Ladder_SubmitBooleanData=天梯提交布尔值数据[DzAPI]
+DzAPI_Map_Ladder_SubmitBooleanData="提交 ",~whichPlayer," 天梯项目:",~key," 的目的  ",~value
+DzAPI_Map_Ladder_SubmitBooleanDataHint="key必须是英文"
+
+DzAPI_Map_Ladder_SubmitIntegerData=天梯提交整数数据[DzAPI]
+DzAPI_Map_Ladder_SubmitIntegerData="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
+DzAPI_Map_Ladder_SubmitIntegerDataHint="key必须是英文"
+
+DzAPI_Map_Ladder_SetStat=天梯提交字符串数据[DzAPI]
+DzAPI_Map_Ladder_SetStat="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
+DzAPI_Map_Ladder_SetStatHint="key必须是英文"
+
+DzAPI_Map_Stat_SubmitUnitIdData=天梯提交单位类型数据[DzAPI]
+DzAPI_Map_Stat_SubmitUnitIdData="提高 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
+DzAPI_Map_Stat_SubmitUnitIdDataHint="key必须是英文"
+
+DzAPI_Map_Ladder_SubmitAblityIdData=天梯提交技能数据[DzAPI]
+DzAPI_Map_Ladder_SubmitAblityIdData="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
+DzAPI_Map_Ladder_SubmitAblityIdDataHint="key必须是英文"
+
+DzAPI_Map_Ladder_SubmitItemIdData=天梯提交物品数据[DzAPI]
+DzAPI_Map_Ladder_SubmitItemIdData="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
+DzAPI_Map_Ladder_SubmitItemIdDataHint="key必须是英文"
+
+DzAPI_Map_Ladder_SubmitTitle=天梯提交获得称号[DzAPI]
+DzAPI_Map_Ladder_SubmitTitle="提交 ",~whichPlayer," 获得称号:",~key
+DzAPI_Map_Ladder_SubmitTitleHint="key必须是英文"
+
+DzAPI_Map_Ladder_SubmitPlayerRank=天梯提交名次[DzAPI]
+DzAPI_Map_Ladder_SubmitPlayerRank="天梯设置： ",~whichPlayer," 为第:",~value," 名"
+DzAPI_Map_Ladder_SubmitPlayerRankHint="key必须是英文"
+
+DzAPI_Map_Ladder_SubmitPlayerExtraExp=天梯提交额外分[DzAPI]
+DzAPI_Map_Ladder_SubmitPlayerExtraExp="天梯增加： ",~whichPlayer," 额外:",~value," 分"
+DzAPI_Map_Ladder_SubmitPlayerExtraExpHint="负数是减少，正数是增加，额外分取值为-30到30"
+
+DzAPI_Map_SaveServerValue=DzAPI-保存服务器存档 [DzAPI]
+DzAPI_Map_SaveServerValue="DzAPI: ",~玩家,"保存存档[",~存档名称,"][",~存档内容,"]"
+DzAPI_Map_SaveServerValueHint="官方对战平台服务器存档"
+
+DzAPI_Map_Stat_SetStat=设置房间显示的数据[DzAPI]
+DzAPI_Map_Stat_SetStat="设置 ",~whichPlayer," 房间的 ",~key," 项目显示 ",~value
+DzAPI_Map_Stat_SetStatHint="key必须是英文"
+
+DzAPI_Map_StoreInteger=服务器存储整数 [DzAPI]
+DzAPI_Map_StoreInteger="服务器存档:存储 ",~whichPlayer," 数据,名称：",~key,",值:",~value
+DzAPI_Map_StoreIntegerHint="名称key必须是英文"
+
+DzAPI_Map_StoreReal=服务器存储实数 [DzAPI]
+DzAPI_Map_StoreReal="服务器存档:存储 ",~whichPlayer," 数据,名称：",~key,",值:",~value
+DzAPI_Map_StoreRealHint="名称key必须是英文"
+
+DzAPI_Map_StoreBoolean=服务器存储布尔值 [DzAPI]
+DzAPI_Map_StoreBoolean="服务器存档:存储 ",~whichPlayer," 数据,名称:",~key,",值:",~value
+DzAPI_Map_StoreBooleanHint="名称key必须是英文"
+
+DzAPI_Map_StoreString=服务器存储字符串 [DzAPI]
+DzAPI_Map_StoreString="服务器存档:存储 ",~whichPlayer," 数据,名称:",~key,",值:",~value
+DzAPI_Map_StoreStringHint="名称key必须是英文"
+
+DzAPI_Map_StoreUnitId=服务器存储单位类型 [DzAPI]
+DzAPI_Map_StoreUnitId="服务器存档:存储 ",~whichPlayer," 数据,名称：",~key,",值:",~value
+DzAPI_Map_StoreUnitIdHint="名称key必须是英文"
+
+DzAPI_Map_StoreAbilityId=服务器存储技能Id [DzAPI]
+DzAPI_Map_StoreAbilityId="服务器存档:存储 ",~," 数据,名称：",~key,",值:",~
+DzAPI_Map_StoreAbilityIdHint="名称key必须是英文"
+
+DzAPI_Map_StoreItemId=服务器存储物品Id [DzAPI]
+DzAPI_Map_StoreItemId="服务器存档:存储 ",~," 数据,名称：",~key,",值:",~
+DzAPI_Map_StoreItemIdHint="名称key必须是英文"
+
+DzAPI_Map_FlushStoredMission=清理服务器数据 [DzAPI]
+DzAPI_Map_FlushStoredMission="服务器数据：清理",~whichPlayer,"数据,名称： ",~key
+DzAPI_Map_FlushStoredMissionHint="key必须是英文"
+
+YDWEActivateTrigger="激活触发"
+YDWEActivateTrigger="激活 ",~Trigger," ( ",~On/Off," 兼容模式 )"
+YDWEActivateTriggerHint="不要多次激活一个触发器。不要激活未开启休眠的触发器。打开兼容模式会略微影响效率，若关闭兼容模式，请保证该动作在需要激活的触发器之后，否则会有语法错误。"
+YDWEEnumUnitsInRangeMultiple="选取单位 -- 圆形范围"
+YDWEEnumUnitsInRangeMultiple="选取以(",~坐标X,", ",~坐标Y,")为圆心,",~半径,"为半径的圆范围内的单位做动作"
+YDWEEnumUnitsInRangeMultipleHint="选取范围内的单位做动作"
+YDWESetAnyTypeLocalVariable="局部变量 -- 设置"
+YDWESetAnyTypeLocalVariable="设置 [",~类型,"] loc_",~变量名," = ",~null
+YDWESetAnyTypeLocalVariableHint="设置局部变量，可以指定变量类型.在1.24下不可直接将变量置为null"
+YDWEForLoopLocVarMultiple="局部变量 -- 循环"
+YDWEForLoopLocVarMultiple="循环动作[loop_",~局部变量名,"]从 ",~开始," 到 ",~结束,", 运行 (Loop - 动作)"
+YDWEForLoopLocVarMultipleHint=
+YDWETimerStartMultiple="计时器   -- 运行"
+YDWETimerStartMultiple="立即运行 ",~计时器," 时间设置: ",~time," 秒，是否循环: ",~false/true
+YDWETimerStartMultipleHint="让计时器运行多个动作。计时器内不能使用等待。"
+YDWETimerStartFlush="计时器   -- 清除"
+YDWETimerStartFlush="清除当前逆天计时器"
+YDWETimerStartFlushHint="删除当前逆天计时器，并清空缓存或哈希表."
+YDWERegisterTriggerMultiple="触发器   -- 注册"
+YDWERegisterTriggerMultiple="注册 ",~触发器
+YDWERegisterTriggerMultipleHint="触发器内不能使用等待。"
+YDWERegisterTriggerFlush="触发器   -- 清除"
+YDWERegisterTriggerFlush="清除当前逆天触发器"
+YDWERegisterTriggerFlushHint="删除当前逆天触发器，并清空缓存或哈希表."
+YDWESaveAnyTypeDataByUserData="自定义值 -- 设置"
+YDWESaveAnyTypeDataByUserData="设置 [",~类型,"] ",~null," 的 ",~属性," 为 [",~类型,"]",~null
+YDWESaveAnyTypeDataByUserDataHint="设置某个数据的自定义属性，如设置[单位]李启铭_的_爸爸_为[单位]李刚。"
+YDWEFlushAllByUserData="自定义值 -- 清除全部"
+YDWEFlushAllByUserData="清空 [",~类型,"] ",~null," 的所有自定义属性。"
+YDWEFlushAllByUserDataHint="清空某个数据所有的自定义属性。"
+YDWEFlushAnyTypeDataByUserData="自定义值 -- 清除"
+YDWEFlushAnyTypeDataByUserData="清空 [",~类型,"] ",~null," 的[",~类型,"] ",~属性
+YDWEFlushAnyTypeDataByUserDataHint="清空某个数据的某项自定义属性。"
+YDWEWaitForLocalVariable="等待(局部变量专用)[YDWE]"
+YDWEWaitForLocalVariable="等待 ",~Time," 秒(局部变量专用)"
+YDWEWaitForLocalVariableHint="使用逆天系列的UI，无需使用它。"
+
+[TriggerCallStrings]
+﻿
+
+DzAPI_Map_IsRPGLobby=判断当前地图是否rpg大厅来的[DzAPI]
+DzAPI_Map_IsRPGLobby="判断当前地图是否rpg大厅来的"
+DzAPI_Map_IsRPGLobbyHint="是rpg大厅地图会返回true"
+
+DzAPI_Map_IsRPGLadder=判断是否在RPG天梯[DzAPI]
+DzAPI_Map_IsRPGLadder="判断地图是否在RPG天梯"
+DzAPI_Map_IsRPGLadderHint=""
+
+DzAPI_Map_GetMatchType=获取天梯匹配模式[DzAPI]
+DzAPI_Map_GetMatchType="获取天梯匹配模式"
+DzAPI_Map_GetMatchTypeHint="匹配模式为大于1000的整数,具体值需的跟作者之家的模式设置相同"
+
+DzAPI_Map_GetMapLevel=获取玩家地图等级 [DzAPI]
+DzAPI_Map_GetMapLevel="获取 ",~whichPlayer," 的地图等级"
+DzAPI_Map_GetMapLevelHint="获取玩家地图等级【RPG大厅限定】"
+
+DzAPI_Map_GetGameStartTime=获取当前游戏时间 [DzAPI]
+DzAPI_Map_GetGameStartTime="获取创建地图的游戏时间"
+DzAPI_Map_GetGameStartTimeHint="时间换算为时间戳"
+
+DzAPI_Map_GetStoredBoolean=获取服务器存储的布尔值 [DzAPI]
+DzAPI_Map_GetStoredBoolean="获取 ",~whichPlayer," 数据名称:",~key," 里存储的布尔值"
+DzAPI_Map_GetStoredBooleanHint=""
+
+DzAPI_Map_GetStoredInteger=获取服务器存储的整数 [DzAPI]
+DzAPI_Map_GetStoredInteger="获取",~whichPlayer," 数据名称:",~key," 里存储的整数."
+DzAPI_Map_GetStoredIntegerHint=""
+
+DzAPI_Map_GetStoredReal=获取服务器存储的实数 [DzAPI]
+DzAPI_Map_GetStoredReal="获取 ",~whichPlayer," 数据名称:",~key," 里存储的实数"
+DzAPI_Map_GetStoredRealHint=""
+
+DzAPI_Map_GetStoredString=获取服务器存储的字符串 [DzAPI]
+DzAPI_Map_GetStoredString="获取 ",~whichPlayer," 数据名称:",~key," 里存储的字符串"
+DzAPI_Map_GetStoredStringHint=""
+
+DzAPI_Map_GetStoredUnitId=获取服务器存储的单位类型 [DzAPI]
+DzAPI_Map_GetStoredUnitId="获取 ",~whichPlayer," 数据名称:",~key," 里存储的单位类型"
+DzAPI_Map_GetStoredUnitIdHint=""
+
+DzAPI_Map_GetStoredAbilityId=获取服务器存储的技能类型 [DzAPI]
+DzAPI_Map_GetStoredAbilityId="获取 ",~whichPlayer," 数据名称:",~key," 里存储的技能类型"
+DzAPI_Map_GetStoredAbilityIdHint=""
+
+DzAPI_Map_GetStoredItemId=获取服务器存储的物品类型 [DzAPI]
+DzAPI_Map_GetStoredItemId="获取 ",~whichPlayer," 数据名称:",~key," 里存储的物品类型"
+DzAPI_Map_GetStoredItemIdHint=""
+YDWECustomScriptCode="自定义代码"
+YDWECustomScriptCode=~Jass 代码
+YDWECustomScriptCodeHint="可以在任何有返回值的地方输入一行代码. 比如: 杀死(自定义代码：GetTriggerUnit())。"
+YDWEGetAnyTypeLocalVariable="局部变量 -- 读取"
+YDWEGetAnyTypeLocalVariable="loc_",~变量名
+YDWEGetAnyTypeLocalVariableHint="可以获取到任意类型的局部变量。"
+YDWEForLoopLocVarIndex="局部变量 -- 读取(循环数)"
+YDWEForLoopLocVarIndex="loop_",~变量名
+YDWEForLoopLocVarIndexHint="用来获取当前循环中的循环数，是个真正的Jass局部变量。"
+YDWELoadAnyTypeDataByUserData="自定义值 -- 读取"
+YDWELoadAnyTypeDataByUserData="获取 [",~类型,"] ",~null," 的 ",~属性
+YDWELoadAnyTypeDataByUserDataHint="从某个数据上获取自定义值，如获取[单位] 恶魔猎手 的 命中率 。"
+YDWEHaveSavedAnyTypeDataByUserData="自定义值 -- 是否存有"
+YDWEHaveSavedAnyTypeDataByUserData="[",~类型,"] ",~null," 拥有 [",~类型,"] "~属性
+YDWEHaveSavedAnyTypeDataByUserDataHint="判断某个数据的自定义值是否存在，如[单位] 恶魔猎手 拥有[物品] 圣剑。"
+
+[remove:TriggerActionStrings]
+YDWEWaitForLocalVariable="等待(局部变量专用)[YDWE]"
+YDWEWaitForLocalVariable="等待 ",~Time," 秒(局部变量专用)"
+YDWEWaitForLocalVariableHint="当触发器内有局部变量，需要用到等待动作时，必须采用这个局部变量专用等待动作，不然触发器无法用于多人。"
