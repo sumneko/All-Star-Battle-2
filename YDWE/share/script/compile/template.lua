@@ -80,15 +80,18 @@ function template:do_compile(op)
 		local file_path	= fs.ydwe_path() / "logs" /	"mu.out"
 
 		local update_j = {}
+		local clock_lines = {}
 		
-		local function update(file_name, func)
+		local function update(file_name, tag, func)
 			if file_name ==	'war3map.j'	then
-				table.insert(update_j, func)
+				table.insert(update_j, {tag, func})
 			else
 				if __map_handle__:has(file_name) and
 					__map_handle__:extract(file_name, file_path)
 				then
+				    local clock = os.clock()
 					local content =	func(io.load(file_path))
+					clock_lines[#clock_lines+1] = ('[%s]:%.3f'):format(tag, os.clock() - clock)
 					if content then
 						io.save(file_path, content)
 						__map_handle__:import(file_name, file_path)
@@ -98,8 +101,11 @@ function template:do_compile(op)
 		end
 
 		local function do_update_j(content)
-			for	_, func	in ipairs(update_j)	do
+			for	_, data	in ipairs(update_j)	do
+    			local tag, func = data[1], data[2]
+    			local clock = os.clock()
 				content	= func(content)	or content
+				clock_lines[#clock_lines+1] = ('[%s]:%.3f'):format(tag, os.clock() - clock)
 			end
 			return content
 		end
@@ -115,7 +121,11 @@ function template:do_compile(op)
 	__map_handle__ = op.map_handle
 	__map_path__   = op.map_path
 	local env = setmetatable({import = map_file_import, StringHash = string_hash}, {__index = _G})
-	table.insert(lua_codes,	"return	do_update_j(table.concat(__jass_result__))")	
+	table.insert(lua_codes,	[[
+	    local buf = do_update_j(table.concat(__jass_result__))
+	    io.save(fs.ydwe_path() / "logs" / "clock.txt", table.concat(clock_lines, '\n'))
+	    return buf
+	]])	
 	io.save(fs.ydwe_path() / "logs"	/ "调用lua插件前最后看一眼脚本.lua", table.concat(lua_codes, '\n'))
 	local f, err = load(table.concat(lua_codes, '\n'), nil, 't', env)
 	if not f then

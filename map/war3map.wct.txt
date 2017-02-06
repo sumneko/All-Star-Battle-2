@@ -2397,7 +2397,7 @@ debug@      endif
         __USER_EVENT__
 
         <?
-            update('war3map.j',
+            update('war3map.j', '自定义事件',
                 function(content)
                     local event_names   = {}
                     local code  = [[
@@ -3565,7 +3565,7 @@ library bakaLibrary initializer Init needs baseLibrary
 
         <?
             --取消对Player的define,以免影响config函数导致地图无法启动
-            update('war3map.j',
+            update('war3map.j', '取消Player的define',
                 function(content)
                     return content:gsub('(function InitCustomPlayerSlots takes nothing returns nothing.+)',
                         function(s)
@@ -4351,7 +4351,7 @@ library unitLibrary initializer Init needs bakaLibrary
 
         //保存地图时根据技能id生成第5个参数
         <?
-            update('war3map.j',
+            update('war3map.j', 'Unit.DummySkill',
                 function(content)
                     content = content:gsub("(Unit.DummySkill%a-%(%C+)",
                         function(s)
@@ -4802,7 +4802,7 @@ library unitLibrary initializer Init needs bakaLibrary
 
             //找到护甲免伤参数
             <?
-                update('war3mapmisc.txt',
+                update('war3mapmisc.txt', '护甲免伤',
                     function(content)
                         DEF_ARMOR = content:match 'DefenseArmor%=(%C+)'
                     end
@@ -4958,7 +4958,7 @@ library unitLibrary initializer Init needs bakaLibrary
         //注册物编数据
         //Unit.SaveSlkData( 'unit_type_id', slk_name1 slk_name2 slk_name3 )
         <?
-            update('war3map.j',
+            update('war3map.j', '注册物编数据',
                 function(content)
                     content = content:gsub("call Unit%.SaveSlkData%( '(....)'%, (%C+) %)",
                         function(unit_type_id, slk_names)
@@ -5758,7 +5758,7 @@ library soundLibrary initializer Init needs baseLibrary
         }
 
         <?
-            update('war3map.j',
+            update('war3map.j', '音效预处理',
                 function(content)
 
                     local InitSounds = content:match 'function InitSounds takes nothing returns nothing(.-)endfunction' .. '__end'
@@ -45953,7 +45953,7 @@ endfunction
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
-    update('war3mapskin.txt',
+    update('war3mapskin.txt', '自定义游戏界面',
         function(content)
             local new_lines = {
                 {'[FrameDef]', 'CHAT_RECIPIENT_ALLIES', ' '},
@@ -46018,9 +46018,8 @@ endfunction
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
 <?
-    update('war3map.j',
+    update('war3map.j', '静态哈希',
         function(content)
-            local clock = os.clock()
             content = content:gsub('StringHash%(%s-%"(.-)%"%s-%)',
                 function(s)
                     if not s:match('"') then
@@ -46028,8 +46027,6 @@ endfunction
                     end
                 end
             )
-            
-            io.save(fs.ydwe_path() / "logs" / "静态哈希时间", os.clock() - clock)
             return content
         end
     )
@@ -46043,7 +46040,7 @@ endfunction
 <?
     --优化逆天
     --local update = function() end
-    update('war3map.j',
+    update('war3map.j', '优化逆天',
         function(content)
             local time = {}
             time[0] = os.clock()
@@ -46860,9 +46857,8 @@ endfunction
 //TESH.alwaysfold=0
 <?
     --静态命令字符
-    update('war3map.j',
+    update('war3map.j', '静态命令',
         function(content)
-            local clock = os.clock()
             content = content:gsub('String2OrderIdBJ%(%s-%"(%a+)%"%s-%)',
                 function(s)
                     return order2id[s]
@@ -46874,8 +46870,6 @@ endfunction
                     return order2id[s]
                 end
             )
-            
-            io.save(fs.ydwe_path() / "logs" / "静态命令字符时间", os.clock() - clock)
             return content
         end
     )
@@ -46886,13 +46880,10 @@ endfunction
 //TESH.alwaysfold=0
 <?
 
-    update('war3map.j',
+    update('war3map.j', '优化脚本',
         function(content)
-            local clock = os.clock()
             content = content:gsub('== true', '')
             content = content:gsub('else[%c%s]+endif', 'endif')
-            
-            io.save(fs.ydwe_path() / "logs" / "优化脚本时间", os.clock() - clock)
             return content
         end
     )
@@ -46904,16 +46895,13 @@ endfunction
 //TESH.alwaysfold=0
 <?
 
-    update('war3map.j',
+    update('war3map.j', '哈希表保存null',
         function(content)
-            local clock = os.clock()
             content = content:gsub('Save%a-Handle%((%C-), null%)',
                 function(s)
                     return ('RemoveSavedHandle(%s)'):format(s)
                 end
             )
-            
-            io.save(fs.ydwe_path() / "logs" / "哈希表保存null时间", os.clock() - clock)
             return content
         end
     )
@@ -46928,9 +46916,8 @@ endfunction
     --修改版本号,在地图情节中设置版本号后自动修改其他几处
     ----游戏界面
     ----脚本中所有的__MAP_VER_NAME__标记
-    update('war3map.j',
+    update('war3map.j', '游戏版本号',
         function(content)
-            local clock = os.clock()
             local char_name = content:match([[SetMapName%( "TRIGSTR_(.-)" %)]])
 
             --版本号文本的字符串id
@@ -46939,7 +46926,7 @@ endfunction
             local name_id
 
             --寻找游戏界面中的文本
-            update('war3mapskin.txt',
+            update('war3mapskin.txt', '游戏版本号-skin',
                 function(txt)
                     name_id = tonumber(txt:match([[UPKEEP_NONE=TRIGSTR_(%d+)]]))
                 end
@@ -46948,7 +46935,7 @@ endfunction
             local ver_name --保存版本号,例如"2.6H"
 
             --处理游戏界面
-            update('war3map.wts',
+            update('war3map.wts', '游戏版本号-wts',
                 function(txt)
                     if ver_name_id then
                         ver_name = txt:match(([[STRING %d.-{.-(%%d%%.%%d.).-}]]):format(ver_name_id))
@@ -46966,8 +46953,6 @@ endfunction
 
             --修改地图中所有的__MAP_VER_NAME__标记
             content = content:gsub('__MAP_VER_NAME__', ver_name)
-            
-            io.save(fs.ydwe_path() / "logs" / "自动版本号时间", os.clock() - clock)
             return content
 
         end
@@ -46981,10 +46966,8 @@ endfunction
 <?
 
     --将所有的换行符修改为 \r\n 格式
-    update('war3map.j', function(content)
-        local clock = os.clock()
+    update('war3map.j', '换行符', function(content)
         local content = content:gsub('%c+', '\r\n')
-        io.save(fs.ydwe_path() / "logs" / "修改换行符时间", os.clock() - clock)
         return content
     end)
     
