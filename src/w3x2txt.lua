@@ -385,7 +385,7 @@
 		function w3x2txt.readTriggerData(file_name_in)
 			local content	= io.load(file_name_in)
 			if not content then
-				print('文件无效:' .. file_name_in)
+				print('文件无效:' .. file_name_in:string())
 				return
 			end
 
