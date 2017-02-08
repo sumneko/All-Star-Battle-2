@@ -42,20 +42,6 @@ STRING 712
 Response\kcwiki\move\1.mp3;Response\kcwiki\move\2.mp3;Response\kcwiki\move\3.mp3;Response\kcwiki\move\4.mp3;Response\kcwiki\move\5.mp3;Response\kcwiki\move\6.mp3;Response\kcwiki\move\7.mp3;Response\kcwiki\move\8.mp3;Response\kcwiki\move\9.mp3;Response\kcwiki\move\10.mp3;
 }
 
-STRING 3221
-{
-降低部分技能特效
-降低塔受到攻击增强的防御
-增加分经验时获得的经验
-治愈师：
-死亡时增恢复队友血量
-天使
-天雷光束【RQ】
-雷光风暴【W】
-暗影十六连斩【D】
-以上技能伤害从 （X敏捷） 变为  （X最高属性）
-}
-
 STRING 3265
 {
 Response\kcwiki\attack\1.mp3;Response\kcwiki\attack\2.mp3;Response\kcwiki\attack\3.mp3;Response\kcwiki\attack\4.mp3;Response\kcwiki\attack\5.mp3;Response\kcwiki\attack\6.mp3;Response\kcwiki\attack\7.mp3;Response\kcwiki\attack\8.mp3;Response\kcwiki\attack\9.mp3;Response\kcwiki\attack\10.mp3;
@@ -419,7 +405,7 @@ STRING 11338
 
 STRING 11339
 {
-|cff00ff00全明星战役|cffffff003.2a
+|cff00ff00全明星战役|cffffff003.2b
 }
 
 STRING 12222
@@ -462,4 +448,59 @@ STRING 12446
 STRING 12447
 {
 |n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 12507
+{
+|CffFF8040冠军队伍：|n夜空下樱花（队长） 卑微Realm Alarnzearn 毕昂德  他们都叫我安爸爸 |n替补：我梦见她梦见她 阿海有点忙|r|n|n|Cff0088ff亚军队伍：|n绯月（队长）最爱傲娇妹 热血拳师 A拉垃圾君 冬千千 |n替补：七彩唯独猪 紫月
+}
+
+STRING 12515
+{
+亚瑟·黑
+亚瑟·泳装
+赤瞳·白
+赤瞳·泳装
+地精·夕立
+地精·响
+地精·晓
+肥肥·沙耶
+黑阿尔·女
+白阿尔·女
+黑子·泳装
+克劳德·泳装
+狂三·吊带袜
+狂三·花嫁
+狂三·泳装
+帕秋莉·泳装
+夜夜·泳装
+炮姐·帽子
+炮姐·外套
+三笠·兵长
+缇娜·雷姬
+缇娜·泳装
+天使·水银灯
+夏娜·泳装
+巫妖·艾斯德斯
+咲夜·泳装黑
+咲夜·泳装蓝
+由乃·泳装
+一户·白
+死灵·安兹
+}
+
+STRING 12655
+{
+|CffFF8040冠军队伍：|n夜空下樱花（队长） 卑微Realm Alarnzearn 毕昂德  他们都叫我安爸爸 |n替补：我梦见她梦见她 阿海有点忙|r|n|n|Cff0088ff亚军队伍：|n绯月（队长）最爱傲娇妹 热血拳师 A拉垃圾君 冬千千 |n替补：七彩唯独猪 紫月雪樱灬 |r
+}
+
+STRING 12656
+{
+|Cff00FF00【全明星战役冬季赛】|r
+
+|Cffff8040冠军队伍：|n夜空下樱花（队长） 卑微Realm Alarnzearn 毕昂德  他们都叫我安爸爸 
+替补：我梦见她梦见她 阿海有点忙|r
+
+|Cff0080c0亚军队伍：|n绯月（队长）最爱傲娇妹 热血拳师 A拉垃圾君 冬千千 
+替补：七彩唯独猪 紫月雪樱灬 |r
 }

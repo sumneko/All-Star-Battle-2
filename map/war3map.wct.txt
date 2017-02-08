@@ -11,7 +11,7 @@ VERSION=1
 
 ########
 ########
-//TESH.scrollpos=403
+//TESH.scrollpos=0
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -794,7 +794,7 @@ library YDWELibrary initializer Init needs baseLibrary
 endlibrary
 ########
 ########
-//TESH.scrollpos=671
+//TESH.scrollpos=665
 //TESH.alwaysfold=0
 library Record initializer Init needs baseLibrary
     globals
@@ -6834,6 +6834,15 @@ library AIlibrary initializer Init needs baseLibrary
     private void Init(){
     }
 endlibrary
+########
+########
+
+########
+########
+
+########
+########
+
 ########
 ########
 
@@ -42306,18 +42315,6 @@ function InitTrig______________CJBZ takes nothing returns nothing
     call TriggerAddCondition(gg_trg______________CJBZ, Condition(function Trig______________CJBZConditions))
     call TriggerAddAction(gg_trg______________CJBZ, function Trig______________CJBZActions)
 endfunction
-########
-########
-
-########
-########
-
-########
-########
-
-########
-########
-
 ########
 ########
 
