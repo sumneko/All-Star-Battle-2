@@ -2,7 +2,7 @@
 MaxUnitSpeed=522.0
 MaxHeroLevel=30
 StrAttackBonus=1.0
-StrHitPointBonus=15.0
+StrHitPointBonus=20.0
 AgiAttackSpeedBonus=0.008
 DamageBonusChaos=1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
 MaxLevelHeroesDrainExp=0
@@ -29,13 +29,12 @@ DamageBonusMagic=0.50,0.75,2.00,1.00,1.00,0.70,0.05,0.25
 MinUnitSpeed=0.0
 DamageBonusNormal=1.50,1.20,0.80,0.70,1.00,1.00,0.05,1.00
 DamageBonusSiege=0.50,0.75,1.20,1.50,1.00,0.70,0.05,1.50
-AgiDefenseBonus=0.0
+AgiDefenseBonus=0.2
 IntRegenBonus=0.0
 DefenseArmor=0.05
 SummonedKillFactor=0.0
 ReactionDelay=0.0
 StrRegenBonus=0.0
-AgiDefenseBase=0.0
 
 [InfoPanel]
 SpeedAverage=340.0
@@ -48,18 +47,7 @@ AttackAverage=0.8
 
 [TWN2]
 XPFactor=0.00,0
-DependencyOr=hkee,ostr,etoa,unp1
 
 [TWN3]
 XPFactor=0.00,0
-DependencyOr=hcas,ofrt,etoe,unp2
-
-[HERO]
-DependencyOr=Hamg,Hblm,Hmkg,Hpal,Obla,Ofar,Oshd,Otch,Edem,Ekee,Emoo,Ewar,Ucrl,Udea,Udre,Ulic,Npbm,Nbrn,Nngs,Nplh,Nbst,Nalc,Ntin,Nfir
-
-[TALT]
-DependencyOr=halt,oalt,eate,uaod
-
-[TWN1]
-DependencyOr=htow,ogre,etol,unpl
 
