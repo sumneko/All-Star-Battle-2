@@ -6,9 +6,175 @@ VERSION=1
 //TESH.scrollpos=-1
 //TESH.alwaysfold=0
     native UnitAlive takes unit u returns bool
+    
+    
+globals
+    integer NS = 31536000
+    integer LS = 31622400	
+
+    integer BJTIME = 28800
+    integer BASE2015_SEC = 1451606400
+    integer BASE2015_WEEKDAY = 4
+
+	integer array NORMALMON
+
+    boolean udg_bIsInit = false
+    
+    
+    integer udg_ServerTime = 0
+    
+    string array WEEKSTR
+endglobals
+
+
+function InitArray takes nothing returns nothing
+	set NORMALMON[1] = 31
+	set NORMALMON[2] = 28
+	set NORMALMON[3] = 31
+	set NORMALMON[4] = 30
+	set NORMALMON[5] = 31
+	set NORMALMON[6] = 30
+	set NORMALMON[7] = 31
+	set NORMALMON[8] = 31
+	set NORMALMON[9] = 30
+	set NORMALMON[10] = 31
+	set NORMALMON[11] = 30
+	set NORMALMON[12] = 31
+    
+    set WEEKSTR[0] = "日"
+    set WEEKSTR[1] = "一"
+    set WEEKSTR[2] = "二"
+    set WEEKSTR[3] = "三"
+    set WEEKSTR[4] = "四"
+    set WEEKSTR[5] = "五"
+    set WEEKSTR[6] = "六"
+endfunction
+
+function MathMod takes integer dividend, integer divisor returns integer
+    local integer modulus = dividend - (dividend / divisor) * divisor
+    if (modulus < 0) then
+        set modulus = modulus + divisor
+    endif
+
+    return modulus
+endfunction
+
+function MathFloor takes real a returns integer
+	return R2I(a)
+endfunction
+
+function IsLeapYear takes integer y returns boolean
+	if MathMod(y,4) == 0 then
+		if MathMod(y,100) == 0 then
+            if MathMod(y,400) == 0 then
+                return true
+            else
+                return false
+            endif
+		endif
+		return true
+	endif
+	return false
+endfunction
+
+function Time_UpdateDate takes integer y, integer remainSec, integer dayBy2015 returns nothing
+	local boolean bIsLeap = IsLeapYear(y)
+    local real dayNum = I2R(remainSec) / (24*60*60)
+	local integer totalDay = MathFloor(dayNum)
+    local integer totalDayBase = 0
+	local integer totalMonDay = 0
+	local integer curMonDay = 0
+	local integer m = 1
+
+	if (dayNum - I2R(totalDay)) > 0 then
+		set totalDay = totalDay + 1
+	endif
+	if totalDay == 0 then
+		set totalDay = 1
+	endif
+
+    set dayBy2015 = dayBy2015 + totalDay
+    
+	loop
+	exitwhen m > 12
+		if bIsLeap and m == 2 then 
+			set curMonDay = NORMALMON[m] + 1
+		else
+			set curMonDay = NORMALMON[m]
+		endif
+        if totalDay <= curMonDay then
+            set udg_Year = y
+			set udg_Mon = m
+			set udg_Day = totalDay
+			set udg_Hour = MathMod(MathFloor(remainSec/(60*60) ), 24)
+			set udg_Min = MathMod(MathFloor(remainSec/60) , 60 )
+			set udg_Sec = MathMod(remainSec , 60)
+            set m = 100
+        endif
+        
+		set m = m + 1
+        set totalDay = totalDay - curMonDay
+	endloop
+	
+	set udg_Week = MathMod( MathMod(dayBy2015,7) + BASE2015_WEEKDAY, 7 )
+
+endfunction
+
+function GetDate takes integer now returns nothing
+	local integer remain = now - BASE2015_SEC + BJTIME// 默认东八区
+	local integer y = 2016
+	local integer baseRemain = 0
+    local integer dayBy2015 = 0
+    local integer baseDayBy2015 = 0
+    
+	loop
+	exitwhen y > 3000
+		set baseRemain = remain
+        set baseDayBy2015 = dayBy2015
+		if IsLeapYear(y) then
+			set remain = remain - LS
+            set dayBy2015 = dayBy2015 + 366
+		else
+			set remain = remain - NS
+            set dayBy2015 = dayBy2015 + 365
+		endif
+		if remain < 0 then
+			call Time_UpdateDate(y, baseRemain, baseDayBy2015)
+			set y = 10000
+		endif
+		set y = y + 1
+	endloop
+endfunction
+
+
+function ShowDataByTime takes integer time returns nothing
+    if not udg_bIsInit then
+        call InitArray()
+        set udg_bIsInit = true
+    endif
+    if time == 0 then
+        set time = DzAPI_Map_GetGameStartTime()
+    endif
+    call GetDate(time)
+    call BJDebugMsg( "现在时间为" + I2S(udg_Year) + "年" + I2S(udg_Mon)+"月"+ I2S(udg_Day)+"日"+ I2S(udg_Hour)+"时"+ I2S(udg_Min)+"分"+ I2S(udg_Sec)+"秒  "+"星期" + WEEKSTR[udg_Week]  )
+endfunction
+
+function UpdateTimeAllTimer takes nothing returns nothing
+    set udg_ServerTime = udg_ServerTime + 1
+    call GetDate(udg_ServerTime)
+endfunction
+
+function UpdateTimeAll takes nothing returns nothing
+    local timer t = CreateTimer()
+    call InitArray()
+    set udg_ServerTime = DzAPI_Map_GetGameStartTime()
+    call GetDate(udg_ServerTime)
+    call TimerStart( t, 1, true, function UpdateTimeAllTimer )
+    set t = null
+endfunction
 ########
 ########
-//TESH.scrollpos=421
+//TESH.scrollpos=452
 //TESH.alwaysfold=0
 library LuaLibrary initializer Init
     player Lua_player
@@ -6829,6 +6995,207 @@ endlibrary
 ########
 ########
 
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+
+########
+########
+//TESH.scrollpos=126
+//TESH.alwaysfold=0
+function Trig_________________pifchushihuaActions takes nothing returns nothing
+
+
+    set udg_pf[1] = 'A0U8'
+    set udg_pf[2] = 'A0S9'
+    set udg_pf[3] = 'A0WV'
+    set udg_pf[4] = 'A0WY'
+    set udg_pf[5] = 'A0TT'
+    set udg_pf[6] = 'A0UB'
+    set udg_pf[7] = 'A10I'
+    set udg_pf[8] = 'A0VU'
+    set udg_pf[9] = 'A0VV'
+    set udg_pf[10] = 'A10J'
+    set udg_pf[11] = 'A12Y'
+    set udg_pf[12] = 'A10M'
+    set udg_pf[13] = 'A0VZ'
+    set udg_pf[14] = 'A0VC'
+    set udg_pf[15] = 'A10N'
+    set udg_pf[16] = 'A12W'
+    set udg_pf[17] = 'A0UX'
+    set udg_pf[18] = 'A10P'
+    set udg_pf[19] = 'A0V3'
+    set udg_pf[20] = 'A0X4'
+    set udg_pf[21] = 'A0UV'
+    set udg_pf[22] = 'A0UY'
+    set udg_pf[23] = 'A0TU'
+    set udg_pf[24] = 'A10Q'
+    set udg_pf[25] = 'A10S'
+    set udg_pf[26] = 'A0UU'
+    set udg_pf[27] = 'A0UA'
+    set udg_pf[28] = 'A136'
+    set udg_pf[29] = 'A10T'
+    set udg_pf[30] = 'A130'
+    set udg_pf[31] = 'A0XD'
+    set udg_pf[32] = 'A10V'
+    set udg_pf[33] = 'A10W'
+    set udg_pf[34] = 'A10X'
+    set udg_pf[35] = 'A10Y'
+    set udg_pf[36] = 'A0VW'
+    set udg_pf[37] = 'A10Z'
+    set udg_pf[38] = 'A0U5'
+    set udg_pf[39] = 'A110'
+    set udg_pf[40] = 'A112'
+    set udg_pf[41] = 'A111'
+    set udg_pf[42] = 'A113'
+    set udg_pf[43] = 'A0VY'
+    set udg_pf[44] = 'A0X3'
+    set udg_pf[45] = 'A0UZ'
+    set udg_pf[46] = 'A0V4'
+    set udg_pf[47] = 'A0V5'
+    set udg_pf[48] = 'A115'
+    set udg_pf[49] = 'A0V1'
+    set udg_pf[50] = 'A114'
+    set udg_pf[51] = 'A116'
+    set udg_pf[52] = 'A0TV'
+    set udg_pf[53] = 'A155'
+    set udg_pf[54] = 'A117'
+    set udg_pf[55] = 'A11I'
+    set udg_pf[56] = 'A118'
+    set udg_pf[57] = 'A0VX'
+    set udg_pf[58] = 'A119'
+    set udg_pf[59] = 'A11A'
+    set udg_pf[60] = 'A0V2'
+    set udg_pf[61] = 'A0X5'
+    set udg_pf[62] = 'A0V0'
+    set udg_pf[63] = 'A11D'
+    set udg_pf[64] = 'A0U6'
+    set udg_pf[65] = 'A11H'
+    set udg_pf[66] = 'A0TZ'
+    set udg_pf[67] = 'A0U1'
+    set udg_pf[68] = 'A11J'
+    set udg_pf[69] = 'A11L'
+    set udg_pf[70] = 'A11M'
+    set udg_pf[71] = 'A132'
+    set udg_pf[72] = 'A11P'
+    set udg_pf[73] = 'A0VF'
+    set udg_pf[74] = 'A0UI'
+    set udg_pf[75] = 'A12S'
+    set udg_pf[76] = 'A135'
+    set udg_pf[77] = 'A13D'
+    set udg_pf[78] = 'A133'
+    
+    set udg_pf2[1] = 'A11T'
+    set udg_pf2[2] = 'A11R'
+    set udg_pf2[3] = 'A11S'
+    set udg_pf2[4] = 'A13P'
+    set udg_pf2[5] = 'A13Q'
+    set udg_pf2[6] = 'A13R'
+    set udg_pf2[7] = 'A13T'
+    set udg_pf2[8] = 'A13Y'
+    set udg_pf2[9] = 'A12F'
+    set udg_pf2[10] = 'A13X'
+    set udg_pf2[11] = 'A13A'
+    set udg_pf2[12] = 'A13Z'
+    set udg_pf2[13] = 'A140'
+    set udg_pf2[14] = 'A141'
+    set udg_pf2[15] = 'A142'
+    set udg_pf2[16] = 'A143'
+    set udg_pf2[17] = 'A144'
+    set udg_pf2[18] = 'A145'
+    set udg_pf2[19] = 'A146'
+    set udg_pf2[20] = 'A147'
+    set udg_pf2[21] = 'A12G'
+    set udg_pf2[22] = 'A149'
+    set udg_pf2[23] = 'A12C'
+    set udg_pf2[24] = 'A12H'
+    set udg_pf2[25] = 'A14C'
+    set udg_pf2[26] = 'A14D'
+    set udg_pf2[27] = 'A14E'
+    set udg_pf2[28] = 'A12I'
+    set udg_pf2[29] = 'A12M'
+    set udg_pf2[30] = 'A11U'
+    set udg_pf2[31] = 'A11V'
+    set udg_pf2[32] = 'A14I'
+    set udg_pf2[33] = 'A14J'
+    set udg_pf2[34] = 'A14K'
+    set udg_pf2[35] = 'A14L'
+    set udg_pf2[36] = 'A15G'
+    set udg_pf2[37] = 'A15B'
+    set udg_pf2[38] = 'A15I'
+    set udg_pf2[39] = 'A164'
+    set udg_pf2[40] = 'A15J'
+    set udg_pf2[41] = 'A14M'
+    set udg_pf2[42] = 'A14W'
+    set udg_pf2[43] = 'A11x'
+    set udg_pf2[44] = 'A15C'
+    set udg_pf2[45] = 'A14N'
+    set udg_pf2[46] = 'A14P'
+    set udg_pf2[47] = 'A14Q'
+    set udg_pf2[48] = 'A11W'
+    set udg_pf2[49] = 'A120'
+    set udg_pf2[50] = 'A14S'
+    set udg_pf2[51] = 'A14T'
+    set udg_pf2[52] = 'A11Y'
+    set udg_pf2[53] = 'A120'
+    set udg_pf2[54] = 'A122'
+    set udg_pf2[55] = 'A14U'
+    set udg_pf2[56] = 'A14V'
+    set udg_pf2[57] = 'A15H'
+    set udg_pf2[58] = 'A11Z'
+    set udg_pf2[59] = 'A14Y'
+    set udg_pf2[60] = 'A12R'
+    set udg_pf2[61] = 'A12P'
+    set udg_pf2[62] = 'A123'
+    set udg_pf2[63] = 'A127'
+    set udg_pf2[64] = 'A128'
+    set udg_pf2[65] = 'A12A'
+    set udg_pf2[66] = 'A15L'
+    set udg_pf2[67] = 'A15M'
+    set udg_pf2[68] = 'A15N'
+    set udg_pf2[69] = 'A12B'
+    set udg_pf2[70] = 'A129'
+    set udg_pf2[71] = 'A12D'
+    set udg_pf2[72] = 'A12E'
+    set udg_pf2[73] = 'A12U'
+    set udg_pf2[74] = 'A15A'
+    set udg_pf2[75] = 'A12Q'
+    set udg_pf2[76] = 'A14R'
+    set udg_pf2[77] = 'A13F'
+    set udg_pf2[78] = 'A156'
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig______________PFBL takes nothing returns nothing
+    set gg_trg______________PFBL = CreateTrigger()
+#ifdef DEBUG
+    call YDWESaveTriggerName(gg_trg______________PFBL, "皮肤初始化")
+#endif
+    call TriggerRegisterTimerEventSingle( gg_trg______________PFBL, 2.00 )
+    call TriggerAddAction(gg_trg______________PFBL, function Trig_________________pifchushihuaActions)
+endfunction
 ########
 ########
 
