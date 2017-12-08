@@ -13,7 +13,7 @@ HeroExpRange=0.0
 TradingIncLarge=1000
 BuildingKillsGiveExp=1
 UpkeepUsage=100,100,10000,10000,10000,10000,10000,10000,10000,10000
-DamageBonusHero=1.00,1.00,1.00,0.70,1.00,1.00,0.05,1.00
+DamageBonusHero=1.00,1.00,1.00,0.70,1.00,0.95,0.05,1.00
 DamageBonusPierce=2.00,1.00,0.50,0.70,1.00,1.25,0.05,1.50
 BoneDecayTime=15.0
 DamageBonusSpells=1.00,1.00,1.00,1.00,1.00,1.00,0.05,0.80
@@ -50,4 +50,8 @@ XPFactor=0.00,0
 
 [TWN3]
 XPFactor=0.00,0
+
+[FontHeights]
+WorldFrameUnitMessage=0.013
+WorldFrameChatMessage=0.012
 

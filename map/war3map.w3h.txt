@@ -1268,7 +1268,7 @@ fnsf=
 ftat=
 [B04G:BEer]
 ftip=施法
-fube=石头人正在施法中
+fube=此单位在施法中
 ftat=
 fart=ReplaceableTextures\CommandButtons\BTNReplay-Pause.blp
 fta0=
@@ -1329,3 +1329,13 @@ fta0=origin
 ftac=1
 ftat=war3mapImported\magicreceive_red.mdx
 fart=AceE.blp
+[B04R:BEer]
+ftip=幻术
+fube=该单位中了幻术
+ftat=
+fart=ReplaceableTextures\CommandButtons\BTNReplay-Pause.blp
+fta0=
+[B04U:Bakb]
+ftip=猫头鹰因子
+fube=附近每多一名队友，缇娜面板攻击力增加4%，当附近没有队友时，移动速度增加60点
+fart=ReplaceableTextures\PassiveButtons\PASBTNElunesBlessing.blp
