@@ -1,79 +1,418 @@
 STRING 0
 {
-学习|cff9000ff收割之镰|r(E)
+|cffaa7525石墙炼成|r等级3（Q）
 }
 
-STRING 271
+STRING 136
 {
-单机模式下：
--djcs（单机测试）
--cxxr (重新选人)
-任意玩家输入：
--BUG (解除卡死)
--OB （自由模式下、选择人物前，输入后成为观看者）
--zs    （自杀）
--pk -j（邀请PK）（接受PK）
--gbhy （关闭回应）
--kqhy （开启回应）
+Response\Saber\what\aidehua1.mp3;Response\Saber\what\aidehua2.mp3;Response\Saber\what\aidehua3.mp3;Response\Saber\what\aidehua4.mp3;Response\Saber\what\aidehua5.mp3;Response\Saber\what\aidehua6.mp3;Response\Saber\what\aidehua7.mp3;Response\Saber\what\kelaode0.mp3;
 }
 
-STRING 617
+STRING 139
 {
-|cff2599cc高阶奥术箭：|r消耗125+5%最大魔法值
-对目标造成消耗魔法值100%~120%的魔法伤害
-该伤害在250范围内50%溅射
-|cffaabbff间隔时间：|r2秒
-
-|cff40aadd魔法反噬：|r1000范围内敌方英雄
-使用技能消耗魔法提高20%并受到等量伤害
-
-|cff7575ff奥术攻击：|r攻击附加智力×0.4~0.6的魔法伤害
-|cffaabbff间隔时间：|r1秒
-|cffffcc00智力属性非最高伤害减半|r
+Response\Saber\what\aidehua1.mp3;Response\Saber\what\aidehua2.mp3;Response\Saber\what\aidehua3.mp3;Response\Saber\what\aidehua4.mp3;Response\Saber\what\aidehua5.mp3;Response\Saber\what\aidehua6.mp3;Response\Saber\what\aidehua7.mp3;Response\Saber\what\kelaode0.mp3;
 }
 
-STRING 709
+STRING 142
 {
-Response\kcwiki\attack\1.mp3;Response\kcwiki\attack\2.mp3;Response\kcwiki\attack\3.mp3;Response\kcwiki\attack\4.mp3;Response\kcwiki\attack\5.mp3;Response\kcwiki\attack\6.mp3;Response\kcwiki\attack\7.mp3;Response\kcwiki\attack\8.mp3;Response\kcwiki\attack\9.mp3;Response\kcwiki\attack\10.mp3;
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\move\10.mp3;Response\kelaode\move\11.mp3;Response\kelaode\move\12.mp3;Response\kelaode\move\13.mp3;
+}
+
+STRING 148
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\move\10.mp3;Response\kelaode\move\11.mp3;Response\kelaode\move\12.mp3;Response\kelaode\move\13.mp3;
+}
+
+STRING 636
+{
+Response\JCL\move\1.mp3;Response\JCL\move\2.mp3;Response\JCL\move\3.mp3;Response\JCL\move\4.mp3;Response\JCL\move\5.mp3;Response\JCL\move\6.mp3;Response\JCL\move\7.mp3;Response\JCL\move\8.mp3;Response\JCL\move\9.mp3;Response\JCL\move\10.mp3;Response\JCL\move\11.mp3;
+}
+
+STRING 637
+{
+Response\JCL\move\1.mp3;Response\JCL\move\2.mp3;Response\JCL\move\3.mp3;Response\JCL\move\4.mp3;Response\JCL\move\5.mp3;Response\JCL\move\6.mp3;Response\JCL\move\7.mp3;Response\JCL\move\8.mp3;Response\JCL\move\9.mp3;Response\JCL\move\10.mp3;Response\JCL\move\11.mp3;
+}
+
+STRING 694
+{
+Response\kcwiki\1.mp3;Response\kcwiki\2.mp3;Response\kcwiki\3.mp3;Response\kcwiki\4.mp3;Response\kcwiki\5.mp3;Response\kcwiki\6.mp3;Response\kcwiki\7.mp3;Response\kcwiki\8.mp3;Response\kcwiki\9.mp3;Response\kcwiki\10.mp3;Response\kcwiki\11.mp3;Response\kcwiki\12.mp3;Response\kcwiki\13.mp3;
+}
+
+STRING 695
+{
+Response\kcwiki\1.mp3;Response\kcwiki\2.mp3;Response\kcwiki\3.mp3;Response\kcwiki\4.mp3;Response\kcwiki\5.mp3;Response\kcwiki\6.mp3;Response\kcwiki\7.mp3;Response\kcwiki\8.mp3;Response\kcwiki\9.mp3;Response\kcwiki\10.mp3;Response\kcwiki\11.mp3;Response\kcwiki\12.mp3;Response\kcwiki\13.mp3;
+}
+
+STRING 710
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
+}
+
+STRING 711
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
 }
 
 STRING 712
 {
-Response\kcwiki\move\1.mp3;Response\kcwiki\move\2.mp3;Response\kcwiki\move\3.mp3;Response\kcwiki\move\4.mp3;Response\kcwiki\move\5.mp3;Response\kcwiki\move\6.mp3;Response\kcwiki\move\7.mp3;Response\kcwiki\move\8.mp3;Response\kcwiki\move\9.mp3;Response\kcwiki\move\10.mp3;
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
 }
 
-STRING 3221
+STRING 718
 {
-降低部分技能特效
-降低塔受到攻击增强的防御
-增加分经验时获得的经验
-治愈师：
-死亡时增恢复队友血量
-天使
-天雷光束【RQ】
-雷光风暴【W】
-暗影十六连斩【D】
-以上技能伤害从 （X敏捷） 变为  （X最高属性）
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
 }
 
-STRING 3265
+STRING 719
 {
-Response\kcwiki\attack\1.mp3;Response\kcwiki\attack\2.mp3;Response\kcwiki\attack\3.mp3;Response\kcwiki\attack\4.mp3;Response\kcwiki\attack\5.mp3;Response\kcwiki\attack\6.mp3;Response\kcwiki\attack\7.mp3;Response\kcwiki\attack\8.mp3;Response\kcwiki\attack\9.mp3;Response\kcwiki\attack\10.mp3;
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
 }
 
-STRING 3268
+STRING 720
 {
-Response\kcwiki\move\1.mp3;Response\kcwiki\move\2.mp3;Response\kcwiki\move\3.mp3;Response\kcwiki\move\4.mp3;Response\kcwiki\move\5.mp3;Response\kcwiki\move\6.mp3;Response\kcwiki\move\7.mp3;Response\kcwiki\move\8.mp3;Response\kcwiki\move\9.mp3;Response\kcwiki\move\10.mp3;
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
 }
 
-STRING 3749
+STRING 721
 {
-全明星战役伤害类型分为四类：
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
 
-魔法伤害（计算魔抗/无视护甲/无法攻击小精灵/可以攻击虚无单位）
-物理伤害（无视魔抗/计算护甲/可以攻击小精灵/无法攻击虚无单位）
-强化伤害（无视魔抗/无视护甲/可以攻击小精灵/无法攻击虚无单位）
-混乱伤害（无视魔抗/无视算护/无法攻击小精灵/无法攻击虚无单位）
+STRING 722
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 723
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 724
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 725
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 726
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 727
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 728
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 729
+{
+Response\xiana\1.mp3;Response\xiana\2.mp3;Response\xiana\3.mp3;Response\xiana\4.mp3;Response\xiana\5.mp3;Response\xiana\6.mp3;Response\xiana\7.mp3;Response\xiana\8.mp3;Response\xiana\9.mp3;Response\xiana\10.mp3;Response\xiana\11.mp3;Response\xiana\12.mp3;Response\xiana\13.mp3;Response\xiana\14.mp3;Response\xiana\15.mp3;
+}
+
+STRING 730
+{
+Response\lingmeng\1.mp3;Response\lingmeng\2.mp3;Response\lingmeng\3.mp3;Response\lingmeng\4.mp3;Response\lingmeng\5.mp3;Response\lingmeng\6.mp3;Response\lingmeng\7.mp3;Response\lingmeng\8.mp3;Response\lingmeng\9.mp3;Response\lingmeng\10.mp3;Response\lingmeng\11.mp3;Response\lingmeng\12.mp3;Response\lingmeng\13.mp3;Response\lingmeng\14.mp3;
+}
+
+STRING 731
+{
+Response\lingmeng\1.mp3;Response\lingmeng\2.mp3;Response\lingmeng\3.mp3;Response\lingmeng\4.mp3;Response\lingmeng\5.mp3;Response\lingmeng\6.mp3;Response\lingmeng\7.mp3;Response\lingmeng\8.mp3;Response\lingmeng\9.mp3;Response\lingmeng\10.mp3;Response\lingmeng\11.mp3;Response\lingmeng\12.mp3;Response\lingmeng\13.mp3;Response\lingmeng\14.mp3;
+}
+
+STRING 732
+{
+Response\lingmeng\1.mp3;Response\lingmeng\2.mp3;Response\lingmeng\3.mp3;Response\lingmeng\4.mp3;Response\lingmeng\5.mp3;Response\lingmeng\6.mp3;Response\lingmeng\7.mp3;Response\lingmeng\8.mp3;Response\lingmeng\9.mp3;Response\lingmeng\10.mp3;Response\lingmeng\11.mp3;Response\lingmeng\12.mp3;Response\lingmeng\13.mp3;Response\lingmeng\14.mp3;
+}
+
+STRING 733
+{
+Response\lingmeng\1.mp3;Response\lingmeng\2.mp3;Response\lingmeng\3.mp3;Response\lingmeng\4.mp3;Response\lingmeng\5.mp3;Response\lingmeng\6.mp3;Response\lingmeng\7.mp3;Response\lingmeng\8.mp3;Response\lingmeng\9.mp3;Response\lingmeng\10.mp3;Response\lingmeng\11.mp3;Response\lingmeng\12.mp3;Response\lingmeng\13.mp3;Response\lingmeng\14.mp3;
+}
+
+STRING 734
+{
+Response\lingmeng\1.mp3;Response\lingmeng\2.mp3;Response\lingmeng\3.mp3;Response\lingmeng\4.mp3;Response\lingmeng\5.mp3;Response\lingmeng\6.mp3;Response\lingmeng\7.mp3;Response\lingmeng\8.mp3;Response\lingmeng\9.mp3;Response\lingmeng\10.mp3;Response\lingmeng\11.mp3;Response\lingmeng\12.mp3;Response\lingmeng\13.mp3;Response\lingmeng\14.mp3;
+}
+
+STRING 735
+{
+Response\lingmeng\1.mp3;Response\lingmeng\2.mp3;Response\lingmeng\3.mp3;Response\lingmeng\4.mp3;Response\lingmeng\5.mp3;Response\lingmeng\6.mp3;Response\lingmeng\7.mp3;Response\lingmeng\8.mp3;Response\lingmeng\9.mp3;Response\lingmeng\10.mp3;Response\lingmeng\11.mp3;Response\lingmeng\12.mp3;Response\lingmeng\13.mp3;Response\lingmeng\14.mp3;
+}
+
+STRING 773
+{
+不能以该单位作为目标。
+}
+
+STRING 1903
+{
+|cffff0000防守模式|r
+-自选英雄
+-无野怪
+-初始5000金钱
+-过关2500金钱
+-所有玩家一队
+-1次关卡重置机会
+-流光羽衣禁止使用
+-生命百分比伤害无效
+-旋风战斧(横扫)无效
+-屠夫(肥肥)禁止使用
+-买活花费与关卡有关
+注意：敌人�
+}
+
+STRING 2270
+{
+秒
+}
+
+STRING 2290
+{
+如有建议或遇到bug请到百度贴吧或玩家群讨论
+}
+
+STRING 2861
+{
+没卖了/非卖品
+}
+
+STRING 2862
+{
+没卖了/非卖品
+}
+
+STRING 3101
+{
+种类： |Cffffcc00城墙|R
+}
+
+STRING 3102
+{
+种类： |Cffffcc00神圣|R
+}
+
+STRING 3115
+{
+|n|cff75ff75普通→城墙(70%)|r|n|cff75ff75穿刺→城墙(70%)|r|n|cffff7500攻城→城墙(150%)|r|n魔法→城墙(100%)|n|n技能→城墙(100%)|n|cff75ff75英雄→城墙(70%)|r
+}
+
+STRING 3116
+{
+|n普通→英雄(100%)|r|n|cffffff00穿刺→英雄(125%)|r|n|cff75ff75攻城→英雄(70%)|r|n|cff75ff75魔法→英雄(70%)|r|n|n技能→英雄(100%)|n英雄→英雄(100%)
+}
+
+STRING 3117
+{
+|n|cff75ff75普通→重型(80%)|r|n|cff00ff00穿刺→重型(50%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff0000魔法→重型(200%)|r|n|n技能→重型(100%)|n英雄→重型(100%)
+}
+
+STRING 3118
+{
+|n|cffffff00普通→中型(120%)|r|n穿刺→中型(100%)|n|cff75ff75攻城→中型(75%)|r|n|cff75ff75魔法→中型(75%)|r|n|n技能→中型(100%)|n英雄→中型(100%)
+}
+
+STRING 3119
+{
+|n|cffffff00普通→中型(120%)|r|n穿刺→中型(100%)|n|cff75ff75攻城→中型(75%)|r|n|cff75ff75魔法→中型(75%)|r|n|n技能→中型(100%)|n英雄→中型(100%)
+}
+
+STRING 3120
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffff0000穿刺→轻型(200%)|r|n|cff00ff00攻城→轻型(50%)|r|n|cff00ff00魔法→轻型(50%)|r|n|n技能→轻型(100%)|n英雄→轻型(100%)
+}
+
+STRING 3122
+{
+|n|cff75ff75普通→城墙(70%)|r|n|cff75ff75穿刺→城墙(70%)|r|n|cffff7500攻城→城墙(150%)|r|n魔法→城墙(100%)|n|n技能→城墙(100%)|n|cff75ff75英雄→城墙(70%)|r
+}
+
+STRING 3123
+{
+|n普通→英雄(100%)|r|n|cffffff00穿刺→英雄(125%)|r|n|cff75ff75攻城→英雄(70%)|r|n|cff75ff75魔法→英雄(70%)|r|n|n技能→英雄(100%)|n英雄→英雄(100%)
+}
+
+STRING 3124
+{
+|n|cff75ff75普通→重型(80%)|r|n|cff00ff00穿刺→重型(50%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff0000魔法→重型(200%)|r|n|n技能→重型(100%)|n英雄→重型(100%)
+}
+
+STRING 3125
+{
+种类： |Cffffcc00混乱|r
+}
+
+STRING 3128
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffff0000穿刺→轻型(200%)|r|n|cff00ff00攻城→轻型(50%)|r|n|cff00ff00魔法→轻型(50%)|r|n|n技能→轻型(100%)|n英雄→轻型(100%)
+}
+
+STRING 3133
+{
+|n|cff75ff75普通→城墙(70%)|r|n|cff75ff75穿刺→城墙(70%)|r|n|cffff7500攻城→城墙(150%)|r|n魔法→城墙(100%)|n|n技能→城墙(100%)|n|cff75ff75英雄→城墙(70%)|r
+}
+
+STRING 3134
+{
+|n普通→英雄(100%)|r|n|cffffff00穿刺→英雄(125%)|r|n|cff75ff75攻城→英雄(70%)|r|n|cff75ff75魔法→英雄(70%)|r|n|n技能→英雄(100%)|n英雄→英雄(100%)
+}
+
+STRING 3135
+{
+|n|cff75ff75普通→重型(80%)|r|n|cff00ff00穿刺→重型(50%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff0000魔法→重型(200%)|r|n|n技能→重型(100%)|n英雄→重型(100%)
+}
+
+STRING 3136
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffff0000穿刺→轻型(200%)|r|n|cff00ff00攻城→轻型(50%)|r|n|cff00ff00魔法→轻型(50%)|r|n|n技能→轻型(100%)|n英雄→轻型(100%)
+}
+
+STRING 3138
+{
+|n英雄→轻型(100%)|n英雄→中型(100%)|n英雄→重型(100%)|r|n英雄→魔抗(100%)|n|cff75ffff英雄→城墙(70%)|r|n|n|cff757575英雄→虚无(无效)|r|n英雄→英雄(100%)
+}
+
+STRING 3149
+{
+|n|cff00ffff攻城→轻型(50%)|r|n|cff75ffff攻城→中型(75%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff7500攻城→魔抗(150%)|n|cffff7500攻城→城墙(150%)|n|n|cff757575攻城→虚无(无效)|n|cff75ffff攻城→英雄(70%)
+}
+
+STRING 3150
+{
+|n英雄→轻型(100%)|n英雄→中型(100%)|n英雄→重型(100%)|r|n英雄→魔抗(100%)|n|cff75ffff英雄→城墙(70%)|r|n|n|cff757575英雄→虚无(无效)|r|n英雄→英雄(100%)
+}
+
+STRING 3169
+{
+种类： |Cffffcc00魔盾|R
+}
+
+STRING 3178
+{
+|n|cff00ffff攻城→轻型(50%)|r|n|cff75ffff攻城→中型(75%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff7500攻城→魔抗(150%)|n|cffff7500攻城→城墙(150%)|n|n|cff757575攻城→虚无(无效)|n|cff75ffff攻城→英雄(70%)
+}
+
+STRING 3182
+{
+|n英雄→轻型(100%)|n英雄→中型(100%)|n英雄→重型(100%)|r|n英雄→魔抗(100%)|n|cff75ffff英雄→城墙(70%)|r|n|n|cff757575英雄→虚无(无效)|r|n英雄→英雄(100%)
+}
+
+STRING 3206
+{
+|n|cff00ffff攻城→轻型(50%)|r|n|cff75ffff攻城→中型(75%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff7500攻城→魔抗(150%)|n|cffff7500攻城→城墙(150%)|n|n|cff757575攻城→虚无(无效)|n|cff75ffff攻城→英雄(70%)
+}
+
+STRING 3222
+{
+|n|cffff0000穿刺→轻型(200%)|r|n穿刺→中型(100%)|n|cff00ffff穿刺→重型(50%)|n|cffff7500穿刺→魔抗(150%)|n|cff75ffff穿刺→城墙(70%)|n|n|cff757575穿刺→虚无(无效)|n|cffffff00穿刺→英雄(125%)
+}
+
+STRING 3225
+{
+|n|cffff0000穿刺→轻型(200%)|r|n穿刺→中型(100%)|n|cff00ffff穿刺→重型(50%)|n|cffff7500穿刺→魔抗(150%)|n|cff75ffff穿刺→城墙(70%)|n|n|cff757575穿刺→虚无(无效)|n|cffffff00穿刺→英雄(125%)
+}
+
+STRING 3229
+{
+|n|cffff0000穿刺→轻型(200%)|r|n穿刺→中型(100%)|n|cff00ffff穿刺→重型(50%)|n|cffff7500穿刺→魔抗(150%)|n|cff75ffff穿刺→城墙(70%)|n|n|cff757575穿刺→虚无(无效)|n|cffffff00穿刺→英雄(125%)
+}
+
+STRING 3231
+{
+|n普通→魔盾(100%)|n|cffff7500穿刺→魔盾(150%)|r|n|cffff7500攻城→魔盾(150%)|r|n|cff00ff00魔法→魔盾(25%)|r|n|n|cff75ff75技能→魔盾(80%)|r|n英雄→魔盾(100%)
+}
+
+STRING 3237
+{
+|n普通→魔盾(100%)|n|cffff7500穿刺→魔盾(150%)|r|n|cffff7500攻城→魔盾(150%)|r|n|cff00ff00魔法→魔盾(25%)|r|n|n|cff75ff75技能→魔盾(80%)|r|n英雄→魔盾(100%)
+}
+
+STRING 3239
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 3240
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 3241
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 3242
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 3243
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 3244
+{
+|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+}
+
+STRING 3292
+{
+|n|cff00ffff魔法→轻型(50%)|r|n|cff75ffff魔法→中型(75%)|r|n|cffff0000魔法→重型(200%)|r|n|cff757575魔法→魔抗(25%)|r|n魔法→城墙(100%)|n|n|cff00ff00魔法→虚无(120%)|n|cff75ffff魔法→英雄(70%)
+}
+
+STRING 3303
+{
+|n|cff00ff00混乱→任何护甲(100%)|r|n|n|cff757575这是一个传说→→|r
+}
+
+STRING 3304
+{
+|n|cff00ffff魔法→轻型(50%)|r|n|cff75ffff魔法→中型(75%)|r|n|cffff0000魔法→重型(200%)|r|n|cff757575魔法→魔抗(25%)|r|n魔法→城墙(100%)|n|n|cff00ff00魔法→虚无(120%)|n|cff75ffff魔法→英雄(70%)
+}
+
+STRING 3305
+{
+|n|cff00ff00混乱→任何护甲(100%)|r|n|n|cff757575这是一个传说→→|r
+}
+
+STRING 3306
+{
+|n|cff00ffff魔法→轻型(50%)|r|n|cff75ffff魔法→中型(75%)|r|n|cffff0000魔法→重型(200%)|r|n|cff757575魔法→魔抗(25%)|r|n魔法→城墙(100%)|n|n|cff00ff00魔法→虚无(120%)|n|cff75ffff魔法→英雄(70%)
+}
+
+STRING 3307
+{
+|n|cff00ff00混乱→任何护甲(100%)|r|n|n|cff757575这是一个传说→→|r
+}
+
+STRING 3441
+{
+|n|cffffff00混乱→神圣(100%)|n|cff757575其他→神圣(5%)|r|n|n|cff757575我本来也是一个传说|n直到我的膝盖遇到了混乱攻击的箭|r
+}
+
+STRING 3442
+{
+|n|cffffff00混乱→神圣(100%)|n|cff757575其他→神圣(5%)|r|n|n|cff757575我本来也是一个传说|n直到我的膝盖遇到了混乱攻击的箭|r
+}
+
+STRING 3443
+{
+|n|cffffff00混乱→神圣(100%)|n|cff757575其他→神圣(5%)|r|n|n|cff757575我本来也是一个传说|n直到我的膝盖遇到了混乱攻击的箭|r
+}
+
+STRING 4045
+{
+虚无单位只能被技能/魔法攻击
 }
 
 STRING 4809
@@ -92,374 +431,956 @@ STRING 4809
 |cffffcc00智力属性非最高伤害减半|r
 }
 
-STRING 5649
+STRING 4813
 {
-MISS
+|cff2599cc高阶奥术箭：|r消耗125+5%最大魔法值
+对目标造成消耗魔法值100%~120%的魔法伤害
+该伤害在250范围内50%溅射
+|cffaabbff间隔时间：|r2秒
+
+|cff40aadd魔法反噬：|r1000范围内敌方英雄
+使用技能消耗魔法提高20%并受到等量伤害
+
+|cff7575ff奥术攻击：|r攻击附加智力×0.4~0.6的魔法伤害
+|cffaabbff间隔时间：|r1秒
+|cffffcc00智力属性非最高伤害减半|r
 }
 
-STRING 11272
-{
-钱不够啊笨蛋，咱这不打折
-}
-
-STRING 11273
-{
-不能以该单位作为目标。
-}
-
-STRING 11274
-{
-没卖了/非卖品
-}
-
-STRING 11275
-{
-没卖了/非卖品
-}
-
-STRING 11276
-{
-虚无单位只能被技能/魔法攻击
-}
-
-STRING 11277
-{
-敏捷
-}
-
-STRING 11278
-{
-种类： |Cffffcc00城墙|R
-}
-
-STRING 11279
-{
-种类： |Cffffcc00神圣|R
-}
-
-STRING 11280
-{
-种类： |Cffffcc00魔盾|R
-}
-
-STRING 11281
-{
-|n|cff75ff75普通→城墙(70%)|r|n|cff75ff75穿刺→城墙(70%)|r|n|cffff7500攻城→城墙(150%)|r|n魔法→城墙(100%)|n|n技能→城墙(100%)|n|cff75ff75英雄→城墙(70%)|r
-}
-
-STRING 11282
-{
-|n普通→英雄(100%)|r|n|cffffff00穿刺→英雄(125%)|r|n|cff75ff75攻城→英雄(70%)|r|n|cff75ff75魔法→英雄(70%)|r|n|n技能→英雄(100%)|n英雄→英雄(100%)
-}
-
-STRING 11283
-{
-|n|cff75ff75普通→重型(80%)|r|n|cff00ff00穿刺→重型(50%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff0000魔法→重型(200%)|r|n|n技能→重型(100%)|n英雄→重型(100%)
-}
-
-STRING 11284
-{
-|n|cffffff00普通→中型(120%)|r|n穿刺→中型(100%)|n|cff75ff75攻城→中型(75%)|r|n|cff75ff75魔法→中型(75%)|r|n|n技能→中型(100%)|n英雄→中型(100%)
-}
-
-STRING 11285
-{
-|n|cffffff00普通→中型(120%)|r|n穿刺→中型(100%)|n|cff75ff75攻城→中型(75%)|r|n|cff75ff75魔法→中型(75%)|r|n|n技能→中型(100%)|n英雄→中型(100%)
-}
-
-STRING 11286
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffff0000穿刺→轻型(200%)|r|n|cff00ff00攻城→轻型(50%)|r|n|cff00ff00魔法→轻型(50%)|r|n|n技能→轻型(100%)|n英雄→轻型(100%)
-}
-
-STRING 11287
-{
-|n|cffffff00混乱→神圣(100%)|n|cff757575其他→神圣(5%)|r|n|n|cff757575我本来也是一个传说|n直到我的膝盖遇到了混乱攻击的箭|r
-}
-
-STRING 11288
-{
-|n普通→魔盾(100%)|n|cffff7500穿刺→魔盾(150%)|r|n|cffff7500攻城→魔盾(150%)|r|n|cff00ff00魔法→魔盾(25%)|r|n|n|cff75ff75技能→魔盾(80%)|r|n英雄→魔盾(100%)
-}
-
-STRING 11289
-{
-|n|cff75ff75普通→城墙(70%)|r|n|cff75ff75穿刺→城墙(70%)|r|n|cffff7500攻城→城墙(150%)|r|n魔法→城墙(100%)|n|n技能→城墙(100%)|n|cff75ff75英雄→城墙(70%)|r
-}
-
-STRING 11290
-{
-|n普通→英雄(100%)|r|n|cffffff00穿刺→英雄(125%)|r|n|cff75ff75攻城→英雄(70%)|r|n|cff75ff75魔法→英雄(70%)|r|n|n技能→英雄(100%)|n英雄→英雄(100%)
-}
-
-STRING 11291
-{
-|n|cff75ff75普通→重型(80%)|r|n|cff00ff00穿刺→重型(50%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff0000魔法→重型(200%)|r|n|n技能→重型(100%)|n英雄→重型(100%)
-}
-
-STRING 11292
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffff0000穿刺→轻型(200%)|r|n|cff00ff00攻城→轻型(50%)|r|n|cff00ff00魔法→轻型(50%)|r|n|n技能→轻型(100%)|n英雄→轻型(100%)
-}
-
-STRING 11293
-{
-|n|cffffff00混乱→神圣(100%)|n|cff757575其他→神圣(5%)|r|n|n|cff757575我本来也是一个传说|n直到我的膝盖遇到了混乱攻击的箭|r
-}
-
-STRING 11294
-{
-|n普通→魔盾(100%)|n|cffff7500穿刺→魔盾(150%)|r|n|cffff7500攻城→魔盾(150%)|r|n|cff00ff00魔法→魔盾(25%)|r|n|n|cff75ff75技能→魔盾(80%)|r|n英雄→魔盾(100%)
-}
-
-STRING 11295
-{
-|n|cff75ff75普通→城墙(70%)|r|n|cff75ff75穿刺→城墙(70%)|r|n|cffff7500攻城→城墙(150%)|r|n魔法→城墙(100%)|n|n技能→城墙(100%)|n|cff75ff75英雄→城墙(70%)|r
-}
-
-STRING 11296
-{
-|n普通→英雄(100%)|r|n|cffffff00穿刺→英雄(125%)|r|n|cff75ff75攻城→英雄(70%)|r|n|cff75ff75魔法→英雄(70%)|r|n|n技能→英雄(100%)|n英雄→英雄(100%)
-}
-
-STRING 11297
-{
-|n|cff75ff75普通→重型(80%)|r|n|cff00ff00穿刺→重型(50%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff0000魔法→重型(200%)|r|n|n技能→重型(100%)|n英雄→重型(100%)
-}
-
-STRING 11298
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffff0000穿刺→轻型(200%)|r|n|cff00ff00攻城→轻型(50%)|r|n|cff00ff00魔法→轻型(50%)|r|n|n技能→轻型(100%)|n英雄→轻型(100%)
-}
-
-STRING 11299
-{
-|n|cffffff00混乱→神圣(100%)|n|cff757575其他→神圣(5%)|r|n|n|cff757575我本来也是一个传说|n直到我的膝盖遇到了混乱攻击的箭|r
-}
-
-STRING 11300
-{
- - 每点提高0.8%攻击速度
-}
-
-STRING 11303
-{
-|cffffffff
-}
-
-STRING 11304
-{
- - 每点提高%d点生命值
-}
-
-STRING 11305
-{
- - 每点提高0.05/s生命值恢复|n - 每点提高0.2点护甲
-}
-
-STRING 11306
-{
- - 每点提高%d点魔法值
-}
-
-STRING 11307
-{
- - 每点提高0.03/s魔法恢复速度
-}
-
-STRING 11308
-{
-敏捷：
-}
-
-STRING 11309
+STRING 4858
 {
 游戏时间：秒
 }
 
-STRING 11310
-{
-种类： |Cffffcc00混乱|r
-}
-
-STRING 11311
-{
-|n英雄→轻型(100%)|n英雄→中型(100%)|n英雄→重型(100%)|r|n英雄→魔抗(100%)|n|cff75ffff英雄→城墙(70%)|r|n|n|cff757575英雄→虚无(无效)|r|n英雄→英雄(100%)
-}
-
-STRING 11312
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
-}
-
-STRING 11313
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
-}
-
-STRING 11314
-{
-|n|cff00ffff魔法→轻型(50%)|r|n|cff75ffff魔法→中型(75%)|r|n|cffff0000魔法→重型(200%)|r|n|cff757575魔法→魔抗(25%)|r|n魔法→城墙(100%)|n|n|cff00ff00魔法→虚无(120%)|n|cff75ffff魔法→英雄(70%)
-}
-
-STRING 11315
-{
-|n|cffff0000穿刺→轻型(200%)|r|n穿刺→中型(100%)|n|cff00ffff穿刺→重型(50%)|n|cffff7500穿刺→魔抗(150%)|n|cff75ffff穿刺→城墙(70%)|n|n|cff757575穿刺→虚无(无效)|n|cffffff00穿刺→英雄(125%)
-}
-
-STRING 11316
-{
-|n|cff00ff00混乱→任何护甲(100%)|r|n|n|cff757575这是一个传说→→|r
-}
-
-STRING 11317
-{
-|n|cff00ffff攻城→轻型(50%)|r|n|cff75ffff攻城→中型(75%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff7500攻城→魔抗(150%)|n|cffff7500攻城→城墙(150%)|n|n|cff757575攻城→虚无(无效)|n|cff75ffff攻城→英雄(70%)
-}
-
-STRING 11318
-{
-|n英雄→轻型(100%)|n英雄→中型(100%)|n英雄→重型(100%)|r|n英雄→魔抗(100%)|n|cff75ffff英雄→城墙(70%)|r|n|n|cff757575英雄→虚无(无效)|r|n英雄→英雄(100%)
-}
-
-STRING 11320
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
-}
-
-STRING 11321
-{
-|n|cff00ffff魔法→轻型(50%)|r|n|cff75ffff魔法→中型(75%)|r|n|cffff0000魔法→重型(200%)|r|n|cff757575魔法→魔抗(25%)|r|n魔法→城墙(100%)|n|n|cff00ff00魔法→虚无(120%)|n|cff75ffff魔法→英雄(70%)
-}
-
-STRING 11322
-{
-|n|cffff0000穿刺→轻型(200%)|r|n穿刺→中型(100%)|n|cff00ffff穿刺→重型(50%)|n|cffff7500穿刺→魔抗(150%)|n|cff75ffff穿刺→城墙(70%)|n|n|cff757575穿刺→虚无(无效)|n|cffffff00穿刺→英雄(125%)
-}
-
-STRING 11323
-{
-|n|cff00ff00混乱→任何护甲(100%)|r|n|n|cff757575这是一个传说→→|r
-}
-
-STRING 11324
-{
-|n|cff00ffff攻城→轻型(50%)|r|n|cff75ffff攻城→中型(75%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff7500攻城→魔抗(150%)|n|cffff7500攻城→城墙(150%)|n|n|cff757575攻城→虚无(无效)|n|cff75ffff攻城→英雄(70%)
-}
-
-STRING 11325
-{
-|n英雄→轻型(100%)|n英雄→中型(100%)|n英雄→重型(100%)|r|n英雄→魔抗(100%)|n|cff75ffff英雄→城墙(70%)|r|n|n|cff757575英雄→虚无(无效)|r|n英雄→英雄(100%)
-}
-
-STRING 11326
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
-}
-
-STRING 11327
-{
-|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
-}
-
-STRING 11328
-{
-|n|cff00ffff魔法→轻型(50%)|r|n|cff75ffff魔法→中型(75%)|r|n|cffff0000魔法→重型(200%)|r|n|cff757575魔法→魔抗(25%)|r|n魔法→城墙(100%)|n|n|cff00ff00魔法→虚无(120%)|n|cff75ffff魔法→英雄(70%)
-}
-
-STRING 11329
-{
-|n|cffff0000穿刺→轻型(200%)|r|n穿刺→中型(100%)|n|cff00ffff穿刺→重型(50%)|n|cffff7500穿刺→魔抗(150%)|n|cff75ffff穿刺→城墙(70%)|n|n|cff757575穿刺→虚无(无效)|n|cffffff00穿刺→英雄(125%)
-}
-
-STRING 11330
-{
-|n|cff00ff00混乱→任何护甲(100%)|r|n|n|cff757575这是一个传说→→|r
-}
-
-STRING 11331
-{
-|n|cff00ffff攻城→轻型(50%)|r|n|cff75ffff攻城→中型(75%)|r|n|cffffff00攻城→重型(120%)|r|n|cffff7500攻城→魔抗(150%)|n|cffff7500攻城→城墙(150%)|n|n|cff757575攻城→虚无(无效)|n|cff75ffff攻城→英雄(70%)
-}
-
-STRING 11332
+STRING 4859
 {
 游戏时间：分
 }
 
-STRING 11333
+STRING 4860
 {
 游戏时间：分
 }
 
-STRING 11334
+STRING 4861
 {
 黄金主要是击杀敌人获得的奖励。
 }
 
-STRING 11335
+STRING 4862
 {
 游戏进行的时间
 }
 
-STRING 11336
-{
-秒
-}
-
-STRING 11337
-{
-如有建议或遇到bug请到百度贴吧或玩家群讨论
-}
-
-STRING 11338
+STRING 4863
 {
 游戏进行的时间
 }
 
-STRING 11339
-{
-|cff00ff00全明星战役|cffffff003.2a
-}
-
-STRING 12222
-{
- 
- 
-|cFFCC6600混战模式|r
--全明星战役四周年庆开放！
--胜利方式：100团队击杀 或者 游戏30分钟
-在这极短复活时间、随意传送并且不需要对线的模式下，占领星空光环获得额外金钱，尽情地在地图上发挥操作吧！
-}
-
-STRING 12243
-{
-|cffff0000防守模式|r
--自选英雄
--无野怪
--初始5000金钱
--过关2500金钱
--所有玩家一队
--1次关卡重置机会
--流光羽衣禁止使用
--生命百分比伤害无效
--旋风战斧(横扫)无效
--屠夫(肥肥)禁止使用
--买活花费与关卡有关
-注意：敌人�
-}
-
-STRING 12445
+STRING 5888
 {
  - 每点提高%d点攻击力
 }
 
-STRING 12446
+STRING 6240
+{
+|cff00ff00全明星战役|cffffff003.3C
+}
+
+STRING 6913
 {
  - 每%d点提高%d点护甲
 }
 
-STRING 12447
+STRING 6914
 {
-|n|cffff7500普通→轻型(150%)|r|n|cffffff00普通→中型(120%)|r|n|cff75ffff普通→重型(80%)|r|n普通→魔抗(100%)|n|cff75ffff普通→城墙(70%)|n|n|cff757575普通→虚无(无效)|r|n普通→英雄(100%)
+ - 每%d点提高1点护甲
+}
+
+STRING 6915
+{
+ - 每点提高%d点生命值
+}
+
+STRING 6919
+{
+ - 每点提高%d点魔法值
+}
+
+STRING 7395
+{
+敏捷
+}
+
+STRING 8224
+{
+ - 每点提高0.8%攻击速度
+}
+
+STRING 8226
+{
+ - 每点提高0.05/s生命值恢复
+}
+
+STRING 8228
+{
+ - 每点提高0.03/s魔法恢复速度
+}
+
+STRING 8231
+{
+敏捷：
+}
+
+STRING 9749
+{
+钱不够啊笨蛋，咱这不打折
+}
+
+STRING 11143
+{
+Response\kcwiki\1.mp3;Response\kcwiki\2.mp3;Response\kcwiki\3.mp3;Response\kcwiki\4.mp3;Response\kcwiki\5.mp3;Response\kcwiki\6.mp3;Response\kcwiki\7.mp3;Response\kcwiki\8.mp3;Response\kcwiki\9.mp3;Response\kcwiki\10.mp3;Response\kcwiki\11.mp3;Response\kcwiki\12.mp3;Response\kcwiki\13.mp3;
+}
+
+STRING 12117
+{
+Response\JCL\move\1.mp3;Response\JCL\move\2.mp3;Response\JCL\move\3.mp3;Response\JCL\move\4.mp3;Response\JCL\move\5.mp3;Response\JCL\move\6.mp3;Response\JCL\move\7.mp3;Response\JCL\move\8.mp3;Response\JCL\move\9.mp3;Response\JCL\move\10.mp3;Response\JCL\move\11.mp3;
+}
+
+STRING 12119
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
+}
+
+STRING 12120
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
+}
+
+STRING 12122
+{
+Response\Saber\what\aidehua1.mp3;Response\Saber\what\aidehua2.mp3;Response\Saber\what\aidehua3.mp3;Response\Saber\what\aidehua4.mp3;Response\Saber\what\aidehua5.mp3;Response\Saber\what\aidehua6.mp3;Response\Saber\what\aidehua7.mp3;Response\Saber\what\kelaode0.mp3;
+}
+
+STRING 12123
+{
+Response\Saber\what\aidehua1.mp3;Response\Saber\what\aidehua2.mp3;Response\Saber\what\aidehua3.mp3;Response\Saber\what\aidehua4.mp3;Response\Saber\what\aidehua5.mp3;Response\Saber\what\aidehua6.mp3;Response\Saber\what\aidehua7.mp3;Response\Saber\what\kelaode0.mp3;
+}
+
+STRING 12124
+{
+Response\Saber\what\aidehua1.mp3;Response\Saber\what\aidehua2.mp3;Response\Saber\what\aidehua3.mp3;Response\Saber\what\aidehua4.mp3;Response\Saber\what\aidehua5.mp3;Response\Saber\what\aidehua6.mp3;Response\Saber\what\aidehua7.mp3;Response\Saber\what\kelaode0.mp3;
+}
+
+STRING 12125
+{
+Response\Saber\what\aidehua1.mp3;Response\Saber\what\aidehua2.mp3;Response\Saber\what\aidehua3.mp3;Response\Saber\what\aidehua4.mp3;Response\Saber\what\aidehua5.mp3;Response\Saber\what\aidehua6.mp3;Response\Saber\what\aidehua7.mp3;Response\Saber\what\kelaode0.mp3;
+}
+
+STRING 12126
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
+}
+
+STRING 12127
+{
+Response\kelaode\move\0.mp3;Response\kelaode\move\1.mp3;Response\kelaode\move\2.mp3;Response\kelaode\move\3.mp3;Response\kelaode\move\4.mp3;Response\kelaode\move\5.mp3;Response\kelaode\move\6.mp3;Response\kelaode\move\7.mp3;Response\kelaode\move\8.mp3;Response\kelaode\move\9.mp3;Response\kelaode\mo
+}
+
+STRING 12676
+{
+|CffFF8040冠军队伍：|n夜空下樱花（队长） 卑微Realm Alarnzearn 毕昂德  他们都叫我安爸爸 |n替补：我梦见她梦见她 阿海有点忙|r|n|n|Cff0088ff亚军队伍：|n绯月（队长）最爱傲娇妹 热血拳师 A拉垃圾君 冬千千 |n替补：七彩唯独猪 紫月
+}
+
+STRING 12680
+{
+-hjmb(可以使战绩面板弹出，再次输入则关闭。)
+-BUG (解除卡死)
+-OB （自由模式下、选择人物前，输入后成为观看者）
+-zs（输入后20秒后自杀）
+-pk X（邀请PK，X为玩家楼层，如-PK6）
+其他：
+-djcs（自己单机时输入满等级满金币）
+-cxxr (自己单机时输入可以重新选人)
+}
+
+STRING 13248
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+推荐装备：
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+}
+
+STRING 13388
+{
+生命灯(|Cfffed312F8|R)
+}
+
+STRING 13389
+{
+一些功能面板
+}
+
+STRING 13530
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+推荐装备：
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+}
+
+STRING 13534
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00绫叁紫月|r（回血/抗魔/辅助）[神秘藏宝室：南十字星]
+推荐装备：
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+|Cff00FF00古树图腾|r（增加周围队友属性）[合成店：神秘秘法]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制）[神秘藏宝室：南十字星]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+}
+
+STRING 13540
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制/高智力）[神秘藏宝室：南十字星]
+推荐装备：
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幽之蓝夜|r（禁魔控制/补充伤害）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/防被针对）[神秘改造店：魔导科技]
+|Cff00FF00识破|r（防被针对）[合成店：雷鸣领域]
+|Cff00FF00遁隐鞋|r（防被针对）[合成店：风暴之角]
+|Cff00FF00辉月光杖|r（导弹可以触发减少抗魔/回蓝续航）[神秘藏宝室：南十字星]
+}
+
+STRING 13544
+{
+核心装备：
+|Cff00FF00幽折靴|r（偷袭/后期可换）[合成店：风暴之角]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00烈火神盾|r（后期可换/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/高防御）[神秘改造店：魔导科技]
+推荐装备：
+|Cff00FF00暖脚牌绵绵鞋|r（价格低廉/自保）[合成店：风暴之角]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+}
+
+STRING 13548
+{
+核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]或者|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+辅助可选：
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+敏捷可选：
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]或者|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+肉装可选：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+}
+
+STRING 13554
+{
+力量装核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+敏捷装核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+}
+
+STRING 13560
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+可选装备：
+|Cff00FF00玲珑祥云|r（逆风首选/移位/防针对）[合成店：神秘秘法]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+}
+
+STRING 13564
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+推荐装备：
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制）[神秘藏宝室：南十字星]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-虚无|r（控制/补充伤害）[合成店：神秘秘法]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+浪装推荐：
+|Cff00FF00灵动符文2级|r(传送+W)[神秘符文：远古神殿]
+|Cff00FF00棱岩龙盾|r（续航）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+}
+
+STRING 13568
+{
+核心装备：
+|Cff00FF00净化|r（净化/控制）[合成店：星辰冰晶]）
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00烈火神盾|r（后期可换/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+可选装备：
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+}
+
+STRING 13572
+{
+核心装备：
+|Cff00FF00净化|r（净化/控制）[合成店：星辰冰晶]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+推荐装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+}
+
+STRING 13576
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13580
+{
+核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00龙宫使的羽衣|r（续航）[合成店：星辰冰晶]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+}
+
+STRING 13592
+{
+核心装备：
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+可选装备：
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复/移动速度）[合成店：雷鸣领域]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+}
+
+STRING 13596
+{
+核心装备：
+|Cff00FF00净化|r（净化/控制）[合成店：星辰冰晶]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+可选装备：
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13600
+{
+法师流核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+ADC流核心出装：
+火球+奥术杖+净化（优先出/过渡）
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+可选装备：
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00奥术杖-虚无|r（控制虚无/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13608
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+肉装可选：
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+法装可选：
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13612
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+可选装备：
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+}
+
+STRING 13616
+{
+核心装备：
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+可选装备：
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+}
+
+STRING 13620
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+}
+
+STRING 13624
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+可选装备：
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+}
+
+STRING 13628
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+可选装备：
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00旋风战斧|r（刷钱/溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+}
+
+STRING 13632
+{
+核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+可选装备：
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00遁隐鞋|r（防被针对）[合成店：风暴之角]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00赤红战歌|r（补充伤害/高力量）[神秘改造店：魔导科技]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+推荐一个适合上单出装：
+|Cff00FF00赤红霹雳|rX2（附伤/高力量）[合成店：光棱结界]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+}
+
+STRING 13636
+{
+核心装备：
+|Cff00FF00烈火神盾|r（补充伤害）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|rX2（减免塔伤害/魔抗）[合成店：雷鸣领域]
+可选装备：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+}
+
+STRING 13640
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+可选装备：
+|Cff00FF00识破|r（解除控制/防止R和D被打断）[合成店：雷鸣领域]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制）[神秘藏宝室：南十字星]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13644
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+可选装备：
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+}
+
+STRING 13648
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+可选装备：
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+|Cff00FF00古树图腾|r（增加周围队友属性）[合成店：神秘秘法]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制）[神秘藏宝室：南十字星]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13652
+{
+必出装备：
+|Cff00FF00烈火神盾|r（补充伤害）[合成店：雷鸣领域]
+肉装推荐：
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+敏捷核心：
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]或者|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+敏捷可选：
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+ps:肉装敏捷可混搭
+}
+
+STRING 13656
+{
+核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00赤红战歌|r（附伤/补充伤害/高力量）[神秘改造店：魔导科技]
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+
+}
+
+STRING 13660
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+}
+
+STRING 13664
+{
+核心装备：
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00疯狂符文|r(可以粘人)[神秘符文：远古神殿]
+可选装备：
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+}
+
+STRING 13668
+{
+核心装备：
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+可选装备：
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+}
+
+STRING 13672
+{
+核心装备：
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+可选装备：
+|Cff00FF00净化|r(遇到智力的吹风可以使用E净化接R)[合成店：星辰冰晶]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+}
+
+STRING 13676
+{
+智力装：
+|Cff00FF00烈火神盾|r（补充伤害）[合成店：雷鸣领域]
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+|Cff00FF00绫叁紫月|r（回血/抗魔/辅助）[神秘藏宝室：南十字星]
+|Cff00FF00龙宫使的羽衣|r（续航）[合成店：星辰冰晶]
+纯肉装：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+敏捷装：
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+|Cff00FF00海神叉|rX2（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+}
+
+STRING 13680
+{
+核心装备：
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+ADC可选：
+|Cff00FF00旋风战斧|r（溅射/高攻速/拆塔）[神秘藏宝室：南十字星]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00锥炎标枪|r（控制/移位/追击/先手）[合成店：光棱结界]
+狙击可选：
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+}
+
+STRING 13684
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+可选装备：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13688
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+可选装备：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]和|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+
+}
+
+STRING 13694
+{
+核心装备：
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|rX2（减免塔伤害/魔抗）[合成店：雷鸣领域]可升级|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+}
+
+STRING 13698
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+可选装备：
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]或者|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13702
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+可选装备：
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+|Cff00FF00古树图腾|r（增加周围队友属性）[合成店：神秘秘法]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制）[神秘藏宝室：南十字星]
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+}
+
+STRING 13706
+{
+核心装备：
+|Cff00FF00烈火神盾|r（刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00赤红霹雳|rX2（附伤/高力量）[合成店：光棱结界]可升级|Cff00FF00赤红战歌|r（补充伤害/高力量）[神秘改造店：魔导科技]
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00血红魔斧（|r吸血/补充伤害）[神秘改造店：魔导科技]
+可选装备：
+|Cff00FF00先祖法杖|r（逆风装备/补充伤害）[合成店：神秘秘法]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+}
+
+STRING 13710
+{
+核心装备：
+|Cff00FF00赤红霹雳|rX2（附伤/高力量）[合成店：光棱结界]可升级|Cff00FF00赤红战歌|r（补充伤害/高力量）[神秘改造店：魔导科技]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+可选装备：
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00寄生虫|r（控制）[合成店：神秘秘法]
+|Cff00FF00血红魔斧（|r吸血/补充伤害）[神秘改造店：魔导科技]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+}
+
+STRING 13714
+{
+核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+敏捷装可选：
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00海神叉|r（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]或者|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+肉装可选：
+|Cff00FF00王者之剑|r（暴击/附伤/减速）[神秘藏宝室：南十字星]
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+}
+
+STRING 13718
+{
+核心装备：
+|Cff00FF00烈火神盾|r（过渡/刷野/补充伤害）[合成店：雷鸣领域]
+|Cff00FF00赤红霹雳|rX2（附伤/高力量）[合成店：光棱结界]可升级|Cff00FF00赤红战歌|r（补充伤害/高力量）[神秘改造店：魔导科技]
+|Cff00FF00战跃弩刃|r（追击/移位）[合成店：雷鸣领域]
+|Cff00FF00泰坦重锤|r（控制/补充伤害）[神秘藏宝室：南十字星]
+|Cff00FF00轰狮之靴|r（控制）[合成店：风暴之角]
+可选装备：
+|Cff00FF00战神铠甲|r（减免眩晕伤害/防止被秒）[神秘改造店：魔导科技]
+|Cff00FF00冰封神盾|r（控制/克制暴击）[合成店：雷鸣领域]
+|Cff00FF00坚韧铠甲|r（减免塔伤害/魔抗）[合成店：雷鸣领域]
+|Cff00FF00识破|r（解除控制/魔抗）[合成店：雷鸣领域]
+|Cff00FF00星灿披风|r（魔抗/削弱敌人生命恢复）[合成店：雷鸣领域]
+}
+
+STRING 13722
+{
+核心装备：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00海神叉|rX2（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]后期可换|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00轩辕剑|r（移位/暴击/高敏捷）[神秘藏宝室：南十字星]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+}
+
+STRING 13726
+{
+敏捷装：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00海神叉|rX2（逆风首选/削蓝/高敏捷）[合成店：光棱结界]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]后期可换|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00星辰雷刃|r（移位/附伤）[合成店：星辰冰晶]
+AD装：
+|Cff00FF00风暴之角|r（移位）[合成店：风暴之角]
+|Cff00FF00圣佑之戒|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00圣十字弓|r（暴击/附伤/命中）[合成店：星辰冰晶]
+|Cff00FF00魔剑|r（吸血/附伤）[合成店：雷鸣领域]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+}
+
+STRING 13730
+{
+核心装备：
+|Cff00FF00华羽风靴|r（控制/自保）[合成店：风暴之角]
+|Cff00FF00玲珑祥云|r（逆风首选/移位）[合成店：神秘秘法]
+|Cff00FF00幽之蓝夜|r（禁魔/补充伤害）[合成店：神秘秘法]
+|Cff00FF00幸融光杖|r（禁物品/控制）[神秘藏宝室：南十字星]
+|Cff00FF00奥术杖-苍穹|r（拆塔/补充伤害）[合成店：神秘秘法]或者|Cff00FF00奥术杖-虚破|r（控制虚无/补充伤害）[合成店：神秘秘法]
+可选装备：
+|Cff00FF00星月圆盘|r（自保/减速耗魔）[神秘改造店：魔导科技]
+|Cff00FF00原力圣杖|r（骚扰/阻挡弹幕/控制）[神秘藏宝室：南十字星]
+|Cff00FF00圣天使的守护|r（自保/回血）[神秘藏宝室：南十字星]
+|Cff00FF00棱岩龙盾|r（回血/高护甲/禁魔）[合成店：雷鸣领域]
+|Cff00FF00辉月光杖|r（减少抗魔/回蓝）[神秘藏宝室：南十字星]
 }
