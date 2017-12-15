@@ -7,84 +7,6 @@ TriggerRegisterPlayerAllianceChangeHint="当改变项目为【共享单位】时
 
 
 [TriggerActionStrings]
-﻿
-
-
-DzAPI_Map_Ladder_SubmitBooleanData=天梯提交布尔值数据[DzAPI]
-DzAPI_Map_Ladder_SubmitBooleanData="提交 ",~whichPlayer," 天梯项目:",~key," 的目的  ",~value
-DzAPI_Map_Ladder_SubmitBooleanDataHint="key必须是英文"
-
-DzAPI_Map_Ladder_SubmitIntegerData=天梯提交整数数据[DzAPI]
-DzAPI_Map_Ladder_SubmitIntegerData="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
-DzAPI_Map_Ladder_SubmitIntegerDataHint="key必须是英文"
-
-DzAPI_Map_Ladder_SetStat=天梯提交字符串数据[DzAPI]
-DzAPI_Map_Ladder_SetStat="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
-DzAPI_Map_Ladder_SetStatHint="key必须是英文"
-
-DzAPI_Map_Stat_SubmitUnitIdData=天梯提交单位类型数据[DzAPI]
-DzAPI_Map_Stat_SubmitUnitIdData="提高 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
-DzAPI_Map_Stat_SubmitUnitIdDataHint="key必须是英文"
-
-DzAPI_Map_Ladder_SubmitAblityIdData=天梯提交技能数据[DzAPI]
-DzAPI_Map_Ladder_SubmitAblityIdData="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
-DzAPI_Map_Ladder_SubmitAblityIdDataHint="key必须是英文"
-
-DzAPI_Map_Ladder_SubmitItemIdData=天梯提交物品数据[DzAPI]
-DzAPI_Map_Ladder_SubmitItemIdData="提交 ",~whichPlayer," 天梯项目:",~key," 的值为:",~value
-DzAPI_Map_Ladder_SubmitItemIdDataHint="key必须是英文"
-
-DzAPI_Map_Ladder_SubmitTitle=天梯提交获得称号[DzAPI]
-DzAPI_Map_Ladder_SubmitTitle="提交 ",~whichPlayer," 获得称号:",~key
-DzAPI_Map_Ladder_SubmitTitleHint="key必须是英文"
-
-DzAPI_Map_Ladder_SubmitPlayerRank=天梯提交名次[DzAPI]
-DzAPI_Map_Ladder_SubmitPlayerRank="天梯设置： ",~whichPlayer," 为第:",~value," 名"
-DzAPI_Map_Ladder_SubmitPlayerRankHint="key必须是英文"
-
-DzAPI_Map_Ladder_SubmitPlayerExtraExp=天梯提交额外分[DzAPI]
-DzAPI_Map_Ladder_SubmitPlayerExtraExp="天梯增加： ",~whichPlayer," 额外:",~value," 分"
-DzAPI_Map_Ladder_SubmitPlayerExtraExpHint="负数是减少，正数是增加，额外分取值为-30到30"
-
-DzAPI_Map_SaveServerValue=DzAPI-保存服务器存档 [DzAPI]
-DzAPI_Map_SaveServerValue="DzAPI: ",~玩家,"保存存档[",~存档名称,"][",~存档内容,"]"
-DzAPI_Map_SaveServerValueHint="官方对战平台服务器存档"
-
-DzAPI_Map_Stat_SetStat=设置房间显示的数据[DzAPI]
-DzAPI_Map_Stat_SetStat="设置 ",~whichPlayer," 房间的 ",~key," 项目显示 ",~value
-DzAPI_Map_Stat_SetStatHint="key必须是英文"
-
-DzAPI_Map_StoreInteger=服务器存储整数 [DzAPI]
-DzAPI_Map_StoreInteger="服务器存档:存储 ",~whichPlayer," 数据,名称：",~key,",值:",~value
-DzAPI_Map_StoreIntegerHint="名称key必须是英文"
-
-DzAPI_Map_StoreReal=服务器存储实数 [DzAPI]
-DzAPI_Map_StoreReal="服务器存档:存储 ",~whichPlayer," 数据,名称：",~key,",值:",~value
-DzAPI_Map_StoreRealHint="名称key必须是英文"
-
-DzAPI_Map_StoreBoolean=服务器存储布尔值 [DzAPI]
-DzAPI_Map_StoreBoolean="服务器存档:存储 ",~whichPlayer," 数据,名称:",~key,",值:",~value
-DzAPI_Map_StoreBooleanHint="名称key必须是英文"
-
-DzAPI_Map_StoreString=服务器存储字符串 [DzAPI]
-DzAPI_Map_StoreString="服务器存档:存储 ",~whichPlayer," 数据,名称:",~key,",值:",~value
-DzAPI_Map_StoreStringHint="名称key必须是英文"
-
-DzAPI_Map_StoreUnitId=服务器存储单位类型 [DzAPI]
-DzAPI_Map_StoreUnitId="服务器存档:存储 ",~whichPlayer," 数据,名称：",~key,",值:",~value
-DzAPI_Map_StoreUnitIdHint="名称key必须是英文"
-
-DzAPI_Map_StoreAbilityId=服务器存储技能Id [DzAPI]
-DzAPI_Map_StoreAbilityId="服务器存档:存储 ",~," 数据,名称：",~key,",值:",~
-DzAPI_Map_StoreAbilityIdHint="名称key必须是英文"
-
-DzAPI_Map_StoreItemId=服务器存储物品Id [DzAPI]
-DzAPI_Map_StoreItemId="服务器存档:存储 ",~," 数据,名称：",~key,",值:",~
-DzAPI_Map_StoreItemIdHint="名称key必须是英文"
-
-DzAPI_Map_FlushStoredMission=清理服务器数据 [DzAPI]
-DzAPI_Map_FlushStoredMission="服务器数据：清理",~whichPlayer,"数据,名称： ",~key
-DzAPI_Map_FlushStoredMissionHint="key必须是英文"
 
 YDWEActivateTrigger="激活触发"
 YDWEActivateTrigger="激活 ",~Trigger," ( ",~On/Off," 兼容模式 )"
@@ -125,54 +47,6 @@ YDWEWaitForLocalVariableHint="使用逆天系列的UI，无需使用它。"
 
 [TriggerCallStrings]
 ﻿
-
-DzAPI_Map_IsRPGLobby=判断当前地图是否rpg大厅来的[DzAPI]
-DzAPI_Map_IsRPGLobby="判断当前地图是否rpg大厅来的"
-DzAPI_Map_IsRPGLobbyHint="是rpg大厅地图会返回true"
-
-DzAPI_Map_IsRPGLadder=判断是否在RPG天梯[DzAPI]
-DzAPI_Map_IsRPGLadder="判断地图是否在RPG天梯"
-DzAPI_Map_IsRPGLadderHint=""
-
-DzAPI_Map_GetMatchType=获取天梯匹配模式[DzAPI]
-DzAPI_Map_GetMatchType="获取天梯匹配模式"
-DzAPI_Map_GetMatchTypeHint="匹配模式为大于1000的整数,具体值需的跟作者之家的模式设置相同"
-
-DzAPI_Map_GetMapLevel=获取玩家地图等级 [DzAPI]
-DzAPI_Map_GetMapLevel="获取 ",~whichPlayer," 的地图等级"
-DzAPI_Map_GetMapLevelHint="获取玩家地图等级【RPG大厅限定】"
-
-DzAPI_Map_GetGameStartTime=获取当前游戏时间 [DzAPI]
-DzAPI_Map_GetGameStartTime="获取创建地图的游戏时间"
-DzAPI_Map_GetGameStartTimeHint="时间换算为时间戳"
-
-DzAPI_Map_GetStoredBoolean=获取服务器存储的布尔值 [DzAPI]
-DzAPI_Map_GetStoredBoolean="获取 ",~whichPlayer," 数据名称:",~key," 里存储的布尔值"
-DzAPI_Map_GetStoredBooleanHint=""
-
-DzAPI_Map_GetStoredInteger=获取服务器存储的整数 [DzAPI]
-DzAPI_Map_GetStoredInteger="获取",~whichPlayer," 数据名称:",~key," 里存储的整数."
-DzAPI_Map_GetStoredIntegerHint=""
-
-DzAPI_Map_GetStoredReal=获取服务器存储的实数 [DzAPI]
-DzAPI_Map_GetStoredReal="获取 ",~whichPlayer," 数据名称:",~key," 里存储的实数"
-DzAPI_Map_GetStoredRealHint=""
-
-DzAPI_Map_GetStoredString=获取服务器存储的字符串 [DzAPI]
-DzAPI_Map_GetStoredString="获取 ",~whichPlayer," 数据名称:",~key," 里存储的字符串"
-DzAPI_Map_GetStoredStringHint=""
-
-DzAPI_Map_GetStoredUnitId=获取服务器存储的单位类型 [DzAPI]
-DzAPI_Map_GetStoredUnitId="获取 ",~whichPlayer," 数据名称:",~key," 里存储的单位类型"
-DzAPI_Map_GetStoredUnitIdHint=""
-
-DzAPI_Map_GetStoredAbilityId=获取服务器存储的技能类型 [DzAPI]
-DzAPI_Map_GetStoredAbilityId="获取 ",~whichPlayer," 数据名称:",~key," 里存储的技能类型"
-DzAPI_Map_GetStoredAbilityIdHint=""
-
-DzAPI_Map_GetStoredItemId=获取服务器存储的物品类型 [DzAPI]
-DzAPI_Map_GetStoredItemId="获取 ",~whichPlayer," 数据名称:",~key," 里存储的物品类型"
-DzAPI_Map_GetStoredItemIdHint=""
 YDWECustomScriptCode="自定义代码"
 YDWECustomScriptCode=~Jass 代码
 YDWECustomScriptCodeHint="可以在任何有返回值的地方输入一行代码. 比如: 杀死(自定义代码：GetTriggerUnit())。"
