@@ -34,7 +34,7 @@ gar1[9]=ReplaceableTextures\CommandButtons\BTNStoneArchitecture.blp
 gar1[10]=ReplaceableTextures\CommandButtons\BTNStoneArchitecture.blp
 greq[2]=
 greq[3]=
-gef1=ratt
+gef1=
 [Robs]
 gba1=0.2000
 gmo1=0.2000
