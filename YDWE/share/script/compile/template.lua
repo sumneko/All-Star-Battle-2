@@ -76,6 +76,7 @@ function template:do_compile(op)
 	local lua_codes = {''}
 	table.insert(lua_codes,	[[
 		stormlib = ar.stormlib
+		storm = ar.storm
 	
 		local file_path	= fs.ydwe_path() / "logs" /	"mu.out"
 
